@@ -17,6 +17,10 @@ const handle = (args) => {
 
     return args.helpers.api.post(url, {
         name: addTrailingDot(args.name),
+    }).then(x => {
+        // Temporary workaround for https://github.com/hyperonecom/h1-cli/issues/70
+        x._id = x.id;
+        return x;
     }).then(result => args.helpers.sendOutput(args, result));
 };
 
