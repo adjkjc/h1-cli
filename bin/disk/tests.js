@@ -11,7 +11,10 @@ const tests = require('../../lib/tests');
 
 const now = Date.now();
 
-const download = (resource, destination) => tests.run(`disk download --disk ${resource._id} --destination-file ${destination}`);
+const download = (resource, destination) => tests.run(`disk download
+                                                       --disk ${resource._id}
+                                                       --destination-file ${destination}
+                                                       --no-progress`);
 
 ['archive', 'ssd', 'volume'].forEach(type => {
     const createParams = `--name disk-test-${now} --type ${type} --size 100`;
