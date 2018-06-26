@@ -13,7 +13,8 @@
     "build": "pkg --out-path ./dist .",
     "lint": "eslint .",
     "docs": "node scripts/print_docs.js docs/",
-    "docs_coverage": "node scripts/print_docs_coverage.js"
+    "docs_coverage": "node scripts/print_docs_coverage.js",
+    "tests": "npx ava --verbose"
   },
   "dependencies": {
     "chalk": "^2.1.0",
