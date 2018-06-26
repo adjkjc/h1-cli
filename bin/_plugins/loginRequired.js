@@ -1,6 +1,7 @@
 'use strict';
 
 const config = require('lib/config');
+const Cli = require('lib/cli');
 const logger = require('lib/logger');
 
 const login = require('bin/login');
@@ -31,8 +32,7 @@ module.exports = {
             logger('info', 'Your authtoken has expired');
             context.args.username = profile.user;
         } else {
-            logger('info', 'Please login first');
-            process.exit(-1);
+            throw Cli.error.cancelled('Please login first');
         }
 
         return login
