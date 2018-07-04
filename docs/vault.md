@@ -184,7 +184,13 @@ List certificate to Vault
 
 ### Syntax
 
-```h1 vault credential cert list | ```
+```h1 vault credential cert list | --vault VAULT```
+
+### Required options
+
+| Name | Default | Description |
+| ---- | ------- | ----------- |
+| ```--vault VAULT``` |  | Vault ID or name |
 
 ## h1 vault credential cert delete
 
@@ -192,12 +198,13 @@ Delete certificate to Vault
 
 ### Syntax
 
-```h1 vault credential cert delete | --cert CERT```
+```h1 vault credential cert delete | --vault VAULT --cert CERT```
 
 ### Required options
 
 | Name | Default | Description |
 | ---- | ------- | ----------- |
+| ```--vault VAULT``` |  | Vault ID or name |
 | ```--cert CERT``` |  | Certificate to Vault ID or name |
 
 ## h1 vault credential cert add
@@ -235,7 +242,13 @@ List password to Vault
 
 ### Syntax
 
-```h1 vault credential password list | ```
+```h1 vault credential password list | --vault VAULT```
+
+### Required options
+
+| Name | Default | Description |
+| ---- | ------- | ----------- |
+| ```--vault VAULT``` |  | Vault ID or name |
 
 ## h1 vault credential password delete
 
@@ -243,12 +256,13 @@ Delete password to Vault
 
 ### Syntax
 
-```h1 vault credential password delete | --password PASSWORD```
+```h1 vault credential password delete | --vault VAULT --password PASSWORD```
 
 ### Required options
 
 | Name | Default | Description |
 | ---- | ------- | ----------- |
+| ```--vault VAULT``` |  | Vault ID or name |
 | ```--password PASSWORD``` |  | Password to Vault ID or name |
 
 ## h1 vault credential password add

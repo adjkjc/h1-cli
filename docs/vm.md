@@ -85,7 +85,7 @@ Create virtual machine
 ```bash
 h1 vm create --name test-vm2 --os-disk os-disk-0,ssd,10 \
     --type a1.nano --image 5b1ddeaf9a26cb1d0c0c31c3 \
-    --ssh so-wp
+    --ssh my-ssh
 ```
 
 Note (1): To identify available disk type use ```h1 service list --resource disk``` .
@@ -151,7 +151,7 @@ History of virtual machine
 
 | Name | Default | Description |
 | ---- | ------- | ----------- |
-| ```--vm VM``` |  | virtual machine ID or name |
+| ```--vm VM``` |  | Virtual machine ID or name |
 
 ## h1 vm console
 
@@ -173,7 +173,7 @@ h1 vm console --vm test-vm
 
 | Name | Default | Description |
 | ---- | ------- | ----------- |
-| ```--vm VM``` |  | virtual machine ID or name |
+| ```--vm VM``` |  | Virtual machine ID or name |
 
 ## h1 vm stop
 
@@ -187,7 +187,7 @@ Stop virtual machine
 
 | Name | Default | Description |
 | ---- | ------- | ----------- |
-| ```--vm VM``` |  | virtual machine ID or name |
+| ```--vm VM``` |  | Virtual machine ID or name |
 
 ## h1 vm start
 
@@ -201,7 +201,7 @@ Start virtual machine
 
 | Name | Default | Description |
 | ---- | ------- | ----------- |
-| ```--vm VM``` |  | virtual machine ID or name |
+| ```--vm VM``` |  | Virtual machine ID or name |
 
 ## h1 vm restart
 
@@ -215,7 +215,7 @@ Restart virtual machine
 
 | Name | Default | Description |
 | ---- | ------- | ----------- |
-| ```--vm VM``` |  | virtual machine ID or name |
+| ```--vm VM``` |  | Virtual machine ID or name |
 
 ## h1 vm turnoff
 
@@ -229,7 +229,7 @@ Turnoff virtual machine
 
 | Name | Default | Description |
 | ---- | ------- | ----------- |
-| ```--vm VM``` |  | virtual machine ID or name |
+| ```--vm VM``` |  | Virtual machine ID or name |
 
 ## h1 vm rename
 
@@ -237,14 +237,14 @@ Rename virtual machine
 
 ### Syntax
 
-```h1 vm rename | --vm VM --newname NEWNAME```
+```h1 vm rename | --vm VM --new-name NEW-NAME```
 
 ### Required options
 
 | Name | Default | Description |
 | ---- | ------- | ----------- |
-| ```--vm VM``` |  | virtual machine ID or name |
-| ```--newname NEWNAME``` |  | New name |
+| ```--vm VM``` |  | Virtual machine ID or name |
+| ```--new-name NEW-NAME``` |  | New name |
 
 ## h1 vm userdata
 
@@ -273,7 +273,7 @@ $ h1 vm show --vm test-vm --query '[].{data:userMetadata}' --output tsv | openss
 
 | Name | Default | Description |
 | ---- | ------- | ----------- |
-| ```--vm VM``` |  | virtual machine ID or name |
+| ```--vm VM``` |  | Virtual machine ID or name |
 | ```--userdata-file USERDATA-FILE``` |  | Read userdata from file |
 
 ## h1 vm disk
@@ -307,7 +307,7 @@ Attach disk to disk
 | Name | Default | Description |
 | ---- | ------- | ----------- |
 | ```--vm VM``` |  | Virtual machine ID or name |
-| ```--disk DISK``` |  | disk name or ID |
+| ```--disk DISK``` |  | Disk name or ID |
 
 ## h1 vm disk detach
 
@@ -322,7 +322,7 @@ Detach disk from disk
 | Name | Default | Description |
 | ---- | ------- | ----------- |
 | ```--vm VM``` |  | Virtual machine ID or name |
-| ```--disk DISK``` |  | disk name or ID |
+| ```--disk DISK``` |  | Disk name or ID |
 
 ## h1 vm nic
 
@@ -356,12 +356,13 @@ Show network adapter
 
 ### Syntax
 
-```h1 vm nic show | --nic NIC```
+```h1 vm nic show | --vm VM --nic NIC```
 
 ### Required options
 
 | Name | Default | Description |
 | ---- | ------- | ----------- |
+| ```--vm VM``` |  | Virtual machine name or ID |
 | ```--nic NIC``` |  | Network adapter ID or name |
 
 ## h1 vm nic delete
@@ -593,7 +594,7 @@ Connect to virtual machine using SSH
 | ```[--port PORT]``` |  | Port for ssh connection |
 | ```[--private]``` |  | Use first private network, skip public |
 | ```[--command COMMAND]``` |  | Command to execute |
-| ```--vm VM``` |  | virtual machine ID or name |
+| ```--vm VM``` |  | Virtual machine ID or name |
 
 ## h1 vm serialport
 
@@ -656,5 +657,5 @@ Get live metrics of virtual machine
 
 | Name | Default | Description |
 | ---- | ------- | ----------- |
-| ```--vm VM``` |  | virtual machine ID or name |
+| ```--vm VM``` |  | Virtual machine ID or name |
 
