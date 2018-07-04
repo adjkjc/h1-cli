@@ -1,10 +1,10 @@
 'use strict';
 
 const options = {
-    'yes': {
+    yes: {
         description: 'confirm yes',
         type: 'boolean',
-    }
+    },
 };
 
 module.exports = {

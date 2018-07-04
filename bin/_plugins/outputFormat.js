@@ -2,7 +2,6 @@
 
 const jmespath = require('jmespath');
 const tabula = require('tabula');
-const _ = require('lodash');
 
 const queryFilter = (args, result) => {
 
@@ -51,7 +50,7 @@ const outputFormat = {
                 .concat('')
                 .join('\n')
             ).join('\n')
-            ;
+        ;
     },
     json: (args, result) => args.query ? queryFilter(args, result) : result,
 };

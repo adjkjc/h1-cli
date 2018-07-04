@@ -7,7 +7,7 @@ const options = {
     'project-select': {
         description: 'Override current project on the request',
         type: 'string',
-    }
+    },
 };
 
 
@@ -24,7 +24,7 @@ module.exports = {
         }
 
         if (!profile.project || !profile.project._id) {
-            throw Cli.error.cancelled('You need to select project before you can manage your resources')
+            throw Cli.error.cancelled('You need to select project before you can manage your resources');
         }
 
         if (context.args['project-select']) {

@@ -3,7 +3,7 @@
 const api = require('lib/api');
 
 const options = {
-    'verbose': {
+    verbose: {
         alias: 'v',
         description: 'Verbose',
         defaultValue: !!process.env.H1_DEFAULT_VERBOSE,
@@ -17,7 +17,7 @@ const options = {
     'dry-run': {
         description: 'Dry run for the request',
         type: 'boolean',
-    }
+    },
 };
 
 module.exports = {
