@@ -1,0 +1,1 @@
+Udostępnianie produktu pomiędzy *Projektami* jest możliwe zgodnie z *[Ogólne zasadami udostępnianie zasobów]()*
