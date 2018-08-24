@@ -1,12 +1,19 @@
 #!/bin/bash
+set -e
+
 BRANCH="develop"
+
 if [ ! -d "repo" ]; then
-    git clone git@github.com:hyperonecom/h1-cli.git -b "$BRANCH" repo
+    mkdir repo;
+    wget https://github.com/ad-m/h1-cli/archive/add-docs-theme.tar.gz -O /tmp/h1-cli-repo.tar.gz;
+    tar xvzf /tmp/h1-cli-repo.tar.gz -C repo --strip-components=1;
 fi;
+
 pushd repo;
-git pull origin "$BRANCH";
-npm install;
-rm -r docs; mkdir docs;
-npm run docs -- --theme site;
+    npm install;
+    rm -r docs;
+    mkdir docs;
+    nodejs ./bin/h1 config cli;
+    npm run docs -- --theme site;
 popd;
 ln -s repo/docs dist;

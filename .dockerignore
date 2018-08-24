@@ -1,0 +1,9 @@
+site/node_modules
+dist
+modules/*/data
+modules/*/dist
+modules/*/repo
+.idea
+docker-compose.yml
+Dockerfile
+draft

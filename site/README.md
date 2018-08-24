@@ -1,25 +1,29 @@
 # HyperOne
 
-## Private Cloud
+## Chmura Prywatna
 
-Unlimited, dedicated computing resources. No up-front investment in hardware, no risk. Easy to scale up or down, to manage. Simple & secure.
+Nieograniczone zasoby teleinformatyczne na wyłączność dla danego Klienta. Bez nakładów inwestycyjnych, bez ryzyka. Łatwe w rozbudowie, zarządzaniu, bezpieczne i efektywne.
 
-## Central Backup
+Uruchomiliśmy już <ResourceCount/> serwerów w chmurze.
 
-Backup of all company devices, systems, databases, files – created even every hour for servers, PCs and even smartphones. Safe and secure in our data center.
+## Backup Centralny
+
+Kopia bezpieczeństwa – systemów, baz, plików – tworzona automatycznie nawet co godzinę dla serwerów, stacji roboczych, a nawet telefonów. Bezpieczna w centrum danych HyperOne.
 
 ## Disaster Recovery
 
-Instant recovery capability with almost zero downtime and data loss. A must-have for every business.
+Możliwość szybkiego wznowienia działania systemów informatycznych Klienta po katastrofalnej usterce lub błędzie ludzkim. Szybko i pewnie.
 
-## Training
+## Szkolenia
 
-Workshops empowering your IT staff to fully laverage Microsoft Hyper-V. From professionals for professionals. 
+Szkolenia dla personelu IT demonstrujące możliwości pełnego
+wykorzystania Microsoft Hyper-V.
+Prowadzone przez praktyków, dla praktyków.
 
-## Management
+## Zarządzanie
 
-Management of virtualized IT resources for its effective usage. Cost reduction, no downtimes, security.
+Zarządzanie zwirtualizowanymi środowiskami IT w celu zapewnienia sprawnej eksploatacji i bezpieczeństwa. Redukcja kosztów, brak przerw w działaniu, bezpieczeństwo.
 
-## Emergency
+## Pogotowie
 
-Emergency services for your Microsoft Hyper-V deployment or a need for IT virtualization.
+Fachowe wsparcie w razie sytuacji awaryjnej związanej z wykorzystaniem Microsoft Hyper-V albo koniecznością szybkiej wirtualizacji zasobów IT.
