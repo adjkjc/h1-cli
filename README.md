@@ -9,6 +9,14 @@ See more:
 * [VuePress](https://vuepress.vuejs.org/)
 * [Vue.js](http://vuejs.org/)
 
+## Goal
+
+* Encourage community to edit content by publishing source code of selected section
+
+## Dictionary
+
+* healtcheck - sonda kondycji
+
 ## Install
 
 ```bash

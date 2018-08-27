@@ -24,7 +24,7 @@ module.exports = config = {
         }
     },
     themeConfig: {
-        logo: '/assets/logo.png',
+        // logo: '/assets/logo.png',
         sidebar: {
             '/h1-cli/': show_directory('h1-cli', ['README.md', 'index.md', 'dist', 'docs']),
             // '/pricing/': [

@@ -11,5 +11,6 @@ RUN make
 # build site
 WORKDIR /src/site
 RUN npx vuepress build
+
 FROM nginx:alpine
 COPY --from=build /src/site/.vuepress/dist /usr/share/nginx/html

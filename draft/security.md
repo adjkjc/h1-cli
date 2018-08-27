@@ -3,7 +3,6 @@
 ## Dwu składnikowe logowanie
 
 
-
 Guide: zarządzanie dwu składnikowym logowaniem dla użytkownika 
 
 
