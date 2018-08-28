@@ -14,6 +14,9 @@
 
 <script>
     export default {
+        data: () => ({
+            pages: [{title: '', path: ''}]
+        }),
         props: {
             path_re: {
                 required: true
@@ -22,6 +25,7 @@
 
         computed: {
             pages() {
+
                 return this.$site.pages.filter(page => page.path.match(this.path_re))
             },
         },

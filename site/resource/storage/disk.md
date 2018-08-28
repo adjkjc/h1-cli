@@ -102,6 +102,10 @@ archive   |   1h   |       0.0002 |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
+## Przewodniki
+
+<PageList path_re="guide/storage/disk/"/>
+
 ## Powiązane produkty
 
 * *[Maszyny wirtualne](/resource/compute/virtual-machine.md)*
