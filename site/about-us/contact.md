@@ -2,7 +2,7 @@
 
 ## Adres
 
-HyperOne  
+HyperOne
 Warsaw Data Center Sp. z o.o.  
 ul. Boduena 4  
 00-011 Warszawa  
@@ -13,10 +13,10 @@ ul. Boduena 4
 
 ## E-mail
 
-* [sales@wdc.pl](mailto:sales@wdc.pl)
+* [sales@hyperone.com](mailto:sales@hyperone.com)
 
 ## Informacje dodatkowe
 
 * Nasz Dział Sprzedaży jest do Państwa dyspozycji w dni robocze w godzinach od 9 do 17.
 
-* Naszych obecnych Klientów prosimy o kontakt z Opiekunem Klienta lub [Działem Obsługi Technicznej](https://panel.hyperone.com/support/ticket). 
+* Naszych obecnych Klientów prosimy o kontakt z Opiekunem Klienta lub [Działem Obsługi](https://panel.hyperone.com/support/ticket).

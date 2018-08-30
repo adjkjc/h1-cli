@@ -1,4 +1,4 @@
-# Bezpieczeństwo
+# Bezpieczeństwo dostępu
 
 ## Dwu składnikowe logowanie
 
@@ -8,7 +8,7 @@ Guide: zarządzanie dwu składnikowym logowaniem dla użytkownika
 
 ## Ograniczenia dostępu sieciowego
 
-Dla użytkownika oraz projektu można wprowadzić ograniczenia w zakresie adresów ip lub całych sieci z których będą akceptowane połączenia do platformy (? publicznego API).
+Użytkownik może wprowadzić ograniczenia w zakresie adresów ip lub całych sieci z których będą akceptowane połączenia do platformy (? publicznego API) dla tego użytkownika. Jednocześnie dla każdego Projektu można także zdefiniować takie ograniczenia.
 
 Ograniczenia zdefiniowane projektu są nadrzędne nad ograniczeniami zdefiniowanymi dla użytkownika. 
 
@@ -29,8 +29,31 @@ Logowanie opcjonalnie per projekt, wymaga wskazania usługi logarchive (?) do kt
 Guide: zarządzanie rozszerzonym logowaniem dla projektu
 
 
+## Szyfrowane połączenia
+
+Wszelkie połączenia do zarządzania usługami w ramach platformy są szyfrowane ....
+
+* https
+* ssh
+
+
+## Hasła
+
+Hasła trafiają do platformy w formie zaszyfrowanej i nigdy nie są przechowywane nawet tymczasowo w formie nie zaszyfrowanej.
+
+<!-- TODO: do weryfikacji  -->
+
+
+## Service Accounts (? jak po polsku, czy nazwa ang. już zostaje)
+
+* co umożliwiają, podkreślić elastyczność
+* jakie korzyści dają
+* jak dokładnie można ograniczać dostęp
+
+Guide: zarządzanie Service Accounts
+Tutorial: wykorzystanie Service Accounts w automatyzacji 
 
 
 ## Powiązane treści
 
-Best Practices: jak zwiększych bezpieczeństwo korzystania z platformy
+Best Practices: jak zwiększyć bezpieczeństwo korzystania z platformy
