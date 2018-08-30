@@ -1,16 +1,18 @@
-# Usuwanie ISO
+# Odpublikowanie ISO
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób usunąć [ISO](/resource/storage/disk.md).
+Dokument wyjaśnia w jaki sposób odpublikować [ISO](/resource/storage/iso.md).
 
 ## Warunki wstępne
 
-* usunięcie ISO wymaga spełnienia [warunków usuwania ISO](/resource/storage/iso.md#usuwanie)
+* wszystkie warunki wykonania operacji [Odpublikowanie](/resource/storage/iso.md#odpublikowanie)
 
 ## Instrukcja
 
 ### Panel
+
+W celu odpublikowania *ISO* poprzez panel wykonaj następujące kroki:
 
 ```guide
 [
@@ -20,7 +22,7 @@ Dokument wyjaśnia w jaki sposób usunąć [ISO](/resource/storage/disk.md).
       "type": "entry",
       "location": "sidebar",
       "selector": ".nav > li:nth-child(2)",
-      "label": "ISOs"
+      "label": "Dyski"
     }
   },
   {
@@ -43,18 +45,9 @@ Dokument wyjaśnia w jaki sposób usunąć [ISO](/resource/storage/disk.md).
   {
     "action_name": "click",
     "data": {
-      "type": "entry",
-      "selector": "navbar>.vm",
-      "label": "Usuń"
-    },
-    "after_event": "Po kliknięciu pojawi się okno potwierdzenia operacji."
-  },
-  {
-    "action_name": "click",
-    "data": {
       "type": "button",
       "selector": "navbar>.vm",
-      "label": "Usuń"
+      "label": "Prywatny"
     }
   }
 ]
@@ -62,13 +55,15 @@ Dokument wyjaśnia w jaki sposób usunąć [ISO](/resource/storage/disk.md).
 
 #### CLI
 
-W celu usunięcia dysku z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu odpublikowania *ISO* wykonaj następujące polecenie:
 
 ```bash
-h1 disk delete --disk my-disk
+h1 iso access revoke --iso test-image --project '*'
 ```
+
 gdzie:
 
- * ```--disk``` określa nazwę lub identyfikator dysku
+ * ```--iso``` określa nazwę lub identyfikator publikowanego obrazu
+ * ```--project '*'``` określa, że publikacja zachodziła dla wszystkich użytkowników platformy
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="disk delete"].
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="iso access revoke"].

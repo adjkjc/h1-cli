@@ -1,16 +1,18 @@
-# Usuwanie ISO
+# Usunięcie bramy sieciowej
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób usunąć [ISO](/resource/storage/disk.md).
+Dokument wyjaśnia w jaki sposób usunąć [bramę sieciową](/resource/networking/network-gateway.md).
 
 ## Warunki wstępne
 
-* usunięcie ISO wymaga spełnienia [warunków usuwania ISO](/resource/storage/iso.md#usuwanie)
+* usunięcie wymaga spełnienia [warunków usuwania bramy sieciowej](/resource/networking/network-gateway.md#usuwanie)
 
 ## Instrukcja
 
 ### Panel
+
+W celu usunięcia poprzez panel wykonaj następujące kroki:
 
 ```guide
 [
@@ -20,7 +22,7 @@ Dokument wyjaśnia w jaki sposób usunąć [ISO](/resource/storage/disk.md).
       "type": "entry",
       "location": "sidebar",
       "selector": ".nav > li:nth-child(2)",
-      "label": "ISOs"
+      "label": "Sieci"
     }
   },
   {
@@ -29,7 +31,7 @@ Dokument wyjaśnia w jaki sposób usunąć [ISO](/resource/storage/disk.md).
       "type": "entry_resource",
       "selector": "navbar>.vm"
     },
-    "after_event": "Po kliknięciu pojawią szczegóły zasobu."
+    "after_event": "Po kliknięciu pojawi się strona ze szczegółami zasobu."
   },
   {
     "action_name": "click",
@@ -43,7 +45,7 @@ Dokument wyjaśnia w jaki sposób usunąć [ISO](/resource/storage/disk.md).
   {
     "action_name": "click",
     "data": {
-      "type": "entry",
+      "type": "button",
       "selector": "navbar>.vm",
       "label": "Usuń"
     },
@@ -62,13 +64,14 @@ Dokument wyjaśnia w jaki sposób usunąć [ISO](/resource/storage/disk.md).
 
 #### CLI
 
-W celu usunięcia dysku z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu usunięcia z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
-h1 disk delete --disk my-disk
+h1 dns zone delete --zone example.com.
 ```
+
 gdzie:
 
- * ```--disk``` określa nazwę lub identyfikator dysku
+ * ```--zone``` określa nazwę lub identyfikator *Sieci*
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="disk delete"].
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="dns zone delete"].

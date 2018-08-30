@@ -28,11 +28,32 @@ Nowy *Vault* może być utworzony w następujący sposób:
 
 Dostępne są następujące dedykowane operacje:
 
-* Włącza dostęp
-* Wyłącza dostęp
-* Zwiększa rozmiar
+* Włączenie dostępu
+* Wyłączanie dostęp
+* Zwiększenie rozmiaru
 
 Rozmiar danych *Vault* stanowi rozmiar zgromadzonych plików i wszystkich *Migawek*.
+
+### Włączenie dostępu
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Wyłączony```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+### Wyłączenie dostępu
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Online```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+### Zwiększenie rozmiaru
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Online``` lub ```Wyłączony```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Dostęp
 
@@ -96,6 +117,10 @@ ruch wychodzący    |   1h   |     0.0200 |
 
 <!-- //TODO: Add service for traffic -->
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
+
+## Przewodniki
+
+<PageList path_re="guide/storage/vault/"/>
 
 ## Powiązane produkty
 

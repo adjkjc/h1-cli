@@ -28,6 +28,11 @@ Zarządzanie usługą opiera się poprzez modyfikowanie zestawu rekordów (ang.*
  * dodawanie rekordu w zestawie rekordów
  * usuwanie rekordu w zestawie rekordów
 
+Zarządzanie usługą jest możliwe, w przypadku spełnienia następujących warunków: 
+
+* znajduje się w stanie ```Online```
+* nie znajduje się w stanie *Ograniczonego użycia*
+
 ## Lokalizacja
 
 !!! include(regions.md) !!!

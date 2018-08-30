@@ -26,7 +26,28 @@ Dostępne są następujące dedykowane operacje na *Dzienniku*:
 
 * wstrzymanie zapisów
 * wznowienie zapisów
-* odczytywanie wpisów za wybrany okres lub bieżących w czasu rzeczywistego
+* odczytywanie wpisów za wybrany okres lub bieżących w czasie rzeczywistym
+
+## Wstrzymanie zapisów
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Działający```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+## Wznowienie zapisów
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Wyłączony```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+## Odczytywanie wpisów
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Wyłączony``` lub ```Działający```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Typowe operacje
 
@@ -77,6 +98,10 @@ Nazwa        | Okres  | Cena (PLN) |  Uwagi
 Dziennik     |  1M    |     1.0000 |
 
 * Podane ceny są cenami netto i nie zawierają podatku VAT*
+
+## Przewodniki
+
+<PageList path_re="guide/storage/log-archive/"/>
 
 ## Powiązane produkty
 

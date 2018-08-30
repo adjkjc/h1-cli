@@ -1,11 +1,16 @@
 'use strict';
 const fs = require('fs');
 
-const INCLUDE_RE = /^```guide$(.+?)^```$/sgm;
+const INCLUDE_RE = /^```\s*guide$(.+?)^```\s*$/sgm;
 
 const quote = "```";
 
-const dump = value => `\n\n${quote}\n${JSON.stringify(value, null, 2)}\n${quote}\n\n`
+const dump = (value, type = '') => {
+    if (typeof value === "string") {
+        return `\n\n${quote}\n${value}\n${quote}\n\n`;
+    }
+    return `\n\n${quote}${type}\n${JSON.stringify(value, null, 2)}\n${quote}\n\n`;
+};
 
 const actions = {
     click: (data) => {
@@ -19,32 +24,46 @@ const actions = {
         //     }
         //   },
         // Wybierz pozycje ```Sieć``` znajdującą się w menu bocznym.
-        let content = "";
+        let content = [];
 
         if (data.type === "entry") {
-            content += "Wybierz pozycje";
+            content.push("Wybierz pozycje")
         } else if (data.type === "button") {
-            content += "Wybierz przycisk";
+            content.push("Wybierz przycisk");
         } else if (data.type === "tab") {
-            content += "Wybierz zakładkę";
-        } else if (data.type === 'entry_resource'){
-            return 'Kliknij wybrany zasób spośród listy.';
-        } else if (data.type === 'entry_tridot'){
-            return 'Na poziomie nazwy pozycji z listy kliknij trójkropek.';
+            content.push("Wybierz zakładkę");
+        } else if (data.type === 'entry_resource') {
+            content.push("Kliknij wybrany zasób spośród listy");
+        } else if (data.type === 'entry_tridot') {
+            content.push('Na poziomie nazwy pozycji z listy kliknij trójkropek');
+        } else if (data.type === 'tridot') {
+            content.push(`Kliknij trójkropek`);
         } else {
-            content += "Wybierz UNKONWN";
+            content.push("Wybierz UNKONWN");
         }
-        content += ` <code>${data.label}</code> `;
+
+        if (data.label) {
+            content.push(`<code>${data.label}</code>`);
+        }
         if (!data.location) {
-            content += `.`
+            content.push(`.`)
+        } else if (data.location === 'middle_site') {
+            content.push(`znajdujący się w środku strony`);
         } else if (data.location === "sidebar") {
-            content += `znajdującą się w menu bocznym.`;
+            content.push(`znajdującą się w menu bocznym.`);
+        } else if (data.location === "section") {
+            content.push(`znajdującej się w sekcji "${data.section}".`);
+        } else if (data.location === "label") {
+            content.push(`znajdujący się na poziomie etykiety`);
+            content.push("<code>" + data.label + "</code>");
+            content.push(".");
         } else {
-            content += ` UNKNOWN`;
+            content.push(` UNKNOWN`);
             throw(new Error(JSON.stringify(data)));
         }
-        return content;
+        return content.join(" ");
     },
+    identity: (data) => `Zidentyfikuj właściwy zasób typu <code>${data.label}</code>`,
     form: (data) => {
         // {
         //     "action_name": "form",
@@ -108,8 +127,8 @@ const actions = {
         }
         content += `</ul>\n`;
 
-        if(data.defined_all){
-            content+= 'Pozostaw sugerowane wartości w pozostałych polach\n'
+        if (data.defined_all) {
+            content += 'Pozostaw sugerowane wartości w pozostałych polach\n'
         }
 
         return content;
@@ -118,45 +137,41 @@ const actions = {
 
 const replacer = (match, p1, offset, string) => {
     let new_content = '';
-    const action_set = JSON.parse(p1);
+    try {
+        const action_set = JSON.parse(p1.trim());
+        new_content += "<ol>";
+        for (let action of action_set) {
+            new_content += `<li>`;
+            if (actions[action.action_name]) {
+                new_content += actions[action.action_name](action.data);
+            } else {
+                new_content += dump(action);
+            }
+            if (action.after_event) {
+                new_content += `\n\n${action.after_event}\n\n`;
+            }
+            new_content += `</li>\n`;
+        }
+        new_content += "</ol>";
+        new_content += "\n\n```json\n";
+        new_content += JSON.stringify(action_set, null, 2);
+        new_content += "\n```\n\n";
 
-    new_content += "<ol>";
-    for (let action of action_set) {
-        new_content += `<li>`;
-        if (actions[action.action_name]) {
-            new_content += actions[action.action_name](action.data);
-        } else {
-            new_content += dump(action);
-        }
-        if (action.after_event) {
-            new_content += `\n\n${action.after_event}\n\n`;
-        }
-        new_content += `</li>\n`;
+    } catch (err) {
+        new_content += `<code>\n${err.stack.toString()}\n</code>`;
+        new_content += dump(p1.trim(), 'json');
     }
-    new_content += "</ol>";
-    new_content += "\n\n```json\n";
-    new_content += JSON.stringify(action_set, null, 2);
-    new_content += "\n```\n\n";
+
     return new_content;
 };
 
-const replace = (content) => {
-    return content.replace(INCLUDE_RE, replacer);
-};
-
-module.exports = {
-    plugin: (md) => {
-        md.core.ruler.before('normalize', 'guide_generator', (state) => {
-            try{
-                state.src = replace(state.src)
-            }catch(err){
-                console.log({err, state})
-            }
-        });
-    }
+module.exports = (md) => {
+    md.core.ruler.before('normalize', 'guide_generator', (state) => {
+        state.src = state.src.replace(INCLUDE_RE, replacer);
+    });
 };
 
 if (require.main === module) {
     const content = fs.readFileSync(process.argv[2], 'utf-8');
-    console.log(replace(content));
+    console.log(content.replace(INCLUDE_RE, replacer));
 }

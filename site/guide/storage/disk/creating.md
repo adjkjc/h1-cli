@@ -105,7 +105,7 @@ gdzie:
  * ```--size``` okresla rozmiar utworzonego dysku
  * ```--type``` określa typ tworzonego dysku
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [h1 disk create](/h1-cli/disk.md#disk-create).
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="disk create"].
 
 ## Utworzenie dysku poprzez przesłanie
 
@@ -126,6 +126,4 @@ gdzie:
  * ```--type``` określa typ tworzonego dysku
  * ```--source-file``` określa plik ```.vhdx``` zawierający obraz przesyłanego dysku.
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="h1 disk create"](/h1-cli/disk.md#disk-create).
-
-[CLI="h1 disk create"] ===> [CLI="h1 disk create"](/h1-cli/disk.md#disk-create)
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="disk create"].

@@ -1,16 +1,18 @@
-# Usuwanie ISO
+# Uzyskanie dostępu do konsoli Vault
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób usunąć [ISO](/resource/storage/disk.md).
+Dokument wyjaśnia w jaki sposób uzyskać dostęp do konsoli [Vault](/resource/storage/vault.md).
 
 ## Warunki wstępne
 
-* usunięcie ISO wymaga spełnienia [warunków usuwania ISO](/resource/storage/iso.md#usuwanie)
+* wykonanie operacji wymaga [utworzonego](./creating.md) *Vault* w stanie ```Właczony```
 
 ## Instrukcja
 
 ### Panel
+
+W celu uzyskania dostepu do konsoli *Vault* poprzez panel wykonaj następujące kroki:
 
 ```guide
 [
@@ -20,7 +22,7 @@ Dokument wyjaśnia w jaki sposób usunąć [ISO](/resource/storage/disk.md).
       "type": "entry",
       "location": "sidebar",
       "selector": ".nav > li:nth-child(2)",
-      "label": "ISOs"
+      "label": "Vault"
     }
   },
   {
@@ -43,32 +45,10 @@ Dokument wyjaśnia w jaki sposób usunąć [ISO](/resource/storage/disk.md).
   {
     "action_name": "click",
     "data": {
-      "type": "entry",
-      "selector": "navbar>.vm",
-      "label": "Usuń"
-    },
-    "after_event": "Po kliknięciu pojawi się okno potwierdzenia operacji."
-  },
-  {
-    "action_name": "click",
-    "data": {
       "type": "button",
       "selector": "navbar>.vm",
-      "label": "Usuń"
+      "label": "Konsola"
     }
   }
 ]
 ```
-
-#### CLI
-
-W celu usunięcia dysku z wykorzystaniem CLI wykonaj następujące polecenie:
-
-```bash
-h1 disk delete --disk my-disk
-```
-gdzie:
-
- * ```--disk``` określa nazwę lub identyfikator dysku
-
-Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="disk delete"].

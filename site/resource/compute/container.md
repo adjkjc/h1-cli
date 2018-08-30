@@ -108,6 +108,10 @@ performance x2     |   1h   |   160.0000 |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
+## Przewodniki
+
+<PageList path_re="guide/compute/container/"/>
+
 ## Powiązane produkty
 
 * *[Vault](/resource/storage/vault.md)*

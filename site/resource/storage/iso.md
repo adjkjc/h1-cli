@@ -24,6 +24,29 @@ Wymagana jest, aby zdalny serwer obsługiwał nagłówek HTTP [`Range`](https://
 * nie jest podłączony do żadnej *Maszyny wirtualnej*
 * wszystkie *ogólne* warunki
 
+## Zarządzanie
+
+Dostępne są następujące dedykowane operacje:
+
+ * opublikowanie
+ * odpublikowanie
+ 
+### Opublikowanie
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Online```
+* zasób nie jest opublikowany
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+### Odpublikowanie
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Online```
+* zasób jest opublikowany
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
 ### Typowe operacje
 
 Dostępne są następujące typowe operacje:
@@ -81,4 +104,4 @@ ISO     |     1h     | 1GB     |     0.0002
 
 ## Powiązane produkty
 
-* *[Virtual Machine]()*
+* *[Wirtualna maszyna](/resource/compute/virtual-machine.md)*

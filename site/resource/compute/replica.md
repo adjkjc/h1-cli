@@ -79,6 +79,10 @@ Replica     |   1M   |       250
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
+## Przewodniki
+
+<PageList path_re="guide/compute/replica/"/>
+
 ## Powiązane produkty
 
 * *[Dysk]()*

@@ -1,4 +1,4 @@
-# Utworzenie trwałego publicznego adresu IP
+# Utworzenie adresu IP w sieci prywatnej
 
 ## Wprowadzenie
 
@@ -27,11 +27,9 @@ W celu utworzenia *Adresu IP* poprzez panel wykonaj następujące kroki:
   {
     "action_name": "click",
     "data": {
-      "type": "button",
-      "selector": "navbar>.vm",
-      "label": "Utwórz Nowy"
+      "type": "entry_resource"
     },
-    "after_event": "Po kliknięciu zostanie przydzielony losowy publiczny adres IP."
+    "after_event": "Po kliknięciu zostanie otwarta strona z szczegółami zasobu."
   },
   {
     "action_name": "click",
@@ -40,7 +38,7 @@ W celu utworzenia *Adresu IP* poprzez panel wykonaj następujące kroki:
       "selector": "navbar>.vm",
       "label": "Adresy IP"
     },
-    "after_event": "Po kliknięciu pojawi się lista reguł."
+    "after_event": "Po kliknięciu pojawi się lista adresów IP."
   },
   {
     "action_name": "click",
@@ -79,4 +77,4 @@ W celu utworzenia *Adresu IP* z wykorzystaniem CLI wykonaj następujące polecen
 h1 ip create
 ```
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [h1 ip create](/h1-cli/ip.md#ip-create).
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="ip create"].

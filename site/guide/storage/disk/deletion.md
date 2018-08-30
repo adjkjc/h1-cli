@@ -63,7 +63,7 @@ W celu usunięcia dysku poprzez panel wykonaj następujące kroki:
       "selector": "navbar>.vm",
       "label": "Usuń"
     },
-    "after_event": "Po kliknięciu pojawi się okno potwierdzenia operacji"
+    "after_event": "Po kliknięciu pojawi się okno potwierdzenia operacji."
   },
   {
     "action_name": "click",
@@ -87,4 +87,4 @@ gdzie:
 
  * ```--disk``` określa nazwę lub identyfikator dysku
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [h1 disk delete](/h1-cli/disk.md#disk-delete).
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="disk delete"].

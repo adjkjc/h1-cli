@@ -1,19 +1,19 @@
-# Utworzenie zapory sieciowej
+# Utworzenie bramy sieciowej
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób utworzyć *[Zaporę sieciową](/resource/networking/firewall.md)* wykorzystywaną do kontroli przepływu w *Sieci*.
+Dokument wyjaśnia w jaki sposób utworzyć *[brame sieciową](/resource/networking/network-gateway.md)* zapewnia łączność z Sieci do Internetu.
 
 ## Warunki wstępne
 
-* utworzenie *Zapory sieciowej* wymaga spełnienia [warunków utworzenia Zapory sieciowej](/resource/networking/firewall.md#utworzenie)
+* utworzenie *bramy sieciowej* wymaga spełnienia [warunków utworzenia bramy sieciowej](/resource/networking/network-gateway.md#utworzenie)
 
 ## Instrukcja
 
 ### Panel
       
-W celu utworzenia *Zapora sieciowa* poprzez panel wykonaj następujące kroki:
-
+W celu utworzenia *bramy sieciowej* poprzez panel wykonaj następujące kroki:
+  
 ```guide
 [
   {
@@ -22,7 +22,7 @@ W celu utworzenia *Zapora sieciowa* poprzez panel wykonaj następujące kroki:
       "type": "entry",
       "location": "sidebar",
       "selector": ".nav > li:nth-child(2)",
-      "label": "Sieci"
+      "label": "Brama sieciowa"
     }
   },
   {
@@ -42,10 +42,15 @@ W celu utworzenia *Zapora sieciowa* poprzez panel wykonaj następujące kroki:
         {
           "name": "Nazwa",
           "type": "name",
-          "value": "moj-firewall"
+          "value": "moja-brama-sieciowa"
+        },
+        {
+          "name": "Adres IP",
+          "type": "choose",
+          "value": "2.181.8.31"
         }
       ],
-      "defined_all": true
+      "defined_all": false
     }
   },
   {
@@ -65,11 +70,11 @@ W celu utworzenia *Zapora sieciowa* poprzez panel wykonaj następujące kroki:
 W celu utworzenia ISO z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
-h1 firewall create --name my-ip-network
+h1 dns zone create --name example.com
 ```
 
 gdzie:
 
- * ```--name``` - określa nazwę nowoutworzonego firewalla
+ * ```--name``` - określa nazwę nowoutworzonego *DNS*
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="firewall create"].
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="dns create"].

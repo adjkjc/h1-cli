@@ -1,4 +1,4 @@
-# Utworzenie dysku
+# Utworzenie ISO
 
 ## Wprowadzenie
 
@@ -97,7 +97,7 @@ gdzie:
  * ```--name``` określa nazwę nowoutworzonego *ISO*
  * ```--source-url``` określa adres URL dla dysku
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [h1 iso create](/h1-cli/iso.md#iso-create).
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="iso create"].
 
 ## Utworzenie dysku na podstawie pliku lokalnego
 
@@ -117,4 +117,4 @@ gdzie:
  * ```--name``` określa nazwę nowoutworzonego dysku
  * ```--source-file``` wskazuje ściezkę do przesłanego pliku
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [h1 iso create](/h1-cli/iso.md#iso-create).
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="iso create"].

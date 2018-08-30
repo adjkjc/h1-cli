@@ -100,4 +100,4 @@ gdzie:
  * ```--address``` - określa pulę adresową sieci (parametr opcjonalny)
  * ```--gateway``` - określa bramę domyślna sieci (parametr opcjonalny)
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [h1 network create](/h1-cli/network.md#network-create).
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="network create"].

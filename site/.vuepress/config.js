@@ -21,7 +21,8 @@ module.exports = config = {
     markdown: {
         config: md => {
             md.use(require('markdown-it-include'), path.join(__dirname, '../partials'));
-            md.use(require('./guide-generator').plugin);
+            md.use(require('./guide-generator'));
+            md.use(require('./cli-link'));
         }
     },
     themeConfig: {

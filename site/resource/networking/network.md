@@ -23,8 +23,22 @@
 
 Dostępne są następujące dedykowane operacje
 
-* Ustawienie niestandardowych serwerów DNS w protokole DHCP
-* Ustawienie niestandardowej bramy domyślnej w protokole DHCP
+* Ustawienie serwerów DNS w protokole DHCP
+* Ustawienie bramy domyślnej w protokole DHCP
+
+### Ustawienie serwera DNS
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Online```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+### Ustawienie bramy domyślnej DNS
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Online```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Typowe operacje
 

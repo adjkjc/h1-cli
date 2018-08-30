@@ -8,7 +8,7 @@
 
 ### Utworzenie
 
-*Migawka* może zostać utworzony, w przypadku spełnienia następujących warunków: 
+*Migawka* może zostać utworzona, w przypadku spełnienia następujących warunków: 
 
 * dostęp do *Vault* jest włączony
 * wszystkie *ogólne* warunki
@@ -17,7 +17,7 @@
 
 ### Usuwanie
 
-Migawka może zostać usunięty, w przypadku spełnienia następujących warunków: 
+Migawka może zostać usunięta, w przypadku spełnienia następujących warunków: 
 
 * wszystkie *ogólne* warunki
 
@@ -49,6 +49,10 @@ Nazwa              | Okres  | Cena (PLN) | Uwagi
 snapshot           |   -    |     0.0000 | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
+
+## Przewodniki
+
+<PageList path_re="guide/storage/snapshot/"/>
 
 ## Powiązane produkty
 

@@ -21,6 +21,8 @@
 
 ## Zarządzanie
 
+### Dedykowane operacje
+
 Dostępne są następujące dedykowane operacje:
 
  * Przyłączenia zapory sieciowej do *[Sieci](/resource/networking/network.md)*
@@ -32,6 +34,34 @@ W przypadku usunięcia wszystkich reguł mają zastosowanie następujące zasady
 
  * ruch przychodzący jest zablokowany
  * ruch wychodzący jest dozwolony, jednak serwer nie może uzyskać potwierdzenia odbioru pakietów, które nie zostały dopuszczone przez jakąkolwiek reguły wychodzącego.
+
+#### Przyłączenie
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Rozłączony```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+#### Odłączenie
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Przyłączony```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+#### Dodanie reguły
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Rozłączony``` lub ```Przyłączony```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+#### Usunięcie reguły
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Rozłączony``` lub ```Przyłączony```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Typowe operacje
 

@@ -251,6 +251,10 @@ r4.xxlarge | 9.7303 | 1h
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
+## Przewodniki
+
+<PageList path_re="guide/compute/virtual-machine/"/>
+
 ## Powiązane produkty
 
 * *[Dysk](/resource/storage/disk.md)*

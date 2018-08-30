@@ -34,12 +34,34 @@ Wyróżniamy dwa typy *adresów IP* w Internecie:
 
 Dostępne są następujące dedykowane operacje
 
- * przekształcenie ulotnego *adresu IP* w trwały
- * odłączyć adres IP od *Zasobu*
- * zmień rekord PTR w DNS dla *adresu IP*
- * powiązanie *adresu IP* do obsługujących to *Zasobów*
+ * przekształcenie ulotnego *Adresu IP* w trwały
+ * zmień rekord PTR w DNS dla *Adresu IP*
+ * powiązanie *Adresu IP* do innego *Adresu IP*
 
 Powiązanie *Adresu IP* w Internecie z *Adresem IP* w *Sieci* umożliwia dostęp do Internetu.
+
+### Przekształcenie
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Przydzielony``` lub ```Nieprzydzielony```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+### Zmiana rekordu PTR
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Przydzielony``` lub ```Nieprzydzielony```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+### Powiązanie do innego IP
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
+* zasób jest *Adresem IP* w *Sieci* prywatnej
+* dowiązywany *Adres IP* jest adresem w *Sieci* publicznej
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Płatność
 

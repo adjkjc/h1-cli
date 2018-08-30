@@ -18,11 +18,34 @@
 
 ## Zarządzanie
 
+### Dedykowane operacje
+
 Dostępne są następujące dedykowane operacje:
 
  * dodanie *Adresu IP*
- * zastąpienie *Adresu IP* przypisanego do *Adapteru sieciowego*
+ * zastąpienie *Adresu IP*
  * odłączenie *Adresu IP*
+
+#### Dodanie adresu IP
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Online```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+#### Zastąpienie adresu IP
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Online```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+#### Odłączenie adresu IP
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Online```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Płatność
 
@@ -51,6 +74,10 @@ ruch wychodząc              |   -    |     0.0000 |
 adapter sieciowy            |   -    |     0.0000 | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
+
+## Przewodniki
+
+<PageList path_re="guide/networking/network-adapter/"/>
 
 ### Powiązane produkty
 

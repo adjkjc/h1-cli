@@ -31,7 +31,7 @@ W celu usunięcia *Sieć* poprzez panel wykonaj następujące kroki:
       "type": "entry_resource",
       "selector": "navbar>.vm"
     },
-    "after_event": "Po kliknięciu pojawią szczegóły zasobu."
+    "after_event": "Po kliknięciu pojawi się strona ze szczegółami zasobu."
   },
   {
     "action_name": "click",
@@ -49,7 +49,7 @@ W celu usunięcia *Sieć* poprzez panel wykonaj następujące kroki:
       "selector": "navbar>.vm",
       "label": "Usuń"
     },
-    "after_event": "Po kliknięciu pojawi się okno potwierdzenia operacji"
+    "after_event": "Po kliknięciu pojawi się okno potwierdzenia operacji."
   },
   {
     "action_name": "click",
@@ -74,4 +74,4 @@ gdzie:
 
  * ```--disk``` określa nazwę lub identyfikator *Sieci*
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [h1 network delete](/h1-cli/network.md#network-delete).
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="network delete"].

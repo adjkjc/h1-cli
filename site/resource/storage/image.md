@@ -69,6 +69,10 @@ obraz              |   1h   |     0.0002 |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
+## Przewodniki
+
+<PageList path_re="guide/storage/image/"/>
+
 ## Powiązane produkty
 
 * *[Wirtualna maszyna]()*

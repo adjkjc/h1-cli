@@ -1,18 +1,19 @@
-# Usunięcie DNS
+# Odłączenie zapory sieciowej od sieci
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób usunąć [DNS](/resource/networking/network.md).
+Dokument wyjaśnia w jaki sposób odłączyć *[Zaporę sieciową](/resource/networking/firewall.md)* od *[Sieci](/resource/networking/network.md)*.
 
 ## Warunki wstępne
 
-* usunięcie wymaga spełnienia [warunków usuwania DNS](/resource/networking/network.md#usuwanie)
+* posiadanie [utworzonej](/resource/networking/network.md) *Sieci*
+* posiadanie [utworzonej](/resource/networking/firewall.md) *Zapory sieciowej*
 
 ## Instrukcja
 
 ### Panel
 
-W celu usunięcia poprzez panel wykonaj następujące kroki:
+W celu odłączenia *Zapory sieciowej* od *Sieci* poprzez panel wykonaj następujące kroki:
 
 ```guide
 [
@@ -22,7 +23,7 @@ W celu usunięcia poprzez panel wykonaj następujące kroki:
       "type": "entry",
       "location": "sidebar",
       "selector": ".nav > li:nth-child(2)",
-      "label": "Sieci"
+      "label": "Zapora sieciowa"
     }
   },
   {
@@ -47,7 +48,7 @@ W celu usunięcia poprzez panel wykonaj następujące kroki:
     "data": {
       "type": "button",
       "selector": "navbar>.vm",
-      "label": "Usuń"
+      "label": "Rozłącz"
     },
     "after_event": "Po kliknięciu pojawi się okno potwierdzenia operacji."
   },
@@ -56,7 +57,7 @@ W celu usunięcia poprzez panel wykonaj następujące kroki:
     "data": {
       "type": "button",
       "selector": "navbar>.vm",
-      "label": "Usuń"
+      "label": "Rozłącz"
     }
   }
 ]
@@ -64,14 +65,14 @@ W celu usunięcia poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu usunięcia z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu odłączenia *Zapory sieciowej* od *Sieci* z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
-h1 dns zone delete --zone example.com.
+h1 firewall detach --firewall secure-zone-fw
 ```
 
 gdzie:
 
- * ```--zone``` określa nazwę lub identyfikator *Sieci*
-
-Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="dns zone delete"].
+ * ```--firewall``` określa nazwę lub identyfikator zapory sieciowej
+ 
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="firewall detach"].

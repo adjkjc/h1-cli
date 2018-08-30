@@ -49,7 +49,7 @@ W celu utworzenia zestawu rekordów DNS poprzez panel wykonaj następujące krok
       "type": "entry_resource",
       "selector": "navbar>.vm"
     },
-    "after_event": "Po kliknięciu pojawią szczegóły zasobu."
+    "after_event": "Po kliknięciu pojawi się strona ze szczegółami zasobu."
   },
   {
     "action_name": "click",
@@ -117,7 +117,7 @@ gdzie:
  * ```--zone-name``` okresla nazwę *DNS* do której dodawany jest zestaw rekordów
  * ```--value``` okresla wartość w zestawie rekordów
  
-Szczegółowe dane są dostępne w dokumentacji polecenia [h1 dns record-set a create](/h1-cli/dns.md#dns-record-set-a-create).
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="dns record-set a create"].
 
 W przypadku konieczności dodania innych typów rekordów dostępne są następujące polecenia:
 

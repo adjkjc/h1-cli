@@ -1,8 +1,8 @@
-# Zmiana rozmiaru dysku
+# Zwiększenie rozmiaru dysku
 
 ## Wprowadzenie
-  
-Dokument wyjaśnia w jaki sposób rozszerzyć [Dysk](/resource/storage/disk.md). Rozszerzenie dysku umożliwia zwiększenie rozmiaru przechowywanych danych
+
+Dokument wyjaśnia w jaki sposób zwiększyć [Dysk](/resource/storage/disk.md), co pozwala przechowywać większą ilość danych.
 
 ## Warunki wstępne
 
@@ -11,23 +11,6 @@ Dokument wyjaśnia w jaki sposób rozszerzyć [Dysk](/resource/storage/disk.md).
 ## Instrukcja
 
 ### Panel
-
-W celu zmiany rozmiaru dysku poprzez panel wykonaj następujące kroki:
-
-1. Wybierz pozycje ```Dyski``` znajdującą się w menu bocznym.
-2. Kliknij wybrany zasób spośród listy.  Po kliknięciu pojawią się szczegóły zasobu.
-2. Wybierz przycisk ```Akcje```. Po kliknięciu pojawi się lista rozwijana.
-3. Wybierz pozycje ```Zmień rozmiar```. Po kliknięciu pojawi się okno z formularzem.
-3. Wypełnij formularz:
-
-	* Określ ```nowy rozmiar dysku``` dla swojego zasobu.
-
-	Przykładowe wartości:
-
-	 * Nowy rozmiar dysku: ```100```
-
-4. Wybierz przycisk ``Zmień rozmiar``.
- 
 ```guide
 [
   {
@@ -45,7 +28,7 @@ W celu zmiany rozmiaru dysku poprzez panel wykonaj następujące kroki:
       "type": "entry_resource",
       "selector": "navbar>.vm"
     },
-    "after_event": "Po kliknięciu pojawią szczegóły zasobu."
+    "after_event": "Po kliknięciu pojawią` strona ze szczegółami danego zasobu.`"
   },
   {
     "action_name": "click",
@@ -72,7 +55,7 @@ W celu zmiany rozmiaru dysku poprzez panel wykonaj następujące kroki:
       "steps": [
         {
           "name": "nowy rozmiar dysku",
-          "type": "number",
+          "type": "new-size",
           "value": "100"
         }
       ],
@@ -90,7 +73,7 @@ W celu zmiany rozmiaru dysku poprzez panel wykonaj następujące kroki:
 ]
 ```
 
-### CLI
+#### CLI
 
 W celu zmiany rozmiaru dysku z wykorzystaniem CLI wykonaj następujące polecenie:
 
@@ -102,4 +85,4 @@ gdzie:
  * ```--disk``` określa nazwę lub identyfikator dysku
  * ```--size``` okresla nowy rozmiar dysku
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [h1 disk resize](/h1-cli/disk.md#disk-resize).
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="disk resize"].

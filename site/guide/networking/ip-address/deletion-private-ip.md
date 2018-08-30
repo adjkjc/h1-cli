@@ -12,8 +12,8 @@ Dokument wyjaśnia w jaki sposób usunąć [Adres IP](/resource/networking/ip-ad
 
 ### Panel
 
-W celu usunięcia *Zapory sieciowej* poprzez panel wykonaj następujące kroki:
-
+W celu usunięcia *Adresu IP* w *Sieci* poprzez panel wykonaj następujące kroki:
+ 
 ```guide
 [
   {
@@ -28,11 +28,9 @@ W celu usunięcia *Zapory sieciowej* poprzez panel wykonaj następujące kroki:
   {
     "action_name": "click",
     "data": {
-      "type": "button",
-      "selector": "navbar>.vm",
-      "label": "Utwórz Nowy"
+      "type": "entry_resource"
     },
-    "after_event": "Po kliknięciu zostanie przydzielony losowy publiczny adres IP."
+    "after_event": "Po kliknięciu zostanie otwarta strona z szczegółami zasobu."
   },
   {
     "action_name": "click",
@@ -41,46 +39,37 @@ W celu usunięcia *Zapory sieciowej* poprzez panel wykonaj następujące kroki:
       "selector": "navbar>.vm",
       "label": "Adresy IP"
     },
-    "after_event": "Po kliknięciu pojawi się lista reguł."
+    "after_event": "Po kliknięciu pojawi się lista adresów IP."
   },
   {
     "action_name": "click",
     "data": {
-      "type": "button",
-      "selector": "navbar>.vm",
-      "label": "Dodaj Nowy"
+      "type": "entry_tridot"
     },
-    "after_event": "Po kliknięciu zostanie otwarte okno z formularzem."
+    "after_event": "Po kliknięciu pojawi się lista rozwijana."
   },
   {
-    "action_name": "form",
+    "action_name": "click",
     "data": {
-      "modal": true,
-      "steps": [],
-      "defined_all": false
+      "type": "entry",
+      "selector": "navbar>.vm",
+      "label":"Usuń"
     }
-  },
-  {
-    "action_name": "click",
-    "data": {
-      "type": "button",
-      "selector": "navbar>.vm",
-      "label": "Dodaj"
-    },
-    "after_event": "Po kliknięciu zostanie dodany adres IP."
   }
+]
 ```
 
 #### CLI
 
-W celu usunięcia *Zapory sieciowej* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu usunięcia *Adresu IP* w *Sieci* z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
-h1 firewall delete --firewall my-firewall
+h1 network ip delete --ip my-ip --network my-network
 ```
 
 gdzie:
 
- * ```--firewall``` określa nazwę lub identyfikator *Zapory sieciowej*
+ * ```--ip``` określa adres IP lub jego identyfikator
+ * ```--network``` określa nazwę lub identyfikator sieci
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [h1 firewall delete](/h1-cli/firewall.md#firewall-delete).
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="network ip delete"].

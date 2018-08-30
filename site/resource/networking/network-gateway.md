@@ -8,6 +8,7 @@
 
 *Brama sieciowa* może zostać utworzona, w przypadku spełnienia następujących warunków:
 
+ * posiadanie w projekcie niewykorzystywanego adresu IP,
  * wszystkie *ogólne* warunki
 
 Utworzenie *bramy sieciowej* wymaga wskazania *Adresu IP* wcześniej przydzielonego do projektu.
@@ -24,7 +25,22 @@ Utworzenie *bramy sieciowej* wymaga wskazania *Adresu IP* wcześniej przydzielon
 Dostępne są następujące dedykowane operacje:
 
 * przyłączenie *Bramy sieciowej* do określonej *Sieci*
-* odłączenie *Bramy sieciowej* od określonej *Sieci*
+* rozłączenie *Bramy sieciowej* od określonej *Sieci*
+
+### Przyłączenie
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Rozłączony```
+* *Projekt* zawiera *Sieć*, która nie ma przyłączonej żadnej bramy domyślnej
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+### Rozłączenie
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* znajduje się w stanie ```Przyłączony```
+* nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Lokalizacja
 
@@ -39,6 +55,10 @@ Brama sieciowa  |   -    |     0.0000 |
 <!-- TODO: Service need to be created. -->
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
+
+## Przewodniki
+
+<PageList path_re="guide/networking/network-gateway/"/>
 
 ## Powiązane produkty
 

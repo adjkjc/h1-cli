@@ -45,4 +45,4 @@ W celu utworzenia *Adresu IP* z wykorzystaniem CLI wykonaj następujące polecen
 h1 ip create
 ```
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [h1 ip create](/h1-cli/ip.md#ip-create).
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="ip create"].

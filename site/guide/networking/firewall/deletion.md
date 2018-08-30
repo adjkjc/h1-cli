@@ -31,7 +31,7 @@ W celu usunięcia *Zapory sieciowej* poprzez panel wykonaj następujące kroki:
       "type": "entry_resource",
       "selector": "navbar>.vm"
     },
-    "after_event": "Po kliknięciu pojawią szczegóły zasobu."
+    "after_event": "Po kliknięciu pojawi się strona ze szczegółami danego zasobu."
   },
   {
     "action_name": "click",
@@ -49,7 +49,7 @@ W celu usunięcia *Zapory sieciowej* poprzez panel wykonaj następujące kroki:
       "selector": "navbar>.vm",
       "label": "Usuń"
     },
-    "after_event": "Po kliknięciu pojawi się okno potwierdzenia operacji"
+    "after_event": "Po kliknięciu pojawi się okno potwierdzenia operacji."
   },
   {
     "action_name": "click",
@@ -74,4 +74,4 @@ gdzie:
 
  * ```--firewall``` określa nazwę lub identyfikator *Zapory sieciowej*
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [h1 firewall delete](/h1-cli/firewall.md#firewall-delete).
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="firewall delete"].

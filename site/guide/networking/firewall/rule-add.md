@@ -36,7 +36,7 @@ W celu dodania reguły do *Zapory sieciowej* poprzez panel wykonaj następujące
       "type": "entry_resource",
       "selector": "navbar>.vm"
     },
-    "after_event": "Po kliknięciu pojawią szczegóły zasobu."
+    "after_event": "Po kliknięciu pojawi się strona ze szczegółami zasobu."
   },
   {
     "action_name": "click",

@@ -47,9 +47,32 @@ ssd     |          1 - 500 | 50 iops 8k / GB
 
 Dostępne są następujące dedykowane operacje dla *Dysku*:
 
-* pobranie jako plik `.vhdx`
+* pobranie dysku jako plik `.vhdx`
 * zwiększenie rozmiaru
 * zmniejszenie rozmiaru
+
+### Pobranie dysku
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+### Zwiększenie rozmiaru
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* żądany rozmiar nie przekracza dopuszczalnego rozmiaru dla wybranego wariantu dysku
+* zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+### Zmniejszenie rozmiaru
+
+Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+
+* zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
+* na końcu obszaru *Dysku* znajduje się wystarczająca ilość przestrzeni nie przydzielonej do żadnej partycji
+* zasób zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Typowe operacje
 

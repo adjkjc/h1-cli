@@ -13,7 +13,7 @@ Dokument wyjaśnia w jaki sposób utworzyć *[DNS](/resource/networking/dns.md)*
 ### Panel
       
 W celu utworzenia *DNS* poprzez panel wykonaj następujące kroki:
-  
+
 ```guide
 [
   {
@@ -72,4 +72,4 @@ gdzie:
 
  * ```--name``` - określa nazwę nowoutworzonego *DNS*
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [h1 dns create](/h1-cli/dns.md#dns-create).
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="dns create"].
