@@ -1,6 +1,6 @@
 # Utworzenie dysku
 
-## wprowadzenie
+## Wprowadzenie
 
 Dokument wyjaśnia w jaki sposób utworzyć [Dysk](/resource/storage/disk.md) wykorzystywany do przechowywania danych na potrzeby [Wirtualnej maszyny](/resource/compute/virtual-machine.md). W przypadku tworzenia dysku twardego możesz utworzyć go pustym. Natomiast jeżeli posiadasz już dysk w odpowiednim formacie możesz przesłać jego obraz do platformy i na tej podstawie utworzyć dysk w pltaformie. Utworzony dysk możesz w przyszłości rozszerzać lub zmniejszać.
 
@@ -8,7 +8,7 @@ Dokument wyjaśnia w jaki sposób utworzyć [Dysk](/resource/storage/disk.md) wy
 
 * utworzenie dysku wymaga spełnienia [warunków utworzenia dysku](/resource/storage/disk.md#utworzenie)
 
-## utworzenie pustego dysku
+## Utworzenie pustego dysku
 
 Utworzenie pustego dysku umożliwia w przyszłości składowania na nim dowolnych danych. Taki dysk początkowo nie zawiera żadnych danych użytkownika.
 
@@ -17,23 +17,23 @@ Utworzenie pustego dysku umożliwia w przyszłości składowania na nim dowolnyc
 W celu utworzenia dysku poprzez panel wykonaj następujące kroki:
 
 1. Wybierz pozycje ```Dyski``` znajdującą się w menu bocznym.
-2. Wybierz przycisk ```Utwórz Nowy```. Po kliknięciu pojawi się okno ...
+2. Wybierz przycisk ```Utwórz Nowy```. Po kliknięciu pojawi się okno z formularzem.
 3. Wypełnij formularz:
 
-	* Określ nazwę dla swojego zasobu.
-	* Wybierz typ.
+	* Określ ```nazwę``` dla swojego zasobu.
+	* Wybierz ```typ```.
 
 	> Określa on dostępny rozmiar i parametry wydajnościowe.
 
-    * Określ rozmiar.
+    * Określ ```rozmiar```.
 
-	Możesz wprowadzić następujące wartości:
+	Przykładowe wartości:
 
-	 * Nazwa: moj-dysk
-	 * Typ: ssd
-	 * Rozmiar: 50
+	 * Nazwa: ```moj-dysk```
+	 * Typ: ```ssd```
+	 * Rozmiar: ```50```
 
-4. Wybierz przycisk ``Utwórz``.
+4. Wybierz przycisk ``Utwórz``.  Po kliknięciu przejdziesz do strony ze szczegółami nowego zasobu.
 
 ```guide
 [
@@ -87,11 +87,11 @@ W celu utworzenia dysku poprzez panel wykonaj następujące kroki:
       "selector": "navbar>.vm",
       "label": "Utwórz"
     },
-    "after_event": "Po kliknięciu przejdziesz do strony z szczegółami nowego dysku.."
+    "after_event": "Po kliknięciu przejdziesz do strony ze szczegółami nowego zasobu."
   }
 ]
 ```
-
+    
 #### CLI
 
 W celu utworzenia dysku z wykorzystaniem CLI wykonaj następujące polecenie:
@@ -105,9 +105,9 @@ gdzie:
  * ```--size``` okresla rozmiar utworzonego dysku
  * ```--type``` określa typ tworzonego dysku
 
-Szczegółowe dane są dostępne w dokumentacji referencyjnej polecenia [h1 disk create](/h1-cli/disk.md#disk-create).
+Szczegółowe dane są dostępne w dokumentacji polecenia [h1 disk create](/h1-cli/disk.md#disk-create).
 
-## utworzenie dysku poprzez przesłanie
+## Utworzenie dysku poprzez przesłanie
 
 Utworzenie dysku poprzez przesłanie umożliwia przeniesienie istniejącego dysku ```.vhdx``` do platformy. Taki dysk już od samego początku może zawierać dane użytkownika gotowe do wykorzystania.
 
@@ -126,4 +126,6 @@ gdzie:
  * ```--type``` określa typ tworzonego dysku
  * ```--source-file``` określa plik ```.vhdx``` zawierający obraz przesyłanego dysku.
 
-Szczegółowe dane są dostępne w dokumentacji referencyjnej polecenia [h1 disk create](/h1-cli/disk.md#disk-create).
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="h1 disk create"](/h1-cli/disk.md#disk-create).
+
+[CLI="h1 disk create"] ===> [CLI="h1 disk create"](/h1-cli/disk.md#disk-create)

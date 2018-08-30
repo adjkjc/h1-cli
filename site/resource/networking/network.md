@@ -23,15 +23,14 @@
 
 Dostępne są następujące dedykowane operacje
 
-* Ustawienie niestandardowe serwerów DNS w protokole DHCP
-* Ustawienie niestandardową bramę domyślną w protokole DHCP
+* Ustawienie niestandardowych serwerów DNS w protokole DHCP
+* Ustawienie niestandardowej bramy domyślnej w protokole DHCP
 
 ### Typowe operacje
 
 Dostępne są następujące typowe operacje:
 
 * Możliwość zmiany wyświetlanej nazwy
-* Zarządzanie danymi dostępowymi
 
 ## Płatność
 
@@ -48,6 +47,10 @@ Nazwa              | Okres  | Cena (PLN) | Uwagi
 Sieć               |   1h   |    0.08260 | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
+
+## Przewodniki
+
+<PageList path_re="guide/networking/network/"/>
 
 ## Powiązane produkty
 

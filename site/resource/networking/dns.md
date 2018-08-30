@@ -51,6 +51,10 @@ DNS    |   -    |     0.0000 |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
+## Przewodniki
+
+<PageList path_re="guide/networking/dns/"/>
+
 ## Powiązane produkty
 
 * *[Adres IP](/resource/networking/ip-address.md)*

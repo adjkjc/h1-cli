@@ -34,7 +34,7 @@ Wyróżniamy dwa typy *adresów IP* w Internecie:
 
 Dostępne są następujące dedykowane operacje
 
- * przydzielić trwale *adres IP* do *Projektu*
+ * przekształcenie ulotnego *adresu IP* w trwały
  * odłączyć adres IP od *Zasobu*
  * zmień rekord PTR w DNS dla *adresu IP*
  * powiązanie *adresu IP* do obsługujących to *Zasobów*
@@ -71,6 +71,10 @@ IP w sieci publicznej  |   -    |     0.0000 |
 <!-- TODO: add service -->
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
+
+## Przewodniki
+
+<PageList path_re="guide/networking/ip-address/"/>
 
 ## Powiązane produkty
 

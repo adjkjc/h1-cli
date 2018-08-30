@@ -75,6 +75,10 @@ ISO     |     1h     | 1GB     |     0.0002
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
+## Przewodniki
+
+<PageList path_re="guide/storage/iso/"/>
+
 ## Powiązane produkty
 
 * *[Virtual Machine]()*

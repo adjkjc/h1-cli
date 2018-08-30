@@ -32,13 +32,13 @@ Możliwe jest określenie następujących parametrów podczas utworzenia;
 
 Kontenery dostępne są w wariantach, które różnią się dostępną mocą obliczeniową i pamięcią:
 
-Nazwa                  | vCPU  | Pamięć  |
-:--------------------  | :---: | ------: |
-playground             |   1   |  128 MB |
-standard               |   2   |  256 MB |
-standard x2            |   2   |  512 MB |
-performance            |   3   |  512 MB |
-performance x2         |   6   | 1024 MB |
+Nazwa                  |  vCPU  | Pamięć  |
+:--------------------  | :----: | ------: |
+playground             |   1    |  128 MB |
+standard               |   2    |  256 MB |
+standard x2            |   2    |  512 MB |
+performance            |   3    |  512 MB |
+performance x2         |   6    | 1024 MB |
 
 ## Zarządzanie
 

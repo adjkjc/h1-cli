@@ -1,22 +1,20 @@
-# Brama sieciowa
+# Zapora sieciowa
 
 ## Przeznaczenie
 
-*Brama sieciowa* zapewnia łączność z *Sieci* do Internetu.
+*Zapora sieciowa* może być używana jako sposób kontrolowania komunikacji w obu kierunkach (przychodzącej i wychodzącej) z *[Wirtualnej maszyny]()* do przyłączonej *[Sieci]()*.
 
-<!-- Restrictions -->
+## Cykl życia
 
 ### Utworzenie
 
-*Brama sieciowa* może zostać utworzona, w przypadku spełnienia następujących warunków:
+*Zapora sieciowa* może zostać utworzona, w przypadku spełnienia następujących warunków:
 
  * wszystkie *ogólne* warunki
 
-Utworzenie *bramy sieciowej* wymaga wskazania *Adresu IP* wcześniej przydzielonego do projektu.
-
 ### Usuwanie
 
-*Brama sieciowa* może zostać usunięta, w przypadku spełnienia następujących warunków:
+*Zapora sieciowa* może zostać usunięta, w przypadku spełnienia następujących warunków:
 
  * nie jest przywiązany do żadnej *Sieci*
  * wszystkie *ogólne* warunki
@@ -25,23 +23,63 @@ Utworzenie *bramy sieciowej* wymaga wskazania *Adresu IP* wcześniej przydzielon
 
 Dostępne są następujące dedykowane operacje:
 
-* przyłączenie *Bramy sieciowej* do określonej *Sieci*
-* odłączenie *Bramy sieciowej* od określonej *Sieci*
+ * Przyłączenia zapory sieciowej do *[Sieci](/resource/networking/network.md)*
+ * Odłączenia zapory sieciowej od *[Sieci](/resource/networking/network.md)*
+ * Dodanie reguły zapory sieciowej kontrolującej ruch przychodzący albo wychodzący
+ * Usunięcie reguły zapory sieciowej kontrolującej ruch przychodzący albo wychodzący
+
+W przypadku usunięcia wszystkich reguł mają zastosowanie następujące zasady:
+
+ * ruch przychodzący jest zablokowany
+ * ruch wychodzący jest dozwolony, jednak serwer nie może uzyskać potwierdzenia odbioru pakietów, które nie zostały dopuszczone przez jakąkolwiek reguły wychodzącego.
+
+### Typowe operacje
+
+Dostępne są następujące typowe operacje:
+
+ * Możliwość zmiany wyświetlanej nazwy
+
+## Ograniczone 
+
+W przypadku ograniczonego użycia:
+
+ * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/resource/general.md)*.
+
+## Przekazanie
+
+Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji*, w przypadku spełnienia następujące warunków:
+
+ * stan jest ``Rozłączony``
 
 ## Lokalizacja
 
 !!! include(regions.md) !!!
 
+## Parametry techniczne
+
+Parametr                                      | Wartość 
+--------------------------------------------- | ------:
+Maksymalna liczba reguł ruchu przychodzącego  | 50
+Maksymalna liczba reguł ruchu wychodzącego    | 50
+Maksymalna liczba filtrów w regule            | 10 
+Maksymalna liczba stref wewnętrznych w regule | 10
+Maksymalna liczba stref zewnętrznych w regule | 10
+
+[Napisz do nas](/TODO) jeżeli masz duży projekt i potrzebujesz zwiększyć te parametry.
+
 ## Cennik
 
-Nazwa           | Okres  | Cena (PLN) | Uwagi
---------------- | :----: | ---------: | :----:
-brama sieciowa  |   -    |     0.0000 | 
-
-<!-- TODO: Service need to be created. -->
+Wartość         | Okres  | Cena (PLN) | Uwagi
+--------------- | :----: | ---------: | ----
+zapora sieciowa |   -    |     0.0000 | TODO: Add service
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
+## Przewodniki
+
+<PageList path_re="guide/networking/firewall/"/>
+
 ## Powiązane produkty
 
-* *[Sieć](/resource/networking/network.md)*
+* *[Sieci]()*
+* *[Wirtualne maszyny]()*

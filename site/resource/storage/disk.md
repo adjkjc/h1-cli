@@ -30,7 +30,7 @@ W przypadku utworzenia *Dysku* na podstawie przesłanego pliku należy spełnić
 
 *Dysk* może zostać usunięty, w przypadku spełnienia następujących warunków: 
 
-* stan to "Rozłączony"
+* stan to ```Rozłączony```
 * wszystkie *ogólne warunki*
 
 ## Warianty
@@ -105,7 +105,7 @@ archive   |   1h   |       0.0002 |
 ## Przewodniki
 
 <PageList path_re="guide/storage/disk/"/>
-
+ 
 ## Powiązane produkty
 
 * *[Maszyny wirtualne](/resource/compute/virtual-machine.md)*

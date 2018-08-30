@@ -6,7 +6,7 @@
 
 *Adapter sieciowy* musi mieć przypisany *Adres IP* z *Sieci* do której jest przyłączony.
 
-## Cykl żyica
+## Cykl życia
 
 ### Utworzenie
 

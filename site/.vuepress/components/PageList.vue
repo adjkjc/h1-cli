@@ -14,9 +14,6 @@
 
 <script>
     export default {
-        data: () => ({
-            pages: [{title: '', path: ''}]
-        }),
         props: {
             path_re: {
                 required: true
