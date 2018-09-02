@@ -98,7 +98,7 @@ W przypadku ograniczonego użycia znajdują zastosowanie ogólne warunki *[Ogran
 
 <!-- partial-regions.md -->
 
-## Technical parameters
+## Parametry techniczne
 
 Parametr              | Wartość | Uwagi
 --------------------- | ------: | ---

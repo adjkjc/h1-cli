@@ -85,7 +85,7 @@ Gdy *Dane Organizacji* osiągną zdefiniowany okres przechowywania, nowe żądan
 
 <!-- partial-regions.md -->
 
-## Parametr techniczny
+## Parametry techniczne
 
 Parametr           | Wartość
 ------------------ | ------
