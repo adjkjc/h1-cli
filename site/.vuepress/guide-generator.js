@@ -1,5 +1,6 @@
 'use strict';
 const fs = require('fs');
+const crypto = require('crypto');
 
 const INCLUDE_RE = /^```\s*guide$(.+?)^```\s*$/sgm;
 
@@ -34,6 +35,8 @@ const actions = {
             content.push("Wybierz zakładkę");
         } else if (data.type === 'entry_resource') {
             content.push("Kliknij wybrany zasób spośród listy");
+        } else if (data.type === 'entry_list') {
+            content.push("Kliknij wybraną pozycje listy");
         } else if (data.type === 'entry_tridot') {
             content.push('Na poziomie nazwy pozycji z listy kliknij trójkropek');
         } else if (data.type === 'tridot') {
@@ -105,6 +108,7 @@ const actions = {
             'text': (field) => `Określ parametr <code>${field.name}</code> . `,
             'choose': (field) => `Wybierz <code>${field.name}</code>.`,
             'number': (field) => `Określ <code>${field.name}</code>.`,
+            'password': (field) => `Określ hasło w polu  <code>${field.name}</code>.`
         };
 
         let content = `Wypełnij formularz:<ul>\n`;
@@ -123,11 +127,12 @@ const actions = {
         content += `</ul>\n\n`;
         content += `Przykładowe wartości:\n\n<ul>\n`;
         for (const field of data.steps) {
-            content += `<li>${field.name}: <code>${field.value}</code></li>\n`
+            const value = field.type === 'password' ? crypto.randomBytes(10).toString('hex') : field.value;
+            content += `<li>${field.name}: <code>${value}</code></li>\n`;
         }
         content += `</ul>\n`;
 
-        if (data.defined_all) {
+        if (!data.defined_all) {
             content += 'Pozostaw sugerowane wartości w pozostałych polach\n'
         }
 

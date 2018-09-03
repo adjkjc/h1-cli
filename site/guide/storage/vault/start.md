@@ -45,7 +45,7 @@ W celu włączenia dostępu do *Vault* poprzez panel wykonaj następujące kroki
   {
     "action_name": "click",
     "data": {
-      "type": "button",
+      "type": "entry",
       "selector": "navbar>.vm",
       "label": "Start"
     }

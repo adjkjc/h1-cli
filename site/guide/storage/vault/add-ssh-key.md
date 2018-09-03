@@ -1,8 +1,8 @@
-# Dodanie klucza SSH
+# Dodanie klucza SSH do Vault
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób dodać klucz SSH do [Vault](/resource/storage/vault.md).
+Dokument wyjaśnia w jaki sposób dodać klucz SSH do [Vault](/resource/storage/vault.md) stanowiące dane dostępowe.
 
 Klucze SSH w przypadku *Vault* mogą pochodzić z opcji projektu lub opcji użytkownika, albo zostać wygenerowane "ad-hoc".
 
@@ -16,7 +16,7 @@ Utworzenie Vault z wykorzystaniem istniejącego klucza pozwala na sprawne ponown
 
 ### Panel
 
-W celu dodania istniejącego w opcjach projektu lub użytkownika klucza SSH do *Vault* poprzez panel wykonaj następujące kroki:
+W celu dodania do *Vault* klucza SSH istniejącego w opcjach projektu lub użytkownika poprzez panel wykonaj następujące kroki:
 
 ```guide
 [
@@ -67,20 +67,19 @@ W celu dodania istniejącego w opcjach projektu lub użytkownika klucza SSH do *
   {
     "action_name": "click",
     "data": {
-      "type": "entry",
-      "selector": "navbar>.vm",
+      "type": "entry_list",
+      "selector": "navbar>.vm"
     },
-    "after_event": "Po kliknięciu poal formularza zostaną wypełnione."
+    "after_event": "Po kliknięciu formularz zostanie uzupełniony wlaściwymi danymi."
   },
   {
     "action_name": "click",
     "data": {
       "type": "button",
       "selector": "navbar>.vm",
-      "label": "Dodaj"
-    },
-    "after_event": "Po kliknięciu przejdziesz do strony ze szczegółami nowego zasobu."
-  }
+      "label":"Utwórz"
+    }
+  }    
 ]
 ```
 
@@ -89,23 +88,25 @@ W celu dodania istniejącego w opcjach projektu lub użytkownika klucza SSH do *
 W celu dodania istniejącego klucza SSH do *Vault* z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
-h1 vault credential password add --name my-pass --password secret-password --vault my-vault
+h1 vault credential cert add --vault my-vault --name my-key --sshkey my-home-ssh
 ```
 
 gdzie:
 
- * ```--name``` określa nazwę nowoutworzonego *Vault*
- * ```--size``` określa jego rozmiar
+ * ```--vault``` określa nazwę lub identyfikator *Vault*
+ * ```--name``` określa nazwę dla danych dostępowych
+ * ```--sshkey``` określa wykorzystany klucz SSH projektu lub użytkownika
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vault create"].
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vault credential cert add"].
 
-## Utworzenie *Vault* na podstawie *Migawki*
+## Wygenerowanie i dodanie klucza SSH
 
-Utworzenie *Vault* na podstawie *Migawki* umożliwia m. in. sprawne uzyskanie dostepu do danych w niej zgromadzonych.
+Wygenerowanie klucza SSH na stronie, a następnie dodanie go do *Vault* pozwala na sprawne rozpoczącenie pracy z wykorzystaniem
+bezpiecznej metody dostępu jaką są klucze SSH.
 
 ### Panel
 
-W celu utworzenia *Vault* na podstawie *Migawki* poprzez panel wykonaj następujące kroki:
+W celu wygenerowania i dodania do *Vault* nowego klucza SSH wykonaj następujące kroki:
 
 ```guide
 [
@@ -121,80 +122,55 @@ W celu utworzenia *Vault* na podstawie *Migawki* poprzez panel wykonaj następuj
   {
     "action_name": "click",
     "data": {
-      "type": "entry_resource"
+      "type": "entry_resource",
+      "selector": "navbar>.vm"
     },
-    "after_event": "Po kliknięciu zostanie otwarta strona z szczegółami zasobu."
+    "after_event": "Po kliknięciu pojawi się strona ze szczegółami zasobu."
   },
   {
     "action_name": "click",
     "data": {
       "type": "tab",
       "selector": "navbar>.vm",
-      "label": "Migawka"
+      "label": "Dane dostępowe"
     },
-    "after_event": "Po kliknięciu pojawi się lista wykonanych migawek."
-  },
-  {
-    "action_name": "click",
-    "data": {
-      "type": "entry_resource"
-    },
-    "after_event": "Po kliknięciu zostanie otwarta strona z szczegółami zasobu."
+    "after_event": "Po kliknięciu pojawi się lista danych dostępowych."
   },
   {
     "action_name": "click",
     "data": {
       "type": "button",
       "selector": "navbar>.vm",
-      "label": "Akcje"
+      "label":"Utwórz nowy"
     },
-    "after_event": "Po kliknięciu pojawi się lista rozwijana."
+    "after_event": "Po kliknięciu pojawi się okno z formularz."
   },
   {
     "action_name": "click",
     "data": {
       "type": "button",
       "selector": "navbar>.vm",
-      "label": "Utwórz Vault"
+      "label":"Wygeneruj nowe klucze SSH"
     },
-    "after_event": "Po kliknięciu pojawi się okno z formularzem."
+    "after_event": "Po kliknięciu zostanie w Twojej przeglądarce wygenerowana odpowiednia para kluczy, udostępniona do pobrania, a formularz uzupełniony właściwymi danymi."
   },
   {
     "action_name": "click",
     "data": {
       "type": "button",
       "selector": "navbar>.vm",
-      "label": "Usuń"
+      "label": "Pobierz klucz prywatny dla Putty"
     },
-    "after_event": "Po kliknięciu pojawi się okno z formularzem."
-  },
-  {
-    "action_name": "form",
-    "data": {
-      "modal": true,
-      "steps": [
-        {
-          "name": "Nazwa",
-          "type": "name",
-          "value": "moj-vault"
-        },
-        {
-          "name": "Rozmiar",
-          "type": "number",
-          "value": "10"
-        }
-      ],
-      "defined_all": true
-    }
+    "after_event": "Po kliknięciu i zapisaniu pliku kolejne kroki zostaną odblokowane."
   },
   {
     "action_name": "click",
     "data": {
       "type": "button",
       "selector": "navbar>.vm",
-      "label": "Utwórz"
+      "label":"Utwórz"
     },
-    "after_event": "Po kliknięciu przejdziesz do strony ze szczegółami nowego zasobu."
+    "after_event": "Po kliknięciu pojawi się okno z formularz."
   }
 ]
 ```

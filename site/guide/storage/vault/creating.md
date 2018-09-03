@@ -2,7 +2,9 @@
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób utworzyć [Vault](/resource/storage/vault.md).
+Dokument wyjaśnia w jaki sposób utworzyć [Vault](/resource/storage/vault.md), który możesz wykorzystać do 
+długoterminowego przechowywania danych i dostępu do nich z wykorzystaniem popularnych narzędzi takich jak  ssh, 
+sftp, scp, git i rsync.
  
 W przypadku tworzenia *Vault* możesz utworzyć go pustego lub na podstawie istniejącej *[Migawki](/resource/storage/snapshot.md)*.
 
@@ -12,7 +14,7 @@ W przypadku tworzenia *Vault* możesz utworzyć go pustego lub na podstawie istn
 
 ## Utworzenie pustego *Vault*
 
-Utworzenie pustego *Vault* pozwala na sprawne rozpoczęcie pracy i procesu gromadzenie danych.
+Utworzenie pustego *Vault* jest najszybszą metodą na sprawne rozpoczęcie nowej pracy i procesu gromadzenie danych.
 
 ### Panel
 
@@ -68,6 +70,7 @@ W celu utworzenia *Vault* poprzez panel wykonaj następujące kroki:
   }
 ]
 ```
+
 
 #### CLI
 
@@ -141,15 +144,6 @@ W celu utworzenia *Vault* na podstawie *Migawki* poprzez panel wykonaj następuj
       "type": "button",
       "selector": "navbar>.vm",
       "label": "Utwórz Vault"
-    },
-    "after_event": "Po kliknięciu pojawi się okno z formularzem."
-  },
-  {
-    "action_name": "click",
-    "data": {
-      "type": "button",
-      "selector": "navbar>.vm",
-      "label": "Usuń"
     },
     "after_event": "Po kliknięciu pojawi się okno z formularzem."
   },

@@ -1,18 +1,18 @@
-# Usunięcie Vault
+# Usunięcie Migawki
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób usunąć [Vault](/resource/storage/vault.md).
+Dokument wyjaśnia w jaki sposób usunąć [Migawkę](/resource/storage/snapshot.md).
 
 ## Warunki wstępne
 
-* usunięcie *Vault* wymaga spełnienia [warunków usuwania Vault](/resource/storage/vault.md#usuwanie)
+* usunięcie *Migawki* wymaga spełnienia [warunków usuwania Migawki](/resource/storage/snapshot.md#usuwanie)
 
 ## Instrukcja
 
 ### Panel
 
-W celu usunięcia *Vault* poprzez panel wykonaj następujące kroki:
+W celu usunięcia *Migawki* poprzez panel wykonaj następujące kroki:
 
 ```guide
 [
@@ -24,6 +24,23 @@ W celu usunięcia *Vault* poprzez panel wykonaj następujące kroki:
       "selector": ".nav > li:nth-child(2)",
       "label": "Vault"
     }
+  },
+  {
+    "action_name": "click",
+    "data": {
+      "type": "entry_resource",
+      "selector": "navbar>.vm"
+    },
+    "after_event": "Po kliknięciu pojawi się strona ze szczegółami zasobu."
+  },
+  {
+    "action_name": "click",
+    "data": {
+      "type": "tab",
+      "selector": "navbar>.vm",
+      "label": "Dane dostępowe"
+    },
+    "after_event": "Po kliknięciu pojawi się lista dostępnych Migawek."
   },
   {
     "action_name": "click",
@@ -64,14 +81,14 @@ W celu usunięcia *Vault* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu usunięcia *Vault* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu usunięci *Migawki* z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
-h1 vault delete --vault my-vault
+h1 snapshot delete --snapshot my-vault
 ```
 
 gdzie:
 
- * ```--vault``` określa nazwę lub identyfikator *Vault*
+ * ```--snapshot``` określa nazwę lub identyfikator *Migawki*
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vault delete"].
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="snapshot delete"].

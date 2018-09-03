@@ -2,7 +2,9 @@
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób uzyskać dostęp do konsoli [Vault](/resource/storage/vault.md).
+Dokument wyjaśnia w jaki sposób uzyskać dostęp do konsoli [Vault](/resource/storage/vault.md), która pozwala na 
+zapoznanie się z trescią zgromadzonych danych i wykonanie na nich podstawowych operacji bezpośrednio z okna 
+przeglądarki.
 
 ## Warunki wstępne
 

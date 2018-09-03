@@ -45,7 +45,7 @@ W celu wyłączenia dostępu do *Vault* poprzez panel wykonaj następujące krok
   {
     "action_name": "click",
     "data": {
-      "type": "button",
+      "type": "entry",
       "selector": "navbar>.vm",
       "label": "Stop"
     }

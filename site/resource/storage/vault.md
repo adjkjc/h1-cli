@@ -48,6 +48,8 @@ Operacja może zostać wykonana, w przypadku spełnienia następujących warunk�
 * zasób znajduje się w stanie ```Online```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
+Wykonanie operacji może ograniczyć funkcjonowanie *Kontenera* wykorzystującego dany *Vault*.
+
 ### Zwiększenie rozmiaru
 
 Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 

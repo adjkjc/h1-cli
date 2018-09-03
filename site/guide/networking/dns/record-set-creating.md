@@ -121,9 +121,9 @@ Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="dns record-set a
 
 W przypadku konieczności dodania innych typów rekordów dostępne są następujące polecenia:
 
-* [h1 dns record-set a create](/h1-cli/dns.md#dns-record-set-a-create)
-* [h1 dns record-set txt create](/h1-cli/dns.md#dns-record-set-txt-create)
-* [h1 dns record-set cname create](/h1-cli/dns.md#dns-record-set-cname-create)
-* [h1 dns record-set mx create](/h1-cli/dns.md#dns-record-set-mx-create)
-* [h1 dns record-set ns create](/h1-cli/dns.md#dns-record-set-ns-create)
-* [h1 dns record-set srv create](/h1-cli/dns.md#dns-record-set-srv-create)
+* [CLI="dns record-set a create"]
+* [CLI="dns record-set txt create"]
+* [CLI="dns record-set cname create"]
+* [CLI="dns record-set mx create"]
+* [CLI="dns record-set ns create"]
+* [CLI="dns record-set srv create"]
