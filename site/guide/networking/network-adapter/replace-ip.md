@@ -56,15 +56,7 @@ W celu zastąpienia *Adresu IP* poprzez panel wykonaj następujące kroki:
       "label":"Adres IP",
       "selector": "navbar>.vm"
     },
-    "after_event": "Po kliknięciu pojawi się lista rozwijana."
-  },
-  {
-    "action_name": "click",
-    "data": {
-      "type": "entry",
-      "selector": "navbar>.vm",
-      "label": "Usuń Adres IP z adaptera sieciowego"
-    }
+    "after_event": "Po kliknięciu pojawi się okno z formularzem."
   },
   {
     "action_name": "form",

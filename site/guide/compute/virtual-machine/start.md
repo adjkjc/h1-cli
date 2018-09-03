@@ -1,18 +1,18 @@
-# Opublikowanie ISO
+# Uruchomienie Wirtualnej Maszyny
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób opublikować [ISO](/resource/storage/iso.md) dla wszystkich użytkowników platformy.
+Dokument wyjaśnia w jaki sposób uruchomić [Wirtualną maszynę](/resource/compute/virtual-machine.md).
 
 ## Warunki wstępne
 
-* wszystkie warunki wykonania operacji [Opublikowanie](/resource/storage/iso.md#opublikowanie)
+* wszystkie warunki wykonania operacji [Uruchomienie](/resource/compute/virtual-machine.md#uruchomienie).
 
 ## Instrukcja
 
 ### Panel
 
-W celu opublikowania *ISO* poprzez panel wykonaj następujące kroki:
+W celu uruchomienie *Wirtualnej maszyny* poprzez panel wykonaj następujące kroki:
 
 ```guide
 [
@@ -22,7 +22,7 @@ W celu opublikowania *ISO* poprzez panel wykonaj następujące kroki:
       "type": "entry",
       "location": "sidebar",
       "selector": ".nav > li:nth-child(2)",
-      "label": "ISO"
+      "label": "Wirtualne maszyny"
     }
   },
   {
@@ -45,9 +45,9 @@ W celu opublikowania *ISO* poprzez panel wykonaj następujące kroki:
   {
     "action_name": "click",
     "data": {
-      "type": "button",
+      "type": "entry",
       "selector": "navbar>.vm",
-      "label": "Publiczny"
+      "label": "Uruchom"
     }
   }
 ]
@@ -55,15 +55,14 @@ W celu opublikowania *ISO* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu opublikowania *ISO* wykonaj następujące polecenie:
+W celu uruchomienia *Maszyny Wirtualnej* z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
-h1 iso access grant --iso test-image --project '*'
+h1 vm start --vm test-vm
 ```
 
 gdzie:
 
- * ```--iso``` określa nazwę lub identyfikator publikowanego *ISO*
- * ```--project '*'``` określa, że publikacja następuje dla wszystkich użytkowników platformy
+ * ```--vm``` określa nazwę lub identyfikator *Wirtualnej maszyny*
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="iso access grant"].
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vm start"].

@@ -3,7 +3,7 @@ const path = require('path');
 
 const show_directory = (dir, excludes = []) => fs.readdirSync(dir).filter(filename => !excludes.includes(filename)).map(x => `/${dir}/${x}`);
 
-product_category = {
+const product_category = {
     title: 'Chmura publiczna',
     children: [
         '/resource/general',
@@ -11,9 +11,59 @@ product_category = {
     ]
 };
 
-services_category = {
+const services_category = {
     title: 'Usługi',
     children: show_directory('services', ['general.md', 'README.md'])
+};
+
+
+const categories = [
+    {
+        name: 'Moc obliczeniowa',
+        slug: 'compute'
+    },
+    {
+        name: 'Łączność sieciowa',
+        slug: 'compute'
+    },
+    {
+        name: 'Przechowywanie danych',
+        slug: 'storage'
+    }
+];
+
+const getSidebar = () => {
+    const sidebar = {
+        '/h1-cli/': show_directory('h1-cli', ['README.md', 'index.md', 'dist', 'docs']),
+        '/about-us': [
+            '/about-us/contact.md',
+        ],
+    };
+    categories.forEach(category => {
+        const el = [
+            '/resource/',
+            product_category,
+            {
+                title: category.name,
+                children: show_directory(`resource/${category.slug}`, ['README.md', 'dist'])
+            },
+        ];
+        sidebar[`/resource/${category.slug}/`] = el;
+        sidebar[`/guide/${category.slug}/`] = el;
+    });
+    sidebar['/resource/'] = [
+        '/resource/',
+        product_category,
+        services_category,
+    ];
+    sidebar['/services/'] = [
+        '/resource/',
+        services_category,
+    ];
+    sidebar['/'] = [
+        '/',
+    ];
+    return sidebar;
 };
 
 module.exports = config = {
@@ -27,62 +77,7 @@ module.exports = config = {
     },
     themeConfig: {
         // logo: '/assets/logo.png',
-        sidebar: {
-            '/h1-cli/': show_directory('h1-cli', ['README.md', 'index.md', 'dist', 'docs']),
-            // '/pricing/': [
-            //     {
-            //         title: 'Pricing',
-            //         children: show_directory('pricing', ['README.md', 'dist'])
-            //     },
-            // ],
-            '/about-us': [
-                '/about-us/contact.md',
-            ],
-            '/resource/compute/': [
-                '/resource/',
-                product_category,
-                {
-                    title: 'Moc obliczeniowa',
-                    children: show_directory('resource/compute', ['README.md', 'dist'])
-                },
-            ],
-            '/resource/networking/': [
-                '/resource/',
-                product_category,
-                {
-                    title: 'Łączność sieciowa',
-                    children: show_directory('resource/networking', ['README.md', 'dist'])
-                },
-            ],
-            '/resource/storage/': [
-                '/resource/',
-                product_category,
-                {
-                    title: 'Przechowywanie danych',
-                    children: show_directory('resource/storage', ['README.md', 'dist'])
-                },
-            ],
-            // '/resource/others/': [
-            //     '/resource/general',
-            //     product_category,
-            //     {
-            //         title: 'Pozostałe',
-            //         children: show_directory('resource/others', ['README.md', 'dist'])
-            //     },
-            // ],
-            '/resource/': [
-                '/resource/',
-                product_category,
-                services_category,
-            ],
-            '/services/': [
-                '/resource/',
-                services_category,
-            ],
-            '/': [
-                '/',
-            ],
-        },
+        sidebar: getSidebar(),
         nav: [
             // {text: 'Pricing', link: '/pricing/'},
             {text: 'Oferta', link: '/resource/'},

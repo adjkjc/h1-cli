@@ -1,12 +1,12 @@
-# Opublikowanie ISO
+# Opublikowanie Obrazu
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób opublikować [ISO](/resource/storage/iso.md) dla wszystkich użytkowników platformy.
+Dokument wyjaśnia w jaki sposób opublikować [Obraz](/resource/storage/image.md) dla wszystkich użytkowników platformy.
 
 ## Warunki wstępne
 
-* wszystkie warunki wykonania operacji [Opublikowanie](/resource/storage/iso.md#opublikowanie)
+* wszystkie warunki wykonania operacji [Opublikowanie](/resource/storage/image.md#opublikowanie)
 
 ## Instrukcja
 
@@ -22,7 +22,7 @@ W celu opublikowania *ISO* poprzez panel wykonaj następujące kroki:
       "type": "entry",
       "location": "sidebar",
       "selector": ".nav > li:nth-child(2)",
-      "label": "ISO"
+      "label": "Obrazy"
     }
   },
   {
@@ -55,15 +55,15 @@ W celu opublikowania *ISO* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu opublikowania *ISO* wykonaj następujące polecenie:
+W celu opublikowania *Obrazu* wykonaj następujące polecenie:
 
 ```bash
-h1 iso access grant --iso test-image --project '*'
+h1 image access grant --image test-image --project '*'
 ```
 
 gdzie:
 
- * ```--iso``` określa nazwę lub identyfikator publikowanego *ISO*
+ * ```--image``` określa nazwę lub identyfikator publikowanego *Obrazu*
  * ```--project '*'``` określa, że publikacja następuje dla wszystkich użytkowników platformy
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="iso access grant"].
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="image access grant"].

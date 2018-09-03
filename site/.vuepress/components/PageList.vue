@@ -4,7 +4,6 @@
             <router-link
                     class="nav-link"
                     :to="page.path"
-                    :exact="exact"
             >
                 {{ page.title}}
             </router-link>

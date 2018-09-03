@@ -1,18 +1,16 @@
-# Usunięcie Sieci
+# Usuwanie Obrazu
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób usunąć  [Sieć](/resource/networking/network.md).
+Dokument wyjaśnia w jaki sposób usunąć *[Obraz](/resource/storage/image.md)*.
 
 ## Warunki wstępne
 
-* usunięcie *Sieć* wymaga spełnienia [warunków usuwania Sieci](/resource/networking/network.md#usuwanie)
+* usunięcie *Obrazu* wymaga spełnienia [warunków usuwania ISO](/resource/storage/iso.md#usuwanie)
 
 ## Instrukcja
 
 ### Panel
-
-W celu usunięcia *Sieć* poprzez panel wykonaj następujące kroki:
 
 ```guide
 [
@@ -22,7 +20,7 @@ W celu usunięcia *Sieć* poprzez panel wykonaj następujące kroki:
       "type": "entry",
       "location": "sidebar",
       "selector": ".nav > li:nth-child(2)",
-      "label": "Sieci"
+      "label": "Obrazy"
     }
   },
   {
@@ -31,7 +29,7 @@ W celu usunięcia *Sieć* poprzez panel wykonaj następujące kroki:
       "type": "entry_resource",
       "selector": "navbar>.vm"
     },
-    "after_event": "Po kliknięciu pojawi się strona ze szczegółami zasobu."
+    "after_event": "Po kliknięciu pojawią szczegóły zasobu."
   },
   {
     "action_name": "click",
@@ -45,7 +43,7 @@ W celu usunięcia *Sieć* poprzez panel wykonaj następujące kroki:
   {
     "action_name": "click",
     "data": {
-      "type": "button",
+      "type": "entry",
       "selector": "navbar>.vm",
       "label": "Usuń"
     },
@@ -64,14 +62,13 @@ W celu usunięcia *Sieć* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu usunięcia *Sieci* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu usunięcia *Obrazu* z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
-h1 network delete --network my-network
+h1 disk delete --disk my-disk
 ```
-
 gdzie:
 
- * ```--disk``` określa nazwę lub identyfikator *Sieci*
+ * ```--disk``` określa nazwę lub identyfikator dysku
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="network delete"].
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="image delete"].

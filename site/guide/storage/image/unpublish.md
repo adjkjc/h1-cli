@@ -1,18 +1,18 @@
-# Opublikowanie ISO
+# Odpublikowanie Obrazu
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób opublikować [ISO](/resource/storage/iso.md) dla wszystkich użytkowników platformy.
+Dokument wyjaśnia w jaki sposób odpublikować [Obrazu](/resource/storage/image.md).
 
 ## Warunki wstępne
 
-* wszystkie warunki wykonania operacji [Opublikowanie](/resource/storage/iso.md#opublikowanie)
+* wszystkie warunki wykonania operacji [Odpublikowanie](/resource/storage/image.md#odpublikowanie)
 
 ## Instrukcja
 
 ### Panel
 
-W celu opublikowania *ISO* poprzez panel wykonaj następujące kroki:
+W celu odpublikowania *Obrazu* poprzez panel wykonaj następujące kroki:
 
 ```guide
 [
@@ -22,7 +22,7 @@ W celu opublikowania *ISO* poprzez panel wykonaj następujące kroki:
       "type": "entry",
       "location": "sidebar",
       "selector": ".nav > li:nth-child(2)",
-      "label": "ISO"
+      "label": "Dyski"
     }
   },
   {
@@ -47,7 +47,7 @@ W celu opublikowania *ISO* poprzez panel wykonaj następujące kroki:
     "data": {
       "type": "button",
       "selector": "navbar>.vm",
-      "label": "Publiczny"
+      "label": "Prywatny"
     }
   }
 ]
@@ -55,15 +55,15 @@ W celu opublikowania *ISO* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu opublikowania *ISO* wykonaj następujące polecenie:
+W celu odpublikowania *Obrazu* wykonaj następujące polecenie:
 
 ```bash
-h1 iso access grant --iso test-image --project '*'
+h1 iso access revoke --iso test-image --project '*'
 ```
 
 gdzie:
 
- * ```--iso``` określa nazwę lub identyfikator publikowanego *ISO*
- * ```--project '*'``` określa, że publikacja następuje dla wszystkich użytkowników platformy
+ * ```--iso``` określa nazwę lub identyfikator publikowanego obrazu
+ * ```--project '*'``` określa, że publikacja zachodziła dla wszystkich użytkowników platformy
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="iso access grant"].
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="image access revoke"].

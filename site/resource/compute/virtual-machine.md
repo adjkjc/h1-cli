@@ -12,14 +12,14 @@
 
 *Maszyna wirtualna* może zostać utworzona, w przypadku spełnienia następujących warunków:
 
-* dostępna przestrzeń adresowa w *[Sieć](/resource/networking/network.md)* (jeśli zamierzasz dołączyć do *Sieci*)
-* wszystkie *ogólne* warunki.
+ * dostępna przestrzeń adresowa w *[Sieć](/resource/networking/network.md)* (jeśli zamierzasz dołączyć do *Sieci*)
+ * wszystkie *ogólne* warunki.
 
 ### Usuwanie
 
 *Wirtualna maszyna* może zostać usunięta, jeśli spełnione są wszystkie następujące warunki:
 
-* wszystkie *ogólne* warunki.
+ * wszystkie *ogólne* warunki.
 
 ## Warianty
 
@@ -78,10 +78,10 @@ Na życzenie w celu zaspokojenia potrzeb szczególnych przypadków (np. licencjo
 
 Dostępne są następujące dedykowane operacje
 
-* Wyłączenie
-* Bezpiecznie zamknięcie systemu operacyjnego i wyłączenie
-* Wymuszone wyłączenie podobnie do odcięcia napięcia
-* Zrestartowanie
+ * Uruchomienie 
+ * Wyłączenie, co powoduje bezpiecznie zamknięcie systemu operacyjnego
+ * Zamknięcie, co powoduje wyłączenie podobnie do odcięcia napięcia
+ * Zrestartowanie
 
 ### Powiązane zasoby
 
@@ -91,53 +91,57 @@ Zarządzanie dyskami *Maszyny Wirtualnej* może być wykonywane w stanie `Pracuj
 
 Pierwszy dołączony *Dysk* jest dyskiem systemu operacyjnego i ma następujące cechy:
 
-* używane do rozruchu *Maszyny Wirtualnej*
-* dołączony do kontrolera dysku IDE
-* można zarządzać nim tylko w stanie `Wyłączony` *Maszyny Wirtualnej*
+ * używane do rozruchu *Maszyny Wirtualnej*
+ * dołączony do kontrolera dysku IDE
+ * można zarządzać nim tylko w stanie `Wyłączony` *Maszyny Wirtualnej*
 
 Dodatkowe *Dyski* mają następujące cechy:
 
-* dołączony do kontrolera dysku SCSI
-* można zarządzać nimi w stanie `Pracujący` lub `Wyłączony` *Maszyny Wirtualnej*
+ * dołączony do kontrolera dysku SCSI
+ * można zarządzać nimi w stanie `Pracujący` lub `Wyłączony` *Maszyny Wirtualnej*
 
-Następujące operacje przeznaczone do zarządzania *Dyskami* *Wirtualnej maszyn są dostępne:
+Następujące operacje przeznaczone do zarządzania *Dyskami* *Wirtualnej maszyn* są dostępne:
 
-* dołączenie *Dysku* do *Wirtualnej maszyny
-* odłączenie *Dysku* od *Wirtualnej maszyny*
-* zmiana rozmiaru *Dysku* w czasie przyłączenia do *Wirtualnej maszyny*
+ * dołączenie *Dysku* do *Wirtualnej maszyny*
+ * odłączenie *Dysku* od *Wirtualnej maszyny*
+ * zmiana rozmiaru *Dysku*
 
-Metadane chmury i użytkownika są wstrzykiwane podczas działania uruchamiania *Maszyny Wirtualnej*. Proces wstrzykiwania metadanych wymaga, aby pierwszy dysk *Dysk* miał jedną partycję z następującymi cechami:
+##### Metadane
 
-* etykieta "CLOUDMD"
-* system plików `fat32`
+Metadane chmury i użytkownika są wstrzykiwane podczas uruchamiania *Maszyny Wirtualnej*. 
+Proces wstrzykiwania metadanych wymaga, aby pierwszy *Dysk* miał jedną partycję z następującymi cechami:
+
+ * etykieta "CLOUDMD"
+ * system plików `fat32`
 
 Jeżeli taka partycja zostanie znaleziona, następujące pliki zostaną na nią skopiowane
 
-* ```cloud.json``` - plik zawierający metadane chmury w postaci JSON
-* ```user.json``` - plik zawierający metadane użytkownika wprowadzone podczas utworzenia *Wirtualnej maszyny* przez użytkownika
+ * ```cloud.json``` - plik zawierający metadane chmury w postaci JSON
+ * ```user.json``` - plik zawierający metadane użytkownika wprowadzone podczas utworzenia *Wirtualnej maszyny* przez 
+użytkownika
 
-Metadane chmury obejmują wszystkie informacje dotyczące konfiguracji *Maszyny Wirtualnej*, które mogą być przydatne podczas konfiguracji systemu operacyjnego. Między innymi *Adresy IP* przypisane do *Interfejsów sieciowych*, a także dane uwierzytelniające (hasła lub klucze ssh)..
+Metadane chmury obejmują wszystkie informacje dotyczące konfiguracji *Maszyny Wirtualnej*, które mogą być przydatne 
+podczas konfiguracji systemu operacyjnego. Między innymi *Adresy IP* przypisane do *Interfejsów sieciowych*, a także 
+dane uwierzytelniające (hasła lub klucze ssh).
 
-Jeśli plik `user.data` zawiera na początku pliku `shebang` (`#!`), to zostanie wykonany, jeśli zostanie znaleziony odpowiedni interpreter (zdefiniowany przez `shebang`).
+Jeśli plik `user.data` zawiera na początku pliku `shebang` (`#!`), to zostanie wykonany, jeśli zostanie znaleziony 
+odpowiedni interpreter (zdefiniowany przez `shebang`).
 
 #### Interfejsy sieciowe
 
 Zarządzanie *Interfejsami sieciowymi* *Maszyny Wirtualnej* może być wykonywane `Wyłączony`.
 
-Następujące operacje przeznaczone do zarządzania *Interfejsami sieciowymi* *Wirtualnej maszyn* w stanie `Wyłączony` są dostępne:
+Następujące operacje przeznaczone do zarządzania *Interfejsami sieciowymi* *Wirtualnej maszyn* w stanie `Wyłączony` są 
+dostępne:
 
-* Utworznego nowego
+* Dodanie nowego
 * Usunięcie wybranego
-
-Następujące operacje przeznaczone do zarządzania *Adresami IP* *Interfejsu sieciowego* *Wirtualnej maszyny* w stanie *Pracujący* lub *Wyłączony* są dostępneJ:
-
-* Dodanie adresu IP
-* Usunięcie adresu IP
-* Zastąpienie adresu IP
 
 #### Napęd DVD
 
-Następujące operacje przeznaczone do zarządzania napędem DVD *Wirtualnej maszyn* są dostępne:
+Każda *Wirtualna maszyna* posiada domyślnie 1 napęd DVD *Wirtualnej maszyny*.
+
+Następujące operacje przeznaczone do zarządzania napędem DVD są dostępne:
 
 * wsunięcie *ISO*
 * wysunięcie *ISO*

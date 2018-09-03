@@ -1,18 +1,18 @@
-# Usunięcie Sieci
+# Usunięcie Wirtualnej maszyny
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób usunąć  [Sieć](/resource/networking/network.md).
+Dokument wyjaśnia w jaki sposób usunąć [Wirtualną maszynę](/resource/compute/virtual-machine.md).
 
 ## Warunki wstępne
 
-* usunięcie *Sieć* wymaga spełnienia [warunków usuwania Sieci](/resource/networking/network.md#usuwanie)
+* usunięcie wymaga spełnienia [warunków usuwania Wirtualnej maszyny](/resource/compute/virtual-machine.md#usuwanie)
 
 ## Instrukcja
 
 ### Panel
 
-W celu usunięcia *Sieć* poprzez panel wykonaj następujące kroki:
+W celu usunięcia *Wirtualnej maszyny* poprzez panel wykonaj następujące kroki:
 
 ```guide
 [
@@ -22,7 +22,7 @@ W celu usunięcia *Sieć* poprzez panel wykonaj następujące kroki:
       "type": "entry",
       "location": "sidebar",
       "selector": ".nav > li:nth-child(2)",
-      "label": "Sieci"
+      "label": "Wirtualna maszyna"
     }
   },
   {
@@ -31,7 +31,7 @@ W celu usunięcia *Sieć* poprzez panel wykonaj następujące kroki:
       "type": "entry_resource",
       "selector": "navbar>.vm"
     },
-    "after_event": "Po kliknięciu pojawi się strona ze szczegółami zasobu."
+    "after_event": "Po kliknięciu pojawi się strona ze szczegółami danego zasobu."
   },
   {
     "action_name": "click",
@@ -64,14 +64,14 @@ W celu usunięcia *Sieć* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu usunięcia *Sieci* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu usunięcia *Wirtualnej maszyny* z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
-h1 network delete --network my-network
+h1 vm delete --vm my-firewall
 ```
 
 gdzie:
 
- * ```--disk``` określa nazwę lub identyfikator *Sieci*
+ * ```--vm``` określa nazwę lub identyfikator *Wirtualnej maszyny*
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="network delete"].
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vm delete"].

@@ -18,22 +18,6 @@ Utworzenie *ISO* poprzez wskazanie serwera umożliwia sprawne wykorzystanie ogó
 
 W celu utworzenia *ISO* poprzez panel wykonaj następujące kroki:
 
-1. Wybierz pozycje ```ISO``` znajdującą się w menu bocznym.
-2. Wybierz przycisk ```Utwórz Nowy```. Po kliknięciu pojawi się okno z formularzem.
-3. Wypełnij formularz:
-
-	* Określ ```nazwę``` dla swojego zasobu.
-    * Określ ```źródło```.
-
-	> Określa on dostępny rozmiar i parametry wydajnościowe.
-
-	Przykładowe wartości:
-
-	 * Nazwa: ```moje-iso```
-	 * Źródło: ```http://releases.ubuntu.com/18.04.1/ubuntu-18.04.1-desktop-amd64.iso```
-
-4. Wybierz przycisk ``Utwórz``. Po kliknięciu przejdziesz do strony ze szczegółami nowego zasobu.
-
 ```guide
 [
   {
