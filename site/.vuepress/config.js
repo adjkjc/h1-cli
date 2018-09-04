@@ -60,6 +60,13 @@ const getSidebar = () => {
         '/resource/',
         services_category,
     ];
+    sidebar['/cooperation/'] = [
+        '/cooperation/internship.md',
+        {
+            title: "Oferty pracy",
+            children: show_directory(`cooperation/jobs`),
+        }
+    ];
     sidebar['/'] = [
         '/',
     ];
@@ -88,7 +95,7 @@ module.exports = config = {
             {text: 'Rejestracja', link: 'https://panel.hyperone.com/signup'},
             {text: 'Logowanie', link: 'https://panel.hyperone.com'},
             {text: 'Kontakt', link: '/about-us/contact.md'},
-
+            {text: 'Współpraca', link: '/cooperation/'}
         ]
     }
 };
