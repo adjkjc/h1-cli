@@ -1,11 +1,12 @@
 image: node:10
 
 pipelines:
-  develop:
-    - step:
-        services:
-          - docker
-        script:
-          - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD $DOCKER_REGISTRY
-          - npm install -g git+https://github.com/hyperonecom/h1-cli.git#containers
-          - bash <(curl -L -s https://gist.githubusercontent.com/ad-m/c2a010a2a39bb70a4bba02604b12ac0b/raw/deploy.sh ) rbx-static-docs-develop develop
+  branches:
+    develop:
+      - step:
+          services:
+            - docker
+          script:
+            - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD $DOCKER_REGISTRY
+            - npm install -g git+https://github.com/hyperonecom/h1-cli.git#containers
+            - bash <(curl -L -s https://gist.githubusercontent.com/ad-m/c2a010a2a39bb70a4bba02604b12ac0b/raw/deploy.sh ) rbx-static-docs-develop develop
