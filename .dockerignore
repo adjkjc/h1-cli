@@ -7,3 +7,4 @@ modules/*/repo
 docker-compose.yml
 Dockerfile
 draft
+deploy.sh
