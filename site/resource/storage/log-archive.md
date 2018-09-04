@@ -24,25 +24,25 @@
 
 Dostępne są następujące dedykowane operacje na *Dzienniku*:
 
-* wstrzymanie zapisów
-* wznowienie zapisów
+* wyłączenie
+* włączenie
 * odczytywanie wpisów za wybrany okres lub bieżących w czasie rzeczywistym
 
-## Wstrzymanie zapisów
+## Wyłączenie
 
 Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
 
 * zasób znajduje się w stanie ```Działający```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
-## Wznowienie zapisów
+## Wyłaczenie
 
 Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
 
 * zasób znajduje się w stanie ```Wyłączony```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
-## Odczytywanie wpisów
+## Odczytanie
 
 Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
 
