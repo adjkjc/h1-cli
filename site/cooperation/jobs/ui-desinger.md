@@ -31,8 +31,6 @@ Czego oczekujemy:
 
 Mile widziane:
 
- * znajomość narzędzi automatyzacji zarządzania serwerami (Saltstack, Puppet, Chef, Ansible, etc.)
- * znajomość systemów operacyjnych Microsoft i wirtualizacji Hyper-V
  * znajomość platform chmurowych (AWS, Azure, Openstack, etc.)
  * osoby, które posiadają większą wiedzę od nas
 
