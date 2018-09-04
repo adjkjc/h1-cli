@@ -1,4 +1,4 @@
-# Zmiana rekordu PTR dla adresu IP 
+# Zmiana rekordu PTR dla Adresu IP
 
 ## Wprowadzenie
 

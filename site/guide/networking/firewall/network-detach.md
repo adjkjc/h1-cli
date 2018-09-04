@@ -1,4 +1,4 @@
-# Odłączenie zapory sieciowej od sieci
+# Odłączenie Zapory sieciowej od Sieci
 
 ## Wprowadzenie
 

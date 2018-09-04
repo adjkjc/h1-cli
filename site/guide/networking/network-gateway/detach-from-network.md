@@ -1,8 +1,8 @@
-# Odłączenie bramy sieciowej od sieci
+# Odłączenie Bramy sieciowej od Sieci
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób odłączyć [Bramę sieciową](/resource/networking/network-gateway.md) od [Sieci](/resource/networking/network.md).
+Dokument wyjaśnia w jaki sposób odłączyć *[Bramę sieciową](/resource/networking/network-gateway.md)* od *[Sieci](/resource/networking/network.md)*.
 
 ## Warunki wstępne
 
@@ -65,7 +65,7 @@ W celu przyłączenia bramy sieciowej do sieci poprzez panel wykonaj następują
 
 #### CLI
 
-W celu przyłączenia zapory sieciowej do sieci z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu przyłączenia *Zapory sieciowej* do *Sieci* z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 netgw detach --firewall secure-zone-fw
@@ -73,7 +73,7 @@ h1 netgw detach --firewall secure-zone-fw
 
 gdzie:
 
- * ```--firewall``` określa nazwę lub identyfikator zapory sieciowej
- * ```--network``` okresla nazwę przyłączanej sieci
+ * ```--firewall``` określa nazwę lub identyfikator *Zapory sieciowej*
+ * ```--network``` okresla nazwę przyłączanej *Sieci*
  
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="netgw detach"].

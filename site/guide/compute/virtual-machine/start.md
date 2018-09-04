@@ -1,4 +1,4 @@
-# Uruchomienie Wirtualnej Maszyny
+# Uruchomienie Wirtualnej maszyny
 
 ## Wprowadzenie
 

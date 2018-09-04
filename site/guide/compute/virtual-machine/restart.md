@@ -1,4 +1,4 @@
-# Zrestartowania Wirtualnej Maszyny
+# Zrestartowania Wirtualnej maszyny
 
 ## Wprowadzenie
 

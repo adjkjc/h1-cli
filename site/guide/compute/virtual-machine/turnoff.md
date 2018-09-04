@@ -1,4 +1,4 @@
-# Zatrzymanie Wirtualnej Maszyny
+# Zatrzymanie Wirtualnej maszyny
 
 ## Wprowadzenie
 

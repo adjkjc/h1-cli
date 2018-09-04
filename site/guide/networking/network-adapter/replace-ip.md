@@ -1,4 +1,4 @@
-# Zastąpienie adresu IP w adapterze sieciowym
+# Zastąpienie adresu IP w Adapterze sieciowym
 
 ## Wprowadzenie
 

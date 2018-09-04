@@ -1,4 +1,4 @@
-# Uzyskanie dostepu do konsoli poprzez port szeregowy Wirtualnej Maszyny
+# Uzyskanie dostepu do konsoli poprzez port szeregowy Wirtualnej maszyny
 
 ## Wprowadzenie
 

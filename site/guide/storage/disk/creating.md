@@ -1,14 +1,14 @@
-# Utworzenie dysku
+# Utworzenie Dysku
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób utworzyć [Dysk](/resource/storage/disk.md) wykorzystywany do przechowywania danych na potrzeby [Wirtualnej maszyny](/resource/compute/virtual-machine.md). W przypadku tworzenia dysku twardego możesz utworzyć go pustym. Natomiast jeżeli posiadasz już dysk w odpowiednim formacie możesz przesłać jego obraz do platformy i na tej podstawie utworzyć dysk w pltaformie. Utworzony dysk możesz w przyszłości rozszerzać lub zmniejszać.
+Dokument wyjaśnia w jaki sposób utworzyć *[Dysk](/resource/storage/disk.md)* wykorzystywany do przechowywania danych na potrzeby [Wirtualnej maszyny](/resource/compute/virtual-machine.md). W przypadku tworzenia *Dysku* twardego możesz utworzyć go pustym. Natomiast jeżeli posiadasz już dysk w odpowiednim formacie możesz przesłać jego obraz do platformy i na tej podstawie utworzyć dysk w pltaformie. Utworzony dysk możesz w przyszłości rozszerzać lub zmniejszać.
 
 ## Warunki wstępne
 
-* utworzenie dysku wymaga spełnienia [warunków utworzenia dysku](/resource/storage/disk.md#utworzenie)
+* utworzenie dysku wymaga spełnienia [warunków utworzenia *Dysku*](/resource/storage/disk.md#utworzenie)
 
-## Utworzenie pustego dysku
+## Utworzenie pustego Dysku
 
 Utworzenie pustego dysku umożliwia w przyszłości składowania na nim dowolnych danych. Taki dysk początkowo nie zawiera żadnych danych użytkownika.
 

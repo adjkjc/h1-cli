@@ -1,4 +1,4 @@
-# Odłączenie *Dysku* od *Wirtualnej maszyny* 
+# Odłączenie Dysku od Wirtualnej maszyny
 
 ## Wprowadzenie
 

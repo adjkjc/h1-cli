@@ -1,12 +1,12 @@
-# Usunięcie reguły zapory sieciowej
+# Usunięcie reguły Zapory sieciowej
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób usunąć regułę [Zapory sieciowej](/resource/networking/firewall.md).
+Dokument wyjaśnia w jaki sposób usunąć regułę *[Zapory sieciowej](/resource/networking/firewall.md)*.
 
 ## Warunki wstępne
 
-* posiadanie Zapory sieciowej
+* posiadanie *Zapory sieciowej*
 
 ## Instrukcja
 

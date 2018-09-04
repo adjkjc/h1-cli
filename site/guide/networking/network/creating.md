@@ -6,7 +6,7 @@ Dokument wyjaśnia w jaki sposób utworzyć *[Sieć](/resource/networking/networ
 
 ## Warunki wstępne
 
-* utworzenie wymaga spełnienia [warunków utworzenia Sieci](/resource/networking/network.md#utworzenie)
+* utworzenie wymaga spełnienia [warunków utworzenia *Sieci*](/resource/networking/network.md#utworzenie)
 
 ## Instrukcja
 
@@ -96,8 +96,8 @@ h1 network create --name my-ip-network --address 10.214.180.0/24 --gateway 10.21
 
 gdzie:
 
- * ```--name``` - określa nazwę nowoutworzonej sieci
- * ```--address``` - określa pulę adresową sieci (parametr opcjonalny)
- * ```--gateway``` - określa bramę domyślna sieci (parametr opcjonalny)
+ * ```--name``` - określa nazwę nowoutworzonej *Sieci*
+ * ```--address``` - określa pulę adresową *Sieci* (parametr opcjonalny)
+ * ```--gateway``` - określa bramę domyślna *Sieci* (parametr opcjonalny)
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="network create"].

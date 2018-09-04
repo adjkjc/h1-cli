@@ -1,12 +1,12 @@
-# Usunięcie sieci
+# Usunięcie Zapory sieciowej
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób usunąć [Zaporę sieciową](/resource/networking/firewall.md).
+Dokument wyjaśnia w jaki sposób usunąć *[Zaporę sieciową](/resource/networking/firewall.md)*.
 
 ## Warunki wstępne
 
-* usunięcie wymaga spełnienia [warunków usuwania Zapory sieciowej](/resource/networking/firewall.md#usuwanie)
+* usunięcie wymaga spełnienia [warunków usuwania *Zapory sieciowej*](/resource/networking/firewall.md#usuwanie)
 
 ## Instrukcja
 

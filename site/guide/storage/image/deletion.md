@@ -69,6 +69,6 @@ h1 disk delete --disk my-disk
 ```
 gdzie:
 
- * ```--disk``` określa nazwę lub identyfikator dysku
+ * ```--disk``` określa nazwę lub identyfikator *Dysku*
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="image delete"].

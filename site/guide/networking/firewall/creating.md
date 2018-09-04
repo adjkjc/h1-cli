@@ -1,4 +1,4 @@
-# Utworzenie zapory sieciowej
+# Utworzenie Zapory sieciowej
 
 ## Wprowadzenie
 

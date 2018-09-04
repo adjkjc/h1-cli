@@ -1,4 +1,4 @@
-# Utworzenie Wirtualnej Maszyny
+# Utworzenie Wirtualnej maszyny
 
 ## Wprowadzenie
 

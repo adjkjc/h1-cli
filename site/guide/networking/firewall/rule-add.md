@@ -1,8 +1,8 @@
-# Dodanie reguły zapory sieciowej
+# Dodanie reguły Zapory sieciowej
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób dodać regułę do [Zapory sieciowej](/resource/networking/firewall.md).
+Dokument wyjaśnia w jaki sposób dodać regułę do *[Zapory sieciowej](/resource/networking/firewall.md)*.
 
 Reguły zapory sieciowej podzielone są na następujące kategorie:
 
@@ -11,7 +11,7 @@ Reguły zapory sieciowej podzielone są na następujące kategorie:
 
 ## Warunki wstępne
 
-* posiadanie Zapory sieciowej
+* posiadanie *Zapory sieciowej*
 
 ## Instrukcja
 

@@ -1,4 +1,4 @@
-# Usunięcie adresu IP w sieci prywatnej
+# Usunięcie Adresu IP w Sieci prywatnej
 
 ## Wprowadzenie
 
@@ -70,6 +70,6 @@ h1 network ip delete --ip my-ip --network my-network
 gdzie:
 
  * ```--ip``` określa adres IP lub jego identyfikator
- * ```--network``` określa nazwę lub identyfikator sieci
+ * ```--network``` określa nazwę lub identyfikator *Sieci*
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="network ip delete"].

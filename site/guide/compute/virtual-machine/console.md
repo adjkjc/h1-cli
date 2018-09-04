@@ -1,4 +1,4 @@
-# Uzyskanie dostepu do graficznej konsoli Wirtualnej Maszyny
+# Uzyskanie dostepu do graficznej konsoli Wirtualnej maszyny
 
 ## Wprowadzenie
 

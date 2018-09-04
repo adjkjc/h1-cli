@@ -1,4 +1,4 @@
-# Dodanie adresu IP do adaptera sieciowego
+# Dodanie adresu IP do Adaptera sieciowego
 
 ## Wprowadzenie
 

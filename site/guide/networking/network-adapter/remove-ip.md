@@ -1,4 +1,4 @@
-# Usunięcie adresu IP z adaptera sieciowego
+# Usunięcie Adresu IP z Adaptera sieciowego
 
 ## Wprowadzenie
 

@@ -1,4 +1,4 @@
-# Przyłączenie *Dysku* do *Wirtualnej maszyny* 
+# Przyłączenie Dysku do Wirtualnej maszyny
 
 ## Wprowadzenie
 

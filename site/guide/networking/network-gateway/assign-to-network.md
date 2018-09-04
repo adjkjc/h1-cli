@@ -1,12 +1,12 @@
-# Przyłączenie bramy sieciowej do sieci
+# Przyłączenie Bramy sieciowej do Sieci
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób przyłączyć [Brame sieciową](/resource/networking/network-gateway.md) do [Sieci](/resource/networking/network.md).
+Dokument wyjaśnia w jaki sposób przyłączyć *[Brame sieciową](/resource/networking/network-gateway.md)* do *[Sieci](/resource/networking/network.md)*.
 
 ## Warunki wstępne
 
-* posiadanie [utworzonej](/resource/networking/network.md)   *Sieci*
+* posiadanie [utworzonej](/resource/networking/network.md) *Sieci*
 * posiadanie [utworzonej](/resource/networking/network-gateway.md)   *Zapory sieciowej*
 
 ## Instrukcja
@@ -81,7 +81,7 @@ W celu przyłączenia *Bramy sieciowej* do *Sieci* poprzez panel wykonaj następ
 
 #### CLI
 
-W celu przyłączenia zapory sieciowej do sieci z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu przyłączenia *Zapory sieciowej* do *Sieci* z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 firewall attach --firewall secure-zone-fw --network my-safe-net
@@ -89,7 +89,7 @@ h1 firewall attach --firewall secure-zone-fw --network my-safe-net
 
 gdzie:
 
- * ```--firewall``` określa nazwę lub identyfikator zapory sieciowej
- * ```--network``` okresla nazwę przyłączanej sieci
+ * ```--firewall``` określa nazwę lub identyfikator *Zapory sieciowej*
+ * ```--network``` okresla nazwę przyłączanej *Sieci*
  
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="firewall attach"].

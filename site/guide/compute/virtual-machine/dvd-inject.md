@@ -1,4 +1,4 @@
-# Wsunięcie *ISO* do napędu DVD *Wirtualnej maszyny* 
+# Wsunięcie ISO do napędu DVD Wirtualnej maszyny
 
 ## Wprowadzenie
 

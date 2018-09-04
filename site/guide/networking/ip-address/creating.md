@@ -1,4 +1,4 @@
-# Utworzenie trwałego publicznego adresu IP
+# Utworzenie trwałego publicznego Adresu IP
 
 ## Wprowadzenie
 

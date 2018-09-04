@@ -1,8 +1,8 @@
-# Przekształcenie ulotnego adresu IP w trwały
+# Przekształcenie ulotnego Adresu IP w trwały
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób przekształcić ulotny *[Adres IP](/resource/networking/ip-address.md)* w [Sieci](/resource/networking/network.md).
+Dokument wyjaśnia w jaki sposób przekształcić ulotny *[Adres IP](/resource/networking/ip-address.md)* w *[Sieci](/resource/networking/network.md)*.
 
 Ulotny *Adres IP* istnieje wyłącznie wraz z *[Wirtualną maszyną](/resource/compute/virtual-machine.md)*, która posiada *[Adapter sieciowy](/resource/networking/network-adapter.md)*.
 

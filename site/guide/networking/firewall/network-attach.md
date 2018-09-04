@@ -1,4 +1,4 @@
-# Przyłączyć zapore sieciową do sieci
+# Przyłączyć Zapore Sieciową do Sieci
 
 ## Wprowadzenie
 

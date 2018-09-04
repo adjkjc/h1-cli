@@ -6,7 +6,7 @@ Dokument wyjaśnia w jaki sposób usunąć  [Sieć](/resource/networking/network
 
 ## Warunki wstępne
 
-* usunięcie *Sieć* wymaga spełnienia [warunków usuwania Sieci](/resource/networking/network.md#usuwanie)
+* usunięcie *Sieć* wymaga spełnienia [warunków usuwania *Sieci*](/resource/networking/network.md#usuwanie)
 
 ## Instrukcja
 

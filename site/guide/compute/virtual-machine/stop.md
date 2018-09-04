@@ -1,4 +1,4 @@
-# Wyłączenie Wirtualnej Maszyny
+# Wyłączenie Wirtualnej maszyny
 
 ## Wprowadzenie
 

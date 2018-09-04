@@ -1,8 +1,8 @@
-# Utworzenie adresu IP w sieci prywatnej
+# Utworzenie Adresu IP w Sieci prywatnej
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób utworzyć *[Adres IP](/resource/networking/ip-address.md)* w [Sieci](/resource/networking/network.md).
+Dokument wyjaśnia w jaki sposób utworzyć *[Adres IP](/resource/networking/ip-address.md)* w *[Sieci](/resource/networking/network.md)*.
 
 ## Warunki wstępne
 
