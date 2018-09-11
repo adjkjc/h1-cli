@@ -1,4 +1,4 @@
-# Uwagi ogólne
+# Ogólne warunki
 
 ## Płatność
 
