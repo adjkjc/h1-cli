@@ -28,7 +28,7 @@ w zależności co jest dłuższe
 
 *Zasób* może zostać usunięty jeżeli spełnione zostaną wszystkie następujące warunki:
 
-* nie posiada *Tagów* z grupy `chronione` zdefiniowanej dla *Projektu&
+* nie posiada *Tagów* z grupy `chronione` zdefiniowanej dla *Projektu*
 
 ## Zarządzanie
 
