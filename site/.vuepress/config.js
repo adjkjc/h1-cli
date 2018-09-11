@@ -3,19 +3,21 @@ const path = require('path');
 
 const show_directory = (dir, excludes = []) => fs.readdirSync(dir).filter(filename => !excludes.includes(filename)).map(x => `/${dir}/${x}`);
 
-const product_category = {
-    title: 'Chmura publiczna',
-    children: [
-        '/resource/general',
-        ...show_directory('resource', ['general.md', 'README.md']).map(x => `${x}/`)
-    ]
-};
-
 const services_category = {
     title: 'Usługi',
     children: show_directory('services', ['general.md', 'README.md'])
 };
 
+const platform_category = {
+    title: 'Platforma',
+    children: [
+        '/platform/general.md',
+        '/platform/user.md',
+        '/platform/organization.md',
+        '/platform/project.md',
+        '/platform/resource.md',
+    ]
+};
 
 const categories = [
     {
@@ -24,7 +26,7 @@ const categories = [
     },
     {
         name: 'Łączność sieciowa',
-        slug: 'compute'
+        slug: 'networking'
     },
     {
         name: 'Przechowywanie danych',
@@ -39,27 +41,19 @@ const getSidebar = () => {
             '/about-us/contact.md',
         ],
     };
-    categories.forEach(category => {
-        const el = [
-            '/resource/',
-            product_category,
-            {
-                title: category.name,
-                children: show_directory(`resource/${category.slug}`, ['README.md', 'dist'])
-            },
-        ];
-        sidebar[`/resource/${category.slug}/`] = el;
-        sidebar[`/guide/${category.slug}/`] = el;
-    });
+
     sidebar['/resource/'] = [
         '/resource/',
-        product_category,
+        platform_category,
+        ...categories.map(category => ({
+                title: category.name,
+                children: show_directory(`resource/${category.slug}`, ['README.md', 'dist'])
+            })),
         services_category,
     ];
-    sidebar['/services/'] = [
-        '/resource/',
-        services_category,
-    ];
+    sidebar['/platform/'] = sidebar['/resource/'];
+    sidebar['/services/'] = sidebar['/resource/'];
+    sidebar['/guide/'] = sidebar['/resource/'];
     sidebar['/cooperation/'] = [
         '/cooperation/internship.md',
         {

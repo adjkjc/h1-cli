@@ -9,7 +9,7 @@ Możliwe jest utworzenie *Wirtualnej maszyny* z wykorzystaniem:
 - *[Obrazu](/resource/storage/image.md)* użytkownika
 - bez żadnego obrazu
 
-Nie wykorzystanie żadnego obrazu nie oznacza braku systemu operacyjnego, gdyż możliwe jest np. [wykorzystanie napędu DVD](./inject-dvd.md) i samodzielna instalacje dowolnego.
+Nie wykorzystanie żadnego obrazu nie oznacza braku systemu operacyjnego, gdyż możliwe jest np. [wykorzystanie napędu DVD](./dvd-inject.md) i samodzielna instalacje dowolnego.
 
 ## Warunki wstępne
 
@@ -212,8 +212,8 @@ Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vm create"].
 ## Utworzenie *Wirtualnej maszyny* bez żadnego *Obrazu* użytkownika
 
 Utworzenie *Wirtualnej maszyny* bez żadnego *Obrazu* przyspiesza proces jej tworzenia. Jest to szczególnie przydatne, 
-gdy system operacyjny ma zostać dostarczony w inny sposób np. poprzez [przypięcie dysku](./attach-disk.md) lub 
-[wykorzystanie napędu DVD](./inject-dvd.md).
+gdy system operacyjny ma zostać dostarczony w inny sposób np. poprzez [przypięcie dysku](./disk-attach.md) lub 
+[wykorzystanie napędu DVD](./dvd-inject.md).
 
 ### Panel
 

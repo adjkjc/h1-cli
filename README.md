@@ -17,6 +17,10 @@ See more:
 
 * healtcheck - sonda kondycji
 
+## Code style
+
+* We don't wrap lines by hand. Use soft wrap in code editor instead.
+
 ## Install
 
 ```bash

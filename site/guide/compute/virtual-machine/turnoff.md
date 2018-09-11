@@ -2,7 +2,7 @@
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób zatrzymać [Wirtualną maszynę](/resource/storage/virtual-machine.md).
+Dokument wyjaśnia w jaki sposób zatrzymać [Wirtualną maszynę](/resource/compute/virtual-machine.md).
 
 ## Warunki wstępne
 
