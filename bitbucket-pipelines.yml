@@ -9,6 +9,5 @@ pipelines:
           script:
             - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD $DOCKER_REGISTRY
             - npm install -g git+https://github.com/hyperonecom/h1-cli.git#containers
-            - export DEPLOY_MODE="replace"
             - export REPO_NAME="quay.io/hyperone/rbx-static-docs"
-            - bash <(curl -L -s https://gist.githubusercontent.com/ad-m/c2a010a2a39bb70a4bba02604b12ac0b/raw/deploy.sh ) rbx-static-docs-develop develop
+            - bash <(curl -L -s https://gist.githubusercontent.com/ad-m/c2a010a2a39bb70a4bba02604b12ac0b/raw/deploy.sh ) rbx-static-docs-develop develop replace
