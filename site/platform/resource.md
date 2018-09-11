@@ -1,19 +1,6 @@
-# Uwagi ogólne
+# Zasób
 
-## Płatność
-
-### Opłaty
-
-Opłaty na podstawie czasu są naliczane od otworzenia *Zasobu* do usunięcia *Zasobu*.
-
-### Ogólne warunki opłat
-
-* czas jest zaokrąglany w górę do najbliższego okresu rozliczeniowego.
-* rozmiar jest zaokrąglany w górę do najbliższej jednostki rozliczeniowej.
-
-### Brak dostępnych środków
-
-Jeśli *Projekt* nie ma dostępnych środków, wówczas *Ograniczone użycie* zostanie zastosowane do *Zasobu*.
+*Zasób* stanowi obiekt w infrastrukturze Platformy, z którym możesz współdziałać i go modyfikować.
 
 ## Cykl życia
 
@@ -21,14 +8,13 @@ Jeśli *Projekt* nie ma dostępnych środków, wówczas *Ograniczone użycie* zo
 
 *Zasób* może zostać utworzony w przypadku spełnienia wszystkich następujących warunków:
 
-* *Projekt* posiada dostępne środki na okres wykorzystania *Zasobu* rzez 24 godziny lub pierwszy okres rozliczeniowy, 
-w zależności co jest dłuższe
+* *Projekt* posiada dostępne środki na okres wykorzystania *Zasobu* przez 24 godziny lub pierwszy okres rozliczeniowy, w zależności co jest dłuższe
 
 ### Usuwanie
 
 *Zasób* może zostać usunięty jeżeli spełnione zostaną wszystkie następujące warunki:
 
-* nie posiada *Tagów* z grupy `chronione` zdefiniowanej dla *Projektu&
+* nie posiada *Tagów* z grupy `chronione` zdefiniowanej dla *Projektu*
 
 ## Zarządzanie
 
@@ -48,8 +34,7 @@ Poszczególny *Zasób* może udostępniać następujące rodzaje danych dostępo
 
 Hasła są przechowywane wyłącznie w postaci funkcji skrótu.
 
-W celu wykorzystania klucza SSH w celu uprawnienia dostępu do *Zasobu* konieczne jest jego uprzednie wczytanie jako 
-klucz SSH *Użytkownika* lub *Projektu*.
+W celu wykorzystania klucza SSH w celu uprawnienia dostępu do *Zasobu* konieczne jest jego uprzednie wczytanie jako klucz SSH *Użytkownika* lub *Projektu*.
 
 *Zasób* umożliwia dla wspieranych rodzajów danych dostępowych następujące operacje:
 
@@ -87,19 +72,3 @@ Po zakończeniu przesyłania zasobów:
 * wszystkie *Prawa dostępu* są resetowane do wartości domyślnych
 * zdarzenia w historii zdarzeń dla zasobu są widoczne tylko dla zdarzeń generowanych przez bieżący *Projekt*, do którego przypisany jest zasób
 * opłata jest naliczana za pierwszy pełny okres rozliczeniowy
-
-## Specjalne regiony
-
-Istnieją specjalne regiony stworzone dla wymagających klientów o określonych wymaganiach branżowych:
-
-* administracja samorządowa
-* administracja rządowa i instytucje publiczne
-* organizacje pozarządowe
-* organizacje opieki zdrowotnej
-* organizacje akademickie i edukacyjne
-
-*Specjalne regiony dostępne tylko dla wybranych organizacji na życzenie.*
-
-## Polityka danych
-
-W krótkim czasie od zgłoszenia usunięcia *Dane klienta* zostaną trwale usunięte, jednak nie później niż w ciągu 30 dni.

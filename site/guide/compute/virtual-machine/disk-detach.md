@@ -58,7 +58,7 @@ W celu przyłączenia *Dysku* do *Wirtualnej maszyny* poprzez panel wykonaj nast
       "type": "entry",
       "selector": "navbar>.vm",
       "label":"Odłącz"
-    }
+    },
     "after_event": "Po kliknięciu pojawi się okno potwierdzenia operacji."
   },
   {
@@ -67,8 +67,7 @@ W celu przyłączenia *Dysku* do *Wirtualnej maszyny* poprzez panel wykonaj nast
       "type": "button",
       "label": "Odłącz"
     }
-  },
-  
+  }
 ]
 ```
 

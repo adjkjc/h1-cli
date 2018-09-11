@@ -3,7 +3,7 @@
 ## Wprowadzenie
 
 Dokument wyjaśnia w jaki sposób wysunąć *[ISO](/resource/storage/iso.md)* z napędu DVD 
-*[Wirtualnej maszyny]((/resource/compute/virtual-machine.md))* po wcześniej [wsunięciu ISO](./inject-dvd.md).
+*[Wirtualnej maszyny]((/resource/compute/virtual-machine.md))* po wcześniej [wsunięciu ISO](./dvd-inject.md).
 
 ## Warunki wstępne
 
