@@ -2,7 +2,7 @@
 
 ## Adres
 
-HyperOne
+**HyperOne**  
 Warsaw Data Center Sp. z o.o.  
 ul. Boduena 4  
 00-011 Warszawa  
