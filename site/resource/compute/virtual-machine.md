@@ -79,8 +79,8 @@ Na życzenie w celu zaspokojenia potrzeb szczególnych przypadków (np. licencjo
 Dostępne są następujące dedykowane operacje
 
  * Uruchomienie 
- * Wyłączenie, co powoduje bezpiecznie zamknięcie systemu operacyjnego
- * Zamknięcie, co powoduje wyłączenie podobnie do odcięcia napięcia
+ * Zatrzymanie, co powoduje bezpiecznie zamknięcie systemu operacyjnego
+ * Wyłączenie, co powoduje działanie podobnie do odcięcia napięcia
  * Zrestartowanie
 
 ### Powiązane zasoby

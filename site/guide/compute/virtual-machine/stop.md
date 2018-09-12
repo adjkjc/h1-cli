@@ -1,12 +1,12 @@
-# Wyłączenie Wirtualnej maszyny
+# Zatrzymanie Wirtualnej maszyny
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób wyłączyć [Wirtualną maszynę](/resource/compute/virtual-machine.md).
+Dokument wyjaśnia w jaki sposób zatrzymać [Wirtualną maszynę](/resource/compute/virtual-machine.md).
 
 ## Warunki wstępne
 
-* wszystkie warunki wykonania operacji [Wyłączenie](/resource/compute/virtual-machine.md#wylaczenie).
+* wszystkie warunki wykonania operacji [Zatrzymania](/resource/compute/virtual-machine.md#zatrzymanie).
 
 ## Instrukcja
 
