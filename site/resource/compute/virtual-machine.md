@@ -87,18 +87,18 @@ Dostępne są następujące dedykowane operacje
 
 #### Dysk
 
-Zarządzanie dyskami *Maszyny Wirtualnej* może być wykonywane w stanie `Pracujący` lub `Wyłączony`.
+Zarządzanie dyskami *Wirtualnej maszyny* może być wykonywane w stanie `Pracujący` lub `Wyłączony`.
 
 Pierwszy dołączony *Dysk* jest dyskiem systemu operacyjnego i ma następujące cechy:
 
- * używane do rozruchu *Maszyny Wirtualnej*
+ * używane do rozruchu *Wirtualnej maszyny*
  * dołączony do kontrolera dysku IDE
- * można zarządzać nim tylko w stanie `Wyłączony` *Maszyny Wirtualnej*
+ * można zarządzać nim tylko w stanie `Wyłączony` *Wirtualnej maszyny*
 
 Dodatkowe *Dyski* mają następujące cechy:
 
  * dołączony do kontrolera dysku SCSI
- * można zarządzać nimi w stanie `Pracujący` lub `Wyłączony` *Maszyny Wirtualnej*
+ * można zarządzać nimi w stanie `Pracujący` lub `Wyłączony` *Wirtualnej maszyny*
 
 Następujące operacje przeznaczone do zarządzania *Dyskami* *Wirtualnej maszyn* są dostępne:
 
@@ -108,7 +108,7 @@ Następujące operacje przeznaczone do zarządzania *Dyskami* *Wirtualnej maszyn
 
 ##### Metadane
 
-Metadane chmury i użytkownika są wstrzykiwane podczas uruchamiania *Maszyny Wirtualnej*. 
+Metadane chmury i użytkownika są wstrzykiwane podczas uruchamiania *Wirtualnej maszyny*.
 Proces wstrzykiwania metadanych wymaga, aby pierwszy *Dysk* miał jedną partycję z następującymi cechami:
 
  * etykieta "CLOUDMD"
@@ -120,7 +120,7 @@ Jeżeli taka partycja zostanie znaleziona, następujące pliki zostaną na nią 
  * ```user.json``` - plik zawierający metadane użytkownika wprowadzone podczas utworzenia *Wirtualnej maszyny* przez 
 użytkownika
 
-Metadane chmury obejmują wszystkie informacje dotyczące konfiguracji *Maszyny Wirtualnej*, które mogą być przydatne 
+Metadane chmury obejmują wszystkie informacje dotyczące konfiguracji *Wirtualnej maszyny*, które mogą być przydatne
 podczas konfiguracji systemu operacyjnego. Między innymi *Adresy IP* przypisane do *Interfejsów sieciowych*, a także 
 dane uwierzytelniające (hasła lub klucze ssh).
 
@@ -129,7 +129,7 @@ odpowiedni interpreter (zdefiniowany przez `shebang`).
 
 #### Interfejsy sieciowe
 
-Zarządzanie *Interfejsami sieciowymi* *Maszyny Wirtualnej* może być wykonywane `Wyłączony`.
+Zarządzanie *Interfejsami sieciowymi* *Wirtualnej maszyny* może być wykonywane `Wyłączony`.
 
 Następujące operacje przeznaczone do zarządzania *Interfejsami sieciowymi* *Wirtualnej maszyn* w stanie `Wyłączony` są 
 dostępne:

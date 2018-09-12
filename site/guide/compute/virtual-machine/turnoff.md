@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób wyłączyć [Wirtualną maszynę](/resource/co
 
 #### CLI
 
-W celu wykonania zatrzymania *Maszyny Wirtualnej* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania zatrzymania *Wirtualnej maszyny* z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm turnoff --vm test-vm

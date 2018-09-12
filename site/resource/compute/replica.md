@@ -2,7 +2,7 @@
 
 ## Przeznaczenie
 
-*Replika* jest rozwiązaniem umożliwiającym niemal w czasie rzeczywistym kopiowanie danych zmodyfikowanych w maszynach wirtualnych działających w twoim lokalnym środowisku Hyper-V. Umożliwia to  w razie potrzeby odtworzenia wirtualnej maszyny w chmurze. Stanowi to łatwe w użyciu rozwiązanie, które może zredukować czas powrotu organizacji do funkcjonowania po awarii (RTO) i skrócić moment powrotu (RPO).
+*Replika* jest rozwiązaniem umożliwiającym niemal w czasie rzeczywistym kopiowanie danych zmodyfikowanych w maszynach wirtualnych działających w lokalnym środowisku Hyper-V *Użytkownika*. Umożliwia to  w razie potrzeby odtworzenia wirtualnej maszyny w chmurze. Stanowi to łatwe w użyciu rozwiązanie, które może zredukować czas powrotu organizacji do funkcjonowania po awarii (RTO) i skrócić moment powrotu (RPO).
 
 ## Cykl życia
 

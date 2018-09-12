@@ -6,7 +6,6 @@ Dokument wyjaśnia w jaki sposób utworzyć *[Adres IP](/resource/networking/ip-
 
 ## Warunki wstępne
 
-
 ## Instrukcja
 
 ### Panel

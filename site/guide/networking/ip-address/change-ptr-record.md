@@ -2,7 +2,7 @@
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób usunąć zmienić rekord PTR w DNS dla [Adresu IP](/resource/networking/ip-address.md).
+Dokument wyjaśnia w jaki sposób usunąć zmienić rekord PTR w DNS dla *[Adresu IP](/resource/networking/ip-address.md)*.
 
 ## Warunki wstępne
 

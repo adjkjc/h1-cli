@@ -55,7 +55,7 @@ W celu zrestartowania *Wirtualnej maszyny* poprzez panel wykonaj następujące k
 
 #### CLI
 
-W celu zrestartowania *Maszyny Wirtualnej* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu zrestartowania *Wirtualnej maszyny* z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm restart --vm test-vm

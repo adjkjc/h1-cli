@@ -55,7 +55,7 @@ W celu uruchomienie *Wirtualnej maszyny* poprzez panel wykonaj następujące kro
 
 #### CLI
 
-W celu uruchomienia *Maszyny Wirtualnej* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu uruchomienia *Wirtualnej maszyny* z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm start --vm test-vm

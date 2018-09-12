@@ -55,7 +55,7 @@ W celu wyłączenia *Wirtualnej maszyny* poprzez panel wykonaj następujące kro
 
 #### CLI
 
-W celu wyłączenia *Maszyny Wirtualnej* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wyłączenia *Wirtualnej maszyny* z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm stop --vm test-vm

@@ -21,7 +21,7 @@ Wymagana jest, aby zdalny serwer obsługiwał nagłówek HTTP [`Range`](https://
 
 *ISO* może być usunięty w przypadku spełnienia następujących warunków:
 
-* nie jest podłączony do żadnej *Maszyny wirtualnej*
+* nie jest podłączony do żadnej *Wirtualnej maszyny*
 * wszystkie *ogólne* warunki
 
 ## Zarządzanie
@@ -71,7 +71,7 @@ Dostępne są następujące typowe operacje:
 
 Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji*, w przypadku spełnienia następujące warunków:
 
-* nie jest podłączony do żadnej *Maszyny wirtualnej*
+* nie jest podłączony do żadnej *Wirtualnej maszyny*
 * wszystkie *ogólne* warunki
 
 ## Udostępniania

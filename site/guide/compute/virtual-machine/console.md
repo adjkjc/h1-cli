@@ -2,7 +2,7 @@
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób uzyskać dostepu do graficznej konsoli [Wirtualnej maszyny](/resource/compute/virtual-machine.md).
+Dokument wyjaśnia w jaki sposób uzyskać dostepu do graficznej konsoli *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*.
 
 ## Warunki wstępne
 
@@ -55,7 +55,7 @@ W celu uzyskanie dostepu do graficznej konsoli *Wirtualnej maszyny* poprzez pane
 
 #### CLI
 
-W celu uzyskanie dostepu do graficznej konsoli *Maszyny Wirtualnej* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu uzyskanie dostepu do graficznej konsoli *Wirtualnej maszyny* z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm console --vm test-vm
