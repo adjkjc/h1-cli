@@ -177,3 +177,19 @@ W celu utworzenia *Vault* na podstawie *Migawki* poprzez panel wykonaj następuj
   }
 ]
 ```
+
+#### CLI
+
+W celu utworzenia pustego *Vault* z wykorzystaniem CLI wykonaj następujące polecenie:
+
+```bash
+h1 vault create --name my-vault --size 10 --snapshot my-snapshot
+```
+
+gdzie:
+
+ * ```--name``` określa nazwę nowoutworzonego *Vault*
+ * ```--size``` określa jego rozmiar
+ * ```--snapshot``` określa identyfikator lub nazwę źródłowej *Migawki*
+
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vault create"].
