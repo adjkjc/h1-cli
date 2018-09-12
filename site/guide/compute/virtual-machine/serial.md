@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób uzyskać dostepu do konsoli poprzez port szere
 
 #### CLI
 
-W celu uzyskanie dostepu do konsoli poprzez port szeregowy *Wirtualnej maszyny* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm serialport console --vm test-vm

@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób zatrzymać [Wirtualną maszynę](/resource/com
 
 ### Panel
 
-W celu wyłączenia *Wirtualnej maszyny* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -55,7 +55,7 @@ W celu wyłączenia *Wirtualnej maszyny* poprzez panel wykonaj następujące kro
 
 #### CLI
 
-W celu wyłączenia *Wirtualnej maszyny* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm stop --vm test-vm

@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób usunąć [DNS](/resource/networking/network.md
 
 ### Panel
 
-W celu usunięcia poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -64,7 +64,7 @@ W celu usunięcia poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu usunięcia z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 dns zone delete --zone example.com.

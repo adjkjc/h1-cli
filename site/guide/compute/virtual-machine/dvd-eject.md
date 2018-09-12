@@ -13,7 +13,7 @@ Dokument wyjaśnia w jaki sposób wysunąć *[ISO](/resource/storage/iso.md)* z 
 
 ### Panel
 
-W celu wsuniecia *ISO* do napędu DVD *Wirtualnej maszyny* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -63,7 +63,7 @@ W celu wsuniecia *ISO* do napędu DVD *Wirtualnej maszyny* poprzez panel wykonaj
 
 #### CLI
 
-W celu wysunięcia *ISO* z napędu *Wirtualnej maszyny* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm dvd eject --vm VM 

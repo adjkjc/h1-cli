@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób utworzyć trwały publiczny *[Adres IP](/resou
 
 ### Panel
       
-W celu utworzenia *Adresu IP* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -39,7 +39,7 @@ W celu utworzenia *Adresu IP* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu utworzenia *Adresu IP* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 ip create

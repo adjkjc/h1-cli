@@ -18,7 +18,7 @@ Utworzenie pustego *Vault* jest najszybszą metodą na sprawne rozpoczęcie nowe
 
 ### Panel
 
-W celu utworzenia *Vault* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -74,7 +74,7 @@ W celu utworzenia *Vault* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu utworzenia pustego *Vault* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vault create --name my-vault --size 10
@@ -93,7 +93,7 @@ Utworzenie *Vault* na podstawie *Migawki* umożliwia m. in. sprawne uzyskanie do
 
 ### Panel
 
-W celu utworzenia *Vault* na podstawie *Migawki* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -180,7 +180,7 @@ W celu utworzenia *Vault* na podstawie *Migawki* poprzez panel wykonaj następuj
 
 #### CLI
 
-W celu utworzenia pustego *Vault* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vault create --name my-vault --size 10 --snapshot my-snapshot

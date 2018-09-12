@@ -12,23 +12,7 @@ Dokument wyjaśnia w jaki sposób utworzyć *[Sieć](/resource/networking/networ
 
 ### Panel
       
-W celu utworzenia *Sieć* poprzez panel wykonaj następujące kroki:
- 
-1. Wybierz pozycje ```Sieć``` znajdującą się w menu bocznym.
-2. Wybierz przycisk ```Utwórz Nowy```. Po kliknięciu pojawi się okno z formularzem.
-3. Wypełnij formularz:
-
-	* Określ parametr ```nazwa``` dla swojego zasobu.
-    * Określ parametr ```przestrzeń adresowa sieci```.
-    * Określ parametr ```brama domyślna```.
-
-	Przykładowe wartości:
-
-	 * Nazwa: ```moja-siec```
-	 * Przestrzeń adresowa: ```10.21.154.0/24```
-	 * Brama domyślna: ```10.21.154.1```
-
-4. Wybierz przycisk ``Utwórz``. Po kliknięciu przejdziesz do strony ze szczegółami nowego zasobu.
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
      
 ```guide
 [
@@ -88,7 +72,7 @@ W celu utworzenia *Sieć* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu utworzenia *Sieci* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 network create --name my-ip-network --address 10.214.180.0/24 --gateway 10.214.180.10

@@ -13,7 +13,7 @@ archiwizowania logów lub ich analizy w czasie rzeczywistym.
 
 ### Panel
 
-W celu utworzenia *Dziennika* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -70,7 +70,7 @@ W celu utworzenia *Dziennika* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu utworzenia pustego *Dziennika* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 log create --name my-log --size 10

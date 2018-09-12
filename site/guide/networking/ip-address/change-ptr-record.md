@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób usunąć zmienić rekord PTR w DNS dla *[Adres
 
 ### Panel
 
-W celu zmiany rekordu PTR w DNS poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
  
 ```guide
 [
@@ -77,7 +77,7 @@ W celu zmiany rekordu PTR w DNS poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu zmiany rekordu PTR w DNS z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 ip ptr --ip 62.181.8.21 --value 'mail-server.company.example.com'

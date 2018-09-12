@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób usunąć  [Sieć](/resource/networking/network
 
 ### Panel
 
-W celu usunięcia *Sieć* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -64,7 +64,7 @@ W celu usunięcia *Sieć* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu usunięcia *Sieci* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 network delete --network my-network

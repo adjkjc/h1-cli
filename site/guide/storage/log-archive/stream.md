@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób odczytać [Dziennik](/resource/storage/log-arc
 
 ### Panel
 
-W celu odczytania *Dziennika* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [

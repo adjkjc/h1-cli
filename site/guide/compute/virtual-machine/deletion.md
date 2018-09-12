@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób usunąć [Wirtualną maszynę](/resource/compu
 
 ### Panel
 
-W celu usunięcia *Wirtualnej maszyny* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -64,7 +64,7 @@ W celu usunięcia *Wirtualnej maszyny* poprzez panel wykonaj następujące kroki
 
 #### CLI
 
-W celu usunięcia *Wirtualnej maszyny* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm delete --vm my-firewall

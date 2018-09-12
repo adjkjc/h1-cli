@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób usunąć *[Adres IP](/resource/networking/ip-a
 
 ### Panel
       
-W celu usunięcia *Adresu IP* z *Adaptera sieciowego* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -71,7 +71,7 @@ W celu usunięcia *Adresu IP* z *Adaptera sieciowego* poprzez panel wykonaj nast
 
 #### CLI
 
-W celu usunięcia *Adresu IP* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm nic ip delete --ip my-ip --vm my-vm --nic 5b1f28ffdadb705edd76b411 --ip 123.0.0.50

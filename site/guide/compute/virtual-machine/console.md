@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób uzyskać dostepu do graficznej konsoli *[Wirtu
 
 ### Panel
 
-W celu uzyskanie dostepu do graficznej konsoli *Wirtualnej maszyny* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -55,7 +55,7 @@ W celu uzyskanie dostepu do graficznej konsoli *Wirtualnej maszyny* poprzez pane
 
 #### CLI
 
-W celu uzyskanie dostepu do graficznej konsoli *Wirtualnej maszyny* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm console --vm test-vm

@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób opublikować [Obraz](/resource/storage/image.m
 
 ### Panel
 
-W celu opublikowania *ISO* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -55,7 +55,7 @@ W celu opublikowania *ISO* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu opublikowania *Obrazu* wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 image access grant --image test-image --project '*'

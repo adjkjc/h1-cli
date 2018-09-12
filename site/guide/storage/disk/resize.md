@@ -11,6 +11,9 @@ Dokument wyjaśnia w jaki sposób zwiększyć [Dysk](/resource/storage/disk.md),
 ## Instrukcja
 
 ### Panel
+
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
+
 ```guide
 [
   {
@@ -75,7 +78,7 @@ Dokument wyjaśnia w jaki sposób zwiększyć [Dysk](/resource/storage/disk.md),
 
 #### CLI
 
-W celu zmiany rozmiaru dysku z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 disk resize --disk my-disk --size 10

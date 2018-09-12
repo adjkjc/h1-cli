@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób wyłączyć [Dziennik](/resource/storage/log-a
 
 ### Panel
 
-W celu wyłączenia *Dziennika* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [

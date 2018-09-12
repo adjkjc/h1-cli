@@ -13,7 +13,7 @@ Dokument wyjaśnia w jaki sposób przyłączyć *[Brame sieciową](/resource/net
 
 ### Panel
 
-W celu przyłączenia *Bramy sieciowej* do *Sieci* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -81,7 +81,7 @@ W celu przyłączenia *Bramy sieciowej* do *Sieci* poprzez panel wykonaj następ
 
 #### CLI
 
-W celu przyłączenia *Zapory sieciowej* do *Sieci* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 firewall attach --firewall secure-zone-fw --network my-safe-net

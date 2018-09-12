@@ -14,7 +14,7 @@ przeglądarki.
 
 ### Panel
 
-W celu uzyskania dostepu do konsoli *Vault* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [

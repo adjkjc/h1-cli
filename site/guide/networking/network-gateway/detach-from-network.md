@@ -13,7 +13,7 @@ Dokument wyjaśnia w jaki sposób odłączyć *[Bramę sieciową](/resource/netw
 
 ### Panel
 
-W celu przyłączenia bramy sieciowej do sieci poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -65,7 +65,7 @@ W celu przyłączenia bramy sieciowej do sieci poprzez panel wykonaj następują
 
 #### CLI
 
-W celu przyłączenia *Zapory sieciowej* do *Sieci* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 netgw detach --firewall secure-zone-fw

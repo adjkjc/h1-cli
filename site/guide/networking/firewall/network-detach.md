@@ -13,7 +13,7 @@ Dokument wyjaśnia w jaki sposób odłączyć *[Zaporę sieciową](/resource/net
 
 ### Panel
 
-W celu odłączenia *Zapory sieciowej* od *Sieci* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -65,7 +65,7 @@ W celu odłączenia *Zapory sieciowej* od *Sieci* poprzez panel wykonaj następu
 
 #### CLI
 
-W celu odłączenia *Zapory sieciowej* od *Sieci* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 firewall detach --firewall secure-zone-fw

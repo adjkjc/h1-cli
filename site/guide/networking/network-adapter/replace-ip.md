@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób zastąpić *[Adres IP](/resource/networking/ip
 
 ### Panel
       
-W celu zastąpienia *Adresu IP* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [

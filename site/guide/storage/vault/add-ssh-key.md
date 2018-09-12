@@ -16,7 +16,7 @@ Utworzenie Vault z wykorzystaniem istniejącego klucza pozwala na sprawne ponown
 
 ### Panel
 
-W celu dodania do *Vault* klucza SSH istniejącego w opcjach projektu lub użytkownika poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -85,7 +85,7 @@ W celu dodania do *Vault* klucza SSH istniejącego w opcjach projektu lub użytk
 
 #### CLI
 
-W celu dodania istniejącego klucza SSH do *Vault* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vault credential cert add --vault my-vault --name my-key --sshkey my-home-ssh
@@ -106,7 +106,7 @@ bezpiecznej metody dostępu jaką są klucze SSH.
 
 ### Panel
 
-W celu wygenerowania i dodania do *Vault* nowego klucza SSH wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [

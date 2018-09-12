@@ -14,26 +14,7 @@ Utworzenie pustego dysku umożliwia w przyszłości składowania na nim dowolnyc
 
 ### Panel
 
-W celu utworzenia dysku poprzez panel wykonaj następujące kroki:
-
-1. Wybierz pozycje ```Dyski``` znajdującą się w menu bocznym.
-2. Wybierz przycisk ```Utwórz Nowy```. Po kliknięciu pojawi się okno z formularzem.
-3. Wypełnij formularz:
-
-	* Określ ```nazwę``` dla swojego zasobu.
-	* Wybierz ```typ```.
-
-	> Określa on dostępny rozmiar i parametry wydajnościowe.
-
-    * Określ ```rozmiar```.
-
-	Przykładowe wartości:
-
-	 * Nazwa: ```moj-dysk```
-	 * Typ: ```ssd```
-	 * Rozmiar: ```50```
-
-4. Wybierz przycisk ``Utwórz``.  Po kliknięciu przejdziesz do strony ze szczegółami nowego zasobu.
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -94,7 +75,7 @@ W celu utworzenia dysku poprzez panel wykonaj następujące kroki:
     
 #### CLI
 
-W celu utworzenia dysku z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 disk create --name disk-type --size 10 --type ssd
@@ -113,7 +94,7 @@ Utworzenie dysku poprzez przesłanie umożliwia przeniesienie istniejącego dysk
 
 #### CLI
 
-W celu utworzenia dysku poprzez przesłanie z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 disk create --name new-disk --size 1 --type ssd --source-file ./my-disk.vhdx

@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób usunąć *[Adaper sieciowy](/resource/networki
 
 ### Panel
 
-W celu usunięcia *Adaptera sieciowego* z *Wirtualnej maszyny* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -72,7 +72,7 @@ W celu usunięcia *Adaptera sieciowego* z *Wirtualnej maszyny* poprzez panel wyk
 
 #### CLI
 
-W celu usunięcia *Adaptera sieciowego* z *Wirtualnej maszyny* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm nic delete --nic my-nic --vm test-vm

@@ -17,7 +17,7 @@ Zanim przekształcisz ulotny *Adres IP* w trwały, sprawdź czy spełniasz:
 
 ### Panel
 
-Aby przekształcić ulotny *Adres IP* w trwały wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [

@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób usunąć [Dziennik](/resource/storage/log-arch
 
 ### Panel
 
-W celu usunięcia *Dziennik* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -64,7 +64,7 @@ W celu usunięcia *Dziennik* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu usunięcia *Dziennik* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 log delete --vault my-log

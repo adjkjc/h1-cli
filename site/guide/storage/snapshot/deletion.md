@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób usunąć [Migawkę](/resource/storage/snapshot
 
 ### Panel
 
-W celu usunięcia *Migawki* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -81,7 +81,7 @@ W celu usunięcia *Migawki* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu usunięci *Migawki* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 snapshot delete --snapshot my-vault

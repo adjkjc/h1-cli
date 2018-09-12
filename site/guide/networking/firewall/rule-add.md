@@ -17,7 +17,7 @@ Reguły zapory sieciowej podzielone są na następujące kategorie:
 
 ### Panel
 
-W celu dodania reguły do *Zapory sieciowej* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -93,7 +93,7 @@ W celu dodania reguły do *Zapory sieciowej* poprzez panel wykonaj następujące
 
 #### CLI
 
-W celu dodania reguły *Zapory sieciowej* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 firewall ingress add --firewall secure-zone-fw --action allow \

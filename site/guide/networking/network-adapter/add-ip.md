@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób dodać *[Adres IP](/resource/networking/ip-add
 
 ### Panel
       
-W celu dodania *Adresu IP* do *Adaptera sieciowego* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -84,7 +84,7 @@ W celu dodania *Adresu IP* do *Adaptera sieciowego* poprzez panel wykonaj nastę
 
 #### CLI
 
-W celu dodania *Adresu IP* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm nic ip add --vm my-vm --nic 5b1f28ffdadb705edd76b411 --ip 5784e97be2627505227b584c

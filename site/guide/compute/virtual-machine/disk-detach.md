@@ -15,7 +15,7 @@ Po odłączeniu *Dysku* możliwe jest jego ponowne [przyłączenie](./disk-attac
 
 ### Panel
 
-W celu przyłączenia *Dysku* do *Wirtualnej maszyny* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -73,7 +73,7 @@ W celu przyłączenia *Dysku* do *Wirtualnej maszyny* poprzez panel wykonaj nast
 
 #### CLI
 
-W celu odłączenia *Dysku* od *Wirtualnej maszyny* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm disk detach --vm test-vm --disk my-disk-0

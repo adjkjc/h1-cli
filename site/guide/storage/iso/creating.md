@@ -16,7 +16,7 @@ Utworzenie *ISO* poprzez wskazanie serwera umożliwia sprawne wykorzystanie ogó
 
 ### Panel
 
-W celu utworzenia *ISO* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -71,7 +71,7 @@ W celu utworzenia *ISO* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu utworzenia *ISO* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 iso create --name myiso --source-url http://example.com/some.iso
@@ -90,7 +90,7 @@ wykorzystanie obrazów *ISO*, które nie są publicznie dostępne.
 
 #### CLI
 
-W celu utworzenia *ISO* na podstawie pliku lokalnego wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 iso create --name myiso --source-file my.iso

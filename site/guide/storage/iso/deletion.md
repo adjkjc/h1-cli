@@ -62,7 +62,7 @@ Dokument wyjaśnia w jaki sposób usunąć [ISO](/resource/storage/disk.md).
 
 #### CLI
 
-W celu usunięcia dysku z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 disk delete --disk my-disk

@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób usunąć [Adres IP](/resource/networking/ip-ad
 
 ### Panel
 
-W celu usunięcia *Adresu IP* w *Sieci* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
  
 ```guide
 [
@@ -61,7 +61,7 @@ W celu usunięcia *Adresu IP* w *Sieci* poprzez panel wykonaj następujące krok
 
 #### CLI
 
-W celu usunięcia *Adresu IP* w *Sieci* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 network ip delete --ip my-ip --network my-network

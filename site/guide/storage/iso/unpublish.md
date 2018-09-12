@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób odpublikować [ISO](/resource/storage/iso.md).
 
 ### Panel
 
-W celu odpublikowania *ISO* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -55,7 +55,7 @@ W celu odpublikowania *ISO* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu odpublikowania *ISO* wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 iso access revoke --iso test-image --project '*'

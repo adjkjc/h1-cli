@@ -24,7 +24,7 @@ konfiguracją systemu operacyjnego zapewniającą optymalne wykorzystanie właś
 
 <!-- TODO:  Monika, konieczne jest nazwanie sekcji formularza, aby wyeliminować ukośnik -->
 
-W celu utworzenia *Wirtualnej maszyny* z wykorzystaniem *Rekomendowanego obrazu* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -98,7 +98,7 @@ W celu utworzenia *Wirtualnej maszyny* z wykorzystaniem *Rekomendowanego obrazu*
     
 #### CLI
 
-W celu utworzenia *Wirtualnej maszyny* z *Rekomendowanego obrazu* wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm create --image debian --type m2.medium --username guru --password my-secret-password --name moj-serwer
@@ -120,7 +120,7 @@ dowolnymi danymi i konfiguracją jaką użytkownik wcześniej przygotował.
 
 ### Panel
 
-W celu utworzenia *Wirtualnej maszyny* z wykorzystaniem *Obrazu* użytkownika poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -194,7 +194,7 @@ W celu utworzenia *Wirtualnej maszyny* z wykorzystaniem *Obrazu* użytkownika po
 
 #### CLI
 
-W celu utworzenia *Wirtualnej maszyny* z *Obrazu* użytkownika wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm create --image moj-obraz --type m2.medium --username guru --password my-secret-password --name moj-serwer
@@ -217,7 +217,7 @@ gdy system operacyjny ma zostać dostarczony w inny sposób np. poprzez [przypi�
 
 ### Panel
 
-W celu utworzenia *Wirtualnej maszyny* bez żadnego *Obrazu* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -291,7 +291,7 @@ W celu utworzenia *Wirtualnej maszyny* bez żadnego *Obrazu* poprzez panel wykon
 
 #### CLI
 
-W celu utworzenia *Wirtualnej maszyny* bez żadnego *Obrazu* wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm create --type m2.medium --username guru --password my-secret-password --name moj-serwer

@@ -14,7 +14,7 @@ Dokument wyjaśnia w jaki sposób utworzyć [Obrazu](/resource/storage/iso.md) w
 
 <!-- TODO: Monika, utworzeni czy stworzenie? -->
 
-W celu utworzenia *Obrazu* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -79,7 +79,7 @@ W celu utworzenia *Obrazu* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu utworzenia *Obrazu* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 image create --vm test-vm --name dev-image

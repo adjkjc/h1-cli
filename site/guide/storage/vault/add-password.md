@@ -14,7 +14,7 @@ Zalecane jest wykorzystanie [kluczy SSH](add-ssh-key.md) w celu uzyskania dostę
 
 ### Panel
 
-W celu dodania do *Vault* hasła wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -106,7 +106,7 @@ W celu dodania do *Vault* hasła wykonaj następujące kroki:
 
 #### CLI
 
-W celu dodania hasła jako danych dostępowych do *Vault* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vault credential password add --name my-pass --password secret-password --vault my-vault

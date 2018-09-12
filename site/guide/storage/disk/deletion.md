@@ -12,21 +12,7 @@ Dokument wyjaśnia w jaki sposób usunąć [Dysk](/resource/storage/disk.md).
 
 ### Panel
 
-W celu usunięcia dysku poprzez panel wykonaj następujące kroki:
-
-1. Wybierz pozycje ```Dyski``` znajdującą się w menu bocznym.
-2. Kliknij wybrany zasób spośród listy.  Po kliknięciu pojawią się szczegóły zasobu.
-2. Wybierz przycisk ```Akcje```. Po kliknięciu pojawi się lista rozwijana.
-3. Wybierz pozycje ```Usuń```. Po kliknięciu pojawi się okno potwierdzenia operacji.
-3. Wypełnij formularz:
-
-	* Określ ```nowy rozmiar dysku``` dla swojego zasobu.
-
-	Przykładowe wartości:
-
-	 * Nowy rozmiar dysku: ```100```
-
-4. Wybierz przycisk ``Zmień rozmiar``.
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -78,7 +64,7 @@ W celu usunięcia dysku poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu usunięcia dysku z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 disk delete --disk my-disk

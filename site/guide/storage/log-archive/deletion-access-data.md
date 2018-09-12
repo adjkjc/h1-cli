@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób usunąć wybrane dane dostępowe z [Dziennika]
 
 ### Panel
 
-W celu usunięcia wybranych danych danych dostępowych z *Dziennika* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -63,7 +63,7 @@ W celu usunięcia wybranych danych danych dostępowych z *Dziennika* poprzez pan
 
 #### CLI
 
-W celu usunięcia haseł stanowiących dane dostępowe do *Dziennika* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 log credential password delete --password my-cert --vault my-vault

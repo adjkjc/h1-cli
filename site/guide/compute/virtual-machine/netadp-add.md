@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób dodać *[Adaper sieciowy](/resource/networking
 
 ### Panel
 
-W celu dodania dodania *Adaptera sieciowego* do *Wirtualnej maszyny* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -78,7 +78,7 @@ W celu dodania dodania *Adaptera sieciowego* do *Wirtualnej maszyny* poprzez pan
 
 #### CLI
 
-W celu dodania *Adaptera sieciowego* do *Wirtualnej maszyny* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm nic create --vm test-vm2 --type public

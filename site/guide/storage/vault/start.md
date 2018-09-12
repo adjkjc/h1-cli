@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób włączyć dostęp do [Vault](/resource/storag
 
 ### Panel
 
-W celu włączenia dostępu do *Vault* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [

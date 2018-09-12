@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób usunąć regułę *[Zapory sieciowej](/resourc
 
 ### Panel
 
-W celu usunięcia reguły *Zapory sieciowej* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -62,7 +62,7 @@ W celu usunięcia reguły *Zapory sieciowej* poprzez panel wykonaj następujące
 
 #### CLI
 
-W celu usunięcia reguły *Zapory sieciowej* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 firewall ingress delete --firewall secure-zone-fw --rule 5b1e8988cdfb072cb51dc843

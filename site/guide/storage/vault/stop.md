@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób wyłączyć dostęp do [Vault](/resource/stora
 
 ### Panel
 
-W celu wyłączenia dostępu do *Vault* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [

@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób usunąć *[Zaporę sieciową](/resource/networ
 
 ### Panel
 
-W celu usunięcia *Zapory sieciowej* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -64,7 +64,7 @@ W celu usunięcia *Zapory sieciowej* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu usunięcia *Zapory sieciowej* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 firewall delete --firewall my-firewall

@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób utworzyć *[Zaporę sieciową](/resource/netwo
 
 ### Panel
       
-W celu utworzenia *Zapora sieciowa* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -62,7 +62,7 @@ W celu utworzenia *Zapora sieciowa* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu utworzenia ISO z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 firewall create --name my-ip-network

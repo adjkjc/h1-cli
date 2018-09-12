@@ -12,6 +12,8 @@ Dokument wyjaśnia w jaki sposób usunąć *[Obraz](/resource/storage/image.md)*
 
 ### Panel
 
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
+
 ```guide
 [
   {
@@ -62,7 +64,7 @@ Dokument wyjaśnia w jaki sposób usunąć *[Obraz](/resource/storage/image.md)*
 
 #### CLI
 
-W celu usunięcia *Obrazu* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 disk delete --disk my-disk

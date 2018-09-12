@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób włączyć [Dziennik](/resource/storage/log-ar
 
 ### Panel
 
-W celu włączenia *Dziennika* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [

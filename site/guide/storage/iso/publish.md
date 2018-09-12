@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób opublikować [ISO](/resource/storage/iso.md) d
 
 ### Panel
 
-W celu opublikowania *ISO* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -55,7 +55,7 @@ W celu opublikowania *ISO* poprzez panel wykonaj następujące kroki:
 
 #### CLI
 
-W celu opublikowania *ISO* wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 iso access grant --iso test-image --project '*'

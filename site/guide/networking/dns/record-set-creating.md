@@ -12,25 +12,7 @@ Dokument wyjaśnia w jaki sposób dodać zestaw rekordów DNS do [DNS](/resource
 
 ### Panel
 
-W celu utworzenia zestawu rekordów DNS poprzez panel wykonaj następujące kroki:
-
-1. Wybierz pozycje ```DNS``` znajdującą się w menu bocznym.
-2. Kliknij wybrany zasób spośród listy.  Po kliknięciu pojawią się szczegóły zasobu.
-3. Wybierz przycisk ```Dodaj Nowy Rekord```. Po kliknięciu pojawi się okno z formularzem.
-3. Wypełnij formularz:
-
-	* Określ ```nazwę zestawu rekordów```.
-    * Wybierz ```typ```
-	* Określ ```wartość```
-	
-	Przykładowe wartości:
-
-	 * Nazwa zestawu rekordow: ```home```
-	 * Typ: ```A```
-	 * Wartość: ```123.123.123.123```
-
-4. Wybierz przycisk ``Dodaj wartość``.
-5. Wybierz przycisk ```Dodaj zestaw rekordów```
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -105,7 +87,7 @@ W celu utworzenia zestawu rekordów DNS poprzez panel wykonaj następujące krok
 
 #### CLI
 
-W celu dodaniu rekordu typu A z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 dns record-set a create --name 'home' --zone-name 'example.com' --value '123.123.123.123'

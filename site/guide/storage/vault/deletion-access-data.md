@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób usunąć wybrane dane dostępowe z [Vault](/re
 
 ### Panel
 
-W celu usunięcia wybranych danych danych dostępowych z *Vault* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -63,7 +63,7 @@ W celu usunięcia wybranych danych danych dostępowych z *Vault* poprzez panel w
 
 #### CLI
 
-W celu usunięcia kluczy SSH stanowiących dane dostępowe z *Vault* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vault credential cert delete --cert my-cert --vault my-vault

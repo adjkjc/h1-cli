@@ -12,7 +12,7 @@ Dokument wyjaśnia w jaki sposób zrestartować [Wirtualną maszynę](/resource/
 
 ### Panel
 
-W celu zrestartowania *Wirtualnej maszyny* poprzez panel wykonaj następujące kroki:
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -55,7 +55,7 @@ W celu zrestartowania *Wirtualnej maszyny* poprzez panel wykonaj następujące k
 
 #### CLI
 
-W celu zrestartowania *Wirtualnej maszyny* z wykorzystaniem CLI wykonaj następujące polecenie:
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 vm restart --vm test-vm
