@@ -47,7 +47,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
     "data": {
       "type": "entry",
       "selector": "navbar>.vm",
-      "label": "Wyłącz"
+      "label": "Zatrzymaj"
     }
   }
 ]
