@@ -39,10 +39,10 @@ Zarządzanie usługą jest możliwe, w przypadku spełnienia następujących war
 
 ## Parametry techniczne
 
-Parameter                |                         Wartość |Uwagi
------------------------- | ------------------------------: | ---
-Typy rekordów            | A, CNAME, MX, TXT, SRV, NS, CAA |
-Rozmiar zestawu rekordów |                         20      |
+Parameter                |                                Wartość |Uwagi
+------------------------ | -------------------------------------: | ---
+Typy rekordów            | A, CNAME, MX, TXT, SRV, NS, CAA,  AAAA |
+Rozmiar zestawu rekordów |                                     20 |
 
 [Napisz do nas](/about-us/contact.md) jeżeli masz duży projekt i potrzebujesz zwiększyć te parametry.
 

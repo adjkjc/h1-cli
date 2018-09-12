@@ -60,7 +60,6 @@ Weryfikiacja tożsamości poprzez rachunek bankowy polega na uzyskaniu symbolicz
 
 Weryfikiacja tożsamości poprzez PayPal polega na uzyskaniu symbolicznej opłaty z [zweryfikowanego konta PayPal](https://www.paypal.com/pl/webapps/mpp/security/buy-verificationfaq) należącego do Organizacji. Odbywa się to poprzez zlecenie płatności na konto platformy, co prowadzi do udzielenia informacji o tożsamości Użytkownika (nadawcy płatności), co podlega weryfikacji w zakresie spójnosći.
 
-
 ### podpisu kwalifikowany
 
 Weryfikiacja tożsamości poprzez podpis kwalifikowany (bezpieczny podpis elektroniczny weryfikowany kwalifikowanym certyfikatem) polega na przekazaniu przez Organizacje oświadczanie o treści wskazanej przez platformę opatrzonego podpisem kwalifikowanym osoby upoważnionej do reprezentowania podmiotu, której uprawnienie może zostać zweryfikowane w publicznym rejestrze zawierającym dane o podmiocie oraz osobach upoważnionych do reprezentacji. Wówczas przez platformę weryfikowana jest treść oświadczenia, poprawność dołączonego podpisu, dane zawarte w podpisie oraz zgodność z publicznym rejestrem.
