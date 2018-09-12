@@ -29,9 +29,9 @@ Wszelkie podmioty z Polski są objęte standardowymi stawkami podatkowymi dla ś
 
 ### Podmioty z Unii Europejskiej
 
-Każdy podmiot z Unii Europejskiej powinnien podać europejski numer identyfikacji na potrzeby VAT (VAT-EU), który podlega weryfikacji w systemie [VIES](http://ec.europa.eu/taxation_customs/vies/).
+Każdy podmiot z Unii Europejskiej powinien podać europejski numer identyfikacji na potrzeby VAT (VAT-EU), który podlega weryfikacji w systemie [VIES](http://ec.europa.eu/taxation_customs/vies/).
 
-W przypadky poprawnej weryfikacji w systmie VIES nie zostanie naliczony podatek VAT. Faktura będzie posiadała adnotację informującą o odwrotnym obciążeniu zgodnie z obowiązującymi przepisami dotyczącymi podatku VAT.
+W przypadku poprawnej weryfikacji w systemie VIES nie zostanie naliczony podatek VAT. Faktura będzie posiadała adnotację informującą o odwrotnym obciążeniu zgodnie z obowiązującymi przepisami dotyczącymi podatku VAT.
 
 ### Pozostałe podmioty
 
@@ -39,11 +39,11 @@ Nie zostaje naliczony podatek VAT.
 
 ## Weryfikacja
 
-Podczas tworzenia Organizacji lub w dowolnym późniejszym czasie może być wymagana weryfikacja Organizacji.
+Podczas tworzenia *Organizacji* lub w dowolnym późniejszym czasie może być wymagana weryfikacja Organizacji.
 
-Jeśli wymagana będzie weryfikacja Organizacji w późniejszym czasie to wpierw zwykle zostanie wyznaczony okres w którym Organizacja powinna dokonać weryfikacji.
+Jeśli wymagana będzie weryfikacja *Organizacji* w późniejszym czasie to wpierw zwykle zostanie wyznaczony okres w którym Organizacja powinna dokonać weryfikacji.
 
-W przypadku nie wykonania weryfikacji w wyznaczonym czasie, wszysktie Projekty przypisane do Organizacji zostaną wprowadzone w stan [Ograniczonego użycia](/platform/resource.md#Ograniczone-uzycie). Organizacja będzie mógła nadal dokonać weryfikacji i jej pozytywny rezultat będzie skutkował zniesieniem stanu Ograniczonego użycia dla wszystkich projektów Organizacji.
+W przypadku nie wykonania weryfikacji w wyznaczonym czasie, wszystkie *Projekty* przypisane do *Organizacji* zostaną wprowadzone w stan [Ograniczonego użycia](/platform/resource.md#Ograniczone-uzycie). *Organizacja* będzie mogła nadal dokonać weryfikacji i jej pozytywny rezultat będzie skutkował zniesieniem stanu Ograniczonego użycia dla wszystkich projektów Organizacji.
 
 Wykorzystywane są zazwyczaj następujące narzędzia do weryfikacji:
 
@@ -54,19 +54,19 @@ Wykorzystywane są zazwyczaj następujące narzędzia do weryfikacji:
 
 ### rachunek bankowy
 
-Weryfikiacja tożsamości poprzez rachunek bankowy polega na uzyskaniu symbolicznej opłaty z konta bankowego należącego do Organizacji. Odbywa się to poprzez zlecenie przelewu na konto bankowe platformy, co prowadzi do udzielenia informacji o tożsamości Organizacji (nadawcy przelewu), co podlega weryfikacji w zakresie spójnosći.
+Weryfikacja tożsamości poprzez rachunek bankowy polega na uzyskaniu symbolicznej opłaty z konta bankowego należącego do Organizacji. Odbywa się to poprzez zlecenie przelewu na konto bankowe platformy, co prowadzi do udzielenia informacji o tożsamości *Organizacji* (nadawcy przelewu), co podlega weryfikacji w zakresie spójności.
 
 #### Paypal
 
-Weryfikiacja tożsamości poprzez PayPal polega na uzyskaniu symbolicznej opłaty z [zweryfikowanego konta PayPal](https://www.paypal.com/pl/webapps/mpp/security/buy-verificationfaq) należącego do Organizacji. Odbywa się to poprzez zlecenie płatności na konto platformy, co prowadzi do udzielenia informacji o tożsamości Użytkownika (nadawcy płatności), co podlega weryfikacji w zakresie spójnosći.
+Weryfikacja tożsamości poprzez PayPal polega na uzyskaniu symbolicznej opłaty z [zweryfikowanego konta PayPal](https://www.paypal.com/pl/webapps/mpp/security/buy-verificationfaq) należącego do Organizacji. Odbywa się to poprzez zlecenie płatności na konto platformy, co prowadzi do udzielenia informacji o tożsamości Użytkownika (nadawcy płatności), co podlega weryfikacji w zakresie spójności.
 
 ### podpisu kwalifikowany
 
-Weryfikiacja tożsamości poprzez podpis kwalifikowany (bezpieczny podpis elektroniczny weryfikowany kwalifikowanym certyfikatem) polega na przekazaniu przez Organizacje oświadczanie o treści wskazanej przez platformę opatrzonego podpisem kwalifikowanym osoby upoważnionej do reprezentowania podmiotu, której uprawnienie może zostać zweryfikowane w publicznym rejestrze zawierającym dane o podmiocie oraz osobach upoważnionych do reprezentacji. Wówczas przez platformę weryfikowana jest treść oświadczenia, poprawność dołączonego podpisu, dane zawarte w podpisie oraz zgodność z publicznym rejestrem.
+Weryfikacja tożsamości poprzez podpis kwalifikowany (bezpieczny podpis elektroniczny weryfikowany kwalifikowanym certyfikatem) polega na przekazaniu przez Organizacje oświadczanie o treści wskazanej przez platformę opatrzonego podpisem kwalifikowanym osoby upoważnionej do reprezentowania podmiotu, której uprawnienie może zostać zweryfikowane w publicznym rejestrze zawierającym dane o podmiocie oraz osobach upoważnionych do reprezentacji. Wówczas przez platformę weryfikowana jest treść oświadczenia, poprawność dołączonego podpisu, dane zawarte w podpisie oraz zgodność z publicznym rejestrem.
 
 ### kwalifikowana pieczęć
 
-Weryfikiacja tożsamości poprzez pieczęć kwalifikowaną (bezpieczna pięczeć elektroniczny weryfikowaną kwalifikowanym certyfikatem) polega na przekazaniu przez Organizacje oświadczanie o treści wskazanej przez platformę opatrzonego pieczęcią kwalifikowaną. Wówczas przez platformę weryfikowana jest treść oświadczenia, poprawność dołączonego pieczęci oraz dane zawarte w pieczęci.
+Weryfikacja tożsamości poprzez pieczęć kwalifikowaną (bezpieczna pieczęć elektroniczna weryfikowana kwalifikowanym certyfikatem) polega na przekazaniu przez Organizacje oświadczanie o treści wskazanej przez platformę opatrzonego pieczęcią kwalifikowaną. Wówczas przez platformę weryfikowana jest treść oświadczenia, poprawność dołączonego pieczęci oraz dane zawarte w pieczęci.
 
 ## Kanały płatności
 
@@ -93,7 +93,7 @@ W przypadku z Unii Europejskiej dostępne są następujące kanały płatności:
 
 W przypadku pozostałych podmiotów dostępne są następujące kanały płatności:
 
-* karta płatnicza - wystawiona przez bank lub organizację płatniczą z kraju Organizacji 
+* karta płatnicza - wystawiona przez bank lub organizację płatniczą z kraju *Organizacji* 
 * PayPal - zweryfikowane konto należącego do podmiotu z kraju Organizacji
 
 ## Operacje
@@ -102,25 +102,25 @@ Dostępne są następujące dedykowane operacje:
 
 * zmiana nazwy
 * zmiana danych rozliczeniowych
-* zmiana użytkowników przypisanych do Organizacji i ich ról
-    * użytkownik tworzący Organizcję otrzymuje automatycznie rolę ```owner``` Organizacji
+* zmiana użytkowników przypisanych do *Organizacji* i ich ról
+    * użytkownik tworzący *Organizacje* otrzymuje automatycznie rolę ```owner``` Organizacji
     * Organizacja musi mieć przynajmniej jednego Użytkownika z rolą ```owner```
-        * dodanie użytkownika do Organizacji
-        * usunięcie użytkownika z Organizacji
-        * zmiana roli użytkownika w Organizacji
-* dostęp do faktur Projektów wystawionych dla Organizacji
+        * dodanie użytkownika do *Organizacji*
+        * usunięcie użytkownika z *Organizacji*
+        * zmiana roli użytkownika w *Organizacji*
+* dostęp do faktur Projektów wystawionych dla *Organizacji*
 
 ## Powiadomienia 
 
-Powiadomienia dla Organizacji są wysyłane w przypadku następujących zdarzeń:
+Powiadomienia dla *Organizacji* są wysyłane w przypadku następujących zdarzeń:
 
-* otrzymaniu płatności – otrzymują Użytkownicy z rolą ```owner``` oraz ```billing``` dla Organizacji
-* wystawieniu w projekcie Organizacji faktury – otrzymują Użytkownicy z rolą ```owner``` oraz ```billing``` dla Organizacji
+* otrzymaniu płatności – otrzymują Użytkownicy z rolą ```owner``` oraz ```billing``` dla *Organizacji*
+* wystawieniu w projekcie *Organizacji* faktury – otrzymują Użytkownicy z rolą ```owner``` oraz ```billing``` dla *Organizacji*
 
 # Parametry techniczne
 
-Parametr          | Wartość
-------------------| ----------
-Liczba projektów  | 100
+Parametr            | Wartość
+--------------------| ----------
+Liczba *Projektów*  | 100
 
 [Napisz do nas](/about-us/contact.md) jeżeli potrzebujesz zwiększyć te limity.

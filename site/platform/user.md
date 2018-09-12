@@ -24,7 +24,7 @@ Identyfikatorem użytkownika jest adres email który jest trwały dla Użytkowni
 
 Podczas tworzenia Użytkownika lub w dowolnym późniejszym czasie może być wymagana weryfikacja Użytkownika.
 
-Jeśli wymagana będzie weryfikacja Użytkownika w późniejszym czasie to wpierw zwykle zostanie wyznaczony okres w którym Użytkownik powinnien dokonać weryfikacji.
+Jeśli wymagana będzie weryfikacja Użytkownika w późniejszym czasie to wpierw zwykle zostanie wyznaczony okres w którym Użytkownik powinien dokonać weryfikacji.
 
 W przypadku nie wykonania weryfikacji w wyznaczonym czasie, funkcjonalność *Użytkownika* zostanie ograniczona. Nadal *Użytkownik* będzie mógł dokonać weryfikacji i jej pozytywny rezultat będzie skutkował wznowieniem pełnego dostępu dla Użytkownika.
 
@@ -40,11 +40,11 @@ Niektóre ze sposobów weryfikacji danych:
 
 ### adres email
 
-Weryfikiacja adresu e-mail polega na zweryfikowania dostępu Użytkownika do podanego adresu e-mail. Odbywa się to poprzez wiadomość z jednorazowym, indywidualnym kodem wysłanym na adres email podany przez Użytkownika i wprowadzenie tego kodu przez Użytkownika w platformie.
+Weryfikacja adresu e-mail polega na zweryfikowania dostępu Użytkownika do podanego adresu e-mail. Odbywa się to poprzez wiadomość z jednorazowym, indywidualnym kodem wysłanym na adres email podany przez Użytkownika i wprowadzenie tego kodu przez Użytkownika w platformie.
 
 ### numer telefonu komórkowego
 
-Weryfikiacja telefonu komórkowego polega na zweryfikowania dostępu Użytkownika do podanego numeru telefonu. Odbywa się to poprzez SMS z jednorazowym, indywidualnym kodem wysłanym na numer telefonu podany przez Użytkownika i wprowadzenie tego kodu przez Użytkownika w platformie.
+Weryfikacja telefonu komórkowego polega na zweryfikowania dostępu Użytkownika do podanego numeru telefonu. Odbywa się to poprzez SMS z jednorazowym, indywidualnym kodem wysłanym na numer telefonu podany przez Użytkownika i wprowadzenie tego kodu przez Użytkownika w platformie.
 
 ### tożsamość
 
@@ -57,7 +57,7 @@ Wykorzystywane są zazwyczaj następujące narzędzia do weryfikacji:
 
 #### media społecznościowe
 
-Weryfikiacja tożsamości za pomocą mediów społecznościowych polega na uzyskaniu potwierdzenia tożsamości Użytkownika z wybranego medium społecznościowego. Odbywa się to poprzez logowanie do wybranego medium społecznościowego wraz z nadaniem prawa do uzyskania podstawowych informacji o tożsamości użytkownika. Wówczas medium przekazuje informacje o tożsamości użytkownika, co podlega ocenie zgodności i wiarygodności.
+Weryfikacja tożsamości za pomocą mediów społecznościowych polega na uzyskaniu potwierdzenia tożsamości Użytkownika z wybranego medium społecznościowego. Odbywa się to poprzez logowanie do wybranego medium społecznościowego wraz z nadaniem prawa do uzyskania podstawowych informacji o tożsamości użytkownika. Wówczas medium przekazuje informacje o tożsamości użytkownika, co podlega ocenie zgodności i wiarygodności.
 
 Media społecznościowe uznane za wiarygodne to:
 
@@ -70,15 +70,15 @@ Media społecznościowe uznane za wiarygodne to:
 
 #### rachunek bankowy
 
-Weryfikiacja tożsamości poprzez rachunek bankowy polega na uzyskaniu symbolicznej opłaty z konta bankowego należącego do Użytkownika. Odbywa się to poprzez zlecenie przelewu na konto bankowe platformy, co prowadzi do udzielenia informacji o tożsamości Użytkownika (nadawcy przelewu), co podlega weryfikacji w zakresie spójnosći.
+Weryfikacja tożsamości poprzez rachunek bankowy polega na uzyskaniu symbolicznej opłaty z konta bankowego należącego do Użytkownika. Odbywa się to poprzez zlecenie przelewu na konto bankowe platformy, co prowadzi do udzielenia informacji o tożsamości Użytkownika (nadawcy przelewu), co podlega weryfikacji w zakresie spójności.
 
 #### Paypal
 
-Weryfikiacja tożsamości poprzez PayPal polega na uzyskaniu symbolicznej opłaty z [zweryfikowanego konta PayPal](https://www.paypal.com/pl/webapps/mpp/security/buy-verificationfaq) należącego do Użytkownika. Odbywa się to poprzez zlecenie płatności na konto platformy, co prowadzi do udzielenia informacji o tożsamości Użytkownika (nadawcy płatności), co podlega weryfikacji w zakresie spójnosći.
+Weryfikacja tożsamości poprzez PayPal polega na uzyskaniu symbolicznej opłaty z [zweryfikowanego konta PayPal](https://www.paypal.com/pl/webapps/mpp/security/buy-verificationfaq) należącego do Użytkownika. Odbywa się to poprzez zlecenie płatności na konto platformy, co prowadzi do udzielenia informacji o tożsamości Użytkownika (nadawcy płatności), co podlega weryfikacji w zakresie spójności.
 
 #### podpis kwalifikowany
 
-Weryfikiacja tożsamości poprzez podpis kwalifikowany (bezpieczny podpis elektroniczny weryfikowany kwalifikowanym certyfikatem) polega na przekazaniu przez Użytkownika oświadczanie o treści wskazanej przez platformę opatrzonego podpisem kwalifikowanym. Wówczas przez platformę weryfikowana jest treść oświadczenia, poprawność dołączonego podpisu oraz dane zawarte w podpisie.
+Weryfikacja tożsamości poprzez podpis kwalifikowany (bezpieczny podpis elektroniczny weryfikowany kwalifikowanym certyfikatem) polega na przekazaniu przez Użytkownika oświadczanie o treści wskazanej przez platformę opatrzonego podpisem kwalifikowanym. Wówczas przez platformę weryfikowana jest treść oświadczenia, poprawność dołączonego podpisu oraz dane zawarte w podpisie.
 
 ## Powiadomienia
 

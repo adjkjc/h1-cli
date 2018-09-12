@@ -62,9 +62,9 @@ Następujące operacje przeznaczone do zarządzania członkami Projektu są dost
 * usunięcie użytkownika z Projektu
 * zmiana roli użytkownika w Projekcie
 
-Dostępne są następujące role z określonymi prawami dostepu
+Dostępne są następujące role z określonymi prawami dostępu:
 
-* ```owner``` - wszelkie prawa dostepu,
+* ```owner``` - wszelkie prawa dostępu,
 * ```billing``` - odczyt danych związanych z rozliczeniami i płatnościami
 * ```user``` - modyfikacja zasobów bez modyfikacji projektu
 
@@ -90,7 +90,7 @@ Następujące operacje przeznaczone do zarządzania kluczami SSH są dostępne:
 
 Każdy *Projekt* może mieć zdefiniowane wiele service account. Są to dane dostępowe umożliwiające wykonywanie działań w *Projekcie*. Przeznaczone są one do zarządzania zasobami platformy przez skrypty, urządzenia lub inne procesy automatyzujące. Możliwe są do wykorzystania np. poprzez ```CLI``` lub podczas bezpośredniego dostępu do API. Posiadają określone prawa dostępu do wybranych elementów platformy.
 
-Dostępne są następujace operacje:
+Dostępne są następujące operacje:
 
  * dodanie service account
  * usunięcie service account
@@ -106,7 +106,7 @@ Zasilenie środków jest dostępne następującymi drogami:
 
 * tradycyjnym przelewem,
 * PayPal 
-* eCard - Visa, VisaCheckout, MasterCard, Amercian Express, Maeostro 
+* eCard - Visa, VisaCheckout, MasterCard, American Express, Maeostro 
 * dotPay - płatności błyskawiczne popularnych polskich banków, Blik, mTransfer
 
 ## Forma rozliczeń
