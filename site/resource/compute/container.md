@@ -18,7 +18,7 @@ Możliwe jest określenie następujących parametrów podczas utworzenia;
 
 * nazwa
 * wariant
-* obraz dostępnyn w ogólnodostępnym repozytorium np. na [Docker Hub](https://hub.docker.com/)
+* obraz dostępny w ogólnodostępnym repozytorium np. na [Docker Hub](https://hub.docker.com/)
 * punkty montowania danych w *[Vault](/resource/storage/vault.md)*
 * zmienne środowiskowe
 

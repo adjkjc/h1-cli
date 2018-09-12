@@ -80,7 +80,7 @@ h1 network create --name my-ip-network --address 10.214.180.0/24 --gateway 10.21
 
 gdzie:
 
- * ```--name``` - określa nazwę nowoutworzonej *Sieci*
+ * ```--name``` - określa nazwę nowo utworzonej *Sieci*
  * ```--address``` - określa pulę adresową *Sieci* (parametr opcjonalny)
  * ```--gateway``` - określa bramę domyślna *Sieci* (parametr opcjonalny)
 

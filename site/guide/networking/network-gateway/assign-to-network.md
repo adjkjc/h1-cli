@@ -90,6 +90,6 @@ h1 firewall attach --firewall secure-zone-fw --network my-safe-net
 gdzie:
 
  * ```--firewall``` określa nazwę lub identyfikator *Zapory sieciowej*
- * ```--network``` okresla nazwę przyłączanej *Sieci*
+ * ```--network``` określa nazwę przyłączanej *Sieci*
  
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="firewall attach"].

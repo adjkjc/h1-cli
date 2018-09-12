@@ -1,12 +1,12 @@
-# Uzyskanie dostepu do konsoli poprzez port szeregowy Wirtualnej maszyny
+# Uzyskanie dostępu do konsoli poprzez port szeregowy Wirtualnej maszyny
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób uzyskać dostepu do konsoli poprzez port szeregowy [Wirtualnej maszyny](/resource/compute/virtual-machine.md).
+Dokument wyjaśnia w jaki sposób uzyskać dostępu do konsoli poprzez port szeregowy [Wirtualnej maszyny](/resource/compute/virtual-machine.md).
 
 ## Warunki wstępne
 
-* wszystkie warunki wykonania operacji [Uzyskanie dostepu do konsoli poprzez port szeregowy](/resource/compute/virtual-machine.md#uzyskanie-dostepu-do-konsoli-poprzez-port-szeregowy).
+* wszystkie warunki wykonania operacji [Uzyskanie dostępu do konsoli poprzez port szeregowy](/resource/compute/virtual-machine.md#uzyskanie-dostępu-do-konsoli-poprzez-port-szeregowy).
 
 ## Instrukcja
 

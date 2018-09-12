@@ -6,7 +6,7 @@ Dokument wyjaśnia w jaki sposób włączyć dostęp do [Vault](/resource/storag
 
 ## Warunki wstępne
 
-* wszystkie warunki wykonania operacji [Włączenie dostępu](/resource/storage/vault.md#wlaczenie-dostepu)
+* wszystkie warunki wykonania operacji [Włączenie dostępu](/resource/storage/vault.md#wlaczenie-dostępu)
 
 ## Instrukcja
 

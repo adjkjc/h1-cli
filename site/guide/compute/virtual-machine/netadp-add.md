@@ -2,7 +2,7 @@
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób dodać *[Adaper sieciowy](/resource/networking/network-adapter.md)* do *[Wirtualnej maszyny](/resource/compute/virtual-machine.md).
+Dokument wyjaśnia w jaki sposób dodać *[Adapter sieciowy](/resource/networking/network-adapter.md)* do *[Wirtualnej maszyny](/resource/compute/virtual-machine.md).
 
 ## Warunki wstępne
 

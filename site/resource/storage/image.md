@@ -10,7 +10,7 @@
 
 *Obraz* może zostać utworzony, w przypadku spełnienia następujących warunków: 
 
-* *Wirtual machine* jest w stanie `Pracująca` lub `Wyłączona`
+* *Wirtualna maszyna* jest w stanie `Pracująca` lub `Wyłączona`
 * wszystkie *ogólne* warunki
 
 *Obraz* tworzony jest na podstawie istniejącej *Wirtualnej maszyny*.

@@ -1,12 +1,12 @@
-# Uzyskanie dostepu do graficznej konsoli Wirtualnej maszyny
+# Uzyskanie dostępu do graficznej konsoli Wirtualnej maszyny
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób uzyskać dostepu do graficznej konsoli *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*.
+Dokument wyjaśnia w jaki sposób uzyskać dostępu do graficznej konsoli *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*.
 
 ## Warunki wstępne
 
-* wszystkie warunki wykonania operacji [Uzyskanie dostepu do graficznej konsoli](/resource/compute/virtual-machine.md#uruchomienie).
+* wszystkie warunki wykonania operacji [Uzyskanie dostępu do graficznej konsoli](/resource/compute/virtual-machine.md#uruchomienie).
 
 ## Instrukcja
 

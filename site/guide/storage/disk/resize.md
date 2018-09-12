@@ -86,6 +86,6 @@ h1 disk resize --disk my-disk --size 10
 gdzie:
 
  * ```--disk``` określa nazwę lub identyfikator dysku
- * ```--size``` okresla nowy rozmiar dysku
+ * ```--size``` określa nowy rozmiar dysku
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="disk resize"].

@@ -88,7 +88,7 @@ h1 snapshot create --vault my-vault --name my-new-snapshot
 
 gdzie:
 
- * ```--name``` określa nazwę nowoutworzonej *Migawki*
+ * ```--name``` określa nazwę nowo utworzonej *Migawki*
  * ```--vault``` określa nazwę źrodłowego *Vault*
  
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="snapshot create"].

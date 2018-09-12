@@ -35,7 +35,7 @@ Operacja może zostać wykonana, w przypadku spełnienia następujących warunk�
 * zasób znajduje się w stanie ```Działający```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
-## Wyłaczenie
+## Wyłączenie
 
 Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
 

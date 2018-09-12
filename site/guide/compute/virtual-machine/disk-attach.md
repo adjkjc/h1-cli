@@ -7,7 +7,7 @@ Dokument wyjaśnia w jaki sposób przyłączyć *[Dysk](/resource/storage/disk.m
 
 Po przyłączeniu *Dysku* możliwe jest jego [odłączenie](./disk-detach.md).
 
-## Warunki wsstępne
+## Warunki wstępne
 
 * posiadanie [utworzonej](/resource/networking/network.md) *Sieci*
 
@@ -98,6 +98,6 @@ h1 vm disk attach --vm test-vm --disk my-disk-0
 gdzie:
 
  * ```--vm``` określa nazwę lub identyfikator *Wirtualnej maszyny*
- * ```--iso``` okresla nazwę lub identyfikator przyłączanego *Dysku*
+ * ```--iso``` określa nazwę lub identyfikator przyłączanego *Dysku*
  
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vm disk attach"].

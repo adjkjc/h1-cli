@@ -194,14 +194,14 @@ Dostępne są następujące typowe operacje dla *Dziennika*:
 
 W przypadku ograniczonego użycia:
  
- * *Wirtualna maszyna* ulega wyłaczeniu
+ * *Wirtualna maszyna* ulega wyłączeniu
  * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/resource/general.md#ograniczone-uzycie)*.
 
 ## Lokalizacja
 
 !!! include(regions.md) !!!
 
-## Paramatry techniczne
+## Parametry techniczne
 
 Parametr                              | Wartość
 ------------------------------------- | -----------

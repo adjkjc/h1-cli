@@ -7,7 +7,7 @@ Dokument wyjaśnia w jaki sposób odłączyć *[Dysk](/resource/storage/disk.md)
 
 Po odłączeniu *Dysku* możliwe jest jego ponowne [przyłączenie](./disk-attach.md).
 
-## Warunki wsstępne
+## Warunki wstępne
 
 * posiadanie [utworzonej](/resource/networking/network.md) *Sieci*
 
@@ -82,6 +82,6 @@ h1 vm disk detach --vm test-vm --disk my-disk-0
 gdzie:
 
  * ```--vm``` określa nazwę lub identyfikator *Wirtualnej maszyny*
- * ```--iso``` okresla nazwę lub identyfikator odłączanego *Dysku*
+ * ```--iso``` określa nazwę lub identyfikator odłączanego *Dysku*
  
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vm disk detach"].

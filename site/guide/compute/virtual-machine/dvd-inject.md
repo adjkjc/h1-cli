@@ -98,6 +98,6 @@ h1 vm dvd insert --vm VM --iso ISO
 gdzie:
 
  * ```--vm``` określa nazwę lub identyfikator *Wirtualnej maszyny*
- * ```--iso``` okresla nazwę lub identyfikator wsuwanej *ISO*
+ * ```--iso``` określa nazwę lub identyfikator wsuwanej *ISO*
  
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vm dvd insert"].

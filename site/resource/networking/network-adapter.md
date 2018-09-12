@@ -10,7 +10,7 @@
 
 ### Utworzenie
 
-*Adapter sieciowy* może zostać utworzona wyłącznie podczas przyłączeneia do innego *Zasobu*.
+*Adapter sieciowy* może zostać utworzona wyłącznie podczas przyłączenia do innego *Zasobu*.
 
 ### Usuwanie
 

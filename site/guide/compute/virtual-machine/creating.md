@@ -106,10 +106,10 @@ h1 vm create --image debian --type m2.medium --username guru --password my-secre
 gdzie:
 
  * ```--image``` określa identyfikator lub nazwę *Obrazu*
- * ```--type``` okresla wariant
+ * ```--type``` określa wariant
  * ```--username``` określa nazwę użytkownika dostępowego
  * ```--password``` określa początkowe hasło dostępowe
- * ```--name``` określa nazwę nowoutworzonej *Wirtualnej maszyny*
+ * ```--name``` określa nazwę nowo utworzonej *Wirtualnej maszyny*
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vm create"].
 
@@ -202,10 +202,10 @@ h1 vm create --image moj-obraz --type m2.medium --username guru --password my-se
 gdzie:
 
  * ```--image``` określa identyfikator lub nazwę *Obrazu*
- * ```--type``` okresla wariant
+ * ```--type``` określa wariant
  * ```--username``` określa nazwę użytkownika dostępowego
  * ```--password``` określa początkowe hasło dostępowe
- * ```--name``` określa nazwę nowoutworzonej *Wirtualnej maszyny*
+ * ```--name``` określa nazwę nowo utworzonej *Wirtualnej maszyny*
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vm create"].
 
@@ -299,10 +299,10 @@ h1 vm create --type m2.medium --username guru --password my-secret-password --na
 
 gdzie:
 
- * ```--type``` okresla wariant
+ * ```--type``` określa wariant
  * ```--username``` określa nazwę użytkownika dostępowego
  * ```--password``` określa początkowe hasło dostępowe
- * ```--name``` określa nazwę nowoutworzonej *Wirtualnej maszyny*
+ * ```--name``` określa nazwę nowo utworzonej *Wirtualnej maszyny*
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vm create"].
 

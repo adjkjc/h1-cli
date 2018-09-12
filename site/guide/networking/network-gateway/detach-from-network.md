@@ -74,6 +74,6 @@ h1 netgw detach --firewall secure-zone-fw
 gdzie:
 
  * ```--firewall``` określa nazwę lub identyfikator *Zapory sieciowej*
- * ```--network``` okresla nazwę przyłączanej *Sieci*
+ * ```--network``` określa nazwę przyłączanej *Sieci*
  
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="netgw detach"].

@@ -11,12 +11,12 @@
 *Replika* może zostać utworzona, w przypadku spełnienia następujących warunków:
 
 * lokalny serwer Hyper-V ma skonfigurowane połączenie replikacji,
-* lokalny dyski spełniają parametry techczne dla zasobu *Dysk*,
-* wszystkie *ogolne* warunki.
+* lokalny dyski spełniają parametry techniczne dla zasobu *Dysk*,
+* wszystkie *ogólne* warunki.
 
 Utworzenie repliki odbywa się poprzez zlecenie replikacji w lokalnym serwerze Hyper-V poprzez skonfigurowane połączenie replikacji. W momencie utworzenia repliki tworzone są *Dyski* w wariancie ```replica``` dla każdego lokalnego dysku replikowanej wirtualnej maszyny.
 
-W celu skonfigurowanai połączenia replikacji możesz wykorzystać polecenie ```CLI```: ```h1 replica create```.
+W celu skonfigurowania połączenia replikacji możesz wykorzystać polecenie ```CLI```: ```h1 replica create```.
 
 Na początku wykonywana jest pełna replikacja. Czas pierwszej replikacji zależy ściśle od wielkości dysku i przepustowości sieci. Kolejne replikacje są wydajne, ponieważ zawierają tylko zmienione dane.
 

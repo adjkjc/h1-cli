@@ -6,7 +6,7 @@ Dokument wyjaśnia w jaki sposób wyłączyć dostęp do [Vault](/resource/stora
 
 ## Warunki wstępne
 
-* wszystkie warunki wykonania operacji [Wyłączenie dostępu](/resource/storage/vault.md#wylaczenie-dostepu).
+* wszystkie warunki wykonania operacji [Wyłączenie dostępu](/resource/storage/vault.md#wylaczenie-dostępu).
 
 ## Instrukcja
 

@@ -89,7 +89,7 @@ Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vault create"].
 
 ## Utworzenie *Vault* na podstawie *Migawki*
 
-Utworzenie *Vault* na podstawie *Migawki* umożliwia m. in. sprawne uzyskanie dostepu do danych w niej zgromadzonych.
+Utworzenie *Vault* na podstawie *Migawki* umożliwia m. in. sprawne uzyskanie dostępu do danych w niej zgromadzonych.
 
 ### Panel
 

@@ -2,7 +2,7 @@
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób usunąć *[Adaper sieciowy](/resource/networking/network-adapter.md)* z *[Wirtualnej maszyny](/resource/compute/virtual-machine.md).
+Dokument wyjaśnia w jaki sposób usunąć *[Adapter sieciowy](/resource/networking/network-adapter.md)* z *[Wirtualnej maszyny](/resource/compute/virtual-machine.md).
 
 ## Warunki wstępne
 

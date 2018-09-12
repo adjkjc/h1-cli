@@ -96,8 +96,8 @@ h1 dns record-set a create --name 'home' --zone-name 'example.com' --value '123.
 gdzie:
 
  * ```--name``` określa nazwę zestawu rekordów
- * ```--zone-name``` okresla nazwę *DNS* do której dodawany jest zestaw rekordów
- * ```--value``` okresla wartość w zestawie rekordów
+ * ```--zone-name``` określa nazwę *DNS* do której dodawany jest zestaw rekordów
+ * ```--value``` określa wartość w zestawie rekordów
  
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="dns record-set a create"].
 

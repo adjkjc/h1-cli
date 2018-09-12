@@ -7,7 +7,7 @@ Oferujemy produkty chmury publicznej następującej kategorii:
   * [Replika](compute/replica.md)
   * [Wirtualna maszyna](compute/virtual-machine.md)
 
-* [Łaczność sieciowa](networking/README.md)
+* [Łączność sieciowa](networking/README.md)
   * [DNS](networking/dns.md)
   * [Zapora sieciowa](networking/firewall.md)
   * [Adres IP](networking/ip-address.md)
