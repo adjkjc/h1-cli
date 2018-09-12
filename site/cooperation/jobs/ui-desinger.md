@@ -26,7 +26,7 @@ Czego oczekujemy:
  * doświadczenia udokumentowanego portfolio
  * znajomości języka angielskiego pozwalającego na dokładne rozumienie dokumentacji
  * umiejętność analitycznego myślenia, słuchania, argumentacji i współpracy z IT
- * przyjęcia pełnej odpowiedzialności za proces projetktowania interfejsów dla użytkownika
+ * przyjęcia pełnej odpowiedzialności za proces projektowania interfejsów dla użytkownika
  * zainteresowania innowacjami technologicznymi
 
 Mile widziane:
