@@ -11,7 +11,7 @@ const options = {
 };
 
 module.exports = resource => Cli.createCommand('persistent', {
-    description: `Persistent ${resource.title}`,
+    description: `Make ${resource.title} persistent`,
     plugins: resource.plugins,
     options: Object.assign({}, resource.options, options),
     dirname: __dirname,

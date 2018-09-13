@@ -31,7 +31,7 @@
       * [h1 vm nic ip delete](#h1-vm-nic-ip-delete) - Delete IP address of network adapter
       * [h1 vm nic ip add](#h1-vm-nic-ip-add) - Add IP address to IP address of network adapter
       * [h1 vm nic ip replace](#h1-vm-nic-ip-replace) - Replace IP address of network adapter
-      * [h1 vm nic ip persistent](#h1-vm-nic-ip-persistent) - Persistent IP address of network adapter
+      * [h1 vm nic ip persistent](#h1-vm-nic-ip-persistent) - Make IP address of network adapter persistent
   * [h1 vm dvd](#h1-vm-dvd) - Manage your DVD
     * [h1 vm dvd list](#h1-vm-dvd-list) - List DVD
     * [h1 vm dvd insert](#h1-vm-dvd-insert) - Insert ISO into DVD drive of DVD
@@ -715,7 +715,7 @@ Note: Use ```h1 ip list``` to list available IP address or ```h1 ip create``` to
 
 ## h1 vm nic ip persistent
 
-Persistent IP address of network adapter
+Make IP address of network adapter persistent
 
 ### Syntax
 
