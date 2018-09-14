@@ -1,12 +1,12 @@
-# Usunięcie bramy sieciowej
+# Usunięcie Bramy sieciowej
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób usunąć [bramę sieciową](/resource/networking/network-gateway.md).
+Dokument wyjaśnia w jaki sposób usunąć [Bramę sieciową](/resource/networking/network-gateway.md).
 
 ## Warunki wstępne
 
-* usunięcie wymaga spełnienia [warunków usuwania bramy sieciowej](/resource/networking/network-gateway.md#usuwanie)
+* usunięcie wymaga spełnienia [warunków usuwania Bramy sieciowej](/resource/networking/network-gateway.md#usuwanie)
 
 ## Instrukcja
 

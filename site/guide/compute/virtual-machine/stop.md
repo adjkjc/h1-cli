@@ -15,7 +15,7 @@ Dokument wyjaśnia w jaki sposób zatrzymać [Wirtualną maszynę](/resource/com
 W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
-[
+[ 
   {
     "action_name": "click",
     "data": {

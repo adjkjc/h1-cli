@@ -72,7 +72,7 @@ Dostęp do *Vault* możliwe jest z wykorzystaniem następujących danych dostęp
 * hasło
 * klucze SSH
 
-Zarządzanie dostępami zostało wyjaśnione w [ogólnym omówieniu zarządzania danymi dostępowymi](/resource/general.html#dane-dostepowe).
+Zarządzanie dostępami zostało wyjaśnione w [ogólnym omówieniu zarządzania danymi dostępowymi](/platform/resource.html#dane-dostepowe).
 
 ### Typowe operacje
 
@@ -96,7 +96,7 @@ Dostępne są następujące typowe operacje:
 
 ## Ograniczone użycie
 
-W przypadku ograniczonego użycia znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/resource/general.md#ograniczone-uzycie)*.
+W przypadku ograniczonego użycia znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/platform/resource.md#ograniczone-uzycie)*.
 
 <!-- partial-regions.md -->
 

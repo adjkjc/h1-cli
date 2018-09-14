@@ -1,12 +1,12 @@
-# Utworzenie bramy sieciowej
+# Utworzenie Bramy sieciowej
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób utworzyć *[brame sieciową](/resource/networking/network-gateway.md)* zapewnia łączność z Sieci do Internetu.
+Dokument wyjaśnia w jaki sposób utworzyć *[Bramę sieciową](/resource/networking/network-gateway.md)* zapewnia łączność z Sieci do Internetu.
 
 ## Warunki wstępne
 
-* utworzenie *bramy sieciowej* wymaga spełnienia [warunków utworzenia bramy sieciowej](/resource/networking/network-gateway.md#utworzenie)
+* utworzenie *Bramy sieciowej* wymaga spełnienia [warunków utworzenia Bramy sieciowej](/resource/networking/network-gateway.md#utworzenie)
 
 ## Instrukcja
 
@@ -75,6 +75,6 @@ h1 dns zone create --name example.com
 
 gdzie:
 
- * ```--name``` - określa nazwę nowoutworzonego *DNS*
+ * ```--name``` - określa nazwę nowo utworzonego *DNS*
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="dns create"].

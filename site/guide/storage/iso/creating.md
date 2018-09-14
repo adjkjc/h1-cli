@@ -78,12 +78,12 @@ h1 iso create --name myiso --source-url http://example.com/some.iso
 ```
 gdzie:
 
- * ```--name``` określa nazwę nowoutworzonego *ISO*
+ * ```--name``` określa nazwę nowo utworzonego *ISO*
  * ```--source-url``` określa adres URL dla dysku
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="iso create"].
 
-## Utworzenie dysku na podstawie pliku lokalnego
+## Utworzenie IO na podstawie pliku lokalnego
 
 Utworzenie *ISO* na podstawie pliku lokalnego umożliwia przeniesienie istniejącego dysku ```.iso``` do platformy umożliwia
 wykorzystanie obrazów *ISO*, które nie są publicznie dostępne. 
@@ -98,7 +98,7 @@ h1 iso create --name myiso --source-file my.iso
 
 gdzie:
 
- * ```--name``` określa nazwę nowoutworzonego dysku
+ * ```--name``` określa nazwę nowo utworzonego dysku
  * ```--source-file``` wskazuje ściezkę do przesłanego pliku
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="iso create"].

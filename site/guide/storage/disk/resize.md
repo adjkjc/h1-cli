@@ -58,7 +58,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "steps": [
         {
           "name": "nowy rozmiar dysku",
-          "type": "new-size",
+          "type": "text",
           "value": "100"
         }
       ],

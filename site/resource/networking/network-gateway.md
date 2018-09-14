@@ -11,7 +11,7 @@
  * posiadanie w projekcie niewykorzystywanego adresu IP,
  * wszystkie *ogólne* warunki
 
-Utworzenie *bramy sieciowej* wymaga wskazania *Adresu IP* wcześniej przydzielonego do projektu.
+Utworzenie *Bramy sieciowej* wymaga wskazania *Adresu IP* wcześniej przydzielonego do projektu.
 
 ## Usuwanie
 

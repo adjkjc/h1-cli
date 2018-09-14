@@ -209,7 +209,7 @@ gdzie:
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vm create"].
 
-## Utworzenie *Wirtualnej maszyny* bez żadnego *Obrazu* użytkownika
+## Utworzenie *Wirtualnej maszyny* bez żadnego *Obrazu*
 
 Utworzenie *Wirtualnej maszyny* bez żadnego *Obrazu* przyspiesza proces jej tworzenia. Jest to szczególnie przydatne, 
 gdy system operacyjny ma zostać dostarczony w inny sposób np. poprzez [przypięcie dysku](./disk-attach.md) lub 

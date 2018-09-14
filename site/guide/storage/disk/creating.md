@@ -82,7 +82,7 @@ h1 disk create --name disk-type --size 10 --type ssd
 ```
 gdzie:
 
- * ```--name``` określa nazwę nowoutworzonego dysku
+ * ```--name``` określa nazwę nowo utworzonego dysku
  * ```--size``` określa rozmiar utworzonego dysku
  * ```--type``` określa typ tworzonego dysku
 
@@ -102,7 +102,7 @@ h1 disk create --name new-disk --size 1 --type ssd --source-file ./my-disk.vhdx
 
 gdzie:
 
- * ```--name``` określa nazwę nowoutworzonego dysku
+ * ```--name``` określa nazwę nowo utworzonego dysku
  * ```--size``` określa rozmiar utworzonego dysku
  * ```--type``` określa typ tworzonego dysku
  * ```--source-file``` określa plik ```.vhdx``` zawierający obraz przesyłanego dysku.

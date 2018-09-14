@@ -1,14 +1,12 @@
-# Dodanie hasła do Vault
+# Dodanie hasła do Dziennika
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób dodać hasło do *[Vault](/resource/storage/vault.md)* stanowiące dane dostępowe.
-
-Zalecane jest wykorzystanie [kluczy SSH](add-ssh-key.md) w celu uzyskania dostępu do *Vault*.
+Dokument wyjaśnia w jaki sposób dodać hasło do *[Dziennika](/resource/storage/log-archive.md)* stanowiące dane dostępowe.
 
 ## Warunki wstępne
 
-* utworzenie *Vault* wymaga spełnienia [warunków utworzenia Vault](/resource/storage/vault.md#utworzenie)
+* dodanie hasła do *Dziennika* wymaga spełnienia [warunków utworzenia Dziennika](/resource/storage/vault.md#utworzenie)
 
 ## Instrukcja
 

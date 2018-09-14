@@ -4,6 +4,7 @@
   "description": "## Private Cloud",
   "main": "index.js",
   "dependencies": {
+    "js-yaml": "^3.12.0",
     "markdown-it-include": "^1.0.0",
     "vuepress": "^0.12.0"
   },

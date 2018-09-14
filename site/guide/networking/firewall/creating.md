@@ -70,6 +70,6 @@ h1 firewall create --name my-ip-network
 
 gdzie:
 
- * ```--name``` - określa nazwę nowoutworzonego firewalla
+ * ```--name``` - określa nazwę nowo utworzonego firewalla
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="firewall create"].

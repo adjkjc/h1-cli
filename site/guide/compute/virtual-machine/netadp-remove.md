@@ -54,7 +54,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
     "action_name": "click",
     "data": {
       "type": "entry",
-      "selector": "navbar>.vm"
+      "selector": "navbar>.vm",
       "label":"Usuń Adapter sieciowy"
     },
     "after_event": "Po kliknięciu pojawi się okno potwierdzenia operacji."

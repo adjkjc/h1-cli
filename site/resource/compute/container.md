@@ -79,7 +79,7 @@ Dostępne są następujące typowe operacje:
 W przypadku ograniczonego użycia:
 
  * kontener ulega zatrzymaniu
- * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/resource/general.md#ograniczone-uzycie)*.
+ * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/platform/resource.md#ograniczone-uzycie)*.
 
 ## Lokalizacja
 

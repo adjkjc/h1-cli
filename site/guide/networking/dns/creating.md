@@ -70,6 +70,6 @@ h1 dns zone create --name example.com
 
 gdzie:
 
- * ```--name``` - określa nazwę nowoutworzonego *DNS*
+ * ```--name``` - określa nazwę nowo utworzonego *DNS*
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="dns create"].

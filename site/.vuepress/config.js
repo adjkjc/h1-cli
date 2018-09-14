@@ -46,9 +46,9 @@ const getSidebar = () => {
         '/resource/',
         platform_category,
         ...categories.map(category => ({
-                title: category.name,
-                children: show_directory(`resource/${category.slug}`, ['README.md', 'dist'])
-            })),
+            title: category.name,
+            children: show_directory(`resource/${category.slug}`, ['README.md', 'dist'])
+        })),
         services_category,
     ];
     sidebar['/platform/'] = sidebar['/resource/'];
@@ -61,18 +61,35 @@ const getSidebar = () => {
             children: show_directory(`cooperation/jobs`),
         }
     ];
+    sidebar['/tutorials/'] = [
+        {
+            title: 'Wirtualna maszyna',
+            children: show_directory(`tutorials/virtual-machine`)
+        },
+        {
+            title: 'Vault',
+            children: show_directory(`tutorials/vault`)
+        },
+        {
+            title: 'Dziennik',
+            children: show_directory(`tutorials/log-archive`)
+        },
+    ];
+
     sidebar['/'] = [
         '/',
     ];
     return sidebar;
 };
 
+
 module.exports = config = {
     title: 'HyperOne',
     markdown: {
         config: md => {
             md.use(require('markdown-it-include'), path.join(__dirname, '../partials'));
-            md.use(require('./guide-generator'));
+            md.use(require('./generator').guide);
+            md.use(require('./generator').tutorial);
             md.use(require('./cli-link'));
         }
     },
@@ -83,10 +100,13 @@ module.exports = config = {
             // {text: 'Pricing', link: '/pricing/'},
             {text: 'Oferta', link: '/resource/'},
             // {text: 'Poradniki', link: '/guide/'},
-            // {text: 'Samouczki', link: '/tutorials/'},
+            {text: 'Samouczki', link: '/tutorials/'},
             // {text: 'Blog', link: '/blog/'},
             {text: 'CLI', link: '/h1-cli/'},
-            {text: 'Rejestracja', link: 'https://panel.hyperone.com/signup'},
+            {
+                text: 'Rejestracja',
+                link: 'https://panel.hyperone.com/signup'
+            },
             {text: 'Logowanie', link: 'https://panel.hyperone.com'},
             {text: 'Kontakt', link: '/about-us/contact.md'},
             {text: 'Współpraca', link: '/cooperation/'}

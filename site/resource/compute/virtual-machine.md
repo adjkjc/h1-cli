@@ -175,7 +175,7 @@ Dostęp do *Wirtualnej maszyny* w zależności od wykorzystanego systemu operacy
 * hasło
 * klucze SSH
 
-Zarządzanie danymi dostępowymi wyjaśnione jest w [ogólnym omówieniu zarządzania danymi dostępowymi](/resource/general.html#dane-dostepowe).
+Zarządzanie danymi dostępowymi wyjaśnione jest w [ogólnym omówieniu zarządzania danymi dostępowymi](/platform/resource.html#dane-dostepowe).
 
 ### Typowe operacje
 
@@ -195,7 +195,7 @@ Dostępne są następujące typowe operacje dla *Dziennika*:
 W przypadku ograniczonego użycia:
  
  * *Wirtualna maszyna* ulega wyłączeniu
- * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/resource/general.md#ograniczone-uzycie)*.
+ * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/platform/resource.md#ograniczone-uzycie)*.
 
 ## Lokalizacja
 

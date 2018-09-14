@@ -86,7 +86,7 @@ h1 image create --vm test-vm --name dev-image
 ```
 gdzie:
 
- * ```--vm``` określa nazwę nowoutworzonego *Obrazu*
+ * ```--vm``` określa nazwę nowo utworzonego *Obrazu*
  * ```--source-url``` określa identyfikator lub nazwę wzorcowej *Wirtualnej maszyny*
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="iso create"].

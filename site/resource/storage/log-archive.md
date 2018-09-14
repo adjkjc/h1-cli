@@ -64,7 +64,7 @@ Zapisywanie do *Dziennika* jest możliwe za pomocą następujących typów danyc
 
 * hasło przekazane w elemencie SD-ID w postaci ``[[identyfikator_zasobu]]:[[haslo]]@HyperOne``
 
-Zarządzanie danymi dostępowymi wyjaśnione jest w [ogólnym omówieniu zarządzania danymi dostępowymi](/resource/general.html#dane-dostepowe).
+Zarządzanie danymi dostępowymi wyjaśnione jest w [ogólnym omówieniu zarządzania danymi dostępowymi](/platform/resource.html#dane-dostepowe).
 
 ## Płatność
 
@@ -77,7 +77,7 @@ Zarządzanie danymi dostępowymi wyjaśnione jest w [ogólnym omówieniu zarząd
 W przypadku ograniczonego użycia:
  
  * zapis jest wstrzymany
- * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/resource/general.md#ograniczone-uzycie)*.
+ * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/platform/resource.md#ograniczone-uzycie)*.
 
 ## Polityka danych
 

@@ -78,7 +78,7 @@ h1 log create --name my-log --size 10
 
 gdzie:
 
- * ```--name``` określa nazwę nowoutworzonego *Dziennika*
+ * ```--name``` określa nazwę nowo utworzonego *Dziennika*
  * ```--size``` określa jego rozmiar
 
 <!-- Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="log create"]. -->

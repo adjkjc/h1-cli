@@ -72,7 +72,7 @@ Operacja może zostać wykonana, w przypadku spełnienia następujących warunk�
 
 * zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
 * na końcu obszaru *Dysku* znajduje się wystarczająca ilość przestrzeni nie przydzielonej do żadnej partycji
-* zasób zasób nie znajduje się w stanie *Ograniczonego użycia*
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Typowe operacje
 
@@ -96,7 +96,7 @@ Dostępne są następujące typowe operacje dla *Dysku*:
 
 ## Ograniczone użycie
 
-W przypadku ograniczonego użycia znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/resource/general.md#ograniczone-uzycie)*.
+W przypadku ograniczonego użycia znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/platform/resource.md#ograniczone-uzycie)*.
 
 ## Przekazanie
 

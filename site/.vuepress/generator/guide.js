@@ -1,17 +1,9 @@
 'use strict';
 const fs = require('fs');
 const crypto = require('crypto');
+const utils = require('./utils');
 
 const INCLUDE_RE = /^```\s*guide$(.+?)^```\s*$/sgm;
-
-const quote = "```";
-
-const dump = (value, type = '') => {
-    if (typeof value === "string") {
-        return `\n\n${quote}\n${value}\n${quote}\n\n`;
-    }
-    return `\n\n${quote}${type}\n${JSON.stringify(value, null, 2)}\n${quote}\n\n`;
-};
 
 const actions = {
     click: (data) => {
@@ -121,7 +113,7 @@ const actions = {
                 }
                 content += `</li>\n`
             } else {
-                content += `<li>${dump(field)}</li>\n`;
+                content += `<li>${utils.dump(field, 'yaml')}</li>\n`;
             }
         }
         content += `</ul>\n\n`;
@@ -140,7 +132,7 @@ const actions = {
     }
 };
 
-const replacer = (match, p1, offset, string) => {
+const replacer = (match, p1) => {
     let new_content = '';
     try {
         const action_set = JSON.parse(p1.trim());
@@ -150,7 +142,7 @@ const replacer = (match, p1, offset, string) => {
             if (actions[action.action_name]) {
                 new_content += actions[action.action_name](action.data);
             } else {
-                new_content += dump(action);
+                new_content += utils.dump(action);
             }
             if (action.after_event) {
                 new_content += `\n\n${action.after_event}\n\n`;
@@ -158,13 +150,11 @@ const replacer = (match, p1, offset, string) => {
             new_content += `</li>\n`;
         }
         new_content += "</ol>";
-        new_content += "\n\n```json\n";
-        new_content += JSON.stringify(action_set, null, 2);
-        new_content += "\n```\n\n";
+        new_content += utils.dump(action_set);
 
     } catch (err) {
         new_content += `<code>\n${err.stack.toString()}\n</code>`;
-        new_content += dump(p1.trim(), 'json');
+        new_content += utils.dump(p1.trim(), 'json');
     }
 
     return new_content;

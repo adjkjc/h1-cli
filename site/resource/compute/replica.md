@@ -55,7 +55,7 @@ Dostępne są następujące typowe operacje dla *Repliki*:
 W przypadku ograniczonego użycia:
  
  * *Replikacja* ulega wstrzymaniu,
- * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/resource/general.md#ograniczone-uzycie)*.
+ * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/platform/resource.md#ograniczone-uzycie)*.
 
 ## Lokalizacja
 

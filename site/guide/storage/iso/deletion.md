@@ -12,6 +12,8 @@ Dokument wyjaśnia w jaki sposób usunąć [ISO](/resource/storage/disk.md).
 
 ### Panel
 
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
+
 ```guide
 [
   {

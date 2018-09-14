@@ -82,7 +82,7 @@ h1 vault create --name my-vault --size 10
 
 gdzie:
 
- * ```--name``` określa nazwę nowoutworzonego *Vault*
+ * ```--name``` określa nazwę nowo utworzonego *Vault*
  * ```--size``` określa jego rozmiar
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vault create"].
@@ -188,7 +188,7 @@ h1 vault create --name my-vault --size 10 --snapshot my-snapshot
 
 gdzie:
 
- * ```--name``` określa nazwę nowoutworzonego *Vault*
+ * ```--name``` określa nazwę nowo utworzonego *Vault*
  * ```--size``` określa jego rozmiar
  * ```--snapshot``` określa identyfikator lub nazwę źródłowej *Migawki*
 
