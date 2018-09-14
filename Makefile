@@ -11,3 +11,7 @@ h1_cli:
 #resource:
 #	cd modules/resources; bash update.sh;
 #	ln -sf ../modules/resources/dist site/resource;
+
+
+test:
+    grep 'Wirtual.* Maszy.*' site/resource/ site/guide/ site/tutorials/ -R

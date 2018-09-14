@@ -2,7 +2,7 @@
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób utworzyć [Wirtualną Maszynę](/resource/compute/virtual-machine.md) zapewniaj skalowalną moc obliczeniową w chmurze.
+Dokument wyjaśnia w jaki sposób utworzyć [Wirtualną maszynę](/resource/compute/virtual-machine.md) zapewniaj skalowalną moc obliczeniową w chmurze.
 
 Możliwe jest utworzenie *Wirtualnej maszyny* z wykorzystaniem:
 - *[Rekomendowanego obrazu](/platform/recommended-images.md)*

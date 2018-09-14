@@ -1,6 +1,6 @@
-# Instalacja Wordpress na Wirtualnej Maszynie
+# Instalacja Wordpress na Wirtualnej maszynie
 
-Niniejszy dokument przedstawia w jaki sposób uruchomić [Wordpress](https://pl.wordpress.org/) w [Wirtualnej Maszynie](/resource/compute/virtual-machine.md).
+Niniejszy dokument przedstawia w jaki sposób uruchomić [Wordpress](https://pl.wordpress.org/) w [Wirtualnej maszynie](/resource/compute/virtual-machine.md).
 
 Przedstawiona procedura instalacji stanowi rozwiązanie instalacji Wordpress w podstawowej konfiguracji LAMP.
 
@@ -19,15 +19,15 @@ Przed przystąpieniem do integracji powinieneś mieć:
     - name: Utwórz nową Wirtualną maszynę z rekomendowanego obrazu Ubuntu
       guide: 
         path: /guide/compute/virtual-machine/creating.md#utworzenie-z-wykorzystaniem-rekomendowanego-obrazu
-    - name: Utwórz nowy *Dysk* poprzez przesłanie
+    - name: Utwórz nowy pusty *Dysk*
       guide:
-        path: /guide/storage/disk/creating.md#utworzenie-dysku-poprzez-przeslanie
+        path: /guide/storage/disk/creating.md
     - name: Dołączenie dysku na dane
       guide: 
         path: /guide/compute/virtual-machine/disk-attach.md
 - name: Dostęp do serwera
   block:
-    - name: Uzyskaj dostęp do konsoli *Wirtualnej Maszyny*
+    - name: Uzyskaj dostęp do konsoli *Wirtualnej maszyny*
       guide:  
         path: /guide/compute/virtual-machine/console.md
 - name: Przygotowanie dysku
@@ -133,7 +133,7 @@ Przed przystąpieniem do integracji powinieneś mieć:
       line: define('DB_PASSWORD', 'SomeStrongPassword');
       regexp: define('DB_PASSWORD', '.+?');
 
-  - name: Zidentyfikuj Adres IP Wirtualnej Maszyny
+  - name: Zidentyfikuj Adres IP Wirtualnej maszyny
     identify_vm:
       value: ip
 

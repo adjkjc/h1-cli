@@ -83,7 +83,7 @@ Chcielibyśmy zbudowania bramki GraphQL opartej na bieżącym interfejsie API RE
 
 ### Zarządzanie użytkownikami Wirtualnych maszyn <Badge text="JavaScript"/> <Badge text="C++"/> <Badge text="C#"/> <Badge text="Python"/>
 
-Chcielibyśmy umożliwić zarządzanie kontami użytkowników usług działających na Wirtualnych maszynach z poziomu interfejsu platformy. Dostrzegamy [istniejące otwarte rozwiązania](https://github.com/GoogleCloudPlatform/compute-image-packages), które to realizują. Posiadamy doświadczenie w opracowaniu [usług umożliwiających bezpieczną komunikacje platformy](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/make-integration-service) z systemem pracującym w *Wirtualnej Maszynie*.
+Chcielibyśmy umożliwić zarządzanie kontami użytkowników usług działających na Wirtualnych maszynach z poziomu interfejsu platformy. Dostrzegamy [istniejące otwarte rozwiązania](https://github.com/GoogleCloudPlatform/compute-image-packages), które to realizują. Posiadamy doświadczenie w opracowaniu [usług umożliwiających bezpieczną komunikacje platformy](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/make-integration-service) z systemem pracującym w *Wirtualnej maszynie*.
 
 Zadanie to będzie z pewnością wymagało istotnych zmian po stronie platformy.  Nie będzie ono trywialne w realizacji. Jesteśmy jednak otwarci, aby je wspólnie z Tobą zaplanować, zaprojektować i zrealizować.
 
