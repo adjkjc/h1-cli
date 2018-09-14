@@ -14,4 +14,4 @@ h1_cli:
 
 
 test:
-    grep 'Wirtual.* Maszy.*' site/resource/ site/guide/ site/tutorials/ -R
+	grep 'Wirtual.* Maszy.*' site/resource/ site/guide/ site/tutorials/ -R
