@@ -257,6 +257,8 @@ r4.xxlarge | 9.7303 | 1h
 
 ## Przewodniki
 
+Dostępne są następujące przewodniki dla *Zasobu*:
+ 
 <PageList path_re="guide/compute/virtual-machine/"/>
 
 ## Powiązane produkty

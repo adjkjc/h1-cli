@@ -127,6 +127,8 @@ archive   |   1h   |       0.0002 |
 
 ## Przewodniki
 
+Dostępne są następujące przewodniki dla *Zasobu*:
+
 <PageList path_re="guide/storage/disk/"/>
  
 ## Powiązane produkty

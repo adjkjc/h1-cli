@@ -1,4 +1,4 @@
-# Włączyć Dziennika
+# Włączenie Dziennika
 
 ## Wprowadzenie
 

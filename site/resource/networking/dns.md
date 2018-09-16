@@ -58,6 +58,8 @@ DNS    |   -    |     0.0000 |
 
 ## Przewodniki
 
+Dostępne są następujące przewodniki dla *Zasobu*:
+
 <PageList path_re="guide/networking/dns/"/>
 
 ## Powiązane produkty

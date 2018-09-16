@@ -107,6 +107,8 @@ zapora sieciowa |   -    |     0.0000 | TODO: Add service
 
 ## Przewodniki
 
+Dostępne są następujące przewodniki dla *Zasobu*:
+
 <PageList path_re="guide/networking/firewall/"/>
 
 ## Powiązane produkty

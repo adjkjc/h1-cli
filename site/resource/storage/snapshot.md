@@ -52,6 +52,8 @@ snapshot           |   -    |     0.0000 |
 
 ## Przewodniki
 
+Dostępne są następujące przewodniki dla *Zasobu*:
+
 <PageList path_re="guide/storage/snapshot/"/>
 
 ## Powiązane produkty

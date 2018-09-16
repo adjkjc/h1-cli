@@ -72,3 +72,8 @@ Po zakończeniu przesyłania zasobów:
 * wszystkie *Prawa dostępu* są resetowane do wartości domyślnych
 * zdarzenia w historii zdarzeń dla zasobu są widoczne tylko dla zdarzeń generowanych przez bieżący *Projekt*, do którego przypisany jest zasób
 * opłata jest naliczana za pierwszy pełny okres rozliczeniowy
+
+# Przewodniki
+
+Dostępne są [przewodniki](/guide/) dla każdego z *Zasobów*.
+

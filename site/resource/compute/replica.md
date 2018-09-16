@@ -81,6 +81,8 @@ Replica     |   1M   |       250
 
 ## Przewodniki
 
+Dostępne są następujące przewodniki dla *Zasobu*:
+
 <PageList path_re="guide/compute/replica/"/>
 
 ## Powiązane produkty

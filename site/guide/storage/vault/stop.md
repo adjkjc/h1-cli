@@ -1,4 +1,4 @@
-# Wyłączyć dostępu do Vault
+# Wyłączenie dostępu do Vault
 
 ## Wprowadzenie
 

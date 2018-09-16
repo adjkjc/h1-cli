@@ -100,6 +100,8 @@ ISO     |     1h     | 1GB     |     0.0002
 
 ## Przewodniki
 
+Dostępne są następujące przewodniki dla *Zasobu*:
+
 <PageList path_re="guide/storage/iso/"/>
 
 ## Powiązane produkty

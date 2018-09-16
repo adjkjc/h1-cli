@@ -110,6 +110,8 @@ performance x2     |   1h   |   160.0000 |
 
 ## Przewodniki
 
+Dostępne są następujące przewodniki dla *Zasobu*:
+
 <PageList path_re="guide/compute/container/"/>
 
 ## Powiązane produkty
