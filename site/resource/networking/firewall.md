@@ -39,6 +39,7 @@ W przypadku usunięcia wszystkich reguł mają zastosowanie następujące zasady
 
 Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
 
+* utworzenie *Sieci*, [zgodnie z przewodnikiem](/guide/networking/network/creating.md)
 * zasób znajduje się w stanie ```Rozłączony```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
