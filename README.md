@@ -6,16 +6,22 @@ HyperOne website made using VuePress - static website generator build on top of 
 
 See more:
 
-* [VuePress](https://vuepress.vuejs.org/)
-* [Vue.js](http://vuejs.org/)
+ * [VuePress](https://vuepress.vuejs.org/)
+ * [Vue.js](http://vuejs.org/)
 
 ## Goal
 
-* Encourage community to edit content by publishing source code of selected section
+ * Encourage community to edit content by publishing source code of selected section
 
 ## Dictionary
 
-* healtcheck - sonda kondycji
+ * healtcheck - sonda
+ * workload - obciążenie robocze
+
+Online dictionaries:
+
+ * https://www.microsoft.com/en-us/language/default.aspx
+ * https://www.computerworld.pl/slownik/angielski/W/1.html
 
 ## Code style
 
