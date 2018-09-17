@@ -21,7 +21,7 @@ Nowy *Dysk* może być utworzony w następujący sposób:
 * jako pusty *Dysk*
 * poprzez przekazanie lokalnego pliku z wykorzystaniem `CLI`
 
-W przypadku utworzenia *Dysku* na podstawie przesłanego pliku należy spełnić następujące kryteria:
+W przypadku utworzenia *Dysku* na podstawie importowanego pliku należy spełnić następujące kryteria:
 
 * format pliku *Dysku* to `.vhdx`
 * typ vhd *Dysku* to `dynamic`
@@ -113,7 +113,7 @@ Przekazanie *Dysku* jest możliwe między *Projektami* tej samej lub innej *Orga
 Parametr                        | Wartość
 ------------------------------- | -------
 Format pliku podczas pobierania | vhdx
-Format pliku do przesłania      | vhdx
+Format pliku do importu         | vhdx
 
 ## Cennik
 

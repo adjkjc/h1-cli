@@ -99,6 +99,6 @@ h1 iso create --name myiso --source-file my.iso
 gdzie:
 
  * ```--name``` określa nazwę nowo utworzonego dysku
- * ```--source-file``` wskazuje ściezkę do przesłanego pliku
+ * ```--source-file``` wskazuje ściezkę do importowanego pliku
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="iso create"].
