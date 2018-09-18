@@ -2,11 +2,24 @@
 
 ## Przeznaczenie
 
-*Dysk* przeznaczony jest do przechowywania danych dowolnego rodzaju. Pomyśl o nim jak o dysku twardym. Możesz zapisywać / odczytywać dowolne obszary w dowolny sposób.
+*Dysk* służy do przechowywania każdego rodzaju danych. Pomyśl o nim jak o dysku twardym. Możesz swobodnie zapisywać i odczytywać dowolne obszary.
  
-*Dysk* jest dostarczany w różnych wariantach, różniących się rozmiarem, wydajnością i ceną, aby spełnić wymagania nawet najbardziej wymagających środowiskach.
+*Dysk* występuje w wariantach różniących się rozmiarem i wydajnością, aby spełnić wymagania w nawet najbardziej wymagających środowiskach.
 
-Rozmiar *Dysku* można zmieniać nawet podczas działania wykorzystującego go *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*.
+Rozmiar *Dysku* można zmieniać nawet podczas pracy wykorzystującej go *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*.
+
+Główne zalety:
+
+* łatwa skalowalność rozmiaru, wydajności i liczby dysków
+* małe opóźnienia w działaniu
+* duża przepustowość 
+* maksymalne bezpieczeństwo danych w długim czasie użytkowania
+* elastyczny dobór parametrów gwarantujący odpowiadające potrzebom budżetowanie
+
+Przykładowe zastosowania:
+
+* serwery bazodanowe i aplikacyjne
+* przechowywanie multimediów w długim czasie
 
 ## Cykl życia
 
