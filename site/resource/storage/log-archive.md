@@ -2,7 +2,15 @@
 
 ## Przeznaczenie
 
-*Dziennik* służy do przechowywania i udostępniania wpisów dzienników zdarzeń (logów). Może być wykorzystane do analizy rozwiązań problemów w czasie rzeczywistym lub długoterminowego ich przechowywania zabezpieczając przed nadpisaniem i przypadkowym uszkodzeniem.
+*Dziennik* służy do przechowywania i udostępniania wpisów dzienników zdarzeń (logów). 
+
+Główne zalety:
+* długoterminowe przechowywanie
+* zabezpieczenie przed nadpisaniem i przypadkowym uszkodzeniem
+
+Przykładowe zastosowanie:
+* analiza problemów w czasie rzeczywistym i w przeszłości
+* długoterminowa archiwizacja zdarzeń
 
 ## Cykl życia
 
