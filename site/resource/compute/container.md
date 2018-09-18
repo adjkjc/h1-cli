@@ -2,9 +2,18 @@
 
 ## Przeznaczenie
 
-*Kontener* możesz wykorzystać do uruchamiania aplikacji na podstawie obrazów kontenerów. 
+*Kontener* wykorzystuje się do uruchamiania aplikacji na podstawie obrazów kontenerów. 
 
-Pozwala to świadczyć usługi bez konieczności zarządzania całym serwerem.
+Główne zalety:
+
+* świadczenie usług bez konieczności zarządzania całym serwerem
+* zapewnienie spójności środowiska deweloperskiego i platformy
+* możliwość uruchomienia aplikacji wykonanych w większości popularnych języków, np. Java, PHP, Python, C++, NodeJS
+
+Przykładowe zastosowania:
+
+* aplikacje webowe: strony, portale i sklepy internetowe
+* bazy danych
 
 ## Cykl życia
 
