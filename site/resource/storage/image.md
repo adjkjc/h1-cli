@@ -14,7 +14,7 @@ Główne zalety
 
 ### Utworzenie
 
-*Obraz* może zostać utworzony, w przypadku spełnienia następujących warunków: 
+*Obraz* może zostać utworzony po spełnieniu następujących warunków: 
 
 * *Wirtualna maszyna* jest w stanie `Pracująca` lub `Wyłączona`
 * wszystkie *ogólne* warunki
@@ -25,7 +25,7 @@ Chociaż utworzenie *Obrazu* kiedy *Wirtualna maszyna* jest w stanie `Pracująca
 
 ### Usuwanie
 
-Obraz może zostać usunięty, w przypadku spełnienia następujących warunków: 
+Obraz może zostać usunięty po spełnieniu następujących warunków: 
 
 * wszystkie *ogólne* warunki
 
@@ -53,7 +53,7 @@ Dostępne są następujące typowe operacje:
 
 ## Przekazanie
 
-Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji*, w przypadku spełnienia następujących warunków:
+Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji* po spełnieniu następujących warunków:
 
 * wszystkie *ogólne* warunki
 

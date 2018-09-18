@@ -42,11 +42,8 @@ Dostępne są następujące dedykowane operacje:
     * usuwanie service account
 * zasilenie środków
 * dostęp do faktur Projektu wystawionych dla Organizacji
-    * <!-- Dodać referencje do Organizacji -->
 * dostęp do historii zasileń środków
-    * <!-- Dodać referencje do Organizacji -->
 * dostęp do historii naliczonych opłat
-    * <!-- Dodać referencje do Organizacji -->
 
 <!-- czy service account powinno miec dostep GET do /project/self ??? -->
 
@@ -115,7 +112,7 @@ Podstawą formą rozliczeń na platformie jest ```pre-paid```, czyli poprzez dok
 
 W celu przyznania limitu kredytowego dla rozliczeń ```post-paid``` wymagane jest dokonanie indywidualnej oceny Organizacji w szczególności w zakresie kondycji finansowej oraz historii współpracy. Może wiązać się to z przedstawieniem przez Organizację dodatkowych dokumentów.
 
-# Parametry techniczne
+## Parametry techniczne
 
 Parametr        | Wartość
 ----------------| -------
@@ -123,20 +120,8 @@ Liczba członków | 100
 
 [Napisz do nas](/about-us/contact.md) jeżeli potrzebujesz zwiększyć te limity.
 
-<!-- 
 ## Przewodniki
 
- - utworzenie
- - dodanie członka zespołu
-     - zaproszenie
-        - użytkownika z platformy
-        - użytkownika spoza platformy
- - usunięcie członka zespołu
- - dodanie klucza SSH
- - usunięcie klucza SSH
- - ustawienie progu powiadomień
- - zmiana nazwy
- - dodanie service account
- - dodanie dostępu do service account
+Dostępne są następujące przewodniki dla *Zasobu*:
 
--->
+<PageList path_re="/guide/platform/project/"/>

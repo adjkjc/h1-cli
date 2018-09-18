@@ -8,7 +8,7 @@
 
 ### Utworzenia
 
-*Replika* może zostać utworzona, w przypadku spełnienia następujących warunków:
+*Replika* może zostać utworzona po spełnieniu następujących warunków:
 
 * lokalny serwer Hyper-V ma skonfigurowane połączenie replikacji,
 * lokalny dyski spełniają parametry techniczne dla zasobu *Dysk*,
@@ -22,7 +22,7 @@ Na początku wykonywana jest pełna replikacja. Czas pierwszej replikacji zależ
 
 ### Usuwanie
 
-*Replika* może zostać usunięta, w przypadku spełnienia następujących warunków:
+*Replika* może zostać usunięta po spełnieniu następujących warunków:
 
 * proces replikacji został przerwany w lokalnym serwerze Hyper-V
 * wszystkie *ogólne* warunki
@@ -31,7 +31,7 @@ Na początku wykonywana jest pełna replikacja. Czas pierwszej replikacji zależ
 
 ### Dedykowane operacje
 
-Dostępne są następujące dedykowane operacje dla *Repliki*:
+Dostępne są następujące podstawowe operacje dla *Repliki*:
 
 * wstrzymanie replikacji
 * wznowienie replikacji

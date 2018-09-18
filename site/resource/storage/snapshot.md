@@ -8,7 +8,7 @@
 
 ### Utworzenie
 
-*Migawka* może zostać utworzona, w przypadku spełnienia następujących warunków: 
+*Migawka* może zostać utworzona po spełnieniu następujących warunków: 
 
 * dostęp do *Vault* jest włączony
 * wszystkie *ogólne* warunki
@@ -17,7 +17,7 @@
 
 ### Usuwanie
 
-Migawka może zostać usunięta, w przypadku spełnienia następujących warunków: 
+Migawka może zostać usunięta po spełnieniu następujących warunków: 
 
 * wszystkie *ogólne* warunki
 

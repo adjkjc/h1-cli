@@ -9,7 +9,7 @@ const services_category = {
 };
 
 const platform_category = {
-    title: 'Platforma',
+    title: 'O platformie',
     children: [
         '/platform/general.md',
         '/platform/user.md',
@@ -44,12 +44,12 @@ const getSidebar = () => {
 
     sidebar['/resource/'] = [
         '/resource/',
-        platform_category,
         ...categories.map(category => ({
             title: category.name,
             children: show_directory(`resource/${category.slug}`, ['README.md', 'dist'])
         })),
         services_category,
+        platform_category,
     ];
     sidebar['/platform/'] = sidebar['/resource/'];
     sidebar['/services/'] = sidebar['/resource/'];

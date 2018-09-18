@@ -10,7 +10,7 @@ Pozwala to świadczyć usługi bez konieczności zarządzania całym serwerem.
 
 ### Utworzenie
 
-*Kontener* może zostać utworzony, w przypadku spełnienia następujących warunków:
+*Kontener* może zostać utworzony po spełnieniu następujących warunków:
 
 * wszystkie *ogólne* warunki.
 
@@ -24,7 +24,7 @@ Możliwe jest określenie następujących parametrów podczas utworzenia;
 
 ### Usuwanie
 
-*Kontener* może zostać utworzony, w przypadku spełnienia następujących warunków:
+*Kontener* może zostać utworzony po spełnieniu następujących warunków:
 
 * wszystkie *ogólne* warunki.
 
@@ -42,7 +42,7 @@ performance x2         |   6    | 1024 MB |
 
 ## Zarządzanie
 
-Dostępne są następujące dedykowane operacje:
+Dostępne są następujące podstawowe operacje:
 
 * Zatrzymanie kontenera
 * Uruchomienie kontenera

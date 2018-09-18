@@ -8,28 +8,28 @@ Cloud Hosted Router (CHR) to wersja systemu operacyjnego RouterOS od firmy Mikro
 
 Przed przystąpieniem do integracji powinieneś mieć:
 
-* uruchomione [CLI](/h1-cli)
-
-## Konfiguracja
+* zainstalowane [CLI](/h1-cli)
 
 ```yaml
 # render=tutorial
-- name: Pobieranie obrazu dysku 
-  free_text:
-    text: Przejdź do [sekcji pobierania](https://mikrotik.com/download) strony internetowej producenta Mikrotik. Odszukaj wybraną wersje typu "VHDX image" oprogramowania. Pobierz ją na lokalny komputer.
-- name: Utwórz nowy *Dysk* poprzez przesłanie
-  guide:
-    path: /guide/storage/disk/creating.md#utworzenie-dysku-poprzez-przeslanie
-- name: Utwórz nową Wirtualną maszynę bez obrazu
-  guide: 
-    path: /guide/compute/virtual-machine/creating.md#utworzenie-wirtualnej-maszyny-bez-zadnego-obrazu-użytkownika
-- name: Dołączenie dysku
-  guide: 
-    path: /guide/compute/virtual-machine/disk-attach.md
-- name: Uzyskaj dostęp do konsoli *Wirtualnej maszyny*
-  guide: 
-    path: /guide/compute/virtual-machine/console.md
 - name: Konfiguracja
-  free_text: 
-    text: W celu bezpiecznego skonfigurowania usługi skorzystaj z [dokumentacji producenta](https://wiki.mikrotik.com/wiki/Manual:Securing_Your_Router#Access_by_IP_address).
+  block:
+    - name: Pobieranie obrazu dysku 
+      free_text:
+        text: Przejdź do [sekcji pobierania](https://mikrotik.com/download) strony internetowej producenta Mikrotik. Odszukaj wybraną wersje typu "VHDX image" oprogramowania. Pobierz ją na lokalny komputer.
+    - name: Utwórz nowy *Dysk* poprzez przesłanie
+      guide:
+        path: /guide/storage/disk/creating.md#utworzenie-dysku-poprzez-przeslanie
+    - name: Utwórz nową Wirtualną maszynę bez obrazu
+      guide: 
+        path: /guide/compute/virtual-machine/creating.md#utworzenie-wirtualnej-maszyny-bez-zadnego-obrazu-użytkownika
+    - name: Dołączenie dysku
+      guide: 
+        path: /guide/compute/virtual-machine/disk-attach.md
+    - name: Uzyskaj dostęp do konsoli *Wirtualnej maszyny*
+      guide: 
+        path: /guide/compute/virtual-machine/console.md
+    - name: Konfiguracja
+      free_text: 
+        text: W celu bezpiecznego skonfigurowania usługi skorzystaj z [dokumentacji producenta](https://wiki.mikrotik.com/wiki/Manual:Securing_Your_Router#Access_by_IP_address).
 ```

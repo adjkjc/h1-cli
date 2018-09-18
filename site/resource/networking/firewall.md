@@ -8,13 +8,13 @@
 
 ### Utworzenie
 
-*Zapora sieciowa* może zostać utworzona, w przypadku spełnienia następujących warunków:
+*Zapora sieciowa* może zostać utworzona po spełnieniu następujących warunków:
 
  * wszystkie *ogólne* warunki
 
 ### Usuwanie
 
-*Zapora sieciowa* może zostać usunięta, w przypadku spełnienia następujących warunków:
+*Zapora sieciowa* może zostać usunięta po spełnieniu następujących warunków:
 
  * nie jest przywiązany do żadnej *Sieci*
  * wszystkie *ogólne* warunki
@@ -23,7 +23,7 @@
 
 ### Dedykowane operacje
 
-Dostępne są następujące dedykowane operacje:
+Dostępne są następujące podstawowe operacje:
 
  * Przyłączenia zapory sieciowej do *[Sieci](/resource/networking/network.md)*
  * Odłączenia zapory sieciowej od *[Sieci](/resource/networking/network.md)*
@@ -37,7 +37,7 @@ W przypadku usunięcia wszystkich reguł mają zastosowanie następujące zasady
 
 #### Przyłączenie
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * utworzenie *Sieci*, [zgodnie z przewodnikiem](/guide/networking/network/creating.md)
 * zasób znajduje się w stanie ```Rozłączony```
@@ -45,21 +45,21 @@ Operacja może zostać wykonana, w przypadku spełnienia następujących warunk�
 
 #### Odłączenie
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Przyłączony```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 #### Dodanie reguły
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Rozłączony``` lub ```Przyłączony```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 #### Usunięcie reguły
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Rozłączony``` lub ```Przyłączony```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
@@ -78,7 +78,7 @@ W przypadku ograniczonego użycia:
 
 ## Przekazanie
 
-Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji*, w przypadku spełnienia następujące warunków:
+Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji* po spełnieniu następujące warunków:
 
  * stan jest ``Rozłączony``
 
