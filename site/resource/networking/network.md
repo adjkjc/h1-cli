@@ -8,34 +8,34 @@
 
 ### Utworzenie
 
-*Sieć* może zostać utworzona, w przypadku spełnienia następujących warunków:
+*Sieć* może zostać utworzona po spełnieniu następujących warunków:
 
  * wszystkie *ogólne* warunki.
 
 ### Usuwanie
 
-*Sieć* może zostać usunięta, w przypadku spełnienia następujących warunków:
+*Sieć* może zostać usunięta po spełnieniu następujących warunków:
 
  * nie istnieją przyłączone do niej *[Adaptery sieciowe](/resource/networking/network-adapter.md)*
  * wszystkie *ogólne* warunki
 
 ## Zarządzanie
 
-Dostępne są następujące dedykowane operacje
+Dostępne są następujące podstawowe operacje
 
 * Ustawienie serwerów DNS w protokole DHCP
 * Ustawienie bramy domyślnej w protokole DHCP
 
 ### Ustawienie serwera DNS
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Online```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Ustawienie bramy domyślnej DNS
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Online```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*

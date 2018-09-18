@@ -8,7 +8,7 @@
 
 ### Utworzenie
 
-*Vault* może zostać utworzony, w przypadku spełnienia następujących warunków: 
+*Vault* może zostać utworzony po spełnieniu następujących warunków: 
 
 * wszystkie *ogólne* warunki.
 
@@ -19,14 +19,14 @@ Nowy *Vault* może być utworzony w następujący sposób:
 
 ### Usuwanie
 
-*Vault* może zostać usunięty, w przypadku spełnienia następujących warunków: 
+*Vault* może zostać usunięty po spełnieniu następujących warunków: 
 
  * nie istnieją utworzone na jego bazie żadna *[Migawka](/resource/storage/snapshot.md)*
  * wszystkie ogólne warunki
 
 ## Zarządzanie
 
-Dostępne są następujące dedykowane operacje:
+Dostępne są następujące podstawowe operacje:
 
 * Włączenie dostępu
 * Wyłączanie dostęp
@@ -36,14 +36,14 @@ Rozmiar danych *Vault* stanowi rozmiar zgromadzonych plików i wszystkich *Migaw
 
 ### Włączenie dostępu
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Wyłączony```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Wyłączenie dostępu
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Online```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
@@ -52,7 +52,7 @@ Wykonanie operacji może ograniczyć funkcjonowanie *Kontenera* wykorzystująceg
 
 ### Zwiększenie rozmiaru
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Online``` lub ```Wyłączony```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*

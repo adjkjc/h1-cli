@@ -26,14 +26,14 @@ Wymagana jest, aby zdalny serwer obsługiwał nagłówek HTTP [`Range`](https://
 
 ## Zarządzanie
 
-Dostępne są następujące dedykowane operacje:
+Dostępne są następujące podstawowe operacje:
 
  * opublikowanie
  * odpublikowanie
  
 ### Opublikowanie
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Online```
 * zasób nie jest opublikowany
@@ -41,7 +41,7 @@ Operacja może zostać wykonana, w przypadku spełnienia następujących warunk�
 
 ### Odpublikowanie
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Online```
 * zasób jest opublikowany
@@ -69,7 +69,7 @@ Dostępne są następujące typowe operacje:
 
 ## Przekazanie
 
-Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji*, w przypadku spełnienia następujące warunków:
+Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji* po spełnieniu następujące warunków:
 
 * nie jest podłączony do żadnej *Wirtualnej maszyny*
 * wszystkie *ogólne* warunki

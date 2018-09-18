@@ -12,14 +12,14 @@ Rozmiar *Dysku* można zmieniać nawet podczas działania wykorzystującego go *
 
 ### Utworzenie
 
-*Dysk* może zostać utworzony, w przypadku spełnienia następujących warunków: 
+*Dysk* może zostać utworzony po spełnieniu następujących warunków: 
 
- * wszystkie *ogólne warunki*.
+ * wszystkie *ogólne warunki*
 
 Nowy *Dysk* może być utworzony w następujący sposób:
 
 * jako pusty *Dysk*
-* poprzez przekazanie lokalnego pliku z wykorzystaniem `CLI`
+* poprzez zaimportowanie lokalnego pliku z wykorzystaniem `CLI`
 
 W przypadku utworzenia *Dysku* na podstawie przesłanego pliku należy spełnić następujące kryteria:
 
@@ -28,9 +28,9 @@ W przypadku utworzenia *Dysku* na podstawie przesłanego pliku należy spełnić
 
 ### Usuwanie
 
-*Dysk* może zostać usunięty, w przypadku spełnienia następujących warunków: 
+*Dysk* może zostać usunięty po spełnieniu następujących warunków: 
 
-* stan to ```Rozłączony```
+* zasób znajduje się w stanie ```Rozłączony```
 * wszystkie *ogólne warunki*
 
 ## Warianty
@@ -45,7 +45,7 @@ ssd     |          1 - 500 | 50 iops 8k / GB
 
 ## Zarządzanie
 
-Dostępne są następujące dedykowane operacje dla *Dysku*:
+Dostępne są następujące podstawowe operacje dla *Dysku*:
 
 * pobranie dysku jako plik `.vhdx`
 * zwiększenie rozmiaru
@@ -53,14 +53,14 @@ Dostępne są następujące dedykowane operacje dla *Dysku*:
 
 ### Pobranie dysku
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Zwiększenie rozmiaru
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * żądany rozmiar nie przekracza dopuszczalnego rozmiaru dla wybranego wariantu dysku
 * zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
@@ -68,7 +68,7 @@ Operacja może zostać wykonana, w przypadku spełnienia następujących warunk�
 
 ### Zmniejszenie rozmiaru
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
 * na końcu obszaru *Dysku* znajduje się wystarczająca ilość przestrzeni nie przydzielonej do żadnej partycji
@@ -100,7 +100,7 @@ W przypadku ograniczonego użycia znajdują zastosowanie ogólne warunki *[Ogran
 
 ## Przekazanie
 
-Przekazanie *Dysku* jest możliwe między *Projektami* tej samej lub innej *Organizacji*, w przypadku spełnienia następujących warunków:
+Przekazanie *Dysku* jest możliwe między *Projektami* tej samej lub innej *Organizacji* po spełnieniu następujących warunków:
 
 * stan to "Rozłączony"
 

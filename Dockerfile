@@ -4,10 +4,12 @@ FROM node as build
 WORKDIR /src/site
 COPY ./site/package*.json /src/site/
 RUN npm install
+
 # build modules
 WORKDIR /src
 COPY . /src
 RUN make
+
 # build site
 WORKDIR /src/site
 RUN npx vuepress build

@@ -8,13 +8,13 @@
 
 ### Utworzenie
 
-*Dziennik* może zostać utworzony, w przypadku spełnienia następujących warunków: 
+*Dziennik* może zostać utworzony po spełnieniu następujących warunków: 
 
 * wszystkie *ogólne warunki*.
 
 ### Usuwanie
 
-*Dziennik* może zostać usunięty, w przypadku spełnienia następujących warunków:
+*Dziennik* może zostać usunięty po spełnieniu następujących warunków:
 
 * wszystkie *ogólne warunki*.
 
@@ -22,7 +22,7 @@
 
 ### Typowe operacje
 
-Dostępne są następujące dedykowane operacje na *Dzienniku*:
+Dostępne są następujące podstawowe operacje na *Dzienniku*:
 
 * wyłączenie
 * włączenie
@@ -30,21 +30,21 @@ Dostępne są następujące dedykowane operacje na *Dzienniku*:
 
 ## Wyłączenie
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Działający```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Wyłączenie
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Wyłączony```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Odczytanie
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Wyłączony``` lub ```Działający```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
@@ -56,7 +56,7 @@ Dostępne są następujące typowe operacje dla *Dziennika*:
 * zmiana nazwy
 * zarządzanie *Tagami*
 
-### Dostęp
+## Dostęp
 
 Wpisy do *Dziennika* mogą zostać wprowadzone z użyciem protokołu Syslog opisanym w [RFC 5424](https://tools.ietf.org/html/rfc5424).
 
@@ -72,7 +72,7 @@ Zarządzanie danymi dostępowymi wyjaśnione jest w [ogólnym omówieniu zarząd
 
 * Czas wykorzystania jest liczony w okresach rozliczeniowych jednego miesiąca.
 
-## Ograniczonego użycia
+## Ograniczone użycie
 
 W przypadku ograniczonego użycia:
  

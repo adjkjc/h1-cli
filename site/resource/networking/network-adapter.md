@@ -20,7 +20,7 @@
 
 ### Dedykowane operacje
 
-Dostępne są następujące dedykowane operacje:
+Dostępne są następujące podstawowe operacje:
 
  * dodanie *Adresu IP*
  * zastąpienie *Adresu IP*
@@ -28,21 +28,21 @@ Dostępne są następujące dedykowane operacje:
 
 #### Dodanie adresu IP
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Online```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 #### Zastąpienie adresu IP
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Online```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 #### Odłączenie adresu IP
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Online```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*

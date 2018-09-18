@@ -18,21 +18,21 @@ Wyróżniamy dwa typy *adresów IP* w Internecie:
 
 ### Utworzenie
 
-*Adres IP* może zostać utworzony, w przypadku spełnienia następujących warunków:
+*Adres IP* może zostać utworzony po spełnieniu następujących warunków:
 
  * istnieje wolny adres IP w puli adresów sieciowych (dotyczy tylko *Sieci* prywatnych)
  * wszystkie *ogólne* warunki
 
 ### Usuwanie
 
-*Adres IP* może zostać usunięty, w przypadku spełnienia następujących warunków:
+*Adres IP* może zostać usunięty po spełnieniu następujących warunków:
 
  * nie jest powiązany z żadnym innym zasobem
  * wszystkie *ogólne* warunki
 
 ## Zarządzanie 
 
-Dostępne są następujące dedykowane operacje
+Dostępne są następujące podstawowe operacje
 
  * przekształcenie ulotnego *Adresu IP* w trwały
  * zmień rekord PTR w DNS dla *Adresu IP*
@@ -42,21 +42,21 @@ Powiązanie *Adresu IP* w Internecie z *Adresem IP* w *Sieci* umożliwia dostęp
 
 ### Przekształcenie
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Przydzielony``` lub ```Nieprzydzielony```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Zmiana rekordu PTR
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Przydzielony``` lub ```Nieprzydzielony```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Powiązanie do innego IP
 
-Operacja może zostać wykonana, w przypadku spełnienia następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
 * zasób jest *Adresem IP* w *Sieci* prywatnej

@@ -10,7 +10,7 @@
 
 ### Utworzenie
 
-*Maszyna wirtualna* może zostać utworzona, w przypadku spełnienia następujących warunków:
+*Maszyna wirtualna* może zostać utworzona po spełnieniu następujących warunków:
 
  * dostępna przestrzeń adresowa w *[Sieć](/resource/networking/network.md)* (jeśli zamierzasz dołączyć do *Sieci*)
  * wszystkie *ogólne* warunki.
@@ -76,7 +76,7 @@ Na życzenie w celu zaspokojenia potrzeb szczególnych przypadków (np. licencjo
 
 ### Dedykowane operacje
 
-Dostępne są następujące dedykowane operacje
+Dostępne są następujące podstawowe operacje
 
  * Uruchomienie 
  * Zatrzymanie, co powoduje bezpiecznie zamknięcie systemu operacyjnego
@@ -190,7 +190,7 @@ Dostępne są następujące typowe operacje dla *Dziennika*:
 
 * Możliwe są dodatkowe opłaty dotyczące opcjonalnych *Zasobów* używanych przez *Maszynę wirtualną*. Większości przypadków są to: *Dysk*, trwały *Adres IP* i ruch sieciowy poprzez *Interfejs sieciowy*.
 
-## Ograniczonego użycia
+## Ograniczone użycie
 
 W przypadku ograniczonego użycia:
  
