@@ -2,7 +2,18 @@
 
 ## Przeznaczenie
 
-*Obraz* to uchwycony w momencie czasu stan *Dysków* dołączonych do *Wirtualnej maszyny* z których został utworzony. Może być wykorzystywany jako podstawa do nowej *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)* lub pełnej kopii danych.
+*Obraz* to uchwycony w danym momencie stan *Dysków* dołączonych do *Wirtualnej maszyny*.
+
+Główne zalety:
+
+* szeroki wachlarz rekomendowanych obrazów umożliwiających szybkie uruchomienie *Wirtualnej maszyny*
+* brak konieczności wyłączania *Wirtualnej maszyny* do utworzenia obrazu
+* przechowywanie w chmurze na odrębnych nośnikach zwiększających bezpieczeństwo danych
+
+Przykładowe zastosowania:
+
+* baza do utworzenia nowej *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*
+* pełna kopia danych
 
 ## Cykl życia
 
