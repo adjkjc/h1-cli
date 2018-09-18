@@ -4,9 +4,11 @@
 
 *Obraz* to uchwycony w danym momencie stan *Dysków* dołączonych do *Wirtualnej maszyny*. Na jego podstawie można utworzyć nową *[Wirtualną maszynę](/resource/compute/virtual-machine.md)* lub sporządzić pełną kopię danych.
 
-## Główne zalety
+Główne zalety
 
 * szeroki wachlarz rekomendowanych obrazów umożliwiających szybkie uruchomienie *Wirtualnej maszyny*
+* brak konieczności wyłączania *Wirtualnej maszyny* do utworzenia obrazu
+* przechowywanie w chmurze na odrębnych nośnikach zwiększających bezpieczeństwo danych
 
 ## Cykl życia
 
