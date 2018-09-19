@@ -72,7 +72,7 @@ Dostępne są następujące typowe operacje:
 
     * czas wykorzystania jest liczony w okresach rozliczeniowych jednej godziny
 
-* opłaty za dostęp do danych są naliczane w zależności od rozmiaru ruchu sieciowego w GB
+* opłaty za ruch sieciowy są naliczane w zależności od rozmiaru ruchu sieciowego w GB
 
 ## Ograniczone użycie
 
