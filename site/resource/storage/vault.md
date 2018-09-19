@@ -2,7 +2,15 @@
 
 ## Przeznaczenie
 
-*Vault* możesz wykorzystać do długoterminowego przechowywania danych i dostępu do nich z wykorzystaniem popularnych narzędzi takich jak  ssh, sftp, scp, git i rsync.
+*Vault* stanowi rodzaj przestrzeni do długoterminowego przechowywania danych, zapewnieniającej stały dostęp do nich bez konieczności administrowania systemem operacyjnym. 
+
+Główne zalety:
+* dostęp z wykorzystaniem popularnych narzędzi takich jak ssh, sftp, scp, git i rsync
+* możliwość wykonania *[Migawek](/resource/storage/snapshot.md)*
+
+Przykładowe zastosowania:
+* podstawowy serwer plików
+* źródło danych dla *[Konteneru](/resource/compute/container.md)*
 
 ## Cykl życia
 

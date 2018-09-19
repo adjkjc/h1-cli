@@ -2,9 +2,17 @@
 
 ## Przeznaczenie
 
-*ISO* służy do wykorzystania z *[Maszynami wirtualnymi]()*, gdzie można go zamontować/wysunąć w wirtualnym napędzie DVD. 
+*ISO* stanowi wirtualny obraz płyty, można go użyć w wirtualnym napędzie DVD. Wykorzystuje się go z *[Maszynami wirtualnymi](/resource/compute/virtual-machine.md)*.
 
-W *Wirtualnej maszynie* umożliwia bezpośrednie uruchomienie większości systemów operacyjnych, co ułatwia instalacja mniej popularnych systemów operacyjnych i stanowi wsparcie podczas prac administracyjnych. Możliwe jest także wykorzystanie go do świadczenia usług, które nie wymagają dysku.
+Główne zalety:
+
+* ułatwia instalację mniej popularnych systemów operacyjnych
+* stanowi wsparcie podczas prac administracyjnych
+
+Przykładowe zastosowania:
+
+* bezpośrednie uruchomienie większości systemów operacyjnych
+* świadczenie usług, które nie wymagają dysku
 
 ## Cykl życia
 

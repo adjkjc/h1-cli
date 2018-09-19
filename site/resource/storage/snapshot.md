@@ -2,7 +2,15 @@
 
 ## Przeznaczenie
 
-*Migawka* to uchwycony w momencie czasu stan *Vault*. Może być wykorzystywany jako podstawa do nowej *Vaulta* lub zabezpieczenie stanu *Vault* przed zmianami.
+*Migawka* to uchwycony w danym momencie stan *[Vault](/resource/storage/vault.md)*. 
+<!-- TODO: Skąd się wzięła nazwa "Vault"? -->
+
+Główne zalety:
+* rozliczana tylko za zmienione dane
+
+Przykładowe zastosowania:
+* baza do utworzenia nowego *Vaulta*
+* zabezpieczenie stanu *Vault* przed zmianami
 
 ## Cykl życia
 
@@ -32,7 +40,7 @@ Dostępne są następujące typowe operacje:
 
 ## Opłaty
 
-* Opłaty wchodzą w skład kosztów usługi *Vault*
+* Zabezpieczone dane uwzględniane są w przestrzeni wykorzystywanej przez *Vault*, co wpływa na koszt tej usługi.
 
 ## Ograniczone użycie
 
@@ -46,7 +54,7 @@ Dostępne są następujące typowe operacje:
 
 Nazwa              | Okres  | Cena (PLN) | Uwagi
 ------------------ | :----: | ---------: | :----:
-Snapshot           |   -    |     0.0000 | 
+migawka            |   -    |     0.0000 | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
