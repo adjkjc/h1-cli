@@ -55,4 +55,4 @@ Requires access rights to [Quay.io/hyperone](https://quay.io/repository/hyperone
 
 ## Helps
 
-* [https://docs.google.com/spreadsheets/d/17ukWwekH0PVzY_MTmPA4UMZ45xywK0Lt_2GXFbGG03Q/edit#gid=0](Comparision )
+* [Name comparision of providers](https://docs.google.com/spreadsheets/d/17ukWwekH0PVzY_MTmPA4UMZ45xywK0Lt_2GXFbGG03Q/edit#gid=0)
