@@ -46,7 +46,7 @@ Dostępne są następujące typowe operacje:
 
 Nazwa              | Okres  | Cena (PLN) | Uwagi
 ------------------ | :----: | ---------: | :----:
-snapshot           |   -    |     0.0000 | 
+Snapshot           |   -    |     0.0000 | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

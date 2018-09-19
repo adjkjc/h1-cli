@@ -63,7 +63,7 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 * dowiązywany *Adres IP* jest adresem w *Sieci* publicznej
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
-## Płatność
+## Opłaty
 
  * opłaty są naliczane na podstawie czasu.
 

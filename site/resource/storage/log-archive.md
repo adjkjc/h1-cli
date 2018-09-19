@@ -66,7 +66,7 @@ Zapisywanie do *Dziennika* jest możliwe za pomocą następujących typów danyc
 
 Zarządzanie danymi dostępowymi wyjaśnione jest w [ogólnym omówieniu zarządzania danymi dostępowymi](/platform/resource.html#dane-dostepowe).
 
-## Płatność
+## Opłaty
 
 * Opłaty są naliczane na podstawie czasu wykorzystania.
 

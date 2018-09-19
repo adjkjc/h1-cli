@@ -54,7 +54,7 @@ Dostępne są następujące typowe operacje:
 * możliwość zmiany wyświetlanej nazwy
 * zarządzanie *Tagami*
 
-## Płatność
+## Opłaty
 
 * Opłaty są naliczane na podstawie rozmiaru danych i czasu
 

@@ -47,7 +47,7 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 * zasób znajduje się w stanie ```Online```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
-## Płatność
+## Opłaty
 
  * opłaty są naliczane za ruch sieciowy
  * opłaty za ruch sieciowy są naliczane w zależności od rozmiaru ruchu w GB

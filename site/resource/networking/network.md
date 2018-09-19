@@ -46,7 +46,7 @@ Dostępne są następujące typowe operacje:
 
 * Możliwość zmiany wyświetlanej nazwy
 
-## Płatność
+## Opłaty
 
  * opłaty są naliczane na podstawie czasu.
 
@@ -58,7 +58,7 @@ Dostępne są następujące typowe operacje:
 
 Nazwa              | Okres  | Cena (PLN) | Uwagi
 ------------------ | :----: | ---------: | :----:
-Sieć               |   1h   |    0.08260 | 
+sieć               |   1h   |    0.08260 | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

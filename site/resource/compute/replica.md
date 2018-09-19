@@ -22,6 +22,8 @@ Na początku wykonywana jest pełna replikacja. Czas pierwszej replikacji zależ
 
 ### Usuwanie
 
+<!---xxxxxx -->
+
 *Replika* może zostać usunięta po spełnieniu następujących warunków:
 
 * proces replikacji został przerwany w lokalnym serwerze Hyper-V
@@ -44,7 +46,7 @@ Dostępne są następujące typowe operacje dla *Repliki*:
 * zmiana nazwy
 * zarządzanie *Tagami*
 
-## Płatność
+## Opłaty
 
 * Opłaty są naliczone na podstawie czasu wykorzystania
 * Czas wykorzystania jest liczony w okresach rozliczeniowych jednej godziny
@@ -75,7 +77,7 @@ minimum Hyper-V version         | ???
 
 Nazwa       | Okres  | Cena (PLN)
 ----------- | :----: | ---------:
-Replica     |   1M   |       250
+replika     |   1M   |       250
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

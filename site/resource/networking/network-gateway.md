@@ -50,7 +50,7 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 
 Nazwa           | Okres  | Cena (PLN) | Uwagi
 --------------- | :----: | ---------: | :----:
-Brama sieciowa  |   -    |     0.0000 | 
+brama sieciowa  |   -    |     0.0000 | 
 
 <!-- TODO: Service need to be created. -->
 

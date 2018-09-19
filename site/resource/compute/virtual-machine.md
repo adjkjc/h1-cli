@@ -184,7 +184,7 @@ Dostępne są następujące typowe operacje dla *Dziennika*:
 * zmiana nazwy
 * zarządzanie *Tagami*
 
-## Płatność
+## Opłaty
 
 * Opłaty są naliczane na podstawie wariantu i czasu.
 

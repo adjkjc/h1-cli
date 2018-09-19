@@ -96,13 +96,13 @@ Maksymalna liczba filtrów w regule            | 10
 Maksymalna liczba stref wewnętrznych w regule | 10
 Maksymalna liczba stref zewnętrznych w regule | 10
 
-[Napisz do nas](/TODO) jeżeli masz duży projekt i potrzebujesz zwiększyć te parametry.
+[Napisz do nas](/about-us/contact.md) jeżeli masz duży projekt i potrzebujesz zwiększyć te parametry.
 
 ## Cennik
 
 Wartość         | Okres  | Cena (PLN) | Uwagi
 --------------- | :----: | ---------: | ----
-zapora sieciowa |   -    |     0.0000 | TODO: Add service
+zapora sieciowa |   -    |     0.0000 | <!-- TODO: Add service -->
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

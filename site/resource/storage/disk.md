@@ -85,7 +85,7 @@ Dostępne są następujące typowe operacje dla *Dysku*:
 
 *Dysk* przeznaczony jest do wykorzystania z *Wirtualną maszyną*. Po przyłączeniu do niej dostępny jest w systemie operacyjnym tak jak zwykły twardy dysk.
 
-## Płatność
+## Opłaty
 
 * opłaty za przechowywanie są naliczane w zależności od wariantu *Dysku*, jego rozmiaru i czasu wykorzystania
 

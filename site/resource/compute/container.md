@@ -64,7 +64,7 @@ Dostępne są następujące typowe operacje:
 * zarządzanie danymi dostępowymi
 * zarządzanie *Tagami*
 
-## Płatność
+## Opłaty
 
 * opłaty naliczane są w zależności od wybranego wariantu i ruchu sieciowego
 

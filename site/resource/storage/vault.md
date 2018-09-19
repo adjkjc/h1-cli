@@ -32,7 +32,7 @@ Dostępne są następujące podstawowe operacje:
 * Wyłączanie dostęp
 * Zwiększenie rozmiaru
 
-Rozmiar danych *Vault* stanowi rozmiar zgromadzonych plików i wszystkich *Migawek*.
+Wykorzystywana przestrzeń *Vault* stanowi rozmiar zgromadzonych plików i wszystkich *Migawek*.
 
 ### Włączenie dostępu
 
@@ -81,7 +81,7 @@ Dostępne są następujące typowe operacje:
 * Możliwość zmiany wyświetlanej nazwy
 * Zarządzanie danymi dostępowymi
 
-## Płatność
+## Opłaty
 
 * opłaty naliczane są za przechowywania i ruch sieciowy
 
@@ -113,9 +113,9 @@ Maksymalny rozmiar    | 1000    |
 
 Nazwa              | Okres  | Cena (PLN) | Uwagi
 ------------------ | :----: | ---------: | :----:
-vault              |   1h   |     0.0004 | 
-ruch przychodzący  |   1h   |     0.0000 | 
-ruch wychodzący    |   1h   |     0.0200 |
+Vault              |   1h   |     0.0004 | 
+Ruch przychodzący  |   1h   |     0.0000 | 
+Ruch wychodzący    |   1h   |     0.0200 |
 
 <!-- //TODO: Add service for traffic -->
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
