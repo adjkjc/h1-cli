@@ -18,23 +18,25 @@ Przykładowe zastosowania:
 
 ### Utworzenie
 
+*ISO* może zostać utworzone po spełnieniu następujących warunków:
+
+* zdalny serwer obsługuje nagłówek HTTP [`Range`](https://tools.ietf.org/html/rfc7233)
+
 Nowe *ISO* może być utworzone w następujący sposób:
 
 * przekazanie lokalnego pliku z wykorzystaniem `CLI`
-* ze zdalnego serwera, podając adres URL do zdalnego pliku ISO.
-
-Wymagana jest, aby zdalny serwer obsługiwał nagłówek HTTP [`Range`](https://tools.ietf.org/html/rfc7233).
+* ze zdalnego serwera, poprzez podanie adresu URL do zdalnego pliku ISO
 
 ### Usuwanie
 
-*ISO* może być usunięty w przypadku spełnienia następujących warunków:
+*ISO* może być usunięte po spełnieniu następujących warunków:
 
-* nie jest podłączony do żadnej *Wirtualnej maszyny*
-* wszystkie *ogólne* warunki
+* nie jest podłączone do żadnej *Wirtualnej maszyny*
+* wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Zarządzanie
 
-Dostępne są następujące podstawowe operacje:
+Dla *ISO* charakterystyczne są następujące operacje:
 
  * opublikowanie
  * odpublikowanie
@@ -57,19 +59,19 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 
 ### Typowe operacje
 
-Dostępne są następujące typowe operacje:
+Dla *ISO* dostępne są następujące typowe operacje:
 
 * możliwość zmiany wyświetlanej nazwy
 * zarządzanie *Tagami*
 
-## Płatność
+## Opłaty
 
-* Opłaty są naliczane na podstawie rozmiaru danych i czasu
+Opłaty naliczane są na podstawie rozmiaru danych i czasu:
 
-    * Wielkość danych w jednostkach GB
-    * Czas w okresach rozliczeniowych jednej godziny
+    * wielkość danych w jednostkach GB
+    * czas w okresach rozliczeniowych jednej godziny
 
-* Opłaty są obliczane dla każdego GB w danym okresie rozliczeniowym
+Opłaty naliczane są dla każdego GB w danym okresie rozliczeniowym.
 
 ## Ograniczone użycie
 
@@ -77,14 +79,16 @@ Dostępne są następujące typowe operacje:
 
 ## Przekazanie
 
-Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji* po spełnieniu następujące warunków:
+Przekazanie *ISO* jest możliwe między *Projektami* tej samej lub innej *Organizacji* po spełnieniu następujących warunków:
 
-* nie jest podłączony do żadnej *Wirtualnej maszyny*
-* wszystkie *ogólne* warunki
+* nie jest podłączone do żadnej *Wirtualnej maszyny*
+* wszystkie ogólne warunki *przekazania zasobu*
 
-## Udostępniania
+## Udostępnianie
 
-Udostępnianie jest możliwe między *Projektami* tej samej lub różnej *Organizacji* zgodnie z *[Ogólnymi zasadami udostępnianie zasobów]()*.
+Udostępnianie jest możliwe między *Projektami* tej samej lub innej *Organizacji* zgodnie z *[Ogólnymi zasadami udostępnianie zasobów](link)*.
+
+<!-- TODO: brak linka-->
 
 !!! include(access.md) !!!
 
@@ -100,15 +104,15 @@ Maksymalny rozmiar | 7 GB
 
 ## Cennik
 
-Wariant | Cena (PLN) | Rozmiar | Cena (PLN)
+Wariant | Okres      | Rozmiar | Cena (PLN)
 ------- | :--------: | :-----: | ---------:
-ISO     |     1h     | 1GB     |     0.0002
+ISO     | 1 h        | 1 GB    |     0.0002
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
 ## Przewodniki
 
-Dostępne są następujące przewodniki dla *Zasobu*:
+Do korzystania z *ISO* mogą być przydatne następujące przewodniki:
 
 <PageList path_re="guide/storage/iso/"/>
 
