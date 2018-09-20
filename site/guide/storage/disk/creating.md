@@ -88,9 +88,9 @@ gdzie:
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="disk create"].
 
-## Utworzenie dysku poprzez przesłanie
+## Utworzenie dysku poprzez import
 
-Utworzenie dysku poprzez przesłanie umożliwia przeniesienie istniejącego dysku ```.vhdx``` do platformy. Taki dysk już od samego początku może zawierać dane użytkownika gotowe do wykorzystania.
+Utworzenie dysku poprzez import umożliwia przeniesienie istniejącego dysku ```.vhdx``` do platformy. Taki dysk już od samego początku może zawierać dane użytkownika gotowe do wykorzystania.
 
 #### CLI
 
