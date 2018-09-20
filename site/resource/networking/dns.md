@@ -2,9 +2,7 @@
 
 ## Przeznaczenie
 
-*DNS* to usługa służąca do tłumaczenia publicznych nazw domen na numeryczne adresy IP, takie jak 62.181.3.92, które komputery wykorzystują do łączenia się ze sobą lub do odpowiednich wartości.
-
-<!--MBu: nie rozumiem "lub do odpowiednich wartości"-->
+*DNS* to usługa służąca do tłumaczenia publicznych nazw domen na numeryczne adresy IP, takie jak 62.181.3.92, które komputery wykorzystują do łączenia się ze sobą, lub na odpowiednie wartości.
 
 ## Cykl życia
 
