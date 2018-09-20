@@ -23,7 +23,7 @@ Przykładowe zastosowania:
 
 *Dysk* może zostać utworzony po spełnieniu następujących warunków: 
 
- * wszystkie *ogólne warunki utworzenia zasobu*
+ * wszystkie ogólne warunki *utworzenia zasobu*
 
 Nowy *Dysk* może być utworzony w następujący sposób:
 
@@ -40,7 +40,7 @@ Aby utworzyć *Dysk* na podstawie przesłanego pliku, należy spełnić następu
 *Dysk* może zostać usunięty po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Rozłączony```
-* wszystkie *ogólne warunki*
+* wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Warianty
 
