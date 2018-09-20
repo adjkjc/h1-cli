@@ -1,67 +1,86 @@
-# Brama sieciowa
+# Adapter sieciowy
 
 ## Przeznaczenie
 
-*Brama sieciowa* zapewnia łączność z *Sieci* do Internetu.
+*Adapter sieciowy* zapewnia łączność określonemu *Zasobowi*. Stanowi odpowiednik karty sieciowej. *Adapter sieciowy* musi mieć przypisany *Adres IP* z *Sieci*, do której jest przyłączony.
 
-## Utworzenie
+Główne zalety:
 
-*Brama sieciowa* może zostać utworzona po spełnieniu następujących warunków:
+Przykładowe zastosowania:
 
- * posiadanie w projekcie niewykorzystywanego adresu IP,
- * wszystkie *ogólne* warunki
+## Cykl życia
 
-Utworzenie *Bramy sieciowej* wymaga wskazania *Adresu IP* wcześniej przydzielonego do projektu.
+### Utworzenie
 
-## Usuwanie
+*Adapter sieciowy* może zostać utworzony wyłącznie podczas przyłączenia do innego *Zasobu*.
 
-*Brama sieciowa* może zostać usunięta po spełnieniu następujących warunków:
+### Usuwanie
 
- * nie jest przywiązany do żadnej *Sieci*
- * wszystkie *ogólne* warunki
+*Adapter sieciowy* jest usuwany podczas odłączenia od innego *Zasobu*.
 
 ## Zarządzanie
 
-Dostępne są następujące podstawowe operacje:
+Dla *Adapteru sieciowego" charakterystyczne są następujące operacje:
 
-* przyłączenie *Bramy sieciowej* do określonej *Sieci*
-* rozłączenie *Bramy sieciowej* od określonej *Sieci*
+ * dodanie *Adresu IP*
+ * zastąpienie *Adresu IP*
+ * odłączenie *Adresu IP*
 
-### Przyłączenie
+#### Dodanie adresu IP
 
 Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
-* zasób znajduje się w stanie ```Rozłączony```
-* *Projekt* zawiera *Sieć*, która nie ma przyłączonej żadnej bramy domyślnej
+* zasób znajduje się w stanie ```Online```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
-### Rozłączenie
+#### Zastąpienie adresu IP
 
 Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
-* znajduje się w stanie ```Przyłączony```
-* nie znajduje się w stanie *Ograniczonego użycia*
+* zasób znajduje się w stanie ```Online```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+#### Odłączenie adresu IP
+
+Operacja może zostać wykonana po spełnieniu następujących warunków: 
+
+* zasób znajduje się w stanie ```Online```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+## Opłaty
+
+Opłaty naliczane są za ruch sieciowy - w zależności od rozmiaru ruchu w GB.
 
 ## Lokalizacja
 
 !!! include(regions.md) !!!
 
-## Cennik
+## Parametry techniczne
 
-Nazwa           | Okres  | Cena (PLN) | Uwagi
---------------- | :----: | ---------: | :----:
-Brama sieciowa  |   -    |     0.0000 | 
+Parametr            | Wartość   | Uwagi
+------------------- | --------: | ---
+Minimalna prędkość  |   10 Mbps |
+Maksymalna prędkość | 1000 Mbps |
 
-<!-- TODO: Service need to be created. -->
+W razie potrzeby zwiększenia zaproponowanych parametrów [prosimy o kontakt](/about-us/contact.md).
+
+### Cennik
+
+Nazwa                       | Okres  | Cena (PLN) | Uwagi
+--------------------------- | :----: | ---------: | :----:
+ruch przychodzący           |  1 h   |     0.0200 | 
+ruch wychodzący              |   -    |     0.0000 | 
+adapter sieciowy            |   -    |     0.0000 | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
 ## Przewodniki
 
-Dostępne są następujące przewodniki dla *Zasobu*:
+Do korzystania z *Adaptera sieciowego* mogą być przydatne następujące przewodniki:
 
-<PageList path_re="guide/networking/network-gateway/"/>
+<PageList path_re="guide/networking/network-adapter/"/>
 
-## Powiązane produkty
+### Powiązane produkty
 
-* *[Sieć](/resource/networking/network-gateway.md)*
+* *[Wirtualna maszyna]()*
+* *[Sieć]()*
