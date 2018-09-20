@@ -10,21 +10,21 @@
 
 *Sieć* może zostać utworzona po spełnieniu następujących warunków:
 
- * wszystkie *ogólne* warunki.
+ * wszystkie ogólne warunki *utworzenia zasobu*
 
 ### Usuwanie
 
 *Sieć* może zostać usunięta po spełnieniu następujących warunków:
 
  * nie istnieją przyłączone do niej *[Adaptery sieciowe](/resource/networking/network-adapter.md)*
- * wszystkie *ogólne* warunki
+ * wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Zarządzanie
 
-Dostępne są następujące podstawowe operacje
+Dla *Sieci* charakterystyczne są następujące operacje:
 
-* Ustawienie serwerów DNS w protokole DHCP
-* Ustawienie bramy domyślnej w protokole DHCP
+* ustawienie serwerów DNS w protokole DHCP
+* ustawienie bramy domyślnej w protokole DHCP
 
 ### Ustawienie serwera DNS
 
@@ -42,13 +42,13 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 
 ### Typowe operacje
 
-Dostępne są następujące typowe operacje:
+Dla *Sieci" dostępne są następujące typowe operacje:
 
-* Możliwość zmiany wyświetlanej nazwy
+* zmiana wyświetlanej nazwy
 
-## Płatność
+## Opłaty
 
- * opłaty są naliczane na podstawie czasu.
+Opłaty są naliczane na podstawie czasu.
 
 ## Lokalizacja
 
@@ -58,13 +58,13 @@ Dostępne są następujące typowe operacje:
 
 Nazwa              | Okres  | Cena (PLN) | Uwagi
 ------------------ | :----: | ---------: | :----:
-Sieć               |   1h   |    0.08260 | 
+sieć               |  1 h   |    0.08260 | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
 ## Przewodniki
 
-Dostępne są następujące przewodniki dla *Zasobu*:
+Do korzystania z *Sieci* mogą być przydatne następujące przewodniki:
 
 <PageList path_re="guide/networking/network/"/>
 
