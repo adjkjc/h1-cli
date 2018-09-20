@@ -15,7 +15,7 @@ Główne zalety:
 Przykładowe zastosowania:
 
 * serwery bazodanowe i aplikacyjne
-* przechowywanie dużych plików multimedialnych w długim czasie
+* przechowywanie dużych plików multimedialnych przez długi czas
 
 ## Cykl życia
 
