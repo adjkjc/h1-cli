@@ -2,15 +2,11 @@
 
 ## Przeznaczenie
 
-*Dysk* służy do przechowywania każdego rodzaju danych. Pomyśl o nim jak o dysku twardym. Możesz swobodnie zapisywać i odczytywać dowolne obszary.
- 
-*Dysk* występuje w wariantach różniących się rozmiarem i wydajnością, aby spełnić wymagania w nawet najbardziej wymagających środowiskach.
-
-Rozmiar *Dysku* można zmieniać nawet podczas pracy wykorzystującej go *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*.
+*Dysk* służy do przechowywania każdego rodzaju danych, podobnie jak dysk twardy, ale dostępny z każdego miejsca za pośrednictwem internetu. Umożliwia swobodny zapis i odczyt jego dowolnych obszarów. Występuje w wariantach różniących się rozmiarem i wydajnością, aby spełnić wymagania w nawet najbardziej wymagających środowiskach. 
 
 Główne zalety:
 
-* łatwa skalowalność rozmiaru, wydajności i liczby dysków
+* łatwa skalowalność rozmiaru, wydajności i liczby dysków: możliwość zmiany rozmiaru nawet podczas pracy wykorzystującej go *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*
 * małe opóźnienia w działaniu
 * duża przepustowość 
 * maksymalne bezpieczeństwo danych w długim czasie użytkowania
@@ -19,7 +15,7 @@ Główne zalety:
 Przykładowe zastosowania:
 
 * serwery bazodanowe i aplikacyjne
-* przechowywanie multimediów w długim czasie
+* przechowywanie dużych plików multimedialnych w długim czasie
 
 ## Cykl życia
 
@@ -27,14 +23,14 @@ Przykładowe zastosowania:
 
 *Dysk* może zostać utworzony po spełnieniu następujących warunków: 
 
- * wszystkie *ogólne warunki*
+ * wszystkie *ogólne warunki utworzenia zasobu*
 
 Nowy *Dysk* może być utworzony w następujący sposób:
 
 * jako pusty *Dysk*
 * poprzez zaimportowanie lokalnego pliku z wykorzystaniem `CLI`
 
-W przypadku utworzenia *Dysku* na podstawie przesłanego pliku należy spełnić następujące kryteria:
+Aby utworzyć *Dysk* na podstawie przesłanego pliku, należy spełnić następujące kryteria:
 
 * format pliku *Dysku* to `.vhdx`
 * typ vhd *Dysku* to `dynamic`
@@ -58,7 +54,7 @@ ssd     |          1 - 500 | 50 iops 8k / GB
 
 ## Zarządzanie
 
-Dostępne są następujące podstawowe operacje dla *Dysku*:
+Dla *Dysku* charakterystyczne są następujące operacje:
 
 * pobranie dysku jako plik `.vhdx`
 * zwiększenie rozmiaru
@@ -84,12 +80,12 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
-* na końcu obszaru *Dysku* znajduje się wystarczająca ilość przestrzeni nie przydzielonej do żadnej partycji
+* na końcu obszaru *Dysku* znajduje się wystarczająca ilość przestrzeni nieprzydzielonej do żadnej partycji
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Typowe operacje
 
-Dostępne są następujące typowe operacje dla *Dysku*:
+Dla *Dysku* dostępne są następujące typowe operacje:
 
 * zmiana nazwy
 * zarządzanie *Tagami*
@@ -98,14 +94,14 @@ Dostępne są następujące typowe operacje dla *Dysku*:
 
 *Dysk* przeznaczony jest do wykorzystania z *Wirtualną maszyną*. Po przyłączeniu do niej dostępny jest w systemie operacyjnym tak jak zwykły twardy dysk.
 
-## Płatność
+## Opłaty
 
-* opłaty za przechowywanie są naliczane w zależności od wariantu *Dysku*, jego rozmiaru i czasu wykorzystania
+Opłaty za przechowywanie danych naliczane są w zależności od wariantu *Dysku*, jego rozmiaru i czasu wykorzystania:
 
    * rozmiar w jednostkach GB
-   * czas wykorzystania jest liczony w okresach rozliczeniowych jednej godziny
+   * czas wykorzystania liczony w okresach rozliczeniowych jednej godziny
 
-* opłaty są naliczane za każdy GB przestrzeni dyskowej używanej w okresie rozliczeniowym
+Opłaty naliczane są za każdy GB przestrzeni dyskowej używanej w okresie rozliczeniowym.
 
 ## Ograniczone użycie
 
@@ -140,7 +136,7 @@ archive   |   1h   |       0.0002 |
 
 ## Przewodniki
 
-Dostępne są następujące przewodniki dla *Zasobu*:
+Do korzystania z *Dysku* mogą być przydatne następujące przewodniki:
 
 <PageList path_re="guide/storage/disk/"/>
  
