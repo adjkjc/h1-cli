@@ -2,36 +2,38 @@
 
 ## Przeznaczenie
 
-*DNS* dostarcza usługę do tłumaczenie publicznych nazw domen na numeryczne adresy IP, takie jak 62.181.3.92, które komputery wykorzystują do łączenia się ze sobą lub do odpowiednich wartości.
+*DNS* to usługa służąca do tłumaczenia publicznych nazw domen na numeryczne adresy IP, takie jak 62.181.3.92, które komputery wykorzystują do łączenia się ze sobą lub do odpowiednich wartości.
+
+<!--MBu: nie rozumiem "lub do odpowiednich wartości"-->
 
 ## Cykl życia
 
 ### Utworzenie
 
-*DNS* może zostać utworzony, jeśli spełnione są wszystkie następujące warunki:
+*DNS* może zostać utworzony po spełnieniu następujących warunków:
 
- * nazwa strefy jest unikalna w obrębie platformy,
- * wszystkie *ogólne* warunki
+ * nazwa strefy jest unikalna w obrębie platformy
+ * wszystkie ogólne warunki *utworzenia zasobu*
 
 ### Usuwanie
 
-*DNS* może zostać usunięty, jeśli spełnione są wszystkie następujące warunki:
+*DNS* może zostać usunięty po spełnieniu następujących warunków:
 
- * wszystkie *ogólne* warunki
+ * wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Zarządzanie
 
-Zarządzanie usługą opiera się poprzez modyfikowanie zestawu rekordów (ang.*record-set*):
+Zarządzanie usługą polega na modyfikowaniu zestawu rekordów (ang.*record-set*):
 
  * utworzenie zestawu rekordów określonego typu
  * usuwanie zestawu rekordów
  * dodawanie rekordu w zestawie rekordów
  * usuwanie rekordu w zestawie rekordów
 
-Zarządzanie usługą jest możliwe po spełnieniu następujących warunków: 
+Zarządzanie usługą odbywa się po spełnieniu następujących warunków: 
 
-* znajduje się w stanie ```Online```
-* nie znajduje się w stanie *Ograniczonego użycia*
+* usługa znajduje się w stanie ```Online```
+* usługa nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Lokalizacja
 
@@ -39,12 +41,12 @@ Zarządzanie usługą jest możliwe po spełnieniu następujących warunków:
 
 ## Parametry techniczne
 
-Parameter                |                                Wartość |Uwagi
+Parameter                | Wartość                                |Uwagi
 ------------------------ | -------------------------------------: | ---
 Typy rekordów            | A, CNAME, MX, TXT, SRV, NS, CAA,  AAAA |
 Rozmiar zestawu rekordów |                                     20 |
 
-[Napisz do nas](/about-us/contact.md) jeżeli masz duży projekt i potrzebujesz zwiększyć te parametry.
+W razie potrzeby zwiększenia zaproponowanych parametrów [prosimy o kontakt](/about-us/contact.md).
 
 ## Cennik
 
@@ -58,7 +60,7 @@ DNS    |   -    |     0.0000 |
 
 ## Przewodniki
 
-Dostępne są następujące przewodniki dla *Zasobu*:
+Do korzystania z *DNS* mogą być przydatne następujące przewodniki:
 
 <PageList path_re="guide/networking/dns/"/>
 
