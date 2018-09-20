@@ -60,7 +60,7 @@ Opłaty naliczane są za każdy GB przestrzeni dyskowej zajmowanej przez *Obraz*
 
 Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji* po spełnieniu następujących warunków:
 
-* wszystkie ogólne warunki
+* wszystkie ogólne warunki przekazania zasobu
 
 <!-- TODO: warunki czego? przekazania?-->
 
