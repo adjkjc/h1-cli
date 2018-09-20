@@ -21,21 +21,21 @@ Przykładowe zastosowania:
 
 *Kontener* może zostać utworzony po spełnieniu następujących warunków:
 
-* wszystkie *ogólne* warunki.
+* wszystkie ogólne warunki *utworzenia zasobu*
 
-Możliwe jest określenie następujących parametrów podczas utworzenia;
+Podczas tworzenia można określić następujące parametry:
 
 * nazwa
 * wariant
-* obraz dostępny w ogólnodostępnym repozytorium np. na [Docker Hub](https://hub.docker.com/)
+* obraz dostępny w ogólnodostępnym repozytorium, np. na [Docker Hub](https://hub.docker.com/)
 * punkty montowania danych w *[Vault](/resource/storage/vault.md)*
 * zmienne środowiskowe
 
 ### Usuwanie
 
-*Kontener* może zostać utworzony po spełnieniu następujących warunków:
+*Kontener* może zostać usunięty po spełnieniu następujących warunków:
 
-* wszystkie *ogólne* warunki.
+* wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Warianty
 
@@ -51,37 +51,39 @@ performance x2         |   6    | 1024 MB |
 
 ## Zarządzanie
 
-Dostępne są następujące podstawowe operacje:
+Dla *Kontenera* charakterystyczne są następujące operacje:
 
-* Zatrzymanie kontenera
-* Uruchomienie kontenera
-* Odczyt dziennika zdarzeń
-* Restartowanie kontenera
+* zatrzymanie kontenera
+* uruchomienie kontenera
+* odczyt dziennika zdarzeń
+* restartowanie kontenera
 
 ### Dostęp
 
-Dostęp do kontenera możliwy jest poprzez wskazany przez użytkownika port aplikacji z wykorzystaniem:
+Dostęp do *Kontenera* możliwy jest poprzez wskazany przez użytkownika port aplikacji z wykorzystaniem:
 
 * protokołu HTTP
 * wolnego portu TCP/UDP wybranego przez platformę
 
 ### Typowe operacje
 
-Dostępne są następujące typowe operacje:
+Dla *Kontenera* dostępne są następujące typowe operacje:
 
 * możliwość zmiany wyświetlanej nazwy
 * zarządzanie danymi dostępowymi
 * zarządzanie *Tagami*
 
-## Płatność
+## Opłaty
 
-* opłaty naliczane są w zależności od wybranego wariantu i ruchu sieciowego
+Opłaty naliczane są w zależności od wybranego wariantu i ruchu sieciowego
 
 * opłaty za wariant są naliczane w zależności od wybranego wariantu i czasu jego wykorzystania
 
     * czas wykorzystania jest liczony w okresach rozliczeniowych jednej godziny
 
 * opłaty za dostęp do danych są naliczane w zależności od rozmiaru ruchu sieciowego w GB
+
+<!-- //TODO: Niejasne -->
 
 ## Ograniczone użycie
 
@@ -98,19 +100,19 @@ W przypadku ograniczonego użycia:
 
 Parametr              | Wartość | Uwagi
 :-------------------- | ------: | ---
-System operacyjny     |   Linux |
+system operacyjny     | Linux   |
 
 ## Cennik
 
 Nazwa              | Okres  | Cena (PLN) | Uwagi
 ------------------ | :----: | ---------: | :----:
-ruch przychodzący  |   1h   |     0.0000 | 
-ruch wychodzący    |   1h   |     0.0200 | 
-hobby              |   1h   |    10.0000 | 
-standard           |   1h   |    20.0000 |
-standard x2        |   1h   |    40.0000 |
-performance        |   1h   |    80.0000 |
-performance x2     |   1h   |   160.0000 |
+ruch przychodzący  |  1 h   |     0.0000 | 
+ruch wychodzący    |  1 h   |     0.0200 | 
+hobby              |  1 h   |    10.0000 | 
+standard           |  1 h   |    20.0000 |
+standard x2        |  1 h   |    40.0000 |
+performance        |  1 h   |    80.0000 |
+performance x2     |  1 h   |   160.0000 |
 
 <!-- //TODO: Add service for traffic -->
 <!-- //TODO: Add service for traffic -->
@@ -119,7 +121,7 @@ performance x2     |   1h   |   160.0000 |
 
 ## Przewodniki
 
-Dostępne są następujące przewodniki dla *Zasobu*:
+Do korzystania z *Kontenera* mogą być przydatne następujące przewodniki:
 
 <PageList path_re="guide/compute/container/"/>
 
