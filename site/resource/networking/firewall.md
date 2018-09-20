@@ -94,7 +94,7 @@ maksymalna liczba filtrów w regule            | 10
 maksymalna liczba stref wewnętrznych w regule | 10
 maksymalna liczba stref zewnętrznych w regule | 10
 
-W razie potrzeby zwiększenia zaproponowanych parametrów [prosimy o kontakt](/TODO).
+W razie potrzeby zwiększenia zaproponowanych parametrów [prosimy o kontakt](/about-us/contact.md).
 
 ## Cennik
 
