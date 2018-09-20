@@ -23,17 +23,17 @@
 
 ## Zarządzanie
 
-Zarządzanie usługą polega na modyfikowaniu zestawu rekordów (ang.*record-set*):
+Zarządzanie *DNS-em* polega na modyfikowaniu zestawu rekordów (ang.*record-set*):
 
  * utworzenie zestawu rekordów określonego typu
  * usuwanie zestawu rekordów
  * dodawanie rekordu w zestawie rekordów
  * usuwanie rekordu w zestawie rekordów
 
-Zarządzanie usługą odbywa się po spełnieniu następujących warunków: 
+Zarządzanie *DNS-em* odbywa się po spełnieniu następujących warunków: 
 
-* usługa znajduje się w stanie ```Online```
-* usługa nie znajduje się w stanie *Ograniczonego użycia*
+* zasób znajduje się w stanie ```Online```
+* zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Lokalizacja
 
