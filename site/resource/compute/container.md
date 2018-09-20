@@ -75,15 +75,11 @@ Dla *Kontenera* dostępne są następujące typowe operacje:
 
 ## Opłaty
 
-Opłaty naliczane są w zależności od wybranego wariantu i ruchu sieciowego
+Opłaty naliczane są w zależności od wybranego wariantu i ruchu sieciowego:
 
-* opłaty za wariant są naliczane w zależności od wybranego wariantu i czasu jego wykorzystania
+* opłaty za wariant są naliczane w zależności od jego rodzaju i czasu jego wykorzystania - czas liczony jest w okresach rozliczeniowych jednej godziny
 
-    * czas wykorzystania jest liczony w okresach rozliczeniowych jednej godziny
-
-* opłaty za dostęp do danych są naliczane w zależności od rozmiaru ruchu sieciowego w GB
-
-<!-- //TODO: Niejasne -->
+* opłaty za ruch sieciowy są naliczane w zależności od jego rozmiaru w GB
 
 ## Ograniczone użycie
 
