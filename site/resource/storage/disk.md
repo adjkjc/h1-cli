@@ -126,11 +126,11 @@ Format pliku do przesłania      | vhdx
 
 ## Cennik
 
-Wariant   | Okres  | Stawka (PLN) | Uwagi
---------- | :----: | -----------: | :----:
-ssd       |   1h   |       0.0020 | 
-volume    |   1h   |       0.0004 | 
-archive   |   1h   |       0.0002 | 
+Wariant   | Okres   | Stawka (PLN) | Uwagi
+--------- | :----:  | -----------: | :----:
+ssd       |   1 h   |       0.0020 | 
+volume    |   1 h   |       0.0004 | 
+archive   |   1 h   |       0.0002 | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
