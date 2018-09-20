@@ -18,6 +18,13 @@ Przykładowe zastosowania:
 * serwery bazodanowe i aplikacyjne
 * przechowywanie dużych plików multimedialnych przez długi czas
 
+TEKST ALTERNATYWNY bez punktów:
+Dysk służy do przechowywania każdego rodzaju danych, podobnie jak dysk twardy, ale dostępny z każdego miejsca za pośrednictwem internetu. Umożliwia swobodny zapis i odczyt jego dowolnych obszarów. Występuje w wariantach różniących się rozmiarem i wydajnością, aby spełnić wymagania w nawet najbardziej wymagających środowiskach. 
+
+Cechuje się łatwą skalowalnością rozmiaru i wydajności, równie łatwo można dostosować liczbę używanych dysków. Elastyczny dobór parametrów gwarantuje odpowiadające potrzebom budżetowanie. HyperOne zapewnia możliwość zaimportowania dysku na platformę i pobrania dysku z platformy, co wyklucza praktyki uzależnienia od dostawcy (vendor lock-in). 
+
+Oferowane dyski charakteryzują się małymi opóźnieniami w działaniu i dużą przepustowością. Zapewniają maksymalne bezpieczeństwo danych w długim czasie użytkowania. Znajdują zastosowanie w serwerach bazodanowych i aplikacyjnych oraz służą do długoterminowego przechowywania dużych plików multimedialnych.
+
 ## Cykl życia
 
 ### Utworzenie
