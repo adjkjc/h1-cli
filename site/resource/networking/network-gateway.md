@@ -2,14 +2,14 @@
 
 ## Przeznaczenie
 
-*Brama sieciowa* zapewnia łączność z *Sieci* do Internetu.
+*Brama sieciowa* zapewnia łączność z *Sieci* do internetu.
 
 ## Utworzenie
 
 *Brama sieciowa* może zostać utworzona po spełnieniu następujących warunków:
 
  * posiadanie w projekcie niewykorzystywanego adresu IP,
- * wszystkie *ogólne* warunki
+ * wszystkie ogólne warunki *utworzenia zasobu*
 
 Utworzenie *Bramy sieciowej* wymaga wskazania *Adresu IP* wcześniej przydzielonego do projektu.
 
@@ -17,15 +17,15 @@ Utworzenie *Bramy sieciowej* wymaga wskazania *Adresu IP* wcześniej przydzielon
 
 *Brama sieciowa* może zostać usunięta po spełnieniu następujących warunków:
 
- * nie jest przywiązany do żadnej *Sieci*
- * wszystkie *ogólne* warunki
+ * zasób nie jest przywiązany do żadnej *Sieci*
+ * wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Zarządzanie
 
-Dostępne są następujące podstawowe operacje:
+Dla *Bramy sieciowej* charakterystyczne są następujące operacje:
 
 * przyłączenie *Bramy sieciowej* do określonej *Sieci*
-* rozłączenie *Bramy sieciowej* od określonej *Sieci*
+* odłączenie *Bramy sieciowej* od określonej *Sieci*
 
 ### Przyłączenie
 
@@ -35,7 +35,7 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 * *Projekt* zawiera *Sieć*, która nie ma przyłączonej żadnej bramy domyślnej
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
-### Rozłączenie
+### Odłączenie
 
 Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
@@ -58,7 +58,7 @@ Brama sieciowa  |   -    |     0.0000 |
 
 ## Przewodniki
 
-Dostępne są następujące przewodniki dla *Zasobu*:
+Do korzystania z *Bramy sieciowej* mogą być przydatne następujące przewodniki:
 
 <PageList path_re="guide/networking/network-gateway/"/>
 
