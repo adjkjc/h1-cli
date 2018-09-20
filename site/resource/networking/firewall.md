@@ -2,7 +2,7 @@
 
 ## Przeznaczenie
 
-*Zapora sieciowa* może być używana jako sposób kontrolowania komunikacji w obu kierunkach (przychodzącej i wychodzącej) z *[Wirtualnej maszyny]()* do przyłączonej *[Sieci]()*.
+*Zapora sieciowa* służy do kontrolowania komunikacji w obu kierunkach (przychodzącej i wychodzącej) z *[Wirtualnej maszyny]()* do przyłączonej *[Sieci]()*.
 
 ## Cykl życia
 
@@ -10,36 +10,34 @@
 
 *Zapora sieciowa* może zostać utworzona po spełnieniu następujących warunków:
 
- * wszystkie *ogólne* warunki
+ * wszystkie ogólne warunki *utworzenia zasobu*
 
 ### Usuwanie
 
 *Zapora sieciowa* może zostać usunięta po spełnieniu następujących warunków:
 
- * nie jest przywiązany do żadnej *Sieci*
- * wszystkie *ogólne* warunki
+ * nie jest przywiązana do żadnej *Sieci*
+ * wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Zarządzanie
 
-### Dedykowane operacje
+Dla *Zapory sieciowej* charakterystyczne są następujące operacje:
 
-Dostępne są następujące podstawowe operacje:
-
- * Przyłączenia zapory sieciowej do *[Sieci](/resource/networking/network.md)*
- * Odłączenia zapory sieciowej od *[Sieci](/resource/networking/network.md)*
- * Dodanie reguły zapory sieciowej kontrolującej ruch przychodzący albo wychodzący
- * Usunięcie reguły zapory sieciowej kontrolującej ruch przychodzący albo wychodzący
+ * przyłączenie zapory sieciowej do *[Sieci](/resource/networking/network.md)*
+ * odłączenie zapory sieciowej od *[Sieci](/resource/networking/network.md)*
+ * dodanie reguły zapory sieciowej kontrolującej ruch przychodzący albo wychodzący
+ * usunięcie reguły zapory sieciowej kontrolującej ruch przychodzący albo wychodzący
 
 W przypadku usunięcia wszystkich reguł mają zastosowanie następujące zasady:
 
  * ruch przychodzący jest zablokowany
- * ruch wychodzący jest dozwolony, jednak serwer nie może uzyskać potwierdzenia odbioru pakietów, które nie zostały dopuszczone przez jakąkolwiek reguły wychodzącego.
+ * ruch wychodzący jest dozwolony, jednak serwer nie może uzyskać potwierdzenia odbioru pakietów, które nie zostały dopuszczone przez jakąkolwiek regułę wychodzącą
 
 #### Przyłączenie
 
 Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
-* utworzenie *Sieci*, [zgodnie z przewodnikiem](/guide/networking/network/creating.md)
+* utworzenie *Sieci* [zgodnie z przewodnikiem](/guide/networking/network/creating.md)
 * zasób znajduje się w stanie ```Rozłączony```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
@@ -66,15 +64,15 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 
 ### Typowe operacje
 
-Dostępne są następujące typowe operacje:
+Dla *Zapory sieciowej* dostępne są następujące typowe operacje:
 
- * Możliwość zmiany wyświetlanej nazwy
+ * zmiana wyświetlanej nazwy
 
-## Ograniczone 
+## Ograniczone użycie
 
 W przypadku ograniczonego użycia:
 
- * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/platform/resource.md#ograniczonego-uzycia)*.
+ * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/platform/resource.md#ograniczonego-uzycia)*
 
 ## Przekazanie
 
@@ -90,13 +88,13 @@ Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji*
 
 Parametr                                      | Wartość 
 --------------------------------------------- | ------:
-Maksymalna liczba reguł ruchu przychodzącego  | 50
-Maksymalna liczba reguł ruchu wychodzącego    | 50
-Maksymalna liczba filtrów w regule            | 10 
-Maksymalna liczba stref wewnętrznych w regule | 10
-Maksymalna liczba stref zewnętrznych w regule | 10
+maksymalna liczba reguł ruchu przychodzącego  | 50
+maksymalna liczba reguł ruchu wychodzącego    | 50
+maksymalna liczba filtrów w regule            | 10 
+maksymalna liczba stref wewnętrznych w regule | 10
+maksymalna liczba stref zewnętrznych w regule | 10
 
-[Napisz do nas](/TODO) jeżeli masz duży projekt i potrzebujesz zwiększyć te parametry.
+W razie potrzeby zwiększenia zaproponowanych parametrów [prosimy o kontakt](/TODO).
 
 ## Cennik
 
@@ -108,7 +106,7 @@ zapora sieciowa |   -    |     0.0000 | TODO: Add service
 
 ## Przewodniki
 
-Dostępne są następujące przewodniki dla *Zasobu*:
+Do korzystania z *Zapory sieciowej* mogą być przydatne następujące przewodniki:
 
 <PageList path_re="guide/networking/firewall/"/>
 
