@@ -23,3 +23,5 @@ HyperOne to także zespół specjalistów służących wsparciem w zakresie proj
 <PageList path_re="/services/."/>
 
 ## O platformie
+
+Korzystanie z usług odbywa się m.in. za pośrednictwem zaprojektowanej przez nas i stale rozwijanej platformy, umożliwiającej pełne zarządzanie usługami. 
