@@ -7,6 +7,7 @@
 Główne zalety:
 
 * łatwa skalowalność rozmiaru, wydajności i liczby dysków: możliwość zmiany rozmiaru nawet podczas pracy wykorzystującej go *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*
+* możliwość zaimportowania dysku na platformę i pobrania dysku z platformy wykluczająca uzależnienie od dostawcy (vendor lock-in)
 * małe opóźnienia w działaniu
 * duża przepustowość 
 * maksymalne bezpieczeństwo danych w długim czasie użytkowania
