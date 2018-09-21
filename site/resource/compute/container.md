@@ -2,9 +2,18 @@
 
 ## Przeznaczenie
 
-*Kontener* możesz wykorzystać do uruchamiania aplikacji na podstawie obrazów kontenerów. 
+*Kontener* wykorzystuje się do uruchamiania aplikacji na podstawie obrazów kontenerów. 
 
-Pozwala to świadczyć usługi bez konieczności zarządzania całym serwerem.
+Główne zalety:
+
+* świadczenie usług bez konieczności zarządzania całym serwerem
+* zapewnienie spójności środowiska deweloperskiego i platformy
+* możliwość uruchomienia aplikacji wykonanych w większości popularnych języków, np. Java, PHP, Python, C++, NodeJS
+
+Przykładowe zastosowania:
+
+* aplikacje webowe: strony, portale i sklepy internetowe
+* bazy danych
 
 ## Cykl życia
 
@@ -12,21 +21,21 @@ Pozwala to świadczyć usługi bez konieczności zarządzania całym serwerem.
 
 *Kontener* może zostać utworzony po spełnieniu następujących warunków:
 
-* wszystkie *ogólne* warunki.
+* wszystkie ogólne warunki *utworzenia zasobu*
 
-Możliwe jest określenie następujących parametrów podczas utworzenia;
+Podczas tworzenia można określić następujące parametry:
 
 * nazwa
 * wariant
-* obraz dostępny w ogólnodostępnym repozytorium np. na [Docker Hub](https://hub.docker.com/)
+* obraz dostępny w ogólnodostępnym repozytorium, np. na [Docker Hub](https://hub.docker.com/)
 * punkty montowania danych w *[Vault](/resource/storage/vault.md)*
 * zmienne środowiskowe
 
 ### Usuwanie
 
-*Kontener* może zostać utworzony po spełnieniu następujących warunków:
+*Kontener* może zostać usunięty po spełnieniu następujących warunków:
 
-* wszystkie *ogólne* warunki.
+* wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Warianty
 
@@ -42,23 +51,23 @@ performance x2         |   6    | 1024 MB |
 
 ## Zarządzanie
 
-Dostępne są następujące podstawowe operacje:
+Dla *Kontenera* charakterystyczne są następujące operacje:
 
-* Zatrzymanie kontenera
-* Uruchomienie kontenera
-* Odczyt dziennika zdarzeń
-* Restartowanie kontenera
+* zatrzymanie kontenera
+* uruchomienie kontenera
+* odczyt dziennika zdarzeń
+* restartowanie kontenera
 
 ### Dostęp
 
-Dostęp do kontenera możliwy jest poprzez wskazany przez użytkownika port aplikacji z wykorzystaniem:
+Dostęp do *Kontenera* możliwy jest poprzez wskazany przez użytkownika port aplikacji z wykorzystaniem:
 
 * protokołu HTTP
 * wolnego portu TCP/UDP wybranego przez platformę
 
 ### Typowe operacje
 
-Dostępne są następujące typowe operacje:
+Dla *Kontenera* dostępne są następujące typowe operacje:
 
 * możliwość zmiany wyświetlanej nazwy
 * zarządzanie danymi dostępowymi
@@ -66,13 +75,10 @@ Dostępne są następujące typowe operacje:
 
 ## Opłaty
 
-* opłaty naliczane są w zależności od wybranego wariantu i ruchu sieciowego
+Opłaty naliczane są w zależności od wybranego wariantu i ruchu sieciowego:
 
-* opłaty za wariant są naliczane w zależności od wybranego wariantu i czasu jego wykorzystania
-
-    * czas wykorzystania jest liczony w okresach rozliczeniowych jednej godziny
-
-* opłaty za ruch sieciowy są naliczane w zależności od rozmiaru ruchu sieciowego w GB
+* opłaty za wariant są naliczane w zależności od jego rodzaju i czasu jego wykorzystania - czas liczony jest w okresach rozliczeniowych jednej godziny
+* opłaty za ruch sieciowy są naliczane w zależności od jego rozmiaru w GB
 
 ## Ograniczone użycie
 
@@ -89,7 +95,7 @@ W przypadku ograniczonego użycia:
 
 Parametr              | Wartość | Uwagi
 :-------------------- | ------: | ---
-System operacyjny     |   Linux |
+system operacyjny     | Linux   |
 
 ## Cennik
 
@@ -116,7 +122,7 @@ Transfer is not availabe due following reason:
 
 ## Przewodniki
 
-Dostępne są następujące przewodniki dla *Zasobu*:
+Do korzystania z *Kontenera* mogą być przydatne następujące przewodniki:
 
 <PageList path_re="guide/compute/container/"/>
 

@@ -2,15 +2,17 @@
 
 ## Przeznaczenie
 
-*Adapter sieciowy* zapewnia łączność dla określonego *Zasobu*. Stanowi odpowiednik karty sieciowej.
+*Adapter sieciowy* zapewnia łączność określonemu *Zasobowi*. Stanowi odpowiednik karty sieciowej. *Adapter sieciowy* musi mieć przypisany *Adres IP* z *Sieci*, do której jest przyłączony.
 
-*Adapter sieciowy* musi mieć przypisany *Adres IP* z *Sieci* do której jest przyłączony.
+Główne zalety:
+
+Przykładowe zastosowania:
 
 ## Cykl życia
 
 ### Utworzenie
 
-*Adapter sieciowy* może zostać utworzona wyłącznie podczas przyłączenia do innego *Zasobu*.
+*Adapter sieciowy* może zostać utworzony wyłącznie podczas przyłączenia do innego *Zasobu*.
 
 ### Usuwanie
 
@@ -18,9 +20,7 @@
 
 ## Zarządzanie
 
-### Dedykowane operacje
-
-Dostępne są następujące podstawowe operacje:
+Dla *Adapteru sieciowego" charakterystyczne są następujące operacje:
 
  * dodanie *Adresu IP*
  * zastąpienie *Adresu IP*
@@ -49,8 +49,7 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 
 ## Opłaty
 
- * opłaty są naliczane za ruch sieciowy
- * opłaty za ruch sieciowy są naliczane w zależności od rozmiaru ruchu w GB
+Opłaty naliczane są za ruch sieciowy - w zależności od rozmiaru ruchu w GB.
 
 ## Lokalizacja
 
@@ -68,21 +67,21 @@ Parametr            | Wartość   | Uwagi
 Minimalna prędkość  |   10 Mbps |
 Maksymalna prędkość | 1000 Mbps |
 
-[Napisz do nas](/about-us/contact.md) jeżeli masz duży projekt i potrzebujesz zwiększyć te parametry.
+W razie potrzeby zwiększenia zaproponowanych parametrów [prosimy o kontakt](/about-us/contact.md).
 
 ### Cennik
 
 Nazwa                       | Okres  | Cena (PLN) | Uwagi
 --------------------------- | :----: | ---------: | :----:
-ruch przychodzący           |   1h   |     0.0200 | 
-ruch wychodząc              |   -    |     0.0000 | 
+ruch przychodzący           |  1 h   |     0.0200 | 
+ruch wychodzący             |   -    |     0.0000 | 
 adapter sieciowy            |   -    |     0.0000 | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
 ## Przewodniki
 
-Dostępne są następujące przewodniki dla *Zasobu*:
+Do korzystania z *Adaptera sieciowego* mogą być przydatne następujące przewodniki:
 
 <PageList path_re="guide/networking/network-adapter/"/>
 

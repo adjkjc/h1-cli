@@ -18,7 +18,7 @@ Przykładowe zastosowania:
 
 *Vault* może zostać utworzony po spełnieniu następujących warunków: 
 
-* wszystkie *ogólne* warunki.
+* wszystkie ogólne warunki *utworzenia zasobu*
 
 Nowy *Vault* może być utworzony w następujący sposób:
 
@@ -29,18 +29,22 @@ Nowy *Vault* może być utworzony w następujący sposób:
 
 *Vault* może zostać usunięty po spełnieniu następujących warunków: 
 
- * nie istnieją utworzone na jego bazie żadna *[Migawka](/resource/storage/snapshot.md)*
- * wszystkie ogólne warunki
+ * nie istnieje żadna utworzona na jego bazie *[Migawka](/resource/storage/snapshot.md)*
+ * wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Zarządzanie
 
-Dostępne są następujące podstawowe operacje:
+Dla *Vaulta* charakterystyczne są następujące operacje:
 
-* Włączenie dostępu
-* Wyłączanie dostęp
-* Zwiększenie rozmiaru
+* włączenie dostępu
+* wyłączanie dostępu
+* zwiększenie rozmiaru
 
+<<<<<<< HEAD
 Wykorzystywana przestrzeń *Vault* stanowi rozmiar zgromadzonych plików i wszystkich *Migawek*.
+=======
+Na rozmiar danych *Vault* składa się rozmiar zgromadzonych plików i wszystkich *Migawek*.
+>>>>>>> 8a2ab5fa8298975e5b3a29c0800913b900227100
 
 ### Włączenie dostępu
 
@@ -67,7 +71,7 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 
 ### Dostęp
 
-Dostęp do Vault możliwe jest z wykorzystaniem m. in. następujących narzędzi:
+Dostęp do *Vault* umożliwiają następujące narzędzia:
 
 * ssh
 * sftp
@@ -75,7 +79,7 @@ Dostęp do Vault możliwe jest z wykorzystaniem m. in. następujących narzędzi
 * git
 * rsync
 
-Dostęp do *Vault* możliwe jest z wykorzystaniem następujących danych dostępowych:
+Dostęp do *Vault* umożliwiają następujące dane dostępowe:
 
 * hasło
 * klucze SSH
@@ -84,23 +88,23 @@ Zarządzanie dostępami zostało wyjaśnione w [ogólnym omówieniu zarządzania
 
 ### Typowe operacje
 
-Dostępne są następujące typowe operacje:
+Dla *Vault* dostępne są następujące typowe operacje:
 
-* Możliwość zmiany wyświetlanej nazwy
-* Zarządzanie danymi dostępowymi
+* możliwość zmiany wyświetlanej nazwy
+* zarządzanie danymi dostępowymi
 
 ## Opłaty
 
-* opłaty naliczane są za przechowywania i ruch sieciowy
+Opłaty naliczane są za przechowywanie i ruch sieciowy.
 
-* opłaty za przechowywanie są naliczane w zależności od rozmiaru *Vault* i czasu jego wykorzystania
+* Opłaty za przechowywanie są naliczane w zależności od rozmiaru *Vault* i czasu jego wykorzystania:
 
     * rozmiar w jednostkach GB
-    * czas wykorzystania jest liczony w okresach rozliczeniowych jednej godziny
+    * czas wykorzystania liczony w okresach rozliczeniowych jednej godziny
 
-* opłaty są naliczane za każdy GB przestrzeni dyskowej dostępnej w okresie rozliczeniowym
+* Ppłaty za ruch sieciowy naliczane są w zależności od rozmiaru ruchu w GB
 
-* opłaty za ruch sieciowy są naliczane w zależności od rozmiaru ruchu w GB
+Opłaty naliczane są za każdy GB przestrzeni dyskowej dostępnej w okresie rozliczeniowym.
 
 ## Ograniczone użycie
 
@@ -115,15 +119,21 @@ Parametr              | Wartość | Uwagi
 Minimalny rozmiar     | 1       |
 Maksymalny rozmiar    | 1000    |
 
-[Napisz do nas](/about-us/contact.md) jeżeli potrzebujesz zwiększyć te limity.
+W razie potrzeby zwiększenia tych limitów [prosimy o kontakt](/about-us/contact.md).
 
 ## Cennik
 
 Nazwa              | Okres  | Cena (PLN) | Uwagi
 ------------------ | :----: | ---------: | :----:
+<<<<<<< HEAD
 Vault              |   1h   |     0.0004 | 
 Ruch przychodzący  |   1h   |     0.0000 | 
 Ruch wychodzący    |   1h   |     0.0200 |
+=======
+vault              |  1 h   |     0.0004 | 
+ruch przychodzący  |  1 h   |     0.0000 | 
+ruch wychodzący    |  1 h   |     0.0200 |
+>>>>>>> 8a2ab5fa8298975e5b3a29c0800913b900227100
 
 <!-- //TODO: Add service for traffic -->
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
@@ -136,7 +146,7 @@ Transfer is not availabe due following reason:
 
 ## Przewodniki
 
-Dostępne są następujące przewodniki dla *Zasobu*:
+Do korzystania z *Vaulta* mogą być przydatne następujące przewodniki:
 
 <PageList path_re="guide/storage/vault/"/>
 

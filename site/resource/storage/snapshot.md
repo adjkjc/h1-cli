@@ -2,8 +2,7 @@
 
 ## Przeznaczenie
 
-*Migawka* to uchwycony w danym momencie stan *[Vault](/resource/storage/vault.md)*. 
-<!-- TODO: Skąd się wzięła nazwa "Vault"? -->
+*Migawka* to uchwycony w danym momencie stan zasobu *[Vault](/resource/storage/vault.md)*. Działa podobnie jak *Obraz*, z tą różnicą, że zapisuje jedynie zmienione dane. 
 
 Główne zalety:
 * rozliczana tylko za zmienione dane
@@ -27,7 +26,7 @@ Przykładowe zastosowania:
 
 Migawka może zostać usunięta po spełnieniu następujących warunków: 
 
-* wszystkie *ogólne* warunki
+* wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Zarządzanie
 
@@ -40,7 +39,7 @@ Dostępne są następujące typowe operacje:
 
 ## Opłaty
 
-* Zabezpieczone dane uwzględniane są w przestrzeni wykorzystywanej przez *Vault*, co wpływa na koszt tej usługi.
+Zabezpieczone dane zajmują przestrzeń wykorzystywaną przez *Vault*, co wpływa na koszt tej usługi.
 
 ## Ograniczone użycie
 
@@ -65,7 +64,7 @@ migawka            |   -    |     0.0000 |
 
 ## Przewodniki
 
-Dostępne są następujące przewodniki dla *Zasobu*:
+Do korzystania z *Migawki* mogą być przydatne następujące przewodniki:
 
 <PageList path_re="guide/storage/snapshot/"/>
 

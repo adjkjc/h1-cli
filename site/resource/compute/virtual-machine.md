@@ -2,32 +2,45 @@
 
 ## Przeznaczenie
 
-*Wirtualna maszyna* zapewnia skalowalną moc obliczeniową w chmurze. Środowisko zostało zaprojektowane tak, aby zapewnić przewidywalną i stałą wydajności dla długotrwałych zadań. Mnogość konfiguracji pozwala spełnić spełnić wymaganiom nawet najbardziej wymagających środowisk.
+*Wirtualna maszyna* dostarcza skalowalną moc obliczeniową w chmurze. Platformę zaprojektowano tak, aby zapewnić przewidywalną i stałą wydajność dla długotrwałych zadań, a wielość możliwych konfiguracji pozwala sprostać wymaganiom nawet najbardziej wymagających środowisk.
 
-*Wirtualna maszyna* obsługuje wszystkie wiodące systemy operacyjne, takie jak MS Windows Server, każdą popularną dystrybucję Linuksa, taką jak Ubuntu, Debian lub inne systemy operacyjne, w tym FreeBSD, Mikrotik RouterOS - możesz je uzyskać przez *[ISO](/resource/storage/iso)* lub *[Obraz](/resource/storage/image.md)*. 
+*Wirtualna maszyna* obsługuje wiodące systemy operacyjne, takie jak MS Windows Server i popularne dystrybucje Linuksa, np. Ubuntu, Debian, a także inne systemy operacyjne, w tym FreeBSD, Mikrotik RouterOS.
+
+Główne zalety:
+* pełna izolacja *Wirtualnej maszyny*  zapewniająca najwyższy poziom bezpieczeństwa
+* możliwość podłączenia i odłączenia *Dysków* w czasie pracy *Wirtualnej maszyny*
+* podłączenie aż do 16 dysków  do jednej *Wirtualnej maszyny*
+* możliwość uzyskania systemu operacyjnego przez *[ISO](/resource/storage/iso)* lub *[Obraz](/resource/storage/image.md)*
+
+Przykładowe zastosowania:
+* strony, portale i sklepy internetowe
+* systemy księgowe, sprzedażowe, magazynowe
+* usługi internetowe
 
 ## Cykl życia
 
 ### Utworzenie
 
-*Maszyna wirtualna* może zostać utworzona po spełnieniu następujących warunków:
+*Wirtualna maszyna* może zostać utworzona po spełnieniu następujących warunków:
 
- * dostępna przestrzeń adresowa w *[Sieć](/resource/networking/network.md)* (jeśli zamierzasz dołączyć do *Sieci*)
- * wszystkie *ogólne* warunki.
+ * dostępna przestrzeń adresowa w *[Sieci](/resource/networking/network.md)* (jeśli zamierzasz dołączyć do *Sieci*)
+ * wszystkie ogólne warunki *utworzenia zasobu*
 
 ### Usuwanie
 
-*Wirtualna maszyna* może zostać usunięta, jeśli spełnione są wszystkie następujące warunki:
+*Wirtualna maszyna* może zostać usunięta po spełnieniu następujących warunków:
 
- * wszystkie *ogólne* warunki.
+ * wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Warianty
 
 Warianty *Wirtualnych maszyn* są pogrupowane na podstawie zależności między rozmiarem pamięci, mocą obliczeniową i innymi głównymi funkcjami.
 
-### Podstawowego przeznaczenie
+### Podstawowego przeznaczenia
 
-Jest to grupa wariantów *Wirtualnych maszyn* do podstawowego programowania i testowania, w których wydajność przetwarzania vCPU jest dzielona pomiędzy grupę *Maszyn wirtualnych* opartych na równym współudziale podstawie mocy obliczeniowej.
+To grupa wariantów *Wirtualnych maszyn* do podstawowego programowania i testowania, w której wydajność przetwarzania vCPU jest dzielona pomiędzy grupę *Maszyn wirtualnych* opartych na równym współudziale podstawie mocy obliczeniowej.
+
+<!--TODO: nie rozumiem-->
 
 Nazwa      | vCPU | Pamięć (GB) | Liczba IPv4 | Liczba dysków | Liczba interfejsy sieciowych
 ---------- | :--: | :---------: | :---------: | :-----------: | :--------------------:  
@@ -37,7 +50,7 @@ a1.small   | 1    |           2 | 1           | 2             | 1
 a1.medium  | 2    |           4 | 1           | 2             | 1                       
 a1.large   | 4    |           7 | 1           | 2             | 1                       
 
-### Ogólnego przeznaczenie
+### Ogólnego przeznaczenia
 
 Nazwa      | vCPU | Pamięć (GB) | Liczba IPv4 | Liczba dysków  | Liczba interfejsów sieciowych
 ---------- | :--: | :---------: | :---------: | :-----------: | :--------------------:
@@ -68,20 +81,18 @@ r4.large   | 12   |         120 | 32          | 64            | 8
 r4.xlarge  | 16   |         250 | 32          | 64            | 8                       
 r4.xxlarge | 32   |         488 | 32          | 64            | 8     
 
-Na życzenie w celu zaspokojenia potrzeb szczególnych przypadków (np. licencjonowania) możliwe jest obniżenie ilości vCPU lub wielkości pamięci dla danego wariantu. Nie ma to jednak wpływu na fakturowanie i standardowe opłaty wariantowe przed modyfikacją.
+W szczególnych przypadkach (np. licencjonowania) możliwe jest obniżenie ilości vCPU lub wielkości pamięci dla danego wariantu. Nie ma to jednak wpływu na fakturowanie i standardowe opłaty wariantowe przed modyfikacją.
 
 <!-- ### Sharing (Access Rights) -->
 
 ## Zarządzanie
 
-### Dedykowane operacje
+Dla *Wirtualnej maszyny* charakterystyczne są następujące operacje:
 
-Dostępne są następujące podstawowe operacje
-
- * Uruchomienie 
- * Zatrzymanie, co powoduje bezpiecznie zamknięcie systemu operacyjnego
- * Wyłączenie, co powoduje działanie podobnie do odcięcia napięcia
- * Zrestartowanie
+ * uruchomienie 
+ * zatrzymanie, co powoduje bezpiecznie zamknięcie systemu operacyjnego
+ * wyłączenie, co powoduje działanie podobnie do odcięcia napięcia
+ * zrestartowanie
 
 ### Powiązane zasoby
 
@@ -89,18 +100,18 @@ Dostępne są następujące podstawowe operacje
 
 Zarządzanie dyskami *Wirtualnej maszyny* może być wykonywane w stanie `Pracujący` lub `Wyłączony`.
 
-Pierwszy dołączony *Dysk* jest dyskiem systemu operacyjnego i ma następujące cechy:
+Pierwszy dołączony *Dysk* jest przeznaczany na system operacyjny i ma następujące cechy:
 
- * używane do rozruchu *Wirtualnej maszyny*
+ * używany do rozruchu *Wirtualnej maszyny*
  * dołączony do kontrolera dysku IDE
- * można zarządzać nim tylko w stanie `Wyłączony` *Wirtualnej maszyny*
+ * można zarządzać nim tylko, gdy *Wirtualna maszyna* jest w stanie `Wyłączony` 
 
 Dodatkowe *Dyski* mają następujące cechy:
 
- * dołączony do kontrolera dysku SCSI
- * można zarządzać nimi w stanie `Pracujący` lub `Wyłączony` *Wirtualnej maszyny*
+ * dołączone do kontrolera dysku SCSI
+ * można zarządzać nimi, gdy *Wirtualna maszyna* jest w stanie `Pracujący` lub `Wyłączony`
 
-Następujące operacje przeznaczone do zarządzania *Dyskami* *Wirtualnej maszyn* są dostępne:
+Do zarządzania *Dyskami* *Wirtualnej maszyn* służą następujące operacje:
 
  * dołączenie *Dysku* do *Wirtualnej maszyny*
  * odłączenie *Dysku* od *Wirtualnej maszyny*
@@ -114,86 +125,81 @@ Proces wstrzykiwania metadanych wymaga, aby pierwszy *Dysk* miał jedną partycj
  * etykieta "CLOUDMD"
  * system plików `fat32`
 
-Jeżeli taka partycja zostanie znaleziona, następujące pliki zostaną na nią skopiowane
+Jeżeli taka partycja zostanie znaleziona, zostaną na nią skopiowane następujące pliki:
 
  * ```cloud.json``` - plik zawierający metadane chmury w postaci JSON
- * ```user.json``` - plik zawierający metadane użytkownika wprowadzone podczas utworzenia *Wirtualnej maszyny* przez 
-użytkownika
+ * ```user.json``` - plik zawierający metadane użytkownika wprowadzone podczas utworzenia *Wirtualnej maszyny* przez użytkownika
 
-Metadane chmury obejmują wszystkie informacje dotyczące konfiguracji *Wirtualnej maszyny*, które mogą być przydatne
-podczas konfiguracji systemu operacyjnego. Między innymi *Adresy IP* przypisane do *Interfejsów sieciowych*, a także 
-dane uwierzytelniające (hasła lub klucze ssh).
+Metadane chmury obejmują wszystkie informacje dotyczące konfiguracji *Wirtualnej maszyny*, które mogą być przydatne podczas konfiguracji systemu operacyjnego, m.in. *Adresy IP* przypisane do *Interfejsów sieciowych*, a także dane uwierzytelniające (hasła lub klucze ssh).
 
-Jeśli plik `user.data` zawiera na początku pliku `shebang` (`#!`), to zostanie wykonany, jeśli zostanie znaleziony 
-odpowiedni interpreter (zdefiniowany przez `shebang`).
+Jeśli plik `user.data` zawiera na początku pliku `shebang` (`#!`), to zostanie wykonany, jeśli zostanie znaleziony odpowiedni interpreter (zdefiniowany przez `shebang`).
 
 #### Interfejsy sieciowe
 
-Zarządzanie *Interfejsami sieciowymi* *Wirtualnej maszyny* może być wykonywane `Wyłączony`.
+Zarządzanie *Interfejsami sieciowymi* *Wirtualnej maszyny* może być wykonywane w stanie `Wyłączony`.
 
-Następujące operacje przeznaczone do zarządzania *Interfejsami sieciowymi* *Wirtualnej maszyn* w stanie `Wyłączony` są 
-dostępne:
+Do zarządzania *Interfejsami sieciowymi* *Wirtualnej maszyny* w stanie `Wyłączony` służą następujące operacje:
 
-* Dodanie nowego
-* Usunięcie wybranego
+* dodanie nowego interfejsu
+* usunięcie wybranego interfejsu
 
 #### Napęd DVD
 
 Każda *Wirtualna maszyna* posiada domyślnie 1 napęd DVD *Wirtualnej maszyny*.
 
-Następujące operacje przeznaczone do zarządzania napędem DVD są dostępne:
+Do zarządzania napędem DVD służą następujące operacje:
 
 * wsunięcie *ISO*
 * wysunięcie *ISO*
 
 ### Dodatkowe operacje
 
-Następujące dodatkowe operacje przeznaczone do zarządzania *Wirtualną maszyną* są dostępne:
+Do zarządzania *Wirtualną maszyną* są przeznaczone następujące dodatkowe operacje:
 
-* Dostęp do konsoli poprzez port szeregowy
-* Dostęp do graficznej konsoli
-* Zarządzanie metadanymi użytkownika
-* Reset hasła 
-* Podgląd parametrów pracy *Dysków*, *Interfejsów sieciowych* i CPU
+* dostęp do konsoli poprzez port szeregowy
+* dostęp do graficznej konsoli
+* zarządzanie metadanymi użytkownika
+* reset hasła 
+* podgląd parametrów pracy *Dysków*, *Interfejsów sieciowych* i CPU
 
 ## Dostęp
 
-Dostęp sieciowy do systemu operacyjnego działającego w ramach *Wirtualnej maszyny* różni się i zależy m. in. od wykorzystanego *[Rekomendowanego Obrazu](/platform/recommended-images.md)*. Obsługiwane protokoły to m. in.:
+Dostęp sieciowy do systemu operacyjnego działającego w ramach *Wirtualnej maszyny* różni się i zależy m.in. od wykorzystanego *[Rekomendowanego Obrazu](/platform/recommended-images.md)*. Obsługiwane protokoły to m. in.:
 
 * SSH (Secure Shell) dla dystrybucji opartych na systemie Linux
 * RDP (Remote Desktop Protocol) dla MS Windows Server
 
-Platforma udostępnia także dostęp poprzez:
+Platforma oferuje także dostęp poprzez:
 
-* konsolę poprzez port szeregowy
+* konsolę z wykorzystaniem portu szeregowego
 * graficzną konsolę
 
-Dostęp do *Wirtualnej maszyny* w zależności od wykorzystanego systemu operacyjnego możliwy jest z wykorzystaniem następujących danych dostępowych:
+Dostęp do *Wirtualnej maszyny* zależy od wykorzystanego systemu operacyjnego i jest możliwy za pomocą następujących danych dostępowych:
 
 * hasło
 * klucze SSH
 
-Zarządzanie danymi dostępowymi wyjaśnione jest w [ogólnym omówieniu zarządzania danymi dostępowymi](/platform/resource.html#dane-dostepowe).
+Zarządzanie danymi dostępowymi wyjaśnione jest w [Ogólnym omówieniu zarządzania danymi dostępowymi](/platform/resource.html#dane-dostepowe).
 
 ### Typowe operacje
 
-Dostępne są następujące typowe operacje dla *Dziennika*:
+Dla *Wirtualnej maszyny* dostępne są następujące typowe operacje:
 
 * zmiana nazwy
 * zarządzanie *Tagami*
 
 ## Opłaty
 
-* Opłaty są naliczane na podstawie wariantu i czasu.
+Opłaty naliczane są na podstawie wariantu i czasu.
 
-* Możliwe są dodatkowe opłaty dotyczące opcjonalnych *Zasobów* używanych przez *Maszynę wirtualną*. Większości przypadków są to: *Dysk*, trwały *Adres IP* i ruch sieciowy poprzez *Interfejs sieciowy*.
+Możliwe są dodatkowe opłaty dotyczące opcjonalnych *Zasobów* używanych przez *Maszynę wirtualną*. W większości przypadków należą do nich: *Dysk*, trwały *Adres IP* i ruch sieciowy poprzez *Interfejs sieciowy*.
 
 ## Ograniczone użycie
 
 W przypadku ograniczonego użycia:
  
  * *Wirtualna maszyna* ulega wyłączeniu
- * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/platform/resource.md#ograniczone-uzycie)*.
+ * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/platform/resource.md#ograniczone-uzycie)*
 
 ## Lokalizacja
 
@@ -208,48 +214,48 @@ Typ wirtualizacji                     | Typ 1
 
 ## Cennik
 
-### Na-żądanie
+### Na żądanie
 
 #### Podstawowe użycie
 
 Wariant    | PLN    | Okres 
 ---------- | -----: | :--:
-a1.nano    | 0.0153 | 1h
-a1.micro   | 0.0263 | 1h
-a1.small   | 0.0481 | 1h
-a1.medium  | 0.0962 | 1h
-a1.large   | 0.1706 | 1h
+a1.nano    | 0.0153 | 1 h
+a1.micro   | 0.0263 | 1 h
+a1.small   | 0.0481 | 1 h
+a1.medium  | 0.0962 | 1 h
+a1.large   | 0.1706 | 1 h
 
 #### Ogólne użycie
 
 Wariant    | PLN    | Okres 
 ---------- | -----: | :--:
-m2.tiny    | 0.0393 | 1h
-m2.small   | 0.0612 | 1h
-m2.medium  | 0.1224 | 1h
-m2.large   | 0.1880 | 1h
-m2.xlarge  | 0.3978 | 1h
-m2.xxlarge | 0.5946 | 1h
+m2.tiny    | 0.0393 | 1 h
+m2.small   | 0.0612 | 1 h
+m2.medium  | 0.1224 | 1 h
+m2.large   | 0.1880 | 1 h
+m2.xlarge  | 0.3978 | 1 h
+m2.xxlarge | 0.5946 | 1 h
 
 #### Intensywne wykorzystanie procesora
 
 Wariant    | PLN    | Okres 
 ---------- | -----: | :--:
-c3.light   | 0.8002 | 1h
-c3.small   | 1.0849 | 1h
-c3.medium  | 2.1698 | 1h
-c3.large   | 3.2546 | 1h
-c3.xlarge  | 4.3395 | 1h
+c3.light   | 0.8002 | 1 h
+c3.small   | 1.0849 | 1 h
+c3.medium  | 2.1698 | 1 h
+c3.large   | 3.2546 | 1 h
+c3.xlarge  | 4.3395 | 1 h
 
 #### Intensywne wykorzystanie pamięci
 
 Wariant    | PLN    | Okres 
 ---------- | -----: | :--:
-r4.small   | 1.2143 | 1h
-r4.medium  | 1.8128 | 1h
-r4.large   | 2.4287 | 1h
-r4.xlarge  | 4.9814 | 1h
-r4.xxlarge | 9.7303 | 1h 
+r4.small   | 1.2143 | 1 h
+r4.medium  | 1.8128 | 1 h
+r4.large   | 2.4287 | 1 h
+r4.xlarge  | 4.9814 | 1 h
+r4.xxlarge | 9.7303 | 1 h 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
@@ -261,7 +267,7 @@ Transfer is not availabe due following reason:
 
 ## Przewodniki
 
-Dostępne są następujące przewodniki dla *Zasobu*:
+Do korzystania z *Wirtualnej maszyny* mogą być przydatne następujące przewodniki:
  
 <PageList path_re="guide/compute/virtual-machine/"/>
 

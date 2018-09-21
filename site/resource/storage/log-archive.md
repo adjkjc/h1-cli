@@ -18,19 +18,17 @@ Przykładowe zastosowanie:
 
 *Dziennik* może zostać utworzony po spełnieniu następujących warunków: 
 
-* wszystkie *ogólne warunki*.
+* wszystkie ogólne warunki *utworzenia zasobu*
 
 ### Usuwanie
 
 *Dziennik* może zostać usunięty po spełnieniu następujących warunków:
 
-* wszystkie *ogólne warunki*.
+* wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Zarządzanie 
 
-### Typowe operacje
-
-Dostępne są następujące podstawowe operacje na *Dzienniku*:
+Dla *Dziennika* charakterystyczne są następujące operacje:
 
 * wyłączenie
 * włączenie
@@ -59,14 +57,14 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 
 ### Typowe operacje
 
-Dostępne są następujące typowe operacje dla *Dziennika*:
+Dla *Dziennika* dostępne są następujące typowe operacje:
 
 * zmiana nazwy
 * zarządzanie *Tagami*
 
 ## Dostęp
 
-Wpisy do *Dziennika* mogą zostać wprowadzone z użyciem protokołu Syslog opisanym w [RFC 5424](https://tools.ietf.org/html/rfc5424).
+Wpisy do *Dziennika* mogą zostać wprowadzone z użyciem protokołu Syslog opisanego w [RFC 5424](https://tools.ietf.org/html/rfc5424).
 
 Zapisywanie do *Dziennika* jest możliwe za pomocą następujących typów danych dostępowych:
 
@@ -76,9 +74,9 @@ Zarządzanie danymi dostępowymi wyjaśnione jest w [ogólnym omówieniu zarząd
 
 ## Opłaty
 
-* Opłaty są naliczane na podstawie czasu wykorzystania.
+Opłaty są naliczane na podstawie czasu wykorzystania.
 
-* Czas wykorzystania jest liczony w okresach rozliczeniowych jednego miesiąca.
+Czas wykorzystania jest liczony w okresach rozliczeniowych jednego miesiąca.
 
 ## Ograniczone użycie
 
@@ -107,15 +105,15 @@ Protokół wejściowy | syslog
 
 ## Cennik
 
-Nazwa        | Okres  | Cena (PLN) |  Uwagi
------------: | -----: | ---------: | :----:
-Dziennik     |  1M    |     1.0000 |
+Nazwa        | Okres    | Cena (PLN) |  Uwagi
+-----------: | -----:   | ---------: | :----:
+Dziennik     |  1 ms    |     1.0000 |
 
 * Podane ceny są cenami netto i nie zawierają podatku VAT*
 
 ## Przewodniki
 
-Dostępne są następujące przewodniki dla *Zasobu*:
+Do korzystania z *Dziennika* mogą być przydatne następujące przewodniki:
 
 <PageList path_re="guide/storage/log-archive/"/>
 

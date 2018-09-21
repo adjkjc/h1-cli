@@ -2,38 +2,42 @@
 
 ## Przeznaczenie
 
-*Replika* jest rozwiązaniem umożliwiającym niemal w czasie rzeczywistym kopiowanie danych zmodyfikowanych w maszynach wirtualnych działających w lokalnym środowisku Hyper-V *Użytkownika*. Umożliwia to  w razie potrzeby odtworzenia wirtualnej maszyny w chmurze. Stanowi to łatwe w użyciu rozwiązanie, które może zredukować czas powrotu organizacji do funkcjonowania po awarii (RTO) i skrócić moment powrotu (RPO).
+*Replika* umożliwia kopiowanie niemal w czasie rzeczywistym danych zmodyfikowanych w wirtualnych maszynach działających w lokalnym środowisku Hyper-V *Użytkownika*. Umożliwia to w razie potrzeby odtworzenie *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*. 
 
+Główne zalety:
+* łatwe w użyciu rozwiązanie do zabezpieczenia danych
+* pomaga zredukować czas powrotu organizacji do funkcjonowania po awarii (RTO) i skrócić moment powrotu (RPO)
+
+Przykładowe zastosowania:
+* istotna składowa procesu odbudowy organizacji po krytycznym zdarzeniu
+
+<!-- TODO: Czy wszystko?-->
 ## Cykl życia
 
-### Utworzenia
+### Utworzenie
 
 *Replika* może zostać utworzona po spełnieniu następujących warunków:
 
-* lokalny serwer Hyper-V ma skonfigurowane połączenie replikacji,
-* lokalny dyski spełniają parametry techniczne dla zasobu *Dysk*,
-* wszystkie *ogólne* warunki.
+* lokalny serwer Hyper-V ma skonfigurowane połączenie replikacji
+* lokalne dyski spełniają parametry techniczne dla zasobu *Dysk*
+* wszystkie ogólne warunki *utworzenia zasobu*
 
-Utworzenie repliki odbywa się poprzez zlecenie replikacji w lokalnym serwerze Hyper-V poprzez skonfigurowane połączenie replikacji. W momencie utworzenia repliki tworzone są *Dyski* w wariancie ```replica``` dla każdego lokalnego dysku replikowanej wirtualnej maszyny.
+Utworzenie repliki odbywa się poprzez zlecenie replikacji w lokalnym serwerze Hyper-V poprzez skonfigurowane połączenie replikacji. W momencie utworzenia repliki uruchamiane są *Dyski* w wariancie ```replica``` dla każdego lokalnego dysku replikowanej wirtualnej maszyny.
 
 W celu skonfigurowania połączenia replikacji możesz wykorzystać polecenie ```CLI```: ```h1 replica create```.
 
-Na początku wykonywana jest pełna replikacja. Czas pierwszej replikacji zależy ściśle od wielkości dysku i przepustowości sieci. Kolejne replikacje są wydajne, ponieważ zawierają tylko zmienione dane.
+Na początku wykonywana jest pełna replikacja. Czas pierwszej replikacji zależy ściśle od wielkości dysku i przepustowości sieci. Kolejne replikacje zawierają tylko zmienione dane.
 
 ### Usuwanie
-
-<!---xxxxxx -->
 
 *Replika* może zostać usunięta po spełnieniu następujących warunków:
 
 * proces replikacji został przerwany w lokalnym serwerze Hyper-V
-* wszystkie *ogólne* warunki
+* wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Zarządzanie
 
-### Dedykowane operacje
-
-Dostępne są następujące podstawowe operacje dla *Repliki*:
+Dla *Repliki* charakterystyczne są następujące operacje:
 
 * wstrzymanie replikacji
 * wznowienie replikacji
@@ -41,23 +45,23 @@ Dostępne są następujące podstawowe operacje dla *Repliki*:
 
 ### Typowe operacje
 
-Dostępne są następujące typowe operacje dla *Repliki*:
+Dla *Repliki* dostępne są następujące typowe operacje:
 
 * zmiana nazwy
 * zarządzanie *Tagami*
 
 ## Opłaty
 
-* Opłaty są naliczone na podstawie czasu wykorzystania
-* Czas wykorzystania jest liczony w okresach rozliczeniowych jednej godziny
-* Występują dodatkowe opłaty dotyczące wykorzystywanego *Zasobu*: *Dysk*
+Opłaty naliczane są na podstawie czasu wykorzystania. Czas wykorzystania jest liczony w okresach rozliczeniowych jednej godziny.
+
+Dodatkowe opłaty wiążą się z wykorzystaniem *Dysku* w czasie procesu replikacji.
 
 ## Ograniczone użycie
 
 W przypadku ograniczonego użycia:
  
- * *Replikacja* ulega wstrzymaniu,
- * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/platform/resource.md#ograniczone-uzycie)*.
+ * *Replikacja* ulega wstrzymaniu
+ * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/platform/resource.md#ograniczone-uzycie)*
 
 ## Lokalizacja
 
@@ -77,7 +81,11 @@ minimum Hyper-V version         | ???
 
 Nazwa       | Okres  | Cena (PLN)
 ----------- | :----: | ---------:
+<<<<<<< HEAD
 replika     |   1M   |       250
+=======
+Replica     | 1 ms   |     250
+>>>>>>> 8a2ab5fa8298975e5b3a29c0800913b900227100
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
@@ -88,7 +96,7 @@ Transfer is not availabe due following reason:
 
 ## Przewodniki
 
-Dostępne są następujące przewodniki dla *Zasobu*:
+Do korzystania z *Repliki* mogą być przydatne następujące przewodniki:
 
 <PageList path_re="guide/compute/replica/"/>
 
