@@ -1,8 +1,8 @@
-# Adapter sieciowy
+# Brama sieciowa
 
 ## Przeznaczenie
 
-*Adapter sieciowy* zapewnia łączność określonemu *Zasobowi*. Stanowi odpowiednik karty sieciowej. *Adapter sieciowy* musi mieć przypisany *Adres IP* z *Sieci*, do której jest przyłączony.
+*Brama sieciowa* zapewnia łączność z *Sieci* do internetu.
 
 Główne zalety:
 
@@ -10,37 +10,27 @@ Przykładowe zastosowania:
 
 ## Cykl życia
 
-### Utworzenie
+*Brama sieciowa* może zostać utworzona po spełnieniu następujących warunków:
 
-*Adapter sieciowy* może zostać utworzony wyłącznie podczas przyłączenia do innego *Zasobu*.
-
-### Usuwanie
-
-*Adapter sieciowy* jest usuwany podczas odłączenia od innego *Zasobu*.
+ * zasób nie jest przywiązany do żadnej *Sieci*
+ * wszystkie ogólne warunki *usunięcia zasobu*
+ * wszystkie ogólne warunki *utworzenia zasobu*
 
 ## Zarządzanie
 
-Dla *Adapteru sieciowego" charakterystyczne są następujące operacje:
+Dla *Bramy sieciowej* charakterystyczne są następujące operacje:
 
- * dodanie *Adresu IP*
- * zastąpienie *Adresu IP*
- * odłączenie *Adresu IP*
+* przyłączenie *Bramy sieciowej* do określonej *Sieci*
+* odłączenie *Bramy sieciowej* od określonej *Sieci*
 
-#### Dodanie adresu IP
-
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
-
-* zasób znajduje się w stanie ```Online```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
-
-#### Zastąpienie adresu IP
+### Przyłączenie
 
 Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
 * zasób znajduje się w stanie ```Online```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
-#### Odłączenie adresu IP
+### Odłączenie
 
 Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
@@ -80,7 +70,7 @@ brama sieciowa  |  1 h   |     0.0000 |
 
 ## Przewodniki
 
-Do korzystania z *Adaptera sieciowego* mogą być przydatne następujące przewodniki:
+Do korzystania z *Bramy sieciowej* mogą być przydatne następujące przewodniki:
 
 <PageList path_re="guide/networking/network-adapter/"/>
 
