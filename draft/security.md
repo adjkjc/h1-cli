@@ -2,9 +2,7 @@
 
 ## Dwu składnikowe logowanie
 
-
-Guide: zarządzanie dwu składnikowym logowaniem dla użytkownika 
-
+Guide: zarządzanie dwu składnikowym logowaniem dla użytkownika
 
 ## Ograniczenia dostępu sieciowego
 
@@ -28,14 +26,12 @@ Logowanie opcjonalnie per projekt, wymaga wskazania usługi logarchive (?) do kt
 
 Guide: zarządzanie rozszerzonym logowaniem dla projektu
 
-
 ## Szyfrowane połączenia
 
 Wszelkie połączenia do zarządzania usługami w ramach platformy są szyfrowane ....
 
 * https
 * ssh
-
 
 ## Hasła
 
@@ -53,6 +49,10 @@ Hasła trafiają do platformy w formie zaszyfrowanej i nigdy nie są przechowywa
 Guide: zarządzanie Service Accounts
 Tutorial: wykorzystanie Service Accounts w automatyzacji 
 
+
+## Network ACL
+
+Baza danych: ```GeoLite2 Country```
 
 ## Powiązane treści
 
