@@ -6,9 +6,9 @@
 
 Główne zalety:
 
-* szeroki wachlarz rekomendowanych obrazów umożliwiających szybkie uruchomienie *Wirtualnej maszyny*
-* brak konieczności wyłączania *Wirtualnej maszyny* do utworzenia obrazu
 * przechowywanie w chmurze na odrębnych nośnikach zwiększających bezpieczeństwo danych
+* brak konieczności wyłączania *Wirtualnej maszyny* do utworzenia obrazu
+* szeroki wachlarz dostępnych rekomendowanych obrazów umożliwiających szybkie uruchomienie *Wirtualnej maszyny*
 
 Przykładowe zastosowania:
 
@@ -22,35 +22,35 @@ Przykładowe zastosowania:
 *Obraz* może zostać utworzony po spełnieniu następujących warunków: 
 
 * *Wirtualna maszyna* jest w stanie `Pracująca` lub `Wyłączona`
-* wszystkie *ogólne* warunki
+* wszystkie ogólne warunki *utworzenia zasobu*
 
 *Obraz* tworzony jest na podstawie istniejącej *Wirtualnej maszyny*.
 
-Chociaż utworzenie *Obrazu* kiedy *Wirtualna maszyna* jest w stanie `Pracująca` możliwe to ze względu na spójność danych zalecane jest tworzenie *Obrazu*, gdy *Wirtualna maszyna* jest w stanie `Wyłączona`.
+Chociaż istnieje możliwość utworzenia *Obrazu*, gdy *Wirtualna maszyna* jest w stanie `Pracująca`, to ze względu na spójność danych zalecamy wykonywanie tej operacji po przełączeniu *Wirtualnej maszyny*  w stan `Wyłączona`.
 
 ### Usuwanie
 
-Obraz może zostać usunięty po spełnieniu następujących warunków: 
+*Obraz* może zostać usunięty po spełnieniu następujących warunków: 
 
-* wszystkie *ogólne* warunki
+* wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Zarządzanie
 
 ### Typowe operacje
 
-Dostępne są następujące typowe operacje:
+Dla *Obrazu* dostępne są następujące typowe operacje:
 
 * możliwość zmiany wyświetlanej nazwy
 * zarządzanie *Tagami*
 
 ## Opłaty
 
-* Opłaty są naliczane na podstawie rozmiaru danych i czasu
+Opłaty naliczane są na podstawie rozmiaru danych i czasu:
 
-    * Wielkość danych w jednostkach GB
-    * Czas w okresach rozliczeniowych jednej godziny
+    * wielkość danych w jednostkach GB
+    * czas w okresach rozliczeniowych jednej godziny
 
-* Opłaty są obliczane dla każdego GB w danym okresie rozliczeniowym
+Opłaty naliczane są za każdy GB przestrzeni dyskowej zajmowanej przez *Obraz* w okresie rozliczeniowym.
 
 ## Ograniczone użycie
 
@@ -60,11 +60,13 @@ Dostępne są następujące typowe operacje:
 
 Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji* po spełnieniu następujących warunków:
 
-* wszystkie *ogólne* warunki
+* wszystkie ogólne warunki przekazania zasobu
+
+<!-- TODO: warunki czego? przekazania?-->
 
 ## Udostępnianie
 
-Udostępnianie jest możliwe między *Projektami* tej samej lub różnej *Organizacji* zgodnie z *[Ogólnymi zasadami udostępnianie zasobów](/platform/resource.md)*.
+Udostępnianie jest możliwe między *Projektami* tej samej lub innej *Organizacji* zgodnie z *[Ogólnymi zasadami udostępnianie zasobów](/platform/resource.md)*.
 
 !!! include(access.md) !!!
 
@@ -76,13 +78,13 @@ Udostępnianie jest możliwe między *Projektami* tej samej lub różnej *Organi
 
 Nazwa              | Okres  | Cena (PLN) | Uwagi
 ------------------ | :----: | ---------: | :----:
-obraz              |   1h   |     0.0002 | 
+obraz              |  1 h   |     0.0002 | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
 ## Przewodniki
 
-Dostępne są następujące przewodniki dla *Zasobu*:
+Do korzystania z *Obrazu* mogą być przydatne następujące przewodniki:
 
 <PageList path_re="guide/storage/image/"/>
 
