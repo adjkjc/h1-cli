@@ -64,7 +64,7 @@ Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji*
 
 ## Udostępnianie
 
-Udostępnianie jest możliwe między *Projektami* tej samej lub różnej *Organizacji* zgodnie z *[Ogólnymi zasadami udostępnianie zasobów]()*.
+Udostępnianie jest możliwe między *Projektami* tej samej lub różnej *Organizacji* zgodnie z *[Ogólnymi zasadami udostępnianie zasobów](/platform/resource.md)*.
 
 !!! include(access.md) !!!
 
@@ -88,5 +88,5 @@ Dostępne są następujące przewodniki dla *Zasobu*:
 
 ## Powiązane produkty
 
-* *[Wirtualna maszyna]()*
-* *[Dysk]()*
+* *[Wirtualna maszyna](/resource/compute/virtual-machine.md)*
+* *[Dysk](/resource/storage/disk.md)*

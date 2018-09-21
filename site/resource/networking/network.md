@@ -23,8 +23,8 @@
 
 Dostępne są następujące podstawowe operacje
 
-* Ustawienie serwerów DNS w protokole DHCP
-* Ustawienie bramy domyślnej w protokole DHCP
+* Ustawienie serwerów DNS w protokole DHCP i [metadanych](/resource/compute/virtual-machine.md#metadane)
+* Ustawienie bramy domyślnej w protokole DHCP i [metadanych](/resource/compute/virtual-machine.md#metadane)
 
 ### Ustawienie serwera DNS
 
@@ -50,6 +50,13 @@ Dostępne są następujące typowe operacje:
 
  * opłaty są naliczane na podstawie czasu.
 
+## Przekazanie
+
+Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji* po spełnieniu następujące warunków:
+
+ * nie istnieją przyłączone do niej *Adaptery sieciowe*
+ * wszystkie *ogólne warunki*
+
 ## Lokalizacja
 
 !!! include(regions.md) !!!
@@ -70,4 +77,4 @@ Dostępne są następujące przewodniki dla *Zasobu*:
 
 ## Powiązane produkty
 
- * *[Wirtualna maszyna]()*
+ * *[Wirtualna maszyna](/resource/compute/virtual-machine.md)*

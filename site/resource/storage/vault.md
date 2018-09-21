@@ -23,7 +23,7 @@ Przykładowe zastosowania:
 Nowy *Vault* może być utworzony w następujący sposób:
 
 * jako pusty *Vault*
-* na podstawie istniejącej *[Migawki]()*
+* na podstawie istniejącej *[Migawki](/resource/storage/snapshot.md)*
 
 ### Usuwanie
 
@@ -127,6 +127,12 @@ Ruch wychodzący    |   1h   |     0.0200 |
 
 <!-- //TODO: Add service for traffic -->
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
+
+<!-- 
+Transfer is not availabe due following reason:
+- we don't have information where the vault is attached eg. container
+- vault is composite of multiple resources eg. snapshots
+-->
 
 ## Przewodniki
 

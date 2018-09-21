@@ -56,6 +56,11 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 
 !!! include(regions.md) !!!
 
+<!-- 
+Transfer is not availabe due following reason:
+- netadp is included in virtual-machine as composite resource
+-->
+
 ## Parametry techniczne
 
 Parametr            | Wartość   | Uwagi
@@ -83,5 +88,5 @@ Dostępne są następujące przewodniki dla *Zasobu*:
 
 ### Powiązane produkty
 
-* *[Wirtualna maszyna]()*
-* *[Sieć]()*
+* *[Wirtualna maszyna](/resource/compute/virtual-machine.md)*
+* *[Sieć](/resource/networking/network.md)*

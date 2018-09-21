@@ -56,6 +56,11 @@ DNS    |   -    |     0.0000 |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
+<!-- 
+Transfer is not availabe due following reason:
+- security restriction of creating subzones
+-->
+
 ## Przewodniki
 
 Dostępne są następujące przewodniki dla *Zasobu*:

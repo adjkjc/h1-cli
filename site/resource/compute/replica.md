@@ -81,6 +81,11 @@ replika     |   1M   |       250
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
+<!-- 
+Transfer is not availabe due following reason:
+- replica includes disk as composite of multiple resources
+-->
+
 ## Przewodniki
 
 Dostępne są następujące przewodniki dla *Zasobu*:
@@ -89,4 +94,4 @@ Dostępne są następujące przewodniki dla *Zasobu*:
 
 ## Powiązane produkty
 
-* *[Dysk]()*
+* *[Dysk](/resource/storage/disk.md)*

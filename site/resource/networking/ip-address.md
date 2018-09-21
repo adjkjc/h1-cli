@@ -73,6 +73,12 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 
 !!! include(standard-limited-usage.md) !!!
 
+## Przekazanie
+
+Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji* po spełnieniu następujące warunków:
+
+ * stan jest ``Nieprzydzielony``
+
 ## Lokalizacja
 
 !!! include(regions.md) !!!
@@ -93,6 +99,11 @@ IP w sieci publicznej  |   -    |     0.0000 |
 <!-- TODO: add service -->
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
+
+<!-- 
+Transfer is aavailabe due following reason:
+- security restriction of creating subzones
+-->
 
 ## Przewodniki
 

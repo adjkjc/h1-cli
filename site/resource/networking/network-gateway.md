@@ -46,6 +46,12 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 
 !!! include(regions.md) !!!
 
+<!-- 
+Transfer is not availabe due following reason:
+- required validation of licensing
+- vm is composite of multiple resources
+-->
+
 ## Cennik
 
 Nazwa           | Okres  | Cena (PLN) | Uwagi

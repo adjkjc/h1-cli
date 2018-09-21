@@ -163,8 +163,6 @@ Dostęp sieciowy do systemu operacyjnego działającego w ramach *Wirtualnej mas
 * SSH (Secure Shell) dla dystrybucji opartych na systemie Linux
 * RDP (Remote Desktop Protocol) dla MS Windows Server
 
-<!-- Add link to recommended images -->
-
 Platforma udostępnia także dostęp poprzez:
 
 * konsolę poprzez port szeregowy
@@ -254,6 +252,12 @@ r4.xlarge  | 4.9814 | 1h
 r4.xxlarge | 9.7303 | 1h 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
+
+<!-- 
+Transfer is not availabe due following reason:
+- required validation of licensing or any other requirements
+- vm is composite of multiple resources
+-->
 
 ## Przewodniki
 

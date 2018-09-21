@@ -46,6 +46,11 @@ Dostępne są następujące typowe operacje:
 
 !!! include(standard-limited-usage.md) !!!
 
+<!-- 
+Transfer is not availabe due following reason:
+- snapshot is composite of multiple resources
+-->
+
 ## Lokalizacje
 
 !!! include(regions.md) !!!

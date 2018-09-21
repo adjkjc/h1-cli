@@ -2,7 +2,7 @@
 
 ## Przeznaczenie
 
-*Zapora sieciowa* może być używana jako sposób kontrolowania komunikacji w obu kierunkach (przychodzącej i wychodzącej) z *[Wirtualnej maszyny]()* do przyłączonej *[Sieci]()*.
+*Zapora sieciowa* może być używana jako sposób kontrolowania komunikacji w obu kierunkach (przychodzącej i wychodzącej) z *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)* do przyłączonej *[Sieci](/resource/networking/network.md)*.
 
 ## Cykl życia
 
@@ -39,7 +39,7 @@ W przypadku usunięcia wszystkich reguł mają zastosowanie następujące zasady
 
 Operacja może zostać wykonana po spełnieniu następujących warunków: 
 
-* utworzenie *Sieci*, [zgodnie z przewodnikiem](/guide/networking/network/creating.md)
+* poprawnie utworzona *Sieć*, [zgodnie z przewodnikiem](/guide/networking/network/creating.md)
 * zasób znajduje się w stanie ```Rozłączony```
 * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
@@ -114,5 +114,5 @@ Dostępne są następujące przewodniki dla *Zasobu*:
 
 ## Powiązane produkty
 
-* *[Sieci]()*
-* *[Wirtualne maszyny]()*
+* *[Sieć](/resource/networking/network.md)*
+* *[Wirtualna maszyna](/resource/compute/virtual-machine.md)*

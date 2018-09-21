@@ -115,7 +115,8 @@ W przypadku ograniczonego użycia znajdują zastosowanie ogólne warunki *[Ogran
 
 Przekazanie *Dysku* jest możliwe między *Projektami* tej samej lub innej *Organizacji* po spełnieniu następujących warunków:
 
-* stan to "Rozłączony"
+ * stan to ```Rozłączony``` 
+ * wszystkie *ogólne warunki*
 
 ## Lokalizacja
 

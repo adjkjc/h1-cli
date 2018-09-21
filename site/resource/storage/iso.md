@@ -84,7 +84,7 @@ Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji*
 
 ## Udostępniania
 
-Udostępnianie jest możliwe między *Projektami* tej samej lub różnej *Organizacji* zgodnie z *[Ogólnymi zasadami udostępnianie zasobów]()*.
+Udostępnianie jest możliwe między *Projektami* tej samej lub różnej *Organizacji* zgodnie z *[Ogólnymi zasadami udostępnianie zasobów](/platform/resource.md)*.
 
 !!! include(access.md) !!!
 

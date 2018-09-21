@@ -93,6 +93,12 @@ Gdy *Dane Organizacji* osiągną zdefiniowany okres przechowywania, nowe żądan
 
 <!-- partial-regions.md -->
 
+## Przekazanie
+
+Przekazanie *Dziennika* jest możliwe między *Projektami* tej samej lub innej *Organizacji* po spełnieniu następujących warunków:
+
+ * wszystkie *ogólne warunki*
+
 ## Parametry techniczne
 
 Parametr           | Wartość
