@@ -21,6 +21,14 @@ const task_name_for_task = task => Object.keys(tasks).find(task_name => task[tas
 const task_data_for_task = task => task[task_name_for_task(task)];
 
 const partials = {
+    apt_initialize: (data, prev, next, ctx) => {
+        if (!ctx.apt_updated) {
+            ctx.apt_updated = true;
+            return `Uaktualnij indeks pakietów w repozytoriach:` +
+                shell_explain(`sudo apt-get update`);
+        }
+        return '';
+    },
     mysql_initialize: (data, prev, next) => {
         if (!prev || !task_name_for_task(prev).startsWith("mysql_")) {
             return '';
@@ -98,28 +106,30 @@ const tasks = {
         content += 'Od teraz to polecenie będzia automatycznie, regularnie wykonywane.';
         return content;
     },
-    apt: (data, prev, next) => {
-        let content = `Wykonaj następujące polecenie:`;
+    apt: (data, prev, next, ctx) => {
+        let content = partials.apt_initialize(data, prev, next, ctx);
         const state = data.state || 'present';
         if (state === 'present') {
+            content += `Zainstaluj wymagane pakiety wykonując następujące polecenie:`;
             content += shell_explain(`sudo apt-get install ${data.name}`);
         } else if (state === 'absent') {
+            content += `Usuń pakiety wykonując następujące polecenie:`;
             content += shell_explain(`sudo apt-get remove ${data.name}`);
         } else {
             throw new Error("Not implemented yet");
         }
         return content;
     },
-    mysql_db: (data, prev, next) => {
-        let content = partials.mysql_initialize(data, prev, next);
+    mysql_db: (data, prev, next, ctx) => {
+        let content = partials.mysql_initialize(data, prev, next, ctx);
         content += `Wykonaj w interaktywnej konsoli MySQL następujące polecenie:`;
         content += utils.dump(`CREATE DATABASE ${data.name};`, 'sql');
         content += `Powyższe polecenie tworzy nową bazę danych o nazwie ${utils.quote}${data.name}${utils.quote}.\n`;
-        content += partials.mysql_finish(data, prev, next);
+        content += partials.mysql_finish(data, prev, next, ctx);
         return content;
     },
-    mysql_user: (data, prev, next) => {
-        let content = partials.mysql_initialize(data, prev, next);
+    mysql_user: (data, prev, next, ctx) => {
+        let content = partials.mysql_initialize(data, prev, next, ctx);
         content += `Wykonaj w interaktywnej konsoli MySQL następujące polecenie:`;
         const [selector, grants] = data.priv.split(":");
         content += utils.dump(`GRANT ${grants} PRIVILEGES ON ${selector} TO "${data.name}"@"${data.host}" IDENTIFIED BY "${data.password}";'`, 'sql');
@@ -228,10 +238,10 @@ const tasks = {
         }
         return content;
     },
-    lineinfile: (data, prev, next) => {
+    lineinfile: (data, prev, next, ctx) => {
         const state = data.state || 'present';
         let content = '';
-        content += partials.editor_initialize(data, prev, next);
+        content += partials.editor_initialize(data, prev, next, ctx);
         if (state === 'present' && data.regexp) {
             content += `Odszukaj wiersz pasujący do wzorca \`${data.regexp}\` i zastąp go następującym:`;
             content += utils.dump(data.line);
@@ -241,7 +251,7 @@ const tasks = {
         } else {
             throw new Error("Not implemented yet");
         }
-        content += partials.editor_finish(data, prev, next);
+        content += partials.editor_finish(data, prev, next, ctx);
         return content;
     },
     browser: (data, prev, next) => {
@@ -256,7 +266,7 @@ const tasks = {
     free_text: (free_text, prev, next) => `${free_text.text}\n`,
 };
 
-const get_content_for_task_list = (task_list, depth = 2) => {
+const get_content_for_task_list = (task_list, depth = 2, ctx) => {
     let new_content = '';
     for (const i in task_list) {
         const task = task_list[i];
@@ -265,7 +275,7 @@ const get_content_for_task_list = (task_list, depth = 2) => {
             new_content += `${prefix} ${task.name}\n\n`;
         }
         if (task.block) {
-            new_content += get_content_for_task_list(task.block, depth + 1)
+            new_content += get_content_for_task_list(task.block, depth + 1, ctx)
         } else {
             try {
                 const cur_task_name = task_name_for_task(task);
@@ -276,7 +286,8 @@ const get_content_for_task_list = (task_list, depth = 2) => {
                 new_content += tasks[cur_task_name](
                     task[cur_task_name],
                     task_list[parseInt(i) - 1],
-                    task_list[parseInt(i) + 1]
+                    task_list[parseInt(i) + 1],
+                    ctx
                 );
             } catch (e) {
                 console.log(e);
@@ -305,7 +316,7 @@ const replacer = (match, p1) => {
         // }
         // new_content += "</ol>";
         const task_list = yaml.safeLoad(p1.trim());
-        new_content += get_content_for_task_list(task_list, 2);
+        new_content += get_content_for_task_list(task_list, 2, {});
         new_content += utils.dump(task_list);
 
     } catch (err) {
