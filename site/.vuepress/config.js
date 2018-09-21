@@ -105,12 +105,21 @@ module.exports = config = {
             {text: 'CLI', link: '/h1-cli/'},
             {
                 text: 'Rejestracja',
-                link: 'https://panel.hyperone.com/signup'
+                link: 'https://panel.hyperone.com/signup',
+                skipOutgoingIcon: true
             },
-            {text: 'Logowanie', link: 'https://panel.hyperone.com'},
+            {
+                text: 'Logowanie',
+                link: 'https://panel.hyperone.com',
+                skipOutgoingIcon: true
+            },
             {text: 'Kontakt', link: '/about-us/contact.md'},
             {text: 'Współpraca', link: '/cooperation/'},
-            {class: { fab: true, 'fa-twitter': true, 'external': false }, link: 'https://twitter.com/hyperone_com' }
+            {
+                icon: 'fab fa-twitter',
+                link: 'https://twitter.com/hyperone_com',
+                skipOutgoingIcon: true
+            }
         ]
     }
 };
