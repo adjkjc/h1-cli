@@ -109,7 +109,8 @@ module.exports = config = {
             },
             {text: 'Logowanie', link: 'https://panel.hyperone.com'},
             {text: 'Kontakt', link: '/about-us/contact.md'},
-            {text: 'Współpraca', link: '/cooperation/'}
+            {text: 'Współpraca', link: '/cooperation/'},
+            {class: { fab: true, 'fa-twitter': true, 'external': false }, link: 'https://twitter.com/hyperone_com' }
         ]
     }
 };
