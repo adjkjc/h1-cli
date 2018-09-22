@@ -44,3 +44,12 @@ Przed przystąpieniem do integracji powinieneś mieć:
   shell:
     cmd: tail -f /var/log/messages
 ```
+
+
+## Powiązane produkty
+
+* *[Dziennik](/guide/storage/log-archive/creating.md)*
+
+## Możliwe użycie
+* *[rsyslog](/tutorials/log-archive/rsyslog.md)*
+* *[goaccess](/tutorials/log-archive/goaccess.md)*
