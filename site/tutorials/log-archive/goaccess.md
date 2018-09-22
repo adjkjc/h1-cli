@@ -7,10 +7,8 @@ Niniejszy dokument przedstawia w jaki sposób skonfigurować rsyslog na platform
 Przed przystąpieniem do integracji powinieneś mieć:
 
 * zainstalowany system Linux
-* dostęp sudo
 * zainstalowaną aktualną wersje rsyslog
-* skonfigurowane przekazywanie logów nginx do rsyslog [zgodnie z instrukcją](/tutorials/log-archive/nginx-rsyslog.md)
-* skonfigurowane przekazywanie logów apache do rsyslog
+* skonfigurowane przekazywanie logów nginx do rsyslog ([zgodnie z instrukcją](/tutorials/log-archive/nginx-rsyslog.md)) lub apache ([zgodnie z instrukcją](/tutorials/log-archive/nginx-rsyslog.md))
 * otwarty port 6514 dla połączeń wychodzących
 * utworzony *Dziennik*, [zgodnie z instrukcją](/guide/storage/log-archive/creating.md)
 * dodane hasło w *Dzienniku*, [zgodnie z instrukcją](/guide/storage/log-archive/add-password.md).
