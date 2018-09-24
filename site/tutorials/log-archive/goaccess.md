@@ -12,5 +12,18 @@ Przed przystąpieniem do integracji powinieneś mieć:
 * otwarty port 6514 dla połączeń wychodzących
 * utworzony *Dziennik*, [zgodnie z instrukcją](/guide/storage/log-archive/creating.md)
 * dodane hasło w *Dzienniku*, [zgodnie z instrukcją](/guide/storage/log-archive/add-password.md).
-* zainstalowany goaccess
+* skonfigurowane repozytorium EPEL (w przypadku systemu CentOS)
+
+## Instalacja
+
+```yaml
+# render=tutorial
+  
+- name: Zainstaluj pakiet goaccess
+  service:
+    name: goaccess
+    state: installed
+  after_event:
+    text: Po wykonaniu tych operacji powinieneś móc skorzystać z goaccess.
+```
 
