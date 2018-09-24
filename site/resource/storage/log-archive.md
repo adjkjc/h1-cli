@@ -5,62 +5,64 @@
 *Dziennik* służy do przechowywania i udostępniania wpisów dzienników zdarzeń (logów). 
 
 Główne zalety:
-* długoterminowe przechowywanie
-* zabezpieczenie przed nadpisaniem i przypadkowym uszkodzeniem
+
+ * długoterminowe przechowywanie
+ * zabezpieczenie przed nadpisaniem i przypadkowym uszkodzeniem
 
 Przykładowe zastosowanie:
-* analiza problemów w czasie rzeczywistym i w przeszłości
-* długoterminowa archiwizacja zdarzeń
+
+ * analiza problemów w czasie rzeczywistym i w przeszłości
+ * długoterminowa archiwizacja zdarzeń
 
 ## Cykl życia
 
 ### Utworzenie
 
-*Dziennik* może zostać utworzony po spełnieniu następujących warunków: 
+*Dziennik* może zostać utworzony po spełnieniu następujących warunków:
 
-* wszystkie ogólne warunki *utworzenia zasobu*
+ * wszystkie ogólne warunki *utworzenia zasobu*
 
 ### Usuwanie
 
 *Dziennik* może zostać usunięty po spełnieniu następujących warunków:
 
-* wszystkie ogólne warunki *usunięcia zasobu*
+ * wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Zarządzanie 
 
 Dla *Dziennika* charakterystyczne są następujące operacje:
 
-* wyłączenie
-* włączenie
-* odczytywanie wpisów za wybrany okres lub bieżących w czasie rzeczywistym
+ * wyłączenie
+ * włączenie
+ * odczytywanie wpisów za wybrany okres lub bieżących w czasie rzeczywistym
 
 ## Wyłączenie
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Działający```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Działający```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Wyłączenie
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Wyłączony```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Wyłączony```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Odczytanie
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Wyłączony``` lub ```Działający```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Wyłączony``` lub ```Działający```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Typowe operacje
 
 Dla *Dziennika* dostępne są następujące typowe operacje:
 
-* zmiana nazwy
-* zarządzanie *Tagami*
+ * zmiana nazwy
+ * zarządzanie *Tagami*
 
 ## Dostęp
 
@@ -68,7 +70,7 @@ Wpisy do *Dziennika* mogą zostać wprowadzone z użyciem protokołu Syslog opis
 
 Zapisywanie do *Dziennika* jest możliwe za pomocą następujących typów danych dostępowych:
 
-* hasło przekazane w elemencie SD-ID w postaci ``[[identyfikator_zasobu]]:[[haslo]]@HyperOne``
+ * hasło przekazane w elemencie SD-ID w postaci ``[[identyfikator_zasobu]]:[[haslo]]@HyperOne``
 
 Zarządzanie danymi dostępowymi wyjaśnione jest w [ogólnym omówieniu zarządzania danymi dostępowymi](/platform/resource.html#dane-dostepowe).
 
@@ -109,7 +111,7 @@ Nazwa        | Okres    | Cena (PLN) |  Uwagi
 -----------: | -----:   | ---------: | :----:
 Dziennik     |  1 ms    |     1.0000 |
 
-* Podane ceny są cenami netto i nie zawierają podatku VAT*
+ * Podane ceny są cenami netto i nie zawierają podatku VAT*
 
 ## Przewodniki
 
@@ -119,4 +121,4 @@ Do korzystania z *Dziennika* mogą być przydatne następujące przewodniki:
 
 ## Powiązane produkty
 
-* *[Kontenery](/resource/compute/container.md)*
+ * *[Kontenery](/resource/compute/container.md)*

@@ -7,15 +7,17 @@
 *Wirtualna maszyna* obsługuje wiodące systemy operacyjne, takie jak MS Windows Server i popularne dystrybucje Linuksa, np. Ubuntu, Debian, a także inne systemy operacyjne, w tym FreeBSD, Mikrotik RouterOS.
 
 Główne zalety:
-* pełna izolacja *Wirtualnej maszyny*  zapewniająca najwyższy poziom bezpieczeństwa
-* możliwość podłączenia i odłączenia *Dysków* w czasie pracy *Wirtualnej maszyny*
-* podłączenie aż do 16 dysków  do jednej *Wirtualnej maszyny*
-* możliwość uzyskania systemu operacyjnego przez *[ISO](/resource/storage/iso)* lub *[Obraz](/resource/storage/image.md)*
+
+ * pełna izolacja *Wirtualnej maszyny*  zapewniająca najwyższy poziom bezpieczeństwa
+ * możliwość podłączenia i odłączenia *Dysków* w czasie pracy *Wirtualnej maszyny*
+ * podłączenie aż do 16 dysków  do jednej *Wirtualnej maszyny*
+ * możliwość uzyskania systemu operacyjnego przez *[ISO](/resource/storage/iso)* lub *[Obraz](/resource/storage/image.md)*
 
 Przykładowe zastosowania:
-* strony, portale i sklepy internetowe
-* systemy księgowe, sprzedażowe, magazynowe
-* usługi internetowe
+
+ * strony, portale i sklepy internetowe
+ * systemy księgowe, sprzedażowe, magazynowe
+ * usługi internetowe
 
 ## Cykl życia
 
@@ -140,8 +142,23 @@ Zarządzanie *Interfejsami sieciowymi* *Wirtualnej maszyny* może być wykonywan
 
 Do zarządzania *Interfejsami sieciowymi* *Wirtualnej maszyny* w stanie `Wyłączony` służą następujące operacje:
 
-* dodanie nowego interfejsu
-* usunięcie wybranego interfejsu
+ * dodanie nowego interfejsu
+ * usunięcie wybranego interfejsu
+
+##### Dodanie interfejsu sieciowego
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * zasób znajduje się w stanie ```Wyłączony```
+ * dodanie interfejsu nie spowoduje przekroczenie liczby dopuszczalnych interfejsów wynikających z wariantu
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+##### Usunięcie interfejsu sieciowego
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * zasób znajduje się w stanie ```Wyłaczony```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 #### Napęd DVD
 
@@ -149,35 +166,77 @@ Każda *Wirtualna maszyna* posiada domyślnie 1 napęd DVD *Wirtualnej maszyny*.
 
 Do zarządzania napędem DVD służą następujące operacje:
 
-* wsunięcie *ISO*
-* wysunięcie *ISO*
+ * wsunięcie *ISO*
+ * wysunięcie *ISO*
+
+##### Wsunięcie ISO
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * poprawnie utworzone *ISO*, [zgodnie z przewodnikiem](/guide/networking/iso/creating.md)
+ * zasób znajduje się w stanie `Pracujący` lub `Wyłączony`
+ * do zasobu nie jest aktualnie wsunięte żadne *ISO*
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
+
+##### Wysunięcie ISO
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * *Wirtualna Maszyna* znajduje się w stanie `Pracujący` lub `Wyłączony`
+ * *Wirtualna Maszyna* znajduje się w stanie ```Wyłaczony```
+ * *Wirtualna Maszyna*nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Dodatkowe operacje
 
 Do zarządzania *Wirtualną maszyną* są przeznaczone następujące dodatkowe operacje:
 
-* dostęp do konsoli poprzez port szeregowy
-* dostęp do graficznej konsoli
-* zarządzanie metadanymi użytkownika
-* reset hasła 
-* podgląd parametrów pracy *Dysków*, *Interfejsów sieciowych* i CPU
+ * dostęp do konsoli poprzez port szeregowy
+ * dostęp do graficznej konsoli
+ * zarządzanie metadanymi użytkownika
+ * reset hasła 
+ * podgląd parametrów pracy *Dysków*, *Interfejsów sieciowych* i CPU
+
+#### Dostęp do konsoli poprzez port szeregowy
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * *Wirtualna Maszyna* znajduje się w stanie `Pracujący`
+
+#### Dostęp do graficznej konsoli
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * *Wirtualna Maszyna* znajduje się w stanie `Pracujący`
+
+#### Zarządzanie metadanymi użytkownika
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * *Wirtualna Maszyna*  nie znajduje się w stanie *Ograniczonego użycia*
+
+#### Podgląd parametrów pracy
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * *Wirtualna Maszyna* znajduje się w stanie `Pracujący`
+ * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Dostęp
 
 Dostęp sieciowy do systemu operacyjnego działającego w ramach *Wirtualnej maszyny* różni się i zależy m.in. od wykorzystanego *[Rekomendowanego Obrazu](/platform/recommended-images.md)*. Obsługiwane protokoły to m. in.:
 
-* SSH (Secure Shell) dla dystrybucji opartych na systemie Linux
-* RDP (Remote Desktop Protocol) dla MS Windows Server
+ * SSH (Secure Shell) dla dystrybucji opartych na systemie Linux
+ * RDP (Remote Desktop Protocol) dla MS Windows Server
 
 Platforma oferuje także dostęp poprzez:
 
-* konsolę z wykorzystaniem portu szeregowego
-* graficzną konsolę
+ * konsolę z wykorzystaniem portu szeregowego
+ * graficzną konsolę
 
 Dostęp do *Wirtualnej maszyny* zależy od wykorzystanego systemu operacyjnego i jest możliwy za pomocą następujących danych dostępowych:
 
-* hasło
-* klucze SSH
+ * hasło
+ * klucze SSH
 
 Zarządzanie danymi dostępowymi wyjaśnione jest w [Ogólnym omówieniu zarządzania danymi dostępowymi](/platform/resource.html#dane-dostepowe).
 
@@ -185,8 +244,8 @@ Zarządzanie danymi dostępowymi wyjaśnione jest w [Ogólnym omówieniu zarząd
 
 Dla *Wirtualnej maszyny* dostępne są następujące typowe operacje:
 
-* zmiana nazwy
-* zarządzanie *Tagami*
+ * zmiana nazwy
+ * zarządzanie *Tagami*
 
 ## Opłaty
 
@@ -273,6 +332,6 @@ Do korzystania z *Wirtualnej maszyny* mogą być przydatne następujące przewod
 
 ## Powiązane produkty
 
-* *[Dysk](/resource/storage/disk.md)*
-* *[Sieć](/resource/networking/network.md)*
-* *[Obraz](/resource/storage/image.md)*
+ * *[Dysk](/resource/storage/disk.md)*
+ * *[Sieć](/resource/networking/network.md)*
+ * *[Obraz](/resource/storage/image.md)*

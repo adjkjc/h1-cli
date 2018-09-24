@@ -42,26 +42,26 @@ Powiązanie *Adresu IP* w internecie z *Adresem IP* w *Sieci* umożliwia dostęp
 
 ### Przekształcenie
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Przydzielony``` lub ```Nieprzydzielony```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Przydzielony``` lub ```Nieprzydzielony```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Zmiana rekordu PTR
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Przydzielony``` lub ```Nieprzydzielony```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Przydzielony``` lub ```Nieprzydzielony```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Powiązanie z innym adresem IP
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
-* zasób jest *Adresem IP* w *Sieci* prywatnej
-* dowiązywany *Adres IP* jest adresem w *Sieci* publicznej
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
+ * zasób jest *Adresem IP* w *Sieci* prywatnej
+ * dowiązywany *Adres IP* jest adresem w *Sieci* publicznej
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Opłaty
 
@@ -113,5 +113,5 @@ Do korzystania z *IP* mogą być przydatne następujące przewodniki:
 
 ## Powiązane produkty
 
-* *[Adapter sieciowy](/resource/networking/network.md)*
-* *[Brama sieciowa](/resource/networking/network.md)*
+ * *[Adapter sieciowy](/resource/networking/network.md)*
+ * *[Brama sieciowa](/resource/networking/network.md)*

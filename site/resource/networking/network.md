@@ -23,28 +23,28 @@
 
 Dla *Sieci* charakterystyczne są następujące operacje:
 
-* ustawienie serwerów DNS w protokole DHCP i [metadanych](/resource/compute/virtual-machine.md#metadane)
-* ustawienie bramy domyślnej w protokole DHCP i [metadanych](/resource/compute/virtual-machine.md#metadane)
+ * ustawienie serwerów DNS w protokole DHCP i [metadanych](/resource/compute/virtual-machine.md#metadane)
+ * ustawienie bramy domyślnej w protokole DHCP i [metadanych](/resource/compute/virtual-machine.md#metadane)
 
 ### Ustawienie serwera DNS
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Online```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Online```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Ustawienie bramy domyślnej DNS
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Online```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Online```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Typowe operacje
 
 Dla *Sieci" dostępne są następujące typowe operacje:
 
-* zmiana wyświetlanej nazwy
+ * zmiana wyświetlanej nazwy
 
 ## Opłaty
 

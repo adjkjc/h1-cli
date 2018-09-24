@@ -5,29 +5,31 @@
 *Vault* stanowi rodzaj przestrzeni do długoterminowego przechowywania danych, zapewnieniającej stały dostęp do nich bez konieczności administrowania systemem operacyjnym. 
 
 Główne zalety:
-* dostęp z wykorzystaniem popularnych narzędzi takich jak ssh, sftp, scp, git i rsync
-* możliwość wykonania *[Migawek](/resource/storage/snapshot.md)*
+
+ * dostęp z wykorzystaniem popularnych narzędzi takich jak ssh, sftp, scp, git i rsync
+ * możliwość wykonania *[Migawek](/resource/storage/snapshot.md)*
 
 Przykładowe zastosowania:
-* podstawowy serwer plików
-* źródło danych dla *[Konteneru](/resource/compute/container.md)*
+
+ * podstawowy serwer plików
+ * źródło danych dla *[Konteneru](/resource/compute/container.md)*
 
 ## Cykl życia
 
 ### Utworzenie
 
-*Vault* może zostać utworzony po spełnieniu następujących warunków: 
+*Vault* może zostać utworzony po spełnieniu następujących warunków:
 
-* wszystkie ogólne warunki *utworzenia zasobu*
+ * wszystkie ogólne warunki *utworzenia zasobu*
 
 Nowy *Vault* może być utworzony w następujący sposób:
 
-* jako pusty *Vault*
-* na podstawie istniejącej *[Migawki](/resource/storage/snapshot.md)*
+ * jako pusty *Vault*
+ * na podstawie istniejącej *[Migawki](/resource/storage/snapshot.md)*
 
 ### Usuwanie
 
-*Vault* może zostać usunięty po spełnieniu następujących warunków: 
+*Vault* może zostać usunięty po spełnieniu następujących warunków:
 
  * nie istnieje żadna utworzona na jego bazie *[Migawka](/resource/storage/snapshot.md)*
  * wszystkie ogólne warunki *usunięcia zasobu*
@@ -36,53 +38,49 @@ Nowy *Vault* może być utworzony w następujący sposób:
 
 Dla *Vaulta* charakterystyczne są następujące operacje:
 
-* włączenie dostępu
-* wyłączanie dostępu
-* zwiększenie rozmiaru
+ * włączenie dostępu
+ * wyłączanie dostępu
+ * zwiększenie rozmiaru
 
-<<<<<<< HEAD
 Wykorzystywana przestrzeń *Vault* stanowi rozmiar zgromadzonych plików i wszystkich *Migawek*.
-=======
-Na rozmiar danych *Vault* składa się rozmiar zgromadzonych plików i wszystkich *Migawek*.
->>>>>>> 8a2ab5fa8298975e5b3a29c0800913b900227100
 
 ### Włączenie dostępu
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Wyłączony```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Wyłączony```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Wyłączenie dostępu
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Online```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Online```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 Wykonanie operacji może ograniczyć funkcjonowanie *Kontenera* wykorzystującego dany *Vault*.
 
 ### Zwiększenie rozmiaru
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Online``` lub ```Wyłączony```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Online``` lub ```Wyłączony```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Dostęp
 
 Dostęp do *Vault* umożliwiają następujące narzędzia:
 
-* ssh
-* sftp
-* scp
-* git
-* rsync
+ * ssh
+ * sftp
+ * scp
+ * git
+ * rsync
 
 Dostęp do *Vault* umożliwiają następujące dane dostępowe:
 
-* hasło
-* klucze SSH
+ * hasło
+ * klucze SSH
 
 Zarządzanie dostępami zostało wyjaśnione w [ogólnym omówieniu zarządzania danymi dostępowymi](/platform/resource.html#dane-dostepowe).
 
@@ -90,19 +88,19 @@ Zarządzanie dostępami zostało wyjaśnione w [ogólnym omówieniu zarządzania
 
 Dla *Vault* dostępne są następujące typowe operacje:
 
-* możliwość zmiany wyświetlanej nazwy
-* zarządzanie danymi dostępowymi
+ * możliwość zmiany wyświetlanej nazwy
+ * zarządzanie danymi dostępowymi
 
 ## Opłaty
 
 Opłaty naliczane są za przechowywanie i ruch sieciowy.
 
-* Opłaty za przechowywanie są naliczane w zależności od rozmiaru *Vault* i czasu jego wykorzystania:
+ * Opłaty za przechowywanie są naliczane w zależności od rozmiaru *Vault* i czasu jego wykorzystania:
 
     * rozmiar w jednostkach GB
     * czas wykorzystania liczony w okresach rozliczeniowych jednej godziny
 
-* Ppłaty za ruch sieciowy naliczane są w zależności od rozmiaru ruchu w GB
+ * Opłaty za ruch sieciowy naliczane są w zależności od rozmiaru ruchu w GB
 
 Opłaty naliczane są za każdy GB przestrzeni dyskowej dostępnej w okresie rozliczeniowym.
 
@@ -125,15 +123,9 @@ W razie potrzeby zwiększenia tych limitów [prosimy o kontakt](/about-us/contac
 
 Nazwa              | Okres  | Cena (PLN) | Uwagi
 ------------------ | :----: | ---------: | :----:
-<<<<<<< HEAD
-Vault              |   1h   |     0.0004 | 
-Ruch przychodzący  |   1h   |     0.0000 | 
-Ruch wychodzący    |   1h   |     0.0200 |
-=======
 vault              |  1 h   |     0.0004 | 
 ruch przychodzący  |  1 h   |     0.0000 | 
 ruch wychodzący    |  1 h   |     0.0200 |
->>>>>>> 8a2ab5fa8298975e5b3a29c0800913b900227100
 
 <!-- //TODO: Add service for traffic -->
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
@@ -152,5 +144,5 @@ Do korzystania z *Vaulta* mogą być przydatne następujące przewodniki:
 
 ## Powiązane produkty
 
-* *[Wirtualna maszyna](/resource/compute/virtual-machine.md)*
-* *[Sieć](/resource/networking/network.md)*
+ * *[Wirtualna maszyna](/resource/compute/virtual-machine.md)*
+ * *[Sieć](/resource/networking/network.md)*

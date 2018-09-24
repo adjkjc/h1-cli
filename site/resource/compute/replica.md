@@ -5,11 +5,13 @@
 *Replika* umożliwia kopiowanie niemal w czasie rzeczywistym danych zmodyfikowanych w wirtualnych maszynach działających w lokalnym środowisku Hyper-V *Użytkownika*. Umożliwia to w razie potrzeby odtworzenie *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*. 
 
 Główne zalety:
-* łatwe w użyciu rozwiązanie do zabezpieczenia danych
-* pomaga zredukować czas powrotu organizacji do funkcjonowania po awarii (RTO) i skrócić moment powrotu (RPO)
+
+ * łatwe w użyciu rozwiązanie do zabezpieczenia danych
+ * pomaga zredukować czas powrotu organizacji do funkcjonowania po awarii (RTO) i skrócić moment powrotu (RPO)
 
 Przykładowe zastosowania:
-* istotna składowa procesu odbudowy organizacji po krytycznym zdarzeniu
+
+ * istotna składowa procesu odbudowy organizacji po krytycznym zdarzeniu
 
 <!-- TODO: Czy wszystko?-->
 ## Cykl życia
@@ -18,9 +20,9 @@ Przykładowe zastosowania:
 
 *Replika* może zostać utworzona po spełnieniu następujących warunków:
 
-* lokalny serwer Hyper-V ma skonfigurowane połączenie replikacji
-* lokalne dyski spełniają parametry techniczne dla zasobu *Dysk*
-* wszystkie ogólne warunki *utworzenia zasobu*
+ * lokalny serwer Hyper-V ma skonfigurowane połączenie replikacji
+ * lokalne dyski spełniają parametry techniczne dla zasobu *Dysk*
+ * wszystkie ogólne warunki *utworzenia zasobu*
 
 Utworzenie repliki odbywa się poprzez zlecenie replikacji w lokalnym serwerze Hyper-V poprzez skonfigurowane połączenie replikacji. W momencie utworzenia repliki uruchamiane są *Dyski* w wariancie ```replica``` dla każdego lokalnego dysku replikowanej wirtualnej maszyny.
 
@@ -32,23 +34,23 @@ Na początku wykonywana jest pełna replikacja. Czas pierwszej replikacji zależ
 
 *Replika* może zostać usunięta po spełnieniu następujących warunków:
 
-* proces replikacji został przerwany w lokalnym serwerze Hyper-V
-* wszystkie ogólne warunki *usunięcia zasobu*
+ * proces replikacji został przerwany w lokalnym serwerze Hyper-V
+ * wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Zarządzanie
 
 Dla *Repliki* charakterystyczne są następujące operacje:
 
-* wstrzymanie replikacji
-* wznowienie replikacji
-* wykonanie *Obrazu*
+ * wstrzymanie replikacji
+ * wznowienie replikacji
+ * wykonanie *Obrazu*
 
 ### Typowe operacje
 
 Dla *Repliki* dostępne są następujące typowe operacje:
 
-* zmiana nazwy
-* zarządzanie *Tagami*
+ * zmiana nazwy
+ * zarządzanie *Tagami*
 
 ## Opłaty
 
@@ -81,11 +83,7 @@ minimum Hyper-V version         | ???
 
 Nazwa       | Okres  | Cena (PLN)
 ----------- | :----: | ---------:
-<<<<<<< HEAD
-replika     |   1M   |       250
-=======
-Replica     | 1 ms   |     250
->>>>>>> 8a2ab5fa8298975e5b3a29c0800913b900227100
+replika     | 1 ms   |     250
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
@@ -102,4 +100,4 @@ Do korzystania z *Repliki* mogą być przydatne następujące przewodniki:
 
 ## Powiązane produkty
 
-* *[Dysk](/resource/storage/disk.md)*
+ * *[Dysk](/resource/storage/disk.md)*

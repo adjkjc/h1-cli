@@ -28,24 +28,24 @@ Dla *Adapteru sieciowego" charakterystyczne są następujące operacje:
 
 #### Dodanie adresu IP
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Online```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Online```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 #### Zastąpienie adresu IP
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Online```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Online```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 #### Odłączenie adresu IP
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Online```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Online```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Opłaty
 
@@ -87,5 +87,5 @@ Do korzystania z *Adaptera sieciowego* mogą być przydatne następujące przewo
 
 ### Powiązane produkty
 
-* *[Wirtualna maszyna](/resource/compute/virtual-machine.md)*
-* *[Sieć](/resource/networking/network.md)*
+ * *[Wirtualna maszyna](/resource/compute/virtual-machine.md)*
+ * *[Sieć](/resource/networking/network.md)*

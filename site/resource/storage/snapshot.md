@@ -5,28 +5,30 @@
 *Migawka* to uchwycony w danym momencie stan zasobu *[Vault](/resource/storage/vault.md)*. Działa podobnie jak *Obraz*, z tą różnicą, że zapisuje jedynie zmienione dane. 
 
 Główne zalety:
-* rozliczana tylko za zmienione dane
+
+ * rozliczana tylko za zmienione dane
 
 Przykładowe zastosowania:
-* baza do utworzenia nowego *Vaulta*
-* zabezpieczenie stanu *Vault* przed zmianami
+
+ * baza do utworzenia nowego *Vaulta*
+ * zabezpieczenie stanu *Vault* przed zmianami
 
 ## Cykl życia
 
 ### Utworzenie
 
-*Migawka* może zostać utworzona po spełnieniu następujących warunków: 
+*Migawka* może zostać utworzona po spełnieniu następujących warunków:
 
-* dostęp do *Vault* jest włączony
-* wszystkie *ogólne* warunki
+ * dostęp do *Vault* jest włączony
+ * wszystkie *ogólne* warunki
 
 *Migawka* tworzona jest na podstawie istniejącego *Vault*.
 
 ### Usuwanie
 
-Migawka może zostać usunięta po spełnieniu następujących warunków: 
+Migawka może zostać usunięta po spełnieniu następujących warunków:
 
-* wszystkie ogólne warunki *usunięcia zasobu*
+ * wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Zarządzanie
 
@@ -34,8 +36,8 @@ Migawka może zostać usunięta po spełnieniu następujących warunków:
 
 Dostępne są następujące typowe operacje:
 
-* możliwość zmiany wyświetlanej nazwy
-* zarządzanie *Tagami*
+ * możliwość zmiany wyświetlanej nazwy
+ * zarządzanie *Tagami*
 
 ## Opłaty
 
@@ -70,4 +72,4 @@ Do korzystania z *Migawki* mogą być przydatne następujące przewodniki:
 
 ## Powiązane produkty
 
-* *[Vault](/resource/storage/vault.md)*
+ * *[Vault](/resource/storage/vault.md)*

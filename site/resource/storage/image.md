@@ -6,23 +6,23 @@
 
 Główne zalety:
 
-* przechowywanie w chmurze na odrębnych nośnikach zwiększających bezpieczeństwo danych
-* brak konieczności wyłączania *Wirtualnej maszyny* do utworzenia obrazu
-* szeroki wachlarz dostępnych rekomendowanych obrazów umożliwiających szybkie uruchomienie *Wirtualnej maszyny*
+ * przechowywanie w chmurze na odrębnych nośnikach zwiększających bezpieczeństwo danych
+ * brak konieczności wyłączania *Wirtualnej maszyny* do utworzenia obrazu
+ * szeroki wachlarz dostępnych rekomendowanych obrazów umożliwiających szybkie uruchomienie *Wirtualnej maszyny*
 
 Przykładowe zastosowania:
 
-* baza do utworzenia nowej *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*
-* pełna kopia danych
+ * baza do utworzenia nowej *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*
+ * pełna kopia danych
 
 ## Cykl życia
 
 ### Utworzenie
 
-*Obraz* może zostać utworzony po spełnieniu następujących warunków: 
+*Obraz* może zostać utworzony po spełnieniu następujących warunków:
 
-* *Wirtualna maszyna* jest w stanie `Pracująca` lub `Wyłączona`
-* wszystkie ogólne warunki *utworzenia zasobu*
+ * *Wirtualna maszyna* jest w stanie `Pracująca` lub `Wyłączona`
+ * wszystkie ogólne warunki *utworzenia zasobu*
 
 *Obraz* tworzony jest na podstawie istniejącej *Wirtualnej maszyny*.
 
@@ -30,9 +30,9 @@ Chociaż istnieje możliwość utworzenia *Obrazu*, gdy *Wirtualna maszyna* jest
 
 ### Usuwanie
 
-*Obraz* może zostać usunięty po spełnieniu następujących warunków: 
+*Obraz* może zostać usunięty po spełnieniu następujących warunków:
 
-* wszystkie ogólne warunki *usunięcia zasobu*
+ * wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Zarządzanie
 
@@ -40,15 +40,15 @@ Chociaż istnieje możliwość utworzenia *Obrazu*, gdy *Wirtualna maszyna* jest
 
 Dla *Obrazu* dostępne są następujące typowe operacje:
 
-* możliwość zmiany wyświetlanej nazwy
-* zarządzanie *Tagami*
+ * możliwość zmiany wyświetlanej nazwy
+ * zarządzanie *Tagami*
 
 ## Opłaty
 
 Opłaty naliczane są na podstawie rozmiaru danych i czasu:
 
-    * wielkość danych w jednostkach GB
-    * czas w okresach rozliczeniowych jednej godziny
+ * wielkość danych w jednostkach GB
+ * czas w okresach rozliczeniowych jednej godziny
 
 Opłaty naliczane są za każdy GB przestrzeni dyskowej zajmowanej przez *Obraz* w okresie rozliczeniowym.
 
@@ -60,7 +60,7 @@ Opłaty naliczane są za każdy GB przestrzeni dyskowej zajmowanej przez *Obraz*
 
 Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji* po spełnieniu następujących warunków:
 
-* wszystkie ogólne warunki przekazania zasobu
+ * wszystkie ogólne warunki przekazania zasobu
 
 <!-- TODO: warunki czego? przekazania?-->
 
@@ -90,5 +90,5 @@ Do korzystania z *Obrazu* mogą być przydatne następujące przewodniki:
 
 ## Powiązane produkty
 
-* *[Wirtualna maszyna](/resource/compute/virtual-machine.md)*
-* *[Dysk](/resource/storage/disk.md)*
+ * *[Wirtualna maszyna](/resource/compute/virtual-machine.md)*
+ * *[Dysk](/resource/storage/disk.md)*

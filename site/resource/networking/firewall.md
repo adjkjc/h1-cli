@@ -35,32 +35,32 @@ W przypadku usunięcia wszystkich reguł mają zastosowanie następujące zasady
 
 #### Przyłączenie
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* poprawnie utworzona *Sieć*, [zgodnie z przewodnikiem](/guide/networking/network/creating.md)
-* zasób znajduje się w stanie ```Rozłączony```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * poprawnie utworzona *Sieć*, [zgodnie z przewodnikiem](/guide/networking/network/creating.md)
+ * zasób znajduje się w stanie ```Rozłączony```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 #### Odłączenie
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Przyłączony```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Przyłączony```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 #### Dodanie reguły
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Rozłączony``` lub ```Przyłączony```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Rozłączony``` lub ```Przyłączony```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 #### Usunięcie reguły
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Rozłączony``` lub ```Przyłączony```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Rozłączony``` lub ```Przyłączony```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Typowe operacje
 
@@ -112,5 +112,5 @@ Do korzystania z *Zapory sieciowej* mogą być przydatne następujące przewodni
 
 ## Powiązane produkty
 
-* *[Sieć](/resource/networking/network.md)*
-* *[Wirtualna maszyna](/resource/compute/virtual-machine.md)*
+ * *[Sieć](/resource/networking/network.md)*
+ * *[Wirtualna maszyna](/resource/compute/virtual-machine.md)*

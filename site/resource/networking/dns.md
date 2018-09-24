@@ -28,10 +28,10 @@ Zarządzanie *DNS-em* polega na modyfikowaniu zestawu rekordów (ang.*record-set
  * dodawanie rekordu w zestawie rekordów
  * usuwanie rekordu w zestawie rekordów
 
-Zarządzanie *DNS-em* odbywa się po spełnieniu następujących warunków: 
+Zarządzanie *DNS-em* odbywa się po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Online```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Online```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Lokalizacja
 
@@ -69,4 +69,4 @@ Do korzystania z *DNS* mogą być przydatne następujące przewodniki:
 
 ## Powiązane produkty
 
-* *[Adres IP](/resource/networking/ip-address.md)*
+ * *[Adres IP](/resource/networking/ip-address.md)*

@@ -20,22 +20,22 @@ Przykładowe zastosowania:
 
 Dla *Bramy sieciowej* charakterystyczne są następujące operacje:
 
-* przyłączenie *Bramy sieciowej* do określonej *Sieci*
-* odłączenie *Bramy sieciowej* od określonej *Sieci*
+ * przyłączenie *Bramy sieciowej* do określonej *Sieci*
+ * odłączenie *Bramy sieciowej* od określonej *Sieci*
 
 ### Przyłączenie
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Online```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Online```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Odłączenie
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Online```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Online```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Opłaty
 
@@ -76,5 +76,5 @@ Do korzystania z *Bramy sieciowej* mogą być przydatne następujące przewodnik
 
 ### Powiązane produkty
 
-* *[Wirtualna maszyna](/resource/compute/virtual-machine.md)*
-* *[Sieć](/resource/networking/network.md)*
+ * *[Wirtualna maszyna](/resource/compute/virtual-machine.md)*
+ * *[Sieć](/resource/networking/network.md)*

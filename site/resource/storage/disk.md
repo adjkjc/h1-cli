@@ -7,17 +7,17 @@
 
 Główne zalety:
 
-* łatwa skalowalność rozmiaru, wydajności i liczby dysków: możliwość zmiany rozmiaru nawet podczas pracy wykorzystującej go *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*
-* możliwość zaimportowania dysku na platformę i pobrania dysku z platformy wykluczająca uzależnienie od dostawcy (vendor lock-in)
-* małe opóźnienia w działaniu
-* duża przepustowość 
-* maksymalne bezpieczeństwo danych w długim czasie użytkowania
-* elastyczny dobór parametrów gwarantujący odpowiadające potrzebom budżetowanie
+ * łatwa skalowalność rozmiaru, wydajności i liczby dysków: możliwość zmiany rozmiaru nawet podczas pracy wykorzystującej go *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*
+ * możliwość zaimportowania dysku na platformę i pobrania dysku z platformy wykluczająca uzależnienie od dostawcy (vendor lock-in)
+ * małe opóźnienia w działaniu
+ * duża przepustowość 
+ * maksymalne bezpieczeństwo danych w długim czasie użytkowania
+ * elastyczny dobór parametrów gwarantujący odpowiadające potrzebom budżetowanie
 
 Przykładowe zastosowania:
 
-* serwery bazodanowe i aplikacyjne
-* przechowywanie dużych plików multimedialnych przez długi czas
+ * serwery bazodanowe i aplikacyjne
+ * przechowywanie dużych plików multimedialnych przez długi czas
 
 --> 
 
@@ -31,26 +31,26 @@ Oferowane dyski charakteryzują się małymi opóźnieniami w działaniu i duż�
 
 ### Utworzenie
 
-*Dysk* może zostać utworzony po spełnieniu następujących warunków: 
+*Dysk* może zostać utworzony po spełnieniu następujących warunków:
 
  * wszystkie ogólne warunki *utworzenia zasobu*
 
 Nowy *Dysk* może być utworzony w następujący sposób:
 
-* jako pusty *Dysk*
-* poprzez zaimportowanie lokalnego pliku z wykorzystaniem `CLI`
+ * jako pusty *Dysk*
+ * poprzez zaimportowanie lokalnego pliku z wykorzystaniem `CLI`
 
 W przypadku utworzenia *Dysku* na podstawie importowanego pliku należy spełnić następujące kryteria:
 
-* format pliku *Dysku* to `.vhdx`
-* typ vhd *Dysku* to `dynamic`
+ * format pliku *Dysku* to `.vhdx`
+ * typ vhd *Dysku* to `dynamic`
 
 ### Usuwanie
 
-*Dysk* może zostać usunięty po spełnieniu następujących warunków: 
+*Dysk* może zostać usunięty po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Rozłączony```
-* wszystkie ogólne warunki *usunięcia zasobu*
+ * zasób znajduje się w stanie ```Rozłączony```
+ * wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Warianty
 
@@ -66,39 +66,39 @@ ssd     |          1 - 500 | 50 iops 8k / GB
 
 Dla *Dysku* charakterystyczne są następujące operacje:
 
-* pobranie dysku jako plik `.vhdx`
-* zwiększenie rozmiaru
-* zmniejszenie rozmiaru
+ * pobranie dysku jako plik `.vhdx`
+ * zwiększenie rozmiaru
+ * zmniejszenie rozmiaru
 
 ### Pobranie dysku
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Zwiększenie rozmiaru
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* żądany rozmiar nie przekracza dopuszczalnego rozmiaru dla wybranego wariantu dysku
-* zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * żądany rozmiar nie przekracza dopuszczalnego rozmiaru dla wybranego wariantu dysku
+ * zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Zmniejszenie rozmiaru
 
-Operacja może zostać wykonana po spełnieniu następujących warunków: 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
-* na końcu obszaru *Dysku* znajduje się wystarczająca ilość przestrzeni nieprzydzielonej do żadnej partycji
-* zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
+ * na końcu obszaru *Dysku* znajduje się wystarczająca ilość przestrzeni nieprzydzielonej do żadnej partycji
+ * zasób nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Typowe operacje
 
 Dla *Dysku* dostępne są następujące typowe operacje:
 
-* zmiana nazwy
-* zarządzanie *Tagami*
+ * zmiana nazwy
+ * zarządzanie *Tagami*
 
 ## Dostęp
 
@@ -108,8 +108,8 @@ Dla *Dysku* dostępne są następujące typowe operacje:
 
 Opłaty za przechowywanie danych naliczane są w zależności od wariantu *Dysku*, jego rozmiaru i czasu wykorzystania:
 
-   * rozmiar w jednostkach GB
-   * czas wykorzystania liczony w okresach rozliczeniowych jednej godziny
+ * rozmiar w jednostkach GB
+ * czas wykorzystania liczony w okresach rozliczeniowych jednej godziny
 
 Opłaty naliczane są za każdy GB przestrzeni dyskowej używanej w okresie rozliczeniowym.
 
@@ -153,5 +153,5 @@ Do korzystania z *Dysku* mogą być przydatne następujące przewodniki:
  
 ## Powiązane produkty
 
-* *[Maszyny wirtualne](/resource/compute/virtual-machine.md)*
-* *[Vault](/resource/storage/vault.md)*
+ * *[Maszyny wirtualne](/resource/compute/virtual-machine.md)*
+ * *[Vault](/resource/storage/vault.md)*
