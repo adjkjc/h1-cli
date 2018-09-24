@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób odczytać [Dziennik](/resource/storage/log-arc
 
 ## Warunki wstępne
 
-* wszystkie warunki wykonania operacji [Odczytania](/resource/storage/log-archive.md#odczytanie).
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie warunki wykonania operacji [Odczytanie](/resource/storage/log-archive.md#odczytanie).
 
 ## Instrukcja
 

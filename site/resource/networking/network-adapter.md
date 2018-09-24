@@ -30,22 +30,22 @@ Dla *Adapteru sieciowego" charakterystyczne są następujące operacje:
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Online```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Adapter sieciowy* znajduje się w stanie ```Online```
+ * *Adapter sieciowy* nie znajduje się w stanie *Ograniczonego użycia*
 
 #### Zastąpienie adresu IP
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Online```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Adapter sieciowy* znajduje się w stanie ```Online```
+ * *Adapter sieciowy* nie znajduje się w stanie *Ograniczonego użycia*
 
 #### Odłączenie adresu IP
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Online```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Adapter sieciowy* znajduje się w stanie ```Online```
+ * *Adapter sieciowy* nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Opłaty
 

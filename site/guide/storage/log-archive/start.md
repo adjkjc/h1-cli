@@ -6,6 +6,8 @@ Dokument wyjaśnia w jaki sposób włączyć [Dziennik](/resource/storage/log-ar
 
 ## Warunki wstępne
 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
 * wszystkie warunki wykonania operacji [Włączenia](/resource/storage/log-archive.md#wlaczenie)
 
 ## Instrukcja

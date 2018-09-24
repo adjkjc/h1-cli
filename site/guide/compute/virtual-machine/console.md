@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób uzyskać dostępu do graficznej konsoli *[Wirt
 
 ## Warunki wstępne
 
-* wszystkie warunki wykonania operacji [Uzyskanie dostępu do graficznej konsoli](/resource/compute/virtual-machine.md#uruchomienie).
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie warunki wykonania operacji [Uzyskanie dostępu do graficznej konsoli](/resource/compute/virtual-machine.md).
 
 ## Instrukcja
 

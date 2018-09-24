@@ -6,10 +6,6 @@ Dokument wyjaśnia w jaki sposób dodać klucz SSH do [Vault](/resource/storage/
 
 Klucze SSH w przypadku *Vault* mogą pochodzić z opcji projektu lub opcji użytkownika, albo zostać wygenerowane "ad-hoc".
 
-## Warunki wstępne
-
-* utworzenie *Vault* wymaga spełnienia [warunków utworzenia Vault](/resource/storage/vault.md#utworzenie)
-
 ## Dodanie klucza SSH na podstawie istniejącego klucza
 
 Utworzenie Vault z wykorzystaniem istniejącego klucza pozwala na sprawne ponowne wykorzystywanie kluczy SSH.

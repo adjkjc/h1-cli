@@ -7,7 +7,9 @@ archiwizowania logów lub ich analizy w czasie rzeczywistym.
 
 ## Warunki wstępne
 
-* utworzenie *Dziennika* wymaga spełnienia [warunków utworzenia Dziennika](/resource/storage/log-archive.md#utworzenie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki utworzenia *Dziennika*](/resource/storage/log-archive.md#utworzenie)
 
 ## Instrukcja
 

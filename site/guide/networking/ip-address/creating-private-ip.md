@@ -6,6 +6,11 @@ Dokument wyjaśnia w jaki sposób utworzyć *[Adres IP](/resource/networking/ip-
 
 ## Warunki wstępne
 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* utworzona *Sieć* [zgodnie z przewodnikiem](/guide/networking/network/creating.md)
+* wszystkie [warunki utworzenia Adresu IP](/resource/networking/ip-address.md#utworzenie)
+
 ## Instrukcja
 
 ### Panel

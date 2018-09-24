@@ -44,24 +44,24 @@ Powiązanie *Adresu IP* w internecie z *Adresem IP* w *Sieci* umożliwia dostęp
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Przydzielony``` lub ```Nieprzydzielony```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Adres IP* znajduje się w stanie ```Przydzielony``` lub ```Nieprzydzielony```
+ * *Adres IP* nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Zmiana rekordu PTR
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Przydzielony``` lub ```Nieprzydzielony```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Adres IP* znajduje się w stanie ```Przydzielony``` lub ```Nieprzydzielony```
+ * *Adres IP* nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Powiązanie z innym adresem IP
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
- * zasób jest *Adresem IP* w *Sieci* prywatnej
+ * *Adres IP* znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
+ * *Adres IP* jest *Adresem IP* w *Sieci* prywatnej
  * dowiązywany *Adres IP* jest adresem w *Sieci* publicznej
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Adres IP* nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Opłaty
 

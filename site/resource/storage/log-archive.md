@@ -40,22 +40,22 @@ Dla *Dziennika* charakterystyczne są następujące operacje:
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Działający```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Dziennik* znajduje się w stanie ```Działający```
+ * *Dziennik* nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Wyłączenie
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Wyłączony```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Dziennik* znajduje się w stanie ```Wyłączony```
+ * *Dziennik* nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Odczytanie
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Wyłączony``` lub ```Działający```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Dziennik* znajduje się w stanie ```Wyłączony``` lub ```Działający```
+ * *Dziennik* nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Typowe operacje
 

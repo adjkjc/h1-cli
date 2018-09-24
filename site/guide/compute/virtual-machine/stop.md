@@ -4,10 +4,6 @@
 
 Dokument wyjaśnia w jaki sposób zatrzymać [Wirtualną maszynę](/resource/compute/virtual-machine.md).
 
-## Warunki wstępne
-
-* wszystkie warunki wykonania operacji [Zatrzymania](/resource/compute/virtual-machine.md#zatrzymanie).
-
 ## Instrukcja
 
 ### Panel

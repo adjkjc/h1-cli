@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób utworzyć *[Zaporę sieciową](/resource/netwo
 
 ## Warunki wstępne
 
-* utworzenie *Zapory sieciowej* wymaga spełnienia [warunków utworzenia Zapory sieciowej](/resource/networking/firewall.md#utworzenie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki utworzenia *Zapory sieciowej*](/resource/networking/firewall.md#utworzenie)
 
 ## Instrukcja
 

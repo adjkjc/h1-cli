@@ -4,10 +4,6 @@
 
 Dokument wyjaśnia w jaki sposób usunąć wybrane dane dostępowe z [Dziennika](/resource/storage/log-archive.md).
 
-## Warunki wstępne
-
-* usunięcie *Dziennika* wymaga spełnienia [warunków usuwania Dziennika](/resource/storage/log-archive.md#usuwanie)
-
 ## Instrukcja
 
 ### Panel

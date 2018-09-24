@@ -4,10 +4,6 @@
 
 Dokument wyjaśnia w jaki sposób dodać hasło do *[Dziennika](/resource/storage/log-archive.md)* stanowiące dane dostępowe.
 
-## Warunki wstępne
-
-* dodanie hasła do *Dziennika* wymaga spełnienia [warunków utworzenia Dziennika](/resource/storage/vault.md#utworzenie)
-
 ## Instrukcja
 
 ### Panel

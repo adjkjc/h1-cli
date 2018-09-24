@@ -30,15 +30,15 @@ Dla *Sieci* charakterystyczne są następujące operacje:
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Online```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Sieć* znajduje się w stanie ```Online```
+ * *Sieć* nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Ustawienie bramy domyślnej DNS
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Online```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Sieć* znajduje się w stanie ```Online```
+ * *Sieć* nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Typowe operacje
 

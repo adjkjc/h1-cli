@@ -6,6 +6,8 @@ Dokument wyjaśnia w jaki sposób wyłączyć [Dziennik](/resource/storage/log-a
 
 ## Warunki wstępne
 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
 * wszystkie warunki wykonania operacji [Wyłączenia](/resource/storage/log-archive.md#wylaczenie).
 
 ## Instrukcja

@@ -6,8 +6,9 @@ Dokument wyjaśnia w jaki sposób odłączyć *[Zaporę sieciową](/resource/net
 
 ## Warunki wstępne
 
-* posiadanie [utworzonej](/resource/networking/network.md) *Sieci*
-* posiadanie [utworzonej](/resource/networking/firewall.md) *Zapory sieciowej*
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie warunki wykonania operacji [Odłączenie](/resource/networking/firewall.md).
 
 ## Instrukcja
 

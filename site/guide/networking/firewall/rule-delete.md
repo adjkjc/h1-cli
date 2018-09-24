@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób usunąć regułę *[Zapory sieciowej](/resourc
 
 ## Warunki wstępne
 
-* posiadanie *Zapory sieciowej*
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie warunki wykonania operacji [Usunięcie reguły](/resource/networking/firewall.md).
 
 ## Instrukcja
 

@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób utworzyć [Obrazu](/resource/storage/iso.md) w
  
 ## Warunki wstępne
 
-* utworzenie *Obrazu* wymaga spełnienia [warunków utworzenia ISO](/resource/storage/disk.md#utworzenie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki utworzenia *ISO*](/resource/storage/disk.md#utworzenie)
 
 ## Instrukcja
 

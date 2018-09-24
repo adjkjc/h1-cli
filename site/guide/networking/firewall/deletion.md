@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób usunąć *[Zaporę sieciową](/resource/networ
 
 ## Warunki wstępne
 
-* usunięcie wymaga spełnienia [warunków usuwania *Zapory sieciowej*](/resource/networking/firewall.md#usuwanie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki usuwania *Zapory sieciowej*](/resource/networking/firewall.md#usuwanie)
 
 ## Instrukcja
 

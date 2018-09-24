@@ -6,6 +6,8 @@ Dokument wyjaśnia w jaki sposób usunąć [Dysk](/resource/storage/disk.md).
 
 ## Warunki wstępne
 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
 * usunięcie dysku wymaga spełnienia [warunków usuwania dysku](/resource/storage/disk.md#usuwanie)
 
 ## Instrukcja

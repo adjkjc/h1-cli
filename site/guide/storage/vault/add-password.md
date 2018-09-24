@@ -6,10 +6,6 @@ Dokument wyjaśnia w jaki sposób dodać hasło do [Vault](/resource/storage/vau
 
 Zalecane jest wykorzystanie [kluczy SSH](add-ssh-key.md) w celu uzyskania dostępu do Vault.
 
-## Warunki wstępne
-
-* utworzenie *Vault* wymaga spełnienia [warunków utworzenia Vault](/resource/storage/vault.md#utworzenie)
-
 ## Instrukcja
 
 ### Panel

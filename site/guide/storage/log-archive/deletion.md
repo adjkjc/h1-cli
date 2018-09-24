@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób usunąć [Dziennik](/resource/storage/log-arch
 
 ## Warunki wstępne
 
-* usunięcie *Dziennika* wymaga spełnienia [warunków usuwania Dziennika](/resource/storage/vault.md#usuwanie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki usuwania *Dziennika*](/resource/storage/vault.md#usuwanie)
 
 ## Instrukcja
 

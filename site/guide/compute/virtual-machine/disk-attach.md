@@ -9,7 +9,9 @@ Po przyłączeniu *Dysku* możliwe jest jego [odłączenie](./disk-detach.md).
 
 ## Warunki wstępne
 
-* posiadanie [utworzonej](/resource/networking/network.md) *Sieci*
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie warunki wykonania operacji [Przyłączenie Dysku](/resource/compute/virtual-machine.md).
 
 ## Instrukcja
 

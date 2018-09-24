@@ -6,6 +6,8 @@ Dokument wyjaśnia w jaki sposób odłączyć *[Bramę sieciową](/resource/netw
 
 ## Warunki wstępne
 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
 * posiadanie [utworzonej](/resource/networking/network.md) *Sieci*
 * posiadanie [utworzonej](/resource/networking/network-gateway.md) *Bramy sieciowej*
 

@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób usunąć zmienić rekord PTR w DNS dla *[Adres
 
 ## Warunki wstępne
 
-* wykonanie wymaga utworzenia [publicznego adresu IP](./creating.md).
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie warunki wykonania operacji [Zmiana rekordu PTR](/resource/networking/ip-address.md).
 
 ## Instrukcja
 

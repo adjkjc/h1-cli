@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób dodać zestaw rekordów DNS do [DNS](/resource
 
 ## Warunki wstępne
 
-* Brak warunków wstępnych.
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie warunki [zarządzania DNS](/resource/networking/dns.md).
 
 ## Instrukcja
 

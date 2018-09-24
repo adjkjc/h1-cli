@@ -6,6 +6,8 @@ Dokument wyjaśnia w jaki sposób opublikować [Obraz](/resource/storage/image.m
 
 ## Warunki wstępne
 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
 * wszystkie warunki wykonania operacji [Opublikowanie](/resource/storage/image.md#opublikowanie)
 
 ## Instrukcja

@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób usunąć [DNS](/resource/networking/network.md
 
 ## Warunki wstępne
 
-* usunięcie wymaga spełnienia [warunków usuwania DNS](/resource/networking/network.md#usuwanie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki usuwania DNS](/resource/networking/network.md#usuwanie)
 
 ## Instrukcja
 

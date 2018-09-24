@@ -9,7 +9,9 @@ Po odłączeniu *Dysku* możliwe jest jego ponowne [przyłączenie](./disk-attac
 
 ## Warunki wstępne
 
-* posiadanie [utworzonej](/resource/networking/network.md) *Sieci*
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie warunki wykonania operacji [Odłączenie Dysku](/resource/compute/virtual-machine.md).
 
 ## Instrukcja
 

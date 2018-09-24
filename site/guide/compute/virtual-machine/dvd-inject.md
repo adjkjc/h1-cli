@@ -10,7 +10,9 @@ Po wsunięciu *ISO* możliwe jest go [wysunięcie](./dvd-eject.md).
 
 ## Warunki wstępne
 
-* posiadanie [utworzonej](/resource/networking/network.md) *Sieci*
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie warunki wykonania operacji [Wysunięcie ISO](/resource/compute/virtual-machine.md).
 
 ## Instrukcja
 

@@ -6,6 +6,8 @@ Dokument wyjaśnia w jaki sposób odpublikować [ISO](/resource/storage/iso.md).
 
 ## Warunki wstępne
 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
 * wszystkie warunki wykonania operacji [Odpublikowanie](/resource/storage/iso.md#odpublikowanie)
 
 ## Instrukcja

@@ -6,6 +6,8 @@ Dokument wyjaśnia w jaki sposób zastąpić *[Adres IP](/resource/networking/ip
 
 ## Warunki wstępne
 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
 * zastąpienie adresu IP wymaga spełnienia [warunków operacji zastąpienia adresu IP](/resource/networking/network-adapter.md#zastapienie-adresu-ip)
 
 ## Instrukcja

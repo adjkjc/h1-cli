@@ -4,10 +4,6 @@
 
 Dokument wyjaśnia w jaki sposób wyłączyć [Wirtualną maszynę](/resource/compute/virtual-machine.md).
 
-## Warunki wstępne
-
-* wszystkie warunki wykonania operacji [Wyłączenie](/resource/compute/virtual-machine.md#wylaczenie).
-
 ## Instrukcja
 
 #### CLI

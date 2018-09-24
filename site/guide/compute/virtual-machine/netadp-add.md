@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób dodać *[Adapter sieciowy](/resource/networkin
 
 ## Warunki wstępne
 
-* posiadanie *Wirtualnej maszyny*
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie warunki wykonania operacji [Dodanie interfejsu sieciowego](/resource/compute/virtual-machine.md).
 
 ## Instrukcja
 

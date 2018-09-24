@@ -6,6 +6,8 @@ Dokument wyjaśnia w jaki sposób usunąć [ISO](/resource/storage/disk.md).
 
 ## Warunki wstępne
 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
 * usunięcie ISO wymaga spełnienia [warunków usuwania ISO](/resource/storage/iso.md#usuwanie)
 
 ## Instrukcja

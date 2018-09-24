@@ -6,6 +6,8 @@ Dokument wyjaśnia w jaki sposób utworzyć *[Sieć](/resource/networking/networ
 
 ## Warunki wstępne
 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
 * utworzenie wymaga spełnienia [warunków utworzenia *Sieci*](/resource/networking/network.md#utworzenie)
 
 ## Instrukcja

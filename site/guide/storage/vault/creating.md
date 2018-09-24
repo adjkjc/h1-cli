@@ -10,7 +10,9 @@ W przypadku tworzenia *Vault* możesz utworzyć go pustego lub na podstawie istn
 
 ## Warunki wstępne
 
-* utworzenie *Vault* wymaga spełnienia [warunków utworzenia Vault](/resource/storage/vault.md#utworzenie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki utworzenia *Vault*](/resource/storage/vault.md#utworzenie)
 
 ## Utworzenie pustego *Vault*
 

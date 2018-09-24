@@ -6,6 +6,8 @@ Dokument wyjaśnia w jaki sposób usunąć *[Adres IP](/resource/networking/ip-a
 
 ## Warunki wstępne
 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
 * usunięcie adresu IP wymaga spełnienia [warunków operacji usunięcia adresu IP](/resource/networking/network-adapter.md#usunięcie-adresu-ip)
 
 ## Instrukcja

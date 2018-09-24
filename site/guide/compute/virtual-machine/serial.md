@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób uzyskać dostępu do konsoli poprzez port szer
 
 ## Warunki wstępne
 
-* wszystkie warunki wykonania operacji [Uzyskanie dostępu do konsoli poprzez port szeregowy](/resource/compute/virtual-machine.md#uzyskanie-dostępu-do-konsoli-poprzez-port-szeregowy).
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie warunki wykonania operacji [Dostęp do konsoli poprzez port szeregowy](/resource/compute/virtual-machine.md).
 
 ## Instrukcja
 

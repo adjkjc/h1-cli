@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób utworzyć *[Dysk](/resource/storage/disk.md)* 
 
 ## Warunki wstępne
 
-* utworzenie dysku wymaga spełnienia [warunków utworzenia *Dysku*](/resource/storage/disk.md#utworzenie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki utworzenia *Dysku*](/resource/storage/disk.md#utworzenie)
 
 ## Utworzenie pustego Dysku
 

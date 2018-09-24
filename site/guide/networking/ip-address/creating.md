@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób utworzyć trwały publiczny *[Adres IP](/resou
 
 ## Warunki wstępne
 
-* utworzenie wymaga spełnienia [warunków utworzenia *Adresu IP*](/resource/networking/ip-address.md#utworzenie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki utworzenia Adresu IP](/resource/networking/ip-address.md#utworzenie)
 
 ## Instrukcja
 

@@ -8,7 +8,9 @@ przeglądarki.
 
 ## Warunki wstępne
 
-* wykonanie operacji wymaga [utworzonego](./creating.md) *Vault* w stanie ```Właczony```
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie warunki wykonania operacji [Dostęp do konsoli](/resource/storage/vault.md#dostęp-do-konsoli)
 
 ## Instrukcja
 

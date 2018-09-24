@@ -49,7 +49,7 @@ W przypadku utworzenia *Dysku* na podstawie importowanego pliku należy spełni�
 
 *Dysk* może zostać usunięty po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Rozłączony```
+ * *Dziennik* znajduje się w stanie ```Rozłączony```
  * wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Warianty
@@ -74,24 +74,25 @@ Dla *Dysku* charakterystyczne są następujące operacje:
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Dziennik* znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
+ * *Dziennik* nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Zwiększenie rozmiaru
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * żądany rozmiar nie przekracza dopuszczalnego rozmiaru dla wybranego wariantu dysku
- * zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * żądany rozmiar nie przekracza dopuszczalnego rozmiaru dla aktualnego wariantu *Dysku*
+ * *Dysk* nie jest podłączony albo jest kolejnym dyskiem podłączonym do [Wirtualnej maszyny](/resource/compute/virtual-machine.md).
+ * *Dysk* nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Zmniejszenie rozmiaru
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
+ * żądany rozmiar nie przekracza dopuszczalnego rozmiaru dla aktualnego wariantu *Dysku*
+ * *Dysk* znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
  * na końcu obszaru *Dysku* znajduje się wystarczająca ilość przestrzeni nieprzydzielonej do żadnej partycji
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Dysk* nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Typowe operacje
 

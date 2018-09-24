@@ -12,7 +12,7 @@ Przykładowe zastosowania:
 
 *Brama sieciowa* może zostać utworzona po spełnieniu następujących warunków:
 
- * zasób nie jest przywiązany do żadnej *Sieci*
+ * *Brama sieciowa* nie jest przywiązany do żadnej *Sieci*
  * wszystkie ogólne warunki *usunięcia zasobu*
  * wszystkie ogólne warunki *utworzenia zasobu*
 
@@ -27,15 +27,15 @@ Dla *Bramy sieciowej* charakterystyczne są następujące operacje:
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Online```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Brama sieciowa* znajduje się w stanie ```Online```
+ * *Brama sieciowa* nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Odłączenie
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Online```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Brama sieciowa* znajduje się w stanie ```Online```
+ * *Brama sieciowa* nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Opłaty
 

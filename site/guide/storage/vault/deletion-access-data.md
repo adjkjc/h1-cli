@@ -4,10 +4,6 @@
 
 Dokument wyjaśnia w jaki sposób usunąć wybrane dane dostępowe z [Vault](/resource/storage/vault.md).
 
-## Warunki wstępne
-
-* usunięcie *Vault* wymaga spełnienia [warunków usuwania Vault](/resource/storage/vault.md#usuwanie)
-
 ## Instrukcja
 
 ### Panel

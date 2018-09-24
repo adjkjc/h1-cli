@@ -41,6 +41,7 @@ Dla *Vaulta* charakterystyczne są następujące operacje:
  * włączenie dostępu
  * wyłączanie dostępu
  * zwiększenie rozmiaru
+ * dostęp do konsoli
 
 Wykorzystywana przestrzeń *Vault* stanowi rozmiar zgromadzonych plików i wszystkich *Migawek*.
 
@@ -48,15 +49,15 @@ Wykorzystywana przestrzeń *Vault* stanowi rozmiar zgromadzonych plików i wszys
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Wyłączony```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Vault* znajduje się w stanie ```Wyłączony```
+ * *Vault* nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Wyłączenie dostępu
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Online```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Vault* znajduje się w stanie ```Online```
+ * *Vault* nie znajduje się w stanie *Ograniczonego użycia*
 
 Wykonanie operacji może ograniczyć funkcjonowanie *Kontenera* wykorzystującego dany *Vault*.
 
@@ -64,8 +65,15 @@ Wykonanie operacji może ograniczyć funkcjonowanie *Kontenera* wykorzystująceg
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Online``` lub ```Wyłączony```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Vault* znajduje się w stanie ```Online``` lub ```Wyłączony```
+ * *Vault* nie znajduje się w stanie *Ograniczonego użycia*
+
+### Dostęp do konsoli
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * *Vault* znajduje się w stanie ```Online```
+ * *Vault* nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Dostęp
 

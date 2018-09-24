@@ -7,7 +7,9 @@ Dokument wyjaśnia w jaki sposób wysunąć *[ISO](/resource/storage/iso.md)* z 
 
 ## Warunki wstępne
 
-* posiadanie [utworzonej](/resource/networking/network.md) *Sieci*
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie warunki wykonania operacji [Wsunięcie ISO](/resource/compute/virtual-machine.md).
 
 ## Instrukcja
 

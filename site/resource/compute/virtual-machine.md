@@ -115,9 +115,27 @@ Dodatkowe *Dyski* mają następujące cechy:
 
 Do zarządzania *Dyskami* *Wirtualnej maszyn* służą następujące operacje:
 
- * dołączenie *Dysku* do *Wirtualnej maszyny*
+ * przyłączenie *Dysku* do *Wirtualnej maszyny*
  * odłączenie *Dysku* od *Wirtualnej maszyny*
  * zmiana rozmiaru *Dysku*
+
+##### Przyłączenie Dysku
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * poprawnie utworzony *Dysk* [zgodnie z przewodnikiem](/guide/storage/disk/creating.md)
+ * *Wirtualna Maszyna* znajduje się w stanie ```Pracujący``` lub ```Wyłączony```
+ * *Dysk* znajduje się w stanie ```Rozłączony```
+ * przyłączenie *Dysku* nie spowoduje przekroczenie liczby dopuszczalnych interfejsów wynikających z wariantu *Wirtualnej Maszyny*
+ * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
+
+##### Odłączenie Dysku
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * *Wirtualna Maszyna* znajduje się w stanie ```Wyłączony```, w przypadku pierwszego dołączonego *Dysku*
+ * *Wirtualna Maszyna* znajduje się w stanie ```Pracujący``` lub ```Wyłączony```
+ * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
 
 ##### Metadane
 
@@ -149,16 +167,16 @@ Do zarządzania *Interfejsami sieciowymi* *Wirtualnej maszyny* w stanie `Wyłąc
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Wyłączony```
- * dodanie interfejsu nie spowoduje przekroczenie liczby dopuszczalnych interfejsów wynikających z wariantu
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Wirtualna Maszyna* znajduje się w stanie ```Wyłączony```
+ * dodanie interfejsu nie spowoduje przekroczenie liczby dopuszczalnych interfejsów wynikających z wariantu *Wirtualnej Maszyny*
+ * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
 
 ##### Usunięcie interfejsu sieciowego
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Wyłaczony```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Wirtualna Maszyna* znajduje się w stanie ```Wyłaczony```
+ * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
 
 #### Napęd DVD
 
@@ -174,9 +192,9 @@ Do zarządzania napędem DVD służą następujące operacje:
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
  * poprawnie utworzone *ISO*, [zgodnie z przewodnikiem](/guide/networking/iso/creating.md)
- * zasób znajduje się w stanie `Pracujący` lub `Wyłączony`
- * do zasobu nie jest aktualnie wsunięte żadne *ISO*
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Wirtualna Maszyna* znajduje się w stanie `Pracujący` lub `Wyłączony`
+ * do *Wirtualnej Maszyny* nie jest aktualnie wsunięte żadne *ISO*
+ * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
 
 ##### Wysunięcie ISO
 

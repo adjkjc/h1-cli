@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób usunąć *[Adapter sieciowy](/resource/network
 
 ## Warunki wstępne
 
-* posiadanie *Wirtualnej maszyny* w stanie ``Wyłączony`` z co najmniej 1 *Adapterem sieciowym* 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie warunki wykonania operacji [Usunięcie interfejsu sieciowego](/resource/compute/virtual-machine.md).
 
 ## Instrukcja
 

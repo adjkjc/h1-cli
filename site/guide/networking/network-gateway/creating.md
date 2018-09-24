@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób utworzyć *[Bramę sieciową](/resource/networ
 
 ## Warunki wstępne
 
-* utworzenie *Bramy sieciowej* wymaga spełnienia [warunków utworzenia Bramy sieciowej](/resource/networking/network-gateway.md#utworzenie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki utworzenia *Bramy sieciowej*](/resource/networking/network-gateway.md#utworzenie)
 
 ## Instrukcja
 

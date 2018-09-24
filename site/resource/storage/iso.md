@@ -45,17 +45,17 @@ Dla *ISO* charakterystyczne są następujące operacje:
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Online```
- * zasób nie jest opublikowany
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Dziennik* znajduje się w stanie ```Online```
+ * *Dziennik* nie jest opublikowany
+ * *Dziennik* nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Odpublikowanie
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Online```
- * zasób jest opublikowany
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *Dziennik* znajduje się w stanie ```Online```
+ * *Dziennik* jest opublikowany
+ * *Dziennik* nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Typowe operacje
 

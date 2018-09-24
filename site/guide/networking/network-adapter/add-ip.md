@@ -6,6 +6,8 @@ Dokument wyjaśnia w jaki sposób dodać *[Adres IP](/resource/networking/ip-add
 
 ## Warunki wstępne
 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
 * dodanie adresu IP wymaga spełnienia [warunków operacji dodania adresu IP](/resource/networking/network-adapter.md#dodanie-adresu-ip)
 
 ## Instrukcja

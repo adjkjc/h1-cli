@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób usunąć [Migawkę](/resource/storage/snapshot
 
 ## Warunki wstępne
 
-* usunięcie *Migawki* wymaga spełnienia [warunków usuwania Migawki](/resource/storage/snapshot.md#usuwanie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki usunięcia *Migawki*](/resource/storage/snapshot.md#usuwanie)
 
 ## Instrukcja
 

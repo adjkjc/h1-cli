@@ -30,8 +30,8 @@ Zarządzanie *DNS-em* polega na modyfikowaniu zestawu rekordów (ang.*record-set
 
 Zarządzanie *DNS-em* odbywa się po spełnieniu następujących warunków:
 
- * zasób znajduje się w stanie ```Online```
- * zasób nie znajduje się w stanie *Ograniczonego użycia*
+ * *DNS* znajduje się w stanie ```Online```
+ * *DNS* nie znajduje się w stanie *Ograniczonego użycia*
 
 ## Lokalizacja
 

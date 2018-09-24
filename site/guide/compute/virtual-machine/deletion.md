@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób usunąć [Wirtualną maszynę](/resource/compu
 
 ## Warunki wstępne
 
-* usunięcie wymaga spełnienia [warunków usuwania Wirtualnej maszyny](/resource/compute/virtual-machine.md#usuwanie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki usuwania Wirtualnej maszyny](/resource/compute/virtual-machine.md#usuwanie)
 
 ## Instrukcja
 

@@ -7,7 +7,9 @@ do nowego *Vaulta* lub zabezpieczenie stanu *Vault* przed zmianami.
  
 ## Warunki wstępne
 
-* utworzenie *Migawki* wymaga spełnienia [warunków utworzenia Migawki](/resource/storage/snapshot.md#utworzenie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki utworzenia *Migawki*](/resource/storage/snapshot.md#utworzenie)
 
 ## Instrukcja
 

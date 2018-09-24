@@ -8,7 +8,9 @@ W przypadku tworzenia *ISO* możesz utworzyć go na podstawie pliku lokalnego lu
 
 ## Warunki wstępne
 
-* utworzenie *ISO* wymaga spełnienia [warunków utworzenia ISO](/resource/storage/disk.md#utworzenie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki utworzenia *ISO*](/resource/storage/disk.md#utworzenie)
 
 ## Utworzenie *ISO* poprzez wskazanie serwera
 

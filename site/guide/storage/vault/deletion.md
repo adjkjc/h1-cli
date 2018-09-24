@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób usunąć [Vault](/resource/storage/vault.md).
 
 ## Warunki wstępne
 
-* usunięcie *Vault* wymaga spełnienia [warunków usuwania Vault](/resource/storage/vault.md#usuwanie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki usuwania *Vault*](/resource/storage/vault.md#usuwanie)
 
 ## Instrukcja
 

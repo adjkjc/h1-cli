@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób utworzyć *[DNS](/resource/networking/dns.md)*
 
 ## Warunki wstępne
 
-* utworzenie *DNS* wymaga spełnienia [warunków utworzenia DNS](/resource/networking/dns.md#utworzenie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki utworzenia *DNS*](/resource/networking/dns.md#utworzenie)
 
 ## Instrukcja
 

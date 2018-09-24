@@ -13,7 +13,9 @@ Nie wykorzystanie żadnego obrazu nie oznacza braku systemu operacyjnego, gdyż 
 
 ## Warunki wstępne
 
-* utworzenie *Wirtualnej maszyny* wymaga spełnienia [warunków utworzenia Wirtualnej maszyny](/resource/compute/virtual-machine.md#utworzenie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki utworzenia *Wirtualnej maszyny*](/resource/compute/virtual-machine.md#utworzenie)
 
 ## utworzenie z wykorzystaniem rekomendowanego obrazu
 

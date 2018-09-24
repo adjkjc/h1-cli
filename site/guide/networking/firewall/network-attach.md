@@ -6,8 +6,9 @@ Dokument wyjaśnia w jaki sposób przyłączyć *[Zaporę sieciową](/resource/n
 
 ## Warunki wstępne
 
-* posiadanie [utworzonej](/resource/networking/network.md) *Sieci*
-* posiadanie [utworzonej](/resource/networking/firewall.md) *Zapory sieciowej*
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie warunki wykonania operacji [Przyłączenie](/resource/networking/firewall.md).
 
 ## Instrukcja
 

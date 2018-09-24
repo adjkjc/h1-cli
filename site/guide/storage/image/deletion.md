@@ -6,7 +6,9 @@ Dokument wyjaśnia w jaki sposób usunąć *[Obraz](/resource/storage/image.md)*
 
 ## Warunki wstępne
 
-* usunięcie *Obrazu* wymaga spełnienia [warunków usuwania ISO](/resource/storage/iso.md#usuwanie)
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie [warunki usuwania *ISO*](/resource/storage/iso.md#usuwanie)
 
 ## Instrukcja
 

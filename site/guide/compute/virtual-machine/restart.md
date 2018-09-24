@@ -4,10 +4,6 @@
 
 Dokument wyjaśnia w jaki sposób zrestartować [Wirtualną maszynę](/resource/compute/virtual-machine.md).
 
-## Warunki wstępne
-
-* wszystkie warunki wykonania operacji [Zrestartowanie](/resource/compute/virtual-machine.md#zrestartowanie).
-
 ## Instrukcja
 
 ### Panel

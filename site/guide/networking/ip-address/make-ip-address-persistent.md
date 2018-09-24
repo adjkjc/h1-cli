@@ -8,10 +8,9 @@ Ulotny *Adres IP* istnieje wyłącznie wraz z *[Wirtualną maszyną](/resource/c
 
 ## Warunki wstępne
 
-Zanim przekształcisz ulotny *Adres IP* w trwały, sprawdź czy spełniasz:
+Operacja może zostać wykonana po spełnieniu następujących warunków:
 
 * wszystkie [warunki utworzenia Adresu IP](/resource/networking/ip-address.md#utworzenie)
-* istnienie [utworzonej]() Wirtualnej maszyny z przypisanym ulotnym adresem IP
 
 ## Instrukcja
 

@@ -6,6 +6,8 @@ Dokument wyjaśnia w jaki sposób zwiększyć [Dysk](/resource/storage/disk.md),
 
 ## Warunki wstępne
 
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
 * *Dysk* nie jest podłączony albo jest kolejnym dyskiem podłączonym do [Wirtualnej maszyny](/resource/compute/virtual-machine.md).
 
 ## Instrukcja

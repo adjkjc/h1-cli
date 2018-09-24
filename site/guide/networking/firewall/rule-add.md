@@ -11,7 +11,9 @@ Reguły zapory sieciowej podzielone są na następujące kategorie:
 
 ## Warunki wstępne
 
-* posiadanie *Zapory sieciowej*
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+* wszystkie warunki wykonania operacji [Dodanie reguły](/resource/networking/firewall.md).
 
 ## Instrukcja
 

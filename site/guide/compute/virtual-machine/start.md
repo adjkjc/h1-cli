@@ -4,10 +4,6 @@
 
 Dokument wyjaśnia w jaki sposób uruchomić [Wirtualną maszynę](/resource/compute/virtual-machine.md).
 
-## Warunki wstępne
-
-* wszystkie warunki wykonania operacji [Uruchomienie](/resource/compute/virtual-machine.md#uruchomienie).
-
 ## Instrukcja
 
 ### Panel
