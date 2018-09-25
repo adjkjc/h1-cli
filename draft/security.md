@@ -30,6 +30,12 @@ Logowanie opcjonalnie per projekt, wymaga wskazania usługi logarchive (?) do kt
 
 Guide: zarządzanie rozszerzonym logowaniem dla projektu
 
+<!-- 
+https://cloud.google.com/logging/docs/audit/
+https://docs.microsoft.com/en-US/azure/monitoring-and-diagnostics/monitoring-overview-activity-logs
+https://aws.amazon.com/cloudtrail/
+-->
+
 ## Szyfrowane połączenia
 
 Wszelkie połączenia do zarządzania usługami w ramach platformy są szyfrowane ....
@@ -47,7 +53,7 @@ https://www.microsoft.com/en-us/trustcenter/security/azure-security
 
 Hasła Użytkownika trafiają do platformy w formie zaszyfrowanej i nigdy nie są przechowywane nawet tymczasowo w formie jawnej.
 
-## ```protected```
+## protected
 
 Tag ```protected``` zabezpiecza zasób przed przypadkowym usunięciem w przypadku wykonywania skryptów i umożliwia oznaczenie krytycznej infrastruktury.
 
