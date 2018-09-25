@@ -6,25 +6,28 @@ Guide: zarządzanie dwu składnikowym logowaniem dla użytkownika
 
 ## Ograniczenia dostępu sieciowego
 
-Użytkownik może wprowadzić ograniczenia w zakresie adresów ip lub całych sieci z których będą akceptowane połączenia do platformy (? publicznego API) dla tego użytkownika. Jednocześnie dla każdego Projektu można także zdefiniować takie ograniczenia.
+Użytkownik może wprowadzić ograniczenia w zakresie adresów ip lub regionów z których będą akceptowane połączenia do platformy dla tego Użytkownika. Jednocześnie dla każdego Projektu można także zdefiniować takie ograniczenia.
 
-Ograniczenia zdefiniowane projektu są nadrzędne nad ograniczeniami zdefiniowanymi dla użytkownika. 
+Ograniczenia zdefiniowane projektu są nadrzędne nad ograniczeniami zdefiniowanymi dla użytkownika.
 
 Guide: definiowane ograniczenia dostępu sieciowego dla użytkownika
-Guide: definiowane ograniczenia dostepu sieciowego dla projektu
+Guide: definiowane ograniczenia dostępu sieciowego dla projektu
 
+Baza danych: ```GeoLite2 Country```
 
 ## Logowanie
 
 ### Historia zdarzeń
 
-Wszelkie żądania zmian i akcji są logowane i zapisywane do historii zadarzeń danego zasobu.
+Wszelkie żądania zmian i akcji są logowane i zapisywane do historii zdarzeń danego zasobu.
 
 ### Wszelkie operacje / Rozszerzone logowanie
 
-Logowanie opcjonalnie per projekt, wymaga wskazania usługi logarchive (?) do której logi będą wysyłane. Obejmuje wszelkie zapytania kierowane w ramach projektu do publicznego API. Logowane są pobieranie danych (GET) oraz wszelkie zapytania tworzące (POST), modyfikujące (PUT, PATCH) lub usuwające (DELETE) zasoby lub inne informacje dla danego projektu. 
+Logowanie opcjonalnie per projekt, wymaga wskazania usługi logarchive (?) do której logi będą wysyłane. Obejmuje wszelkie zapytania kierowane w ramach projektu do publicznego API. Logowane są pobieranie danych (GET) oraz wszelkie zapytania tworzące (POST), modyfikujące (PUT, PATCH) lub usuwające (DELETE) zasoby lub inne informacje dla danego projektu.
 
 Guide: zarządzanie rozszerzonym logowaniem dla projektu
+
+<!-- Moniko, jeszcze nie. Należy ustalić jakie to będzie miało priorytet i kiedy będzie tekst dostępny. -->
 
 ## Szyfrowane połączenia
 
@@ -33,12 +36,19 @@ Wszelkie połączenia do zarządzania usługami w ramach platformy są szyfrowan
 * https
 * ssh
 
+<!--
+https://cloud.google.com/security/
+https://gsuite.google.com/security/
+https://www.microsoft.com/en-us/trustcenter/security/azure-security
+-->
+
 ## Hasła
 
-Hasła trafiają do platformy w formie zaszyfrowanej i nigdy nie są przechowywane nawet tymczasowo w formie nie zaszyfrowanej.
+Hasła Użytkownika trafiają do platformy w formie zaszyfrowanej i nigdy nie są przechowywane nawet tymczasowo w formie jawnej.
 
-<!-- TODO: do weryfikacji  -->
+## ```protected```
 
+Tag ```protected``` zabezpiecza zasób przed przypadkowym usunięciem w przypadku wykonywania skryptów i umożliwia oznaczenie krytycznej infrastruktury.
 
 ## Service Accounts (? jak po polsku, czy nazwa ang. już zostaje)
 
@@ -47,12 +57,7 @@ Hasła trafiają do platformy w formie zaszyfrowanej i nigdy nie są przechowywa
 * jak dokładnie można ograniczać dostęp
 
 Guide: zarządzanie Service Accounts
-Tutorial: wykorzystanie Service Accounts w automatyzacji 
-
-
-## Network ACL
-
-Baza danych: ```GeoLite2 Country```
+Tutorial: wykorzystanie Service Accounts w automatyzacji
 
 ## Powiązane treści
 
