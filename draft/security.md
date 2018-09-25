@@ -1,6 +1,9 @@
 # Bezpieczeństwo dostępu
 
-## Dwu składnikowe logowanie
+## Dwuskładnikowe logowanie
+
+<!-- http://di.com.pl/Dwuskladnikowe-uwierzytelnianie-co-daje-w-jakich-uslugach-wystepuje-i-jak-je-wlaczyc-51228 -->
+<!-- https://dwa-skladniki.pl/ -->
 
 Guide: zarządzanie dwu składnikowym logowaniem dla użytkownika
 
@@ -26,8 +29,6 @@ Wszelkie żądania zmian i akcji są logowane i zapisywane do historii zdarzeń 
 Logowanie opcjonalnie per projekt, wymaga wskazania usługi logarchive (?) do której logi będą wysyłane. Obejmuje wszelkie zapytania kierowane w ramach projektu do publicznego API. Logowane są pobieranie danych (GET) oraz wszelkie zapytania tworzące (POST), modyfikujące (PUT, PATCH) lub usuwające (DELETE) zasoby lub inne informacje dla danego projektu.
 
 Guide: zarządzanie rozszerzonym logowaniem dla projektu
-
-<!-- Moniko, jeszcze nie. Należy ustalić jakie to będzie miało priorytet i kiedy będzie tekst dostępny. -->
 
 ## Szyfrowane połączenia
 
