@@ -15,16 +15,17 @@ Użytkownik tworzący Projekt otrzymuje automatycznie rolę ```owner``` Projektu
 <!-- wymaga wprowadzenia nazwy Projektu -->
 
 <!-- 
-### usunięcie
+### Usunięcie
 
 Nie jest możliwe usunięcie projektu. 
 -->
+
+## Zarządzanie
 
 ### Operacje
 
 Dostępne są następujące dedykowane operacje:
 
-* zmiana nazwy
 * zarządzanie członkami projektu
     * dodanie użytkownika do Projektu
     * usunięcie użytkownika z Projektu
@@ -46,8 +47,6 @@ Dostępne są następujące dedykowane operacje:
 * dostęp do historii naliczonych opłat
 
 <!-- czy service account powinno miec dostep GET do /project/self ??? -->
-
-#### Zmiana nazwy
 
 #### Zarządzanie członkami Projektu
 

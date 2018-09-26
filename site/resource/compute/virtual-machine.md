@@ -191,7 +191,7 @@ Do zarządzania napędem DVD służą następujące operacje:
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * poprawnie utworzone *ISO*, [zgodnie z przewodnikiem](/guide/networking/iso/creating.md)
+ * poprawnie utworzone *ISO*, [zgodnie z przewodnikiem](/guide/storage/iso/creating.md)
  * *Wirtualna Maszyna* znajduje się w stanie `Pracujący` lub `Wyłączony`
  * do *Wirtualnej Maszyny* nie jest aktualnie wsunięte żadne *ISO*
  * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*

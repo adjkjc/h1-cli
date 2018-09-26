@@ -100,7 +100,6 @@ W przypadku pozostałych podmiotów dostępne są następujące kanały płatno�
 
 Dostępne są następujące dedykowane operacje:
 
-* zmiana nazwy
 * zmiana danych rozliczeniowych
 * zmiana użytkowników przypisanych do *Organizacji* i ich ról
     * użytkownik tworzący *Organizacje* otrzymuje automatycznie rolę ```owner``` Organizacji

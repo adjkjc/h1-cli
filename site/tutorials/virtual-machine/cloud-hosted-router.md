@@ -33,3 +33,5 @@ Przed przystąpieniem do integracji powinieneś mieć:
       free_text: 
         text: W celu bezpiecznego skonfigurowania usługi skorzystaj z [dokumentacji producenta](https://wiki.mikrotik.com/wiki/Manual:Securing_Your_Router#Access_by_IP_address).
 ```
+
+<!-- Network: https://app.asana.com/0/836013051111576/836509326193072 -->

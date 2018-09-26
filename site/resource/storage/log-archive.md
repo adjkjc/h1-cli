@@ -1,4 +1,4 @@
-# Dziennik
+# Dziennik <Badge text="wkrótce"/>
 
 ## Przeznaczenie
 
@@ -36,28 +36,28 @@ Dla *Dziennika* charakterystyczne są następujące operacje:
  * włączenie
  * odczytywanie wpisów za wybrany okres lub bieżących w czasie rzeczywistym
 
-## Wyłączenie
+### Wyłączenie
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
  * *Dziennik* znajduje się w stanie ```Działający```
  * *Dziennik* nie znajduje się w stanie *Ograniczonego użycia*
 
-## Wyłączenie
+### Wyłączenie
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
  * *Dziennik* znajduje się w stanie ```Wyłączony```
  * *Dziennik* nie znajduje się w stanie *Ograniczonego użycia*
 
-## Odczytanie
+### Odczytanie
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
  * *Dziennik* znajduje się w stanie ```Wyłączony``` lub ```Działający```
  * *Dziennik* nie znajduje się w stanie *Ograniczonego użycia*
 
-### Typowe operacje
+## Typowe operacje
 
 Dla *Dziennika* dostępne są następujące typowe operacje:
 
