@@ -2,17 +2,25 @@
 
 ## Przeznaczenie
 
-*Adapter sieciowy* zapewnia łączność określonemu *Zasobowi*. Stanowi odpowiednik karty sieciowej. *Adapter sieciowy* musi mieć przypisany *Adres IP* z *Sieci*, do której jest przyłączony.
+*Adapter sieciowy* zapewnia łączność określonemu *Zasobowi*. Stanowi odpowiednik karty sieciowej.
 
 Główne zalety:
 
-Przykładowe zastosowania:
+ * może wykorzystywać równocześnie wiele [adresów IP](/resource/networking/ip-address.md)
+ * wysoka przepustowość sieciowa - do 1000 Mbps
 
+Przykładowe zastosowania:
+ 
+ * świadczenie usług sieciowych
+ * utworzenie bramy sieciowej pomiędzy [Sieciami](/resource/networking/network.md)
+ 
 ## Cykl życia
 
 ### Utworzenie
 
 *Adapter sieciowy* może zostać utworzony wyłącznie podczas przyłączenia do innego *Zasobu*.
+
+*Adapter sieciowy* musi mieć przypisany *Adres IP* z *Sieci*, do której jest przyłączony.
 
 ### Usuwanie
 

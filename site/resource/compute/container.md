@@ -2,7 +2,7 @@
 
 ## Przeznaczenie
 
-*Kontener* wykorzystuje się do uruchamiania aplikacji na podstawie obrazów kontenerów. 
+*Kontener* wykorzystuje się do uruchamiania aplikacji na podstawie obrazów kontenerów.
 
 Główne zalety:
 
@@ -101,9 +101,9 @@ system operacyjny     | Linux   |
 
 Nazwa              | Okres  | Cena (PLN) | Uwagi
 ------------------ | :----: | ---------: | :----:
-ruch przychodzący  |   1H   |     0.0000 | 
-ruch wychodzący    |   1h   |     0.0200 | 
-hobby              |   1h   |    10.0000 | 
+ruch przychodzący  |   1H   |     0.0000 |
+ruch wychodzący    |   1h   |     0.0200 |
+hobby              |   1h   |    10.0000 |
 standard           |   1h   |    20.0000 |
 standard x2        |   1h   |    40.0000 |
 performance        |   1h   |    80.0000 |
@@ -114,7 +114,7 @@ performance x2     |   1h   |   160.0000 |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
-<!-- 
+<!--
 Transfer is not availabe due following reason:
 - required validation of licensing
 - container can use vault as composite of multiple resources

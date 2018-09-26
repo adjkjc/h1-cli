@@ -8,9 +8,10 @@
 
 Główne zalety:
 
- * pełna izolacja *Wirtualnej maszyny*  zapewniająca najwyższy poziom bezpieczeństwa
- * możliwość podłączenia i odłączenia *Dysków* w czasie pracy *Wirtualnej maszyny*
- * podłączenie aż do 16 dysków  do jednej *Wirtualnej maszyny*
+ * pełna izolacja *Wirtualnej maszyny* zapewniająca najwyższy poziom bezpieczeństwa
+ * podłączenia i odłączenia *[Dysków](/resource/storage/disk.md)* w czasie pracy *Wirtualnej maszyny*
+ * wykorzystanie aż do 16 dysków przez jedną *Wirtualną maszyne*
+ * obsługa wielu *[Adapterów sieciowych](/resource/networking/network-adapter.md)*
  * możliwość uzyskania systemu operacyjnego przez *[ISO](/resource/storage/iso)* lub *[Obraz](/resource/storage/image.md)*
 
 Przykładowe zastosowania:
@@ -45,43 +46,43 @@ To grupa wariantów *Wirtualnych maszyn* do podstawowego programowania i testowa
 <!--TODO: nie rozumiem-->
 
 Nazwa      | vCPU | Pamięć (GB) | Liczba IPv4 | Liczba dysków | Liczba interfejsy sieciowych
----------- | :--: | :---------: | :---------: | :-----------: | :--------------------:  
-a1.nano    | 1    |         0.5 | 1           | 2             | 1                       
-a1.micro   | 1    |           1 | 1           | 2             | 1                       
-a1.small   | 1    |           2 | 1           | 2             | 1                       
-a1.medium  | 2    |           4 | 1           | 2             | 1                       
-a1.large   | 4    |           7 | 1           | 2             | 1                       
+---------- | :--: | :---------: | :---------: | :-----------: | :--------------------:
+a1.nano    | 1    |         0.5 | 1           | 2             | 1
+a1.micro   | 1    |           1 | 1           | 2             | 1
+a1.small   | 1    |           2 | 1           | 2             | 1
+a1.medium  | 2    |           4 | 1           | 2             | 1
+a1.large   | 4    |           7 | 1           | 2             | 1
 
 ### Ogólnego przeznaczenia
 
 Nazwa      | vCPU | Pamięć (GB) | Liczba IPv4 | Liczba dysków  | Liczba interfejsów sieciowych
 ---------- | :--: | :---------: | :---------: | :-----------: | :--------------------:
-m2.tiny    | 1    |           1 | 32          | 64            | 8                     
-m2.small   | 1    |           2 | 32          | 64            | 8                     
-m2.medium  | 2    |           4 | 32          | 64            | 8                     
-m2.large   | 2    |           7 | 32          | 64            | 8                     
-m2.xlarge  | 4    |          15 | 32          | 64            | 8                     
-m2.xxlarge | 4    |          24 | 32          | 64            | 8                     
+m2.tiny    | 1    |           1 | 32          | 64            | 8
+m2.small   | 1    |           2 | 32          | 64            | 8
+m2.medium  | 2    |           4 | 32          | 64            | 8
+m2.large   | 2    |           7 | 32          | 64            | 8
+m2.xlarge  | 4    |          15 | 32          | 64            | 8
+m2.xxlarge | 4    |          24 | 32          | 64            | 8
 
 ### Intensywne wykorzystanie procesora
 
 Nazwa      | vCPU | Pamięć (GB) | Liczba IPv4 | Liczba dysków | Liczba interfejsów sieciowych
----------- | :--: | :---------: | :---------: | :-----------: | :--------------------:  
-c3.light   | 6    |          22 | 32          | 64            | 8                       
-c3.small   | 8    |          30 | 32          | 64            | 8                       
-c3.medium  | 16   |          60 | 32          | 64            | 8                       
-c3.large   | 24   |          90 | 32          | 64            | 8                       
-c3.xlarge  | 32   |         120 | 32          | 64            | 8                       
-  
+---------- | :--: | :---------: | :---------: | :-----------: | :--------------------:
+c3.light   | 6    |          22 | 32          | 64            | 8
+c3.small   | 8    |          30 | 32          | 64            | 8
+c3.medium  | 16   |          60 | 32          | 64            | 8
+c3.large   | 24   |          90 | 32          | 64            | 8
+c3.xlarge  | 32   |         120 | 32          | 64            | 8
+
 ### Intensywne wykorzystanie pamięci
 
 Nazwa      | vCPU | Pamięć (GB) | Liczba IPv4 | Liczba dysków | Liczba interfejsów sieciowych
----------- | :--: | :---------: | :---------: | :-----------: | :--------------------:  
-r4.small   | 6    |          60 | 32          | 64            | 8                       
-r4.medium  | 8    |          90 | 32          | 64            | 8                       
-r4.large   | 12   |         120 | 32          | 64            | 8                       
-r4.xlarge  | 16   |         250 | 32          | 64            | 8                       
-r4.xxlarge | 32   |         488 | 32          | 64            | 8     
+---------- | :--: | :---------: | :---------: | :-----------: | :--------------------:
+r4.small   | 6    |          60 | 32          | 64            | 8
+r4.medium  | 8    |          90 | 32          | 64            | 8
+r4.large   | 12   |         120 | 32          | 64            | 8
+r4.xlarge  | 16   |         250 | 32          | 64            | 8
+r4.xxlarge | 32   |         488 | 32          | 64            | 8
 
 W szczególnych przypadkach (np. licencjonowania) możliwe jest obniżenie ilości vCPU lub wielkości pamięci dla danego wariantu. Nie ma to jednak wpływu na fakturowanie i standardowe opłaty wariantowe przed modyfikacją.
 
@@ -91,7 +92,7 @@ W szczególnych przypadkach (np. licencjonowania) możliwe jest obniżenie iloś
 
 Dla *Wirtualnej maszyny* charakterystyczne są następujące operacje:
 
- * uruchomienie 
+ * uruchomienie
  * zatrzymanie, co powoduje bezpiecznie zamknięcie systemu operacyjnego
  * wyłączenie, co powoduje działanie podobnie do odcięcia napięcia
  * zrestartowanie
@@ -106,7 +107,7 @@ Pierwszy dołączony *Dysk* jest przeznaczany na system operacyjny i ma następu
 
  * używany do rozruchu *Wirtualnej maszyny*
  * dołączony do kontrolera dysku IDE
- * można zarządzać nim tylko, gdy *Wirtualna maszyna* jest w stanie `Wyłączony` 
+ * można zarządzać nim tylko, gdy *Wirtualna maszyna* jest w stanie `Wyłączony`
 
 Dodatkowe *Dyski* mają następujące cechy:
 
@@ -211,7 +212,7 @@ Do zarządzania *Wirtualną maszyną* są przeznaczone następujące dodatkowe o
  * dostęp do konsoli poprzez port szeregowy
  * dostęp do graficznej konsoli
  * zarządzanie metadanymi użytkownika
- * reset hasła 
+ * reset hasła
  * podgląd parametrów pracy *Dysków*, *Interfejsów sieciowych* i CPU
 
 #### Dostęp do konsoli poprzez port szeregowy
@@ -274,7 +275,7 @@ Możliwe są dodatkowe opłaty dotyczące opcjonalnych *Zasobów* używanych prz
 ## Ograniczone użycie
 
 W przypadku ograniczonego użycia:
- 
+
  * *Wirtualna maszyna* ulega wyłączeniu
  * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/platform/resource.md#ograniczone-uzycie)*
 
@@ -295,7 +296,7 @@ Typ wirtualizacji                     | Typ 1
 
 #### Podstawowe użycie
 
-Wariant    | PLN    | Okres 
+Wariant    | PLN    | Okres
 ---------- | -----: | :--:
 a1.nano    | 0.0153 | 1 h
 a1.micro   | 0.0263 | 1 h
@@ -305,7 +306,7 @@ a1.large   | 0.1706 | 1 h
 
 #### Ogólne użycie
 
-Wariant    | PLN    | Okres 
+Wariant    | PLN    | Okres
 ---------- | -----: | :--:
 m2.tiny    | 0.0393 | 1 h
 m2.small   | 0.0612 | 1 h
@@ -316,7 +317,7 @@ m2.xxlarge | 0.5946 | 1 h
 
 #### Intensywne wykorzystanie procesora
 
-Wariant    | PLN    | Okres 
+Wariant    | PLN    | Okres
 ---------- | -----: | :--:
 c3.light   | 0.8002 | 1 h
 c3.small   | 1.0849 | 1 h
@@ -326,17 +327,17 @@ c3.xlarge  | 4.3395 | 1 h
 
 #### Intensywne wykorzystanie pamięci
 
-Wariant    | PLN    | Okres 
+Wariant    | PLN    | Okres
 ---------- | -----: | :--:
 r4.small   | 1.2143 | 1 h
 r4.medium  | 1.8128 | 1 h
 r4.large   | 2.4287 | 1 h
 r4.xlarge  | 4.9814 | 1 h
-r4.xxlarge | 9.7303 | 1 h 
+r4.xxlarge | 9.7303 | 1 h
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
-<!-- 
+<!--
 Transfer is not availabe due following reason:
 - required validation of licensing or any other requirements
 - vm is composite of multiple resources
@@ -345,7 +346,7 @@ Transfer is not availabe due following reason:
 ## Przewodniki
 
 Do korzystania z *Wirtualnej maszyny* mogą być przydatne następujące przewodniki:
- 
+
 <PageList path_re="guide/compute/virtual-machine/"/>
 
 ## Powiązane produkty

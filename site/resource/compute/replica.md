@@ -2,7 +2,7 @@
 
 ## Przeznaczenie
 
-*Replika* umożliwia kopiowanie niemal w czasie rzeczywistym danych zmodyfikowanych w wirtualnych maszynach działających w lokalnym środowisku Hyper-V *Użytkownika*. Umożliwia to w razie potrzeby odtworzenie *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*. 
+*Replika* umożliwia kopiowanie niemal w czasie rzeczywistym danych zmodyfikowanych w wirtualnych maszynach działających w lokalnym środowisku Hyper-V *Użytkownika*. Umożliwia to w razie potrzeby odtworzenie *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*.
 
 Główne zalety:
 
@@ -61,7 +61,7 @@ Dodatkowe opłaty wiążą się z wykorzystaniem *Dysku* w czasie procesu replik
 ## Ograniczone użycie
 
 W przypadku ograniczonego użycia:
- 
+
  * *Replikacja* ulega wstrzymaniu
  * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/platform/resource.md#ograniczone-uzycie)*
 
@@ -69,7 +69,7 @@ W przypadku ograniczonego użycia:
 
 !!! include(regions.md) !!!
 
-<!-- 
+<!--
 ## Parametry techniczne
 
 Parametry techniczne            | Wartość
@@ -87,7 +87,7 @@ replika     | 1 ms   |     250
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
-<!-- 
+<!--
 Transfer is not availabe due following reason:
 - replica includes disk as composite of multiple resources
 -->

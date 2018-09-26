@@ -2,7 +2,19 @@
 
 ## Przeznaczenie
 
-*Zapora sieciowa* służy do kontrolowania komunikacji w obu kierunkach (przychodzącej i wychodzącej) z *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)* do przyłączonej *[Sieci](/resource/networking/network.md)*.
+*Zapora sieciowa* służy do kontrolowania komunikacji w obu kierunkach (przychodzącej i wychodzącej) z *[Adaptera sieciowego](/resource/networking/network-adapter.md)* w *[Sieci](/resource/networking/network.md)*.
+
+Główne zalety:
+
+ * niezależny od systemu operacyjnego w *Wirtualnej Maszynie*
+ * centralnie zarządzany na poziomie *Sieci*
+ * zwiększa skuteczność obowiązujących polityk sieciowych
+ * możliwy także do wykorzystania do kontroli ruchu na publicznych *Adresach IP* powiązanych z *Adresami IP* w *Sieci*
+
+Przykładowe zastosowania:
+
+ * ograniczenie dostępu do usług 
+ * udostępnienie usług do wybranych zakresów sieciowych
 
 ## Cykl życia
 
@@ -32,6 +44,8 @@ W przypadku usunięcia wszystkich reguł mają zastosowanie następujące zasady
 
  * ruch przychodzący jest zablokowany
  * ruch wychodzący jest dozwolony, jednak serwer nie może uzyskać potwierdzenia odbioru pakietów, które nie zostały dopuszczone przez jakąkolwiek regułę wychodzącą
+
+Reguły *Zapory sieciowej* mają zastosowanie do wszystkich *Adapterów sieciowych* w *Sieci*, niezależnie czy *Adres IP* komunikacji jest prywatnym *Adresem IP*, czy jest publicznym *Adresem IP* powiązanym z *Adresem IP* w *Sieci*.
 
 #### Przyłączenie
 

@@ -4,6 +4,19 @@
 
 *DNS* to usługa służąca do tłumaczenia publicznych nazw domen na numeryczne adresy IP, takie jak 62.181.3.92, które komputery wykorzystują do łączenia się ze sobą, lub na odpowiednie wartości.
 
+Główne zalety:
+ 
+ * wysokodostępna architektura
+ * dostępne liczne typy rekordów
+ * nie wymaga od użytkownika instalacji i utrzymania oprogramowania
+ * zarządzanie także poprzez API i CLI w celu automatyzacji zmian
+ * możliwość importu i eksportu konfiguracji w formacie BIND
+ 
+Przykładowe zastosowania:
+
+ * wykorzystanie przystępnej nazwy domeny dla strony WWW
+ * identyfikacja serwera świadczącego usługę pod zmiennym adresem IP
+
 ## Cykl życia
 
 ### Utworzenie
@@ -41,7 +54,7 @@ Zarządzanie *DNS-em* odbywa się po spełnieniu następujących warunków:
 
 Parameter                | Wartość                                |Uwagi
 ------------------------ | -------------------------------------: | ---
-Typy rekordów            | A, CNAME, MX, TXT, SRV, NS, CAA,  AAAA |
+Typy rekordów            |  A, CNAME, MX, TXT, SRV, NS, CAA, AAAA |
 Rozmiar zestawu rekordów |                                     20 |
 
 W razie potrzeby zwiększenia zaproponowanych parametrów [prosimy o kontakt](/about-us/contact.md).

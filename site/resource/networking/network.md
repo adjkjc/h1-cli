@@ -4,6 +4,17 @@
 
 *Sieć* może być używana jako sposób izolacji i segmentacji platformy w celu ograniczenia komunikacji zasobów.
 
+Główne zalety:
+
+ * skutecznie izoluje komunikacje zasobów
+ * umożliwia wykorzystanie [Zapory sieciowej](/resource/networking/firewall.md)
+ * konfiguracja parametrów DHCP
+ 
+Przykładowe zastosowania:
+
+ * ochrona usług nieprzeznaczona do publicznego udostępniania
+ * ograniczenie wykorzystania publicznych *Adresów IP*
+
 ## Cykl życia
 
 ### Utworzenie

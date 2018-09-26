@@ -4,15 +4,16 @@
 
 *Adres IP* jest wymagany do zapewnienia komunikacji do internetu lub *[Sieci](/resource/networking/network.md)*.
 
-W zależności od sieci można użyć adresu IP z różnych zakresów:
+Główne zalety:
 
- * *[Sieć](/resource/networking/network.md)* - można używać tylko prywatnych adresów IP zgodnie z [RFC-1918](https://tools.ietf.org/html/rfc1918), a *Adres IP* można pobrać z puli adresowej należącej do *Sieci*
- * internet - *Adresy IP* są przydzielane przez platformę i pobierane bezpośrednio z internetu
+ * kompatybilne z protokołem IPv4
+ * dostępne jako adresy IP prywatne lub publiczne
+ * mogą być swobodnie przenoszone pomiędzy zasobami
 
-Wyróżniamy dwa typy *Adresów IP* w internecie:
+Przykładowe zastosowania:
 
- * ```ulotny``` - przypisany podczas tworzenia *Zasobu* i dostępny tylko do momentu usunięcia *Zasobu*; taki adres można przekształcić w ```trwały``` w dowolnym momencie przed usunięciem *Zasobu*
- * ```trwały``` - przypisany do *Projektu*, może być swobodnie przenoszony między *Zasobami* lub zachowany do przyszłego wykorzystania
+ * świadczenie ogólnodostępnych usług internetowych
+ * wsteczna kompatybilność dla szyfrowanych połączeń
 
 ## Cykl życia
 
@@ -22,6 +23,16 @@ Wyróżniamy dwa typy *Adresów IP* w internecie:
 
  * istnieje wolny adres IP w puli adresów sieciowych (dotyczy tylko *Sieci* prywatnych)
  * wszystkie ogólne warunki *utworzenia zasobu*
+
+W zależności od sieci można użyć adresu IP z różnych zakresów:
+
+ * *[Sieć](/resource/networking/network.md)* - można używać tylko prywatnych adresów IP zgodnie z [RFC-1918](https://tools.ietf.org/html/rfc1918), a *Adres IP* można pobrać z puli adresowej należącej do *Sieci*
+ * internet - *Adresy IP* są przydzielane przez platformę i pobierane bezpośrednio z internetu
+
+Wyróżniamy dwa typy *Adresów IP* w platformie:
+
+ * ```ulotny``` - przypisany podczas tworzenia *Zasobu* i dostępny tylko do momentu usunięcia *Zasobu*; taki adres można przekształcić w ```trwały``` w dowolnym momencie przed usunięciem *Zasobu*
+ * ```trwały``` - przypisany do *Projektu*, może być swobodnie przenoszony między *Zasobami* lub zachowany do przyszłego wykorzystania
 
 ### Usuwanie
 

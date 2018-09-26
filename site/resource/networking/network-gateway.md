@@ -6,7 +6,14 @@
 
 Główne zalety:
 
+* prostsze niż utworzenie i utrzymanie własnej [Wirtualnej maszyny](/resource/compute/virtual-machine.md)
+* zachowuje izolacje od zagrożeń sieci internet
+
 Przykładowe zastosowania:
+
+* możliwość komunikacji do internetu z [Wirtualnych maszynych](/resource/networking/network-adapter.md) w [Sieci](/resource/networking/network.md)
+* pobieranie oprogramowania na [Wirtualne maszyny](/resource/networking/network-adapter.md) w [Sieci](/resource/networking/network.md)
+* ukrycie liczby komputerów nawiązujących komunikacje - wszystkie są widoczne pod adresem bramy sieciowej
 
 ## Cykl życia
 
