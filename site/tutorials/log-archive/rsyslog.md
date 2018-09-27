@@ -46,7 +46,6 @@ Przed przystąpieniem do integracji powinieneś mieć:
         state: restarted
       after_event:
         text: Po wykonaniu tych operacji usługa powinna poprawnie współdziałać.
-
 - name: Weryfikacja
   block:
     - name: Wyślij pierwszy wpis  

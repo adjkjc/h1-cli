@@ -4,7 +4,7 @@ Korzyści:
 
 * zdobędziesz cenne doświadczenie zawodowe
 * rozwiniesz ścieżkę swojej kariery jako programista
-* opublikujesz dostępny kod jako część większego projektu - chcemy, aby był on dostępny na [GitHubie](http://github.com/) dla każdego
+* opublikujesz dostępny kod jako część większego projektu - chcemy, aby był on dostępny na [GitHubie](https://github.com/) dla każdego
 * brak umowy poufności względem opracowanego kodu
 * praktyczne zastosowanie narzędzi Git - najpopularniejszego i podstawowego narzędzia pracy grupowej z kodem źródłowym
 * podzielimy się doświadczeniem i poradzimy, gdy utkniesz w martwym punkcie lub nie będziesz wiedzieć od czego zacząć
@@ -41,7 +41,7 @@ Chcielibyśmy powstania dostawcy (```ang. provider```), który umożliwi wykorzy
 
 ### Ansible - moduł  <Badge text="Python"/>
 
-[Ansible](http://www.ansible.com/) jest narzędziem przeznaczonym do automatyzacji zarządzania konfiguracją oprogramowania. Umożliwia ono także zarządzanie infrastrukturą np. utworzonymi wirtualnymi serwerami.
+[Ansible](https://www.ansible.com/) jest narzędziem przeznaczonym do automatyzacji zarządzania konfiguracją oprogramowania. Umożliwia ono także zarządzanie infrastrukturą np. utworzonymi wirtualnymi serwerami.
 
 Chcielibyśmy powstania modułu, który umożliwi wykorzystanie tego narzędzia względem naszej platformy. Udostępniamy do tego odpowiednie API. Konieczne jest napisanie odpowiedniego modułu, a w miarę rozwoju platformy jego rozwijanie. Istnieje wiele modułów (przykład dla [GCE](https://docs.ansible.com/ansible/latest/modules/gce_module.html) mogących stanowiących źródło inspiracji i podpowiedzi.
 
@@ -49,7 +49,7 @@ Chcielibyśmy powstania modułu, który umożliwi wykorzystanie tego narzędzia 
 
 [Grafana](https://grafana.com/) jest narzędziem przeznaczonym do monitorowania i analizy historycznych danych, przede wszystkim tych które ulegają okresowej zmianie w czasie (ang. ```time-series```).
 
-Grafana wspiera wiele [źródeł danych](http://docs.grafana.org/features/datasources/). Niektóre są ściśle związanych z określonym dostawcą usług np. [CloudFlare](https://support.cloudflare.com/hc/en-us/articles/115002722267-Install-the-Cloudflare-Grafana-Plugin), [Azure](https://grafana.com/plugins/grafana-azure-monitor-datasource). [Trwają prace](https://github.com/grafana/grafana/issues/4355) nad wprowadzeniem do Grafany mechanizmów prezentacji danych czasu rzeczywistego.
+Grafana wspiera wiele [źródeł danych](https://docs.grafana.org/features/datasources/). Niektóre są ściśle związanych z określonym dostawcą usług np. [CloudFlare](https://support.cloudflare.com/hc/en-us/articles/115002722267-Install-the-Cloudflare-Grafana-Plugin), [Azure](https://grafana.com/plugins/grafana-azure-monitor-datasource). [Trwają prace](https://github.com/grafana/grafana/issues/4355) nad wprowadzeniem do Grafany mechanizmów prezentacji danych czasu rzeczywistego.
 
 W platformie udostępniamy w czasie rzeczywistym, a także gromadzimy historyczne dane obrazujące parametry pracy [Wirtualnych maszyn](/resource/compute/virtual-machine.md). Usprawni to monitorowanie parametrów ich pracy bez konieczności instalowania przez użytkownika jakiegokolwiek agenta.
 
