@@ -15,7 +15,9 @@ Korzyści:
 
 [Træfik](https://docs.traefik.io/) to nowoczesne [odwrotne proxy HTTP](https://en.wikipedia.org/wiki/Reverse_proxy) i load-balancer, który ułatwia wdrażanie mikrousług. Posiada on możliwość automatycznego uzyskiwania certyfikatów SSL z [Let's Encrypt](https://letsencrypt.org/). Uzyskiwanie certyfikatu SSL wymaga uwierzytelnienie (wykazania prawa do) domeny, co może odbyć się m. in. poprzez odpowiedni wpis DNS. HyperOne udostępnia usługę [DNS](/resource/networking/dns.md).
 
-Celem jest opracowanie integracji, abyśmy byli [dostawcą  usług DNS](https://docs.traefik.io/configuration/acme/#provider) (ang. ```dns provider```) w Træfik na potrzeby weryfikacji Let's Encrypt. Istnieje dotychczas znaczna ilość integracji mogących stanowiących źródło inspiracji i podpowiedzi.
+Celem jest opracowanie integracji, abyśmy byli [dostawcą  usług DNS](https://docs.traefik.io/configuration/acme/#provider) (ang. ```dns provider```) w Træfik na potrzeby weryfikacji Let's Encrypt.
+
+Træfik [wykorzystuje](https://github.com/containous/traefik/blob/master/provider/acme/provider.go) bibliotekę [Lego](https://github.com/xenolf/lego), co powiększa potencjał kodu, gdyż może być wykorzystane także w innych aplikacjach. Zapewnia to także znaczną ilość integracji mogących stanowiących źródło inspiracji i podpowiedzi.
 
 ### CLI - moduł Powershell <Badge text="Powershell"/>  <Badge text="NodeJS"/>
 
@@ -80,6 +82,12 @@ Chcielibyśmy opracowania odpowiednich zmian do CLI, które zwiększą atrakcyjn
 Dostrzegamy [potencjał](https://stackshare.io/posts/companies-using-graphql-in-production-2018) technologi GraphQL. Posiadamy jednak istniejące stabilne rozwiązania, które wymagają utrzymania oparte o REST API platformy.
 
 Chcielibyśmy zbudowania bramki GraphQL opartej na bieżącym interfejsie API REST, co pozwoliłoby w pełni ocenić potencjał migracji do GraphQL.
+
+### Acme.sh - provider DNS <Badge text="Bash"/>
+
+[Acme.sh](https://github.com/Neilpang/acme.sh) jest klientem protokołu ACME wykorzystywanym przez Let's Encrypt podczas wydawania bezpłatnych certyfikatów SSL. Takie certyfikaty mogą być wykorzystywane do świadczenia bezpłatnych usług na naszej infrastrukturze.  Uzyskiwanie certyfikatu SSL wymaga uwierzytelnienie (wykazania prawa do) domeny, co może odbyć się m. in. poprzez odpowiedni wpis DNS. HyperOne udostępnia usługę [DNS](/resource/networking/dns.md).
+
+Celem jest opracowanie integracji, abyśmy byli dostawcą  usług DNS w Acme.sh na potrzeby weryfikacji Let's Encrypt. Narzędzie posiada znaczną ilość integracji, których analiza pozwoli z pewnością pogłębić wiedzę o języku skryptowym bash.
 
 ### Zarządzanie użytkownikami Wirtualnych maszyn <Badge text="JavaScript"/> <Badge text="C++"/> <Badge text="C#"/> <Badge text="Python"/>
 
