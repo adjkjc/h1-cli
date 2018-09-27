@@ -10,10 +10,10 @@ Główne zalety:
  * wysoka przepustowość sieciowa - do 1000 Mbps
 
 Przykładowe zastosowania:
- 
+
  * świadczenie usług sieciowych
  * utworzenie bramy sieciowej pomiędzy [Sieciami](/resource/networking/network.md)
- 
+
 ## Cykl życia
 
 ### Utworzenie
@@ -63,7 +63,7 @@ Opłaty naliczane są za ruch sieciowy - w zależności od rozmiaru ruchu w GB.
 
 !!! include(regions.md) !!!
 
-<!-- 
+<!--
 Transfer is not availabe due following reason:
 - netadp is included in virtual-machine as composite resource
 -->
@@ -81,10 +81,10 @@ W razie potrzeby zwiększenia zaproponowanych parametrów [prosimy o kontakt](/a
 
 Nazwa                                 | Okres  | Cena (PLN) | Uwagi
 ------------------------------------- | :----: | ---------: | :----:
-ruch przychodzący                     | [PERIOD="netadp:metric traffic Outbound"] | [PRICE="netadp:metric traffic Outbound"] | 
-ruch wychodzący                       |    -   |     0.0000 | 
-adapter sieciowy w *Sieci* prywatnej  | [PERIOD="netadp:private"] | [PRICE="netadp:private"] | 
-adapter sieciowy w *Sieci* publicznej | [PERIOD="netadp:public"] | [PRICE="netadp:public"] | 
+ruch przychodzący                     | [PERIOD="netadp:metric traffic Outbound"] | [PRICE="netadp:metric traffic Outbound"] |
+ruch wychodzący                       |    -   |     0.0000 |
+adapter sieciowy w *Sieci* prywatnej  | [PERIOD="netadp:private"] | [PRICE="netadp:private"] |
+adapter sieciowy w *Sieci* publicznej | [PERIOD="netadp:public"] | [PRICE="netadp:public"] |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

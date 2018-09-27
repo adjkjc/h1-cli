@@ -5,13 +5,13 @@
 *DNS* to usługa służąca do tłumaczenia publicznych nazw domen na numeryczne adresy IP, takie jak 62.181.3.92, które komputery wykorzystują do łączenia się ze sobą, lub na odpowiednie wartości.
 
 Główne zalety:
- 
+
  * wysokodostępna architektura
  * dostępne liczne typy rekordów
  * nie wymaga od użytkownika instalacji i utrzymania oprogramowania
  * zarządzanie także poprzez API i CLI w celu automatyzacji zmian
  * możliwość importu i eksportu konfiguracji w formacie BIND
- 
+
 Przykładowe zastosowania:
 
  * wykorzystanie przystępnej nazwy domeny dla strony WWW
@@ -52,7 +52,7 @@ Zarządzanie *DNS-em* odbywa się po spełnieniu następujących warunków:
 
 ## Parametry techniczne
 
-Parameter                | Wartość                               
+Parameter                | Wartość
 ------------------------ | -------------------------------------:
 Typy rekordów            |  A, CNAME, MX, TXT, SRV, NS, CAA, AAAA
 Rozmiar zestawu rekordów |                                     20
@@ -61,13 +61,13 @@ W razie potrzeby zwiększenia zaproponowanych parametrów [prosimy o kontakt](/a
 
 ## Cennik
 
-Nazwa         | Okres  | Cena (PLN) | Uwagi
-------------- | :----: | ---------: | :------
-Strefa DNS    |    -   |     0.0000 | 
+Nazwa         | Okres                | Cena (PLN)            | Uwagi
+------------- | :------------------: | --------------------: | :------
+Strefa DNS    | [PERIOD="zone:zone"] | [PRICE="zone:zone"]   |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
-<!-- 
+<!--
 Transfer is not availabe due following reason:
 - security restriction of creating subzones
 -->

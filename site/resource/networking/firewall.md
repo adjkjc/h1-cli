@@ -13,7 +13,7 @@ Główne zalety:
 
 Przykładowe zastosowania:
 
- * ograniczenie dostępu do usług 
+ * ograniczenie dostępu do usług
  * udostępnienie usług do wybranych zakresów sieciowych
 
 ## Cykl życia
@@ -100,11 +100,11 @@ Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji*
 
 ## Parametry techniczne
 
-Parametr                                      | Wartość 
+Parametr                                      | Wartość
 --------------------------------------------- | ------:
 maksymalna liczba reguł ruchu przychodzącego  | 50
 maksymalna liczba reguł ruchu wychodzącego    | 50
-maksymalna liczba filtrów w regule            | 10 
+maksymalna liczba filtrów w regule            | 10
 maksymalna liczba stref wewnętrznych w regule | 10
 maksymalna liczba stref zewnętrznych w regule | 10
 
@@ -112,9 +112,9 @@ W razie potrzeby zwiększenia zaproponowanych parametrów [prosimy o kontakt](/a
 
 ## Cennik
 
-Wartość         | Okres  | Cena (PLN) | Uwagi
---------------- | :----: | ---------: | ----
-zapora sieciowa |   -    |     0.0000 | 
+Wartość         | Okres                        | Cena (PLN)                  | Uwagi
+--------------- | :--------------------------: | --------------------------: | ----
+zapora sieciowa | [PERIOD="firewall:firewall"] | [PRICE="firewall:firewall"] |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

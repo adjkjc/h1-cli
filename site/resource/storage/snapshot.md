@@ -2,7 +2,7 @@
 
 ## Przeznaczenie
 
-*Migawka* to uchwycony w danym momencie stan zasobu *[Vault](/resource/storage/vault.md)*. Działa podobnie jak *Obraz*, z tą różnicą, że zapisuje jedynie zmienione dane. 
+*Migawka* to uchwycony w danym momencie stan zasobu *[Vault](/resource/storage/vault.md)*. Działa podobnie jak *Obraz*, z tą różnicą, że zapisuje jedynie zmienione dane.
 
 Główne zalety:
 
@@ -47,7 +47,7 @@ Zabezpieczone dane zajmują przestrzeń wykorzystywaną przez *Vault*, co wpływ
 
 !!! include(standard-limited-usage.md) !!!
 
-<!-- 
+<!--
 Transfer is not availabe due following reason:
 - snapshot is composite of multiple resources
 -->
@@ -60,7 +60,7 @@ Transfer is not availabe due following reason:
 
 Nazwa              | Okres  | Cena (PLN) | Uwagi
 ------------------ | :----: | ---------: | :----:
-migawka            |   -    |     0.0000 | 
+migawka            |   -    |     0.0000 |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

@@ -298,7 +298,7 @@ Typ wirtualizacji                     | Typ 1
 
 Wariant    | Okres                   | Cena (PLN)             | Uwagi
 ---------- | :---------------------: | :--------------------- | :---
-a1.nano    | [PERIOD="vm:a1.nano"]   | [PRICE="vm:a1.nano"]   | 
+a1.nano    | [PERIOD="vm:a1.nano"]   | [PRICE="vm:a1.nano"]   |
 a1.micro   | [PERIOD="vm:a1.micro"]  | [PRICE="vm:a1.micro"]  |
 a1.small   | [PERIOD="vm:a1.small"]  | [PRICE="vm:a1.small"]  |
 a1.medium  | [PERIOD="vm:a1.medium"] | [PRICE="vm:a1.medium"] |
@@ -319,7 +319,7 @@ m2.xxlarge | [PERIOD="vm:m2.xxlarge"] | [PRICE="vm:m2.xxlarge"] |
 
 Wariant    | Okres                   | PLN                    | Uwagi
 ---------- | :---------------------: | :--------------------- | :---
-c3.light   | [PERIOD="vm:c3.light"]  | [PRICE="vm:c3.light"]  | 
+c3.light   | [PERIOD="vm:c3.light"]  | [PRICE="vm:c3.light"]  |
 c3.small   | [PERIOD="vm:c3.small"]  | [PRICE="vm:c3.small"]  |
 c3.medium  | [PERIOD="vm:c3.medium"] | [PRICE="vm:c3.medium"] |
 c3.large   | [PERIOD="vm:c3.large"]  | [PRICE="vm:c3.large"]  |
@@ -329,10 +329,10 @@ c3.xlarge  | [PERIOD="vm:c3.xlarge"] | [PRICE="vm:c3.xlarge"] |
 
 Wariant    | Okres                    | PLN                     | Uwagi
 ---------- | :----------------------: | :---------------------- | :----
-r4.small   | [PERIOD="vm:r4.small"]   | [PRICE="vm:r4.small"]   | 
+r4.small   | [PERIOD="vm:r4.small"]   | [PRICE="vm:r4.small"]   |
 r4.medium  | [PERIOD="vm:r4.medium"]  | [PRICE="vm:r4.medium"]  |
 r4.large   | [PERIOD="vm:r4.small"]   | [PRICE="vm:r4.small"]   |
-r4.xlarge  | [PERIOD="vm:r4.xlarge"]  | [PRICE="vm:r4.xlarge"]  | 
+r4.xlarge  | [PERIOD="vm:r4.xlarge"]  | [PRICE="vm:r4.xlarge"]  |
 r4.xxlarge | [PERIOD="vm:r4.xxlarge"] | [PRICE="vm:r4.xxlarge"] |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*

@@ -99,15 +99,15 @@ system operacyjny     | Linux   |
 
 ## Cennik
 
-Nazwa              | Okres  | Cena (PLN) | Uwagi
------------------- | :----: | ---------: | :----:
-ruch przychodzący  |   1H   |     0.0000 |
-ruch wychodzący    |   1h   |     0.0200 |
-hobby              |   1h   |    10.0000 |
-standard           |   1h   |    20.0000 |
-standard x2        |   1h   |    40.0000 |
-performance        |   1h   |    80.0000 |
-performance x2     |   1h   |   160.0000 |
+Nazwa               | Okres         | Cena (PLN) | Uwagi
+------------------- | :-----------: | ---------: | :----:
+ruch przychodzący   |   1 godzina   |     0.0000 |
+ruch wychodzący 1GB | [PERIOD="container:metric traffic Outbound"] | [PRICE="container:metric traffic Outbound"]
+hobby               |   1 godzina   |    10.0000 |
+standard            |   1 godzina   |    20.0000 |
+standard x2         |   1 godzina   |    40.0000 |
+performance         |   1 godzina   |    80.0000 |
+performance x2      |   1 godzina   |   160.0000 |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

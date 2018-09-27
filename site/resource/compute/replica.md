@@ -12,7 +12,7 @@ Główne zalety:
 Przykładowe zastosowania:
 
  * istotna składowa procesu odbudowy organizacji po krytycznym zdarzeniu
- * migracja usług do platformy z zredukowanym czasem przestoju 
+ * migracja usług do platformy z zredukowanym czasem przestoju
 
 ## Cykl życia
 

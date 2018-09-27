@@ -24,4 +24,4 @@ HyperOne to także zespół specjalistów służących wsparciem w zakresie proj
 
 ## O platformie
 
-Korzystanie z usług odbywa się m.in. za pośrednictwem zaprojektowanej przez nas i stale rozwijanej platformy, umożliwiającej pełne zarządzanie usługami. 
+Korzystanie z usług odbywa się m.in. za pośrednictwem zaprojektowanej przez nas i stale rozwijanej platformy, umożliwiającej pełne zarządzanie usługami.

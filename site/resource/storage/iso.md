@@ -40,7 +40,7 @@ Dla *ISO* charakterystyczne są następujące operacje:
 
  * opublikowanie
  * odpublikowanie
- 
+
 ### Opublikowanie
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
@@ -102,9 +102,9 @@ Maksymalny rozmiar | 7 GB
 
 ## Cennik
 
-Wariant | Okres      | Rozmiar | Cena (PLN)
-------- | :--------: | :-----: | ---------:
-ISO     | [PERIOD="iso:iso"] | 1 GB    | [PRICE="iso:iso"]
+Wariant | Okres              | Cena (PLN)
+------- | :----------------: | ---------:
+ISO 1GB | [PERIOD="iso:iso"] | [PRICE="iso:iso"]
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

@@ -2,7 +2,7 @@
 
 ## Przeznaczenie
 
-*Vault* stanowi rodzaj przestrzeni do długoterminowego przechowywania danych, zapewnieniającej stały dostęp do nich bez konieczności administrowania systemem operacyjnym. 
+*Vault* stanowi rodzaj przestrzeni do długoterminowego przechowywania danych, zapewnieniającej stały dostęp do nich bez konieczności administrowania systemem operacyjnym.
 
 Główne zalety:
 
@@ -129,15 +129,15 @@ W razie potrzeby zwiększenia tych limitów [prosimy o kontakt](/about-us/contac
 
 ## Cennik
 
-Nazwa              | Okres  | Cena (PLN) | Uwagi
------------------- | :----: | ---------: | :----:
-vault              |  [PERIOD="vault:vault"] | [PRICE="vault:vault"] |
-ruch przychodzący  |  1 h   | 0.0000 |                              
-ruch wychodzący    |  [PERIOD="netadp:metric traffic Outbound"] | [PRICE="netadp:metric traffic Outbound"] |
+Nazwa               | Okres                                     | Cena (PLN)                               | Uwagi
+------------------- | :---------------------------------------: | ---------------------------------------: | :----
+vault               | [PERIOD="vault:vault"]                    | [PRICE="vault:vault"]                    |
+ruch przychodzący   | 1 h                                       | 0.0000                                   |
+ruch wychodzący 1GB | [PERIOD="vault:metric traffic Outbound"]  | [PRICE="vault:metric traffic Outbound"]  |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
-<!-- 
+<!--
 Transfer is not availabe due following reason:
 - we don't have information where the vault is attached eg. container
 - vault is composite of multiple resources eg. snapshots

@@ -2,7 +2,7 @@
 
 ## Przeznaczenie
 
-*Dziennik* służy do przechowywania i udostępniania wpisów dzienników zdarzeń (logów). 
+*Dziennik* służy do przechowywania i udostępniania wpisów dzienników zdarzeń (logów).
 
 Główne zalety:
 
@@ -28,7 +28,7 @@ Przykładowe zastosowanie:
 
  * wszystkie ogólne warunki *usunięcia zasobu*
 
-## Zarządzanie 
+## Zarządzanie
 
 Dla *Dziennika* charakterystyczne są następujące operacje:
 
@@ -83,7 +83,7 @@ Czas wykorzystania jest liczony w okresach rozliczeniowych jednego miesiąca.
 ## Ograniczone użycie
 
 W przypadku ograniczonego użycia:
- 
+
  * zapis jest wstrzymany
  * znajdują zastosowanie ogólne warunki *[Ograniczonego użycia](/platform/resource.md#ograniczone-uzycie)*.
 
@@ -107,9 +107,9 @@ Protokół wejściowy | syslog
 
 ## Cennik
 
-Nazwa        | Okres    | Cena (PLN) |  Uwagi
------------: | -----:   | ---------: | :----:
-Dziennik     |  1 ms    | [PRICE="logArchive:logArchive"] |
+Nazwa        | Okres                             | Cena (PLN)                      |  Uwagi
+-----------: | --------------------------------: | ------------------------------: | :----:
+Dziennik     | [PERIOD="logArchive:logArchive"]  | [PRICE="logArchive:logArchive"] |
 
  * Podane ceny są cenami netto i nie zawierają podatku VAT*
 

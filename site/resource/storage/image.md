@@ -74,9 +74,9 @@ Udostępnianie jest możliwe między *Projektami* tej samej lub innej *Organizac
 
 ## Cennik
 
-Nazwa              | Okres  | Cena (PLN) | Uwagi
------------------- | :----: | ---------: | :----:
-obraz              |  1 h   | [PRICE="image:image standard"] | 
+Nazwa              | Okres                           | Cena (PLN)                     | Uwagi
+------------------ | :-----------------------------: | -----------------------------: | :----:
+obraz              | [PERIOD="image:image standard"] | [PRICE="image:image standard"] |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

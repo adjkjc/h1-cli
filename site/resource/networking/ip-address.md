@@ -41,7 +41,7 @@ Wyróżniamy dwa typy *Adresów IP* w platformie:
  * nie jest powiązany z żadnym innym zasobem
  * wszystkie ogólne warunki *usunięcia zasobu*
 
-## Zarządzanie 
+## Zarządzanie
 
 Dla *Adresu IP* charakterystyczne są następujące operacje:
 
@@ -102,14 +102,14 @@ typ      | IPv4
 
 ## Cennik
 
-Nazwa                  | Okres  | Cena (PLN) | Uwagi
----------------------- | :----: | :--------: | ---------:
-IP w sieci publicznej  | [PERIOD="ip:ipv4"] | [PRICE="ip:ipv4"] |
-IP w sieci prywatnej   | [PERIOD="ip:ipv4"] |     0.0000 | 
+Nazwa                  | Okres                    | Cena (PLN)               | Uwagi
+---------------------- | :----------------------: | :----------------------: | ---------:
+IP w sieci publicznej  | [PERIOD="ip:public v4"]  | [PRICE="ip:public v4"]   |
+IP w sieci prywatnej   | [PERIOD="ip:private v4"] | [PERIOD="ip:private v4"] |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
-<!-- 
+<!--
 Transfer is aavailabe due following reason:
 - security restriction of creating subzones
 -->

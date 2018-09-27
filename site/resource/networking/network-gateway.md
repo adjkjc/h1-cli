@@ -52,7 +52,7 @@ Opłaty naliczane są za ruch sieciowy - w zależności od rozmiaru ruchu w GB.
 
 !!! include(regions.md) !!!
 
-<!-- 
+<!--
 Transfer is not availabe due following reason:
 - required validation of licensing
 - vm is composite of multiple resources
@@ -69,9 +69,9 @@ W razie potrzeby zwiększenia zaproponowanych parametrów [prosimy o kontakt](/a
 
 ## Cennik
 
-Nazwa           | Okres  | Cena (PLN) | Uwagi
---------------- | :----: | ---------: | :----:
-brama sieciowa  |  1 h   |     0.0000 | 
+Nazwa           | Okres                  | Cena (PLN)            | Uwagi
+--------------- | :--------------------: | --------------------: | :----:
+brama sieciowa  | [PERIOD="netgw:netgw"] | [PRICE="netgw:netgw"] |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

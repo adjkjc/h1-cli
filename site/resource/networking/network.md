@@ -9,7 +9,7 @@ Główne zalety:
  * skutecznie izoluje komunikacje zasobów
  * umożliwia wykorzystanie [Zapory sieciowej](/resource/networking/firewall.md)
  * konfiguracja parametrów DHCP
- 
+
 Przykładowe zastosowania:
 
  * ochrona usług nieprzeznaczona do publicznego udostępniania
@@ -74,9 +74,9 @@ Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji*
 
 ## Cennik
 
-Nazwa              | Okres  | Cena (PLN) | Uwagi
------------------- | :----: | ---------: | :----:
-sieć               | [PERIOD="network:private network"] | [PRICE="network:private network"] | 
+Nazwa              | Okres                              | Cena (PLN)                        | Uwagi
+------------------ | :--------------------------------: | --------------------------------: | :----
+sieć               | [PERIOD="network:private network"] | [PRICE="network:private network"] |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

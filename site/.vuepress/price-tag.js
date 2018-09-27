@@ -16,22 +16,23 @@ const display_name = {
 
 const replacer = (price, type) => (match, p1) => {
     const [resource, name] = p1.split(":");
-    const service = price.filter(x => x.resource === resource && x.name === name);
+    const services = price.filter(x => x.resource === resource && x.name === name);
 
-    if (!service) {
+    if (services.length === 0) {
         throw new Error(`Missing service (${p1}) for pricing.`);
     }
-    if (service.length > 1) {
+
+    if (services.length > 1) {
         throw new Error(`Ambiguous service (${p1}) for pricing.`);
     }
 
     if (type === "price") {
-        return service[0].billing.price.PLN.toFixed(4)
+        return services[0].billing.price.PLN.toFixed(4)
     } else if (type === "period") {
-        const [, value, name] = /^([0-9]+)([a-zA-Z]+)$/g.exec(service[0].billing.period);
+        const [, value, name] = /^([0-9]+)([a-zA-Z]+)$/g.exec(services[0].billing.period);
         return `${value} ${display_name[name.toLowerCase()](value)}`;
     } else {
-        throw new Error(`Invalid type of replacer in pricing.`);
+        throw new Error(`Invalid type of replacer (${type}) in pricing (${p1}).`);
     }
 };
 
