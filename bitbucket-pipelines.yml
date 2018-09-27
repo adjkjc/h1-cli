@@ -5,6 +5,8 @@ pipelines:
       - step:
           services:
             - docker
+          caches:
+            - docker
           script:
             - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD $DOCKER_REGISTRY
             - npm install -g git+https://github.com/hyperonecom/h1-cli.git#containers
