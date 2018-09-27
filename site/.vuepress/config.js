@@ -16,6 +16,8 @@ const platform_category = {
         '/platform/organization.md',
         '/platform/project.md',
         '/platform/resource.md',
+        '/platform/terms-of-services.md',
+        '/platform/privacy-policy.md'
     ]
 };
 
@@ -91,6 +93,7 @@ module.exports = config = {
             md.use(require('./generator').guide);
             md.use(require('./generator').tutorial);
             md.use(require('./cli-link'));
+            md.use(require('./price-tag'));
         }
     },
     themeConfig: {

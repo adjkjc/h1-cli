@@ -79,11 +79,12 @@ W razie potrzeby zwiększenia zaproponowanych parametrów [prosimy o kontakt](/a
 
 ### Cennik
 
-Nazwa                       | Okres  | Cena (PLN) | Uwagi
---------------------------- | :----: | ---------: | :----:
-ruch przychodzący           |  1 h   |     0.0200 | 
-ruch wychodzący             |   -    |     0.0000 | 
-adapter sieciowy            |   -    |     0.0000 | 
+Nazwa                                 | Okres  | Cena (PLN) | Uwagi
+------------------------------------- | :----: | ---------: | :----:
+ruch przychodzący                     | [PERIOD="netadp:metric traffic Outbound"] | [PRICE="netadp:metric traffic Outbound"] | 
+ruch wychodzący                       |    -   |     0.0000 | 
+adapter sieciowy w *Sieci* prywatnej  | [PERIOD="netadp:private"] | [PRICE="netadp:private"] | 
+adapter sieciowy w *Sieci* publicznej | [PERIOD="netadp:public"] | [PRICE="netadp:public"] | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

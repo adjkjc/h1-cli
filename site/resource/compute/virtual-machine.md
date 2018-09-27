@@ -41,7 +41,7 @@ Warianty *Wirtualnych maszyn* są pogrupowane na podstawie zależności między 
 
 ### Podstawowego przeznaczenia
 
-To grupa wariantów *Wirtualnych maszyn* do podstawowego programowania i testowania, w której wydajność przetwarzania vCPU jest dzielona pomiędzy grupę *Maszyn wirtualnych* opartych na równym współudziale podstawie mocy obliczeniowej.
+To grupa wariantów *Wirtualnych maszyn* do podstawowego programowania i testowania, w której wydajność przetwarzania vCPU jest dzielona pomiędzy grupę *Maszyn wirtualnych* opartych na sprawiedliwym podziale mocy obliczeniowej.
 
 <!--TODO: nie rozumiem-->
 
@@ -296,44 +296,44 @@ Typ wirtualizacji                     | Typ 1
 
 #### Podstawowe użycie
 
-Wariant    | PLN    | Okres
----------- | -----: | :--:
-a1.nano    | 0.0153 | 1 h
-a1.micro   | 0.0263 | 1 h
-a1.small   | 0.0481 | 1 h
-a1.medium  | 0.0962 | 1 h
-a1.large   | 0.1706 | 1 h
+Wariant    | Okres                   | Cena (PLN)             | Uwagi
+---------- | :---------------------: | :--------------------- | :---
+a1.nano    | [PERIOD="vm:a1.nano"]   | [PRICE="vm:a1.nano"]   | 
+a1.micro   | [PERIOD="vm:a1.micro"]  | [PRICE="vm:a1.micro"]  |
+a1.small   | [PERIOD="vm:a1.small"]  | [PRICE="vm:a1.small"]  |
+a1.medium  | [PERIOD="vm:a1.medium"] | [PRICE="vm:a1.medium"] |
+a1.large   | [PERIOD="vm:a1.large"]  | [PRICE="vm:a1.large"]  |
 
 #### Ogólne użycie
 
-Wariant    | PLN    | Okres
----------- | -----: | :--:
-m2.tiny    | 0.0393 | 1 h
-m2.small   | 0.0612 | 1 h
-m2.medium  | 0.1224 | 1 h
-m2.large   | 0.1880 | 1 h
-m2.xlarge  | 0.3978 | 1 h
-m2.xxlarge | 0.5946 | 1 h
+Wariant    | Okres                    | PLN                     | Uwagi
+---------- | :----------------------: | :---------------------- | :----
+m2.tiny    | [PERIOD="vm:m2.tiny"]    | [PRICE="vm:m2.tiny"]    |
+m2.small   | [PERIOD="vm:m2.small"]   | [PRICE="vm:m2.small"]   |
+m2.medium  | [PERIOD="vm:m2.medium"]  | [PRICE="vm:m2.medium"]  |
+m2.large   | [PERIOD="vm:m2.large"]   | [PRICE="vm:m2.large"]   |
+m2.xlarge  | [PERIOD="vm:m2.xlarge"]  | [PRICE="vm:m2.xlarge"]  |
+m2.xxlarge | [PERIOD="vm:m2.xxlarge"] | [PRICE="vm:m2.xxlarge"] |
 
 #### Intensywne wykorzystanie procesora
 
-Wariant    | PLN    | Okres
----------- | -----: | :--:
-c3.light   | 0.8002 | 1 h
-c3.small   | 1.0849 | 1 h
-c3.medium  | 2.1698 | 1 h
-c3.large   | 3.2546 | 1 h
-c3.xlarge  | 4.3395 | 1 h
+Wariant    | Okres                   | PLN                    | Uwagi
+---------- | :---------------------: | :--------------------- | :---
+c3.light   | [PERIOD="vm:c3.light"]  | [PRICE="vm:c3.light"]  | 
+c3.small   | [PERIOD="vm:c3.small"]  | [PRICE="vm:c3.small"]  |
+c3.medium  | [PERIOD="vm:c3.medium"] | [PRICE="vm:c3.medium"] |
+c3.large   | [PERIOD="vm:c3.large"]  | [PRICE="vm:c3.large"]  |
+c3.xlarge  | [PERIOD="vm:c3.xlarge"] | [PRICE="vm:c3.xlarge"] |
 
 #### Intensywne wykorzystanie pamięci
 
-Wariant    | PLN    | Okres
----------- | -----: | :--:
-r4.small   | 1.2143 | 1 h
-r4.medium  | 1.8128 | 1 h
-r4.large   | 2.4287 | 1 h
-r4.xlarge  | 4.9814 | 1 h
-r4.xxlarge | 9.7303 | 1 h
+Wariant    | Okres                    | PLN                     | Uwagi
+---------- | :----------------------: | :---------------------- | :----
+r4.small   | [PERIOD="vm:r4.small"]   | [PRICE="vm:r4.small"]   | 
+r4.medium  | [PERIOD="vm:r4.medium"]  | [PRICE="vm:r4.medium"]  |
+r4.large   | [PERIOD="vm:r4.small"]   | [PRICE="vm:r4.small"]   |
+r4.xlarge  | [PERIOD="vm:r4.xlarge"]  | [PRICE="vm:r4.xlarge"]  | 
+r4.xxlarge | [PERIOD="vm:r4.xxlarge"] | [PRICE="vm:r4.xxlarge"] |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

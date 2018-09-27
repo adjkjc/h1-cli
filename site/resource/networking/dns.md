@@ -52,20 +52,18 @@ Zarządzanie *DNS-em* odbywa się po spełnieniu następujących warunków:
 
 ## Parametry techniczne
 
-Parameter                | Wartość                                |Uwagi
------------------------- | -------------------------------------: | ---
-Typy rekordów            |  A, CNAME, MX, TXT, SRV, NS, CAA, AAAA |
-Rozmiar zestawu rekordów |                                     20 |
+Parameter                | Wartość                               
+------------------------ | -------------------------------------:
+Typy rekordów            |  A, CNAME, MX, TXT, SRV, NS, CAA, AAAA
+Rozmiar zestawu rekordów |                                     20
 
 W razie potrzeby zwiększenia zaproponowanych parametrów [prosimy o kontakt](/about-us/contact.md).
 
 ## Cennik
 
-Nazwa  | Okres  | Cena (PLN) | Uwagi
------- | :----: | ---------: | :----:
-DNS    |   -    |     0.0000 | 
-
-<!-- TODO: Create a service "dns" -->
+Nazwa         | Okres  | Cena (PLN) | Uwagi
+------------- | :----: | ---------: | :------
+Strefa DNS    |    -   |     0.0000 | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

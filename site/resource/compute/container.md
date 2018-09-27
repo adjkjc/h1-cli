@@ -41,8 +41,8 @@ Podczas tworzenia można określić następujące parametry:
 
 Kontenery dostępne są w wariantach, które różnią się dostępną mocą obliczeniową i pamięcią:
 
-Nazwa                  |  vCPU  | Pamięć  |
-:--------------------  | :----: | ------: |
+Nazwa                  |  vCPU  | Pamięć  | Uwagi
+:--------------------  | :----: | ------: | :----
 playground             |   1    |  128 MB |
 standard               |   2    |  256 MB |
 standard x2            |   2    |  512 MB |
@@ -109,9 +109,6 @@ standard x2        |   1h   |    40.0000 |
 performance        |   1h   |    80.0000 |
 performance x2     |   1h   |   160.0000 |
 
-<!-- //TODO: Add service for traffic -->
-<!-- //TODO: Add service for traffic -->
-
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
 <!--
@@ -129,5 +126,3 @@ Do korzystania z *Kontenera* mogą być przydatne następujące przewodniki:
 ## Powiązane produkty
 
  * *[Vault](/resource/storage/vault.md)*
-<!-- TODO: * *[Repozytorium](/resource/storage/repository.md)* -->
-

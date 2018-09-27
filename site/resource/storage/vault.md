@@ -131,11 +131,10 @@ W razie potrzeby zwiększenia tych limitów [prosimy o kontakt](/about-us/contac
 
 Nazwa              | Okres  | Cena (PLN) | Uwagi
 ------------------ | :----: | ---------: | :----:
-vault              |  1 h   |     0.0004 | 
-ruch przychodzący  |  1 h   |     0.0000 | 
-ruch wychodzący    |  1 h   |     0.0200 |
+vault              |  [PERIOD="vault:vault"] | [PRICE="vault:vault"] |
+ruch przychodzący  |  1 h   | 0.0000 |                              
+ruch wychodzący    |  [PERIOD="netadp:metric traffic Outbound"] | [PRICE="netadp:metric traffic Outbound"] |
 
-<!-- //TODO: Add service for traffic -->
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
 <!-- 

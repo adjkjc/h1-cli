@@ -114,7 +114,7 @@ W razie potrzeby zwiększenia zaproponowanych parametrów [prosimy o kontakt](/a
 
 Wartość         | Okres  | Cena (PLN) | Uwagi
 --------------- | :----: | ---------: | ----
-zapora sieciowa |   -    |     0.0000 | <!-- TODO: Add service -->
+zapora sieciowa |   -    |     0.0000 | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

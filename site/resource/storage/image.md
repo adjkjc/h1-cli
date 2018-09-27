@@ -62,8 +62,6 @@ Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji*
 
  * wszystkie ogólne warunki przekazania zasobu
 
-<!-- TODO: warunki czego? przekazania?-->
-
 ## Udostępnianie
 
 Udostępnianie jest możliwe między *Projektami* tej samej lub innej *Organizacji* zgodnie z *[Ogólnymi zasadami udostępnianie zasobów](/platform/resource.md)*.
@@ -78,7 +76,7 @@ Udostępnianie jest możliwe między *Projektami* tej samej lub innej *Organizac
 
 Nazwa              | Okres  | Cena (PLN) | Uwagi
 ------------------ | :----: | ---------: | :----:
-obraz              |  1 h   |     0.0002 | 
+obraz              |  1 h   | [PRICE="image:image standard"] | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

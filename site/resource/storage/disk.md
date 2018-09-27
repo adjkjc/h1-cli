@@ -139,9 +139,9 @@ Format pliku do importu         | vhdx
 
 Wariant   | Okres   | Stawka (PLN) | Uwagi
 --------- | :----:  | -----------: | :----:
-ssd       |   1 h   |       0.0020 | 
-volume    |   1 h   |       0.0004 | 
-archive   |   1 h   |       0.0002 | 
+ssd       | [PERIOD="disk:ssd"] | [PRICE="disk:ssd"] | 
+volume    | [PRICE="disk:volume"] | [PRICE="disk:volume"] | 
+archive   | [PRICE="disk:archive"] | [PRICE="disk:archive"] | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

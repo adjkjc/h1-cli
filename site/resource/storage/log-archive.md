@@ -109,7 +109,7 @@ Protokół wejściowy | syslog
 
 Nazwa        | Okres    | Cena (PLN) |  Uwagi
 -----------: | -----:   | ---------: | :----:
-Dziennik     |  1 ms    |     1.0000 |
+Dziennik     |  1 ms    | [PRICE="logArchive:logArchive"] |
 
  * Podane ceny są cenami netto i nie zawierają podatku VAT*
 

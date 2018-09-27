@@ -76,7 +76,7 @@ Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji*
 
 Nazwa              | Okres  | Cena (PLN) | Uwagi
 ------------------ | :----: | ---------: | :----:
-sieć               |  1 h   |    0.08260 | 
+sieć               | [PERIOD="network:private network"] | [PRICE="network:private network"] | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

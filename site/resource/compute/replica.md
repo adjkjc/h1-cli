@@ -12,8 +12,8 @@ Główne zalety:
 Przykładowe zastosowania:
 
  * istotna składowa procesu odbudowy organizacji po krytycznym zdarzeniu
+ * migracja usług do platformy z zredukowanym czasem przestoju 
 
-<!-- TODO: Czy wszystko?-->
 ## Cykl życia
 
 ### Utworzenie
@@ -77,13 +77,14 @@ Parametry techniczne            | Wartość
 minimum Hyper-V version         | ???
 
 // TODO: minimum version of hyper-v host
+
 -->
 
 ## Cennik
 
-Nazwa       | Okres  | Cena (PLN)
------------ | :----: | ---------:
-replika     | 1 ms   |     250
+Nazwa       | Okres                      | Cena (PLN)                | Uwagi
+----------- | :------------------------: | ------------------------: | :----
+replika     | [PERIOD="replica:replica"] | [PRICE="replica:replica"] |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

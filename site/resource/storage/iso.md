@@ -104,7 +104,7 @@ Maksymalny rozmiar | 7 GB
 
 Wariant | Okres      | Rozmiar | Cena (PLN)
 ------- | :--------: | :-----: | ---------:
-ISO     | 1 h        | 1 GB    |     0.0002
+ISO     | [PERIOD="iso:iso"] | 1 GB    | [PRICE="iso:iso"]
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

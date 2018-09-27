@@ -104,10 +104,8 @@ typ      | IPv4
 
 Nazwa                  | Okres  | Cena (PLN) | Uwagi
 ---------------------- | :----: | :--------: | ---------:
-IP w sieci prywatnej   |  1 h   |     0.0160 |
-IP w sieci publicznej  |   -    |     0.0000 | 
-
-<!-- TODO: add service -->
+IP w sieci publicznej  | [PERIOD="ip:ipv4"] | [PRICE="ip:ipv4"] |
+IP w sieci prywatnej   | [PERIOD="ip:ipv4"] |     0.0000 | 
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
