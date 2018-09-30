@@ -29,7 +29,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "type": "entry",
       "location": "sidebar",
       "selector": ".nav > li:nth-child(2)",
-      "label": "Zapora sieciowa"
+      "label": "Zapory sieciowe"
     }
   },
   {

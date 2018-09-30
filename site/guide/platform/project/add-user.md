@@ -36,7 +36,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "selector": "navbar>.vm",
       "label": "Członkowie"
     },
-    "after_event": "Po kliknięciu pojawi się lista członkow."
+    "after_event": "Po kliknięciu pojawi się lista członków."
   },
   {
     "action_name": "click",
@@ -45,7 +45,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "selector": "navbar>.vm",
       "label":"Nadaj dostęp"
     },
-    "after_event": "Po kliknięciu pojawi się okno z formularz."
+    "after_event": "Po kliknięciu pojawi się okno z formularzem."
   },
   {
     "action_name": "form",

@@ -49,7 +49,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "selector": "navbar>.vm",
       "label":"Utwórz nowy"
     },
-    "after_event": "Po kliknięciu pojawi się okno z formularz."
+    "after_event": "Po kliknięciu pojawi się okno z formularzem."
   },
   {
     "action_name": "click",
@@ -139,7 +139,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "selector": "navbar>.vm",
       "label":"Utwórz nowy"
     },
-    "after_event": "Po kliknięciu pojawi się okno z formularz."
+    "after_event": "Po kliknięciu pojawi się okno z formularzem."
   },
   {
     "action_name": "click",
@@ -166,7 +166,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "selector": "navbar>.vm",
       "label":"Utwórz"
     },
-    "after_event": "Po kliknięciu pojawi się okno z formularz."
+    "after_event": "Po kliknięciu pojawi się okno z formularzem."
   }
 ]
 ```
