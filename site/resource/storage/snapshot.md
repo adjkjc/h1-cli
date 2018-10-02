@@ -60,7 +60,7 @@ Transfer is not availabe due following reason:
 
 Nazwa              | Okres  | Cena (PLN) | Uwagi
 ------------------ | :----: | ---------: | :----:
-migawka            |   -    |     0.0000 |
+migawka            | [PERIOD="snapshot:snapshot"] | [PRICE="snapshot:snapshot"] |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 
