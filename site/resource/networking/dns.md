@@ -16,6 +16,7 @@ Przykładowe zastosowania:
 
  * wykorzystanie przystępnej nazwy domeny dla strony WWW
  * identyfikacja serwera świadczącego usługę pod zmiennym adresem IP
+ * równoważenie ruchu
 
 ## Cykl życia
 
