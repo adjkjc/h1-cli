@@ -66,11 +66,19 @@ Dla *Dziennika* dostępne są następujące typowe operacje:
 
 ## Dostęp
 
-Wpisy do *Dziennika* mogą zostać wprowadzone z użyciem protokołu Syslog opisanego w [RFC 5424](https://tools.ietf.org/html/rfc5424).
+Wpisy do *Dziennika* mogą zostać wprowadzone z użyciem:
+
+ * protokołu Syslog opisanego w [RFC 5424](https://tools.ietf.org/html/rfc5424).
+ * [HTTP API](./log-archive/http.md)
 
 Zapisywanie do *Dziennika* jest możliwe za pomocą następujących typów danych dostępowych:
 
- * hasło przekazane w elemencie SD-ID w postaci ``[[identyfikator_zasobu]]:[[haslo]]@HyperOne``
+ * hasło
+
+Hasło jest przekazywane:
+
+ * w protokole Syslog w elemencie SD-ID w postaci ``[[identyfikator_zasobu]]:[[haslo]]@HyperOne``
+ * w HTTP API w nagłówku ```x-auth-password```
 
 Zarządzanie danymi dostępowymi wyjaśnione jest w [ogólnym omówieniu zarządzania danymi dostępowymi](/platform/resource.html#dane-dostepowe).
 
