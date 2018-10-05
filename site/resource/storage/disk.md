@@ -73,8 +73,8 @@ Dla *Dysku* charakterystyczne są następujące operacje:
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * *Dziennik* znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
- * *Dziennik* nie znajduje się w stanie *Ograniczonego użycia*
+ * *Dysk* znajduje się w stanie ```Przyłączony``` lub ```Rozłączony``` lub ```Replikowany```
+ * *Dysk* nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Zwiększenie rozmiaru
 

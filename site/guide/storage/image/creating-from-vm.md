@@ -1,20 +1,18 @@
-# Utworzenie Obrazu
+# Utworzenie Obrazu z Wirtualnej Maszyny
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób utworzyć [Obrazu](/resource/storage/iso.md) wykorzystywany jako wzorzec [Wirtualnej maszyny](/resource/compute/virtual-machine.md).
+Dokument wyjaśnia w jaki sposób utworzyć [Obraz](/resource/storage/iso.md) wykorzystywany jako wzorzec [Wirtualnej maszyny](/resource/compute/virtual-machine.md) na podstawie *Wirtualnej Maszyny*
  
 ## Warunki wstępne
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* wszystkie [warunki utworzenia *ISO*](/resource/storage/disk.md#utworzenie)
+* wszystkie [warunki utworzenia *Obrazu*](/resource/storage/disk.md#utworzenie)
 
 ## Instrukcja
 
 ### Panel
-
-<!-- TODO: Monika, utworzeni czy stworzenie? -->
 
 W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
@@ -88,7 +86,7 @@ h1 image create --vm test-vm --name dev-image
 ```
 gdzie:
 
- * ```--vm``` określa nazwę nowo utworzonego *Obrazu*
- * ```--source-url``` określa identyfikator lub nazwę wzorcowej *Wirtualnej maszyny*
+ * ```--name``` określa nazwę nowo utworzonego *Obrazu*
+ * ```--vm``` określa identyfikator lub nazwę wzorcowej *Wirtualnej maszyny*
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="iso create"].
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="image create"].

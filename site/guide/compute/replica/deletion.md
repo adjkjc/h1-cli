@@ -1,14 +1,14 @@
-# Usuwanie Obrazu
+# Usunięcie repliki
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób usunąć *[Obraz](/resource/storage/image.md)*.
+Dokument wyjaśnia w jaki sposób usunąć *[Replikę](/resource/compute/replica.md)*.
 
 ## Warunki wstępne
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* wszystkie [warunki usuwania *Obrazu*](/resource/storage/image.md#usuwanie)
+* wszystkie [warunki usunięcia Repliki](/resource/compute/replica.md#usuniecie)
 
 ## Instrukcja
 
@@ -24,7 +24,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "type": "entry",
       "location": "sidebar",
       "selector": ".nav > li:nth-child(2)",
-      "label": "Obrazy"
+      "label": "Repliki"
     }
   },
   {
@@ -47,7 +47,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
   {
     "action_name": "click",
     "data": {
-      "type": "entry",
+      "type": "button",
       "selector": "navbar>.vm",
       "label": "Usuń"
     },
@@ -64,15 +64,14 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 ]
 ```
 
-#### CLI
-
-W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
+# CLI
 
 ```bash
-h1 disk delete --disk my-disk
+h1 replica delete --replica test-replica
 ```
+
 gdzie:
 
- * ```--disk``` określa nazwę lub identyfikator *Dysku*
+ * ```--replica`` określa nazwę lub identyfikator *Repliki*
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="image delete"].
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="replica delete"].

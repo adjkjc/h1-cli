@@ -51,13 +51,6 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
   {
     "action_name": "click",
     "data": {
-      "type": "entry_tridot"
-    },
-    "after_event": "Po kliknięciu pojawi się lista rozwijana."
-  },
-  {
-    "action_name": "click",
-    "data": {
       "type": "entry",
       "selector": "navbar>.vm",
       "label":"Wsuń ISO"

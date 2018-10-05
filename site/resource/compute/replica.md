@@ -2,7 +2,7 @@
 
 ## Przeznaczenie
 
-*Replika* umożliwia kopiowanie niemal w czasie rzeczywistym danych zmodyfikowanych w wirtualnych maszynach działających w lokalnym środowisku Hyper-V *Użytkownika*. Umożliwia to w razie potrzeby odtworzenie *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*.
+*Replika* umożliwia kopiowanie niemal w czasie rzeczywistym danych zmodyfikowanych w wirtualnych maszynach działających w lokalnym środowisku Hyper-V *Użytkownika*.
 
 Główne zalety:
 
@@ -11,8 +11,11 @@ Główne zalety:
 
 Przykładowe zastosowania:
 
+ * umożliwia odtworzenie w bardzo krótkim czasie *[Wirtualnej maszyny](/resource/compute/virtual-machine.md)*
  * istotna składowa procesu odbudowy organizacji po krytycznym zdarzeniu
  * migracja usług do platformy z zredukowanym czasem przestoju
+
+Opóźnienie w replikacji asynchronicznej jest na poziomie 30 sekund - 5 minut, co oznacza, że dane zapisane na serwerze źródłowym po około 5 minutach znajdą się na replice zasobów.
 
 ## Cykl życia
 
@@ -34,7 +37,6 @@ Na początku wykonywana jest pełna replikacja. Czas pierwszej replikacji zależ
 
 *Replika* może zostać usunięta po spełnieniu następujących warunków:
 
- * proces replikacji został przerwany w lokalnym serwerze Hyper-V
  * wszystkie ogólne warunki *usunięcia zasobu*
 
 ## Zarządzanie
