@@ -96,6 +96,10 @@ module.exports = config = {
             md.use(require('./price-tag'));
         }
     },
+    plugins: [
+        'google-analytics plugin',
+    ],
+    ga: 'UA-127062275-1',
     themeConfig: {
         // logo: '/assets/logo.png',
         sidebar: getSidebar(),

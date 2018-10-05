@@ -29,4 +29,6 @@ Polecenie należy wykonać na lokalnym serwerze Hyper-V, gdzie wprowadza zmiany 
 * konfiguruje replikacje dla wybranej maszyny wirtualnej
 * rozpoczyna replikację maszyny wirtualnej.
 
+<!--
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="replica create"].
+-->

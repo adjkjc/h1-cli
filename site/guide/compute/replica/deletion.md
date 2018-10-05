@@ -74,4 +74,6 @@ gdzie:
 
  * ```--replica`` określa nazwę lub identyfikator *Repliki*
 
+<!--
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="replica delete"].
+-->
