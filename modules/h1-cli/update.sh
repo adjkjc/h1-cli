@@ -6,7 +6,7 @@ NODE="$(command -v nodejs || command -v node)"
 
 if [ ! -d "repo" ]; then
     mkdir repo;
-    curl -L https://github.com/ad-m/h1-cli/archive/add-docs-theme.tar.gz -o /tmp/h1-cli-repo.tar.gz;
+    curl -L https://github.com/hyperonecom/h1-cli/archive/develop.tar.gz -o /tmp/h1-cli-repo.tar.gz;
     tar xvzf /tmp/h1-cli-repo.tar.gz -C repo --strip-components=1;
 fi;
 
