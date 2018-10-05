@@ -12,6 +12,7 @@ RUN make
 
 # build site
 WORKDIR /src/site
+ENV NODE_ENV production
 RUN npx vuepress build
 
 FROM nginx:alpine
