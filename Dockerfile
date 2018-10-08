@@ -3,7 +3,7 @@ FROM node as build
 # install core dependencies
 WORKDIR /src/site
 COPY ./site/package*.json /src/site/
-RUN npm install
+RUN npm ci
 
 # build modules
 WORKDIR /src
