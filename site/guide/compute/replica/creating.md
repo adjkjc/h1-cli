@@ -2,7 +2,7 @@
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób utworzyć *[Replika](/resource/compute/replica.md)*.
+Dokument wyjaśnia w jaki sposób utworzyć *[Replikę](/resource/compute/replica.md)*.
 
 ## Warunki wstępne
 
@@ -25,7 +25,7 @@ gdzie:
 
 Polecenie należy wykonać na lokalnym serwerze Hyper-V, gdzie wprowadza zmiany mające na celu:
 
-* dodanie nowego certyfikatu uwierzytelnienia do naszej platformy
+* dodanie nowego certyfikatu uwierzytelnienia do platformy
 * konfiguruje replikacje dla wybranej maszyny wirtualnej
 * rozpoczyna replikację maszyny wirtualnej.
 
