@@ -1,4 +1,4 @@
-# Usunięcie dysku
+# Usunięcie Dysku
   
 ## Wprowadzenie
 
