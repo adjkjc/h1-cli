@@ -25,7 +25,7 @@
                 fetch("https://api.hyperone.com/v1/stats/", {mode: "no-cors"})
                     .then((response) => response.json())
                     .then((json) => {
-                        console.log(vm);
+                        console.log(json);
                         return json[this.resource || 'vm'];
                     })
                     .catch(() => 37350)
