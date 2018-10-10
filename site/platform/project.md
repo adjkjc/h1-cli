@@ -61,8 +61,8 @@ Następujące operacje przeznaczone do zarządzania członkami Projektu są dost
 Dostępne są następujące role z określonymi prawami dostępu:
 
 * ```owner``` - wszelkie prawa dostępu,
-* ```billing``` - odczyt danych związanych z rozliczeniami i płatnościami
-* ```user``` - modyfikacja zasobów bez modyfikacji projektu
+* ```billing``` - modyfikacja danych związanych z rozliczeniami i płatnościami
+* ```user``` - modyfikacja zasobów bez modyfikacji Projektu
 
 #### Zarządzanie parametrami powiadomień
 
