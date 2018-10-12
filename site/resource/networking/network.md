@@ -15,6 +15,7 @@ Przykładowe zastosowania:
  * ochrona usług nieprzeznaczona do publicznego udostępniania
  * ograniczenie wykorzystania publicznych *Adresów IP*
 
+
 ## Cykl życia
 
 ### Utworzenie
@@ -61,12 +62,15 @@ Dla *Sieci" dostępne są następujące typowe operacje:
 
 Opłaty są naliczane na podstawie czasu.
 
+<!--
 ## Przekazanie
 
 Przekazanie jest możliwe między *Projektami* tej samej lub innej *Organizacji* po spełnieniu następujące warunków:
 
  * nie istnieją przyłączone do niej *Adaptery sieciowe*
+ * nie istnieją przyłączone do niej *Adresy IP*
  * wszystkie *ogólne warunki*
+-->
 
 ## Lokalizacja
 
