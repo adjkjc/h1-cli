@@ -85,11 +85,12 @@ const getSidebar = () => {
 };
 
 
-module.exports = config = {
+module.exports = {
     title: 'HyperOne',
     markdown: {
         config: md => {
             md.use(require('markdown-it-include'), path.join(__dirname, '../partials'));
+            md.use(require('./condition'), require('./../h1-cli/package.json').version);
             md.use(require('./generator').guide);
             md.use(require('./generator').tutorial);
             md.use(require('./cli-link'));
@@ -97,7 +98,7 @@ module.exports = config = {
         }
     },
     plugins: [
-        'google-analytics plugin',
+        '@vuepress/google-analytics'
     ],
     ga: 'UA-127062275-1',
     themeConfig: {
@@ -133,7 +134,7 @@ module.exports = config = {
 
 
 if (require.main === module) {
-    console.dir(config, {
+    console.dir(module.exports, {
         depth: null
     });
 }

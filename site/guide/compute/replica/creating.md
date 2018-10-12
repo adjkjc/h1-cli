@@ -16,7 +16,7 @@ W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
 h1 replica create --local-vm Local-VM --autostart
-```
+``` 
 
 gdzie:
 
@@ -29,6 +29,6 @@ Polecenie należy wykonać na lokalnym serwerze Hyper-V, gdzie wprowadza zmiany 
 * konfiguruje replikacje dla wybranej maszyny wirtualnej
 * rozpoczyna replikację maszyny wirtualnej.
 
-<!--
+cli(1.5.0){
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="replica create"].
--->
+}

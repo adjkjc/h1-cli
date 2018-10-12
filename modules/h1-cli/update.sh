@@ -18,3 +18,4 @@ pushd repo;
     npm run docs -- --theme site;
 popd;
 ln -s repo/docs dist;
+ln -s $PWD/repo/package.json dist/package.json
