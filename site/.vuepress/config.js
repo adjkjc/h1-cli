@@ -38,7 +38,7 @@ const categories = [
 
 const getSidebar = () => {
     const sidebar = {
-        '/h1-cli/': show_directory('h1-cli', ['README.md', 'index.md', 'dist', 'docs']),
+        '/h1-cli/': show_directory('h1-cli', ['README.md', 'index.md', 'dist', 'docs', 'package.json']),
         '/about-us': [
             '/about-us/contact.md',
         ],
