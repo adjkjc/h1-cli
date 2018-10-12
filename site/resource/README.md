@@ -6,21 +6,21 @@ HyperOne oferuje wydajne i stabilne produkty chmury publicznej: zapewniające mo
 
 Moc obliczeniowa:
 
-<PageList path_re="/resource/compute/."/>
+<PageList path_re="/resource/compute/[^/]+$"/>
 
 Łączność sieciowa:
 
-<PageList path_re="/resource/networking/."/>
+<PageList path_re="/resource/networking/[^/]+$"/>
 
 Przechowywanie danych:
 
-<PageList path_re="/resource/storage/."/>
+<PageList path_re="/resource/storage/[^/]+$"/>
 
 ## Usługi
 
 HyperOne to także zespół specjalistów służących wsparciem w zakresie projektowania usług i korzystania z nich:
 
-<PageList path_re="/services/."/>
+<PageList path_re="/services/[^/]+$"/>
 
 ## O platformie
 
