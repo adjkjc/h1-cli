@@ -93,9 +93,52 @@ W szczególnych przypadkach (np. licencjonowania) możliwe jest obniżenie iloś
 Dla *Wirtualnej maszyny* charakterystyczne są następujące operacje:
 
  * uruchomienie
- * zatrzymanie, co powoduje bezpiecznie zamknięcie systemu operacyjnego
- * wyłączenie, co powoduje działanie podobnie do odcięcia napięcia
+ * zatrzymanie
+ * wyłączenie
  * zrestartowanie
+ * zmiana wariantu
+
+### Uruchomienie
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * *Wirtualna Maszyna* znajduje się w stanie ```Wyłączony```
+ * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
+
+### Zatrzymanie
+
+Operacja powoduje bezpiecznie zamknięcie systemu operacyjnego.
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * *Wirtualna Maszyna* znajduje się w stanie ```Pracujący```
+ * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
+
+### Wyłączenie
+
+Operacja powoduje zakończenie pracy *Wirtualnej maszyny* w sposób zbliżony do odcięcia napięcia.
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * *Wirtualna Maszyna* znajduje się w stanie ```Pracujący```
+ * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
+
+### Zresetowanie
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * *Wirtualna Maszyna* znajduje się w stanie ```Pracujący```
+ * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
+
+### Zmiana wariantu
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * *Wirtualna Maszyna* znajduje się w stanie ```Wyłączony```
+ * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
+ * liczba wykorzystywanych *Adapterów sieciowych* nie spowoduje przekroczenia specyfiki nowego wariantu
+ * liczba wykorzystywanych *Dysków* nie spowoduje przekroczenia specyfiki nowego wariantu
+ * liczba wykorzystywanych *Adresów IP* nie spowoduje przekroczenia specyfiki nowego wariantu
 
 ### Powiązane zasoby
 
@@ -135,7 +178,7 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
  * *Wirtualna Maszyna* znajduje się w stanie ```Wyłączony```, w przypadku pierwszego dołączonego *Dysku*
- * *Wirtualna Maszyna* znajduje się w stanie ```Pracujący``` lub ```Wyłączony```
+ * *Wirtualna Maszyna* znajduje się w stanie ```Pracujący``` lub ```Wyłączony```, w przypadku pozostałych *Dysków*
  * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
 
 ##### Metadane
