@@ -193,6 +193,7 @@ Write-Host "Replication successfully enabled"
 if ($Autostart -eq $true){
     Start-VMInitialReplication -VMName $VM
     Write-Host "Replication successfully started"
+}
 ```
 
 Należy go wykonać w następujący sposób:
