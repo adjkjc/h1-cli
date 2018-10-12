@@ -135,10 +135,12 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
  * *Wirtualna Maszyna* znajduje się w stanie ```Wyłączony```
- * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
  * liczba wykorzystywanych *Adapterów sieciowych* nie spowoduje przekroczenia specyfiki nowego wariantu
  * liczba wykorzystywanych *Dysków* nie spowoduje przekroczenia specyfiki nowego wariantu
  * liczba wykorzystywanych *Adresów IP* nie spowoduje przekroczenia specyfiki nowego wariantu
+ * Limit *Zasobów* *Projektu* pozwala na zmianę
+ * *Projekt* posiada dostępne środki na okres wykorzystania *Zasobu* przez 24 godziny
+ * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
 
 ### Powiązane zasoby
 

@@ -8,7 +8,8 @@
 
 *Zasób* może zostać utworzony w przypadku spełnienia wszystkich następujących warunków:
 
-* *Projekt* posiada dostępne środki na okres wykorzystania *Zasobu* przez 24 godziny lub pierwszy okres rozliczeniowy, w zależności co jest dłuższe
+ * *Projekt* posiada dostępne środki na okres wykorzystania *Zasobu* przez 24 godziny lub pierwszy okres rozliczeniowy, w zależności co jest dłuższe
+ * Limit zasobów *Projektu* pozwala na utworzenie danego *Zasobu*
 
 ### Usuwanie
 
