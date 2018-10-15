@@ -16,7 +16,7 @@ Przed przystąpieniem do integracji powinieneś mieć:
 
 ```yaml
 # render=tutorial
-- name: Zmodyfikuj plik konfiguracyjny
+- name: Zmodyfikuj plik konfiguracyjny dodając lub zmieniając poniższe wpisy
   template:
     content: | 
         ErrorLog       syslog:
@@ -53,3 +53,8 @@ Przed przystąpieniem do integracji powinieneś mieć:
 ## Możliwe użycie
 * *[rsyslog](/tutorials/log-archive/rsyslog.md)*
 * *[goaccess](/tutorials/log-archive/goaccess.md)*
+
+## Co zyskujemy
+- elastyczność w zarządzaniu logami
+- większe bezpieczeństwo
+- dowolność w rozszerzaniu sposobu prezentowania naszych logów
