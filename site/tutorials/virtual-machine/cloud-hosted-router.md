@@ -1,6 +1,6 @@
 # Uruchomienie Cloud Hosted Router na Wirtualnej maszynie
 
-Niniejszy dokument przedstawia w jaki sposób uruchomić i skonfigurować Cloud Hosted Router (CHR) w [Wirtualnej maszynie](/resource/compute/virtual-machine.md).
+Przedstawimy w jaki sposób uruchomić i skonfigurować Cloud Hosted Router (CHR) w [Wirtualnej maszynie](/resource/compute/virtual-machine.md).
 
 Cloud Hosted Router (CHR) to wersja systemu operacyjnego RouterOS od firmy Mikrotik, która jest przeznaczona do środowiska zwirtualizowanego.
 

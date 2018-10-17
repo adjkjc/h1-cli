@@ -1,6 +1,6 @@
 # Konfiguracja rsyslog do użycia Dziennika
 
-Niniejszy dokument przedstawia w jaki sposób skonfigurować rsyslog na platformie Linux w celu wykorzystania [Dziennika](/resource/storage/log-archive.md).
+Przedstawimy w jaki sposób skonfigurować rsyslog na platformie Linux w celu wykorzystania [Dziennika](/resource/storage/log-archive.md).
 
 ## Warunki wstępne
 

@@ -196,13 +196,42 @@ const tasks = {
     identify_disk: (data, prev, next) => {
         let content = '';
         if (data.value === 'path') {
-            content += `W celu zidentyfikowania właściwego dysku przeanalizuj wynik następujące polecenie:`;
+            content += `W celu zidentyfikowania właściwego dysku przeanalizuj wynik następującego polecenia:`;
             content += shell_explain(`lsblk`);
             content += "Zwróć szczególną uwagę na ścieżkę do dysku (będzie ona wymagana w kolejnym etapie) i jego rozmiar.\n";
         } else if (data.value === 'uuid') {
             content += `W celu zidentyfikowania właściwego dysku przeanalizuj wynik następujące polecenie:`;
             content += shell_explain(`blkid`);
             content += "Zwróć szczególną uwagę na UUID dla dysku (będzie ona wymagana w kolejnym etapie) oraz ściężkę.\n";
+        } else {
+            throw new Error("Not implemented yet");
+        }
+        return content;
+    },
+    identify_partition: (data, prev, next) => {
+        let content = '';
+        const dev = data.dev || '/dev/sdb';
+        if (data.value === 'position') {
+            content += `W celu zidentyfikowania właściwej partycji przeanalizuj wynik następującego polecenia:`;
+            content += shell_explain(`parted ${dev} print`);
+            content += "Zwróć szczególną uwagę na numer partycji (będzie ona wymagana w kolejnym etapie) i jego rozmiar.";
+        } else if (data.value === 'path') {
+            content += `W celu zidentyfikowania właściwej partycji przeanalizuj wynik następującego polecenia:`;
+            content += shell_explain(`lsblk ${dev}`);
+            content += "Zwróć szczególną uwagę na ścieżkę partycji (będzie ona wymagana w kolejnym etapie) i rozmiar.";
+        } else {
+            throw new Error("Not implemented yet");
+        }
+        return content;
+    },
+    parted: (data, prev, next) => {
+        let content = '';
+        const dev = data.dev || '/dev/sdb';
+        const position = data.position || '1';
+        if (data.action === 'resizepart') {
+            content += `W celu zmiany rozmiaru partycji wykonaj następujące polecenie:`;
+            content += shell_explain(`parted ${dev} resizepart ${position}`);
+            content += "W interaktywnym polu wprowadź oczekiwany nowy rozmiar.";
         } else {
             throw new Error("Not implemented yet");
         }
@@ -218,9 +247,15 @@ const tasks = {
         return content;
     },
     filesystem: (data, prev, next) => {
-        if (data.fstype !== 'ext4') throw new Error("Not implemented yet");
-        let content = `Utwórz system plików ext4 na właściwym dysku wykonując następujące polecenie:`;
-        content += shell_explain(`mkfs.ext4 ${data.dev}`);
+        if (data.fstype !== 'ext4' && !data.resizefs) throw new Error("Not implemented yet");
+        let content = '';
+        if (data.resizefs) {
+            let content = `Rozszerz istniejący system plików do pełnego rozmiaru partycji wykonując następujące polecenie:`;
+            content += shell_explain(`resize2fs ${data.dev}`);
+        } else {
+            let content = `Utwórz system plików ext4 na właściwym dysku / partycji wykonując następujące polecenie:`;
+            content += shell_explain(`mkfs.ext4 ${data.dev}`);
+        }
         return content;
     },
     mount: (data, prev, next) => {
@@ -288,7 +323,7 @@ const get_content_for_task_list = (task_list, depth = 2, ctx) => {
                     task_list[parseInt(i) - 1],
                     task_list[parseInt(i) + 1],
                     ctx
-                );
+                ) + "\n";
             } catch (e) {
                 console.log(e);
                 new_content += utils.dump(task);

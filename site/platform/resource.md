@@ -77,4 +77,3 @@ Po zakończeniu przesyłania zasobów:
 # Przewodniki
 
 Dostępne są [przewodniki](/guide/) dla każdego z *Zasobów*.
-

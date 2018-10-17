@@ -1,8 +1,8 @@
-# Zmiana rekordu PTR dla Adresu IP
+# Powiązanie Adresu IP z innym Adresem IP
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób zmienić rekord PTR w DNS dla *[Adresu IP](/resource/networking/ip-address.md)*.
+Dokument wyjaśnia w jaki sposób powiązać *[Adres IP](/resource/networking/ip-address.md)* z innym *Adresem IP*.
 
 ## Warunki wstępne
 
@@ -24,7 +24,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "type": "entry",
       "location": "sidebar",
       "selector": ".nav > li:nth-child(2)",
-      "label": "Wirtualne Maszyny"
+      "label": "Adresy IP"
     }
   },
   {
@@ -41,16 +41,30 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "selector": "navbar>.vm",
       "label": "Adaptery sieciowe"
     },
-    "after_event": "Po kliknięciu pojawi się lista rozwijana."
+    "after_event": "Po kliknięciu pojawi się lista adapterów sieciowych."
+  },
+  {
+    "action_name": "identity",
+    "data": {
+        "label": "Adaptery sieciowe"
+    }
   },
   {
     "action_name": "click",
     "data": {
-      "type": "entry",
+      "type": "entry_resource",
+      "location":"section",
+      "section":"Adresy IP"
+    }
+  },
+  {
+    "action_name": "click",
+    "data": {
+      "type": "button",
       "selector": "navbar>.vm",
-      "label": "Zmnień rekord PTR"
+      "label": "powiąż"
     },
-    "after_event": "Po kliknięciu pojawi się formularz."
+    "after_event": "Po kliknięciu pojawi się okno z formularzem."
   },
   {
     "action_name": "form",
@@ -58,9 +72,9 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "modal": true,
       "steps": [
         {
-          "name": "Rekord PTR",
-          "type": "text",
-          "value": "mail-server.company.example.com"
+          "name": "Trwały adres IP",
+          "type": "choose",
+          "value": "62.181.8.22"
         }
       ],
       "defined_all": true
@@ -71,8 +85,9 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
     "data": {
       "type": "button",
       "selector": "navbar>.vm",
-      "label": "Zmień"
-    }
+      "label": "Powiąż"
+    },
+    "after_event": "Po kliknięciu akcja zostanie niezwłocznie wykonana."
   }
 ]
 ```
@@ -82,12 +97,12 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
-h1 ip ptr --ip 62.181.8.21 --value 'mail-server.company.example.com'
+h1 ip associate --ip 62.181.8.21 --private-ip 10.177.2.10
 ```
 
 gdzie:
 
- * ```--ip``` określa adres IP lub jego identyfikator
- * ```--value``` określa wartość rekordu PTR
+ * ```--ip``` określa publiczny *Adres IP* lub jego identyfikator
+ * ```--private-ip``` określa prywatny *Adres IP*
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="ip ptr"].
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="ip associate"].

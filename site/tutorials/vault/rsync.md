@@ -1,6 +1,6 @@
 # Konfiguracja cyklicznej kopii danych do Vault z pomocą rsync
 
-Niniejszy dokument przedstawia w jaki sposób wykorzystać rsync w celu wykorzystania cyklicznej kopii danych do [Vault](/resource/storage/vault.md).
+Przedstawimy w jaki sposób wykorzystać rsync w celu wykorzystania cyklicznej kopii danych do [Vault](/resource/storage/vault.md).
 
 ## Warunki wstępne
 

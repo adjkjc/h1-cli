@@ -74,6 +74,14 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
  * dowiązywany *Adres IP* jest adresem w *Sieci* publicznej
  * *Adres IP* nie znajduje się w stanie *Ograniczonego użycia*
 
+### Odwiązanie od innego adresem IP
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * *Adres IP* znajduje się w stanie ```Przyłączony``` lub ```Rozłączony```
+ * *Adres IP* posiada dowiązywany *Adres IP*
+ * *Adres IP* nie znajduje się w stanie *Ograniczonego użycia*
+
 ## Opłaty
 
 Opłaty naliczane są w zależności od czasu.

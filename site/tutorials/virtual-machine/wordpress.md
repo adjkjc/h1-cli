@@ -1,6 +1,6 @@
 # Instalacja Wordpress na Wirtualnej maszynie
 
-Niniejszy dokument przedstawia w jaki sposób uruchomić [Wordpress](https://pl.wordpress.org/) w [Wirtualnej maszynie](/resource/compute/virtual-machine.md).
+Przedstawimy w jaki sposób uruchomić [Wordpress](https://pl.wordpress.org/) w [Wirtualnej maszynie](/resource/compute/virtual-machine.md).
 
 Przedstawiona procedura instalacji stanowi rozwiązanie instalacji Wordpress w podstawowej konfiguracji LAMP.
 

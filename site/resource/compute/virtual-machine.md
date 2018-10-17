@@ -138,7 +138,7 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
  * liczba wykorzystywanych *Adapterów sieciowych* nie spowoduje przekroczenia specyfiki nowego wariantu
  * liczba wykorzystywanych *Dysków* nie spowoduje przekroczenia specyfiki nowego wariantu
  * liczba wykorzystywanych *Adresów IP* nie spowoduje przekroczenia specyfiki nowego wariantu
- * Limit *Zasobów* *Projektu* pozwala na zmianę
+ * limit *Zasobów* *Projektu* pozwala na zmianę
  * *Projekt* posiada dostępne środki na okres wykorzystania *Zasobu* przez 24 godziny
  * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
 
@@ -172,7 +172,7 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
  * poprawnie utworzony *Dysk* [zgodnie z przewodnikiem](/guide/storage/disk/creating.md)
  * *Wirtualna Maszyna* znajduje się w stanie ```Pracujący``` lub ```Wyłączony```
  * *Dysk* znajduje się w stanie ```Rozłączony```
- * przyłączenie *Dysku* nie spowoduje przekroczenie liczby dopuszczalnych interfejsów wynikających z wariantu *Wirtualnej Maszyny*
+ * przyłączenie *Dysku* nie spowoduje przekroczenie liczby dopuszczalnych *Dysków* wynikających z wariantu *Wirtualnej Maszyny*
  * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
 
 ##### Odłączenie Dysku
