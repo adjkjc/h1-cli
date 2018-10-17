@@ -62,7 +62,16 @@ Niniejsza instrukcja przedstawia rozszerzeni dysku, a następnie partycji dla:
       filesystem:
         dev: /dev/sdb1
         resizefs: true
-#- name: Rozszerzenie dysku i systemu plików dla systemów z rodziny Windows
-
+- name: Rozszerzenie dysku i systemu plików dla systemów z rodziny Windows
+  block:
+    - name: Zidentyfikuj dysk
+      powershell:
+        cmd: Get-Disk
+    - name: Zidentyfikuj partycje
+      powershell:
+        cmd: Get-Disk -Number 1 | Get-Partition
+     
+    - name: Rozszerz partycje do oczekiwaneego rozmiaru
+      powershell:
+        cmd: Get-Disk -Number 1 | Get-Partition -PartitionNumber 1 | Resize-Partition -Size (100 GB)
 ```
-

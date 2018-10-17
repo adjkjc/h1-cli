@@ -55,6 +55,19 @@ const partials = {
         return '';
 
     },
+    powershell_initialize: (data, prev) => {
+        if (!prev || task_name_for_task(prev).startsWith("powershell_")) {
+            return `Otwórz powłokę Powershell.`;
+        }
+        return '';
+    },
+    powershell_finish: (data, prev, next, ctx) => {
+        if (!next || !task_name_for_task(prev).startsWith("powershell_")) {
+            return "Zapisz wprowadzone zmiany i zamknij edytor.\n";
+        }
+        return '';
+    },
+
 
 };
 
@@ -287,6 +300,14 @@ const tasks = {
             throw new Error("Not implemented yet");
         }
         content += partials.editor_finish(data, prev, next, ctx);
+        return content;
+    },
+    powershell: (data, prev, next, ctx) => {
+        let content = '';
+        content += partials.powershell_initialize(data, prev, next, ctx);
+        content += "Wykonaj w powłoce Powershell następujące polecenie:";
+        content += utils.dump(data.cmd, 'powershell');
+        content += partials.powershell_finish(data, prev, next, ctx);
         return content;
     },
     browser: (data, prev, next) => {
