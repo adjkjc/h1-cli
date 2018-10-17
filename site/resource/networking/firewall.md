@@ -40,10 +40,27 @@ Dla *Zapory sieciowej* charakterystyczne są następujące operacje:
  * dodanie reguły zapory sieciowej kontrolującej ruch przychodzący albo wychodzący
  * usunięcie reguły zapory sieciowej kontrolującej ruch przychodzący albo wychodzący
 
+## Reguły
+
+Po utworzeniu *Zapora sieciowa* posiada następujące domyślne reguły dla ruchu przychodzącego:
+
+Nazwa    | Priorytet | Akcja  | Filtr          | Strefa zewnętrzna  | Strefa wewnętrzna
+-------- | :-------: | :----: | ---------------| ------------------ | ---
+http(s)  | 101       | pozwól | tcp:80,tcp:443 | 0.0.0.0/0          | *
+ssh      | 102       | pozwól | tcp:22         | 0.0.0.0/0          | *
+rdp      | 103       | pozwól | tcp:3389       | 0.0.0.0/0          | *
+icmp     | 104       | pozwól | icmp           | 0.0.0.0/0          | *
+
+Po utworzenia *Zapora sieciowa* posiada następujące domyślne reguły dla ruchu wychodzącego:
+
+Nazwa    | Priorytet | Akcja  | Filtr          | Strefa zewnętrzna  | Strefa wewnętrzna
+-------: | :-------: | :----: | -------------- | ------------------ |
+all      | 101       | pozwól | tcp,udp        | 0.0.0.0/0          | *
+
 W przypadku usunięcia wszystkich reguł mają zastosowanie następujące zasady:
 
  * ruch przychodzący jest zablokowany
- * ruch wychodzący jest dozwolony, jednak serwer nie może uzyskać potwierdzenia odbioru pakietów, które nie zostały dopuszczone przez jakąkolwiek regułę wychodzącą
+ * ruch wychodzący jest dozwolony, jednak serwer nie może uzyskać potwierdzenia odbioru pakietów, które nie zostały dopuszczone przez jakąkolwiek regułę wychodzącą.
 
 Reguły *Zapory sieciowej* mają zastosowanie do wszystkich *Adapterów sieciowych* w *Sieci*, niezależnie czy *Adres IP* komunikacji jest prywatnym *Adresem IP*, czy jest publicznym *Adresem IP* powiązanym z *Adresem IP* w *Sieci*.
 
