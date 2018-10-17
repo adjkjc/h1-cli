@@ -17,7 +17,7 @@ const shell_explain = (cmd) => {
     return content;
 };
 
-const task_name_for_task = task => Object.keys(tasks).find(task_name => task[task_name]);
+const task_name_for_task = task => Object.keys(tasks).find(task_name => task_name in task);
 const task_data_for_task = task => task[task_name_for_task(task)];
 
 const partials = {
@@ -56,14 +56,14 @@ const partials = {
 
     },
     powershell_initialize: (data, prev) => {
-        if (!prev || task_name_for_task(prev).startsWith("powershell_")) {
-            return `Otwórz powłokę Powershell.`;
+        if (!prev || !task_name_for_task(prev).startsWith("powershell")) {
+            return `Otwórz powłokę Powershell.\n`;
         }
         return '';
     },
-    powershell_finish: (data, prev, next, ctx) => {
-        if (!next || !task_name_for_task(prev).startsWith("powershell_")) {
-            return "Zapisz wprowadzone zmiany i zamknij edytor.\n";
+    powershell_finish: (data, prev, next) => {
+        if (!next || !task_name_for_task(next).startsWith("powershell")) {
+            return "Zamknij powłokę Powershell.\n";
         }
         return '';
     },

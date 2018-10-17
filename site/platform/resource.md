@@ -52,6 +52,14 @@ Ograniczone korzystanie z *Zasobu* umożliwia wykonywanie następujących operac
 * usunięcie *Zasobu*
 * zarządzanie *Tagami*
 
+### Zarządzanie *Tagami*
+
+*Tagi* umożliwiają logiczne zgrupowanie w celu zbiorczego odwołania lub nadania im jednolitych właściwości.
+
+*Tag* określony jest przez klucz i wartość.
+
+*Tag* którego wartością klucza jest `protected` dodany do *Zasobu* uniemożliwia usunięcie *Zasobu* do momentu usunięcia tego *Tagu*.
+
 ### Płatność
 
 Nie ulegają zmianie cykle rozliczeniowe, a standardowe opłaty za usługi są naliczane do czasu usunięcia *Zasobu*.
@@ -75,5 +83,9 @@ Po zakończeniu przesyłania zasobów:
 * opłata jest naliczana za pierwszy pełny okres rozliczeniowy
 
 # Przewodniki
+
+Do korzystania z *Zasobów* mogą być przydatne następujące przewodniki:
+
+<PageList path_re="guide/resource/"/>
 
 Dostępne są [przewodniki](/guide/) dla każdego z *Zasobów*.

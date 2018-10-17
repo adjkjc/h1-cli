@@ -1,10 +1,10 @@
-# Rozszerzenie używanej przestrzeni dysku 
+# Rozszerzenie używanej przestrzeni dysku
 
 Przedstawimy w jaki sposób rozszerzyć używaną przestrzeń [Dysku](/resource/storage/disk.md) wykorzystywanego w [Wirtualnej maszynie](/resource/compute/virtual-machine.md).
 
-Ze względu na sposób działania systemów operacyjnych operacja [zwiększenia rozmiaru *Dysku*](/home/adas/Devel/rbx-static-docs/site/guide/storage/disk/resize.md) nie sprawia, że staje się ona wykorzystywana przez aplikacje użytkownika. 
+Ze względu na sposób działania systemów operacyjnych operacja [zwiększenia rozmiaru *Dysku*](/guide/storage/disk/resize.md) nie sprawia, że staje się ona wykorzystywana przez aplikacje użytkownika.
 
-Dane gromadzone na dysku są gromadzone w grupach tzw. partycjach. Każda partycja ma ściśle określony rozmiar i pozycje na dysku. 
+Dane gromadzone na dysku są gromadzone w grupach tzw. partycjach. Każda partycja ma ściśle określony rozmiar i pozycje na dysku.
 
 Obszar dysku podzielony jest na części - partycja. Każda partycja ma ściśle określony rozmiar i pozycje na dysku. Na partycji istnieje określony system plików, który także posiada określony rozmiar. Dopiero system plików umożliwia na swobodne zapisywanie i odczytywanie plików.
 
@@ -26,18 +26,18 @@ Niniejsza instrukcja przedstawia rozszerzeni dysku, a następnie partycji dla:
 - name: Konfiguracja środowiska
   block:
     - name: Utwórz nową Wirtualną maszynę z rekomendowanego obrazu Ubuntu lub Windows
-      guide: 
+      guide:
         path: /guide/compute/virtual-machine/creating.md#utworzenie-z-wykorzystaniem-rekomendowanego-obrazu
     - name: Utwórz nowy pusty *Dysk*
       guide:
         path: /guide/storage/disk/creating.md
     - name: Dołączenie dysku na dane
-      guide: 
+      guide:
         path: /guide/compute/virtual-machine/disk-attach.md
 - name: Dostęp do serwera
   block:
     - name: Uzyskaj dostęp do konsoli *Wirtualnej maszyny*
-      guide:  
+      guide:
         path: /guide/compute/virtual-machine/console.md
 - name: Rozszerzenie dysku i systemu plików dla systemów z rodziny Linux
   block:
@@ -49,7 +49,7 @@ Niniejsza instrukcja przedstawia rozszerzeni dysku, a następnie partycji dla:
         dev: /dev/sdb
         value: position
     - name: Rozszerz dysk
-      guide: 
+      guide:
         path: /guide/storage/disk/resize.md
     - name: Rozszerz partycje
       parted:
@@ -67,11 +67,12 @@ Niniejsza instrukcja przedstawia rozszerzeni dysku, a następnie partycji dla:
     - name: Zidentyfikuj dysk
       powershell:
         cmd: Get-Disk
+
     - name: Zidentyfikuj partycje
       powershell:
         cmd: Get-Disk -Number 1 | Get-Partition
-     
-    - name: Rozszerz partycje do oczekiwaneego rozmiaru
+
+    - name: Rozszerz partycje do oczekiwanego rozmiaru
       powershell:
         cmd: Get-Disk -Number 1 | Get-Partition -PartitionNumber 1 | Resize-Partition -Size (100 GB)
 ```
