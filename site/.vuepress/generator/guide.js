@@ -30,7 +30,7 @@ const actions = {
         } else if (data.type === 'entry_list') {
             content.push("Kliknij wybraną pozycje listy");
         } else if (data.type === 'entry_tridot') {
-            content.push('Na poziomie nazwy pozycji z listy kliknij trójkropek');
+            content.push('Na poziomie nazwy pozycji kliknij trójkropek');
         } else if (data.type === 'tridot') {
             content.push(`Kliknij trójkropek`);
         } else {
