@@ -57,6 +57,8 @@ Nazwa    | Priorytet | Akcja  | Filtr          | Strefa zewnętrzna  | Strefa we
 -------: | :-------: | :----: | -------------- | ------------------ |
 all      | 101       | pozwól | tcp,udp        | 0.0.0.0/0          | *
 
+Strefa wewnętrzna określona jest poprzez *Tag* lub `*` dla każdego.
+
 W przypadku usunięcia wszystkich reguł mają zastosowanie następujące zasady:
 
  * ruch przychodzący jest zablokowany
