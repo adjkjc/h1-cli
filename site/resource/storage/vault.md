@@ -131,7 +131,7 @@ W razie potrzeby zwiększenia tych limitów [prosimy o kontakt](/about-us/contac
 
 Nazwa               | Okres                                     | Cena (PLN)                               | Uwagi
 ------------------- | :---------------------------------------: | ---------------------------------------: | :----
-vault               | [PERIOD="vault:vault"]                    | [PRICE="vault:vault"]                    |
+vault 1GB           | [PERIOD="vault:vault"]                    | [PRICE="vault:vault"]                    |
 ruch przychodzący   | 1 godzina                                 | 0.0000                                   |
 ruch wychodzący 1GB | [PERIOD="vault:metric traffic Outbound"]  | [PRICE="vault:metric traffic Outbound"]  |
 
