@@ -8,12 +8,12 @@ Organizacja przeznaczona jest do rozliczania zasobów platformy należących do 
 
 *Organizacja* może zostać utworzona, w przypadku spełnienia następujących warunków:
 
-* założyciel *Organizacji* nie znajduje się w stanie *Ograniczonego użycia* 
+* założyciel *Organizacji* nie znajduje się w stanie *Ograniczonego użycia*
 * podane zostały poprawne dane osoby prawnej jednoznacznie ją identyfikujące:
 
     * Podmiot z Polski - wymagane podanie poprawnego numeru NIP zarejestrowanego w bazie REGON dla podmiotu. W przypadku braku zgodności pomiędzy nadanym numerem NIP dla podmiotu, a bazą REGON [prosimy o kontakt](/about-us/contact.md).
     * Podmiot z Unii Europejskiej - wymagane podanie numeru identyfikacji podatkowej VAT wykazywanego w systemie [VIES](http://ec.europa.eu/taxation_customs/vies/).
-    * Pozostałe podmioty - wymagane podanie numeru identyfikacji podatkowej lub stosownego rejestru podmiotów obowiązującego w danym kraju. 
+    * Pozostałe podmioty - wymagane podanie numeru identyfikacji podatkowej lub stosownego rejestru podmiotów obowiązującego w danym kraju.
 
 <!--
 ### usunięcie
@@ -93,7 +93,7 @@ W przypadku z Unii Europejskiej dostępne są następujące kanały płatności:
 
 W przypadku pozostałych podmiotów dostępne są następujące kanały płatności:
 
-* karta płatnicza - wystawiona przez bank lub organizację płatniczą z kraju *Organizacji* 
+* karta płatnicza - wystawiona przez bank lub organizację płatniczą z kraju *Organizacji*
 * PayPal - zweryfikowane konto należącego do podmiotu z kraju Organizacji
 
 ## Operacje
@@ -102,14 +102,58 @@ Dostępne są następujące dedykowane operacje:
 
 * zmiana danych rozliczeniowych
 * zmiana użytkowników przypisanych do *Organizacji* i ich ról
-    * użytkownik tworzący *Organizacje* otrzymuje automatycznie rolę ```owner``` Organizacji
-    * Organizacja musi mieć przynajmniej jednego Użytkownika z rolą ```owner```
-        * dodanie użytkownika do *Organizacji*
-        * usunięcie użytkownika z *Organizacji*
-        * zmiana roli użytkownika w *Organizacji*
+* zarządzanie limitem przydziału *Zasobów* do projektu
+* zarządzanie własnymi rolami
+* zmiana użytkowników przypisanych do *Organizacji* i ich ról
 * dostęp do faktur Projektów wystawionych dla *Organizacji*
 
-## Powiadomienia 
+### Zmiana danych rozliczeniowych
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * *Użytkownik* posiada rolę ```owner``` lub ```billing```
+
+### Zarządzanie własnymi rolami
+
+Następujące operacje przeznaczone do zarządzania własnymi rolami są dostępne:
+
+* dodanie roli
+* usunięcie roli
+* zmiana nazwy lub uprawnień roli
+
+Operacje mogą zostać wykonane po spełnieniu następujących warunków:
+
+ * *Użytkownik* wykonujący operacje posiada rolę ```owner``` lub odpowiednią własną rolę
+
+### Zmiana użytkowników przypisanych do *Organizacji* i ich ról
+
+Dostępne są następujące role z określonymi prawami dostępu:
+
+* ```owner``` - wszelkie prawa dostępu,
+* ```billing``` - modyfikacja danych związanych z rozliczeniami i płatnościami
+* własne role - prawa dostępu określone przez parametryzacje roli
+
+Następujące operacje przeznaczone do zarządzania *Użytkownikami* *Projektu* są dostępne:
+
+* dodanie użytkownika do *Organizacji*
+* usunięcie użytkownika z *Organizacji*
+* zmiana roli użytkownika w *Organizacji*
+
+Operacje mogą zostać wykonane po spełnieniu następujących warunków:
+
+ * Zostaje zachowany przynajmniej jeden *Użytkownik* z rolą ```owner```
+ * *Użytkownik* wykonujący operacje posiada rolę ```owner``` lub odpowiednią własną rolę
+
+Użytkownik tworzący *Organizacje* otrzymuje automatycznie rolę ```owner``` Organizacji.
+
+### Zarządzanie limitem przydziału *Zasobów* do projektu
+
+Operacje mogą zostać wykonane po spełnieniu następujących warunków:
+
+ * *Użytkownik* posiada rolę ```owner``` lub ```billing```
+ * Przydział *Projektu* nie przekracza maksymalnego przydziału *Projektu* *Organizacji*
+
+## Powiadomienia
 
 Powiadomienia dla *Organizacji* są wysyłane w przypadku następujących zdarzeń:
 
@@ -120,6 +164,6 @@ Powiadomienia dla *Organizacji* są wysyłane w przypadku następujących zdarze
 
 Parametr            | Wartość
 --------------------| ----------
-Liczba *Projektów*  | 100
+Liczba *Projektów*  | 10
 
 [Napisz do nas](/about-us/contact.md) jeżeli potrzebujesz zwiększyć te limity.

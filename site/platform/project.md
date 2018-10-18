@@ -10,14 +10,14 @@ Projekt przeznaczony jest do logicznego zgrupowania zasobów, którego dla Organ
 
 * *Organizacja* nie znajduje się w stanie *Ograniczonego użycia*
 
-Użytkownik tworzący Projekt otrzymuje automatycznie rolę ```owner``` Projektu.
+Użytkownik tworzący Projekt otrzymuje automatycznie rolę ```owner``` *Projektu*.
 
-<!-- wymaga wprowadzenia nazwy Projektu -->
+<!-- wymaga wprowadzenia nazwy *Projektu* -->
 
-<!-- 
+<!--
 ### Usunięcie
 
-Nie jest możliwe usunięcie projektu. 
+Nie jest możliwe usunięcie *Projektu*.
 -->
 
 ## Zarządzanie
@@ -26,12 +26,12 @@ Nie jest możliwe usunięcie projektu.
 
 Dostępne są następujące dedykowane operacje:
 
-* zarządzanie członkami projektu
-    * dodanie użytkownika do Projektu
-    * usunięcie użytkownika z Projektu
+* zarządzanie członkami *Projektu*
+    * dodanie użytkownika do *Projektu*
+    * usunięcie użytkownika z *Projektu*
     * zmiana roli użytkownika w Projekcie
 * zarządzanie parametrami powiadomień
-    * zmiana próg środków Projektu
+    * zmiana próg środków *Projektu*
 * zarządzanie kluczami SSH
     * dodanie klucza SSH
     * usunięcie klucza SSH
@@ -42,33 +42,39 @@ Dostępne są następujące dedykowane operacje:
     * usunięcie prawa dostępu
     * usuwanie service account
 * zasilenie środków
-* dostęp do faktur Projektu wystawionych dla Organizacji
+* dostęp do faktur *Projektu* wystawionych dla Organizacji
 * dostęp do historii zasileń środków
 * dostęp do historii naliczonych opłat
 
 <!-- czy service account powinno miec dostep GET do /project/self ??? -->
 
-#### Zarządzanie członkami Projektu
+#### Zarządzanie użytkownika *Projektu*
 
-Każdy *Projekt* musi mieć przynajmniej jednego Użytkownika z rolą ```owner```
+Następujące operacje przeznaczone do zarządzania członkami *Projektu* są dostępne:
 
-Następujące operacje przeznaczone do zarządzania członkami Projektu są dostępne:
-
-* dodanie użytkownika do Projektu
-* usunięcie użytkownika z Projektu
-* zmiana roli użytkownika w Projekcie
+* dodanie użytkownika do *Projektu*
+* usunięcie użytkownika z *Projektu*
+* zmiana roli użytkownika w *Projekcie*
 
 Dostępne są następujące role z określonymi prawami dostępu:
 
 * ```owner``` - wszelkie prawa dostępu,
 * ```billing``` - modyfikacja danych związanych z rozliczeniami i płatnościami
-* ```user``` - modyfikacja zasobów bez modyfikacji Projektu
+* ```user``` - modyfikacja zasobów bez modyfikacji *Projektu*
+* własne role *Organizacji*
+
+Operacje mogą zostać wykonane po spełnieniu następujących warunków:
+
+ * Zostaje zachowany przynajmniej jeden *Użytkownik* z rolą ```owner```
+ * *Użytkownik* wykonujący operacje posiada rolę ```owner```
+
+Użytkownik tworzący *Projekt* otrzymuje automatycznie rolę ```owner``` Organizacji.
 
 #### Zarządzanie parametrami powiadomień
 
 Każdy *Projekt* może mieć zdefiniowane wiele progów powiadomień o poziomie środków, które określają poziom środków, który wywołuje powiadomienie o braku środków.
 
-Następujące operacje przeznaczone do zarządzania parametrami powiadomień Projektu są dostępne:
+Następujące operacje przeznaczone do zarządzania parametrami powiadomień *Projektu* są dostępne:
 
 * dodanie progu środków
 * usunięcie progu środków
@@ -101,21 +107,40 @@ Dla każdego service account są dostępne następujące operacje:
 Zasilenie środków jest dostępne następującymi drogami:
 
 * tradycyjnym przelewem,
-* PayPal 
-* eCard - Visa, VisaCheckout, MasterCard, American Express, Maeostro 
+* PayPal
+* eCard - Visa, VisaCheckout, MasterCard, American Express, Maeostro
 * dotPay - płatności błyskawiczne popularnych polskich banków, Blik, mTransfer
+
+## Przekazanie
+
+Przekazanie jest możliwe między *Organizacjami* po spełnieniu następujące warunków:
+
+ * docelowa *Organizacja* posiada umowy licencyjne wymagane dla każdego z *Zasobów* *Projektu*
+ * *Projekt* posiada środki
+ *
+
+Transfer *Projektu* polega na:
+
+* przekazaniu podlegają wszystkie elementy *Projektu*, z wykluczeniem:
+    * praw dostępu *Użytkowników* z własnymi rolami
+
+* określeniu przez źródłową *Organizacje*:
+    * *Projektu*, który otrzyma środki przekazywanego *Projektu*
+    * docelowej Organizacji
+
+* zaakceptowaniu transferu przez docelową *Organizacje* poprzez dokonanie zasilenia środków *Projektu*
 
 ## Forma rozliczeń
 
-Podstawą formą rozliczeń na platformie jest ```pre-paid```, czyli poprzez dokonanie wpłaty uzyskania środków z przeznaczeniem na wykorzystanie na usługi w ramach platformy. 
+Podstawą formą rozliczeń na platformie jest ```pre-paid```, czyli poprzez dokonanie wpłaty uzyskania środków z przeznaczeniem na wykorzystanie na usługi w ramach platformy.
 
 W celu przyznania limitu kredytowego dla rozliczeń ```post-paid``` wymagane jest dokonanie indywidualnej oceny Organizacji w szczególności w zakresie kondycji finansowej oraz historii współpracy. Może wiązać się to z przedstawieniem przez Organizację dodatkowych dokumentów.
 
 ## Parametry techniczne
 
-Parametr        | Wartość
-----------------| -------
-Liczba członków | 100
+Parametr                         | Wartość
+-------------------------------- | -------
+Liczba *Użytkowników* *Projektu* | 100
 
 [Napisz do nas](/about-us/contact.md) jeżeli potrzebujesz zwiększyć te limity.
 
