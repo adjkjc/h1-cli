@@ -20,10 +20,34 @@ Przed przystąpieniem do integracji powinieneś mieć:
 # render=tutorial
   
 - name: Zainstaluj pakiet goaccess
-  service:
+  yum:
     name: goaccess
     state: installed
   after_event:
     text: Po wykonaniu tych operacji powinieneś móc skorzystać z goaccess.
 ```
+
+```yaml
+- name: Uruchom stream logów z serwera www na lokalny komputer do goaccess  
+  variables:
+      "log_name": nazwa utworzonego przez nas archiwum logów
+      "plik_wyjsciowy": nazwa pliku, w którym zapisywana będzie graficzna interpretacja logów
+      "log_format" : format logów, np. "%h %^[%d:%^] \"%r\" %s %b \"%R\" \"%u\""
+      "date-format" : format daty np. %d/%b/%Y
+  shell:
+    cmd: ./h1 log stream --log "log_name" --output tsv --fields message --filter message~access.log | cut -d ":" -f2- | goaccess --log-format="log_format" --date-format="date-format" -o "plik_wyjsciowy" --real-time-html
+```
+
+## Powiązane produkty
+
+* *[Dziennik](/guide/storage/log-archive/creating.md)*
+
+## Możliwe użycie
+* *[rsyslog](/tutorials/log-archive/rsyslog.md)*
+
+## Co zyskujemy
+- graficzną, bardziej przystępną formę prezentacji logów
+- ułatwione badanie poprawności i wydajności pracy usług np. serwera www
+
+
 
