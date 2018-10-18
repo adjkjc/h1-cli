@@ -19,7 +19,7 @@ Przykładowe zastosowania:
 
 *Brama sieciowa* może zostać utworzona po spełnieniu następujących warunków:
 
- * *Brama sieciowa* nie jest przywiązany do żadnej *Sieci*
+ * *Brama sieciowa* nie jest przywiązana do żadnej *Sieci*
  * wszystkie ogólne warunki *usunięcia zasobu*
  * wszystkie ogólne warunki *utworzenia zasobu*
 

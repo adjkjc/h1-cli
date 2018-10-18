@@ -2,7 +2,7 @@
 
 ## Przeznaczenie
 
-Użytkownik przeznaczony jest do zarządzania zasobami platformy przez osoby fizyczne. 
+Użytkownik przeznaczony jest do zarządzania zasobami platformy przez osoby fizyczne.
 
 W przypadku konieczności zarządzania zasobami platformy przez skrypty, urządzenia lub inne procesy automatyzujące należy skorzystać z "Service Account".
 

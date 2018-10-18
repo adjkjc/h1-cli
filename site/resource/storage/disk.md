@@ -140,8 +140,8 @@ Format pliku do importu         | vhdx
 Wariant   | Okres                  | Cena (PLN)             | Uwagi
 --------- | :--------------------: | ---------------------: | :----:
 ssd       | [PERIOD="disk:ssd"]    | [PRICE="disk:ssd"]     |
-volume    | [PRICE="disk:volume"]  | [PRICE="disk:volume"]  |
-archive   | [PRICE="disk:archive"] | [PRICE="disk:archive"] |
+volume    | [PERIOD="disk:volume"]  | [PRICE="disk:volume"]  |
+archive   | [PERIOD="disk:archive"] | [PRICE="disk:archive"] |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

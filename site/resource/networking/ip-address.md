@@ -113,7 +113,7 @@ typ      | IPv4
 Nazwa                  | Okres                    | Cena (PLN)               | Uwagi
 ---------------------- | :----------------------: | :----------------------: | ---------:
 IP w sieci publicznej  | [PERIOD="ip:public v4"]  | [PRICE="ip:public v4"]   |
-IP w sieci prywatnej   | [PERIOD="ip:private v4"] | [PERIOD="ip:private v4"] |
+IP w sieci prywatnej   | [PERIOD="ip:private v4"] | [PRICE="ip:private v4"] |
 
 *Podane ceny są cenami netto i nie zawierają podatku VAT*
 

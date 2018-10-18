@@ -4,7 +4,7 @@
 
 ### Opłaty
 
-Opłaty na podstawie czasu są naliczane od otworzenia *Zasobu* do usunięcia *Zasobu*.
+Opłaty na podstawie czasu są naliczane od utworzenia *Zasobu* do usunięcia *Zasobu*.
 
 ### Ogólne warunki opłat
 
