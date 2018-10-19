@@ -57,4 +57,6 @@ W tych obrazach skonfigurowane są następujące elementy:
 * wyłączona obsługę IPv6
 * agent HyperOne, który zapewnia możliwość resetu hasła poprzez panel
 
+Do ich poprawne działania wymagane jest wykorzystanie [Sieci](/resource/networking/network.md) prywatnej, lecz możliwe jest uzyskanie dostępu do Internetu np. poprzez [bramę sieciową](/resource/networking/network-gateway.md), albo odrębny [Adapter sieciowy](/resource/networking/network-adapter.md).
+
 Zdalny dostęp możliwy jest z wykorzystaniem protokołu RDP (Remote Desktop Protocol).
