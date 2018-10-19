@@ -12,7 +12,7 @@ Przed przystąpieniem do integracji powinieneś mieć:
 * skonfigurowane przekazywanie logów do rsyslog
 * otwarty port 6514 dla połączeń wychodzących
 * utworzony *Dziennik*, [zgodnie z instrukcją](/guide/storage/log-archive/creating.md)
-* dodane hasło w *Dzienniku*, [zgodnie z instrukcją](/guide/storage/log-archive/add-password.md).
+* dodane hasło w *Dzienniku*, [zgodnie z instrukcją](/guide/storage/log-archive/add-password.md)
 
 ```yaml
 # render=tutorial

@@ -49,7 +49,7 @@ const partials = {
         return '';
     },
     editor_finish: (data, prev, next) => {
-        if (!next || task_data_for_task(next) !== data.path) {
+        if (!next || task_data_for_task(next).path !== data.path) {
             return "Zapisz wprowadzone zmiany i zamknij edytor.\n";
         }
         return '';
@@ -77,17 +77,6 @@ const tasks = {
         content += shell_explain(`sudo nano ${data.dest}`, 'bash');
         content += `Wklej poniższą zawartość:\n`;
         content += utils.dump(data.content);
-        if (data.variables) {
-            content += `Zastąp poniższe wartości:\n\n`;
-            Object.keys(data.variables).forEach(key => {
-                const replaced = `{${key}}`;
-                content += ` * \`${escapeTemplate(replaced)}\` - ${data.variables[key]}\n`;
-                if (!data.content.includes(replaced)) {
-                    throw new Error(`Missing ${replaced} in content of file`);
-                }
-            });
-        }
-        content += "\n";
         return content;
     },
     service: (data, prev, next) => {
@@ -133,6 +122,21 @@ const tasks = {
         }
         return content;
     },
+    yum: (data, prev, next, ctx) => {
+        let content='';
+        const state = data.state || 'present';
+        if (state === 'present' || state === 'installed') {
+            content += `Zainstaluj wymagane pakiety wykonując następujące polecenie:`;
+            content += shell_explain(`yum install ${data.name}`);
+        } else if (state === 'absent') {
+            content += `Usuń pakiety wykonując następujące polecenie:`;
+            content += shell_explain(`yum remove ${data.name}`);
+        } else {
+            throw new Error("Not implemented yet");
+        }
+        return content;
+    },
+
     mysql_db: (data, prev, next, ctx) => {
         let content = partials.mysql_initialize(data, prev, next, ctx);
         content += `Wykonaj w interaktywnej konsoli MySQL następujące polecenie:`;
@@ -339,12 +343,24 @@ const get_content_for_task_list = (task_list, depth = 2, ctx) => {
                     console.log("Unknown task name", task);
                     throw new Error("Unknown task name");
                 }
+                const data = task[cur_task_name];
                 new_content += tasks[cur_task_name](
-                    task[cur_task_name],
+                    data,
                     task_list[parseInt(i) - 1],
                     task_list[parseInt(i) + 1],
                     ctx
-                ) + "\n";
+                );
+                if (data.variables) {
+                    new_content += `Zastąp poniższe wartości:\n\n`;
+                    Object.keys(data.variables).forEach(key => {
+                        const replaced = `{${key}}`;
+                        new_content += ` * \`${escapeTemplate(replaced)}\` - ${data.variables[key]}\n`;
+                        if (data.content && !data.content.includes(replaced)) {
+                            throw new Error(`Missing ${replaced} in content of file`);
+                        }
+                    });
+                }
+                new_content+= "\n";
             } catch (e) {
                 console.log(e);
                 new_content += utils.dump(task);
