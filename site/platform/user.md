@@ -6,8 +6,6 @@ Użytkownik przeznaczony jest do zarządzania zasobami platformy przez osoby fiz
 
 W przypadku konieczności zarządzania zasobami platformy przez skrypty, urządzenia lub inne procesy automatyzujące należy skorzystać z "Service Account".
 
-<!-- TODO: Moniko, jakbyś nazwała "Service Account"? -->
-
 ## Cykl życia
 
 ### utworzenie
@@ -20,6 +18,57 @@ Identyfikatorem użytkownika jest adres email który jest trwały dla Użytkowni
 
 ## Operacje
 
+Dostępne są następujące dedykowane operacje:
+
+* zmiana hasła
+* przypomnienie hasła
+* zmiana profilu *Użytkownika*
+* zarządzanie kluczami SSH
+    * dodanie klucza SSH
+    * usunięcie klucza SSH
+* zarządzanie dwuskłanikowym uwierzytelnianiem
+* historia zdarzeń
+
+### Zmiana hasła
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * bez szczególnych warunków
+
+Hasło *Użytkownika* nigdy nie jest przechowywane w postaci jawnej.
+
+### Przypomnienie hasła
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * bez szczególnych warunków
+
+### Zarządzanie kluczami SSH
+
+Każdy *Użytkownik* może mieć zapisanych wiele kluczy SSH w celu ich sprawnego wykorzystania jako dane dostępowe do określonych zasobów.
+
+Klucze SSH *Użytkownika* są także wykorzystywanee do uwierzytelniania poprzez CLI.
+
+Następujące operacje przeznaczone do zarządzania kluczami SSH są dostępne:
+
+ * dodanie klucza SSH
+ * usunięcie klucza SSH
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * bez szczególnych warunków
+
+### Zarządzanie dwuskłanikowym uwierzytelnianiem
+
+Dostępne formy dwuskładnikowego uwierzytelniania:
+
+ * kody TOTP
+ * kody zapasowe
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * bez szczególnych warunków
+
 ## Weryfikacja
 
 Podczas tworzenia Użytkownika lub w dowolnym późniejszym czasie może być wymagana weryfikacja Użytkownika.
@@ -30,9 +79,9 @@ W przypadku nie wykonania weryfikacji w wyznaczonym czasie, funkcjonalność *U�
 
 Niektóre ze sposobów weryfikacji danych:
 
-* adres e-mail
-* numeru telefonu komórkowego
-* tożsamości za pomocą:
+ * adres e-mail
+ * numeru telefonu komórkowego
+ * tożsamości za pomocą:
     * mediów społecznościowych
     * rachunku bankowego
     * PayPal
@@ -50,10 +99,10 @@ Weryfikacja telefonu komórkowego polega na zweryfikowania dostępu Użytkownika
 
 Wykorzystywane są zazwyczaj następujące narzędzia do weryfikacji:
 
-* media społecznościowe
-* rachunek bankowy
-* PayPal
-* podpis kwalifikowany
+ * media społecznościowe
+ * rachunek bankowy
+ * PayPal
+ * podpis kwalifikowany
 
 #### media społecznościowe
 
@@ -82,12 +131,12 @@ Weryfikacja tożsamości poprzez podpis kwalifikowany (bezpieczny podpis elektro
 
 ## Powiadomienia
 
-Użytkownik może wybrać sposób otrzymywania powiadomień. 
+Użytkownik może wybrać sposób otrzymywania powiadomień.
 
 Dostępne są następujące kanały powiadomień:
 
-* wiadomość tekstowa sms
-* wiadomość pocztą elektroniczną
+ * wiadomość tekstowa sms
+ * wiadomość pocztą elektroniczną
 
 # Parametry techniczne
 
