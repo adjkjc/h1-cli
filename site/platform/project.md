@@ -117,7 +117,7 @@ Przekazanie jest możliwe między *Organizacjami* po spełnieniu następujące w
 
  * docelowa *Organizacja* posiada umowy licencyjne wymagane dla każdego z *Zasobów* *Projektu*
  * *Projekt* posiada środki
- *
+ * spełnione są warunki usunięcie każdego z *Zasobów* *Projektu*
 
 Transfer *Projektu* polega na:
 

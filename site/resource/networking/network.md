@@ -45,7 +45,7 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
  * *Sieć* znajduje się w stanie ```Online```
  * *Sieć* nie znajduje się w stanie *Ograniczonego użycia*
 
-### Ustawienie bramy domyślnej DNS
+### Ustawienie bramy domyślnej
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 

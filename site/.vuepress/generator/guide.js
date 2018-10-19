@@ -47,7 +47,11 @@ const actions = {
         } else if (data.location === "sidebar") {
             content.push(`znajdującą się w menu bocznym.`);
         } else if (data.location === "section") {
-            content.push(`znajdującej się w sekcji "${data.section}".`);
+            if(data.type === 'tridot'){
+                content.push(`znajdujący się w sekcji "${data.section}".`);
+            }else {
+                content.push(`znajdującej się w sekcji "${data.section}".`);
+            }
         } else if (data.location === "label") {
             content.push(`znajdujący się na poziomie etykiety`);
             content.push("<code>" + data.label + "</code>");

@@ -77,6 +77,10 @@ const getSidebar = () => {
             children: show_directory(`tutorials/network`)
         },
         {
+            title: 'Adaptery sieciowe',
+            children: show_directory(`tutorials/netadp`)
+        },
+        {
             title: 'Adres IP',
             children: show_directory(`tutorials/ip-address`)
         },

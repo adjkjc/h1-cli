@@ -54,3 +54,17 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
   }
 ]
 ```
+
+#### CLI
+
+W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
+
+```bash
+h1 vault start --vault my-vault
+```
+
+gdzie:
+
+ * ```--vault``` określa identyfikator lub nazwę *Vault*
+
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vault start"].

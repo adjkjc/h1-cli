@@ -314,6 +314,20 @@ const tasks = {
         content += partials.powershell_finish(data, prev, next, ctx);
         return content;
     },
+    sysctl: (data, prev, next, ctx) => {
+        // /etc/sysctl.d/99-sysctl.conf
+        let content = '';
+        if (data.state === 'present') {
+            content += "Wykonaj następujące polecenie, aby wprowadzić trwale zmiany w sysctl:";
+            content += shell_explain(`sed 's/#*${data.name}=.*/${data.name}=${data.value}/g' /etc/sysctl.d/99-sysctl.conf -i`);
+        } else if (data.state === 'applied') {
+            content += "Wykonaj następujące polecenie:";
+            content += shell_explain(`sysctl ${data.name}=${data.value} -w`);
+        } else {
+            throw new Error("Not implemented yet");
+        }
+        return content;
+    },
     browser: (data, prev, next) => {
         let content = '';
         if (data.state === 'opened') {
