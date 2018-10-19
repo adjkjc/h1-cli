@@ -65,18 +65,30 @@ const getSidebar = () => {
     ];
     sidebar['/tutorials/'] = [
         {
-            title: 'Wirtualna maszyna',
-            children: show_directory(`tutorials/virtual-machine`)
+            title: 'Dysk',
+            children: show_directory(`tutorials/ip-address`)
         },
         {
             title: 'Vault',
             children: show_directory(`tutorials/vault`)
         },
         {
+            title: 'Sieć',
+            children: show_directory(`tutorials/network`)
+        },
+        {
+            title: 'Adres IP',
+            children: show_directory(`tutorials/ip-address`)
+        },
+        {
             title: 'Dziennik',
             children: show_directory(`tutorials/log-archive`)
         },
-    ];
+        {
+            title: 'Wirtualna maszyna',
+            children: show_directory(`tutorials/virtual-machine`)
+        },
+    ].sort((a, b) => a.title > b.title);
 
     sidebar['/'] = [
         '/',
