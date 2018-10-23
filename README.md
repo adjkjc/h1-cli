@@ -23,6 +23,12 @@ Online dictionaries:
  * https://www.microsoft.com/en-us/language/default.aspx
  * https://www.computerworld.pl/slownik/angielski/W/1.html
 
+## Media standard
+
+* Images
+  - 1200x628 - for Facebook and Twitter
+  - 600x300 - for blog post
+
 ## Code style
 
 * We don't wrap lines by hand. Use soft wrap in code editor instead.
