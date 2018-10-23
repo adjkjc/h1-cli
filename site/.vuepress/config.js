@@ -63,6 +63,12 @@ const getSidebar = () => {
             children: show_directory(`cooperation/jobs`),
         }
     ];
+    sidebar['/blog/'] = [
+        {
+            title: "Wpisy",
+            children: show_directory(`blog/posts`),
+        },
+    ];
     sidebar['/tutorials/'] = [
         {
             title: 'Dysk',
@@ -138,6 +144,7 @@ module.exports = {
                 skipOutgoingIcon: true
             },
             {text: 'Kontakt', link: '/about-us/contact.md'},
+            {text: 'Blog', link: '/blog/'},
             {text: 'Współpraca', link: '/cooperation/'},
             {
                 icon: 'fab fa-twitter',
