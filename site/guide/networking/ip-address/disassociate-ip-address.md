@@ -61,7 +61,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
     "action_name": "click",
     "data": {
       "type": "entry_tridot",
-      "selector": "navbar>.vm",
+      "selector": "navbar>.vm"
     },
     "after_event": "Po kliknięciu operacja zostanie niezwłocznie wykonana."
   }
