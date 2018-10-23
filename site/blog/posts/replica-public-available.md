@@ -1,6 +1,6 @@
 # Replikacja wirtualnych maszyn Hyper-V
 
-<img :src="$withBase('/media/replication.png')" alt="foo">
+<img :src="$withBase('/media/replication.png')">
 
 Dziś z przyjemnością ogłaszamy udostępnienie dla wszystkich naszych klientów nowego produktu - [Replika](/resource/compute/replica.md). Pozwala on na stałą replikacje maszyn wirtualnych działających w lokalnym środowisku Hyper-V do chmury HyperOne. 
 
@@ -10,6 +10,6 @@ Nasze rozwiązanie pozwoli Ci odzyskać systemy i dane w ciągu kilku minut. Al
 
 Replikacja pozwala na bieżąco (asynchronicznie) jednokierunkowo replikować wszelkie zmiany na dyskach na poziomie bloków. Opóźnienie w replikacji asynchronicznej jest na poziomie 30 sekund - 5 minut, co oznacza, że dane zapisane na serwerze źródłowym po około 5 minutach są bezpiecznie zapisane w chmurze.
 
-Usługi możemy uruchomić w dowolnym czasie bez konieczności wyłączenia serwerów lub wykonywania przez nas czynności na serwerach po Państwa stronie. Wystarczy [jedno polecenie CLI](/guide/compute/replica/creating.md), które zainstaluje w Hyper-V certyfikat niezbędny do szyfrowanego połączenia oraz uruchomi replikacje, abyś mógł spać spokojniej.
+Usługi możemy uruchomić w dowolnym czasie bez konieczności wyłączenia serwerów lub wykonywania przez nas czynności na lokalnych serwerach. Wystarczy [jedno polecenie CLI](/guide/compute/replica/creating.md), które zainstaluje w Hyper-V certyfikat niezbędny do szyfrowanego połączenia oraz uruchomi replikacje, abyś mógł spać spokojniej.
 
 Adam Dobrawy - Warszawa, 23 października 2018 roku
