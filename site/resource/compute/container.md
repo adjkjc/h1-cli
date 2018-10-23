@@ -21,6 +21,7 @@ Przykładowe zastosowania:
 
 *Kontener* może zostać utworzony po spełnieniu następujących warunków:
 
+ * istnieje rekord TXT ```_h1_project.{adres specyficzny}``` zawierający identyfikator aktywnego *Projektu* (jeżeli wykorzystano specyficzny adres)
  * wszystkie ogólne warunki *utworzenia zasobu*
 
 Podczas tworzenia można określić następujące parametry:
@@ -30,6 +31,7 @@ Podczas tworzenia można określić następujące parametry:
  * obraz dostępny w ogólnodostępnym repozytorium, np. na [Docker Hub](https://hub.docker.com/)
  * punkty montowania danych w *[Vault](/resource/storage/vault.md)*
  * zmienne środowiskowe
+ * specyficzny adres domenowy
 
 ### Usuwanie
 
@@ -70,8 +72,31 @@ Dostęp do *Kontenera* możliwy jest poprzez wskazany przez użytkownika port ap
 Dla *Kontenera* dostępne są następujące typowe operacje:
 
  * możliwość zmiany wyświetlanej nazwy
- * zarządzanie danymi dostępowymi
  * zarządzanie *Tagami*
+
+## Dostęp
+
+Dostęp sieciowy *Kontenera* może pochodzić z sieci *Internet* lub z innego *Kontenera* *Projektu*.
+
+Dostęp sieciowy przychodzący z sieci *Internet* do aplikacji działającej w ramach *Kontenera* odbywa się poprzez:
+
+ * protokół HTTP
+ * protokół HTTPS zakończony przed skierowaniem żądania do aplikacji
+
+Dostęp sieciowy przychodzący z innego *Kontenera* *Projektu* może wykorzystywać dowolny protokół.
+
+Przekazane do aplikacji żądanie HTTP z sieci *Internet* zawiera nagłówek ```X-Forwarded-Proto``` wskazujący na wykorzystywany protokół.
+
+Ruch wychodzący do *Sieci* Internet nie jest ograniczony.
+
+Żądanie musi wykorzystywać adres domenowy następującego rodzaju i postaci:
+
+* adres oparty o identyfikator - ```{{id kontenera}}-container-{region}}.pl-waw-1.hyperone.cloud```
+* adres oparty o nazwę - ```{{nazwa kontenera}}-container-{region}}.pl-waw-1.hyperone.cloud```
+* adres oparty o *Tag* - ```{{nazwa kontenera}}-container-{region}}.pl-waw-1.hyperone.cloud```
+* adres specyficzny - wskazany poprzez ```--expose-host``` podczas utworzenia.
+
+Adres domenowy powinien być zawarty bezpośrednio w żądaniu lub zostać wskazany w rekordzie DNS CNAME adresu wykorzystanego w żądaniu.
 
 ## Opłaty
 

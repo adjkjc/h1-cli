@@ -15,6 +15,12 @@ Opłaty na podstawie czasu są naliczane od utworzenia *Zasobu* do usunięcia *Z
 
 Jeśli *Projekt* nie ma dostępnych środków, wówczas *Ograniczone użycie* zostanie zastosowane do *Zasobu*.
 
+## Regiony
+
+Usługi są świadczone z następujących lokalizacji:
+
+* Warszawa - ```pl-waw-1```
+
 ## Specjalne regiony
 
 Istnieją specjalne regiony stworzone dla wymagających klientów o określonych wymaganiach branżowych:
