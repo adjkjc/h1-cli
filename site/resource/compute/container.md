@@ -76,16 +76,22 @@ Dla *Kontenera* dostępne są następujące typowe operacje:
 
 ## Dostęp
 
-Dostęp sieciowy *Kontenera* może pochodzić z sieci *Internet* lub z innego *Kontenera* *Projektu*.
+Podstawowy dostęp do kontenera odbywa się poprzez sieć. Ruch sieciowy do *Kontenera* może pochodzić z sieci *Internet* lub z innego *Kontenera* *Projektu*.
 
-Dostęp sieciowy przychodzący z sieci *Internet* do aplikacji działającej w ramach *Kontenera* odbywa się poprzez:
+Ruch przychodzący z sieci *Internet* do aplikacji działającej w ramach *Kontenera* odbywa się poprzez:
 
  * protokół HTTP
  * protokół HTTPS zakończony przed skierowaniem żądania do aplikacji
 
-Dostęp sieciowy przychodzący z innego *Kontenera* *Projektu* może wykorzystywać dowolny protokół.
+Ruch sieciowy przychodzący z innego *Kontenera* *Projektu* może wykorzystywać dowolny protokół.
 
-Przekazane do aplikacji żądanie HTTP z sieci *Internet* zawiera nagłówek ```X-Forwarded-Proto``` wskazujący na wykorzystywany protokół.
+Przekazane do aplikacji żądanie HTTP z sieci *Internet* zawiera dodatkowe nagłówki na temat połączenia:
+
+- ```X-Real-Ip```, ```X-Forwarded-For``` - źródłowy adres IP połączenia
+- ```X-Forwarded-Host``` - adres kontenera oparty o identyfikator
+- ```X-Forwarded-Port``` - port kontenera
+- ```X-Forwarded-Server``` - wewnętrzny identyfikator węzła platformy
+- ```X-Forwarded-Proto``` - wykorzystywany protokół
 
 Ruch wychodzący do *Sieci* Internet nie jest ograniczony.
 

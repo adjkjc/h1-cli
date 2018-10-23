@@ -287,7 +287,7 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 
 ## Dostęp
 
-Dostęp sieciowy do systemu operacyjnego działającego w ramach *Wirtualnej maszyny* różni się i zależy m.in. od wykorzystanego *[Rekomendowanego Obrazu](/platform/recommended-images.md)*. Obsługiwane protokoły to m. in.:
+Podstawowy dostęp do *Wirtualnej Maszyny* odbywa się poprzez sieć. Dostęp do systemu operacyjnego działającego w ramach *Wirtualnej maszyny* różni się i zależy m.in. od wykorzystanego *[Rekomendowanego Obrazu](/platform/recommended-images.md)*. Obsługiwane protokoły to m. in.:
 
  * SSH (Secure Shell) dla dystrybucji opartych na systemie Linux
  * RDP (Remote Desktop Protocol) dla MS Windows Server
