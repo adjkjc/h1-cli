@@ -141,6 +141,7 @@ W celu przyznania limitu kredytowego dla rozliczeń ```post-paid``` wymagane jes
 Parametr                         | Wartość
 -------------------------------- | -------
 Liczba *Użytkowników* *Projektu* | 100
+Liczba progów śródków            | 20
 
 [Napisz do nas](/about-us/contact.md) jeżeli potrzebujesz zwiększyć te limity.
 
