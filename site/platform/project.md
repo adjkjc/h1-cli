@@ -102,6 +102,12 @@ Dla każdego service account są dostępne następujące operacje:
  * dodanie prawa dostępu
  * usunięcie prawa dostępu
 
+ Prawa dostępu określają do jakiej ścieżki i z wykorzystaniem jakiej metody HTTP (```GET```, ```POST```, ```PUT``` itp. lub ```ALL``` dla wszystkich metod) dostęp do API platformy jest dopuszczalny. Ścieżka określona jest przez wyrażenie regularne, które musi zostać od dopasowane początku ścieżki.
+
+ Identyfikator service account jest wartością, którą należy przesłać do platformy, gdy chcesz wykorzystać service account. Zatem należy chronić go przed ujawnieniem.
+
+ Dowolna aktywność wykonana przez Service Account jest oznaczona na platformie jako wykonana przez *Użytkownika*, który utworzył dany service account.
+
 #### Zasilenie środków
 
 Zasilenie środków jest dostępne następującymi drogami:
