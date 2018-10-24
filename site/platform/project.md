@@ -88,25 +88,29 @@ Następujące operacje przeznaczone do zarządzania kluczami SSH są dostępne:
  * dodanie klucza SSH
  * usunięcie klucza SSH
 
-#### Zarządzanie service account
+#### Zarządzanie *kontem usługi*
 
-Każdy *Projekt* może mieć zdefiniowane wiele service account. Są to dane dostępowe umożliwiające wykonywanie działań w *Projekcie*. Przeznaczone są one do zarządzania zasobami platformy przez skrypty, urządzenia lub inne procesy automatyzujące. Możliwe są do wykorzystania np. poprzez ```CLI``` lub podczas bezpośredniego dostępu do API. Posiadają określone prawa dostępu do wybranych elementów platformy.
+*Konto usługi* to dane dostępowe umożliwiające wykonywanie modyfikacje *Zasobów* *Projektu* w imieniu *Użytkownika* przez aplikacje tj. skrypty, urządzenia lub inne procesy automatyzujące. W szczególności można je wykorzystać poprzez ```CLI``` lub podczas bezpośredniego dostępu do API. Posiada określony identyfikator oraz prawa dostępu do wybranych elementów platformy.
+
+Każdy *Projekt* może mieć zdefiniowane wiele *Kont usług*. Każde *Konto usługi* jest powiązane tylko z jednym *Projektem*.
 
 Dostępne są następujące operacje:
 
- * dodanie service account
- * usunięcie service account
+ * dodanie *Konta usługi* do *Projektu*
+ * usunięcie *Konta usługi* z *Projektu*
 
-Dla każdego service account są dostępne następujące operacje:
+Dla każdego *Konta usługi* są dostępne następujące operacje:
 
  * dodanie prawa dostępu
  * usunięcie prawa dostępu
 
+ Identyfikator *Konta usługi* jest wartością, którą należy przesłać do platformy, aby wykorzystać *Konto usługi* i służy do uwierzytelnienia żądania. Zatem należy chronić go przed ujawnieniem.
+
  Prawa dostępu określają do jakiej ścieżki i z wykorzystaniem jakiej metody HTTP (```GET```, ```POST```, ```PUT``` itp. lub ```ALL``` dla wszystkich metod) dostęp do API platformy jest dopuszczalny. Ścieżka określona jest przez wyrażenie regularne, które musi zostać od dopasowane początku ścieżki.
 
- Identyfikator service account jest wartością, którą należy przesłać do platformy, gdy chcesz wykorzystać service account. Zatem należy chronić go przed ujawnieniem.
+ Zarządzanie konfiguracją *Projektu* (ścieżki API rozpoczynające się od ```/project```) sa niedostępne dla *Konta usługi* , aby zapobiec niepożądanej eskalacji uprawnień, uzyskaniu informacji o innych *Kontach usług*, w tym ich identyfikatorach.
 
- Dowolna aktywność wykonana przez Service Account jest oznaczona na platformie jako wykonana przez *Użytkownika*, który utworzył dany service account.
+ Dowolna aktywność wykonana przez *Konto usługi* jest oznaczona na platformie jako wykonana przez *Użytkownika*, który utworzył dane *Konto usługi*.
 
 #### Zasilenie środków
 
