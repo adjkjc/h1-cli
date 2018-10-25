@@ -1,3 +1,6 @@
+# Usuwanie danych
+
+https://cloud.google.com/security/deletion/?utm_source=newsletter&utm_medium=email&utm_campaign=2018-october-gcp-newsletter-en
 # Bezpieczeństwo dostępu
 
 ## Dwuskładnikowe logowanie
