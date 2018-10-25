@@ -88,7 +88,7 @@ Następujące operacje przeznaczone do zarządzania kluczami SSH są dostępne:
  * dodanie klucza SSH
  * usunięcie klucza SSH
 
-#### Zarządzanie *kontem usługi*
+#### Zarządzanie *Kontem usługi*
 
 *Konto usługi* to dane dostępowe umożliwiające wykonywanie modyfikacje *Zasobów* *Projektu* w imieniu *Użytkownika* przez aplikacje tj. skrypty, urządzenia lub inne procesy automatyzujące. W szczególności można je wykorzystać poprzez ```CLI``` lub podczas bezpośredniego dostępu do API. Posiada określony identyfikator oraz prawa dostępu do wybranych elementów platformy.
 
