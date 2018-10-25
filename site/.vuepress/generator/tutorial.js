@@ -123,7 +123,7 @@ const tasks = {
         return content;
     },
     yum: (data, prev, next, ctx) => {
-        let content='';
+        let content = '';
         const state = data.state || 'present';
         if (state === 'present' || state === 'installed') {
             content += `Zainstaluj wymagane pakiety wykonując następujące polecenie:`;
@@ -340,6 +340,19 @@ const tasks = {
     free_text: (free_text, prev, next) => `${free_text.text}\n`,
 };
 
+
+tasks.guide_firewall_rule = (data, prev, next) => {
+    let content = `Dodaj regułę zapory sieciowej o następujących parametrach:\n`;
+    content += `* kierunek: \`\`\`${data.type === 'ingress' ? 'przychodzący (ingress)' : 'wychodzący (egress)'}\`\`\`\n`
+    content += `* priorytet: \`\`\`${data.priority}\`\`\`\n`;
+    content += `* filter: \`\`\`${data.filter}\`\`\`\n`;
+    content += `* strefa zewnętrzna:\`\`\` ${data.external}\`\`\`\n`;
+    content += `* strefa wewnętrzna: \`\`\`${data.internal}\`\`\`\n`;
+    content += `* nazwa: \`\`\`${data.name}\`\`\`\n\n`;
+
+    return content + tasks.guide(data);
+};
+
 const get_content_for_task_list = (task_list, depth = 2, ctx) => {
     let new_content = '';
     for (const i in task_list) {
@@ -374,7 +387,7 @@ const get_content_for_task_list = (task_list, depth = 2, ctx) => {
                         }
                     });
                 }
-                new_content+= "\n";
+                new_content += "\n";
             } catch (e) {
                 console.log(e);
                 new_content += utils.dump(task);
