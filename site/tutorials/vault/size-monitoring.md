@@ -20,9 +20,9 @@ Przed przystąpieniem do integracji powinieneś mieć:
 * zainstalowane serwer [Zabbix](https://www.zabbix.com/)
 * zainstalowany agent Zabbix na serwerze Linux
 * skonfigurowany agent Zabbix do współpracy z serwerem Zabbix
-* zainstalowany curl na serwerze Linux
-* zainstalowany [jq](https://stedolan.github.io/jq/) na serwerze Linux
-* utworzone *Konto Usługi* [zgodnie z instrukcją](/guide/platform/project/add-service-account.md) umożliwiające dostęp do `/vault/`
+* zainstalowany curl na serwerze z agentem
+* zainstalowany [jq](https://stedolan.github.io/jq/) z agentem
+* utworzone *Konto usługi* [zgodnie z instrukcją](/guide/platform/project/add-service-account.md) umożliwiające dostęp do `/vault/`
 
 ```yaml
 # render=tutorial
