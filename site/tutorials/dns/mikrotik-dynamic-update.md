@@ -1,6 +1,6 @@
 # Automatycznie odświeżenie rekordów DNS na RouterOS
 
-Przedstawimy w jaki sposób zautomatyzować konfiguracje [DNS](/resosurce/dns/) w celu trwałego wskazywania na aktualny adres IP RouterOS (Mikrotik, Cloud Hosted Router), nawet w przypadku jego zmiany.
+Przedstawimy w jaki sposób zautomatyzować konfiguracje [DNS](/resource/networking/dns.md) w celu trwałego wskazywania na aktualny adres IP RouterOS (Mikrotik, Cloud Hosted Router), nawet w przypadku jego zmiany.
 
 Pozwoli to innym urządzeniom sieciowym na zlokalizowanie urządzenia, nawet w przypadku zmiany jego adresowej sieciowej. Technika ta bywa określana jako "Dynamic DNS".
 
@@ -8,7 +8,7 @@ Wykorzystamy *Konto Usługi*, które pozwoli na bezpieczne wprowadzenie zmian w 
 
 ## Warunki wstępne
 
-Przed przystąpieniem do integracji powinieneś mieć:
+Przed przystąpieniem do operacji powinieneś mieć:
 
 * utworzony *DNS*, [zgodnie z instrukcją](/guide/networking/dns/creating.md)
 * utworzony rekord DNS typu A z dowolną wartością, [zgodnie z instrukcją](/guide/networking/dns/record-set-creating.md),
@@ -51,7 +51,7 @@ Utwórz *Konto Usługi*, [zgodnie z instrukcją](/guide/platform/project/add-ser
     ```
     * Zastąp w polu "Source" następujące elementy:
     
-    * ```{domain}``` - nazwa strefy *[DNS](/resource/dns/)*
+    * ```{domain}``` - nazwa strefy *[DNS](/resource/networking/dns.md)*
     * ```{subdomain}```  - nazwa rekordu DNS
     * ```{identyfikator_service_account}``` - identyfikator *Konta Usługi*
 
