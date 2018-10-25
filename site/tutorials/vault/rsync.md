@@ -27,3 +27,6 @@ Przed przystąpieniem do integracji powinieneś mieć:
         special_time: daily
 ```
 
+## Zobacz także
+
+Zapoznaj się także z samouczkiem w jaki sposób [automatycznie wykonywać migawki Vault](/tutorials/vault/rsync.md) w celu przechowywać wiele wersji stanów synchronizacji i umożliwić do nich powrót.

@@ -76,7 +76,7 @@ const tasks = {
         let content = `Utwórz nowy plik konfiguracyjny:`;
         content += shell_explain(`sudo nano ${data.dest}`, 'bash');
         content += `Wklej poniższą zawartość:\n`;
-        content += utils.dump(data.content);
+        content += utils.dump(data.content, data.syntax);
         return content;
     },
     service: (data, prev, next) => {
