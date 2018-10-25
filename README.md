@@ -25,9 +25,13 @@ Online dictionaries:
 
 ## Media standard
 
-* Images
+* Images resolution
   - 1200x628 - for Facebook and Twitter
   - 600x300 - for blog post
+
+* Image format
+  - png
+  - jpg
 
 ## Code style
 
