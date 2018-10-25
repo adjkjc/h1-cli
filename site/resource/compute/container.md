@@ -97,9 +97,9 @@ Ruch wychodzący do *Sieci* Internet nie jest ograniczony.
 
 Żądanie musi wykorzystywać adres domenowy następującego rodzaju i postaci:
 
-* adres oparty o identyfikator - ```{{id kontenera}}-container-{region}}.pl-waw-1.hyperone.cloud```
-* adres oparty o nazwę - ```{{nazwa kontenera}}-container-{region}}.pl-waw-1.hyperone.cloud```
-* adres oparty o *Tag* - ```{{nazwa kontenera}}-container-{region}}.pl-waw-1.hyperone.cloud```
+* adres oparty o identyfikator - ```{id kontenera}-container-{region}.pl-waw-1.hyperone.cloud```
+* adres oparty o nazwę - ```{nazwa kontenera}-container-{region}.pl-waw-1.hyperone.cloud```
+* adres oparty o *Tag* - ```{nazwa kontenera}-container-{region}.pl-waw-1.hyperone.cloud```
 * adres specyficzny - wskazany poprzez ```--expose-host``` podczas utworzenia.
 
 Adres domenowy powinien być zawarty bezpośrednio w żądaniu lub zostać wskazany w rekordzie DNS CNAME adresu wykorzystanego w żądaniu.
