@@ -15,7 +15,6 @@ Przykładowe zastosowania:
  * ochrona usług nieprzeznaczona do publicznego udostępniania
  * ograniczenie wykorzystania publicznych *Adresów IP*
 
-
 ## Cykl życia
 
 ### Utworzenie
@@ -37,6 +36,8 @@ Dla *Sieci* charakterystyczne są następujące operacje:
 
  * ustawienie serwerów DNS w protokole DHCP i [metadanych](/resource/compute/virtual-machine.md#metadane)
  * ustawienie bramy domyślnej w protokole DHCP i [metadanych](/resource/compute/virtual-machine.md#metadane)
+
+Adresy IP ```x.x.x.1-10``` zarezerwowane są dla zapewnienia funkcjonowania platformy.
 
 ### Ustawienie serwera DNS
 

@@ -252,9 +252,8 @@ const tasks = {
             content += `Zweryfikuj poprawność systemu plików na partycji wykonując następujące polecenie:`;
             content += shell_explain(`fsck ${dev}`);
             content += `W celu zmiany rozmiaru partycji wykonaj następujące polecenie:`;
-            content += shell_explain(`growpart ${dev}`);
+            content += shell_explain(`parted ${dev} resizepart 1 100%`);
             content += "W interaktywnym polu wprowadź oczekiwany nowy rozmiar.";
-
         } else {
             throw new Error("Not implemented yet");
         }
