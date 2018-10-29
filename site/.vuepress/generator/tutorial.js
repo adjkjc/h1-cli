@@ -267,10 +267,10 @@ const tasks = {
         if (data.fstype !== 'ext4' && !data.resizefs) throw new Error("Not implemented yet");
         let content = '';
         if (data.resizefs) {
-            let content = `Rozszerz istniejący system plików do pełnego rozmiaru partycji wykonując następujące polecenie:`;
+            content += `Rozszerz istniejący system plików do pełnego rozmiaru partycji wykonując następujące polecenie:`;
             content += shell_explain(`resize2fs ${data.dev}`);
         } else {
-            let content = `Utwórz system plików ext4 na właściwym dysku / partycji wykonując następujące polecenie:`;
+            content += `Utwórz system plików ext4 na właściwym dysku / partycji wykonując następujące polecenie:`;
             content += shell_explain(`mkfs.ext4 ${data.dev}`);
         }
         return content;
@@ -343,12 +343,12 @@ const tasks = {
 
 tasks.guide_firewall_rule = (data, prev, next) => {
     let content = `Dodaj regułę zapory sieciowej o następujących parametrach:\n`;
-    content += `* kierunek: \`\`\`${data.type === 'ingress' ? 'przychodzący (ingress)' : 'wychodzący (egress)'}\`\`\`\n`
-    content += `* priorytet: \`\`\`${data.priority}\`\`\`\n`;
-    content += `* filter: \`\`\`${data.filter}\`\`\`\n`;
-    content += `* strefa zewnętrzna:\`\`\` ${data.external}\`\`\`\n`;
-    content += `* strefa wewnętrzna: \`\`\`${data.internal}\`\`\`\n`;
-    content += `* nazwa: \`\`\`${data.name}\`\`\`\n\n`;
+    content += `* kierunek: ${utils.quote}${data.type === 'ingress' ? 'przychodzący (ingress)' : 'wychodzący (egress)'}${utils.quote}\n`
+    content += `* priorytet: ${utils.quote}${data.priority}${utils.quote}\n`;
+    content += `* filter: ${utils.quote}${data.filter}${utils.quote}\n`;
+    content += `* strefa zewnętrzna:${utils.quote} ${data.external}${utils.quote}\n`;
+    content += `* strefa wewnętrzna: ${utils.quote}${data.internal}${utils.quote}\n`;
+    content += `* nazwa: ${utils.quote}${data.name}${utils.quote}\n\n`;
 
     return content + tasks.guide(data);
 };
