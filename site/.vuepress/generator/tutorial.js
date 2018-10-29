@@ -246,9 +246,15 @@ const tasks = {
         const dev = data.dev || '/dev/sdb';
         const position = data.position || '1';
         if (data.action === 'resizepart') {
+            content += `Zweryfikuj czy system plików jest odmontowany:`;
+            content += shell_explain(`findmnt ${dev}`);
+            content += `Zalecane jest zweryfikowanie poprawności systemu plikow przed dokonaniem operacji tj. rozszerzenie. W tym celu odmontuj go.\n`;
+            content += `Zweryfikuj poprawność systemu plików na partycji wykonując następujące polecenie:`;
+            content += shell_explain(`fsck ${dev}`);
             content += `W celu zmiany rozmiaru partycji wykonaj następujące polecenie:`;
-            content += shell_explain(`parted ${dev} resizepart ${position}`);
+            content += shell_explain(`growpart ${dev}`);
             content += "W interaktywnym polu wprowadź oczekiwany nowy rozmiar.";
+
         } else {
             throw new Error("Not implemented yet");
         }
@@ -269,6 +275,12 @@ const tasks = {
         if (data.resizefs) {
             content += `Rozszerz istniejący system plików do pełnego rozmiaru partycji wykonując następujące polecenie:`;
             content += shell_explain(`resize2fs ${data.dev}`);
+            content += `Zweryfikuj poprawność systemu plików na partycji wykonując następujące polecenie:`;
+            content += shell_explain(`fsck ${data.dev}`);
+            if (data.mounted) {
+                content += `Zamontuj ponownie odmontowane systemy plików:`;
+                content += shell_explain(`mount -a`);
+            }
         } else {
             content += `Utwórz system plików ext4 na właściwym dysku / partycji wykonując następujące polecenie:`;
             content += shell_explain(`mkfs.ext4 ${data.dev}`);

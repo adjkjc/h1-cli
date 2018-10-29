@@ -74,5 +74,5 @@ Niniejsza instrukcja przedstawia rozszerzeni dysku, a następnie partycji dla:
 
     - name: Rozszerz partycje do oczekiwanego rozmiaru
       powershell:
-        cmd: Get-Disk -Number 1 | Get-Partition -PartitionNumber 1 | Resize-Partition -Size (100 GB)
+        cmd: Get-Disk -Number 1 | Get-Partition -PartitionNumber 1 | Resize-Partition -Size $(Get-PartitionSupportedSize -DiskNumber 1 -PartitionNumber 1).SizeMax
 ```
