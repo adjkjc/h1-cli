@@ -11,7 +11,7 @@ Platforma udostępnia dla *Vault* informacje pod następującymi adresami:
  * wykaz *Vault* dla *Projektu* -```https://api.hyperone.com/v1/vault/```.
  * podstawowe informacje o *Vault* -```https://api.hyperone.com/v1/vault/{vault_id_lub_nazwa}```
 
-Dostep wymaga uwierzytelnienia, co jest możliwe m. in. poprzez przekazanie identyfikatora *Konta Usługi* w zapytaniu np. ```?auttoken=dd289825cb4fc2b1100006d30fdece3e```.
+Dostep wymaga uwierzytelnienia, co jest możliwe m. in. poprzez przekazanie identyfikatora *Konta Usługi* w zapytaniu np. ```?authtoken=dd289825cb4fc2b1100006d30fdece3e```.
 
 ## Warunki wstępne
 
