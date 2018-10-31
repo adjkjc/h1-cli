@@ -24,7 +24,7 @@ Teraz poznasz pierwszy z wymienionych sposobów.
     - name: Utwórz *Bramę sieciową*
       guide:
         path: /guide/networking/network-gateway/creating.md
-    - name: Utwórz *Bramę sieciową*
+    - name: Przyłącz *Bramę sieciową* do *Sieci*
       guide:
         path: /guide/networking/network-gateway/assign-to-network.md
       after_event: Natychmiast po przyłączeniu *Bramy sieciowej* łączność do internetu winna być możliwa.
