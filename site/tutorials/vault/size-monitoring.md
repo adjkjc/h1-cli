@@ -32,7 +32,7 @@ Przed przystąpieniem do integracji powinieneś mieć:
       template:
         content: | 
             UserParameter=hyperone.vault.list[*],curl "https://api.hyperone.com/v1/vault?authtoken={token}" -s | jq '[.[] | {"{#VAULTID}":._id,"{#VAULTNAME}":.name,"{#VAULTSIZETOTAL}":.size,"{#VAULTSIZEUSED}":.sizeUsed}] | {data: .}'
-            UserParameter=hyperone.vault.show[*],curl "https://api.hyperone.com/v1/vault/$1?authtoken={token}" -s | jq '{"{#VAULTID}":._id,"{#VAULTNAME}":.name,"{#VAULTSIZETOTAL}":.size,"{#VAULTSIZEUSED}":.sizeUsed}'
+            UserParameter=hyperone.vault.show[*],curl "https://api.hyperone.com/v1/vault/$1?authtoken={token}" -s
         dest: /etc/zabbix/zabbix_agentd.d/userparameter_vault.conf
         variables:
           token: identyfikator *Konta Usługi*

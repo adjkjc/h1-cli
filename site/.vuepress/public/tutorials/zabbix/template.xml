@@ -180,7 +180,7 @@
                             <preprocessing>
                                 <step>
                                     <type>12</type>
-                                    <params>$[&quot;{#VAULTSIZETOTAL}&quot;]</params>
+                                    <params>$.size</params>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -229,7 +229,7 @@
                             <preprocessing>
                                 <step>
                                     <type>12</type>
-                                    <params>$[&quot;{#VAULTSIZEUSED}&quot;]</params>
+                                    <params>$.sizeUsed</params>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
