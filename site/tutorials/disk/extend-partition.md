@@ -1,18 +1,18 @@
-# Rozszerzenie używanej przestrzeni dysku
+# Rozszerzenie używanej przestrzeni *Dysku*
 
-Przedstawimy w jaki sposób rozszerzyć używaną przestrzeń [Dysku](/resource/storage/disk.md) wykorzystywanego w [Wirtualnej maszynie](/resource/compute/virtual-machine.md).
+Przedstawimy w jaki sposób rozszerzyć używaną przestrzeń *[Dysku](/resource/storage/disk.md)* wykorzystywanego w [Wirtualnej maszynie](/resource/compute/virtual-machine.md).
 
 Ze względu na sposób działania systemów operacyjnych operacja [zwiększenia rozmiaru *Dysku*](/guide/storage/disk/resize.md) nie sprawia, że staje się ona wykorzystywana przez aplikacje użytkownika.
 
 Dane gromadzone na dysku są gromadzone w grupach tzw. partycjach. Każda partycja ma ściśle określony rozmiar i pozycje na dysku.
 
-Obszar dysku podzielony jest na części - partycja. Każda partycja ma ściśle określony rozmiar i pozycje na dysku. Na partycji istnieje określony system plików, który także posiada określony rozmiar. Dopiero system plików umożliwia na swobodne zapisywanie i odczytywanie plików.
+Obszar dysku podzielony jest na części - partycje. Każda partycja ma ściśle określony rozmiar i pozycje na dysku. Na partycji istnieje określony system plików, który także posiada określony rozmiar. Dopiero system plików umożliwia na swobodne zapisywanie i odczytywanie plików.
 
 Zwiększenie rozmiaru *Dysku* tworzy nową przestrzeń, która w celu wykorzystania powinna być przypisana do partycji np. poprzez rozszerzenie istniejącej lub utworzenie nowej. Następnie rozszerzyć należy system plików.
 
-Cloud-init dostępny w [rekomendowanych obrazach](/platform/recommended-images.md) dla systemów z rodziny Linux wraz z uruchomieniem systemu wykonuje te operacje dla dysku systemowego.
+Dostępny w [rekomendowanych obrazach](/platform/recommended-images.md) cloud-init dla systemów z rodziny Linux wraz z uruchomieniem systemu wykonuje te operacje dla *Dysku* systemowego.
 
-Niniejsza instrukcja przedstawia rozszerzeni dysku, a następnie partycji dla:
+Niniejsza instrukcja przedstawia rozszerzeni *Dysku*, a następnie partycji dla:
 
 * systemów z rodziny Windows:
     * Microsoft Windows Server 2016 Standard Desktop Experience
@@ -31,7 +31,7 @@ Niniejsza instrukcja przedstawia rozszerzeni dysku, a następnie partycji dla:
     - name: Utwórz nowy pusty *Dysk*
       guide:
         path: /guide/storage/disk/creating.md
-    - name: Dołączenie dysku na dane
+    - name: Dołączenie *Dysku* na dane
       guide:
         path: /guide/compute/virtual-machine/disk-attach.md
 - name: Dostęp do serwera
@@ -39,16 +39,16 @@ Niniejsza instrukcja przedstawia rozszerzeni dysku, a następnie partycji dla:
     - name: Uzyskaj dostęp do konsoli *Wirtualnej maszyny*
       guide:
         path: /guide/compute/virtual-machine/console.md
-- name: Rozszerzenie dysku i systemu plików dla systemów z rodziny Linux
+- name: Rozszerzenie *Dysk* dodatkowego i systemu plików dla systemów z rodziny Linux
   block:
-    - name: Zidentyfikuj ścieżkę do dysku
+    - name: Zidentyfikuj ścieżkę do *Dysku*
       identify_disk:
         value: path
     - name: Zidentyfikuj partycje, którą zamierzasz rozszerzyć
       identify_partition:
         dev: /dev/sdb
         value: position
-    - name: Rozszerz dysk
+    - name: Rozszerz *Dysk* dodatkowy
       guide:
         path: /guide/storage/disk/resize.md
     - name: Rozszerz partycje
@@ -64,15 +64,32 @@ Niniejsza instrukcja przedstawia rozszerzeni dysku, a następnie partycji dla:
         resizefs: true
 - name: Rozszerzenie dysku i systemu plików dla systemów z rodziny Windows
   block:
-    - name: Zidentyfikuj dysk
+    - name: Zidentyfikuj *Dysk*
       powershell:
         cmd: Get-Disk
-
     - name: Zidentyfikuj partycje
       powershell:
         cmd: Get-Disk -Number 1 | Get-Partition
-
-    - name: Rozszerz partycje do oczekiwanego rozmiaru
-      powershell:
-        cmd: Get-Disk -Number 1 | Get-Partition -PartitionNumber 1 | Resize-Partition -Size $(Get-PartitionSupportedSize -DiskNumber 1 -PartitionNumber 1).SizeMax
+    - name: Dla *Dysku* systemowego
+      block:
+        - name: Wyłącz *Wirtualną Maszynę*
+          guide:
+            path: /guide/compute/virtual-machine/stop.md
+        - name: Rozszerz *Dysk* podstawowy
+          guide:
+            path: /guide/storage/disk/resize.md
+        - name: Uruchom *Wirtualną Maszynę*
+          guide:
+            path: /guide/compute/virtual-machine/start.md
+        - name: Rozszerz partycje do oczekiwanego rozmiaru
+          powershell:
+            cmd: Get-Disk -Number 1 | Get-Partition -PartitionNumber 1 | Resize-Partition -Size $(Get-PartitionSupportedSize -DiskNumber 1 -PartitionNumber 1).SizeMax
+    - name: Dla *Dysku* dodatkowego
+      block:
+        - name: Rozszerz *Dysk* dodatkowy
+          guide:
+            path: /guide/storage/disk/resize.md
+        - name: Rozszerz partycje do oczekiwanego rozmiaru
+          powershell:
+            cmd: Get-Disk -Number 1 | Get-Partition -PartitionNumber 1 | Resize-Partition -Size $(Get-PartitionSupportedSize -DiskNumber 1 -PartitionNumber 1).SizeMax
 ```

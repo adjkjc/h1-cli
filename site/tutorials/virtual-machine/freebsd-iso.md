@@ -27,16 +27,16 @@ W przypadku wykorzystania *[Sieci](/resource/networking/network.md)* dostępny j
       guide:
         path: /guide/compute/virtual-machine/creating.md
     - name: Wsuń *ISO* do *Wirtualnej Maszyny*
-      guide: 
+      guide:
         path: /guide/compute/virtual-machine/dvd-inject.md
     - name: Zresetartuj *Wirtualną Maszynę*
       guide:
         path: /guide/compute/virtual-machine/restart.md
     - name: Przeprowadź instalacje
-      free_text: 
+      free_text:
         text: W celu bezpiecznej instalacji skorzystaj z [dokumentacji FreeBSD](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/bsdinstall-start.html). Wszelkie etapy przeprowadź wedle uznania i dokumentacji. Skonfiguruj sieć IPv4 w oparciu o DHCP.
     - name: Wysuń ISO z *Wirtualnej Maszyny*
-      guide: 
+      guide:
         path: /guide/compute/virtual-machine/dvd-eject.md
     - name: Zresetartuj *Wirtualną Maszynę*
       guide:

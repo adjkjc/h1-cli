@@ -27,10 +27,12 @@ W tych obrazach skonfigurowane jest m.in.:
 
 * zainstalowane wszystkie aktualizacje
 * skonfigurowany bootloader
-* zainstalowany dostosowany ```cloud-init```, co umożliwia wykorzystanie [Metadanych](/resource/compute/virtual-machine.md#Metadane) w celu:
-    * utworzenie pierwszego użytkownika
-    * zapisania hasła lub kluczy SSH pierwszego użytkownika
-    * konfiguracja łączności sieciowej
+* zainstalowany dostosowany ```cloud-init```, który wykorzystując [Metadane](/resource/compute/virtual-machine.md#Metadane):
+    * utworzy pierwszego użytkownika
+    * zapiszę hasła lub kluczy SSH pierwszego użytkownika
+    * konfiguruje łączność sieciową
+    * ustawia nazwę hosta na nazwę instancji
+    * rozszerza ostatnią partycji dysku systemowego wraz z każdym restartem systemu
 
 Zdalny dostęp możliwy jest z wykorzystaniem protokołu SSH (Secure Shell).
 
