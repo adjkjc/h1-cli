@@ -22,7 +22,7 @@ Dostępne są następujące dedykowane operacje:
 
 * zmiana hasła
 * przypomnienie hasła
-* zmiana profilu *Użytkownika*
+* zmiana profilu
 * zarządzanie kluczami SSH
     * dodanie klucza SSH
     * usunięcie klucza SSH
@@ -42,6 +42,14 @@ Hasło *Użytkownika* nigdy nie jest przechowywane w postaci jawnej.
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
  * bez szczególnych warunków
+
+#### Zmiana profilu
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * bez szczególnych warunków
+
+W celu zapewnienia prawidłowej komunikacji *Użytkownik* utrzymywać aktualność profilu oraz bez zbędnej zwłoki wprowadzać wymagane zmiany.
 
 ### Zarządzanie kluczami SSH
 
