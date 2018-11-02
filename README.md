@@ -32,6 +32,9 @@ Online dictionaries:
 * Image format
   - png
   - jpg
+  
+* Topis
+    * We avoid physical servers - we do not want to stutter with physical servers, because we are not worried about them (we do not feel them). Of course, there servers are servers, but not important.
 
 ## Code style
 
