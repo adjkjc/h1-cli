@@ -62,7 +62,7 @@ const partials = {
         return '';
     },
     powershell_finish: (data, prev, next) => {
-        if (!next || !task_name_for_task(next).startsWith("powershell")) {
+        if (!next || (task_name_for_task(next) && !task_name_for_task(next).startsWith("powershell"))) {
             return "Zamknij powłokę Powershell.\n";
         }
         return '';
