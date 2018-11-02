@@ -339,6 +339,15 @@ const tasks = {
         }
         return content;
     },
+    dig: (data, prev, next) => {
+        let content = '';
+        const type = data.type || 'A';
+        content += "W przypadku Windows na lokalnym komputerze uruchom Powershell i wykonaj następujące polecenie:";
+        content += utils.dump(`nslookup -querytype=${type} ${data.name}`, 'powershell');
+        content += "W przypadku Linux na lokalnym komputerze uruchom konsolę i wykonaj następujące polecenie:";
+        content += utils.dump(`dig ${type} ${data.name}`, 'bash');
+        return content;
+    },
     browser: (data, prev, next) => {
         let content = '';
         if (data.state === 'opened') {

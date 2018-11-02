@@ -10,7 +10,7 @@ Główne zalety:
  * dostępne liczne typy rekordów
  * nie wymaga od użytkownika instalacji i utrzymania oprogramowania
  * zarządzanie także poprzez API i CLI w celu automatyzacji zmian
- * możliwość importu i eksportu konfiguracji w formacie BIND
+ * możliwość importu i eksportu konfiguracji w formacie pliku strefy (BIND)
 
 Przykładowe zastosowania:
 
@@ -41,6 +41,7 @@ Zarządzanie *DNS-em* polega na modyfikowaniu zestawu rekordów (ang.*record-set
  * usuwanie zestawu rekordów
  * dodawanie rekordu w zestawie rekordów
  * usuwanie rekordu w zestawie rekordów
+ * import lub eksport z pliku w formacie pliku strefy (BIND)
 
 Zarządzanie *DNS-em* odbywa się po spełnieniu następujących warunków:
 
