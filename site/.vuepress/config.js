@@ -75,29 +75,41 @@ const getSidebar = () => {
             children: show_directory(`tutorials/ip-address`)
         },
         {
-            title: 'Vault',
-            children: show_directory(`tutorials/vault`)
+            title: 'DNS',
+            children: show_directory(`tutorials/dns`)
         },
         {
-            title: 'Sieć',
-            children: show_directory(`tutorials/network`)
-        },
-        {
-            title: 'Adaptery sieciowe',
-            children: show_directory(`tutorials/netadp`)
+            title: 'Zapora sieciowa',
+            children: show_directory(`tutorials/virtual-machine`)
         },
         {
             title: 'Adres IP',
             children: show_directory(`tutorials/ip-address`)
         },
         {
+            title: 'Adapter sieciowy',
+            children: show_directory(`tutorials/netadp`)
+        },
+        {
+            title: 'Brama sieciowa',
+            children: show_directory(`tutorials/netgw`)
+        },
+        {
+            title: 'Sieć',
+            children: show_directory(`tutorials/network`)
+        },
+        {
             title: 'Dziennik',
             children: show_directory(`tutorials/log-archive`)
         },
         {
+            title: 'Vault',
+            children: show_directory(`tutorials/vault`)
+        },
+        {
             title: 'Wirtualna maszyna',
             children: show_directory(`tutorials/virtual-machine`)
-        },
+        }
     ].sort((a, b) => a.title > b.title);
 
     sidebar['/'] = [

@@ -94,7 +94,7 @@ const tasks = {
         content += shell_explain(data.cmd);
         return content;
     },
-    guide: (data, prev, next) => `W celu wykonania operacji postępuj [zgodnie z przewodnikiem](${data.path}).\n`,
+    guide: (data, prev, next) => `W celu wykonania operacji postępuj [zgodnie z przewodnikiem](${data.path}).\n\n`,
     cron: (data, prev, next) => {
         let content = `Wykonaj następujące polecenie:`;
         content += shell_explain('crontab -e');

@@ -16,25 +16,23 @@ Dzięki temu będziesz mógł korzystać z gamy możliwości jakie oferujemy w t
     - name: Utwórz *DNS*
       guide:
         path: /guide/networking/dns/creating.md
-    - name: Utwórz rekordy w *DNS*
+    - name: Jeżeli możesz mieć dostęp do informacje o rekordach w formacie pliku strefy (BIND)
       block:
-        - name: Jeżeli możesz mieć dostęp do informacje o rekordach w formacie pliku strefy (BIND)
-          block:
-            - name: Pobierz informacje z konfiguracji od dotychczasowego dostawcy
-              free_text:
-                text: Informacje w takim formacie może gromadzić np. lokalna instancja [PowerDNS](https://doc.powerdns.com/authoritative/backends/bind.html) lub [BIND](https://www.isc.org/downloads/bind/).
-            - name: Zaimportuj informacje do *DNS*
-              guide:
-                path: /guide/networking/dns/import.md
-        - name: Jeżeli dotychczasowy dostawca nie udostępnia informacji o rekordach w formacie pliku strefy (BIND)
-          block:
-            - name: Utwórz odpowiednie rekordy DNS manualnie
-              guide:
-                path: /guide/networking/dns/record-set-creating.md        
+        - name: Pobierz informacje z konfiguracji od dotychczasowego dostawcy
+          free_text:
+            text: Informacje w takim formacie może gromadzić np. lokalna instancja [PowerDNS](https://doc.powerdns.com/authoritative/backends/bind.html) lub [BIND](https://www.isc.org/downloads/bind/).
+        - name: Zaimportuj informacje do *DNS*
+          guide:
+            path: /guide/networking/dns/import.md
+    - name: Jeżeli dotychczasowy dostawca nie udostępnia informacji o rekordach w formacie pliku strefy (BIND)
+      block:
+        - name: Utwórz odpowiednie rekordy DNS manualnie
+          guide:
+            path: /guide/networking/dns/record-set-creating.md
     - name: Zaktualizuj rekordy serwera nazw u rejestratora
-      free_text: 
+      free_text:
         text: >
-          Zaloguj się do panelu usług swojego dostawcy rejestratora domeny i zmień rekordy serwera nazw (delegacje), tak aby wskazywały serwery nazw, które są domyślnie wprowadzone do *DNS*. Skontaktuj się z swoim rejestratorem w przypadku pytań:
+          Zaloguj się do panelu usług swojego dostawcy rejestratora domeny i zmień rekordy serwera nazw (delegacje), tak aby wskazywały serwery nazw, które są domyślnie wprowadzone do *DNS*. Skontaktuj się z swoim rejestratorem w przypadku pytań. Możesz także wykorzystać materiały swojego dostawcy:
             * [Nazwa.pl](https://pomoc.nazwa.pl/baza-wiedzy/produkty-i-uslugi/domeny/zarzadzanie-domenami/jak-wykonac-zmiane-delegacji-domeny/)
             * [Hekko](https://pomoc.hekko.pl/6,34,glowne_serwery_dns)
             * [Domeny.tv](https://www.domeny.tv/pomoc/zmiana_delegacji_domeny.php)

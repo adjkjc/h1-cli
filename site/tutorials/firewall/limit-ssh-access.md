@@ -70,9 +70,11 @@ Jeżeli posiadasz istniejące środowisko, które dotąd nie wykorzystywało *Si
         action: allow
         priority: 300
         filter: tcp:22
-        external: 9.121.162.11\32
+        external: '{external_ip}'
         internal: '*'   
         name: Allow SSH from Primary Office
+        variables:
+          external_ip: adres IP, który wykorzystujesz do połączenia
     - name: Dodaj nową regułę, która zablokuje pozostały ruch
       guide_firewall_rule:
         cmd: rule_add
