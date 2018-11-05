@@ -1,4 +1,4 @@
-# Konfiguracja automatycznych Migawek z Vault oraz Obrazów z Wirtualnych 
+# Wykonywanie automatycznych Migawek z Vault oraz Obrazów z Wirtualnych Maszyn
 
 Przedstawimy w jaki sposób wykorzystać [CLI](/h1-cli) oraz *Konto usługi* w celu automatycznego wykonywania:
 

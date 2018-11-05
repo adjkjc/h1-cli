@@ -1,4 +1,4 @@
-# Automatycznie odświeżenie rekordów DNS na RouterOS
+# Automatycznie odświeżenie rekordów DNS wskazujących na RouterOS
 
 Przedstawimy w jaki sposób zautomatyzować konfiguracje [DNS](/resource/networking/dns.md) w celu trwałego wskazywania na aktualny adres IP RouterOS (Mikrotik, Cloud Hosted Router), nawet w przypadku jego zmiany.
 

@@ -1,4 +1,4 @@
-# Uruchomienie Wirtualnej Maszyny
+# Uruchomienie Wirtualnej Maszyny z Windows i dostępem do Internetu
 
 Przedstawimy w jaki sposób uruchomić [Wirtualnej maszynę](/resource/compute/virtual-machine.md) w [Sieci](/resource/networking/network.md) z zachowaniem możliwości nawiązywnia wychodzących połączeń do *[Sieci](/resource/networking/network.md)* internet.
 

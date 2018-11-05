@@ -1,4 +1,4 @@
-# Monitorowanie wykorzystanej przestrzeni w Zabbix
+# Monitorowanie wykorzystanej przestrzeni Vault w Zabbix
 
 Przedstawimy w jaki sposób monitorować wykorzystywaną przestrzeń w *[Vault](/resource/storage/vault.md)* z pomocą Zabbix.
 
