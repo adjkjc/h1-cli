@@ -234,7 +234,7 @@ const tasks = {
             content += "Zwróć szczególną uwagę na numer partycji (będzie ona wymagana w kolejnym etapie) i jego rozmiar.";
         } else if (data.value === 'path') {
             content += `W celu zidentyfikowania właściwej partycji przeanalizuj wynik następującego polecenia:`;
-            content += shell_explain(`lsblk ${dev}`);
+            content += shell_explain(`sfdisk -l ${dev}`);
             content += "Zwróć szczególną uwagę na ścieżkę partycji (będzie ona wymagana w kolejnym etapie) i rozmiar.";
         } else {
             throw new Error("Not implemented yet");
@@ -244,16 +244,15 @@ const tasks = {
     parted: (data, prev, next) => {
         let content = '';
         const dev = data.dev || '/dev/sdb';
-        const position = data.position || '1';
+        const pos = data.position || '1';
         if (data.action === 'resizepart') {
             content += `Zweryfikuj czy system plików jest odmontowany:`;
-            content += shell_explain(`findmnt ${dev}`);
+            content += shell_explain(`findmnt ${dev}${pos} || echo 'System plików odmontowany'`);
             content += `Zalecane jest zweryfikowanie poprawności systemu plikow przed dokonaniem operacji tj. rozszerzenie. W tym celu odmontuj go.\n`;
             content += `Zweryfikuj poprawność systemu plików na partycji wykonując następujące polecenie:`;
-            content += shell_explain(`fsck ${dev}`);
+            content += shell_explain(`fsck ${dev}${pos}`);
             content += `W celu zmiany rozmiaru partycji wykonaj następujące polecenie:`;
-            content += shell_explain(`parted ${dev} resizepart 1 100%`);
-            content += "W interaktywnym polu wprowadź oczekiwany nowy rozmiar.";
+            content += shell_explain(`parted ${dev} resizepart ${pos} 100%`);
         } else {
             throw new Error("Not implemented yet");
         }

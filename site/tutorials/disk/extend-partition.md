@@ -1,6 +1,6 @@
-# Rozszerzenie używanej przestrzeni *Dysku*
+# Rozszerzenie dostępnej przestrzeni *Dysku*
 
-Przedstawimy w jaki sposób rozszerzyć używaną przestrzeń *[Dysku](/resource/storage/disk.md)* wykorzystywanego w [Wirtualnej maszynie](/resource/compute/virtual-machine.md).
+Przedstawimy w jaki sposób rozszerzyć dostępną przestrzeń *[Dysku](/resource/storage/disk.md)* wykorzystywanego w [Wirtualnej maszynie](/resource/compute/virtual-machine.md).
 
 Ze względu na sposób działania systemów operacyjnych operacja [zwiększenia rozmiaru *Dysku*](/guide/storage/disk/resize.md) nie sprawia, że staje się ona wykorzystywana przez aplikacje użytkownika.
 
