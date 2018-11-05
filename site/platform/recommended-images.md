@@ -11,17 +11,7 @@ Rekomendowane obrazy są zapewniane dla systemów operacyjnych z następujących
 
 Dostępne są następujące rekomendowane obrazy dla systemów z rodziny Linux:
 
-* Debian GNU/Linux 8 (jessie)
-* Debian GNU/Linux 9 (stretch)
-* Ubuntu 16.04 (xenial xerus)
-* Ubuntu 16.04 Desktop (xenial xerus)
-* Ubuntu 17.04 (zesty zapus)
-* Ubuntu 17.10 (artful aardvark)
-* Ubuntu 18.04 (bionic beaver)
-* Ubuntu 18.04 Desktop (bionic beaver)
-* CentOS 6
-* CentOS 7
-* Fedora 27
+<ImageList name_re="^((?!Windows).)*$"/>
 
 W tych obrazach skonfigurowane jest m.in.:
 
@@ -40,10 +30,7 @@ Zdalny dostęp możliwy jest z wykorzystaniem protokołu SSH (Secure Shell).
 
 Dostępne są następujące rekomendowane obrazy dla systemów z rodziny Windows:
 
-* MS Windows Server 2016 Standard Desktop Experience
-* MS Windows Server 2016 Standard Core
-* MS Windows Server 2016 DataCenter Desktop Experience
-* MS Windows Server 2016 DataCenter Core
+<ImageList name_re="Windows"/>
 
 W tych obrazach skonfigurowane są następujące elementy:
 
@@ -52,7 +39,7 @@ W tych obrazach skonfigurowane są następujące elementy:
 * ustawiona strefa czasowa CET
 * wyłączona obsługę IPv6
 * zainstalowany menadżer pakietów [GooGet](https://github.com/google/googet) i skonfigurowany z repozytorium HyperOne
-* w celu dostarczenia dostosowanego [https://github.com/hyperonecom/compute-image-windows](agenta HyperOne) zainstalowane następujące pakiety GooGet:
+* w celu dostarczenia dostosowanego [agenta HyperOne](https://github.com/hyperonecom/compute-image-windows) zainstalowane następujące pakiety GooGet:
     * google-compute-engine-windows, który odpowiada za możliwość utworzenia konta użytkownika
     * google-compute-engine-sysprep, który odpowiada za następujące operacje:
         * aktywacja systemu w Microsoft Windows Key Management Service

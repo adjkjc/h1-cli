@@ -7,7 +7,7 @@
             <th>Uwagi</th>
         </tr>
         <tr v-for="image in images">
-            <td>{{image.title}}</td>
+            <td>{{image.name}}</td>
             <td>{{image.fileSize}}</td>
             <td>{{image.createdOn | relativeTime}}</td>
             <td><!-- TODO: License restriction --></td>
@@ -28,11 +28,16 @@
             images: []
         }),
         mounted: function () {
-            fetch("https://panel.hyperone.com/api/v1/image/recommended/", {mode: "no-cors"})
+            const validator = function(name_re) {
+                return function(image) {
+                    return image.name.match(name_re)
+                }
+            };
+            fetch("/api/v1/image/recommended")
                 .then((response) => response.json())
                 .catch(() => [])
                 .then(data => {
-                    this.$set(this, 'images', data);
+                    this.$set(this, 'images', data.filter(validator(this.name_re)));
                 });
         },
         filters: {

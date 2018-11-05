@@ -7,7 +7,7 @@ RUN npm ci
 
 # build modules
 WORKDIR /src
-COPY . /src
+COPY ./ /src
 RUN make
 
 # build site
@@ -16,4 +16,5 @@ ENV NODE_ENV production
 RUN NODE_OPTIONS="--max_old_space_size=1000 " npx vuepress build
 
 FROM nginx:alpine
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /src/site/.vuepress/dist /usr/share/nginx/html

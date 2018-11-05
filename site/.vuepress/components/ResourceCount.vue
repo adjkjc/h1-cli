@@ -21,8 +21,7 @@
         },
         methods: {
             updateCount: function () {
-                console.log("Update!");
-                fetch("https://api.hyperone.com/v1/stats/", {mode: "no-cors"})
+                fetch("/api/v1/stats/")
                     .then((response) => response.json())
                     .then((json) => {
                         console.log(json);
