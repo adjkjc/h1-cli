@@ -40,6 +40,7 @@ Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="replica create"]
 W celu wykonania operacji z wykorzystaniem Powershell wykonaj następujący skrypt:
 
 ```powershell
+[CmdletBinding(DefaultParameterSetName="VMName")]
 Param(
     [parameter(Mandatory=$true)]
     [ValidateNotNullOrEmpty()]
@@ -53,24 +54,36 @@ Param(
     [ValidateNotNullOrEmpty()]
     [string]$Project,
 
-    [parameter(Mandatory=$true)]
+    [parameter(Mandatory=$false, ParameterSetName="VM", ValueFromPipeline=$true)]
     [ValidateNotNullOrEmpty()]
     [string]$VM,
+
+    [parameter(Mandatory=$true, ParameterSetName="VMId")]
+    [ValidateNotNullOrEmpty()]
+    [string]$VMId,
+
+    [parameter(Mandatory=$true, ParameterSetName="VMName")]
+    [ValidateNotNullOrEmpty()]
+    [string]$VMName,
 
     [switch]$Autostart
 )
 
 $ErrorActionPreference = "Stop"
 
-$VMobj = Get-VM -Id $VM -ErrorAction SilentlyContinue
+$VMobj = $VM;
+if(!$VMobj -and $VMId) {
+    $VMobj = Get-VM -Id $VMId;
+};
 
-if($? -eq $false) {
-    $VMobj = Get-VM -Name $VM -ErrorAction SilentlyContinue
-    if($? -eq $false) {
-		Write-Error "Unable to identify VM"
-		return
-	}
-}
+if(!$VMobj -and $VMName) {
+    $VMobj = Get-VM -Name $VMName;
+};
+
+if (!$VMobj) {
+    Write-Error "VM not found";
+        return
+};
 
 $session = Invoke-RestMethod -Method POST `
     -Body @{ email = $Email; password = $Password } `
@@ -182,8 +195,7 @@ if ($ret.ReturnValue -eq 4096) {
     $JobData = jobWait($ret.job)
 
     if ($JobData.Status -ne "OK") {
-        # Write-Error $JobData
-    	Write-Error $JobData.ErrorDescription
+        Write-Error $JobData.ErrorDescription
         return
     }
 }
@@ -199,7 +211,7 @@ if ($Autostart -eq $true){
 Należy go wykonać w następujący sposób:
 
 ```
-.\enable-replication.ps1 -Email user@example.com -Password H4slo -Project MyProject -Vm d9060319-46f4-45a0-b9db-c6cb367a107e
+.\enable-replication.ps1 -Email user@example.com -Password H4slo -Project MyProject -VMId d9060319-46f4-45a0-b9db-c6cb367a107e
 ```
 
 Skrypt przyjmuje następujące parametry:
