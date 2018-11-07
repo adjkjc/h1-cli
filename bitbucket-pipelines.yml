@@ -12,3 +12,9 @@ pipelines:
             - npm install -g git+https://github.com/hyperonecom/h1-cli.git#containers
             - export REPO_NAME="quay.io/hyperone/rbx-static-docs"
             - bash <(curl -L -s https://gist.githubusercontent.com/ad-m/c2a010a2a39bb70a4bba02604b12ac0b/raw/deploy.sh ) rbx-static-docs-${BITBUCKET_BRANCH} ${BITBUCKET_BRANCH} replace
+
+definitions:
+  services:
+    docker:
+      memory: 2048
+
