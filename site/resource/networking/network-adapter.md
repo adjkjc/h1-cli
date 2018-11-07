@@ -34,6 +34,8 @@ Dla *Adapteru sieciowego" charakterystyczne są następujące operacje:
  * zastąpienie *Adresu IP*
  * odłączenie *Adresu IP*
 
+Zmiany *Adresu IP* mogą wymagać odpowiedniej konfiguracji systemu operacyjnego lub - w przypadku [Rekomendowanych obrazów](/platform/recommended-images.md) - ponownego uruchomienia *Wirtualnej Maszyny*.
+
 #### Dodanie adresu IP
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
