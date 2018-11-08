@@ -23,10 +23,12 @@ Dostępne są następujące dedykowane operacje:
 * zmiana hasła
 * przypomnienie hasła
 * zmiana profilu
-* zarządzanie kluczami SSH
-    * dodanie klucza SSH
-    * usunięcie klucza SSH
-* zarządzanie dwuskłanikowym uwierzytelnianiem
+* zarządzanie danymi dostępowymi
+ * dodanie danych dostępowych
+ * usunięcie danych dostępowych
+* zarządzanie dwuskładnikowym uwierzytelnianiem
+ * włączenie dwuskładnikowego uwierzytelniania
+ * wyłączenie dwuskładnikowego uwierzytelniania
 * historia zdarzeń
 
 ### Zmiana hasła
@@ -35,7 +37,7 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 
  * bez szczególnych warunków
 
-Hasło *Użytkownika* nigdy nie jest przechowywane w postaci jawnej.
+Operacja polega na usunięciu wszystkich danych dostępowych typu hasło i dodaniu nowego.
 
 ### Przypomnienie hasła
 
@@ -51,29 +53,43 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 
 W celu zapewnienia prawidłowej komunikacji *Użytkownik* utrzymywać aktualność profilu oraz bez zbędnej zwłoki wprowadzać wymagane zmiany.
 
-### Zarządzanie kluczami SSH
+### Zarządzanie danymi dostępowymi
 
-Każdy *Użytkownik* może mieć zapisanych wiele kluczy SSH w celu ich sprawnego wykorzystania jako dane dostępowe do określonych zasobów.
+Dostęp do *Użytkownika* umożliwiają następujące dane dostępowe:
 
-Klucze SSH *Użytkownika* są także wykorzystywanee do uwierzytelniania poprzez CLI.
+ * hasło
+ * klucz SSH
 
-Następujące operacje przeznaczone do zarządzania kluczami SSH są dostępne:
+*Użytkownik* może mieć zapisanych wiele danych dostępowych, także tego samego rodzaju.
 
- * dodanie klucza SSH
- * usunięcie klucza SSH
+Hasło *Użytkownika* nigdy nie jest przechowywane w postaci jawnej.
 
-Operacja może zostać wykonana po spełnieniu następujących warunków:
+W przypadku wykorzystania uwierzytelniania hasłem lub kluczem SSH i dostępnych form dwuskładnikowego uwierzytelniania *Użytkownik* musi oprócz hasła lub wykorzystania klucza SSH wprowadzić także dane uwierzytelniające wybraną przez *Użytkownika* formę dwuskładnikowego uwierzytelniania.
+
+Kluczy SSH mogą być ponownie wykorzystywane w celu ich sprawnego wykorzystania jako dane dostępowe do określonych zasobów.
+
+Następujące operacje przeznaczone do zarządzania danymi dostępowymi są dostępne:
+
+ * dodanie danych dostępowych
+ * usunięcie danych dostępowych
+
+Operacje mogą zostać wykonane po spełnieniu następujących warunków:
 
  * bez szczególnych warunków
 
-### Zarządzanie dwuskłanikowym uwierzytelnianiem
+### Zarządzanie dwuskładnikowym uwierzytelnianiem
 
 Dostępne formy dwuskładnikowego uwierzytelniania:
 
  * kody TOTP
  * kody zapasowe
 
-Operacja może zostać wykonana po spełnieniu następujących warunków:
+Następujące operacje przeznaczone do zarządzania danymi dostępowymi są dostępne:
+
+ * włączenie dwuskładnikowego uwierzytelniania
+ * wyłączenie dwuskładnikowego uwierzytelniania
+
+Operacje mogą zostać wykonane po spełnieniu następujących warunków:
 
  * bez szczególnych warunków
 
