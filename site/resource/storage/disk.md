@@ -68,13 +68,13 @@ Stale monitorujemy system składowania danych, w tym pracę fizycznych nośnikó
 
 Wariant przeznaczony jest do długoterminowej archiwizacja danych z sekwencyjnym dostępem w zakresie odczytu i zapisu. Pozwala na ekonomiczne przechowywanie znacznych ilości danych, które nie ulegają częstej zmianie. Dane są przechowywane na magnetycznych talerzowych nośnikach danych. Optymalne do wykorzystania jako archiwum dokumentów, plików multimedialnych, nagrań z monitoringu wideo i długoterminowe kopie bezpieczeństwa.
 
-Dostępny rozmiar 100 - 1000. Wydajność IOPS wynosi 1000.
+Dostępny rozmiar 100 - 1000 GB. Wydajność IOPS wynosi 1000.
 
 ### Wariant "Volume"
 
 Wariant przeznaczony jest do przechowywanie danych z sekwencyjnym dostępem w zakresie odczytu i zapisu. Pozwala na przechowywanie dużej ilości danych, które ulegają częstej zmianie. Dane są przechowywane na magnetycznych talerzowych nośnikach danych. Optymalne do wykorzystania jako aktywny skład multimediów aplikacji internetowych i bieżące kopie bezpieczeństwa.
 
-Dostępny rozmiar 100 - 1000. Wydajność IOPS wynosi 3000.
+Dostępny rozmiar 100 - 1000 GB. Wydajność IOPS wynosi 3000.
 
 ### Wariant "SSD"
 
