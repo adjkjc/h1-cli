@@ -80,7 +80,7 @@ Wariant przeznaczony jest do długoterminowej archiwizacja danych z sekwencyjnym
 
 Wariant przeznaczony jest do przechowywanie danych z sekwencyjnym dostępem w zakresie odczytu i zapisu. Pozwala na przechowywanie dużej ilości danych, które ulegają częstej zmianie. Dane są przechowywane na magnetycznych talerzowych nośnikach danych. Optymalne do wykorzystania jako aktywny skład multimediów aplikacji internetowych i bieżące kopie bezpieczeństwa.
 
-## Wariant "SSD"
+### Wariant "SSD"
 
 Wariant ogólnego zastosowania. Przeznaczony do zadań wymagających losowego zapisu oraz szybkiego odczytu. Dane są przechowywane na nośnikach flash (solid state drive). Optymalne do wykorzystania jako dyski systemów operacyjnych oraz pod przechowywanie danych wymagających częstego odczytu lub zapisu np. bazy danych, cache.
 
