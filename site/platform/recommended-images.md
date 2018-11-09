@@ -1,7 +1,6 @@
-# Rekomendowane obrazy
+# Rekomendowane Obrazy
 
 Rekomendowane *Obrazy* stanowią ułatwienie w tworzeniu *Wirtualnych maszyn* z konfiguracją zapewniającą optymalne wykorzystanie właściwości platformy np. w zakresie łączności sieciowej, możliwości resetu hasła. Dzięki nim możesz znacząco skrócić czas do rozpoczęcia pracy. Każdy obraz jest codziennie odświeżany, aby zawsze zawierał najnowsze aktualizacje bezpieczeństwa.
-
 
 Rekomendowane obrazy są zapewniane dla systemów operacyjnych z następujących rodzin:
 
