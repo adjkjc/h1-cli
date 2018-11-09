@@ -17,6 +17,14 @@
 
 * nie posiada *Tagów* z grupy `chronione` zdefiniowanej dla *Projektu*
 
+## Usługi
+
+*Zasób* może mieć przypisane *Usługi* określające:
+
+ * cechy i funkcjonalności *Zasobu* np. wydajność dysku twardego, przepustowość łącza sieciowego,
+ * sposób i wysokość naliczania opłat,
+ * specjalne uprawnienie do wykorzystywania oprogramowania.
+
 ## Zarządzanie
 
 *Zasób* pozwala na wykonanie następujących typowych akcji, jeżeli nie określono inaczej:

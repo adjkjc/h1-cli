@@ -10,13 +10,15 @@
 
 *Licencja* może zostać utworzona, jeśli spełnione zostały wszystkie następujące warunki:
 
-* *Organizacja* podpisała umowe licencyjną na oprogramowanie danego licencjonodawcy 
+* *Organizacja* podpisała umowę licencyjną na oprogramowanie danego licencjonodawcy
 * wszystkie *ogólne warunki*.
 
 *Licencja* ulega utworzenia w przypadku:
 
 * utworzenia *[Wirtualnej maszyny]()* z *[Obrazu]()*, który wymaga licencjonowania,
 * żądanie użytkownika skierowane do *[Wsparcia]()*.
+
+*Licencja* zawsze przypisana jest do *Zasobu* jako *Usługa*.
 
 [Napisz do nas](), jeżeli chcesz skorzystać z *Licencji* i podpisać umowę licencyjną na oprogramowanie wybranego licencjonodawcy.
 
@@ -28,10 +30,10 @@
 
 *Licencja* udostępniane są dla szerokiej gamy oprogramowania następujących licencjonodawców:
 
-* Microsoft 
+* Microsoft
 * RedHat
 
-[Napisz do nas]() jeżeli w projeckie potrzebujesz specyficznego oprogramowania tych licencjonodawców.
+[Napisz do nas]() jeżeli w projekcie potrzebujesz specyficznego oprogramowania tych licencjonodawców.
 
 ## Płatność
 
