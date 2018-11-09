@@ -8,8 +8,8 @@
         </tr>
         <tr v-for="image in images">
             <td>{{image.name}}</td>
-            <td>{{image.fileSize}}</td>
-            <td>{{image.createdOn | relativeTime}}</td>
+            <td>{{image.fileSize | humanSize }}</td>
+            <td>{{image.createdOn | relativeTime }}</td>
             <td><!-- TODO: License restriction --></td>
         </tr>
     </table>
@@ -44,7 +44,11 @@
             relativeTime: function (value) {
                 if (!value) return '';
                 return moment(value).calendar()
-            }
+            },
+            humanSize: function (value) {
+                if (!value) return '';
+                return value.toFixed(2).calendar()
+            },
         }
     }
 </script>
