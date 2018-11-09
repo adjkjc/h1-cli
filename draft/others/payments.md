@@ -30,7 +30,7 @@ Ważność *Płatności* określona jest w Regulaminie *Usług*. Po jej przekroc
 
 ### Utworzenia
 
-*Faktura VAT* ulega utworzeniu na żądanie *Użytkownika* posiadającego rolę ```billing``` w *Projekcie*.
+*Faktura proforma* ulega utworzeniu na żądanie *Użytkownika* posiadającego rolę ```billing``` w *Projekcie*.
 
 *Faktura VAT* ulega utworzenia przez *Platformę* w następujących sytuacji;
 
