@@ -2,6 +2,7 @@
 
 Rekomendowane *Obrazy* stanowią ułatwienie w tworzeniu *Wirtualnych maszyn* z konfiguracją zapewniającą optymalne wykorzystanie właściwości platformy np. w zakresie łączności sieciowej, możliwości resetu hasła. Dzięki nim możesz znacząco skrócić czas do rozpoczęcia pracy. Każdy obraz jest codziennie odświeżany, aby zawsze zawierał najnowsze aktualizacje bezpieczeństwa.
 
+
 Rekomendowane obrazy są zapewniane dla systemów operacyjnych z następujących rodzin:
 
 * Linux
@@ -12,6 +13,14 @@ Rekomendowane obrazy są zapewniane dla systemów operacyjnych z następujących
 Dostępne są następujące rekomendowane obrazy dla systemów z rodziny Linux:
 
 <ImageList name_re="^((?!Windows).)*$"/>
+
+### Warunki wykorzystania
+
+Wykorzystanie *Rekomendowanego Obrazu* z systemem z rodziny Linux wymaga spełniania następujących warunków:
+
+* brak szczególnych warunków
+
+### Konfiguracja
 
 W tych obrazach skonfigurowane jest m.in.:
 
@@ -31,6 +40,14 @@ Zdalny dostęp możliwy jest z wykorzystaniem protokołu SSH (Secure Shell).
 Dostępne są następujące rekomendowane obrazy dla systemów z rodziny Windows:
 
 <ImageList name_re="Windows"/>
+
+### Warunki wykorzystania
+
+Wykorzystanie *Rekomendowanego Obrazu* z systemem z rodziny Windows wymaga spełniania następujących warunków:
+
+* warunki utworzenia *Licencji* dla oprogramowania zawartego w *Obrazie*
+
+### Konfiguracja
 
 W tych obrazach skonfigurowane są następujące elementy:
 

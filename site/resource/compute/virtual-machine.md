@@ -28,6 +28,7 @@ Przykładowe zastosowania:
 
  * dostępna przestrzeń adresowa w *[Sieci](/resource/networking/network.md)* (jeśli zamierzasz dołączyć do *Sieci*)
  * wszystkie ogólne warunki *utworzenia zasobu*
+ * warunki wykorzystania *Obrazu*, w przypadku *Rekomendowanego Obrazu*
 
 ### Usuwanie
 
