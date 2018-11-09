@@ -47,6 +47,8 @@ W celu wykorzystania *Rezerwacji* konieczne jest podpięcie jej do *Zasobu*, co 
 
 * opłaty za zasób naliczane są zgodnie z warunkami właściwymi dla niego z uwzględnieniem stawek właściwych dla rezerwacji. W momencie upływu jej ważności cena ulega przywróceniu.
 
+TODO: Zmiana wariantu *Wirtualnej Maszyny* wstrzymuje do powrotu pierwotnego wariantu obniżenie opłaty.
+
 ## Ograniczone użycie
 
 W przypadku ograniczonego użycia znajdują zastosowanie ogólne warunki *[Ograniczonego użycia]()*.
