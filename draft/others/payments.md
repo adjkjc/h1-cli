@@ -30,7 +30,7 @@ Ważność *Płatności* określona jest w Regulaminie *Usług*. Po jej przekroc
 
 ### Utworzenia
 
-*Faktura proforma* ulega utworzeniu na żądanie *Użytkownika* posiadającego rolę ```billing``` w *Projekcie*.
+*Faktura proforma* ulega utworzeniu na żądanie *Użytkownika* posiadającego rolę ```owner``` lub ```billing``` w *Projekcie*.
 
 *Faktura VAT* ulega utworzenia przez *Platformę* w następujących sytuacji;
 
@@ -42,8 +42,8 @@ W  przypadku konieczności wprowadzenia drobnych zmian do elementów opisowych f
 
  * żle wpisanego adresu nabywającego,
  * niewłaściwego NIP,
- * błędnie podana data sprzedaży, odbioru, terminu płatności,
- * oznaczenie towaru lub usługi.
+ * błędnie podanych dat, w tym terminu płatności
+ * oznaczenie nazwy usługi
 
 ## Opłaty
 
