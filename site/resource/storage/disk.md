@@ -68,11 +68,13 @@ archive |       100 - 1000 | 1000
 volume  |       100 - 1000 | 3000
 ssd     |          1 - 500 | 50 iops 8k / GB
 
-Dane w każdym z wariantów zabezpieczone są mechanizmami podobnymi do macierzy dyskowych, które pozwalają na przechowywanie przynajmniej dwóch kopii każdych danych na przynajmniej dwóch różnych fizycznych nośnikach. Jednocześnie stale monitorujemy system składowania danych, w tym pracę fizycznych nośników usuwając z użycia elementy nie spełniające przyjętych norm i standardów w zakresie poprawnego działania. Umożliwia to zapewnienie trwałości danych nawet w przypadku fizycznych uszkodzeń np. pojedynczych fizycznych nośników danych w sposób nieprzerwany i bez wpływu na poziom usług.
+Dane w każdym z wariantów zabezpieczone są mechanizmami podobnymi do macierzy dyskowych, które pozwalają na przechowywanie przynajmniej dwóch kopii każdych danych na przynajmniej dwóch różnych fizycznych nośnikach.
+
+Stale monitorujemy system składowania danych, w tym pracę fizycznych nośników usuwając z użycia elementy nie spełniające przyjętych norm i standardów w zakresie poprawnego działania. Umożliwia to zapewnienie trwałości danych nawet w przypadku fizycznych uszkodzeń np. pojedynczych fizycznych nośników danych w sposób nieprzerwany i bez wpływu na poziom usług.
 
 ### Wariant "Archive"
 
-Wariant przeznaczony jest do długoterminowej archiwizacja danych z sekwencyjnym dostępem w zakresie odczytu i zapisu. Pozwala na ekonomiczne przechowywanie znacznych ilości danych, które nie ulegają nieustannej zmianie. Dane są przechowywane na magnetycznych talerzowych nośnikach danych. Optymalne do wykorzystania jako archiwum dokumentów, plików multimedialnych, nagrań z monitoringu wideo i długoterminowe kopie bezpieczeństwa.
+Wariant przeznaczony jest do długoterminowej archiwizacja danych z sekwencyjnym dostępem w zakresie odczytu i zapisu. Pozwala na ekonomiczne przechowywanie znacznych ilości danych, które nie ulegają częstej zmianie. Dane są przechowywane na magnetycznych talerzowych nośnikach danych. Optymalne do wykorzystania jako archiwum dokumentów, plików multimedialnych, nagrań z monitoringu wideo i długoterminowe kopie bezpieczeństwa.
 
 ### Wariant "Volume"
 
