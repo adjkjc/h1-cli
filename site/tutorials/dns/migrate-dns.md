@@ -18,10 +18,10 @@ Dzięki temu będziesz mógł korzystać z gamy możliwości jakie oferujemy w t
         path: /guide/networking/dns/creating.md
     - name: Jeżeli możesz mieć dostęp do informacje o rekordach w formacie pliku strefy (BIND)
       block:
-        - name: Pobierz informacje z konfiguracji od dotychczasowego dostawcy
+        - name: Pobierz plik strefy od dotychczasowego dostawcy
           free_text:
             text: Informacje w takim formacie może gromadzić np. lokalna instancja [PowerDNS](https://doc.powerdns.com/authoritative/backends/bind.html) lub [BIND](https://www.isc.org/downloads/bind/).
-        - name: Zaimportuj informacje do *DNS*
+        - name: Zaimportuj plik strefy do *DNS*
           guide:
             path: /guide/networking/dns/import.md
     - name: Jeżeli dotychczasowy dostawca nie udostępnia informacji o rekordach w formacie pliku strefy (BIND)
@@ -43,10 +43,10 @@ Dzięki temu będziesz mógł korzystać z gamy możliwości jakie oferujemy w t
       dig:
         name: '{domain_name}'
         type: NS
-      variables:
-        domain_name: nazwa domeny internetowej
+        variables:
+          domain_name: nazwa domeny internetowej
       after_text:
         text: >
-          Monitoruj proces. W przypadku spójnej odpowiedzi z wielu lokalizacji proces możesz uznać za zakończony.
+          Monitoruj proces. W przypadku spójnej odpowiedzi z wielu urządzeń proces możesz uznać za zakończony.
 ```
 <!--     transfer domain registration (optionally) -->
