@@ -47,7 +47,7 @@
             },
             humanSize: function (value) {
                 if (!value) return '';
-                return value.toFixed(2).calendar()
+                return value.toFixed(2) + " GB"
             },
         }
     }
