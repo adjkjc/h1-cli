@@ -16,7 +16,7 @@
 *Licencja* ulega utworzenia w przypadku:
 
 * utworzenia *[Wirtualnej maszyny]()* z *[Obrazu]()*, który wymaga licencjonowania,
-* żądanie użytkownika skierowane do *[Wsparcia]()*.
+* żądanie *Użytkownika* skierowane do *[Wsparcia]()* z wskazaniem *Zasobu*.
 
 *Licencja* zawsze przypisana jest do *Zasobu* jako *Usługa*.
 
