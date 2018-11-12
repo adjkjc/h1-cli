@@ -25,6 +25,8 @@
  * sposób i wysokość naliczania opłat,
  * specjalne uprawnienie do wykorzystywania oprogramowania.
 
+*Usługi* mogą być ogólnodostępne lub dostępna na podstawie umów specjalnych.
+
 ## Zarządzanie
 
 *Zasób* pozwala na wykonanie następujących typowych akcji, jeżeli nie określono inaczej:
@@ -77,18 +79,14 @@ Nie ulegają zmianie cykle rozliczeniowe, a standardowe opłaty za usługi są n
 Przekazanie wymaga spełnienia następujących warunków:
 
 * Zasób nie jest w stanie *Ograniczonego użycia*
-* docelowy *Projekt* ma środki na pierwszy pełny okres rozliczeniowy
-
-Przekazanie zasobu składa się z  następujących etapów:
-
-* żądanie przekazania przez *Właściciela* *Projektu* do docelowego *Projektu*
-* akceptacja lub odrzucenia przez *Właściciela* docelowego *Projektu*
-
-Po zakończeniu przesyłania zasobów:
-
-* wszystkie *Prawa dostępu* są resetowane do wartości domyślnych
-* zdarzenia w historii zdarzeń dla zasobu są widoczne tylko dla zdarzeń generowanych przez bieżący *Projekt*, do którego przypisany jest zasób
+* spełnione są warunki usunięcia *Zasobu* w pierwotnym *Projekcie*
+* *Użytkownik* posiada rolę ```owner``` w *Projekcie* przekazującym i w *Projekcie* docelowym
+* spełnione są warunki usunięcia *Zasobu* w pierwotnym *Projekcie*
+* docelowy *Projekt* posiada dostęp do wszystkich *Usług* *Zasobu*
+* docelowy *Projekt* posiada środki na pierwszy pełny okres rozliczeniowy
+* zdarzenia w historii zdarzeń dla *Zasobu* są widoczne tylko dla zdarzeń generowanych przez bieżący *Projekt*, do którego przypisany jest *Zasób*
 * opłata jest naliczana za pierwszy pełny okres rozliczeniowy
+
 
 # Przewodniki
 
