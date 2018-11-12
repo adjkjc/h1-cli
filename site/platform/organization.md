@@ -105,7 +105,7 @@ Dostępne są następujące dedykowane operacje:
 * zarządzanie limitem przydziału *Zasobów* do projektu
 * zarządzanie własnymi rolami
 * zmiana użytkowników przypisanych do *Organizacji* i ich ról
-* dostęp do faktur Projektów wystawionych dla *Organizacji*
+* dostęp do faktur *Projektów* wystawionych dla *Organizacji*
 
 ### Zmiana danych rozliczeniowych
 
