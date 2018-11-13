@@ -12,4 +12,6 @@ Jeżeli spodziewasz się zwiększonego ruchu możesz dostosować rozmiar instanc
 
 Jeżeli moc jednej instancji nie będzie wystarczająca lub będziesz chciał zwiększyć odporność aplikacji na awarię możesz również [utworzyć nową *Wirtualną Maszyne*](/guide/compute/virtual-machine/creating.md). Obraz *Wirtualnej Maszyny* wykonasz [bez wpływu na pracę dotychczasowej instancji](/resource/storage/image.md#utworzenie). Dzięki temu sprawnie stworzysz nowy węzeł aplikacji, aby rozłożyć ruchu w celu zwiększenia wydajność i dostępności.
 
-Jeżeli wyczerpiesz przestrzeń *Dysku* to bez wpływu na działanie aplikacji zwiększysz rozmiar *Dysku* lub [dołączysz kolejne *Dyski*](/guide/compute/virtual-machine/disk-attach.md). Działanie nie wymaga nawet restartu instancji *Wirtutalnej Maszyny*. Każda *Wirtutalna Maszyna* w danym czasie może mieć przyłączonych wiele *Dysków*. Monitorując dostępną przestrzeń i zwiększając ją według potrzeb nigdy więcej nie utracisz danych spowodu braku miejsca na ich przechowanie.
+Jeżeli wyczerpiesz przestrzeń *Dysku* to bez wpływu na działanie aplikacji zwiększysz rozmiar *Dysku* lub [dołączysz kolejne *Dyski*](/guide/compute/virtual-machine/disk-attach.md). Działanie nie wymaga nawet restartu instancji *Wirtualnej Maszyny*. Każda *Wirtualna Maszyna* w danym czasie może mieć przyłączonych wiele *Dysków*. Monitorując dostępną przestrzeń i zwiększając ją według potrzeb nigdy więcej nie utracisz danych z powodu braku miejsca na ich przechowanie.
+
+Adam Dobrawy - Warszawa, 13 listopada 2018 roku
