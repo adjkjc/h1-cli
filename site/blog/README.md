@@ -1,1 +1,1 @@
-posts/replica-public-available.md
+posts/vm-vertical-scaling.md
