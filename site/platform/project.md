@@ -35,12 +35,15 @@ Dostępne są następujące dedykowane operacje:
 * zarządzanie kluczami SSH
     * dodanie klucza SSH
     * usunięcie klucza SSH
-* zarządzanie service account
-    * dodanie service account
+* zarządzanie *Kontem usługi*
+    * dodanie *Konta usługi*
     * zarządzanie prawami dostępu
     * dodanie prawa dostępu
     * usunięcie prawa dostępu
-    * usuwanie service account
+    * usuwanie *Konta usługi*
+* zarządzanie rejestrowaniem operacji
+    * włączenie rejestrowania operacji
+    * wyłączenia rejestrowania operacji
 * zasilenie środków
 * dostęp do faktur *Projektu* wystawionych dla Organizacji
 * dostęp do historii zasileń środków
@@ -111,6 +114,15 @@ Dla każdego *Konta usługi* są dostępne następujące operacje:
  Zarządzanie konfiguracją *Projektu* (ścieżki API rozpoczynające się od ```/project```) sa niedostępne dla *Konta usługi* , aby zapobiec niepożądanej eskalacji uprawnień, uzyskaniu informacji o innych *Kontach usług*, w tym ich identyfikatorach.
 
  Dowolna aktywność wykonana przez *Konto usługi* jest oznaczona na platformie jako wykonana przez *Użytkownika*, który utworzył dane *Konto usługi*.
+
+#### Zarządzanie rejestrowaniem operacji
+
+*Projekt* może mieć określony *[Dziennik](/resource/storage/logArchive.md)* i jego dane dostępowe w postaci *Hasła*. Ich określenie oznacza, że będą przesyłane do niego w celu rejestracji podstawowe informacje o żądaniach do API *Platformy* (Panel, CLI) m. in. wykonywanych akcjach, ich rezultat, a także którzy użytkownicy, źródłowy adres IP, z którego wykonane były połączenia i kiedy nastąpiło połączenia.
+
+Dostępne są następujące operacje:
+
+ * włączenie rejestrowania zdarzeń
+ * wyłączenia rejestrowania zdarzeń
 
 #### Zasilenie środków
 
