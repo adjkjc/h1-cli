@@ -71,4 +71,4 @@ Utwórz *Konto Usługi*, [zgodnie z instrukcją](/guide/platform/project/add-ser
 
 ## Częste pomyłki
 
-* Rekord DNS, który chcesz modifkować musi istnieć przed wykonaniem operacji, a strefa *DNS* być poprawnie rozwiązywana z wykorzystaniem DNS urządzenia.
+* Rekord DNS, który chcesz modyfikować musi istnieć przed wykonaniem operacji, a strefa *DNS* być poprawnie rozwiązywana z wykorzystaniem DNS urządzenia.
