@@ -117,7 +117,7 @@ Dla każdego *Konta usługi* są dostępne następujące operacje:
 
 #### Zarządzanie rejestrowaniem operacji
 
-*Projekt* może mieć określony *[Dziennik](/resource/storage/logArchive.md)* i jego dane dostępowe w postaci *Hasła*. Ich określenie oznacza, że będą przesyłane do niego w celu rejestracji podstawowe informacje o żądaniach do API *Platformy* (Panel, CLI) m. in. wykonywanych akcjach, ich rezultat, a także którzy użytkownicy, źródłowy adres IP, z którego wykonane były połączenia i kiedy nastąpiło połączenia.
+*Projekt* może mieć określony *[Dziennik](/resource/storage/log-archive.md)* i jego dane dostępowe w postaci *Hasła*. Ich określenie oznacza, że będą przesyłane do niego w celu rejestracji podstawowe informacje o żądaniach do API *Platformy* (Panel, CLI) m. in. wykonywanych akcjach, ich rezultat, a także którzy użytkownicy, źródłowy adres IP, z którego wykonane były połączenia i kiedy nastąpiło połączenia.
 
 Dostępne są następujące operacje:
 
