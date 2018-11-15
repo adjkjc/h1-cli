@@ -7,7 +7,10 @@
 <script>
     export default {
         data: () => {
-            prod: window.location.hostname.endsWith("hyperone.com")
+            prod: true;
         },
+        mounted: () => {
+            this.$set(this, 'prod', window.location.hostname.endsWith("hyperone.com"));
+        }
     }
 </script>
