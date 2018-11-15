@@ -69,6 +69,10 @@ const getSidebar = () => {
             children: show_directory(`blog/posts`),
         },
     ];
+    sidebar['/api/'] = [
+        '/api/'
+    ];
+
     sidebar['/tutorials/'] = [
         {
             title: 'Dysk',

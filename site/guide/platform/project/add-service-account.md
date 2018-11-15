@@ -1,8 +1,8 @@
-# Dodanie Użytkownika do Projektu
+# Dodanie Konta Usługi do Projektu
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób dodać *Service Account* do [Projektu](/platform/project.md) co umożliwia zarządzania zasobami platformy przez skrypty, urządzenia lub inne procesy automatyzujące. 
+Dokument wyjaśnia w jaki sposób dodać *Konta Usługi* do [Projektu](/platform/project.md) co umożliwia zarządzania *Zasobami* Platformy przez skrypty, urządzenia lub inne procesy automatyzujące. 
 
 ## Instrukcja
 

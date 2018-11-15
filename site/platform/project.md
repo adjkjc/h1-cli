@@ -113,7 +113,7 @@ Dla każdego *Konta usługi* są dostępne następujące operacje:
 
  Zarządzanie konfiguracją *Projektu* (ścieżki API rozpoczynające się od ```/project```) sa niedostępne dla *Konta usługi* , aby zapobiec niepożądanej eskalacji uprawnień, uzyskaniu informacji o innych *Kontach usług*, w tym ich identyfikatorach.
 
- Dowolna aktywność wykonana przez *Konto usługi* jest oznaczona na platformie jako wykonana przez *Użytkownika*, który utworzył dane *Konto usługi*.
+ Dowolna aktywność wykonana przez *Konto usługi* jest oznaczona na Platformie jako wykonana przez *Użytkownika*, który utworzył dane *Konto usługi*.
 
 #### Zarządzanie rejestrowaniem operacji
 
@@ -154,7 +154,7 @@ Transfer *Projektu* polega na:
 
 ## Forma rozliczeń
 
-Podstawą formą rozliczeń na platformie jest ```pre-paid```, czyli poprzez dokonanie wpłaty uzyskania środków z przeznaczeniem na wykorzystanie na usługi w ramach platformy.
+Podstawą formą rozliczeń na Platformie jest ```pre-paid```, czyli poprzez dokonanie wpłaty uzyskania środków z przeznaczeniem na wykorzystanie na usługi w ramach platformy.
 
 W celu przyznania limitu kredytowego dla rozliczeń ```post-paid``` wymagane jest dokonanie indywidualnej oceny Organizacji w szczególności w zakresie kondycji finansowej oraz historii współpracy. Może wiązać się to z przedstawieniem przez Organizację dodatkowych dokumentów.
 
