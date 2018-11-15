@@ -167,7 +167,7 @@ Uwierzytelnienie żądania polega na przesłaniu tokenu dostępowego (identyfika
 
 Jeżeli nie zaznaczono inaczej, wszystkie żądania do API *Platformy*, wymagają uwierzytelnienia.
 
-Przykładowe poprawne żądanie:
+Przykładowe poprawne żądanie z wykorzystaniem *Konta Usługi*:
 
 ```bash
 $ http -v GET https://api.hyperone.com/v1/ip x-auth-token:5af0bbbcb7802508ad844caa
@@ -202,9 +202,9 @@ X-XSS-Protection: 1; mode=block
 ]
 ```
 
-### Inne nagłówki żądania
+## Nagłówki żądania
 
-#### Nagłówek ``x-project``
+### Nagłówek ``x-project``
 
 Każdy *Użytkownik* może mieć dostęp do wielu *Projektów*. Z tego powodu w przypadku wykorzystania identyfikatora sesji *Użytkownika* w celu modyfikowania *Zasobów* *Projektu* należy wskazać *Projekt*, którego dotyczy żądanie w nagłówku ```x-project`` w następujący sposób: 
 
@@ -241,7 +241,7 @@ X-XSS-Protection: 1; mode=block
 ]
 ```
 
-#### Nagłówek ```Prefer```
+### Nagłówek ```Prefer```
 
 Część operacji *API* może być czasochłonna. W takim przypadku *Platforma* może wykonać żądanie *asynchronicznie* poprzez odpowiedź z statusem ```202``` oraz z nagłówkiem ```x-event-id``` zawierający identyfikator operacji. Asynchroniczne wykonanie jest kontrolowane - zgodnie z [RFC7240](https://tools.ietf.org/html/rfc7240) - poprzez nagłówek ```Prefer```. 
 
