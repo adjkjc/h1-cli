@@ -140,6 +140,7 @@ module.exports = {
     ],
     ga: 'UA-127062275-1',
     themeConfig: {
+        debug: !(process.env.NODE_ENV === 'production'),
         // logo: '/assets/logo.png',
         sidebar: getSidebar(),
         nav: [

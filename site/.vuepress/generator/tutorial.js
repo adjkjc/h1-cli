@@ -435,8 +435,7 @@ const replacer = (match, p1) => {
         // new_content += "</ol>";
         const task_list = yaml.safeLoad(p1.trim());
         new_content += get_content_for_task_list(task_list, 2, {});
-        new_content += utils.dump(task_list);
-
+        new_content += `<DebugContent>${utils.dump(task_list)}</DebugContent>`;
     } catch (err) {
         new_content += `<code>\n${err.stack.toString()}\n</code>`;
         new_content += utils.dump(p1.trim(), 'json');
