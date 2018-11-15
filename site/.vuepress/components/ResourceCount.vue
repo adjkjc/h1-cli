@@ -21,7 +21,7 @@
         },
         methods: {
             updateCount: function () {
-                fetch("/api/v1/stats/")
+                fetch("/api_v1/stats/")
                     .then((response) => response.json())
                     .then((json) => {
                         console.log(json);

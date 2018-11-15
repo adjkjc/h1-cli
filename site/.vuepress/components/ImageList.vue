@@ -6,6 +6,12 @@
             <th>Ostatnia aktualizacja</th>
             <th>Uwagi</th>
         </tr>
+        <tr v-if="status === 'error'">
+            <td colspan="4">Pobieranie informacji nie powiodło się. Spróbuj ponownie później.</td>
+        </tr>
+        <tr v-if="status === 'loading'">
+            <td colspan="4">Pobieranie aktualnych informacji. Proszę czekać.</td>
+        </tr>
         <tr v-for="image in images">
             <td>{{image.name}}</td>
             <td>{{image.fileSize | humanSize }}</td>
@@ -25,6 +31,7 @@
             name_re: ''
         },
         data: () => ({
+            status: 'loading',
             images: []
         }),
         mounted: function () {
@@ -33,10 +40,11 @@
                     return image.name.match(name_re)
                 }
             };
-            fetch("/api/v1/image/recommended")
+            fetch("/api_v1/image/recommended")
                 .then((response) => response.json())
-                .catch(() => [])
+                .catch(() => this.$set(this, 'status', 'error'))
                 .then(data => {
+                    this.$set(this, 'status', 'success');
                     this.$set(this, 'images', data.filter(validator(this.name_re)));
                 });
         },
