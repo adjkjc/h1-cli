@@ -2,13 +2,24 @@
 
 API *Platformy* pozwala na łatwe wykonanie każdej operacji udostępnionej np. poprzez Panel lub CLI w sposób automatyczny i programowy.
 
-Dostęp do wszystkich funkcji API odbywa się za pośrednictwem protokołu HTTPS poprzez adres ```https://api.hyperone.com/v1/```.
+Dostęp do wszystkich funkcji API odbywa się za pośrednictwem protokołu HTTPS poprzez adres ```https://api.hyperone.com/v1/```. Zostało wykonane w stylu REST.
 
 Wszystkie dane są wysyłane i odbierane jako JSON. Puste pola są uwzględniane jako ``null``, a nie pomijane.
 
 Wszystkie znaczniki czasu przesyłane są w formacie ISO 8601: ```RRRR-MM-DDTHH: MM:SSZ```
 
 W niniejszej dokumentacji przykłady poleceń są zapisywane z wykorzystaniem [HTTPie](https://httpie.org/).
+
+## Terminologia
+
+Wykorzystywane w dokumencie pojęcia oznaczają:
+
+* *Użytkownik* przeznaczony jest do zarządzania zasobami platformy przez osoby fizyczne. Wykorzystuje platformę do zarządzania *Zasobami* np. poprzez CLI lub panel. Więcej informacji w artykule *[Użytkownik](/site/platform/user.md)
+)*.
+* *Projekt* przeznaczony jest do logicznego zgrupowania zasobów, którego dla Organizacji mają wspólny cel i przeznaczenie. Więcej informacji w artykule *[Projekt](/site/platform/project.md).
+* *Zasób* stanowi obiekt w infrastrukturze Platformy, z którym *Użytkownik* może współdziałać i go modyfikować. Więcej informacji w artykule *[Zasób](/site/platform/resource.md)*.
+* *Konto usługi* to dane dostępowe umożliwiające wykonywanie modyfikacji *Zasobów* *Projektu* w imieniu *Użytkownika* przez aplikacje tj. skrypty, urządzenia lub inne procesy automatyzujące. Przypisany jest zawsze do jednego Projektu. Więcej w sekcji *Konto Usługi* artykułu *[Projekt](/site/platform/project.md)*.
+
 
 ## Uwierzytelnienie dostępu do *Platformy*
 
@@ -19,11 +30,31 @@ W celu wykonywania operacji na *Platformie* poprzez API należy:
 
 oraz
 
-* przesłać wraz z żądaniem token dostępowy (identyfikator sesji *Użytkownika* lub identyfikator *Konta Usługi*)
+* przesłać wraz z żądaniem token dostępu (identyfikator sesji *Użytkownika* lub identyfikator *Konta Usługi*)
+
+Uwierzytelnienie żądań kierowanych do API wymaga tokenu dostępu który może zostać uzyskany jako:
+
+* sesja *Użytkownika*
+* *Klucz usługi*
+
+Poniżej porównanie funkcjonalności obu rozwiązań.
+
+| opis                             | sesja *Użytkownika*                                                                                                                        | *Klucz usługi*                                                                                                                                                                                                                |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Utworzenie                       | Poprzez podanie nazwy *użytkownika* oraz hasła (możliwe także wymagane dwuskładnikowe uwierzytelnienie)                                    | Przez *Użytkownika* dla wybranego *Projektu*                                                                                                                                                                                  |
+| Protokoły dla utworzenia         | HTTP, SSH                                                                                                                                  | HTTP                                                                                                                                                                                                                          |
+| Zakres dostępu                   | Możliwość wyboru *Projektu* dla każdego żądania do API wedle posiadanych uprawnień *Użytkownika*                                           | Jedynie w ramach *Projektu* do którego został przypisany                                                                                                                                                                      |
+| Uprawnienia                      | Wszelkie uprawnienie włącznie z możliwością zarządzania *Użytkownikiem*, *Projektami* i *Organizacją* wedle posiadanych uprawnień do nich. | Ograniczone do uprawnień w ramach pojedynczego Projektu wyszczególnionych przy tworzeniu z możliwością późniejszej modyfikacji zakresu uprawnień. Brak możliwości zarządzania *Użytkownikami*, *Projektami* lub *Organizacją* |
+| Czas obowiązywania               | Przez około 1 godziny od ostatniej wykonanej operacji na API z jego użyciem albo do czasu usunięcia                                        | Do czasu określonego na stałe podczas utworzenia albo do czasu usunięcia                                                                                                                                                      |
+| Zastosowanie                     | Wykorzystanie w panelu oraz CLI w bezpośredniej interakcji z *Użytkownikiem*                                                               | W skryptach i wszelkiej automatyzacji                                                                                                                                                                                         |
+| Wymagane parametry               | `x-auth-token` oraz `x-project` w celu podania Projektu dla żądania                                                                        | jedynie `x-auth-token`                                                                                                                                                                                                        |
+| Kanały wykorzystania             | panel, narzędzie CLI, API                                                                                                                  | narzędzie CLI, API                                                                                                                                                                                                            |
+| Dwuskładnikowe uwierzytelnienie | zgodnie z konfiguracją Użytkownika                                                                                                         | tylko przy utworzeniu, brak wymogu przy wykorzystaniu                                                                                                                                                                         |
+
 
 ### Identyfikator sesji *Użytkownika*
 
-Token dostępowy stanowiący identyfikator sesji *Użytkownika* posiada wszystkie uprawnienia *Użytkownika* do wszystkich *Projektów* do których *Użytkownik* został dodany i pozwala wykonywać operację na nich wszystkich.
+Token dostępu stanowiący identyfikator sesji *Użytkownika* posiada wszystkie uprawnienia *Użytkownika* do wszystkich *Projektów* do których *Użytkownik* został dodany i pozwala wykonywać operację na nich wszystkich.
 
 Wymagane jest aby każde żądanie do API posiadało dodatkowo w nagłówku [pole ```x-project```](#naglowek-x-project) które będzie definiował w kontekście jakiego *Projektu* dane żądanie powinno zostać wykonane.
 
@@ -31,7 +62,7 @@ Taka sesja *Użytkownika* jest wykorzystywana w przypadku Panelu lub narzędzia 
 
 ### Identyfikator *Konta Usługi*
 
-Token dostępowy stanowiący identyfikator *[Konta Usługi](/platform/project.md)* jest tworzony w ramach pojedynczego *Projektu* i posiada ograniczone prawa dostępu np. tylko do wykonania obrazu lub danych operacji na pojedynczym lub wszystkich zasobach.
+Token dostępu stanowiący identyfikator *[Konta Usługi](/platform/project.md)* jest tworzony w ramach pojedynczego *Projektu* i posiada ograniczone prawa dostępu np. tylko do wykonania obrazu lub danych operacji na pojedynczym lub wszystkich zasobach.
 
 Ze względu że *Konto usługi* jest utworzone w ramach Projektu w takim przypadku nie ma konieczności przy wysyłaniu żądania do API podawać w nagłówku pola ```x-project``` ponieważ *Projekt* jest już zdefiniowany i przypisany do *Konta usługi*.
 
@@ -178,11 +209,14 @@ $ ssh -o "User=user@example.com" api.hyperone.com -s rbx-auth
 
 ## Uwierzytelnienie żądania do *Platformy*
 
-Uwierzytelnienie żądania polega na przesłaniu tokenu dostępowego (identyfikatora sesji *Użytkownika* lub *Konta usługi*):
+Token dostępu oraz inne parametry wymagane dla uwierzytelnienia żądania mogą zostać przekazane do API na kilka sposobów.
 
- * w nagłówku HTTP ```x-auth-token``` albo
- * w cookie ```x-auth-token``` albo
- * w zapytaniu ```?authtoken=xxxxxx```
+| opis | query | header | cookie |
+| :--- | :---: | :---: | :---: |
+| token dostępu | authtoken | x-auth-token | x-auth-token |
+| projekt | project | x-project | - |
+
+W przypadku podania parametrów na kilka sposobów zostanie wykorzystany pierwszy znaleziony w następującej kolejności: ```query```, ```header```, ```cookie```.
 
 Jeżeli nie zaznaczono inaczej, wszystkie żądania do API *Platformy*, wymagają uwierzytelnienia.
 
@@ -366,3 +400,25 @@ verbose: headers
   sizeUsed: 0.0001462697982788086,
   credential: { password: [], certificate: [] } }
 ```
+
+# Błędy i kody stanu HTTP
+
+Czasami żądania do API nie powodzą się. Niepowodzenia mogą wystąpić z wielu różnych powodów. We wszystkich przypadkach interfejs API powinien zwrócić kod stanu HTTP, który wskazuje na charakter błędu, z treścią odpowiedzi w formacie JSON zawierającą dodatkowe informacje.
+
+Wykorzystywane są w szczególności następujące kody stanu HTTP:
+
+| Kod 	| Znaczenie                                 	| Opis                                                                                                                                                                                                                           	|
+|-----	|-------------------------------------------	|---------------------------------------------------------------
+| 200 	| Sukces (```Success```)                    	| Jeśli zażądano danych, będą one dostępne w treści odpowiedzi.                                                                                                                                                                  	|
+| 202 	| Zaakceptowano (```Accepted```)            	| Żądanie zostało przyjęte i zostanie ono przetworzone w niedługiej przyszłości. Żądanie może, ale nie musi, zostać zrealizowane, ponieważ np. może być zabronione, gdy przetwarzanie faktycznie będzie miało miejsce.           	|
+| 400 	| Nieprawidłowe żądanie (```Bad Request```) 	| Żądanie zostało przyjęte, ale jego składnia została uznana za nieprawidłową. Zwykle dzieje się tak z powodu brakującego lub źle sformułowanego parametru. Sprawdź dokumentację i składnię żądania i spróbuj ponownie.          	|
+| 401 	| Nieautoryzowany (```Unauthorized```)      	| W żądaniu nie podano prawidłowego tokena dostępowego, więc Platforma nie mogła powiązać *Użytkownika* z żądaniem.                                                                                                                    	|
+| 403 	| Zabroniony (```Forbidden```)              	| Uwierzytelnienie żądania przebiegło poprawnie, a jego składnia była poprawna, ale Platforma odmawia zrealizowania żądania. Może się tak zdarzyć, jeśli *Użytkownik* próbuje modyfikować *Zasoby*, do których nie ma dostępu. 	|
+| 404 	| Nie znaleziony (```Not Found```)          	| Podana metoda i ścieżka żądania nie określają znanej akcji w interfejsie API lub obiekt określony przez żądanie nie istnieje lub *Użytkownik* nie ma żadnego prawa dostępu do obiektu.                                                 	|
+| 429 	| Zbyt dużo żądań (```Too Many Requests```) 	|  Przekroczyłeś limit żądań do interfejsu API.                                                                                                                                                                                  	|
+| 50x 	| -                                         	| Po stronie Platformy wystąpił problem, który uniemożliwił zrealizowanie żądania.                                                                                                                                               	|` -
+
+W przypadku błędu, odpowiedź będzie zawierała opis błędu w następujących polach:
+
+* ```status``` - tożsamy z kodem stanu HTTP
+* ```message``` - opis błędu
