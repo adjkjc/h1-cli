@@ -286,7 +286,7 @@ Wartość```86400``` stanowi maksymalny czas oczekiwania w sekundach.
 
 W celu ustalenia prawidłowej składni żądania należy wykorzystać [CLI](http://github.com/hyperonecom/h1-cli).
 
-Warto przy tym wykorzystać [parametr ```--verbose```](/h1-cli/common-arguments.md) CLI w celu uzyskania ścieżki i formatu żądania oraz [parametr ```-o json```](/h1-cli/common-arguments.md) w celu uzyskania informacji o strukturze odpowiedzi. Przykładowo:
+Warto przy tym wykorzystać [parametr ```--verbose```](/h1-cli/common-arguments.md) w celu uzyskania ścieżki i formatu żądania oraz [parametr ```-o json```](/h1-cli/common-arguments.md) w celu uzyskania informacji o strukturze odpowiedzi. Przykładowo:
 
 ```
 $ h1 vault create --name my-vault --size 10 --tag example-tag -o json --verbose
