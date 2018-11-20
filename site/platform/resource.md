@@ -1,6 +1,6 @@
 # Zasób
 
-*Zasób* stanowi obiekt w infrastrukturze Platformy, z którym możesz współdziałać i go modyfikować.
+*Zasób* stanowi obiekt w infrastrukturze Platformy, z którym *Użytkownik* może współdziałać i go modyfikować.
 
 ## Cykl życia
 
