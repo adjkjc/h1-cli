@@ -16,7 +16,9 @@ Wyróżniamy następujące kategorie/typy treści:
         * *najlepsze praktyki i wskazówki techniczne* -  umiejscowione w czasie podpowiedzi rozwiązania problemów w danym czasie, odniesienie aktualnych wydarzeń do technicznych aspektów pracy platformy
         * *luki w zabezpieczeniach* -  nasze stanowisko odnośnie określonych, medialnych podatności bezpieczeństwa
         * *elementy wewnętrzne* -  pokazanie w mocno techniczny sposób naszych wewnętrznych osiągnięć i rozwiązań  technicznych, od inżyniera dla inżyniera.
-* *streszczenie posta blogowego* -  treść która będzie wykorzystywana w celu promowania tego posta w social media (Facebook, T, linkedin), powiadomieniach o zmianach w platformie i innych kanałach.
+* *streszczenie posta blogowego* - treść która będzie wykorzystywana w celu:
+    * social media - promowania danego posta w social media (Facebook, Twitter, linkedin) oraz innych kanałach
+    * newsletter - streszczenie istotnych postów blogowych w formie newslettera wysyłane okresowo do obecnych użytkowników platformy
 
 ## Rodzaje treści
 
