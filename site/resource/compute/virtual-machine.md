@@ -216,6 +216,7 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 
  * *Wirtualna Maszyna* znajduje się w stanie ```Wyłączony```
  * dodanie interfejsu nie spowoduje przekroczenie liczby dopuszczalnych interfejsów wynikających z wariantu *Wirtualnej Maszyny*
+ * *Wirtualna Maszyna* nie posiada aktualnie przyłączonej *Sieci* Internet, jeżeli przyłączana jest *Sieć* Internet,
  * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
 
 ##### Usunięcie interfejsu sieciowego
