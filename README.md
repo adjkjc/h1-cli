@@ -23,19 +23,6 @@ Online dictionaries:
  * https://www.microsoft.com/en-us/language/default.aspx
  * https://www.computerworld.pl/slownik/angielski/W/1.html
 
-## Media standard
-
-* Images resolution
-  - 1200x628 - for Facebook and Twitter
-  - 600x300 - for blog post
-
-* Image format
-  - png
-  - jpg
-  
-* Topis
-    * We avoid physical servers - we do not want to stutter with physical servers, because we are not worried about them (we do not feel them). Of course, there servers are servers, but not important.
-
 ## Code style
 
 * We don't wrap lines by hand. Use soft wrap in code editor instead.
