@@ -18,12 +18,12 @@ Przed przystąpieniem do integracji powinieneś mieć:
   block:
     - name: Wykonaj początkową synchronizacje
       shell:
-        cmd: rsync -av backupowany_katalog {{resource_id}}@vault.pl-waw-1.hyperone.com:/
+        cmd: rsync -av backupowany_katalog {{resource_id}}@vault.pl-waw-1.hyperone.com:~/
 - name: Automatyzacja
   block:
   - name: Dodaj do harmonogramu automatyczną synchronizacje
     cron:
-        job: rsync -av backupowany_katalog {{resource_id}}@vault.pl-waw-1.hyperone.com:/
+        job: rsync -av backupowany_katalog {{resource_id}}@vault.pl-waw-1.hyperone.com:~/
         special_time: daily
 ```
 
