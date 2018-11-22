@@ -154,7 +154,7 @@ const replacer = (match, p1) => {
             new_content += `</li>\n`;
         }
         new_content += "</ol>";
-        new_content += `<DebugContent>${utils.dump(action_set)}</DebugContent>`;
+        new_content += `<DebugContent>${utils.dump(action_set)}</DebugContent>\n\n`;
     } catch (err) {
         new_content += `<code>\n${err.stack.toString()}\n</code>`;
         new_content += utils.dump(p1.trim(), 'json');
