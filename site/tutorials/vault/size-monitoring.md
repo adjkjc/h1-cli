@@ -4,7 +4,7 @@ Przedstawimy w jaki sposób monitorować wykorzystywaną przestrzeń w *[Vault](
 
 Wykorzystywana przestrzeń stanowi przykład, który można odnieść do dowolnego z *Zasobów* udostępnianych przez platformę.
 
-Wykorzystany zostanie *Zabbix*, który stanowi wszechstronne narzędzie umożliwiające prace serwerów, urzadzeń sieciowych, a - jak zaraz pokażemy - także *Zasobów* naszej platformy. Służy do zbierania, analizowania i wizualizacji danych. Umożliwia opracowanie wykresów umożliwiających analize trendów i wzorców użycia. Przede wszystkim posiada mechanizm wyzwalaczy, które pozwalają powiadamiać w przypadku niepożądanego stanu lub anomalii w pozycjach monitorowanego elementu.
+Wykorzystany zostanie *Zabbix*, który stanowi wszechstronne narzędzie umożliwiające monitoring prace serwerów, urządzeń sieciowych, a - jak zaraz pokażemy - także *Zasobów* naszej platformy. Służy do zbierania, analizowania i wizualizacji danych. Umożliwia opracowanie wykresów umożliwiających analizę trendów i wzorców użycia. Przede wszystkim posiada mechanizm wyzwalaczy, które pozwalają powiadamiać w przypadku niepożądanego stanu lub anomalii w pozycjach monitorowanego elementu. Dostarczony szablon zapewnia powiadomienia, gdy pojemność *Vault* jest bliska wyczerpania.
 
 Platforma udostępnia dla *Vault* informacje pod następującymi adresami:
 
