@@ -110,9 +110,13 @@ ISO 1GB | [PERIOD="iso:iso"] | [PRICE="iso:iso"]
 
 ## Przewodniki
 
-Do korzystania z *ISO* mogą być przydatne następujące przewodniki:
+Do korzystania z *ISO* mogą być przydatne następujące specjalne przewodniki:
 
 <PageList path_re="guide/storage/iso/"/>
+
+Użyteczne mogą okazać się także następujące ogólne przewodniki:
+
+<PageList path_re="guide/resource/"/>
 
 ## Powiązane produkty
 

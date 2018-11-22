@@ -124,9 +124,13 @@ Transfer is aavailabe due following reason:
 
 ## Przewodniki
 
-Do korzystania z *IP* mogą być przydatne następujące przewodniki:
+Do korzystania z *IP* mogą być przydatne następujące specjalne przewodniki:
 
 <PageList path_re="guide/networking/ip-address/"/>
+
+Użyteczne mogą okazać się także następujące ogólne przewodniki:
+
+<PageList path_re="guide/resource/"/>
 
 ## Powiązane produkty
 

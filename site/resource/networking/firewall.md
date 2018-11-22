@@ -139,9 +139,13 @@ zapora sieciowa | [PERIOD="firewall:firewall"] | [PRICE="firewall:firewall"] |
 
 ## Przewodniki
 
-Do korzystania z *Zapory sieciowej* mogą być przydatne następujące przewodniki:
+Do korzystania z *Zapory sieciowej* mogą być przydatne następujące specjalne przewodniki:
 
 <PageList path_re="guide/networking/firewall/"/>
+
+Użyteczne mogą okazać się także następujące ogólne przewodniki:
+
+<PageList path_re="guide/resource/"/>
 
 ## Powiązane produkty
 
