@@ -105,7 +105,7 @@ const tasks = {
             throw new Error("Not implemented yet");
         }
         content += 'Zapisz wprowadzone zmiany. ';
-        content += 'Od teraz to polecenie będzia automatycznie, regularnie wykonywane.';
+        content += 'Od teraz to polecenie będzia automatycznie, regularnie wykonywane.\n';
         return content;
     },
     apt: (data, prev, next, ctx) => {
