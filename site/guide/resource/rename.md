@@ -6,7 +6,7 @@ Dokument wyjaśnia w jaki sposób zmienić nazwę *[Zasobu](/platform/resource.m
 
 ## Instrukcja
 
-#### Panel
+### Panel
 
 Poniżej przedstawiono zmianę nazwy *Wirtualnej Maszyny*. Analogiczne postępowanie jest w przypadku innych zasobów.
 
@@ -61,9 +61,7 @@ Poniżej przedstawiono zmianę nazwy *Wirtualnej Maszyny*. Analogiczne postępow
 ]
 ```
 
-
-
-#### CLI
+### CLI
 
 W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
@@ -78,7 +76,7 @@ gdzie:
 
 Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="vm rename"].
 
-W przypadku konieczności dodania tagów do innych typów *Zasobów* dostępne są następujące polecenia:
+W przypadku konieczności zmiany nazwy *Zasobów* dostępne są następujące polecenia:
 
 * [CLI="snapshot rename"]
 * [CLI="vm rename"]
