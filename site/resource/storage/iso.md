@@ -32,7 +32,7 @@ Nowe *ISO* może być utworzone w następujący sposób:
 *ISO* może być usunięte po spełnieniu następujących warunków:
 
  * nie jest podłączone do żadnej *Wirtualnej maszyny*
- * wszystkie ogólne warunki *usunięcia zasobu*
+ * wszystkie [ogólne warunki usunięcia *Zasobu*](/platform/resource.md#usuniecie)
 
 ## Zarządzanie
 

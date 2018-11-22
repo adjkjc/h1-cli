@@ -21,14 +21,14 @@ Przykładowe zastosowania:
 
 *Sieć* może zostać utworzona po spełnieniu następujących warunków:
 
- * wszystkie ogólne warunki *utworzenia zasobu*
+ * wszystkie [ogólne warunki utworzenia *Zasobu*](/platform/resource.md#utworzenie)
 
 ### Usuwanie
 
 *Sieć* może zostać usunięta po spełnieniu następujących warunków:
 
  * nie istnieją przyłączone do niej *[Adaptery sieciowe](/resource/networking/network-adapter.md)*
- * wszystkie ogólne warunki *usunięcia zasobu*
+ * wszystkie [ogólne warunki usunięcia *Zasobu*](/platform/resource.md#usuniecie)
 
 ## Zarządzanie
 

@@ -25,7 +25,7 @@ Opóźnienie w replikacji asynchronicznej jest na poziomie 30 sekund - 5 minut, 
 
  * lokalny serwer Hyper-V ma skonfigurowane połączenie replikacji
  * lokalne dyski spełniają parametry techniczne dla zasobu *Dysk*
- * wszystkie ogólne warunki *utworzenia zasobu*
+ * wszystkie [ogólne warunki utworzenia *Zasobu*](/platform/resource.md#utworzenie)
 
 Utworzenie repliki odbywa się poprzez zlecenie replikacji w lokalnym serwerze Hyper-V poprzez skonfigurowane połączenie replikacji. W momencie utworzenia repliki uruchamiane są *Dyski* w wariancie ```replica``` dla każdego lokalnego dysku replikowanej wirtualnej maszyny.
 
@@ -37,7 +37,7 @@ Na początku wykonywana jest pełna replikacja. Czas pierwszej replikacji zależ
 
 *Replika* może zostać usunięta po spełnieniu następujących warunków:
 
- * wszystkie ogólne warunki *usunięcia zasobu*
+ * wszystkie [ogólne warunki usunięcia *Zasobu*](/platform/resource.md#usuniecie)
 
 ## Zarządzanie
 

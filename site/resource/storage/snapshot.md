@@ -28,7 +28,7 @@ Przykładowe zastosowania:
 
 Migawka może zostać usunięta po spełnieniu następujących warunków:
 
- * wszystkie ogólne warunki *usunięcia zasobu*
+ * wszystkie [ogólne warunki usunięcia *Zasobu*](/platform/resource.md#usuniecie)
 
 ## Zarządzanie
 

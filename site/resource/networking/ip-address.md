@@ -22,7 +22,7 @@ Przykładowe zastosowania:
 *Adres IP* może zostać utworzony po spełnieniu następujących warunków:
 
  * istnieje wolny adres IP w puli adresów sieciowych (dotyczy tylko *Sieci* prywatnych)
- * wszystkie ogólne warunki *utworzenia zasobu*
+ * wszystkie [ogólne warunki utworzenia *Zasobu*](/platform/resource.md#utworzenie)
 
 W zależności od sieci można użyć adresu IP z różnych zakresów:
 
@@ -39,7 +39,7 @@ Wyróżniamy dwa typy *Adresów IP* w platformie:
 *Adres IP* może zostać usunięty po spełnieniu następujących warunków:
 
  * nie jest powiązany z żadnym innym zasobem
- * wszystkie ogólne warunki *usunięcia zasobu*
+ * wszystkie [ogólne warunki usunięcia *Zasobu*](/platform/resource.md#usuniecie)
 
 ## Zarządzanie
 

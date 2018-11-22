@@ -8,7 +8,9 @@
 
 ### Utworzenie
 
-*Rezerwacja* może zostać utworzona, jeśli spełnione zostały wszystkie *ogólne warunki*.
+*Rezerwacja* może zostać utworzony po spełnieniu następujących warunków:
+
+ * wszystkie [ogólne warunki utworzenia *Zasobu*](/platform/resource.md#utworzenie)
 
 ### Usuwanie
 
@@ -79,7 +81,7 @@ W przypadku ograniczonego użycia znajdują zastosowanie ogólne warunki *[Ogran
 
 Przekazanie *Rezerwacji* jest możliwe między *Projektami* tej samej *Organizacji*, w przypadku spełnienia następujących warunków:
 
-* stan to "Rozłączona"
+* stan to ```Rozłączona```
 
 ## Lokalizacja
 

@@ -27,14 +27,14 @@ Przykładowe zastosowania:
 *Wirtualna maszyna* może zostać utworzona po spełnieniu następujących warunków:
 
  * dostępna przestrzeń adresowa w *[Sieci](/resource/networking/network.md)* (jeśli zamierzasz dołączyć do *Sieci*)
- * wszystkie ogólne warunki *utworzenia zasobu*
+ * wszystkie [ogólne warunki utworzenia *Zasobu*](/platform/resource.md#utworzenie)
  * warunki wykorzystania *Obrazu*, w przypadku *Rekomendowanego Obrazu*
 
 ### Usuwanie
 
 *Wirtualna maszyna* może zostać usunięta po spełnieniu następujących warunków:
 
- * wszystkie ogólne warunki *usunięcia zasobu*
+ * wszystkie [ogólne warunki usunięcia *Zasobu*](/platform/resource.md#usuniecie)
 
 ## Warianty
 

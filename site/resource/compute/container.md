@@ -22,7 +22,7 @@ Przykładowe zastosowania:
 *Kontener* może zostać utworzony po spełnieniu następujących warunków:
 
  * istnieje rekord TXT ```_h1_project.{adres specyficzny}``` zawierający identyfikator aktywnego *Projektu* (jeżeli wykorzystano specyficzny adres)
- * wszystkie ogólne warunki *utworzenia zasobu*
+ * wszystkie [ogólne warunki utworzenia *Zasobu*](/platform/resource.md#utworzenie)
 
 Podczas tworzenia można określić następujące parametry:
 
@@ -37,7 +37,7 @@ Podczas tworzenia można określić następujące parametry:
 
 *Kontener* może zostać usunięty po spełnieniu następujących warunków:
 
- * wszystkie ogólne warunki *usunięcia zasobu*
+ * wszystkie [ogólne warunki usunięcia *Zasobu*](/platform/resource.md#usuniecie)
 
 ## Warianty
 

@@ -22,7 +22,7 @@ Przykładowe zastosowania:
 *Obraz* może zostać utworzony po spełnieniu następujących warunków:
 
  * *Wirtualna maszyna* jest w stanie `Pracująca` lub `Wyłączona`
- * wszystkie ogólne warunki *utworzenia zasobu*
+ * wszystkie [ogólne warunki utworzenia *Zasobu*](/platform/resource.md#utworzenie)
 
 *Obraz* tworzony jest na podstawie istniejącej *Wirtualnej maszyny*.
 
@@ -32,7 +32,7 @@ Chociaż istnieje możliwość utworzenia *Obrazu*, gdy *Wirtualna maszyna* jest
 
 *Obraz* może zostać usunięty po spełnieniu następujących warunków:
 
- * wszystkie ogólne warunki *usunięcia zasobu*
+ * wszystkie [ogólne warunki usunięcia *Zasobu*](/platform/resource.md#usuniecie)
 
 ## Zarządzanie
 

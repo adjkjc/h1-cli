@@ -17,11 +17,18 @@ Przykładowe zastosowania:
 
 ## Cykl życia
 
+### Utworzenie
+
+*Brama sieciowa* może zostać utworzona po spełnieniu następujących warunków:
+
+ * wszystkie [ogólne warunki utworzenia *Zasobu*](/platform/resource.md#utworzenie)
+
+### Usunięcie
+
 *Brama sieciowa* może zostać utworzona po spełnieniu następujących warunków:
 
  * *Brama sieciowa* nie jest przywiązana do żadnej *Sieci*
- * wszystkie ogólne warunki *usunięcia zasobu*
- * wszystkie ogólne warunki *utworzenia zasobu*
+ * wszystkie [ogólne warunki usunięcia *Zasobu*](/platform/resource.md#usuniecie)
 
 ## Zarządzanie
 

@@ -22,14 +22,14 @@ Przykładowe zastosowania:
 
 *Zapora sieciowa* może zostać utworzona po spełnieniu następujących warunków:
 
- * wszystkie ogólne warunki *utworzenia zasobu*
+ * wszystkie [ogólne warunki utworzenia *Zasobu*](/platform/resource.md#utworzenie)
 
 ### Usuwanie
 
 *Zapora sieciowa* może zostać usunięta po spełnieniu następujących warunków:
 
  * nie jest przywiązana do żadnej *Sieci*
- * wszystkie ogólne warunki *usunięcia zasobu*
+ * wszystkie [ogólne warunki usunięcia *Zasobu*](/platform/resource.md#usuniecie)
 
 ## Zarządzanie
 

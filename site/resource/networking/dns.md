@@ -25,13 +25,13 @@ Przykładowe zastosowania:
 *DNS* może zostać utworzony po spełnieniu następujących warunków:
 
  * nazwa strefy jest unikalna w obrębie platformy
- * wszystkie ogólne warunki *utworzenia zasobu*
+ * wszystkie [ogólne warunki utworzenia *Zasobu*](/platform/resource.md#utworzenie)
 
 ### Usuwanie
 
 *DNS* może zostać usunięty po spełnieniu następujących warunków:
 
- * wszystkie ogólne warunki *usunięcia zasobu*
+ * wszystkie [ogólne warunki usunięcia *Zasobu*](/platform/resource.md#usuniecie)
 
 ## Zarządzanie
 

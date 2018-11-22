@@ -20,7 +20,7 @@ Przykładowe zastosowania:
 
 *Vault* może zostać utworzony po spełnieniu następujących warunków:
 
- * wszystkie ogólne warunki *utworzenia zasobu*
+ * wszystkie [ogólne warunki utworzenia *Zasobu*](/platform/resource.md#utworzenie)
 
 Nowy *Vault* może być utworzony w następujący sposób:
 
@@ -32,7 +32,7 @@ Nowy *Vault* może być utworzony w następujący sposób:
 *Vault* może zostać usunięty po spełnieniu następujących warunków:
 
  * nie istnieje żadna utworzona na jego bazie *[Migawka](/resource/storage/snapshot.md)*
- * wszystkie ogólne warunki *usunięcia zasobu*
+ * wszystkie [ogólne warunki usunięcia *Zasobu*](/platform/resource.md#usuniecie)
 
 ## Zarządzanie
 

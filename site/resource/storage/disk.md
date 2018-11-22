@@ -33,7 +33,7 @@ Oferowane dyski charakteryzują się małymi opóźnieniami w działaniu i duż�
 
 *Dysk* może zostać utworzony po spełnieniu następujących warunków:
 
- * wszystkie ogólne warunki *utworzenia zasobu*
+ * wszystkie [ogólne warunki utworzenia *Zasobu*](/platform/resource.md#utworzenie)
 
 Nowy *Dysk* może być utworzony w następujący sposób:
 
@@ -50,7 +50,7 @@ W przypadku utworzenia *Dysku* na podstawie importowanego pliku należy spełni�
 *Dysk* może zostać usunięty po spełnieniu następujących warunków:
 
  * *Dziennik* znajduje się w stanie ```Rozłączony```
- * wszystkie ogólne warunki *usunięcia zasobu*
+ * wszystkie [ogólne warunki usunięcia *Zasobu*](/platform/resource.md#usuniecie)
 
 ## Warianty
 
