@@ -2,19 +2,19 @@
 
 ## Przeznaczenia
 
-*Rezerwacja* przeznaczony jest do uzyskania gwarantowanych zasobów. Stanowi także możliwość ograniczenia kosztów usług. Dostępne w wielu wariantach, które różnią się ceną i zapewnionymi zasobami, aby spełnić szczególne wymagania biznesowe.
+*Rezerwacja* przeznaczony jest do uzyskania gwarantowanych zasobów. Stanowi także możliwość ograniczenia kosztów usług. Dostępne w wielu wariantach, które różnią się ceną i zapewnionymi *Zasobami*, aby spełnić szczególne wymagania biznesowe.
 
 ## Cykl życia
 
 ### Utworzenie
 
-*Rezerwacja* może zostać utworzona, jeśli spełnione zostały wszystkie *ogólne warunki*. 
+*Rezerwacja* może zostać utworzona, jeśli spełnione zostały wszystkie *ogólne warunki*.
 
 ### Usuwanie
 
-*Rezerwacja* ulega automatycznemu usunięciu wraz z upływem okresu jej ważności.
+*Rezerwacja* może zostać utworzona, jeżeli:
 
-// TODO: Add description & pricing calculation for reservation transform
+* okres ważności *Rezerwacji* upłynął.
 
 ## Warianty
 
@@ -32,22 +32,44 @@
 
 ## Zarządzanie
 
-W celu wykorzystania *Rezerwacji* konieczne jest podpięcie jej do *Zasobu*, co możliwe jest do wykonania:
+Dla *Rezerwacji* charakterystyczne są następujące operacje:
 
-* podczas utworzenia zasobu,
-* względem istniejącego zasobu.
+ * przypisanie *Rezerwacji* do *Zasobu*
+ * wydłużenie *Rezerwacji*
+ * zmiana *Rezerwacji*
 
-*Rezerwacja* uwalniana jest do ponownego wykorzystania wraz z usunięciem *Zasobu*.
+### Przypisanie
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * *Rezerwacja* nie posiada aktualnie przypisanego *Zasobu*
+ * *Usługa* *Zasobu* objęta przypisywaną *Rezerwacja* nie posiada przypisanej żadnej *Rezerwacji*
+
+
+### Wydłużenie
+
+Operacja umożliwienia zwiększenie okresu rozliczeniowego rezerwacji o następny okres rozliczeniowy.
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * *Rezerwacja* jest nieważna w następnym cyklu rozliczeniowym
+ * zostały spełnione wszystkie warunki utworzenia Rezerwacji
+
+## Zmiana
+
+Operacja zmiany *Rezerwacji* polega na dokonaniu nowej Rezerwacji (jednej lub kilku) oraz rezygnacji z posiadanej Rezerwacji na rzecz nowo dokonanej Rezerwacji (jednej lub kilku).
+
+Koszt operacji został przedstawiony w [Regulaminie świadczenia usługi](/platform/terms-of-services.md).
+
+W celu wykonania operacji [prosimy o kontakt](/about-us/contact.md).
 
 ## Płatność
 
 * opłaty za rezerwacja naliczona jest jednorazowo za pełny okres rezerwacji
 
-* czas dostępności jest liczony w latach określonych dla właściwego wariantu
+* czas rezerwacji jest liczony w latach określonych dla właściwego wariantu
 
-* opłaty za zasób naliczane są zgodnie z warunkami właściwymi dla niego z uwzględnieniem stawek właściwych dla rezerwacji. W momencie upływu jej ważności cena ulega przywróceniu.
-
-TODO: Zmiana wariantu *Wirtualnej Maszyny* wstrzymuje do powrotu pierwotnego wariantu obniżenie opłaty.
+* opłaty za *Zasobu* naliczane są zgodnie z warunkami właściwymi dla danego *Zasobu* z uwzględnieniem stawek właściwych dla rezerwacji. W momencie upływu jej ważności cena ulega przywróceniu.
 
 ## Ograniczone użycie
 
@@ -68,7 +90,7 @@ Przekazanie *Rezerwacji* jest możliwe między *Projektami* tej samej *Organizac
 ### Maszyny wirtualne ogólnego przeznaczenia
 
 Wariant              | Cena rezerwacji (PLN)| Okres (lata) | Cena zasobu (PLN)
--------------------- | -------------------- | -----------: | ----------------- 
+-------------------- | -------------------- | -----------: | -----------------
 m2.tiny, 1 year      | 120.49               |            1 | 0.0098
 m2.tiny, 3 year      | 232.38               |            3 | 0.0059
 m2.small, 1 year     | 187.64               |            1 | 0.0153
