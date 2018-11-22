@@ -1,6 +1,6 @@
 # Rezerwacja
 
-## Przeznaczenia
+## Przeznaczenie
 
 *Rezerwacja* przeznaczona jest do uzyskania gwarantowanych zasobów. Stanowi także możliwość ograniczenia kosztów usług. Dostępna w wielu wariantach, które różnią się ceną i zapewnionymi *Zasobami*, aby spełnić szczególne wymagania biznesowe.
 
