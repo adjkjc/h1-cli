@@ -4,11 +4,17 @@
 
 Dokument wyjaśnia w jaki sposób przekazać *Zasób* pomiędzy *Projektami*.
 
+## Warunki wstępne
+
+Warunki wstępne przekazania *Zasobu* zostały przedstawione w dokumentacji każdego z *Zasobów*.
+
 ## Instrukcja
 
 ### Panel
 
 Poniżej przedstawiono przekazanie *Adresu IP*. Analogiczne postępowanie jest w przypadku innych zasobów.
+
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -63,9 +69,11 @@ Poniżej przedstawiono przekazanie *Adresu IP*. Analogiczne postępowanie jest w
 ]
 ```
 
-#### CLI
+### CLI
 
-W celu wykonania operacji z wykorzystaniem CLI - w przypadku *Adresu IP* - wykonaj następujące polecenie:
+Poniżej przedstawiono wykonanie operacji dla *Adresu IP*. Analogiczne postępowanie jest w przypadku innych zasobów.
+
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```bash
 h1 ip transfer --ip IP --new-project NEW-PROJECT

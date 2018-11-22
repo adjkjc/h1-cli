@@ -8,7 +8,9 @@ Dokument wyjaśnia w jaki sposób zmienić nazwę *[Zasobu](/platform/resource.m
 
 ### Panel
 
-Poniżej przedstawiono zmianę nazwy *Wirtualnej Maszyny*. Analogiczne postępowanie jest w przypadku innych zasobów.
+Poniżej przedstawiono wykonanie operacji dla *Wirtualnej Maszyny*. Analogiczne postępowanie jest w przypadku innych zasobów.
+
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```guide
 [
@@ -63,7 +65,9 @@ Poniżej przedstawiono zmianę nazwy *Wirtualnej Maszyny*. Analogiczne postępow
 
 ### CLI
 
-W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
+Poniżej przedstawiono wykonanie operacji dla *Wirtualnej Maszyny*. Analogiczne postępowanie jest w przypadku innych zasobów.
+
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```bash
 h1 vm rename --vm MyVm --new-name MyNamedVm

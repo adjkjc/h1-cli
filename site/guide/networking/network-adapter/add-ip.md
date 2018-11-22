@@ -84,7 +84,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 ]
 ```
 
-#### CLI
+### CLI
 
 W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 

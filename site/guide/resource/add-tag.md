@@ -6,9 +6,11 @@ Dokument wyjaśnia w jaki sposób dodać *Tag* do *[Zasobu](/platform/resource.m
 
 ## Instrukcja
 
-#### CLI
+### CLI
 
-W celu wykonania operacji z wykorzystaniem CLI - w przypadku *Wirtualnej Maszyny* - wykonaj następujące polecenie:
+Poniżej przedstawiono wykonanie operacji dla *Wirtualnej Maszyny*. Analogiczne postępowanie jest w przypadku innych zasobów.
+
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```bash
 h1 vm tag add --vm MyVm --tag Key=Value

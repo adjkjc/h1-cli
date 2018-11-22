@@ -12,7 +12,7 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 
 ## Instrukcja
 
-#### Panel
+### Panel
 
 ```guide
 [
@@ -67,7 +67,7 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 ]
 ```
 
-#### CLI
+### CLI
 
 W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 

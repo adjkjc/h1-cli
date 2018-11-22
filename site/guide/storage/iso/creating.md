@@ -71,7 +71,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 ]
 ```
 
-#### CLI
+### CLI
 
 W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
@@ -90,7 +90,7 @@ Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="iso create"].
 Utworzenie *ISO* na podstawie pliku lokalnego umożliwia przeniesienie istniejącego dysku ```.iso``` do platformy umożliwia
 wykorzystanie obrazów *ISO*, które nie są publicznie dostępne. 
 
-#### CLI
+### CLI
 
 W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 

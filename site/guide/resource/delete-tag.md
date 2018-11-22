@@ -6,9 +6,11 @@ Dokument wyjaśnia w jaki sposób usunąć *Tag* z *[Zasobu](/platform/resource.
 
 ## Instrukcja
 
-#### CLI
+### CLI
 
-W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
+Poniżej przedstawiono wykonanie operacji dla *Wirtualnej Maszyny*. Analogiczne postępowanie jest w przypadku innych zasobów.
+
+W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 
 ```bash
 h1 vm tag delete --vm MyVm --tag Key

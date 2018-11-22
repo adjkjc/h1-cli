@@ -12,7 +12,7 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
 
 ## Instrukcja
 
-#### CLI
+### CLI
 
 W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 

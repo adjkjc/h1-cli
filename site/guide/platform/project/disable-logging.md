@@ -6,7 +6,7 @@ Dokument wyjaśnia w jaki sposób wyłączyć rejestrowanie operacji *[Projektu]
 
 ## Instrukcja
 
-#### CLI
+### CLI
 
 W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 

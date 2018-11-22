@@ -6,7 +6,7 @@ Dokument wyjaśnia w jaki sposób dodać *Konta Usługi* do [Projektu](/platform
 
 ## Instrukcja
 
-#### CLI
+### CLI
 
 W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 

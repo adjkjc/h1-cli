@@ -60,7 +60,7 @@ const actions = {
             content.push(` UNKNOWN`);
             throw(new Error(JSON.stringify(data)));
         }
-        return content.join(" ");
+        return content.join(" ") + "\n";
     },
     identity: (data) => `Zidentyfikuj właściwy zasób typu <code>${data.label}</code>`,
     form: (data) => {
@@ -129,7 +129,7 @@ const actions = {
         content += `</ul>\n`;
 
         if (!data.defined_all) {
-            content += 'Pozostaw sugerowane wartości w pozostałych polach\n'
+            content += 'Pozostaw sugerowane wartości w pozostałych polach.\n'
         }
 
         return content;
@@ -154,7 +154,7 @@ const replacer = (match, p1) => {
             new_content += `</li>\n`;
         }
         new_content += "</ol>";
-        new_content += `<DebugContent>${utils.dump(action_set)}</DebugContent>\n\n`;
+        new_content += `<DebugContent>${utils.dump(action_set)}</DebugContent>\n`;
     } catch (err) {
         new_content += `<code>\n${err.stack.toString()}\n</code>`;
         new_content += utils.dump(p1.trim(), 'json');

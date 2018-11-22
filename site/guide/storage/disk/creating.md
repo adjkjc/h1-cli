@@ -75,7 +75,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 ]
 ```
     
-#### CLI
+### CLI
 
 W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
@@ -94,7 +94,7 @@ Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="disk create"].
 
 Utworzenie dysku poprzez import umożliwia przeniesienie istniejącego dysku ```.vhdx``` do platformy. Taki dysk już od samego początku może zawierać dane użytkownika gotowe do wykorzystania.
 
-#### CLI
+### CLI
 
 W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
