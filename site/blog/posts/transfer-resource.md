@@ -1,4 +1,4 @@
-# Przekazanie zasobu pomiędzy Projektami
+# Przekazanie Zasobu pomiędzy Projektami
 
 <img :src="$withBase('/media/transfer-resource.png')">
 
