@@ -14,11 +14,11 @@ W niniejszej dokumentacji przykłady poleceń są zapisywane z wykorzystaniem [H
 
 Wykorzystywane w dokumencie pojęcia oznaczają:
 
-* *Użytkownik* przeznaczony jest do zarządzania zasobami platformy przez osoby fizyczne. Wykorzystuje platformę do zarządzania *Zasobami* np. poprzez CLI lub panel. Więcej informacji w artykule *[Użytkownik](/site/platform/user.md)
+* *Użytkownik* przeznaczony jest do zarządzania zasobami platformy przez osoby fizyczne. Wykorzystuje platformę do zarządzania *Zasobami* np. poprzez CLI lub panel. Więcej informacji w artykule *[Użytkownik](/platform/user.md)
 )*.
-* *Projekt* przeznaczony jest do logicznego zgrupowania zasobów, którego dla Organizacji mają wspólny cel i przeznaczenie. Więcej informacji w artykule *[Projekt](/site/platform/project.md).
-* *Zasób* stanowi obiekt w infrastrukturze Platformy, z którym *Użytkownik* może współdziałać i go modyfikować. Więcej informacji w artykule *[Zasób](/site/platform/resource.md)*.
-* *Konto usługi* to dane dostępowe umożliwiające wykonywanie modyfikacji *Zasobów* *Projektu* w imieniu *Użytkownika* przez aplikacje tj. skrypty, urządzenia lub inne procesy automatyzujące. Przypisany jest zawsze do jednego Projektu. Więcej w sekcji *Konto Usługi* artykułu *[Projekt](/site/platform/project.md)*.
+* *Projekt* przeznaczony jest do logicznego zgrupowania zasobów, którego dla Organizacji mają wspólny cel i przeznaczenie. Więcej informacji w artykule *[Projekt](/platform/project.md).
+* *Zasób* stanowi obiekt w infrastrukturze Platformy, z którym *Użytkownik* może współdziałać i go modyfikować. Więcej informacji w artykule *[Zasób](/platform/resource.md)*.
+* *Konto usługi* to dane dostępowe umożliwiające wykonywanie modyfikacji *Zasobów* *Projektu* w imieniu *Użytkownika* przez aplikacje tj. skrypty, urządzenia lub inne procesy automatyzujące. Przypisany jest zawsze do jednego Projektu. Więcej w sekcji *Konto Usługi* artykułu *[Projekt](/platform/project.md)*.
 
 
 ## Uwierzytelnienie dostępu do *Platformy*
