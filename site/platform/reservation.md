@@ -1,4 +1,4 @@
-# Rezerwacje
+# Rezerwacja
 
 ## Przeznaczenia
 
