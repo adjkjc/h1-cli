@@ -131,6 +131,7 @@ module.exports = {
             md.use(require('./condition'), require('./../h1-cli/package.json').version);
             md.use(require('./generator').guide);
             md.use(require('./generator').tutorial);
+            md.use(require('./generator').price_table);
             md.use(require('./cli-link'));
             md.use(require('./price-tag'));
         }

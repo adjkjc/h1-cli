@@ -1,18 +1,14 @@
 const fs = require('fs');
 const superagent = require('superagent');
 
+const utils = require('./utils');
+
 const PRICE_TAG_RE = /\[PRICE="(.+?)"\]/g;
 const PERIOD_TAG_RE = /\[PERIOD="(.+?)"\]/g;
 
 const getPrice = () => superagent
     .get('https://api.hyperone.com/v1/service')
     .then(resp => resp.body);
-
-const display_name = {
-    'y': value => value >= 5 ? 'lat': (value > 2 ? 'lata' : 'rok'),
-    'm': value => value >= 5 ? 'miesięcy': (value > 2 ? 'miesiące' : 'miesiąc'),
-    'h': value => value >= 5 ? 'godzin': (value > 2 ? 'godziny' : 'godzina')
-};
 
 const replacer = (price, type) => (match, p1) => {
     const [resource, name] = p1.split(":");
@@ -27,10 +23,9 @@ const replacer = (price, type) => (match, p1) => {
     }
 
     if (type === "price") {
-        return services[0].billing.price.PLN.toFixed(4)
+        return utils.display_price(services[0].billing.price.PLN)
     } else if (type === "period") {
-        const [, value, name] = /^([0-9]+)([a-zA-Z]+)$/g.exec(services[0].billing.period);
-        return `${value} ${display_name[name.toLowerCase()](value)}`;
+        return utils.display_period(services[0].billing.period)
     } else {
         throw new Error(`Invalid type of replacer (${type}) in pricing (${p1}).`);
     }
