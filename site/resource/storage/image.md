@@ -82,9 +82,13 @@ obraz              | [PERIOD="image:image standard"] | [PRICE="image:image stand
 
 ## Przewodniki
 
-Do korzystania z *Obrazu* mogą być przydatne następujące przewodniki:
+Do korzystania z *Obrazu* mogą być przydatne następujące specjalne przewodniki:
 
 <PageList path_re="guide/storage/image/"/>
+
+Użyteczne mogą okazać się także następujące ogólne przewodniki:
+
+<PageList path_re="guide/resource/"/>
 
 ## Powiązane produkty
 

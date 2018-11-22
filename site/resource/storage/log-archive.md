@@ -123,9 +123,13 @@ Dziennik     | [PERIOD="logArchive:logArchive"]  | [PRICE="logArchive:logArchive
 
 ## Przewodniki
 
-Do korzystania z *Dziennika* mogą być przydatne następujące przewodniki:
+Do korzystania z *Dziennika* mogą być przydatne następujące specjalne przewodniki:
 
 <PageList path_re="guide/storage/log-archive/"/>
+
+Użyteczne mogą okazać się także następujące ogólne przewodniki:
+
+<PageList path_re="guide/resource/"/>
 
 ## Powiązane produkty
 

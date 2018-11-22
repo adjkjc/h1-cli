@@ -392,9 +392,13 @@ Transfer is not availabe due following reason:
 
 ## Przewodniki
 
-Do korzystania z *Wirtualnej maszyny* mogą być przydatne następujące przewodniki:
+Do korzystania z *Wirtualnej maszyny* mogą być przydatne następujące specjalne przewodniki:
 
 <PageList path_re="guide/compute/virtual-machine/"/>
+
+Użyteczne mogą okazać się także następujące ogólne przewodniki:
+
+<PageList path_re="guide/resource/"/>
 
 ## Powiązane produkty
 

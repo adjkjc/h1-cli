@@ -104,8 +104,7 @@ const tasks = {
         } else {
             throw new Error("Not implemented yet");
         }
-        content += 'Zapisz wprowadzone zmiany. ';
-        content += 'Od teraz to polecenie będzia automatycznie, regularnie wykonywane.\n';
+        content += 'Zapisz wprowadzone zmiany. Zapisz wprowadzone zmiany. Od teraz to polecenie będzia automatycznie, regularnie wykonywane.\n';
         return content;
     },
     apt: (data, prev, next, ctx) => {
@@ -231,11 +230,11 @@ const tasks = {
         if (data.value === 'position') {
             content += `W celu zidentyfikowania właściwej partycji przeanalizuj wynik następującego polecenia:`;
             content += shell_explain(`parted ${dev} print`);
-            content += "Zwróć szczególną uwagę na numer partycji (będzie ona wymagana w kolejnym etapie) i jego rozmiar.";
+            content += "Zwróć szczególną uwagę na numer partycji (będzie ona wymagana w kolejnym etapie) i jego rozmiar.\n";
         } else if (data.value === 'path') {
             content += `W celu zidentyfikowania właściwej partycji przeanalizuj wynik następującego polecenia:`;
             content += shell_explain(`sfdisk -l ${dev}`);
-            content += "Zwróć szczególną uwagę na ścieżkę partycji (będzie ona wymagana w kolejnym etapie) i rozmiar.";
+            content += "Zwróć szczególną uwagę na ścieżkę partycji (będzie ona wymagana w kolejnym etapie) i rozmiar.\n";
         } else {
             throw new Error("Not implemented yet");
         }
@@ -435,7 +434,7 @@ const replacer = (match, p1) => {
         // new_content += "</ol>";
         const task_list = yaml.safeLoad(p1.trim());
         new_content += get_content_for_task_list(task_list, 2, {});
-        new_content += `<DebugContent>${utils.dump(task_list)}</DebugContent>`;
+        new_content += `<DebugContent>${utils.dump(task_list)}</DebugContent>\n\n`;
     } catch (err) {
         new_content += `<code>\n${err.stack.toString()}\n</code>`;
         new_content += utils.dump(p1.trim(), 'json');

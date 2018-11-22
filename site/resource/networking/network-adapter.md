@@ -92,9 +92,13 @@ adapter sieciowy w *Sieci* publicznej | [PERIOD="netadp:public"] | [PRICE="netad
 
 ## Przewodniki
 
-Do korzystania z *Adaptera sieciowego* mogą być przydatne następujące przewodniki:
+Do korzystania z *Adaptera sieciowego* mogą być przydatne następujące specjalne przewodniki:
 
 <PageList path_re="guide/networking/network-adapter/"/>
+
+Użyteczne mogą okazać się także następujące ogólne przewodniki:
+
+<PageList path_re="guide/resource/"/>
 
 ### Powiązane produkty
 

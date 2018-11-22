@@ -168,9 +168,13 @@ archive   | [PERIOD="disk:archive"] | [PRICE="disk:archive"] |
 
 ## Przewodniki
 
-Do korzystania z *Dysku* mogą być przydatne następujące przewodniki:
+Do korzystania z *Dysku* mogą być przydatne następujące specjalne przewodniki:
 
 <PageList path_re="guide/storage/disk/"/>
+
+Użyteczne mogą okazać się także następujące ogólne przewodniki:
+
+<PageList path_re="guide/resource/"/>
 
 ## Powiązane produkty
 
