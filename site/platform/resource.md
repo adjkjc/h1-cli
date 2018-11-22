@@ -81,12 +81,13 @@ Przekazanie wymaga spełnienia następujących warunków:
 * Zasób nie jest w stanie *Ograniczonego użycia*
 * spełnione są warunki usunięcia *Zasobu* w pierwotnym *Projekcie*
 * *Użytkownik* posiada rolę ```owner``` w *Projekcie* przekazującym i w *Projekcie* docelowym
-* spełnione są warunki usunięcia *Zasobu* w pierwotnym *Projekcie*
 * docelowy *Projekt* posiada dostęp do wszystkich *Usług* *Zasobu*
-* docelowy *Projekt* posiada środki na pierwszy pełny okres rozliczeniowy
-* zdarzenia w historii zdarzeń dla *Zasobu* są widoczne tylko dla zdarzeń generowanych przez bieżący *Projekt*, do którego przypisany jest *Zasób*
-* opłata jest naliczana za pierwszy pełny okres rozliczeniowy
+* docelowy *Projekt* posiada środki wystarczające na pierwszy pełny okres rozliczeniowy *Zasobu*
 
+W przypadku przekazania *Zasobu*:
+
+* zdarzenia w historii zdarzeń dla niego są widoczne tylko dla zdarzeń generowanych przez bieżący *Projekt*, do którego przypisany jest *Zasób*.
+* naliczana jest opłata za pierwszy pełny okres rozliczeniowy
 
 # Przewodniki
 
