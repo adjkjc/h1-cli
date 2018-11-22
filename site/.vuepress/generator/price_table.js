@@ -20,7 +20,7 @@ const replacer = (services) => (match, p1) => {
     }));
     const content = [];
     content.push('Wariant | Cena rezerwacji (PLN)| Okres | Cena zasobu (PLN)');
-    content.push('------- | -------------------- | ----: | -----------------');
+    content.push('------- | -------------------: | :---: | ----------------:');
     content.push(...rows.map(line => {
         return Object.values(line).map(x => x.toString()).join(" | ")
     }));
