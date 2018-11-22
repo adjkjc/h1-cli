@@ -6,7 +6,7 @@ Przedstawimy w jaki sposób wykorzystać rsync w celu wykorzystania cyklicznej k
 
 Przedstawiona procedura może służyć także do konwersji danych *Dysku* do *Vault*.
 
-Wykorzystywany jest parametry```-M--fake-super```, który oznacza, że na zdalnym serwerze atrybuty uprzywilejowane (właściciel pliku itp.) są przechowywane za pomocą specjalnych rozszerzonych atrybutów dołączonych do każdego pliku.
+<!-- Wykorzystywany jest parametry```-M--fake-super```, który oznacza, że na zdalnym serwerze atrybuty uprzywilejowane (właściciel pliku itp.) są przechowywane za pomocą specjalnych rozszerzonych atrybutów dołączonych do każdego pliku. -->
 
 ## Warunki wstępne
 
@@ -24,13 +24,13 @@ Przed przystąpieniem do integracji powinieneś mieć:
   block:
     - name: Wykonaj początkową synchronizacje
       shell:
-        cmd: rsync -av -M--fake-super backupowany_katalog {{resource_id}}@vault.pl-waw-1.hyperone.com:~/
+        cmd: rsync -av backupowany_katalog {{resource_id}}@vault.pl-waw-1.hyperone.com:~/backup-dir
 - name: Automatyzacja
   block:
   - name: Dodaj do harmonogramu automatyczną synchronizacje
     cron:
-        job: rsync -av -M--fake-super backupowany_katalog {{resource_id}}@vault.pl-waw-1.hyperone.com:~/
-        special_time: daily
+      job: rsync -av backupowany_katalog {{resource_id}}@vault.pl-waw-1.hyperone.com:~/backup-dir
+      special_time: daily
 ```
 
 ## Zobacz także
