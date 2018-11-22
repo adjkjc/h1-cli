@@ -169,6 +169,6 @@ Liczba progów śródków            | 20
 
 ## Przewodniki
 
-Dostępne są następujące przewodniki dla *Zasobu*:
+Do korzystania z *Projektu* mogą być przydatne następujące przewodniki:
 
 <PageList path_re="/guide/platform/project/"/>
