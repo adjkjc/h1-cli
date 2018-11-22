@@ -13,7 +13,7 @@
  * uiszczenia zapłaty
  * wprowadzenia kodu promocyjnego
  
-Uiszczenie zapłaty jest możliwa następującymi drogami:
+Uiszczenie zapłaty jest możliwe następującymi drogami:
 
 * tradycyjnym przelewem,
 * PayPal
