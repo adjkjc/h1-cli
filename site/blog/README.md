@@ -1,1 +1,1 @@
-posts/vm-vertical-scaling.md
+posts/transfer-resource.md
