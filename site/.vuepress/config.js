@@ -8,16 +8,13 @@ const services_category = {
     children: show_directory('services', ['general.md', 'README.md'])
 };
 
+const top_platform = ['resource.md', 'payments.md', 'organization.md', 'project.md', 'general.md', 'user.md',  'terms-of-services.md', 'privacy-policy.md'];
+
 const platform_category = {
     title: 'O platformie',
     children: [
-        '/platform/general.md',
-        '/platform/user.md',
-        '/platform/organization.md',
-        '/platform/project.md',
-        '/platform/resource.md',
-        '/platform/terms-of-services.md',
-        '/platform/privacy-policy.md'
+        ...top_platform.map(fn => `/platform/${fn}`),
+        ...show_directory('platform', top_platform)
     ]
 };
 

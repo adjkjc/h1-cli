@@ -162,7 +162,7 @@ Dostępne są następujące kanały powiadomień:
  * wiadomość tekstowa sms
  * wiadomość pocztą elektroniczną
 
-# Parametry techniczne
+## Parametry techniczne
 
 Parametr                                 | Wartość
 ---------------------------------------- | ----------

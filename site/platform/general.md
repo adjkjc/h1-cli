@@ -1,20 +1,5 @@
 # Informacje ogólne
 
-## Płatność
-
-### Opłaty
-
-Opłaty na podstawie czasu są naliczane od utworzenia *Zasobu* do usunięcia *Zasobu*.
-
-### Ogólne warunki opłat
-
-* czas jest zaokrąglany w górę do najbliższego okresu rozliczeniowego.
-* rozmiar jest zaokrąglany w górę do najbliższej jednostki rozliczeniowej.
-
-### Brak dostępnych środków
-
-Jeśli *Projekt* nie ma dostępnych środków, wówczas *Ograniczone użycie* zostanie zastosowane do *Zasobu*.
-
 ## Regiony
 
 Usługi są świadczone z następujących lokalizacji:

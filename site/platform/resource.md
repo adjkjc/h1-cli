@@ -81,7 +81,19 @@ W przypadku przekazania *Zasobu*:
 
 Nie ulegają zmianie cykle rozliczeniowe, a standardowe opłaty za usługi są naliczane do czasu usunięcia *Zasobu*.
 
+## Opłaty
+
+* Opłaty na podstawie czasu są naliczane od utworzenia *Zasobu* do usunięcia *Zasobu*.
+
+* Czas jest zaokrąglany w górę do najbliższego okresu rozliczeniowego.
+
+* Rozmiar jest zaokrąglany w górę do najbliższej jednostki rozliczeniowej.
+
 ## Ograniczone użycie
+
+### Brak dostępnych środków
+
+Jeśli *Projekt* nie ma dostępnych środków, wówczas *Ograniczone użycie* zostanie zastosowane do *Zasobu*.
 
 ### Zarządzanie
 

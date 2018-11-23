@@ -42,11 +42,11 @@
             };
             fetch("/api_v1/image/recommended")
                 .then((response) => response.json())
-                .catch(() => this.$set(this, 'status', 'error'))
                 .then(data => {
                     this.$set(this, 'status', 'success');
                     this.$set(this, 'images', data.filter(validator(this.name_re)));
-                });
+                })
+                .catch(() => this.$set(this, 'status', 'error'));
         },
         filters: {
             relativeTime: function (value) {
