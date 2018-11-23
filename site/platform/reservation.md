@@ -2,32 +2,33 @@
 
 ## Przeznaczenie
 
-*Rezerwacja* przeznaczona jest do uzyskania gwarantowanych zasobów. Stanowi także możliwość ograniczenia kosztów usług. Dostępna w wielu wariantach, które różnią się ceną i zapewnionymi *Zasobami*, aby spełnić szczególne wymagania biznesowe.
+*Rezerwacja* stanowi możliwość znaczącego obniżnia kosztów usług oraz uzyskania gwarantowanych zasobów. Dostępna w wielu wariantach, które różnią się ceną i zapewnionymi *Zasobami*, aby spełnić szczególne wymagania biznesowe.
 
 ## Cykl życia
 
 ### Utworzenie
 
-*Rezerwacja* może zostać utworzony po spełnieniu następujących warunków:
+*Rezerwacja* może zostać utworzona po spełnieniu następujących warunków:
 
  * wszystkie [ogólne warunki utworzenia *Zasobu*](/platform/resource.md#utworzenie)
 
 ### Usuwanie
 
-*Rezerwacja* może zostać utworzona, jeżeli:
+*Rezerwacja* może zostać usunięta, jeżeli:
 
 * okres ważności *Rezerwacji* upłynął.
+ * wszystkie [ogólne warunki usunięcia *Zasobu*](/platform/resource.md#usuniecie)
 
 ## Warianty
 
-*Rezerwacja* możliwa jest dla następujących zasobów:
+*Rezerwacja* możliwa jest dla następujących *Zasobów*:
 
 * Maszyny wirtualne do ogólnego użytku
 * Maszyna wirtualna do zadań wykorzystujących procesor
 * Maszyny wirtualne do zadań wykorzystujących pamięć
 * Kontenery
 
-*Rezerwacja* możliwa jest na następujący okres:
+*Rezerwacja* możliwa jest na następujące okresy:
 
 * 1 rok
 * 3 lata
@@ -37,29 +38,31 @@
 Dla *Rezerwacji* charakterystyczne są następujące operacje:
 
  * przypisanie *Rezerwacji* do *Zasobu*
- * wydłużenie *Rezerwacji*
+ * przedłużenie *Rezerwacji*
  * zmiana *Rezerwacji*
 
 ### Przypisanie
 
+Operacja umożliwia wykorzystanie *Rezerwacji* w celu obniżenia ceny *Zasobu*.
+
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
  * *Rezerwacja* nie posiada aktualnie przypisanego *Zasobu*
- * *Usługa* *Zasobu* objęta przypisywaną *Rezerwacja* nie posiada przypisanej żadnej *Rezerwacji*
+ * *Usługa* *Zasobu* do której ma zostać przypisana *Rezerwacja* nie posiada przypisanej żadnej innej *Rezerwacji*
 
+### Przedłużenie
 
-### Wydłużenie
-
-Operacja umożliwienia zwiększenie okresu rozliczeniowego rezerwacji o następny okres rozliczeniowy.
+Operacja umożliwia przedłużenie okresu rozliczeniowego rezerwacji o następny okres rozliczeniowy.
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
- * *Rezerwacja* jest nieważna w następnym cyklu rozliczeniowym
- * zostały spełnione wszystkie warunki utworzenia Rezerwacji
+ * obecny cykl rozliczeniowy dla *Rezerwacji* jest ostatnim cyklem
+ * operacja przedłużenia wykonana została przed okresem zakończenia *Rezerwacji*
+ * zostały spełnione wszystkie warunki utworzenia *Rezerwacji*
 
 ## Zmiana
 
-Operacja zmiany *Rezerwacji* polega na dokonaniu nowej Rezerwacji (jednej lub kilku) oraz rezygnacji z posiadanej Rezerwacji na rzecz nowo dokonanej Rezerwacji (jednej lub kilku).
+Operacja umożliwia zmianę *Rezerwacji* poprzez dokonanie nowej *Rezerwacji* (jednej lub kilku) oraz rezygnacji z posiadanej *Rezerwacji* rozliczając niewykorzystana wartość *Rezerwacji* na rzecz nowej *Rezerwacji* (jednej lub kilku).
 
 Koszt operacji został przedstawiony w [Regulaminie świadczenia usługi](/platform/terms-of-services.md).
 
@@ -71,7 +74,9 @@ W celu wykonania operacji [prosimy o kontakt](/about-us/contact.md).
 
 * czas rezerwacji jest liczony w latach określonych dla właściwego wariantu
 
-* opłaty za *Zasobu* naliczane są zgodnie z warunkami właściwymi dla danego *Zasobu* z uwzględnieniem stawek właściwych dla rezerwacji. W momencie upływu jej ważności cena ulega przywróceniu.
+* opłaty za *Zasób* naliczane są zgodnie z warunkami właściwymi dla danego *Zasobu* z uwzględnieniem stawek *Rezerwacji*. W momencie upływu jej ważności cena ulega przywróceniu.
+
+* okres *Rezerwacji* wymaga wykonania operacji przedłużenia co spowoduje zmianę daty zakończenia okresu *Rezerwacji* dodając kolejny okres
 
 ## Ograniczone użycie
 
