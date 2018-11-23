@@ -8,7 +8,7 @@
 
 #### Utworzenie
 
-*Płatność* ulega utworzenia przez *Platformę* w następujących sytuacji;
+*Płatność* ulega utworzenia przez *Platformę* w następujących sytuacji:
 
  * uiszczenia zapłaty
  * wprowadzenia kodu promocyjnego
