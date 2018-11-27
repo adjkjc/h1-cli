@@ -52,7 +52,7 @@ W tych obrazach skonfigurowane są następujące elementy:
 
 * zainstalowane wszystkie aktualizacje i skonfigurowane automatyczne aktualizacje systemu
 * skonfigurowany bootloader
-* ustawiona strefa czasowa CET
+* ustawiona strefę czasowa CET
 * wyłączona obsługę IPv6
 * zainstalowany menadżer pakietów [GooGet](https://github.com/google/googet) i skonfigurowany z repozytorium HyperOne
 * w celu dostarczenia dostosowanego [agenta HyperOne](https://github.com/hyperonecom/compute-image-windows) zainstalowane następujące pakiety GooGet:
@@ -62,7 +62,7 @@ W tych obrazach skonfigurowane są następujące elementy:
     * google-compute-engine-auto-updater
 * agent HyperOne, który:
     * ustawia nazwę hosta na nazwę instancji.
-    * uruchamia dostarczony przez użytkownika skrypt startowy z [Metadanych](/resource/compute/virtual-machine.md#Metadane) użytkownika.
+    * uruchamia dostarczony przez użytkownika skrypt startowy z [Metadanych](/resource/compute/virtual-machine.md#Metadane) użytkownika jako skrypt Powershell.
     * aktywuje system Windows przy użyciu serwera KMS.
     * konfiguruje RDP i WinRM, aby umożliwić zdalne logowanie.
 
