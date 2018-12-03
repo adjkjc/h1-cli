@@ -33,6 +33,8 @@ const actions = {
             content.push('Na poziomie nazwy pozycji kliknij trójkropek');
         } else if (data.type === 'tridot') {
             content.push(`Kliknij trójkropek`);
+        } else if (data.type === 'avatar') {
+            content.push(`Kliknij avatar Użytkownika `);
         } else {
             content.push("Wybierz UNKONWN");
         }
@@ -46,6 +48,8 @@ const actions = {
             content.push(`znajdujący się w środku strony`);
         } else if (data.location === "sidebar") {
             content.push(`znajdującą się w menu bocznym.`);
+        } else if (data.location === "nav-item-user") {
+            content.push(`znajdujący się w prawej, górnej części strony.`);
         } else if (data.location === "section") {
             if(data.type === 'tridot'){
                 content.push(`znajdujący się w sekcji "${data.section}".`);
@@ -63,6 +67,8 @@ const actions = {
         return content.join(" ") + "\n";
     },
     identity: (data) => `Zidentyfikuj właściwy zasób typu <code>${data.label}</code>`,
+    scan_qr_2fa: (data) => `Zeskanuj kod QR wyświetlony w oknie z wykorzystaniem aplikacji.`,
+    input_totp_code: (data) => `Wprowadź weryfikacji dwuetapowej wyświetlony na ekranie.`,
     form: (data) => {
         // {
         //     "action_name": "form",
