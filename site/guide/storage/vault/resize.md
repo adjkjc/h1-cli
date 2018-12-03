@@ -8,7 +8,7 @@ Dokument wyjaśnia w jaki sposób zwiększyć rozmiar [Vault](/resource/storage
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* wszystkie [warunki usuwania *Vault*](/resource/storage/vault.md#usuwanie)
+* wszystkie [warunki zwiększenia rozmiaru *Vault*](/resource/storage/vault.md#zwiekszenie-rozmiaru)
 
 ## Instrukcja
 
@@ -60,7 +60,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "steps": [
         {
           "name": "Nowy rozmiar Vault",
-          "type": "size",
+          "type": "text",
           "value": "25"
         }
       ],

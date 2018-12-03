@@ -1,4 +1,4 @@
-# Zwiększenie rozmiaru dysku
+# Zwiększenie rozmiaru Dysku
 
 ## Wprowadzenie
 
@@ -33,7 +33,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "type": "entry_resource",
       "selector": "navbar>.vm"
     },
-    "after_event": "Po kliknięciu pojawią` strona ze szczegółami danego zasobu.`"
+    "after_event": "Po kliknięciu pojawi się strona ze szczegółami danego zasobu."
   },
   {
     "action_name": "click",
