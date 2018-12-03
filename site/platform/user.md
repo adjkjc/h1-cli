@@ -26,9 +26,9 @@ Dostępne są następujące dedykowane operacje:
 * zarządzanie danymi dostępowymi
  * dodanie danych dostępowych
  * usunięcie danych dostępowych
-* zarządzanie dwuskładnikowym uwierzytelnianiem
- * włączenie dwuskładnikowego uwierzytelniania
- * wyłączenie dwuskładnikowego uwierzytelniania
+* zarządzanie weryfikacją dwuetapową
+ * włączenie weryfikacji dwuetapowej
+ * wyłączenie weryfikacji dwuetapowej
 * historia zdarzeń
 
 ### Zmiana hasła
@@ -77,25 +77,25 @@ Operacje mogą zostać wykonane po spełnieniu następujących warunków:
 
  * bez szczególnych warunków
 
-### Zarządzanie dwuskładnikowym uwierzytelnianiem
+### Zarządzanie weryfikacją dwuetapową
 
-Dostępne formy dwuskładnikowego uwierzytelniania:
+Dostępne formy weryfikacji dwuetapowej:
 
  * kody TOTP
  * kody zapasowe
 
-Następujące operacje przeznaczone do zarządzania danymi dostępowymi są dostępne:
+Następujące operacje przeznaczone do zarządzania weryfikacją dwuetapową są dostępne:
 
- * włączenie dwuskładnikowego uwierzytelniania
- * wyłączenie dwuskładnikowego uwierzytelniania
+ * włączenie weryfikacji dwuetapowej
+ * wyłączenie weryfikacji dwuetapowej
 
 Operacje mogą zostać wykonane po spełnieniu następujących warunków:
 
  * bez szczególnych warunków
 
-## Weryfikacja
+## Weryfikacja danych
 
-Podczas tworzenia Użytkownika lub w dowolnym późniejszym czasie może być wymagana weryfikacja Użytkownika.
+Podczas tworzenia Użytkownika lub w dowolnym późniejszym czasie może być wymagana weryfikacja danych Użytkownika.
 
 Jeśli wymagana będzie weryfikacja Użytkownika w późniejszym czasie to wpierw zwykle zostanie wyznaczony okres w którym Użytkownik powinien dokonać weryfikacji.
 
@@ -167,3 +167,9 @@ Dostępne są następujące kanały powiadomień:
 Parametr                                 | Wartość
 ---------------------------------------- | ----------
 Liczba członkostw w Organizacjach        | 3
+
+## Przewodniki
+
+Do korzystania z *Użytkownika* mogą być przydatne następujące przewodniki:
+
+<PageList path_re="/guide/platform/user/"/>
