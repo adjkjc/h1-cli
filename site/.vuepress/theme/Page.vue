@@ -4,6 +4,8 @@
 
     <Content :custom="false"/>
 
+    <Vote :path="pagePath"></Vote>
+
     <div class="page-edit">
       <div
         class="edit-link"
@@ -83,9 +85,12 @@ export default {
       }
       return 'Last Updated'
     },
-
+    pagePath () {
+        console.log('pagePath', this.$page.path);
+        return this.$page.path;
+    },
     prev () {
-      const prev = this.$page.frontmatter.prev
+      const prev = this.$page.frontmatter.prev;
       if (prev === false) {
         return
       } else if (prev) {
@@ -96,7 +101,7 @@ export default {
     },
 
     next () {
-      const next = this.$page.frontmatter.next
+      const next = this.$page.frontmatter.next;
       if (next === false) {
         return
       } else if (next) {
