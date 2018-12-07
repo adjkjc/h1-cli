@@ -54,7 +54,7 @@ icmp     | 104       | pozwól | icmp           | 0.0.0.0/0          | *
 Po utworzenia *Zapora sieciowa* posiada następujące domyślne reguły dla ruchu wychodzącego:
 
 Nazwa    | Priorytet | Akcja  | Filtr          | Strefa zewnętrzna  | Strefa wewnętrzna
--------: | :-------: | :----: | -------------- | ------------------ |
+-------: | :-------: | :----: | -------------- | ------------------ | ---
 all      | 101       | pozwól | tcp,udp        | 0.0.0.0/0          | *
 
 Strefa wewnętrzna określona jest poprzez *Tag* lub `*` dla każdego.

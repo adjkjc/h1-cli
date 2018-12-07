@@ -219,7 +219,7 @@ Skrypt przyjmuje następujące parametry:
  * ```-Email``` określa adres e-mail *Użytkownika*
  * ```-Password``` określa hasło *Użytkownika*
  * ```-Project``` określa identyfikator lub nazwę *Projektu*
- * ```-Vm``` określa identyfikator lub nazwę lokalnej wirtualnej maszyny
+ * ```-VMId``` określa identyfikator lokalnej wirtualnej maszyny
 
 Polecenie należy wykonać na lokalnym serwerze Hyper-V, gdzie wprowadza zmiany mające na celu:
 

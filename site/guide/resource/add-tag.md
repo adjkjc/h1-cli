@@ -4,6 +4,8 @@
 
 Dokument wyjaśnia w jaki sposób dodać *Tag* do *[Zasobu](/platform/resource.md)*,  w celu zbiorczego odwołania lub nadania Zasobom jednolitych właściwości.
 
+Można przypisać *Tagi* do *Zasobu*, aby podzielić je na różne sposoby, na przykład według celu, właściciela lub środowiska. Pomaga to szybko znaleźć konkretny *Zasób* na podstawie tagów, które zostały mu przypisane.
+
 ## Instrukcja
 
 ### CLI
