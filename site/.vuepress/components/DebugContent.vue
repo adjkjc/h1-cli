@@ -1,6 +1,6 @@
 <template>
     <div>
-        <slot if="prod"></slot>
+        <slot if="!prod"></slot>
     </div>
 </template>
 
