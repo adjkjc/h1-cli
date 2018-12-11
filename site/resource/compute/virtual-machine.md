@@ -201,6 +201,12 @@ Metadane chmury obejmują wszystkie informacje dotyczące konfiguracji *Wirtualn
 
 Jeśli plik `user.data` zawiera na początku pliku `shebang` (`#!`), to zostanie wykonany, jeśli zostanie znaleziony odpowiedni interpreter (zdefiniowany przez `shebang`).
 
+###### Modyfikacja Metadanych Użytkownika
+
+Operacja może zostać wykonana po spełnieniu następujących warunków:
+
+ * *Wirtualna Maszyna* nie znajduje się w stanie *Ograniczonego użycia*
+
 #### Interfejsy sieciowe
 
 Zarządzanie *Interfejsami sieciowymi* *Wirtualnej maszyny* może być wykonywane w stanie `Wyłączony`.
