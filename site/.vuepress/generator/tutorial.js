@@ -10,7 +10,9 @@ const escapeTemplate = key => key.replace('\{\{', '\\{\\{').replace('\}\}', '\\}
 const shell_explain = (cmd) => {
     let content = "";
     content += utils.dump(cmd, 'bash');
-    if (!cmd.trim().includes("\n")) {
+    const own_cli = (cmd) => cmd.startsWith('h1 ') && (!cmd.includes("|") || !cmd.includes("&&"));
+
+    if (!cmd.trim().includes("\n") && !own_cli(cmd)) {
         const url = "https://www.explainshell.com/explain?cmd=" + encodeURIComponent(cmd.trim());
         content += `Możesz zapoznać się z [objaśnieniem polecenia na explainshell.com](${url}).\n\n`;
     }
