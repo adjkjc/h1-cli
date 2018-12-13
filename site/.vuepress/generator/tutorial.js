@@ -11,7 +11,6 @@ const shell_explain = (cmd) => {
     let content = "";
     content += utils.dump(cmd, 'bash');
     const own_cli = (cmd) => cmd.startsWith('h1 ') && (!cmd.includes("|") || !cmd.includes("&&"));
-
     if (!cmd.trim().includes("\n") && !own_cli(cmd)) {
         const url = "https://www.explainshell.com/explain?cmd=" + encodeURIComponent(cmd.trim());
         content += `Możesz zapoznać się z [objaśnieniem polecenia na explainshell.com](${url}).\n\n`;
@@ -45,7 +44,7 @@ const partials = {
     },
     editor_initialize: (data, prev, next) => {
         if (!prev || task_data_for_task(prev).path !== data.path) {
-            return `Otwórz do edycji plik ${data.path} wykonując następujące polecenie:` +
+            return `Otwórz do edycji plik ${utils.quote}${data.path}${utils.quote} wykonując następujące polecenie:` +
                 shell_explain(`sudo nano ${data.path}`);
         }
         return '';
@@ -83,11 +82,15 @@ const tasks = {
     },
     service: (data, prev, next) => {
         let content = "";
-        if (data.state === "restarted") {
+        if (data.state === 'restarted') {
             content += `W celu zrestartowania usługi wykonaj następujące polecenie:`;
             content += shell_explain(`sudo systemctl restart ${data.name}`);
+        } else if (data.state === 'reloaded') {
+            content += `W celu przeładowania usługi wykonaj następujące polecenie:`;
+            content += shell_explain(`sudo systemctl reload ${data.name}`);
         } else {
-            throw new Error("Not implemented yet");
+            console.log({data:data, stateTypeOf: typeof data.state});
+            throw new Error(`Not implemented yet state '${data.state}' for service`);
         }
         return content;
     },
@@ -104,7 +107,7 @@ const tasks = {
         if (data.special_time) {
             content += utils.dump(`@${data.special_time} ${data.job}`);
         } else {
-            throw new Error("Not implemented yet");
+            throw new Error(`Not implemented yet time for cron`);
         }
         content += 'Zapisz wprowadzone zmiany. Zapisz wprowadzone zmiany. Od teraz to polecenie będzia automatycznie, regularnie wykonywane.\n';
         return content;
@@ -119,7 +122,7 @@ const tasks = {
             content += `Usuń pakiety wykonując następujące polecenie:`;
             content += shell_explain(`sudo apt-get remove ${data.name}`);
         } else {
-            throw new Error("Not implemented yet");
+            throw new Error(`Not implemented yet state ${data.state} for cron`);
         }
         return content;
     },
@@ -133,7 +136,7 @@ const tasks = {
             content += `Usuń pakiety wykonując następujące polecenie:`;
             content += shell_explain(`yum remove ${data.name}`);
         } else {
-            throw new Error("Not implemented yet");
+            throw new Error(`Not implemented yet state ${data.state} for yum.`);
         }
         return content;
     },
@@ -163,7 +166,7 @@ const tasks = {
         } else if (state === 'absent') {
             content += shell_explain(`sudo a2dismod ${data.name}`);
         } else {
-            throw new Error("Not implemented yet");
+            throw new Error(`Not implemented yet state ${data.state} for apache2_module`);
         }
         return content;
     },
@@ -175,7 +178,7 @@ const tasks = {
         } else if (state === 'absent') {
             content += shell_explain(`sudo a2disconf ${data.name}`);
         } else {
-            throw new Error("Not implemented yet");
+            throw new Error(`Not implemented yet state ${data.state} for apache2_conf`);
         }
 
         return content;
@@ -202,7 +205,7 @@ const tasks = {
             content += `Skasuj plik \`${data.dest}\` wykonując następujące polecenie:`;
             content += shell_explain(`sudo rm ${data.dest}`);
         } else {
-            throw new Error("Not implemented yet");
+            throw new Error(`Not implemented yet state ${data.state} for file`);
         }
         return content;
     },
@@ -220,9 +223,9 @@ const tasks = {
         } else if (data.value === 'uuid') {
             content += `W celu zidentyfikowania właściwego dysku przeanalizuj wynik następujące polecenie:`;
             content += shell_explain(`blkid`);
-            content += "Zwróć szczególną uwagę na UUID dla dysku (będzie ona wymagana w kolejnym etapie) oraz ściężkę.\n";
+            content += "Zwróć szczególną uwagę na UUID dla dysku (będzie ona wymagana w kolejnym etapie) oraz ścieżkę.\n";
         } else {
-            throw new Error("Not implemented yet");
+            throw new Error("Not implemented yet mode for identify_disk");
         }
         return content;
     },
@@ -238,7 +241,7 @@ const tasks = {
             content += shell_explain(`sfdisk -l ${dev}`);
             content += "Zwróć szczególną uwagę na ścieżkę partycji (będzie ona wymagana w kolejnym etapie) i rozmiar.\n";
         } else {
-            throw new Error("Not implemented yet");
+            throw new Error("Not implemented yet for identify_partition");
         }
         return content;
     },
@@ -249,13 +252,13 @@ const tasks = {
         if (data.action === 'resizepart') {
             content += `Zweryfikuj czy system plików jest odmontowany:`;
             content += shell_explain(`findmnt ${dev}${pos} || echo 'System plików odmontowany'`);
-            content += `Zalecane jest zweryfikowanie poprawności systemu plikow przed dokonaniem operacji tj. rozszerzenie. W tym celu odmontuj go.\n`;
+            content += `Zalecane jest zweryfikowanie poprawności systemu plików przed dokonaniem operacji tj. rozszerzenie. W tym celu odmontuj go.\n`;
             content += `Zweryfikuj poprawność systemu plików na partycji wykonując następujące polecenie:`;
             content += shell_explain(`fsck ${dev}${pos}`);
             content += `W celu zmiany rozmiaru partycji wykonaj następujące polecenie:`;
             content += shell_explain(`parted ${dev} resizepart ${pos} 100%`);
         } else {
-            throw new Error("Not implemented yet");
+            throw new Error("Not implemented yet mode for parted");
         }
         return content;
     },
@@ -264,7 +267,7 @@ const tasks = {
         if (data.value === 'ip') {
             content += `W celu zidentyfikowania *Adresu IP* *Wirtualnej maszyny* przejdź do widoku właściwości *Wirtualnej maszyny* w panelu.\n`;
         } else {
-            throw new Error("Not implemented yet");
+            throw new Error("Not implemented yet mode for identify_vm");
         }
         return content;
     },
@@ -312,7 +315,7 @@ const tasks = {
             content += `Dopisz na końcu pliku następujący wiersz:`;
             content += utils.dump(data.line);
         } else {
-            throw new Error("Not implemented yet");
+            throw new Error(`Not implemented yet state ${data.state} for lineinfile`);
         }
         content += partials.editor_finish(data, prev, next, ctx);
         return content;
@@ -335,7 +338,7 @@ const tasks = {
             content += "Wykonaj następujące polecenie:";
             content += shell_explain(`sysctl ${data.name}=${data.value} -w`);
         } else {
-            throw new Error("Not implemented yet");
+            throw new Error("Not implemented yet mode for sysctl");
         }
         return content;
     },

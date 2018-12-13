@@ -140,6 +140,8 @@ Przekazanie jest możliwe między *Organizacjami* po spełnieniu następujące w
  * docelowa *Organizacja* posiada umowy licencyjne wymagane dla każdego z *Zasobów* *Projektu*
  * *Projekt* posiada środki
  * spełnione są warunki usunięcie każdego z *Zasobów* *Projektu*
+ * *Projekt* nie jest objęty *Program Early adopters*
+ * *Projekt* nie znajduje się w stanie *Ograniczonego użycia*
 
 Transfer *Projektu* polega na:
 

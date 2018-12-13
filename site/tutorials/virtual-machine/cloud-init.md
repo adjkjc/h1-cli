@@ -18,7 +18,7 @@ W celu określenia konfiguracji *Użytkownika* wykorzystywane są *[Metadane](/r
 
 Format                    | Początek pliku                                                | Opis
 ------------------------- | ------------------------------------------------------------- | ---
-Plik konfiguracyjny Cloud | ```#cloud-config``` lub ```Content-Type: text/cloud-config``` |	Ten plik zawiera dane konfiguracyjny Cloud-init, w tym [modułów](https://cloudinit.readthedocs.io/en/latest/topics/modules.html)
+Plik konfiguracyjny Cloud | ```clo``` lub ```Content-Type: text/cloud-config``` |	Ten plik zawiera dane konfiguracyjny Cloud-init, w tym [modułów](https://cloudinit.readthedocs.io/en/latest/topics/modules.html)
 Skrypt Shell              |	```#!``` lub ```Content-Type: text/x-shellscript```           | Skrypt powłoki zostanie wykonany na poziomie ```rc.local``` podczas pierwszego uruchomienia.
 Zadanie Upstart           | ```#upstart-job``` lub ```Content-Type: text/upstart-job```
 
@@ -99,12 +99,11 @@ h1 vm ssh --vm test-apache --command 'curl localhost:80'
       cmd: h1 vm ssh --vm test-apache --command 'curl localhost:80'
 - name: Utworzenie *Wirtualnej Maszyny* z wybraną nazwą hosta
   block:
-  - name: Utwórz lokalnie plik ```userdata.cloud``` zawierający skrypt instalacyjny
+  - name: Utwórz lokalnie plik ```userdata.cloud``` zawierający dynamiczną konfiguracje Cloud-init
     template: 
       dest: userdata.cloud
       content: |
         #cloud-config
-        preserve_hostname: true
         hostname: fqdn_example
   - name: Utwórz *Wirtualną Maszynę* z wykorzystaniem *Metadanych* *Użytkownika* z pliku ```userdata.sh```
     shell:
@@ -117,7 +116,7 @@ h1 vm ssh --vm test-apache --command 'curl localhost:80'
     - name: Utwórz *Wirtualną Maszynę*
       shell:
         cmd: h1 vm create --name test-cfg --os-disk ssd,10 --type a1.nano --image ubuntu --ssh my-ssh
-    - name: Zweryfikuj konfiguracje Cloud-init
+    - name: Zmodyfikuj trwale konfiguracje Cloud-init
       shell:
         cmd: "h1 vm ssh --vm test-cfg --command 'sudo sed -i \"s/preserve_hostname: .*/preserve_hostname: true/g\" /etc/cloud/cloud.cfg'"
     - name: Wykonaj *Obraz* z *Wirtualnej Maszyny*
