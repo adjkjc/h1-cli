@@ -1,1 +1,1 @@
-posts/transfer-resource.md
+posts/2-factor-authentication.md

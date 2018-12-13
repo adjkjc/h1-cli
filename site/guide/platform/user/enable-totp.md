@@ -6,7 +6,7 @@ Dokument wyjaśnia w jaki sposób włączyć weryfikacje dwuetapową *[Użytkown
 
 ## Warunki wstępne
 
-* zainstalowana na urządzeniu mobilnym aplikacja wspierająca dwuetapową weryfikacje tj. [Authy](https://authy.com/download/), [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2). 
+* zainstalowana na urządzeniu mobilnym aplikacja wspierająca dwuetapową weryfikacje tj. [Authy](https://authy.com/download/), [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2), [FreeOTP](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp&hl=pl). 
 
 ## Instrukcja
 
