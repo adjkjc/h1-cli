@@ -34,7 +34,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
     "data": {
       "type": "entry_resource"
     },
-    "after_event": "Po kliknięciu zostanie otwarta strona z szczegółami zasobu."
+    "after_event": "Po kliknięciu zostanie otwarta strona z szczegółami *Zasobu*."
   },
   {
     "action_name": "click",

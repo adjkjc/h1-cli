@@ -1,6 +1,6 @@
 # Projekt
 
-Projekt przeznaczony jest do logicznego zgrupowania zasobów, którego dla Organizacji mają wspólny cel i przeznaczenie.
+Projekt przeznaczony jest do logicznego zgrupowania zasobów, którego dla *Organizacji* mają wspólny cel i przeznaczenie.
 
 ## Cykl życia
 
@@ -14,11 +14,12 @@ Użytkownik tworzący Projekt otrzymuje automatycznie rolę ```owner``` *Projekt
 
 <!-- wymaga wprowadzenia nazwy *Projektu* -->
 
-<!--
 ### Usunięcie
 
-Nie jest możliwe usunięcie *Projektu*.
--->
+*Projekt* może zostać usunięty, w przypadku spełnienia następujących warunków:
+
+ * *Projekt* nie znajduje się w stanie *Ograniczonego użycia*
+ * *Projekt* posiada środki lub *Faktury*
 
 ## Zarządzanie
 
@@ -107,13 +108,13 @@ Dla każdego *Konta usługi* są dostępne następujące operacje:
  * dodanie prawa dostępu
  * usunięcie prawa dostępu
 
- Identyfikator *Konta usługi* jest wartością, którą należy przesłać do platformy, aby wykorzystać *Konto usługi* i służy do uwierzytelnienia żądania. Zatem należy chronić go przed ujawnieniem.
+Identyfikator *Konta usługi* jest wartością, którą należy przesłać do platformy, aby wykorzystać *Konto usługi* i służy do uwierzytelnienia żądania. Zatem należy chronić go przed ujawnieniem.
 
- Prawa dostępu określają do jakiej ścieżki i z wykorzystaniem jakiej metody HTTP (```GET```, ```POST```, ```PUT``` itp. lub ```ALL``` dla wszystkich metod) dostęp do API platformy jest dopuszczalny. Ścieżka określona jest przez wyrażenie regularne, które musi zostać od dopasowane początku ścieżki.
+Prawa dostępu określają do jakiej ścieżki i z wykorzystaniem jakiej metody HTTP (```GET```, ```POST```, ```PUT``` itp. lub ```ALL``` dla wszystkich metod) dostęp do API platformy jest dopuszczalny. Ścieżka określona jest przez wyrażenie regularne, które musi zostać od dopasowane początku ścieżki.
 
- Zarządzanie konfiguracją *Projektu* (ścieżki API rozpoczynające się od ```/project```) sa niedostępne dla *Konta usługi* , aby zapobiec niepożądanej eskalacji uprawnień, uzyskaniu informacji o innych *Kontach usług*, w tym ich identyfikatorach.
+Zarządzanie konfiguracją *Projektu* lub *Organizacji* lub *Użytkownika* nie jest możliwe z wykorzystaniem dla *Konta usługi* , aby zapobiec niepożądanej eskalacji uprawnień, uzyskaniu informacji o innych *Kontach usług*, w tym ich identyfikatorach.
 
- Dowolna aktywność wykonana przez *Konto usługi* jest oznaczona na Platformie jako wykonana przez *Użytkownika*, który utworzył dane *Konto usługi*.
+Dowolna aktywność wykonana przez *Konto usługi* jest oznaczona na Platformie jako wykonana przez *Użytkownika*, który utworzył dane *Konto usługi*.
 
 #### Zarządzanie rejestrowaniem operacji
 
@@ -139,20 +140,18 @@ Przekazanie jest możliwe między *Organizacjami* po spełnieniu następujące w
 
  * docelowa *Organizacja* posiada umowy licencyjne wymagane dla każdego z *Zasobów* *Projektu*
  * *Projekt* posiada środki
- * spełnione są warunki usunięcie każdego z *Zasobów* *Projektu*
- * *Projekt* nie jest objęty *Program Early adopters*
+ * *Projekt* nie jest objęty *Programem Early adopters*
  * *Projekt* nie znajduje się w stanie *Ograniczonego użycia*
+
+Przekazaniu podlegają wszystkie elementy *Projektu*, z wykluczeniem praw dostępu *Użytkowników* z własnymi rolami.
 
 Transfer *Projektu* polega na:
 
-* przekazaniu podlegają wszystkie elementy *Projektu*, z wykluczeniem:
-    * praw dostępu *Użytkowników* z własnymi rolami
-
-* określeniu przez źródłową *Organizacje*:
+* zainicjowaniu transferu przez źródłową *Organizacje* wraz z wskazaniem:
     * *Projektu*, który otrzyma środki przekazywanego *Projektu*
-    * docelowej Organizacji
+    * docelowej *Organizacji*
 
-* zaakceptowaniu transferu przez docelową *Organizacje* poprzez dokonanie zasilenia środków *Projektu*
+* zaakceptowaniu transferu przez docelową *Organizacje*
 
 ## Forma rozliczeń
 

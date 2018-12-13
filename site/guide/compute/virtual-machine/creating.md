@@ -93,7 +93,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "selector": "navbar>.vm",
       "label": "Utwórz"
     },
-    "after_event": "Po kliknięciu przejdziesz do strony ze szczegółami nowego zasobu."
+    "after_event": "Po kliknięciu przejdziesz do strony ze szczegółami nowego *Zasobu*."
   }
 ]
 ```
@@ -189,7 +189,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "selector": "navbar>.vm",
       "label": "Utwórz"
     },
-    "after_event": "Po kliknięciu przejdziesz do strony ze szczegółami nowego zasobu."
+    "after_event": "Po kliknięciu przejdziesz do strony ze szczegółami nowego *Zasobu*."
   }
 ]
 ```
@@ -286,7 +286,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "selector": "navbar>.vm",
       "label": "Utwórz"
     },
-    "after_event": "Po kliknięciu przejdziesz do strony ze szczegółami nowego zasobu."
+    "after_event": "Po kliknięciu przejdziesz do strony ze szczegółami nowego *Zasobu*."
   }
 ]
 ```
@@ -377,7 +377,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "selector": "navbar>.vm",
       "label": "Utwórz"
     },
-    "after_event": "Po kliknięciu przejdziesz do strony ze szczegółami nowego zasobu."
+    "after_event": "Po kliknięciu przejdziesz do strony ze szczegółami nowego *Zasobu*."
   }
 ]
 ```

@@ -31,7 +31,7 @@ Operacja może zostać wykonana po spełnieniu następujących warunków:
       "type": "entry_resource",
       "selector": "navbar>.vm"
     },
-    "after_event": "Po kliknięciu pojawi się strona ze szczegółami zasobu."
+    "after_event": "Po kliknięciu pojawi się strona ze szczegółami *Zasobu*."
   },
   {
     "action_name": "click",

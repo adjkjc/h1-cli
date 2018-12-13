@@ -106,6 +106,9 @@ Dostępne są następujące dedykowane operacje:
 * zarządzanie własnymi rolami
 * zmiana użytkowników przypisanych do *Organizacji* i ich ról
 * dostęp do faktur *Projektów* wystawionych dla *Organizacji*
+* dostęp do historii naliczonych opłat na rzecz *Projektów* *Organizacji*
+* dostęp do historii zasileń śródków
+* akceptacja transferu *Projektu* do *Organizacji*
 
 ### Zmiana danych rozliczeniowych
 
@@ -146,11 +149,18 @@ Operacje mogą zostać wykonane po spełnieniu następujących warunków:
 
 Użytkownik tworzący *Organizacje* otrzymuje automatycznie rolę ```owner``` Organizacji.
 
-### Zarządzanie limitem przydziału *Zasobów* do projektu
+### Zarządzanie limitem przydziału *Zasobów* do *Projektu*
 
 Operacje mogą zostać wykonane po spełnieniu następujących warunków:
 
  * *Użytkownik* posiada rolę ```owner``` lub ```billing```
+ * Przydział *Projektu* nie przekracza maksymalnego przydziału *Projektu* *Organizacji*
+
+### Akceptacja transferu *Projektu*
+
+Operacje mogą zostać wykonane po spełnieniu następujących warunków:
+
+ * *Organizacja* posiada płatność nie przypisaną do żadnego *Projektu*
  * Przydział *Projektu* nie przekracza maksymalnego przydziału *Projektu* *Organizacji*
 
 ## Powiadomienia
@@ -159,6 +169,16 @@ Powiadomienia dla *Organizacji* są wysyłane w przypadku następujących zdarze
 
 * otrzymaniu płatności – otrzymują Użytkownicy z rolą ```owner``` oraz ```billing``` dla *Organizacji*
 * wystawieniu w projekcie *Organizacji* faktury – otrzymują Użytkownicy z rolą ```owner``` oraz ```billing``` dla *Organizacji*
+
+## Przewodniki
+
+Do korzystania z *Organizacji* mogą być przydatne następujące specjalne przewodniki:
+
+<PageList path_re="guide/platform/organization/"/>
+
+Użyteczne mogą okazać się także następujące ogólne przewodniki:
+
+<PageList path_re="guide/resource/"/>
 
 # Parametry techniczne
 

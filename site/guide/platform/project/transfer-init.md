@@ -1,14 +1,14 @@
-# Utworzenie Obrazu z Wirtualnej Maszyny
+# Zainicjowanie transferu *Projektu*
 
 ## Wprowadzenie
 
-Dokument wyjaśnia w jaki sposób utworzyć [Obraz](/resource/storage/iso.md) wykorzystywany jako wzorzec [Wirtualnej maszyny](/resource/compute/virtual-machine.md) na podstawie *Wirtualnej Maszyny*
- 
+Dokument wyjaśnia w jaki sposób zainicjować transfer *Projektu* z źródłowej *[Organizacji](/platform/organization.md)* do docelowej *Organizacji*.
+
 ## Warunki wstępne
 
 Operacja może zostać wykonana po spełnieniu następujących warunków:
 
-* wszystkie [warunki utworzenia *Obrazu*](/resource/storage/disk.md#utworzenie)
+* zainicjowanie transferu *Projektu* wymaga spełnienia [warunków operacji przekazania *Projektu*](/platform/project.md#przekazanie)
 
 ## Instrukcja
 
@@ -24,8 +24,24 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "type": "entry",
       "location": "sidebar",
       "selector": ".nav > li:nth-child(2)",
-      "label": "Wirtualne maszyny"
+      "label": "Organizacje"
     }
+  },
+  {
+    "action_name": "click",
+    "data": {
+      "type": "entry_resource"
+    },
+    "after_event": "Po kliknięciu zostanie otwarta strona z szczegółami *Zasobu*."
+  },
+  {
+    "action_name": "click",
+    "data": {
+      "type": "tab",
+      "selector": "navbar>.vm",
+      "label": "Projekty"
+    },
+    "after_event": "Po kliknięciu pojawi się lista *Projektów*."
   },
   {
     "action_name": "click",
@@ -48,9 +64,8 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
     "data": {
       "type": "entry",
       "selector": "navbar>.vm",
-      "label": "Utwórz Obraz"
-    },
-    "after_event": "Po kliknięciu pojawi się okno z formularzem."
+      "label": "Przekaż"
+    }
   },
   {
     "action_name": "form",
@@ -58,9 +73,9 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "modal": true,
       "steps": [
         {
-          "name": "Nazwa obrazu",
-          "type": "name",
-          "value": "moj-obraz"
+          "name": "Organizacja",
+          "type": "choose",
+          "value": "DocelowaOrganizacja"
         }
       ],
       "defined_all": true
@@ -71,7 +86,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
     "data": {
       "type": "button",
       "selector": "navbar>.vm",
-      "label": "Utwórz"
+      "label": "Przekaż"
     }
   }
 ]
@@ -82,11 +97,12 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
 W celu wykonania operacji z wykorzystaniem CLI wykonaj następujące polecenie:
 
 ```bash
-h1 image create --vm test-vm --name dev-image
+h1 project transfer --project test-project --organisation target-organisation
 ```
+
 gdzie:
 
- * ```--name``` określa nazwę nowo utworzonego *Obrazu*
- * ```--vm``` określa identyfikator lub nazwę wzorcowej *Wirtualnej maszyny*
+ * ```--project``` określa identyfikator lub nazwa *Projektu* przekazywanego
+ * ```--organisation``` określa identyfikator lub nazwę docelowej *Organizacji*
 
-Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="image create"].
+Szczegółowe dane są dostępne w dokumentacji polecenia [CLI="project transfer"].

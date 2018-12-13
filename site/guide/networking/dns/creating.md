@@ -57,7 +57,7 @@ W celu wykonania operacji z wykorzystaniem panelu wykonaj następujące kroki:
       "selector": "navbar>.vm",
       "label": "Utwórz"
     },
-    "after_event": "Po kliknięciu przejdziesz do strony ze szczegółami nowego zasobu.\n\nPełne wykorzystanie strefy może wymagać zmian u rejestratora domeny."
+    "after_event": "Po kliknięciu przejdziesz do strony ze szczegółami nowego *Zasobu*.\n\nPełne wykorzystanie strefy może wymagać zmian u rejestratora domeny."
   }
 ]
 ```
