@@ -59,10 +59,6 @@ const options = {
         type: 'string',
         required: true,
     },
-    network: {
-        description: 'Network ID or name to attach',
-        type: 'string',
-    },
     ip: {
         description: 'IP address for Virtual machine',
         type: 'string',
@@ -86,8 +82,8 @@ const options = {
 // ];
 
 const dockerService = [
-    'curl -fsSL https://get.docker.com -o /tmp/get-docker.sh',
-    'sh /tmp/get-docker.sh',
+    // 'curl -fsSL https://get.docker.com -o /tmp/get-docker.sh',
+    // 'sh /tmp/get-docker.sh',
 ];
 
 const containerService = (container) => {
@@ -115,7 +111,7 @@ const containerService = (container) => {
 // ];
 
 
-const generate_cloudinit = (container) => {
+const generate_cloudinit = (container, disk_enable = false) => {
     const extraCmd = [];
 
     // if (logArchive) {
@@ -131,33 +127,39 @@ const generate_cloudinit = (container) => {
         ...containerService(container)
     );
 
-    return {
-        disk_setup: {
-            data_disk: {
-                table_type: 'gpt',
-                layout: true,
-                overwrite: false,
+    const config = {};
+    if (disk_enable) {
+        Object.assign(config, {
+            disk_setup: {
+                data_disk: {
+                    table_type: 'gpt',
+                    layout: true,
+                    overwrite: false,
+                },
             },
-        },
-        fs_setup: [
-            {
-                filesystem: 'ext4',
-                device: '/dev/sdb',
-                partition: 'auto',
-                overwrite: false,
-            },
-        ],
-        mounts: [
-            [
-                'sdb',
-                '/data',
+            fs_setup: [
+                {
+                    filesystem: 'ext4',
+                    device: '/dev/sdb',
+                    partition: 'auto',
+                    overwrite: false,
+                },
             ],
-        ],
+            mounts: [
+                [
+                    'sdb',
+                    '/data',
+                ],
+            ],
+        });
+    }
+
+    return Object.assign(config, {
         runcmd: [
             'mount -a',
             ...extraCmd,
         ],
-    };
+    });
 };
 
 
@@ -169,11 +171,9 @@ module.exports = resource => Cli.createCommand('create', {
     options: options,
     priority: 25,
     handler: args => {
-        console.log(args);
-
         const container = {
             image: args.image,
-            mountpoints:args.mountpoint.map(mountpoint => {
+            mountpoints: args.mountpoint.map(mountpoint => {
                 const parts = mountpoint.split(':');
                 return {
                     host: parts[0],
@@ -184,38 +184,33 @@ module.exports = resource => Cli.createCommand('create', {
             entrypoint: args.entrypoint,
             args: args.args,
         };
+
         const logArchive = {};
+        const disk_enable = args['data-disk'];
 
-        const config = generate_cloudinit(container, logArchive);
-
-        console.log(config);
+        const config = generate_cloudinit(container, disk_enable, logArchive);
 
         const metadata = `#cloud-config\n${yaml.safeDump(config)}`;
 
         const newVM = {
             name: args.name,
             service: args.type,
-            tag: require('lib/tags').createTagObject(args.tag),
+            tag: Object.assign(
+                {},
+                require('lib/tags').createTagObject(args.tag),
+                {
+                    container: true,
+                }
+            ),
             userMetadata: Buffer.from(metadata).toString('base64'),
-            image: 'ubuntu:18.04',
+            image: 'ubuntu-container-os',
             sshKeys: ['my-ssh'],
         };
 
-        if (args.network || args.ip) {
-            const netadp = {};
-
-            if (args.network) {
-                netadp.network = args.network;
-                netadp.service = 'private';
-            } else {
-                netadp.service = 'public';
-            }
-
-            if (args.ip) {
-                netadp.ip = args.ip;
-            }
-
-            newVM.netadp = [netadp];
+        if (args.ip) {
+            newVM.netadp = [{
+                ip: args.ip,
+            }];
         }
 
         const disk = [
@@ -225,10 +220,7 @@ module.exports = resource => Cli.createCommand('create', {
                 service: 'ssd',
             },
         ];
-        console.log({
-            mountpoint: args.mountpoint > 0,
-            data: !args['data-disk'],
-        });
+
         if (args.mountpoint.length > 0 && !args['data-disk']) {
             throw Cli.error.cancelled('The \'--data-disk\' parameter is required if \'--mountpoint\' is specified');
         }

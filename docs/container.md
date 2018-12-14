@@ -1,6 +1,7 @@
 # TOC
 
   * [h1 container create](#h1-container-create) - Create container
+  * [h1 container ip](#h1-container-ip) - Get IPs of container
   * [h1 container show](#h1-container-show) - Show container
   * [h1 container delete](#h1-container-delete) - Delete container
   * [h1 container rename](#h1-container-rename) - Rename container
@@ -32,7 +33,7 @@ Create container
 
 ### Syntax
 
-```h1 container create | --name NAME --image IMAGE --type TYPE [--env ENV [--env ENV ...]] [--entrypoint ENTRYPOINT] [--args ARGS [--args ARGS ...]] [--os-size OS-SIZE] [--data-disk DATA-DISK] [--mountpoint MOUNTPOINT [--mountpoint MOUNTPOINT ...]] [--network NETWORK] [--ip IP] [--tag TAG [--tag TAG ...]]```
+```h1 container create | --name NAME --image IMAGE --type TYPE [--env ENV [--env ENV ...]] [--entrypoint ENTRYPOINT] [--args ARGS [--args ARGS ...]] [--os-size OS-SIZE] [--data-disk DATA-DISK] [--mountpoint MOUNTPOINT [--mountpoint MOUNTPOINT ...]] [--ip IP] [--tag TAG [--tag TAG ...]]```
 ### Example
 
 ```bash
@@ -57,8 +58,32 @@ h1 container create --name my-server-log
 | ```--os-size OS-SIZE``` |  | Size of OS disk. Default: 10 GB |
 | ```--data-disk DATA-DISK``` |  | Data disk: "type,size" or "id" |
 | ```--mountpoint MOUNTPOINT [--mountpoint MOUNTPOINT ...]``` |  | Mountpoint of disk keep persistence as 'disk_path:container_path'. The parameter may occur repeatedly |
-| ```--network NETWORK``` |  | Network ID or name to attach |
 | ```--ip IP``` |  | IP address for Virtual machine |
+| ```--tag TAG [--tag TAG ...]``` |  | Key=value of tag. The parameter may occur repeatedly |
+
+## h1 container ip
+
+Get IPs of container
+
+### Syntax
+
+```h1 container ip | --container CONTAINER [--tag TAG [--tag TAG ...]]```
+### Example
+
+```bash
+h1 container ip --name my-server-log
+```
+
+### Required arguments
+
+| Name | Default | Description |
+| ---- | ------- | ----------- |
+| ```--container CONTAINER``` |  | Container ID or name |
+
+### Optional arguments
+
+| Name | Default | Description |
+| ---- | ------- | ----------- |
 | ```--tag TAG [--tag TAG ...]``` |  | Key=value of tag. The parameter may occur repeatedly |
 
 ## h1 container show
