@@ -18,5 +18,6 @@ const category = genericResource(resource);
 
 category.addChild(require('./create')(resource));
 category.addChild(require('./ip')(resource));
+category.addChild(require('./wait_boot')(resource));
 
 module.exports = category;

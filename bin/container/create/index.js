@@ -2,6 +2,7 @@
 const yaml = require('js-yaml');
 const Cli = require('lib/cli');
 const path = require('path');
+const shell_quote = require('shell-quote');
 
 const options = {
     name: {
@@ -27,7 +28,6 @@ const options = {
     args: {
         description: 'Extra arguments on run of image',
         type: 'string',
-        action: 'append',
     },
     'os-size': {
         description: 'Size of OS disk. Default: 10 GB',
@@ -38,16 +38,16 @@ const options = {
         type: 'string',
         description: 'Data disk: "type,size" or "id"',
     },
-    // log: {
-    //     type: 'string',
-    //     description: 'Log ID or name',
-    //     required: false,
-    // },
-    // 'log-password': {
-    //     type: 'string',
-    //     description: 'Log ID or name',
-    //     required: false,
-    // },
+    log: {
+        type: 'string',
+        description: 'Log ID or name',
+        required: false,
+    },
+    'log-password': {
+        type: 'string',
+        description: 'Log ID or name',
+        required: false,
+    },
     mountpoint: {
         type: 'string',
         description: "Mountpoint of disk keep persistence as 'disk_path:container_path'",
@@ -65,21 +65,21 @@ const options = {
     },
 };
 
-// const syslog_content = (logArchive) => `
-// template(name="HyperOneTemplate" type="string" string="<%pri%>%protocol-version% %timestamp:::date-rfc3339% %HOSTNAME% %app-name% %procid% %msgid% [${logArchive._id}:${logArchive.password}@HyperOne tag=\\"Rsyslog\\"] %msg%\\n")
-//
-// action(type="omfwd" protocol="tcp" target="${logArchive._id}.log.pl-waw-1.hyperone.com" port="6514" template="HyperOneTemplate")
-// `;
+const syslog_content = (logArchive) => `
+template(name="HyperOneTemplate" type="string" string="<%pri%>%protocol-version% %timestamp:::date-rfc3339% %HOSTNAME% %app-name% %procid% %msgid% [${logArchive.id}:${logArchive.password}@HyperOne tag=\\"Rsyslog\\"] %msg%\\n")
 
-// const save_file = (path, content) => {
-//     const content_b64 = Buffer.from(content).toString('base64');
-//     return `echo '${content_b64}' | openssl base64 -d > ${path}`;
-// };
+action(type="omfwd" protocol="tcp" target="${logArchive._id}.log.pl-waw-1.hyperone.com" port="6514" template="HyperOneTemplate")
+`;
 
-// const logArchiveService = (logArchive) => [
-//     save_file('/etc/rsyslog.d/60-logArchive.conf', syslog_content(logArchive)),
-//     'service rsyslog restart',
-// ];
+const save_file = (path, content) => {
+    const content_b64 = Buffer.from(content).toString('base64');
+    return `echo '${content_b64}' | openssl base64 -d > ${path}`;
+};
+
+const logArchiveService = (logArchive) => [
+    save_file('/etc/rsyslog.d/60-logArchive.conf', syslog_content(logArchive)),
+    'service rsyslog restart',
+];
 
 const dockerService = [
     // 'curl -fsSL https://get.docker.com -o /tmp/get-docker.sh',
@@ -88,39 +88,33 @@ const dockerService = [
 
 const containerService = (container) => {
     const args = ['docker', 'run', '-d', '--network', 'host'];
-    container.mountpoints.map(mountpoint => ['-v', `${path.join('/data/', mountpoint.host)}:${mountpoint.container}`]).forEach(args => args.push(...args));
-    container.envs.map(env => ['-e', env]).forEach(args => args.push(...args));
+    container.mountpoints.map(mountpoint => ['-v', `${path.join('/data/', mountpoint.host)}:${mountpoint.container}`]).forEach(arg => args.push(...arg));
+    container.envs
+        .map(env => ['-e', env])
+        .forEach(arg => args.push(...arg));
 
     if (container.entrypoint) {
         args.push('--entrypoint', container.entrypoint);
     }
+    if (container.log) {
+        args.push('--log-driver', 'syslog');
+    }
 
     args.push(container.image);
     if (container.args) {
-        args.push(container.args);
+        args.push(...shell_quote.parse(container.args));
     }
     return [
         args,
     ];
-    // return `docker run -d --network host -v /tmp/init.sql:/docker-entrypoint-initdb.d/init.sql --log-driver syslog -v /data/mysql_datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=${root_password} mysql:5.7 --bind-address=0.0.0.0`;
 };
-// const mysqlService = (rootPassword) => [
-//     // Default root user have no remote access.
-//     save_file('/tmp/init.sql', `GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '${root_password}' WITH GRANT OPTION;`),
-//     `docker run -d --network host -v /tmp/init.sql:/docker-entrypoint-initdb.d/init.sql --log-driver syslog -v /data/mysql_datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=${root_password} mysql:5.7 --bind-address=0.0.0.0`,
-// ];
 
-
-const generate_cloudinit = (container, disk_enable = false) => {
+const generate_cloudinit = (container, disk_enable = false, logArchive={}) => {
     const extraCmd = [];
 
-    // if (logArchive) {
-    //     extraCmd.push(...logArchiveService(logArchive));
-    // }
-
-    // extraCmd.push(...[
-    //     ...logArchiveService,
-    // ]);
+    if (logArchive) {
+        extraCmd.push(...logArchiveService(logArchive));
+    }
 
     extraCmd.push(
         ...dockerService,
@@ -137,6 +131,7 @@ const generate_cloudinit = (container, disk_enable = false) => {
                     overwrite: false,
                 },
             },
+            final_message: 'cloud init done!',
             fs_setup: [
                 {
                     filesystem: 'ext4',
@@ -183,15 +178,24 @@ module.exports = resource => Cli.createCommand('create', {
             envs: args.env,
             entrypoint: args.entrypoint,
             args: args.args,
+            log: !!args.log,
         };
 
+        console.log({container});
         const logArchive = {};
+        if ((!args.log || !args['log-password']) && (args.log || args['log-password'])) {
+            console.log({log: args.log, 'log-password': args['log-password']});
+            throw Cli.error.cancelled('The \'--log-password\' parameter is required if \'--log\' is specified');
+        } else {
+            logArchive.id = args.log;
+            logArchive.password = args['log-password'];
+        }
+        console.log({logArchive});
         const disk_enable = args['data-disk'];
 
         const config = generate_cloudinit(container, disk_enable, logArchive);
-
+        console.dir({config}, {depth:null});
         const metadata = `#cloud-config\n${yaml.safeDump(config)}`;
-
         const newVM = {
             name: args.name,
             service: args.type,
@@ -199,11 +203,11 @@ module.exports = resource => Cli.createCommand('create', {
                 {},
                 require('lib/tags').createTagObject(args.tag),
                 {
-                    container: true,
+                    container: 'true',
                 }
             ),
             userMetadata: Buffer.from(metadata).toString('base64'),
-            image: 'ubuntu-container-os',
+            image: '5c13dc97bc411d75c5b291cb', // ubuntu-container-os
             sshKeys: ['my-ssh'],
         };
 
@@ -232,10 +236,11 @@ module.exports = resource => Cli.createCommand('create', {
                     id: args['data-disk'],
                 });
             } else {
+                console.log(dataDisk);
                 disk.push({
                     name: `${args.name}-data`,
-                    service: dataDisk[0],
-                    size: dataDisk[1],
+                    size: parseInt(dataDisk[0]),
+                    service: dataDisk[1],
                 });
             }
         }
