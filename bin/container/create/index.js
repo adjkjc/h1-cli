@@ -112,7 +112,7 @@ const containerService = (container) => {
 const generate_cloudinit = (container, disk_enable = false, logArchive={}) => {
     const extraCmd = [];
 
-    if (logArchive) {
+    if (logArchive.log) {
         extraCmd.push(...logArchiveService(logArchive));
     }
 
@@ -131,7 +131,6 @@ const generate_cloudinit = (container, disk_enable = false, logArchive={}) => {
                     overwrite: false,
                 },
             },
-            final_message: 'cloud init done!',
             fs_setup: [
                 {
                     filesystem: 'ext4',
@@ -150,6 +149,7 @@ const generate_cloudinit = (container, disk_enable = false, logArchive={}) => {
     }
 
     return Object.assign(config, {
+        final_message: 'cloud init done!',
         runcmd: [
             'mount -a',
             ...extraCmd,
@@ -186,7 +186,7 @@ module.exports = resource => Cli.createCommand('create', {
         if ((!args.log || !args['log-password']) && (args.log || args['log-password'])) {
             console.log({log: args.log, 'log-password': args['log-password']});
             throw Cli.error.cancelled('The \'--log-password\' parameter is required if \'--log\' is specified');
-        } else {
+        } else if (args.log) {
             logArchive.id = args.log;
             logArchive.password = args['log-password'];
         }
