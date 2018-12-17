@@ -2,7 +2,7 @@
 
 <img :src="$withBase('/media/2fa.png')">
 
-Wielu serwisów internetowych wciąż wykorzystuje logowania wyłącznie z wykorzystaniem adresu e-mail i hasła. Jednak takie podejście nie jest wystarczające bezpieczne w dzisiejszym świecie, w którym co dzień zdarzają się ataki szkodliwego oprogramowania i inne formy kradzieży haseł.
+Wiele serwisów internetowych wciąż wykorzystuje logowania wyłącznie z wykorzystaniem adresu e-mail i hasła. Jednak takie podejście nie jest wystarczające bezpieczne w dzisiejszym świecie, w którym co dzień zdarzają się ataki szkodliwego oprogramowania i inne formy kradzieży haseł.
 
 W trosce o bezpieczeństwo korzystania z naszych *Usług* udostępniamy prosty mechanizm, który dodaje dodatkową warstwę ochrony konta *Użytkownika*, oprócz hasła - weryfikacje dwuetapową. Dwuetapowa weryfikacja jest jak posiadanie drugiego zamka w drzwiach. Po jej włączeniu, gdy *Użytkownik* loguje się do *Panelu Zarządzania*, zostanie pierw poproszony o podanie adresu e-mail i hasła (pierwszego czynnika - dowód, że *Użytkownik* coś zna), a następnie o jednorazowy kod z skojarzonego urządzenia (drugi czynnik - dowód, że coś *Użytkownik* posiada). Kod jednorazowy ulega nieustannej zmianie co 30 sekund, więc jest odporny na kradzież. Te liczne czynniki zwiększają bezpieczeństwo konta *Użytkownika* i *Zasobów*, którymi zarządza. 
 
