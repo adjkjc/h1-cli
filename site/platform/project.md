@@ -143,7 +143,10 @@ Przekazanie jest możliwe między *Organizacjami* po spełnieniu następujące w
  * *Projekt* nie jest objęty *Programem Early adopters*
  * *Projekt* nie znajduje się w stanie *Ograniczonego użycia*
 
-Przekazaniu podlegają wszystkie elementy *Projektu*, z wykluczeniem praw dostępu *Użytkowników* z własnymi rolami.
+Przekazaniu podlegają wszystkie elementy *Projektu*, z wykluczeniem:
+ * praw dostępu *Użytkowników* z własnymi rolami,
+ * zgłoszeń *Wsparcia*
+ * historii *Zasobu*
 
 Transfer *Projektu* polega na:
 
