@@ -68,7 +68,7 @@ const options = {
 const syslog_content = (logArchive) => `
 template(name="HyperOneTemplate" type="string" string="<%pri%>%protocol-version% %timestamp:::date-rfc3339% %HOSTNAME% %app-name% %procid% %msgid% [${logArchive.id}:${logArchive.password}@HyperOne tag=\\"Rsyslog\\"] %msg%\\n")
 
-action(type="omfwd" protocol="tcp" target="${logArchive._id}.log.pl-waw-1.hyperone.com" port="6514" template="HyperOneTemplate")
+action(type="omfwd" protocol="tcp" target="${logArchive.id}.log.pl-waw-1.hyperone.com" port="6514" template="HyperOneTemplate")
 `;
 
 const save_file = (path, content) => {
@@ -112,7 +112,7 @@ const containerService = (container) => {
 const generate_cloudinit = (container, disk_enable = false, logArchive={}) => {
     const extraCmd = [];
 
-    if (logArchive.log) {
+    if (logArchive.id) {
         extraCmd.push(...logArchiveService(logArchive));
     }
 
@@ -207,7 +207,7 @@ module.exports = resource => Cli.createCommand('create', {
                 }
             ),
             userMetadata: Buffer.from(metadata).toString('base64'),
-            image: '5c13dc97bc411d75c5b291cb', // ubuntu-container-os
+            image: '5c1a20a9bc411d75c5b5c9bb', // ubuntu-container-os
             sshKeys: ['my-ssh'],
         };
 
