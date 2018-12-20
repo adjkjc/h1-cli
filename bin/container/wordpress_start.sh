@@ -2,9 +2,9 @@
 set -eux
 DB_NAME=$(date +"wordpress-db-%s");
 WORDPRESS_NAME=$(date +"wordpress-php-%s");
-DB_PASS=$(pwgen -B -c -n -s -1 15);
+DB_PASS=$(openssl rand -base64 32);
 LOG_NAME=$(date +"wordpress-log-%s");
-LOG_PASS=$(pwgen -B -c -n -s -1 15);
+LOG_PASS=$(openssl rand -base64 32);
 DNS_ZONE=$(date +"wordpress-%s.com");
 DNS_RECORD_SET=".";
 

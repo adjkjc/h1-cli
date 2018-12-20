@@ -6,7 +6,7 @@ DNS_ZONE=${3:-"wordpress-1544848911.com."};
 DNS_RECORD_SET=${4:-"."};
 
 LOG_NAME=$(date +"$CONTAINER_PREFIX-%s");
-LOG_PASS=$(pwgen -B -c -n -s -1 15);
+LOG_PASS=$(openssl rand -base64 32);
 
 CONTAINER_NAME=$(date +"$CONTAINER_PREFIX-%s");
 # Create log archive
