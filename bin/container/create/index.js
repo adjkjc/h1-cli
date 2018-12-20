@@ -207,7 +207,7 @@ module.exports = resource => Cli.createCommand('create', {
                 }
             ),
             userMetadata: Buffer.from(metadata).toString('base64'),
-            image: '5c1a20a9bc411d75c5b5c9bb', // ubuntu-container-os
+            image: '5c1b05c9bc411d75c5b63d65', // ubuntu-container-os
             sshKeys: ['my-ssh'],
         };
 
