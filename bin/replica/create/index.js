@@ -52,6 +52,7 @@ module.exports = resource => Cli.createCommand('create', {
     description: 'Setup VM replication',
     plugins: resource.plugins,
     options: options,
+    dirname: __dirname,
     handler: async args => {
         if (process.platform !== 'win32') {
             throw Cli.error.cancelled('You must perform this command on the Windows platform. ' +

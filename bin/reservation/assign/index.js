@@ -21,6 +21,7 @@ module.exports = resource => {
         description: `Assign ${resource.title} to resource`,
         plugins: resource.plugins,
         options: Object.assign({}, options, resource.options),
+        dirname: __dirname,
         handler: args => args.helpers.api
             .post(`${resource.url(args)}/${args[resource.name]}/actions`, {
                 name: 'assign',

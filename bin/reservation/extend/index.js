@@ -16,6 +16,7 @@ module.exports = resource => {
         description: `Extend ${resource.title}`,
         plugins: resource.plugins,
         options: Object.assign({}, options, resource.options),
+        dirname: __dirname,
         handler: args => args.helpers.api
             .post(`${resource.url(args)}/${args[resource.name]}/actions`, {
                 name: 'extend', data: {},
