@@ -16,7 +16,7 @@ ava.serial('project life cycle', async t => {
 
     await tests.resourceLifeCycle('project', {
         createParams: createParams,
-        stateCreated: 'Active',
+        stateCreated: 'Limited',
         skipHistoryCreated: true,
         skipService: true,
         skipTag: true,
@@ -30,7 +30,7 @@ ava.serial('project show', async t => {
 
 const getOrganisationForProject = async projectId => (await tests.run(`project show --project '${projectId}'`)).organisation;
 
-ava.serial('project transfer', tests.requireSlaveProject(async (t, projects) => {
+ava.skip('project transfer', tests.requireSlaveProject(async (t, projects) => {
     let active_organisation, slave_organisation;
     if (Math.floor(Math.random() * 2) === 0) {
         active_organisation = await getOrganisationForProject(active_project);
@@ -138,7 +138,7 @@ const getLatestImapMessageDate = (query, options) => new Promise((resolve, rejec
         imap.openBox('INBOX', true, err => {
             if (err) return reject(err);
             const dates = [];
-
+            console.log(new Date().toISOString(), 'Query IMAP', {query});
             imap.search(query, function (err, results) {
                 if (err) return reject(err);
                 const f = imap.fetch(results, {
