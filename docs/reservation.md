@@ -122,6 +122,12 @@ Create reservation
 ### Syntax
 
 ```h1 reservation create | --name NAME --type TYPE [--tag TAG [--tag TAG ...]]```
+### Example
+
+```bash
+h1 reservation create --name my-reservation-name --type 'm2.tiny, 1 year'
+```
+
 ### Required arguments
 
 | Name | Default | Description |
@@ -142,6 +148,12 @@ Assign reservation to resource
 ### Syntax
 
 ```h1 reservation assign | --resource RESOURCE --reservation RESERVATION```
+### Example
+
+```bash
+h1 reservation assign --reservation 5bf4118879274469d283328d --resource 5bf40d0d680cffd11f12e248
+```
+
 ### Required arguments
 
 | Name | Default | Description |
@@ -156,6 +168,12 @@ Extend reservation
 ### Syntax
 
 ```h1 reservation extend | --reservation RESERVATION```
+### Example
+
+```bash
+h1 reservation extend --reservation 5bf4118879274469d283328d
+```
+
 ### Required arguments
 
 | Name | Default | Description |
