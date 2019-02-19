@@ -2,6 +2,7 @@
 
   * [h1 reservation list](#h1-reservation-list) - List reservation
   * [h1 reservation show](#h1-reservation-show) - Show reservation
+  * [h1 reservation delete](#h1-reservation-delete) - Delete reservation
   * [h1 reservation service](#h1-reservation-service) - Manage your services of reservation
     * [h1 reservation service list](#h1-reservation-service-list) - List service for reservation
     * [h1 reservation service show](#h1-reservation-service-show) - Show service for reservation
@@ -45,6 +46,25 @@ Show reservation
 
 ```bash
 h1 reservation show --reservation my-reservation
+```
+
+### Required arguments
+
+| Name | Default | Description |
+| ---- | ------- | ----------- |
+| ```--reservation RESERVATION``` |  | Reservation ID or name |
+
+## h1 reservation delete
+
+Delete reservation
+
+### Syntax
+
+```h1 reservation delete | --reservation RESERVATION```
+### Example
+
+```bash
+h1 reservation delete --reservation my-reservation
 ```
 
 ### Required arguments
