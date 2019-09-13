@@ -26,7 +26,7 @@ module.exports = resource => {
                 .get(resource.url(args));
 
             const values = await args.helpers.api.put(
-                resource.url(args), 
+                resource.url(args),
                 value_current.filter(x => x !== args[resource.parameter_name])
             );
 
