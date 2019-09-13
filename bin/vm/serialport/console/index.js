@@ -22,8 +22,10 @@ module.exports = resource => Cli.createCommand('console', {
     params: resource.params,
     options: Object.assign({}, options, resource.options),
     dirname: __dirname,
-    handler: args => args.helpers.api.get(`vm/${args.vm}`)
-        .then(vm => websocketTerminal(`/vm/${vm.id}/serialport/${args.port}`)),
+    handler: async args => {
+        const vm = await args.helpers.api.get(`vm/${args.vm}`);
+        return websocketTerminal(`/vm/${vm.id}/serialport/${args.port}`);
+    },
 });
 
 

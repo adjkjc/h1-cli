@@ -15,10 +15,14 @@ module.exports = resource => Cli.createCommand('create', {
         pickBy(resource.schema, field => field.onCreate && !field.virtual)
     ),
     params: resource.params,
-    handler: (args) => args.helpers.api
-        .post('netgw', {
-            name: args.name,
-            public: { ip: args.ip },
-            tag: require('lib/tags').createTagObject(args.tag),
-        }).then(result => args.helpers.sendOutput(args, result)),
+    handler: async args => {
+        const result = await args.helpers.api
+            .post('netgw', {
+                name: args.name,
+                public: { ip: args.ip },
+                tag: require('lib/tags').createTagObject(args.tag),
+            });
+
+        return args.helpers.sendOutput(args, result);
+    },
 });

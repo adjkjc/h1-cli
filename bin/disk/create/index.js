@@ -76,7 +76,7 @@ module.exports = resource => Cli.createCommand('create', {
             const vhdxInfo = await vhdx.info(args['source-file']);
 
             if (body.size === null) {
-                body.size = Math.ceil(vhdxInfo.size / 1024**3); // B -> GiB
+                body.size = Math.ceil(vhdxInfo.size / 1024 ** 3); // B -> GiB
             }
 
             body.metadata = {
@@ -90,9 +90,9 @@ module.exports = resource => Cli.createCommand('create', {
                 throw Cli.error.cancelled('<source-file> vhdx should be dynamic');
             }
 
-            if (args.size !== null && vhdxInfo.size > body.size * 1024**3) { // B > (GB -> B)
+            if (args.size !== null && vhdxInfo.size > body.size * 1024 ** 3) { // B > (GB -> B)
                 // (B -> GiB); GiB
-                throw Cli.error.cancelled(`<source-file> ${Math.ceil(vhdxInfo.size/1024 **3)}GiB is bigger than ${body.size}GiB`);
+                throw Cli.error.cancelled(`<source-file> ${Math.ceil(vhdxInfo.size/1024 ** 3)}GiB is bigger than ${body.size}GiB`);
             }
         }
 

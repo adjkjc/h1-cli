@@ -28,7 +28,7 @@ module.exports = resource => Cli.createCommand('create', {
     genericOptions: ['tag'],
     plugins: genericDefaults.plugins,
     options: options,
-    handler: (args) => {
+    handler: async args => {
         const network = {
             name: args.name,
             tag: require('lib/tags').createTagObject(args.tag),
@@ -46,9 +46,10 @@ module.exports = resource => Cli.createCommand('create', {
             network.gateway = args.gateway;
         }
 
-        return args.helpers.api
-            .post('network', network)
-            .then(result => args.helpers.sendOutput(args, result));
+        const result = await args.helpers.api
+            .post('network', network);
+
+        return args.helpers.sendOutput(args, result);
     },
 });
 

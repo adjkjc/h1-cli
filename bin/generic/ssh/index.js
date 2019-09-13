@@ -22,28 +22,28 @@ module.exports = resource => {
         dirname: __dirname,
         resource: resource,
         options: Object.assign({}, resource.options, options),
-        handler: args => args.helpers.api
-            .get(`${resource.url(args)}/${args[resource.name]}`)
-            .then(resource => {
+        handler: async args => {
+            const resource2 = await args.helpers.api
+                .get(`${resource.url(args)}/${args[resource.name]}`);
 
-                const sshArgs = [
-                    `${resource.id}@${resource.fqdn}`,
-                ];
+            const sshArgs = [
+                `${resource2.id}@${resource2.fqdn}`,
+            ];
 
-                if (args.command) {
-                    sshArgs.push(args.command);
-                }
+            if (args.command) {
+                sshArgs.push(args.command);
+            }
 
-                console.log(`ssh ${sshArgs.join(' ')}`);
+            console.log(`ssh ${sshArgs.join(' ')}`);
 
-                const spawn = require('child_process').spawn;
+            const spawn = require('child_process').spawn;
 
-                return new Promise((resolve, reject) => {
-                    const ssh = spawn('ssh', sshArgs, {stdio: 'inherit'});
+            return new Promise((resolve, reject) => {
+                const ssh = spawn('ssh', sshArgs, {stdio: 'inherit'});
 
-                    ssh.on('close', resolve);
-                    ssh.on('error', reject);
-                });
-            }),
+                ssh.on('close', resolve);
+                ssh.on('error', reject);
+            });
+        },
     });
 };

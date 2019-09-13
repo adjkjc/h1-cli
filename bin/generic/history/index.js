@@ -17,12 +17,13 @@ module.exports = resource => {
         dirname: __dirname,
         options: Object.assign({}, options, resource.options),
         resource: resource,
-        handler: args => {
+        handler: async args => {
             args.query = '[].{id:id,name:name,createdBy:createdBy,queued:queued,state:state}';
 
-            return args.helpers.api
-                .get(`${resource.url(args)}/${args[resource.name]}/queue`)
-                .then(result => args.helpers.sendOutput(args, result));
+            const result = await args.helpers.api
+                .get(`${resource.url(args)}/${args[resource.name]}/queue`);
+
+            return args.helpers.sendOutput(args, result);
         },
     });
 };

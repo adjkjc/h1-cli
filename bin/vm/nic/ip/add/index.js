@@ -15,7 +15,10 @@ module.exports = resource => Cli.createCommand('add', {
     plugins: resource.plugins,
     options: Object.assign({}, resource.options, options),
     dirname: __dirname,
-    handler: args => args.helpers.api
-        .post(resource.url(args), { ip: args.ip })
-        .then(result => args.helpers.sendOutput(args, result)),
+    handler: async args => {
+        const result = await args.helpers.api
+            .post(resource.url(args), { ip: args.ip });
+
+        return args.helpers.sendOutput(args, result);
+    },
 });

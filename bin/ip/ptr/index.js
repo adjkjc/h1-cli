@@ -16,9 +16,12 @@ const options = {
     },
 };
 
-const handler = args => args.helpers.api
-    .patch(`ip/${args.ip}`, { ptrRecord: args.value })
-    .then(result => args.helpers.sendOutput(args, result));
+const handler = async args => {
+    const result = await args.helpers.api
+        .patch(`ip/${args.ip}`, { ptrRecord: args.value });
+
+    return args.helpers.sendOutput(args, result);
+};
 
 module.exports = resource => Cli.createCommand('ptr', {
     dirname: __dirname,

@@ -20,6 +20,8 @@ module.exports = Cli.createCommand('show', {
     plugins: genericDefaults.plugins,
     options: options,
     params: params,
-    handler: (args) => args.helpers.api.get(`service/${args.id}`)
-        .then(result => args.helpers.sendOutput(args, result)),
+    handler: async args => {
+        const result = await args.helpers.api.get(`service/${args.id}`);
+        return args.helpers.sendOutput(args, result);
+    },
 });

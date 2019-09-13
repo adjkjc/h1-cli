@@ -26,8 +26,9 @@ module.exports = (resource, type) => Cli.createCommand('delete-record', {
 
         rset.record = rset.record.filter(record => !args.values.includes(record.content));
 
-        return args.helpers.api
-            .patch(url, rset)
-            .then(result => args.helpers.sendOutput(args, result));
+        const result = await args.helpers.api
+            .patch(url, rset);
+
+        return args.helpers.sendOutput(args, result);
     },
 });

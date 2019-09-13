@@ -21,13 +21,16 @@ module.exports = resource => {
         description: `Assign ${resource.title} to resource`,
         plugins: resource.plugins,
         options: Object.assign({}, options, resource.options),
-        handler: args => args.helpers.api
-            .post(`${resource.url(args)}/${args[resource.name]}/actions`, {
-                name: 'assign',
-                data: {
-                    resource: args.resource,
-                },
-            })
-            .then(result => args.helpers.sendOutput(args, result)),
+        handler: async args => {
+            const result = await args.helpers.api
+                .post(`${resource.url(args)}/${args[resource.name]}/actions`, {
+                    name: 'assign',
+                    data: {
+                        resource: args.resource,
+                    },
+                });
+
+            return args.helpers.sendOutput(args, result);
+        },
     });
 };

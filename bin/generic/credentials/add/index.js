@@ -23,8 +23,7 @@ module.exports = resource => Cli.createCommand('add', {
     dirname: __dirname,
     resource: resource,
     options: Object.assign({}, resource.options, options),
-    handler: args => {
-
+    handler: async args => {
         const filename = path.resolve(args['sshkey-file']);
 
         if (!fs.existsSync(filename)) {
@@ -37,9 +36,9 @@ module.exports = resource => Cli.createCommand('add', {
             value: fs.readFileSync(filename, 'utf8'),
         };
 
-        return args.helpers.api
-            .post(args.$node.parent.config.url(args), body)
-            .then(result => args.helpers.sendOutput(args, result))
-        ;
+        const result = await args.helpers.api
+            .post(args.$node.parent.config.url(args), body);
+
+        return args.helpers.sendOutput(args, result);
     },
 });

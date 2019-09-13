@@ -26,7 +26,7 @@ module.exports = (resource) => {
         options: Object.assign({}, resource.options, options),
         genericOptions: ['tag'],
         dirname: __dirname,
-        handler: (args) => {
+        handler: async args => {
             const body = {
                 type: args.type,
                 tag: require('lib/tags').createTagObject(args.tag),
@@ -37,8 +37,8 @@ module.exports = (resource) => {
             if (args.ip) {
                 body.ip = args.ip;
             }
-            return args.helpers.api.post(resource.url(args), body)
-                .then(result => args.helpers.sendOutput(args, result));
+            const result = await args.helpers.api.post(resource.url(args), body);
+            return args.helpers.sendOutput(args, result);
         },
     });
 };

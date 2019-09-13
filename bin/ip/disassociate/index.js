@@ -11,9 +11,12 @@ const options = {
     },
 };
 
-const handler = (args) => args.helpers.api
-    .post(`ip/${args.ip}/actions`, { name: 'disassociate' })
-    .then(result => args.helpers.sendOutput(args, result));
+const handler = async args => {
+    const result = await args.helpers.api
+        .post(`ip/${args.ip}/actions`, { name: 'disassociate' });
+
+    return args.helpers.sendOutput(args, result);
+};
 
 
 module.exports = resource => Cli.createCommand('disassociate', {

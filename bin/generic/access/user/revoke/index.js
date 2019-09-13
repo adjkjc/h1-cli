@@ -17,7 +17,10 @@ module.exports = resource => Cli.createCommand('revoke', {
     params: resource.params,
     context: resource.context,
     options: Object.assign({}, resource.options, options),
-    handler: args => args.helpers.api
-        .delete(`${resource.url(args)}/${args.email}`)
-        .then(result => args.helpers.sendOutput(args, result)),
+    handler: async args => {
+        const result = await args.helpers.api
+            .delete(`${resource.url(args)}/${args.email}`);
+
+        return args.helpers.sendOutput(args, result);
+    },
 });

@@ -10,7 +10,7 @@ const login = require('bin/login');
 const apiPlugin = require('../api');
 
 module.exports = {
-    onBeforeHandler: context => {
+    onBeforeHandler: async context => {
         const profile = config.get('profile', {});
 
         if (config.getTokenEnv()) {
@@ -34,8 +34,9 @@ module.exports = {
             throw Cli.error.cancelled('Please login first');
         }
 
-        return login
-            .handler(context.args)
-            .then(() => context.args.username = username);
+        await login
+            .handler(context.args);
+
+        return context.args.username = username;
     },
 };

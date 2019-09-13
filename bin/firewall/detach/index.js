@@ -10,9 +10,12 @@ const options = {
     },
 };
 
-const handler = args => args.helpers.api
-    .post(`firewall/${args.firewall}/actions`, { name: 'detach' })
-    .then(result => args.helpers.sendOutput(args, result))
+const handler = async args => {
+    const result = await args.helpers.api
+        .post(`firewall/${args.firewall}/actions`, { name: 'detach' });
+
+    return args.helpers.sendOutput(args, result);
+}
 ;
 
 module.exports = resource => Cli.createCommand('detach', {

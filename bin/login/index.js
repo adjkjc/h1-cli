@@ -24,29 +24,30 @@ const handler = async args => {
         p = args.helpers.api.getApiKey(args.username, { password: args.password });
     } else {
         p = args.helpers.api.getApiKeySSH(args.username)
-            .catch(err => {
+            .catch(async err => {
                 if (err.message.includes('host fingerprint verification failed')) {
                     throw Cli.error.serverError(err.message);
                 }
 
-                return interactive.prompt('Password', {
+                const password = await interactive.prompt('Password', {
                     type: 'password',
                     name: 'value',
                     validate: input => input.length === 0 ? 'Incorrect password' : true,
-                })
-                    .then(password => args.helpers.api.getApiKey(args.username, { password: password.value }));
+                });
+
+                return args.helpers.api.getApiKey(args.username, { password: password.value });
             });
     }
 
-    return p
-        .then(async () => {
-            return logger('info', 'You successfully logged and stored your session identifier in config file');
-        }).catch(e => {
-            if (e.status === 404 || e.status === 401) {
-                return logger('error', `Your login or password is incorrect (${e.status})`);
-            }
-            throw e;
-        });
+    try {
+        await p;
+        return logger('info', 'You successfully logged and stored your session identifier in config file');
+    } catch (e) {
+        if (e.status === 404 || e.status === 401) {
+            return logger('error', `Your login or password is incorrect (${e.status})`);
+        }
+        throw e;
+    }
 };
 
 module.exports = Cli.createCommand('login', {

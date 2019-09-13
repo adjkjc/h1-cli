@@ -23,13 +23,16 @@ module.exports = resource => {
         dirname: __dirname,
         resource: resource,
         options: Object.assign({}, resource.options, options),
-        handler: args => args.helpers.api
-            .post(`${args.$node.parent.config.url(args)}/${args[resource.name]}/actions`, {
-                name: 'transfer',
-                data: {
-                    project: args['new-project'],
-                },
-            })
-            .then(result => args.helpers.sendOutput(args, result)),
+        handler: async args => {
+            const result = await args.helpers.api
+                .post(`${args.$node.parent.config.url(args)}/${args[resource.name]}/actions`, {
+                    name: 'transfer',
+                    data: {
+                        project: args['new-project'],
+                    },
+                });
+
+            return args.helpers.sendOutput(args, result);
+        },
     });
 };

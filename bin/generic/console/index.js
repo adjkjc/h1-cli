@@ -29,7 +29,7 @@ module.exports = (resource, url_func) => {
             console.error();
             console.error('If the console does not automatically open, please copy this address and paste it into your browser.');
 
-            return Open(url).then(() => {});
+            await Open(url);
         },
     });
 };

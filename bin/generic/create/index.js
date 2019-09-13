@@ -61,9 +61,10 @@ module.exports = resource => {
                     return set(body, dest, value);
                 });
 
-            return args.helpers.api
-                .post(resource.url(args), body)
-                .then(result => args.helpers.sendOutput(args, result));
+            const result = await args.helpers.api
+                .post(resource.url(args), body);
+
+            return args.helpers.sendOutput(args, result);
         },
     });
 };

@@ -27,17 +27,19 @@ module.exports = resource => Cli.createCommand('add', {
     plugins: resource.plugins,
     params: resource.params,
     options: Object.assign({}, resource.options, options),
-    handler: args => {
+    handler: async args => {
         let value = args.value;
         if (args.type === 'subnet' && !value.includes('/')) {
             value = `${value}/32`;
         }
 
-        return args.helpers.api
+        const result = await args.helpers.api
             .post(resource.url(args), {
                 name: args.name,
                 type: args.type,
                 value: value,
-            }).then(result => args.helpers.sendOutput(args, result));
+            });
+
+        return args.helpers.sendOutput(args, result);
     },
 });

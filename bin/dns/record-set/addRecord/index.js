@@ -32,8 +32,9 @@ module.exports = (resource, type) => Cli.createCommand('add-record', {
 
         rset.record.push(...new_records);
 
-        return args.helpers.api
-            .patch(url, rset)
-            .then(result => args.helpers.sendOutput(args, result));
+        const result = await args.helpers.api
+            .patch(url, rset);
+
+        return args.helpers.sendOutput(args, result);
     },
 });

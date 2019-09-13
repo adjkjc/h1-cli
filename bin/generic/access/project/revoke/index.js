@@ -26,8 +26,11 @@ module.exports = (resource) => {
         params: resource.params,
         options: Object.assign({}, resource.options, options),
         resource: resource,
-        handler: args => args.helpers.api
-            .delete(`${resource.name}/${args[resource.name]}/accessrights/${args.project}`)
-            .then(result => args.helpers.sendOutput(args, result)),
+        handler: async args => {
+            const result = await args.helpers.api
+                .delete(`${resource.name}/${args[resource.name]}/accessrights/${args.project}`);
+
+            return args.helpers.sendOutput(args, result);
+        },
     });
 };

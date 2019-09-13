@@ -19,13 +19,16 @@ module.exports = (resource, subresource) => Cli.createCommand('add', {
     resource: resource,
     dirname: __dirname,
     options: Object.assign({}, subresource.options, options),
-    handler: args => args.helpers.api
-        .patch(
-            args.$node.parent.config.url(args),
+    handler: async args => {
+        await args.helpers.api
+            .patch(
+                args.$node.parent.config.url(args),
+                require('lib/tags').createTagObject(args.tag)
+            )
+            .then(result => Object.entries(result).map(([key, value])=> ({key, value})));
+
+        return args.helpers.sendOutput(args,
             require('lib/tags').createTagObject(args.tag)
-        )
-        .then(result => Object.entries(result).map(([key, value])=> ({key, value})))
-        .then(() => args.helpers.sendOutput(args,
-            require('lib/tags').createTagObject(args.tag)
-        )),
+        );
+    },
 });

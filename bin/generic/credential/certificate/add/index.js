@@ -30,8 +30,7 @@ module.exports = resource => Cli.createCommand('add', {
     params: resource.params,
     resource: resource,
     options: Object.assign({}, resource.options, options),
-    handler: args => {
-
+    handler: async args => {
         if (!args.sshkey && !args['sshkey-file']) {
             return logger('error', 'please use --sshkey or --sshkey-file');
         }
@@ -52,8 +51,9 @@ module.exports = resource => Cli.createCommand('add', {
             body.value = fs.readFileSync(filename, 'utf8');
         }
 
-        return args.helpers.api
-            .post(`${resource.url(args)}/credential`, body)
-            .then(result => args.helpers.sendOutput(args, result));
+        const result = await args.helpers.api
+            .post(`${resource.url(args)}/credential`, body);
+
+        return args.helpers.sendOutput(args, result);
     },
 });

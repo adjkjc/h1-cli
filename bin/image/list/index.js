@@ -18,7 +18,7 @@ module.exports = resource => Cli.createCommand('list', {
     dirname: __dirname,
     plugins: resource.plugins,
     options: options,
-    handler: args => {
+    handler: async args => {
         let path = '';
         if (args.recommended) {
             path = '/recommended';
@@ -26,18 +26,16 @@ module.exports = resource => Cli.createCommand('list', {
             path = '/all';
         }
 
-        return args.helpers.api
-            .get(`${resource.url()}${path}`)
-            .then(images => {
+        const images = await args.helpers.api
+            .get(`${resource.url()}${path}`);
 
-                if (args.recommended && args.output !== 'json') {
-                    args.query = args.query || '[].{id:id,name:name,distro:description.distro,release:description.release,codename:description.codename,edition:description.edition,arch:description.arch,fileSize:ceil(fileSize),created:createdOn}';
-                    images.forEach(image => {
-                        image.description = JSON.parse(image.description);
-                    });
-                }
-
-                return args.helpers.sendOutput(args, images);
+        if (args.recommended && args.output !== 'json') {
+            args.query = args.query || '[].{id:id,name:name,distro:description.distro,release:description.release,codename:description.codename,edition:description.edition,arch:description.arch,fileSize:ceil(fileSize),created:createdOn}';
+            images.forEach(image => {
+                image.description = JSON.parse(image.description);
             });
+        }
+
+        return args.helpers.sendOutput(args, images);
     },
 });

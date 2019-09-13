@@ -153,7 +153,7 @@ module.exports = resource => Cli.createCommand('create', {
             newVM.userMetadata = content.toString('base64');
         }
 
-        return args.helpers.api.post('vm', newVM)
-            .then(result => args.helpers.sendOutput(args, result));
+        const result = await args.helpers.api.post('vm', newVM);
+        return args.helpers.sendOutput(args, result);
     },
 });

@@ -20,8 +20,11 @@ module.exports = function(resource) {
         plugins: genericDefaults.plugins,
         options: Object.assign({}, resource.options, options),
         resource: resource,
-        handler: args => args.helpers.api
-            .get(`${resource.url(args)}/${args[resource.name]}/accessrights`)
-            .then(result => args.helpers.sendOutput(args, result)),
+        handler: async args => {
+            const result = await args.helpers.api
+                .get(`${resource.url(args)}/${args[resource.name]}/accessrights`);
+
+            return args.helpers.sendOutput(args, result);
+        },
     });
 };

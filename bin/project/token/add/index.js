@@ -15,7 +15,10 @@ module.exports = resource => Cli.createCommand('add', {
     resource: resource,
     dirname: __dirname,
     options: Object.assign({}, resource.options, options),
-    handler: args => args.helpers.api
-        .post(args.$node.parent.config.url(args), { name: args.name })
-        .then(result => args.helpers.sendOutput(args, result)),
+    handler: async args => {
+        const result = await args.helpers.api
+            .post(args.$node.parent.config.url(args), { name: args.name });
+
+        return args.helpers.sendOutput(args, result);
+    },
 });

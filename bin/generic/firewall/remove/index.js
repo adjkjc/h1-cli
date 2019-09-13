@@ -9,7 +9,10 @@ module.exports = resource => Cli.createCommand('remove', {
     plugins: resource.plugins,
     resource: resource,
     options: resource.options,
-    handler: args => args.helpers.api
-        .post(`${resource.url(args)}/actions/firewall_remove`)
-        .then(result => args.helpers.sendOutput(args, result)),
+    handler: async args => {
+        const result = await args.helpers.api
+            .post(`${resource.url(args)}/actions/firewall_remove`);
+
+        return args.helpers.sendOutput(args, result);
+    },
 });

@@ -17,7 +17,10 @@ module.exports = resource => Cli.createCommand('detach', {
     plugins: genericDefaults.plugins,
     options: Object.assign({}, resource.options, options),
     params: resource.params,
-    handler: (args) => args.helpers.api
-        .post(`netgw/${args.netgw}/actions`, { name: 'detach' })
-        .then(result => args.helpers.sendOutput(args, result)),
+    handler: async args => {
+        const result = await args.helpers.api
+            .post(`netgw/${args.netgw}/actions`, { name: 'detach' });
+
+        return args.helpers.sendOutput(args, result);
+    },
 });

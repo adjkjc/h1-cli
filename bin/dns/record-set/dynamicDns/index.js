@@ -42,7 +42,7 @@ module.exports = resource => Cli.createCommand('dynamic-dns', {
         }
 
         const url = `${resource.url(args)}/recordset`;
-        return args.helpers.api.post(url, rrset)
-            .then(result => args.helpers.sendOutput(args, result));
+        const result = await args.helpers.api.post(url, rrset);
+        return args.helpers.sendOutput(args, result);
     },
 });

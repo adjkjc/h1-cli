@@ -21,14 +21,17 @@ module.exports = resource => {
         plugins: resource.plugins,
         resource: resource,
         options: Object.assign({}, resource.options, options),
-        handler: args => args.helpers.api
-            .get(resource.url(args))
-            .then(values => values.filter(x => x !== args[resource.parameter_name]))
-            .then(values => {
-                console.log({values});
+        handler: async args => {
+            const values = await args.helpers.api
+                .get(resource.url(args))
+                .then(values => values.filter(x => x !== args[resource.parameter_name]))
+                .then(values => {
+                    console.log({values});
 
-                return args.helpers.api.put(resource.url(args), values);
-            })
-            .then(values => args.helpers.sendOutput(args, values)),
+                    return args.helpers.api.put(resource.url(args), values);
+                });
+
+            return args.helpers.sendOutput(args, values);
+        },
     });
 };

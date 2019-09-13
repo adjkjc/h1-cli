@@ -21,10 +21,11 @@ const supported_label = [...supported_types, 'soa']
     .map(x => x.toUpperCase())
     .join(', ');
 
-const handle = (args) => args.helpers.api.get(
-    `${args.$node.parent.config.url(args)}/${args.zone}`, {
-        name: args.zone,
-    }).then(result => {
+const handle = async args => {
+    const result = await args.helpers.api.get(
+        `${args.$node.parent.config.url(args)}/${args.zone}`, {
+            name: args.zone,
+        });
 
     const zone = {
         $origin: result.name,
@@ -62,7 +63,7 @@ const handle = (args) => args.helpers.api.get(
                 });
         });
     return zonefile.generate(zone);
-});
+};
 
 module.exports = (resource) => Cli.createCommand('export', {
     description: `Export ${supported_label} records of ${resource.title} in BIND-compatible format`,

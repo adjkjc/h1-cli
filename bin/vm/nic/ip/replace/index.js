@@ -21,15 +21,18 @@ module.exports = resource => Cli.createCommand('replace', {
     plugins: resource.plugins,
     options: Object.assign({}, resource.options, options),
     dirname: __dirname,
-    handler: args => args.helpers.api
-        .post(`vm/${args.vm}/netadp/${args.nic}/actions`,
-            {
-                name: 'ip_replace',
-                data: {
-                    oldIP: args.ip,
-                    newIP: args['new-ip'],
-                },
-            }
-        )
-        .then(result => args.helpers.sendOutput(args, result)),
+    handler: async args => {
+        const result = await args.helpers.api
+            .post(`vm/${args.vm}/netadp/${args.nic}/actions`,
+                {
+                    name: 'ip_replace',
+                    data: {
+                        oldIP: args.ip,
+                        newIP: args['new-ip'],
+                    },
+                }
+            );
+
+        return args.helpers.sendOutput(args, result);
+    },
 });

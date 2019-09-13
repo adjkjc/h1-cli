@@ -22,7 +22,7 @@ module.exports = (resource, type) => Cli.createCommand('delete', {
         const rset = await findRRset(resource, args, type);
         const url = `${resource.url(args)}/recordset/${rset.id}`;
 
-        return args.helpers.api.delete(url)
-            .then(result => args.helpers.sendOutput(args, result));
+        const result = await args.helpers.api.delete(url);
+        return args.helpers.sendOutput(args, result);
     },
 });

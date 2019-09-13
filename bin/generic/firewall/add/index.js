@@ -20,8 +20,11 @@ module.exports = resource => {
         plugins: resource.plugins,
         resource: resource,
         options: Object.assign({}, options, resource.options),
-        handler: args => args.helpers.api
-            .post(`${resource.url(args)}/actions/firewall_add`, {firewall: args.firewall})
-            .then(result => args.helpers.sendOutput(args, result)),
+        handler: async args => {
+            const result = await args.helpers.api
+                .post(`${resource.url(args)}/actions/firewall_add`, {firewall: args.firewall});
+
+            return args.helpers.sendOutput(args, result);
+        },
     });
 };

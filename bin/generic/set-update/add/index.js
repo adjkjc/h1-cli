@@ -23,13 +23,16 @@ module.exports = resource => {
         plugins: resource.plugins,
         resource: resource,
         options: Object.assign({}, resource.options, options),
-        handler: args => args.helpers.api
-            .get(resource.url(args))
-            .then(value => [
-                ...value,
-                args[resource.parameter_name],
-            ])
-            .then(value => args.helpers.api.put(resource.url(args), value))
-            .then(result => args.helpers.sendOutput(args, result)),
+        handler: async args => {
+            const result = await args.helpers.api
+                .get(resource.url(args))
+                .then(value => [
+                    ...value,
+                    args[resource.parameter_name],
+                ])
+                .then(value => args.helpers.api.put(resource.url(args), value));
+
+            return args.helpers.sendOutput(args, result);
+        },
     });
 };

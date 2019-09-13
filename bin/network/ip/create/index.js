@@ -16,7 +16,7 @@ module.exports = resource => Cli.createCommand('create', {
     plugins: resource.plugins,
     genericOptions: ['tag'],
     options: Object.assign({}, resource.options, options),
-    handler: (args) => {
+    handler: async args => {
         const body = {
             tag: require('lib/tags').createTagObject(args.tag),
             network: args.network,
@@ -26,8 +26,9 @@ module.exports = resource => Cli.createCommand('create', {
             body.address = args.address;
         }
 
-        return args.helpers.api
-            .post('ip', body)
-            .then(result => args.helpers.sendOutput(args, result));
+        const result = await args.helpers.api
+            .post('ip', body);
+
+        return args.helpers.sendOutput(args, result);
     },
 });

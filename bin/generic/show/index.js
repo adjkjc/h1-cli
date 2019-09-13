@@ -19,8 +19,11 @@ module.exports = resource => {
         dirname: __dirname,
         resource: resource,
         options: Object.assign({}, resource.options, options),
-        handler: args => args.helpers.api
-            .get(`${resource.url(args)}/${args[resource.name]}`)
-            .then(result => args.helpers.sendOutput(args, result)),
+        handler: async args => {
+            const result = await args.helpers.api
+                .get(`${resource.url(args)}/${args[resource.name]}`);
+
+            return args.helpers.sendOutput(args, result);
+        },
     });
 };

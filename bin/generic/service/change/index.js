@@ -18,12 +18,15 @@ module.exports = (resource) => Cli.createCommand('change', {
     params: resource.params,
     resource: resource,
     dirname: __dirname,
-    handler: args => args.helpers.api
-        .post(`${resource.url(args)}/actions`, {
-            name: 'flavour',
-            data: {
-                service: args['new-type'],
-            },
-        })
-        .then(result => args.helpers.sendOutput(args, result)),
+    handler: async args => {
+        const result = await args.helpers.api
+            .post(`${resource.url(args)}/actions`, {
+                name: 'flavour',
+                data: {
+                    service: args['new-type'],
+                },
+            });
+
+        return args.helpers.sendOutput(args, result);
+    },
 });

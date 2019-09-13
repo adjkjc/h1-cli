@@ -30,10 +30,14 @@ module.exports = resource => Cli.createCommand('enable', {
         require('bin/_plugins/outputFormat'),
     ],
     options: Object.assign({}, resource.options, options),
-    handler: args => args.helpers.api
-        .put(resource.url(args), {
-            logArchive: args.log,
-            password: args.password,
-            mode: args.mode,
-        }).then(result => args.helpers.sendOutput(args, result)),
+    handler: async args => {
+        const result = await args.helpers.api
+            .put(resource.url(args), {
+                logArchive: args.log,
+                password: args.password,
+                mode: args.mode,
+            });
+
+        return args.helpers.sendOutput(args, result);
+    },
 });

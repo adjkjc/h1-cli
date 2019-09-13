@@ -19,23 +19,24 @@ module.exports = resource => {
         dirname: __dirname,
         resource: resource,
         options: Object.assign({}, resource.options, options),
-        handler: args => args.helpers.api
-            .get(`${resource.url(args)}/${args[resource.name]}`)
-            .then(result => {
-                const sshArgs = [
-                    `${result.id}@${result.fqdn}`,
-                ];
+        handler: async args => {
+            const result = await args.helpers.api
+                .get(`${resource.url(args)}/${args[resource.name]}`);
 
-                console.log(`sftp ${sshArgs.join(' ')}`);
+            const sshArgs = [
+                `${result.id}@${result.fqdn}`,
+            ];
 
-                const spawn = require('child_process').spawn;
+            console.log(`sftp ${sshArgs.join(' ')}`);
 
-                return new Promise((resolve, reject) => {
-                    const ssh = spawn('sftp', sshArgs, {stdio: 'inherit'});
+            const spawn = require('child_process').spawn;
 
-                    ssh.on('close', resolve);
-                    ssh.on('error', reject);
-                });
-            }),
+            return new Promise((resolve, reject) => {
+                const ssh = spawn('sftp', sshArgs, {stdio: 'inherit'});
+
+                ssh.on('close', resolve);
+                ssh.on('error', reject);
+            });
+        },
     });
 };

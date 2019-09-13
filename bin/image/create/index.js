@@ -28,8 +28,7 @@ module.exports = resource => Cli.createCommand('create', {
     dirname: __dirname,
     plugins: resource.plugins,
     options: options,
-    handler: args => {
-
+    handler: async args => {
         Cli.mutually_exclusive_validate(args, 'replica', 'vm');
 
         const body = {
@@ -49,8 +48,9 @@ module.exports = resource => Cli.createCommand('create', {
             body.replica = args.replica;
         }
 
-        return args.helpers.api
-            .post('image', body)
-            .then(result => args.helpers.sendOutput(args, result));
+        const result = await args.helpers.api
+            .post('image', body);
+
+        return args.helpers.sendOutput(args, result);
     },
 });

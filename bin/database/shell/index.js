@@ -22,34 +22,34 @@ module.exports = resource => Cli.createCommand('shell', {
     plugins: resource.plugins,
     dirname: __dirname,
     options: Object.assign({}, resource.options, options),
-    handler: args => args.helpers.api
-        .get(`${resource.url(args)}/${args.database}`)
-        .then(database => {
+    handler: async args => {
+        const database = await args.helpers.api
+            .get(`${resource.url(args)}/${args.database}`);
 
-            const cmdArgs = [
-                '-h', database.fqdn,
-                '-u', database.id,
-                '--enable-cleartext-plugin',
-                database.id,
-            ];
+        const cmdArgs = [
+            '-h', database.fqdn,
+            '-u', database.id,
+            '--enable-cleartext-plugin',
+            database.id,
+        ];
 
-            if (cmdArgs.verbose) {
-                cmdArgs.push('-v');
-            }
-            console.log(`${database.flavour} ${cmdArgs.join(' ')}`);
+        if (cmdArgs.verbose) {
+            cmdArgs.push('-v');
+        }
+        console.log(`${database.flavour} ${cmdArgs.join(' ')}`);
 
-            const spawn = require('child_process').spawn;
+        const spawn = require('child_process').spawn;
 
-            return new Promise((resolve, reject) => {
-                const ssh = spawn(database.flavour, cmdArgs, {
-                    stdio: 'inherit',
-                    env: Object.assign({}, process.env, {
-                        MYSQL_PWD: args.password,
-                    }),
-                });
-
-                ssh.on('close', resolve);
-                ssh.on('error', reject);
+        return new Promise((resolve, reject) => {
+            const ssh = spawn(database.flavour, cmdArgs, {
+                stdio: 'inherit',
+                env: Object.assign({}, process.env, {
+                    MYSQL_PWD: args.password,
+                }),
             });
-        }),
+
+            ssh.on('close', resolve);
+            ssh.on('error', reject);
+        });
+    },
 });

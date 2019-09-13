@@ -54,9 +54,11 @@ module.exports = resource => {
             require('bin/_plugins/loginRequired'),
         ],
         options: options,
-        handler: args => args.helpers.api
-            .get(`${resource.url(args)}/${args[resource.name]}`)
-            .then(log => new Promise((resolve, reject) => args['log-file']
+        handler: async args => {
+            const log = await args.helpers.api
+                .get(`${resource.url(args)}/${args[resource.name]}`);
+
+            return new Promise((resolve, reject) => args['log-file']
                 .pipe(new readlineTransform())
                 .pipe(new Transform({
                     transform(line, encoding, callback) {
@@ -76,7 +78,8 @@ module.exports = resource => {
                 )
                 .once('error', reject)
                 .once('end', resolve)
-            )),
+            );
+        },
     });
 
     cmd.addOptionGroup('Output options', format.outputOptions);

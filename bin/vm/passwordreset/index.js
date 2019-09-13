@@ -19,7 +19,7 @@ const options = {
     },
 };
 
-const handler = args => {
+const handler = async args => {
     logger('info', 'Generating key pair...');
 
     const rsa = new NodeRSA().generateKeyPair();
@@ -32,7 +32,7 @@ const handler = args => {
 
     args.query = args.query || '[].{"New Password":password}';
 
-    return args.helpers.api
+    const result = await args.helpers.api
         .post(`${args.$node.parent.config.url(args)}/${args.id}/actions`, {
             name: 'password_reset',
             data: {
@@ -63,8 +63,9 @@ const handler = args => {
             }
 
             return { password: rsa.decrypt(data.encryptedPassword).toString() };
-        })
-        .then(result => args.helpers.sendOutput(args, result));
+        });
+
+    return args.helpers.sendOutput(args, result);
 };
 
 module.exports = resource => Cli.createCommand('passwordreset', {

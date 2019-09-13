@@ -16,10 +16,13 @@ module.exports = resource => {
         description: `Extend ${resource.title}`,
         plugins: resource.plugins,
         options: Object.assign({}, options, resource.options),
-        handler: args => args.helpers.api
-            .post(`${resource.url(args)}/${args[resource.name]}/actions`, {
-                name: 'extend', data: {},
-            })
-            .then(result => args.helpers.sendOutput(args, result)),
+        handler: async args => {
+            const result = await args.helpers.api
+                .post(`${resource.url(args)}/${args[resource.name]}/actions`, {
+                    name: 'extend', data: {},
+                });
+
+            return args.helpers.sendOutput(args, result);
+        },
     });
 };

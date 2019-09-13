@@ -10,9 +10,10 @@ module.exports = resource => Cli.createCommand('limit', {
     dirname: __dirname,
     params: resource.params,
     options: resource.options,
-    handler: args => {
+    handler: async args => {
         args.query = args.query || '[].{resource:resource,limit:limit,value:value}';
-        return args.helpers.api
+
+        const result = await args.helpers.api
             .get(`${resource.url(args)}/limit`)
             .then(result => Object
                 .entries(result)
@@ -20,7 +21,8 @@ module.exports = resource => Cli.createCommand('limit', {
                     .entries(limits)
                     .map(([limit, value]) => ({resource, limit, value}))
                 )
-            )
-            .then(result => args.helpers.sendOutput(args, result));
+            );
+
+        return args.helpers.sendOutput(args, result);
     },
 });

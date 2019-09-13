@@ -22,7 +22,10 @@ module.exports = resource => Cli.createCommand('associate', {
     plugins: genericDefaults.plugins,
     defaultQuery: resource.defaultQuery,
     options: Object.assign({}, resource.options, options),
-    handler: args => args.helpers.api
-        .post(`ip/${args.ip}/actions/associate`, {ip: args['private-ip']})
-        .then(result => args.helpers.sendOutput(args, result)),
+    handler: async args => {
+        const result = await args.helpers.api
+            .post(`ip/${args.ip}/actions/associate`, {ip: args['private-ip']});
+
+        return args.helpers.sendOutput(args, result);
+    },
 });

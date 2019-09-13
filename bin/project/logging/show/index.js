@@ -11,7 +11,10 @@ module.exports = resource => Cli.createCommand('show', {
         require('bin/_plugins/outputFormat'),
     ],
     options: resource.options,
-    handler: args => args.helpers.api
-        .get(resource.url(args))
-        .then(result => args.helpers.sendOutput(args, result)),
+    handler: async args => {
+        const result = await args.helpers.api
+            .get(resource.url(args));
+
+        return args.helpers.sendOutput(args, result);
+    },
 });

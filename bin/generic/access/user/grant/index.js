@@ -23,14 +23,15 @@ module.exports = resource => Cli.createCommand('grant', {
     params: resource.params,
     context: resource.context,
     options: Object.assign({}, resource.options, options),
-    handler: args => {
+    handler: async args => {
         const data = {
             id: args.email,
             role: args.role,
         };
-        return args.helpers.api
-            .post(resource.url(args), data)
-            .then(result => args.helpers.sendOutput(args, result))
-        ;
+
+        const result = await args.helpers.api
+            .post(resource.url(args), data);
+
+        return args.helpers.sendOutput(args, result);
     },
 });

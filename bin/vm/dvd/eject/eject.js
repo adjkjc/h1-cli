@@ -13,23 +13,25 @@ module.exports = resource => Cli.createCommand('eject', {
     params: resource.params,
     options: resource.options,
     dirname: __dirname,
-    handler: args => {
-        const eject = () => args.helpers.api
-            .put(args.$node.parent.config.url(args), { })
-            .then(result => args.helpers.sendOutput(args, result));
+    handler: async args => {
+        const eject = async () => {
+            const result = await args.helpers.api
+                .put(args.$node.parent.config.url(args), { });
+
+            return args.helpers.sendOutput(args, result);
+        };
 
         if (args.yes) {
             return eject();
         }
 
-        return interactive
-            .confirm('Are you sure you want to eject ISO ?')
-            .then(answer=> {
-                if (answer.value === true) {
-                    return eject();
-                }
+        const answer = await interactive
+            .confirm('Are you sure you want to eject ISO ?');
 
-                throw Cli.error.cancelled('Canceled', undefined);
-            });
+        if (answer.value === true) {
+            return eject();
+        }
+
+        throw Cli.error.cancelled('Canceled', undefined);
     },
 });

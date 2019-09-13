@@ -14,9 +14,12 @@ module.exports = (resource) => {
                 required: true,
             },
         },
-        handler: args => args.helpers.api
-            .post(`${resource.url(args)}/${args[resource.name]}/actions/stop`, {})
-            .then(result => args.helpers.sendOutput(args, result)),
+        handler: async args => {
+            const result = await args.helpers.api
+                .post(`${resource.url(args)}/${args[resource.name]}/actions/stop`, {});
+
+            return args.helpers.sendOutput(args, result);
+        },
     });
 };
 

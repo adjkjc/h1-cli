@@ -15,11 +15,14 @@ module.exports = resource => Cli.createCommand('persistent', {
     plugins: resource.plugins,
     options: Object.assign({}, resource.options, options),
     dirname: __dirname,
-    handler: args => args.helpers.api
-        .post(`ip/${args.ip}/actions`,
-            {
-                name: 'allocate',
-            }
-        )
-        .then(result => args.helpers.sendOutput(args, result)),
+    handler: async args => {
+        const result = await args.helpers.api
+            .post(`ip/${args.ip}/actions`,
+                {
+                    name: 'allocate',
+                }
+            );
+
+        return args.helpers.sendOutput(args, result);
+    },
 });

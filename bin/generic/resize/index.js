@@ -23,13 +23,16 @@ module.exports = resource => {
         dirname: __dirname,
         resource: resource,
         options: options,
-        handler: args => args.helpers.api
-            .post(`${resource.url(args)}/${args[resource.name]}/actions`, {
-                name: 'resize',
-                data: {
-                    size: args.size,
-                },
-            })
-            .then(result => args.helpers.sendOutput(args, result)),
+        handler: async args => {
+            const result = await args.helpers.api
+                .post(`${resource.url(args)}/${args[resource.name]}/actions`, {
+                    name: 'resize',
+                    data: {
+                        size: args.size,
+                    },
+                });
+
+            return args.helpers.sendOutput(args, result);
+        },
     });
 };

@@ -124,9 +124,10 @@ applyDefault(cli, config.get('defaults', {}));
 // load plugins
 config.plugins.forEach(plugin => plugin.load(cli));
 
-cli.run = () => Cli.run(cli).then(data => {
+cli.run = async () => {
+    const data = await Cli.run(cli);
     config.store();
     return data;
-});
+};
 
 module.exports = cli;

@@ -17,12 +17,15 @@ module.exports = (resource) => Cli.createCommand('rename', {
     options: Object.assign({}, resource.options, options),
     params: resource.params,
     dirname: __dirname,
-    handler: args => args.helpers.api
-        .post(`vm/${args[resource.name]}/actions`, {
-            name: 'rename',
-            data: {
-                newname: args['new-name'],
-            },
-        })
-        .then(result => args.helpers.sendOutput(args, result)),
+    handler: async args => {
+        const result = await args.helpers.api
+            .post(`vm/${args[resource.name]}/actions`, {
+                name: 'rename',
+                data: {
+                    newname: args['new-name'],
+                },
+            });
+
+        return args.helpers.sendOutput(args, result);
+    },
 });

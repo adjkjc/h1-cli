@@ -47,8 +47,10 @@ module.exports = (resource) => Cli.createCommand('add', {
         const body = Object.assign(credentials.hashPassword(password, credential_type), {
             name: args.name,
         });
-        return args.helpers.api
-            .post(`${resource.url(args)}/credential`, body)
-            .then(result => args.helpers.sendOutput(args, result));
+
+        const result = await args.helpers.api
+            .post(`${resource.url(args)}/credential`, body);
+
+        return args.helpers.sendOutput(args, result);
     },
 });

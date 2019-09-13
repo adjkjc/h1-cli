@@ -16,7 +16,7 @@ module.exports = resource => Cli.createCommand('create', {
     description: `Create ${resource.title}`,
     plugins: genericDefaults.plugins,
     options: Object.assign({}, options, resource.options),
-    handler: (args) => {
+    handler: async args => {
         const body = {
             tag: require('lib/tags').createTagObject(args.tag),
         };
@@ -25,8 +25,9 @@ module.exports = resource => Cli.createCommand('create', {
             body.ptrRecord = args['ptr-record'];
         }
 
-        return args.helpers.api
-            .post('ip', body)
-            .then(result => args.helpers.sendOutput(args, result));
+        const result = await args.helpers.api
+            .post('ip', body);
+
+        return args.helpers.sendOutput(args, result);
     },
 });

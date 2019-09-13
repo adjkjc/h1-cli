@@ -25,7 +25,7 @@ module.exports = (resource, type) => Cli.createCommand('create', {
     options: Object.assign({}, options, resource.options, recordOptions),
     priority: 25,
     resource: resource,
-    handler: args => {
+    handler: async args => {
         args.zone = addTrailingDot(args.zone);
 
         const data = {
@@ -38,8 +38,9 @@ module.exports = (resource, type) => Cli.createCommand('create', {
             })),
         };
 
-        return args.helpers.api
-            .post(`${resource.url(args)}/recordset`, data)
-            .then(result => args.helpers.sendOutput(args, result));
+        const result = await args.helpers.api
+            .post(`${resource.url(args)}/recordset`, data);
+
+        return args.helpers.sendOutput(args, result);
     },
 });

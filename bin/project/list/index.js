@@ -12,7 +12,10 @@ module.exports = resource => Cli.createCommand('list', {
     dirname: __dirname,
     plugins: resource.plugins,
     options: options,
-    handler: args => args.helpers.api
-        .get(resource.url(args), args.all ? {} : { active: true })
-        .then(result => args.helpers.sendOutput(args, result)),
+    handler: async args => {
+        const result = await args.helpers.api
+            .get(resource.url(args), args.all ? {} : { active: true });
+
+        return args.helpers.sendOutput(args, result);
+    },
 });

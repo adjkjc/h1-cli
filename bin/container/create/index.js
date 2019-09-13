@@ -56,7 +56,6 @@ module.exports = resource => Cli.createCommand('create', {
     options: Object.assign({}, options, resource.options, registry.options),
     dirname: __dirname,
     handler: async args => {
-
         const body = {
             name: args.name,
             image: args.image,
@@ -89,8 +88,9 @@ module.exports = resource => Cli.createCommand('create', {
             body.command = args.command;
         }
 
-        return args.helpers.api
-            .post(resource.url(args), body)
-            .then(result => args.helpers.sendOutput(args, result));
+        const result = await args.helpers.api
+            .post(resource.url(args), body);
+
+        return args.helpers.sendOutput(args, result);
     },
 });

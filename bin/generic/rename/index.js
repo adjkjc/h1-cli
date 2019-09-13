@@ -23,10 +23,13 @@ module.exports = resource => {
         dirname: __dirname,
         resource: resource,
         options: Object.assign({}, resource.options, options),
-        handler: args => args.helpers.api
-            .patch(`${resource.url(args)}/${args[resource.name]}`, {
-                name: args['new-name'],
-            })
-            .then(result => args.helpers.sendOutput(args, result)),
+        handler: async args => {
+            const result = await args.helpers.api
+                .patch(`${resource.url(args)}/${args[resource.name]}`, {
+                    name: args['new-name'],
+                });
+
+            return args.helpers.sendOutput(args, result);
+        },
     });
 };

@@ -16,7 +16,10 @@ module.exports = resource => Cli.createCommand('insert', {
     params: resource.params,
     options: Object.assign({}, resource.options, options),
     dirname: __dirname,
-    handler: args => args.helpers.api
-        .put(args.$node.parent.config.url(args), { iso: args.iso })
-        .then(result => args.helpers.sendOutput(args, result)),
+    handler: async args => {
+        const result = await args.helpers.api
+            .put(args.$node.parent.config.url(args), { iso: args.iso });
+
+        return args.helpers.sendOutput(args, result);
+    },
 });

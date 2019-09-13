@@ -7,11 +7,14 @@ module.exports = resource => Cli.createCommand('attach', {
     dirname: __dirname,
     plugins: resource.plugins,
     options: resource.options,
-    handler: args => args.helpers.api
-        .redirect_url(`${resource.url(args)}/attach`, {
-            ws:1,
-            height: process.stdout.getWindowSize()[0],
-            width: process.stdout.getWindowSize()[1],
-        })
-        .then(url => websocketTerminal(url, '')),
+    handler: async args => {
+        const url = await args.helpers.api
+            .redirect_url(`${resource.url(args)}/attach`, {
+                ws:1,
+                height: process.stdout.getWindowSize()[0],
+                width: process.stdout.getWindowSize()[1],
+            });
+
+        return websocketTerminal(url, '');
+    },
 });

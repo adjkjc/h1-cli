@@ -26,8 +26,11 @@ module.exports = function(resource) {
         plugins: genericDefaults.plugins,
         options: options,
         resource: resource,
-        handler: args => args.helpers.api
-            .post(`${resource.name}/${args[resource.name]}/accessrights`, { identity: args.project })
-            .then(() => args.helpers.sendOutput(args, [args.project])),
+        handler: async args => {
+            await args.helpers.api
+                .post(`${resource.name}/${args[resource.name]}/accessrights`, { identity: args.project });
+
+            return args.helpers.sendOutput(args, [args.project]);
+        },
     });
 };

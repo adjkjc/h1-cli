@@ -49,15 +49,18 @@ module.exports = (table, resource) => Cli.createCommand('add', {
     plugins: resource.plugins,
     params: resource.params,
     options: Object.assign({}, resource.options, options),
-    handler: args => args.helpers.api
-        .post(`firewall/${args.firewall}/${table}`, {
-            name: args.name,
-            priority: args.priority,
-            direction: args.direction,
-            filter: [...new Set(args.filter)],
-            external: [...new Set(args.external)],
-            internal: [...new Set(args.internal)],
-            action: args.action,
-        })
-        .then(result => args.helpers.sendOutput(args, result)),
+    handler: async args => {
+        const result = await args.helpers.api
+            .post(`firewall/${args.firewall}/${table}`, {
+                name: args.name,
+                priority: args.priority,
+                direction: args.direction,
+                filter: [...new Set(args.filter)],
+                external: [...new Set(args.external)],
+                internal: [...new Set(args.internal)],
+                action: args.action,
+            });
+
+        return args.helpers.sendOutput(args, result);
+    },
 });
