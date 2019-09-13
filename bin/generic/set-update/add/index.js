@@ -24,13 +24,15 @@ module.exports = resource => {
         resource: resource,
         options: Object.assign({}, resource.options, options),
         handler: async args => {
-            const result = await args.helpers.api
-                .get(resource.url(args))
-                .then(value => [
-                    ...value,
-                    args[resource.parameter_name],
-                ])
-                .then(value => args.helpers.api.put(resource.url(args), value));
+            const value_current = await args.helpers.api
+                .get(resource.url(args));
+
+            const value = [
+                ...value_current,
+                args[resource.parameter_name],
+            ];
+
+            const result = await args.helpers.api.put(resource.url(args), value);
 
             return args.helpers.sendOutput(args, result);
         },

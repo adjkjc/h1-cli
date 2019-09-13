@@ -32,7 +32,7 @@ const handler = async args => {
 
     args.query = args.query || '[].{"New Password":password}';
 
-    const result = await args.helpers.api
+    await args.helpers.api
         .post(`${args.$node.parent.config.url(args)}/${args.id}/actions`, {
             name: 'password_reset',
             data: {
@@ -40,30 +40,29 @@ const handler = async args => {
                 modulus : modulus,
                 exponent: exponent,
             },
-        })
-        .then(() => new Promise(r => setTimeout(r, 2000))) //TODO use websocket
-        .then(() => args.helpers.api.get(`/vm/${args.id}/serialport/2`))
-        .then(data => {
-            try {
-                // In the absence of an agent, we do not receive a response.
-                // On May 30, 2018, the agent is available only for Windows.
-                const line = data.split('\n').filter(line => line.trim().length > 0).pop();
-                data = JSON.parse(line);
-            } catch (e) {
-                console.log('Invalid response from agent. Unable to reset password.');
-                console.log('Response: ', data);
-                process.exit(-1);
-            }
-            if (data.modulus !== modulus) {
-                return Promise.reject('modulus differs');
-            }
-
-            if (data.exponent !== exponent) {
-                return Promise.reject('exponent differs');
-            }
-
-            return { password: rsa.decrypt(data.encryptedPassword).toString() };
         });
+
+    await new Promise(r => setTimeout(r, 2000));
+    const data = await args.helpers.api.get(`/vm/${args.id}/serialport/2`);
+    try {
+        // In the absence of an agent, we do not receive a response.
+        // On May 30, 2018, the agent is available only for Windows.
+        const line = data.split('\n').filter(line => line.trim().length > 0).pop();
+        data = JSON.parse(line);
+    } catch (e) {
+        console.log('Invalid response from agent. Unable to reset password.');
+        console.log('Response: ', data);
+        process.exit(-1);
+    }
+    if (data.modulus !== modulus) {
+        return Promise.reject('modulus differs');
+    }
+
+    if (data.exponent !== exponent) {
+        return Promise.reject('exponent differs');
+    }
+
+    const result = { password: rsa.decrypt(data.encryptedPassword).toString() };
 
     return args.helpers.sendOutput(args, result);
 };

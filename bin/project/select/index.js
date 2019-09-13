@@ -15,14 +15,12 @@ module.exports = resource => Cli.createCommand('select', {
     ],
     options: resource.options,
     handler: async args => {
-        const result = await args.helpers.api
-            .get(resource.url(args))
-            .then(project => {
-                config.set('profile.project', { id: project.id, name: project.name });
-                logger('info', `Project selected: ${project.id} "${project.name}"`);
-                return project;
-            });
+        const project = await args.helpers.api
+            .get(resource.url(args));
 
-        return args.helpers.sendOutput(args, result);
+        config.set('profile.project', { id: project.id, name: project.name });
+        logger('info', `Project selected: ${project.id} "${project.name}"`);
+
+        return args.helpers.sendOutput(args, project);
     },
 });

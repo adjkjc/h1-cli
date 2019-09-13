@@ -19,10 +19,10 @@ module.exports = (resource) => Cli.createCommand('userdata', {
     options: Object.assign({}, resource.options, options),
     params: resource.params,
     handler: async args => {
-        const result = await fs.getFileContent(args['userdata-file'])
-            .then(content => args.helpers.api.patch(`vm/${args[resource.name]}`, {
-                userMetadata: content.toString('base64'),
-            }));
+        const content = await fs.getFileContent(args['userdata-file']);
+        const result = await args.helpers.api.patch(`vm/${args[resource.name]}`, {
+            userMetadata: content.toString('base64'),
+        });
 
         return args.helpers.sendOutput(args, result);
     },

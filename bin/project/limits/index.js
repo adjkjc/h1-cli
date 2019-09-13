@@ -13,14 +13,13 @@ module.exports = resource => Cli.createCommand('limit', {
     handler: async args => {
         args.query = args.query || '[].{resource:resource,limit:limit,value:value}';
 
-        const result = await args.helpers.api
-            .get(`${resource.url(args)}/limit`)
-            .then(result => Object
-                .entries(result)
-                .map(([resource, limits]) => Object
-                    .entries(limits)
-                    .map(([limit, value]) => ({resource, limit, value}))
-                )
+        const result = Object
+            .entries(await args.helpers.api
+                .get(`${resource.url(args)}/limit`)
+            )
+            .map(([resource, limits]) => Object
+                .entries(limits)
+                .map(([limit, value]) => ({resource, limit, value}))
             );
 
         return args.helpers.sendOutput(args, result);
