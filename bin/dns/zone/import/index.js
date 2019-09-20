@@ -34,9 +34,18 @@ const supported_label = supported_types
     .map(x => x.toUpperCase())
     .join(', ');
 
-const cmpRecordset = (a, b) => a.ttl === b.ttl &&
-    equalArray(a.record.filter(x => x.enabled).map(x => x.content), b.record.filter(x => x.enabled).map(x => x.content)) &&
-    equalArray(a.record.filter(x => !x.enabled).map(x => x.content), b.record.filter(x => !x.enabled).map(x => x.content));
+const cmpRecordset = (a, b) =>
+    a.ttl === b.ttl
+    &&
+    equalArray(
+        a.record.filter(x => x.enabled).map(x => x.content),
+        b.record.filter(x => x.enabled).map(x => x.content)
+    )
+    &&
+    equalArray(
+        a.record.filter(x => !x.enabled).map(x => x.content),
+        b.record.filter(x => !x.enabled).map(x => x.content)
+    );
 
 module.exports = (resource) => Cli.createCommand('import', {
     description: `Import ${supported_label} records of ${resource.title} from BIND-compatible format`,
