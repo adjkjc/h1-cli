@@ -7,7 +7,7 @@ module.exports = {
         to_bind: content => ({
             ip: content,
         }),
-        to_content: record => record.ip,
+        to_content: (record) => record.ip,
         extraCommand: ['dynamicDns'],
     },
     aaaa: {
@@ -22,7 +22,7 @@ module.exports = {
         to_bind: content => ({
             alias: content,
         }),
-        to_content: record => record.alias,
+        to_content: (record, zone) => formatRecordName(record.alias, zone.name),
     },
     txt: {
         value: '"some-text-value"',
@@ -46,7 +46,7 @@ module.exports = {
             preference: content.split(' ')[0],
             host: content.split(' ')[1],
         }),
-        to_content: record => `${record.preference} ${record.host}`,
+        to_content: (record, zone) => `${record.preference} ${formatRecordName(record.host, zone.name)}`,
     },
     ns: {
         value: 'ns1.example.com',

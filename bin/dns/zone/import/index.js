@@ -5,6 +5,7 @@ const fs = require('fs');
 const Cli = require('lib/cli');
 const formatRecordName = require('../../lib').formatRecordName;
 const recordTypes = require('../../recordTypes');
+const { equalArray } = require('lib/transform');
 
 const options = {
     zone: {
@@ -33,6 +34,10 @@ const supported_label = supported_types
     .map(x => x.toUpperCase())
     .join(', ');
 
+const cmpRecordset = (a, b) => a.ttl === b.ttl &&
+    equalArray(a.record.filter(x => x.enabled).map(x => x.content), b.record.filter(x => x.enabled).map(x => x.content)) &&
+    equalArray(a.record.filter(x => !x.enabled).map(x => x.content), b.record.filter(x => !x.enabled).map(x => x.content));
+
 module.exports = (resource) => Cli.createCommand('import', {
     description: `Import ${supported_label} records of ${resource.title} from BIND-compatible format`,
     plugins: resource.plugins,
@@ -57,20 +62,19 @@ module.exports = (resource) => Cli.createCommand('import', {
                         const rrset = remote_zone.recordset.find(x => x.type === type.toUpperCase() && formatRecordName(x.name, remote_zone.dnsName) === rrset_name);
                         const url = `${resource.url(args)}/${args.zone}/recordset/${rrset.id}`;
                         await args.helpers.api.delete(url);
-                        console.error(`Delete ${type.toUpperCase()} ${rrset_name}`);
+                        console.error(`Deleted ${type.toUpperCase()} ${rrset_name}`);
                     }
                 }
 
                 // Upsert
                 const need_to_upsert = set_difference(local_rrset_names, need_to_remove);
                 for (const rrset_name of need_to_upsert) {
-                    console.log({rrset_name});
                     const records = local_rrset_type
                         .filter(rrset => formatRecordName(rrset.name, remote_zone.dnsName) === rrset_name)
                         .map(record => recordTypes[type].to_content(record, remote_zone))
                         .map(content => ({
                             content: content,
-                            disabled: false,
+                            enabled: true,
                         }));
 
                     const ttl = local_rrset_type.find(rrset => formatRecordName(rrset.name, remote_zone.dnsName) === rrset_name).ttl | local_zone.$ttl;
@@ -86,13 +90,18 @@ module.exports = (resource) => Cli.createCommand('import', {
                     if (remote_rrset) {
                         // Update
                         const url = `${resource.url(args)}/${args.zone}/recordset/${remote_rrset.id}`;
-                        await args.helpers.api.patch(url, data);
-                        console.error(`Update ${type.toUpperCase()} ${rrset_name}`);
+                        if (!cmpRecordset(data, remote_rrset)) {
+                            console.dir({ data, remote_rrset }, { depth: null });
+                            await args.helpers.api.patch(url, data);
+                            console.error(`Updated ${type.toUpperCase()} ${rrset_name}`);
+                        } else {
+                            console.error(`Skipped ${type.toUpperCase()} ${rrset_name} (equal)`);
+                        }
                     } else {
                         // Add
                         const url = `${resource.url(args)}/${args.zone}/recordset`;
                         await args.helpers.api.post(url, data);
-                        console.error(`Add ${type.toUpperCase()} ${rrset_name}`);
+                        console.error(`Added ${type.toUpperCase()} ${rrset_name}`);
                     }
                 }
             }
