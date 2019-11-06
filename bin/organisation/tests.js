@@ -7,10 +7,10 @@ const config = require('lib/config');
 
 const active_project = config.get('profile.project.id');
 
-ava.serial('organisation life cycle', async t => {
-    const project = await tests.run(`project show --project ${active_project}`);
+tests.serial('organisation life cycle', ['organisation'], async t => {
+    const project = await tests.run(t, `project show --project ${active_project}`);
     const organization_id = project.organisation;
-    const organisation = await tests.run(`organisation show --organisation ${organization_id}`);
+    const organisation = await tests.run(t, `organisation show --organisation ${organization_id}`);
 
     await tests.resourceLifeCycle('organisation', {
         resource: organisation,
@@ -25,7 +25,7 @@ ava.serial('organisation life cycle', async t => {
 });
 
 ava.serial('organization access of user cycle', async t => {
-    const project = await tests.run(`project show --project ${active_project}`);
+    const project = await tests.run(t, `project show --project ${active_project}`);
     const organization_id = project.organisation;
 
     await tests.resourceAccessOfUser('organisation', `--organisation ${organization_id}`)(t);

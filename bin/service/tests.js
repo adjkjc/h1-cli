@@ -5,7 +5,7 @@ require('../../scope/h1');
 const tests = require('../../lib/tests');
 
 ava.serial('service all', async t => {
-    const list = await tests.run('service list');
+    const list = await tests.run(t, 'service list');
     t.true(list.some(d => d.resource === 'vm' && d.type === 'flavour'));
 
     const service = await tests.show('service', list[0]);
@@ -15,6 +15,6 @@ ava.serial('service all', async t => {
 });
 
 ava.serial('service project', async t => {
-    const list = await tests.run('service list --resource project');
+    const list = await tests.run(t, 'service list --resource project');
     t.true(list.length > 0);
 });

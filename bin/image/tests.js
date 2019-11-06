@@ -9,17 +9,17 @@ const getCommon = async (t, options = {}) => {
     const vm_name = tests.getName('vm', t.title);
     const disk_name = tests.getName('disk', t.title);
     const password = await tests.getToken();
-    const vm = await tests.run(`vm create --name ${vm_name} --password ${password} --os-disk ${disk_name},ssd,10 --type a1.nano --image ${image}`);
+    const vm = await tests.run(t, `vm create --name ${vm_name} --password ${password} --os-disk ${disk_name},ssd,10 --type a1.nano --image ${image}`);
     return {
         vm, disk_name, vm_name,
         cleanup: async () => {
-            await tests.remove('vm', vm.id);
-            await tests.remove('disk', disk_name);
+            await tests.remove(t, 'vm', vm.id);
+            await tests.remove(t, 'disk', disk_name);
         },
     };
 };
 
-ava.serial('image life cycle', async t => {
+tests.serial('image life cycle', ['image'], async t => {
     const common = await getCommon(t);
     try {
         await tests.resourceLifeCycle('image', {
@@ -42,8 +42,8 @@ for (const [name, project] of Object.entries(tests.access_test_case)) {
         }
     });
 }
-ava.serial('image resolver prefer server', async t => {
-    const image = await tests.run('image show --image ubuntu');
+tests.serial('image resolver prefer server', ['image'], async t => {
+    const image = await tests.run(t, 'image show --image ubuntu');
     const description = JSON.parse(image.description);
     t.true(description.edition === 'server');
     t.true(description.distro === 'ubuntu');

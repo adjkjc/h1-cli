@@ -9,8 +9,8 @@ const config = require('lib/config');
 
 const active_project = config.get('profile.project.id');
 
-ava.serial('project life cycle', async t => {
-    const project = await tests.run(`project show --project ${active_project}`);
+tests.serial('project life cycle', ['project'],  async t => {
+    const project = await tests.run(t, `project show --project ${active_project}`);
     const active_organisation = project.organisation;
     const createParams = `--name ${tests.getName('project-life-cycle')} --organisation ${active_organisation}`;
 
@@ -25,64 +25,64 @@ ava.serial('project life cycle', async t => {
     })(t);
 });
 
-ava.serial('project show', async t => {
-    const project = await tests.run(`project show --project ${active_project}`);
+tests.serial('project show', ['project'],  async t => {
+    const project = await tests.run(t, `project show --project ${active_project}`);
     t.true(project.id === active_project);
 });
 
-const getOrganisationForProject = async projectId => (await tests.run(`project show --project '${projectId}'`)).organisation;
+const getOrganisationForProject = async (t, projectId) => (await tests.run(t, `project show --project '${projectId}'`)).organisation;
 
 ava.skip('project transfer', tests.requireSlaveProject(async (t, projects) => {
     let active_organisation, slave_organisation;
     if (Math.floor(Math.random() * 2) === 0) {
-        active_organisation = await getOrganisationForProject(active_project);
-        slave_organisation = await getOrganisationForProject(projects.slave);
+        active_organisation = await getOrganisationForProject(t, active_project);
+        slave_organisation = await getOrganisationForProject(t, projects.slave);
     } else {
-        active_organisation = await getOrganisationForProject(projects.slave);
-        slave_organisation = await getOrganisationForProject(active_project);
+        active_organisation = await getOrganisationForProject(t, projects.slave);
+        slave_organisation = await getOrganisationForProject(t, active_project);
     }
 
-    const project = await tests.run(`project create --name ${tests.getName('project-transfer')} --organisation ${active_organisation}`);
+    const project = await tests.run(t, `project create --name ${tests.getName('project-transfer')} --organisation ${active_organisation}`);
 
-    await tests.run(`project transfer --project ${project.id} --organisation ${slave_organisation}`);
-    const transfer_list = await tests.run(`organisation transfer list --organisation ${slave_organisation}`);
+    await tests.run(t, `project transfer --project ${project.id} --organisation ${slave_organisation}`);
+    const transfer_list = await tests.run(t, `organisation transfer list --organisation ${slave_organisation}`);
     t.true(transfer_list.some(x => x.id === project.id));
 
-    const payment_list = await tests.run(`organisation payment list --organisation ${slave_organisation}`);
+    const payment_list = await tests.run(t, `organisation payment list --organisation ${slave_organisation}`);
     const free_payment = payment_list.find(x => !x.project);
     t.true(!!free_payment, `No free payment on organization ${slave_organisation}`);
-    await tests.run(`organisation transfer accept --organisation ${slave_organisation} --project ${project.id} --payment ${free_payment.id}`);
-    const transfered_project = await tests.run(`project show --project ${project.id}`);
+    await tests.run(t, `organisation transfer accept --organisation ${slave_organisation} --project ${project.id} --payment ${free_payment.id}`);
+    const transfered_project = await tests.run(t, `project show --project ${project.id}`);
     t.true(transfered_project.organisation === slave_organisation);
 
-    await tests.remove('project', project);
+    await tests.remove(t, 'project', project);
 }));
 
-ava.serial('project rename', async t => {
+tests.serial('project rename', ['project'],  async t => {
     const name = tests.getName('Project for monitoring public API');
 
-    await tests.run(`project rename --project '${active_project}' --new-name '${name}'`);
+    await tests.run(t, `project rename --project '${active_project}' --new-name '${name}'`);
 
-    const project = await tests.run(`project show --project ${active_project}`);
+    const project = await tests.run(t, `project show --project ${active_project}`);
     t.true(project.id === active_project);
     t.true(project.name === name);
 });
 
-ava.serial('project limits', async t => {
+tests.serial('project limits', ['project'],  async t => {
     const limits = await tests.run('project limit');
     t.true(limits.some(d => d.resource === 'vm' && d.limit === 'count'));
 });
 
-ava.serial('project list', async t => {
+tests.serial('project list', ['project'],  async t => {
     const list = await tests.run('project list');
     t.true(list.length > 0);
 });
 
-ava.serial('project access of user cycle', tests.resourceAccessOfUser('project', `--project ${active_project}`));
+tests.serial('project access of user cycle', ['project'],  tests.resourceAccessOfUser('project', `--project ${active_project}`));
 
-ava.serial('project token life cycle', async t => {
+tests.serial('project token life cycle', ['project'],  async t => {
     const commonParams = `--project '${active_project}'`;
-    const token = await tests.run(`project token add ${commonParams} --name ${tests.getName(t.title)}`);
+    const token = await tests.run(t, `project token add ${commonParams} --name ${tests.getName(t.title)}`);
 
     await tests.subresourceLifeCycle({
         resourceType: 'project',
@@ -91,29 +91,29 @@ ava.serial('project token life cycle', async t => {
         skipRename: false,
     })(t);
 
-    await tests.remove('project token', token, {
+    await tests.remove(t, 'project token', token, {
         deleteParams: commonParams,
     });
 });
 
-ava.serial('project notification credits edit', async t => {
+tests.serial('project notification credits edit', ['project'],  async t => {
     const commonParams = `--project ${active_project}`;
     const limit = Math.round(Math.random() * 1000000);
 
     // Verify randomness of limit
-    const limits = await tests.run(`project notification credits list ${commonParams}`);
+    const limits = await tests.run(t, `project notification credits list ${commonParams}`);
     t.true(!limits.includes(limit));
 
     // Add limit
-    await tests.run(`project notification credits add ${commonParams} --limit ${limit}`);
+    await tests.run(t, `project notification credits add ${commonParams} --limit ${limit}`);
 
-    const new_limits = await tests.run(`project notification credits list ${commonParams}`);
+    const new_limits = await tests.run(t, `project notification credits list ${commonParams}`);
     t.true(new_limits.includes(limit));
 
     // Delete limit (cleanup)
-    await tests.run(`project notification credits delete ${commonParams} --limit ${limit}`);
+    await tests.run(t, `project notification credits delete ${commonParams} --limit ${limit}`);
 
-    const newest_limits = await tests.run(`project notification credits list ${commonParams}`);
+    const newest_limits = await tests.run(t, `project notification credits list ${commonParams}`);
     t.true(!newest_limits.includes(limit));
 });
 
@@ -181,25 +181,25 @@ const dateDiffMinutes = (date1, date2) => {
 };
 
 
-ava.serial('project notification credits integration test', async t => {
+tests.serial('project notification credits integration test', ['project'],  async t => {
     // The total execution time of test should not exceed 300 seconds (5 minutes).
     // Now the maximum timeout is 20 * 1 + 15 * 10 = 20 + 150 = 170
     // Otherwise an following error will occur:
     // Exited because no new tests completed within the last 300000ms of inactivity
     const commonParams = `--project ${active_project}`;
-    const project = await tests.run(`project show ${commonParams}`);
+    const project = await tests.run(t, `project show ${commonParams}`);
 
     const credits = project.billing.credits;
     const limit = credits - 0.01;
 
-    await tests.run(`project notification credits add ${commonParams} --limit ${limit}`);
+    await tests.run(t, `project notification credits add ${commonParams} --limit ${limit}`);
     try {
-        await tests.run(`reservation create --name ${tests.getName(t.title)} --type '_dev.pico, 1 day'`);
+        await tests.run(t, `reservation create --name ${tests.getName(t.title)} --type '_dev.pico, 1 day'`);
         let charged = false;
         const charge_timeout = 60;
         for (let i = 0; i < charge_timeout; i++) {
             await tests.delay(1000); // to apply charges from the queue
-            const charged_project = await tests.run(`project show ${commonParams}`);
+            const charged_project = await tests.run(t, `project show ${commonParams}`);
             const charged_credits = charged_project.billing.credits;
             if (credits !== charged_credits) {
                 console.log(`Hit limit ${limit} after charged from ${credits} to ${charged_credits}`);
@@ -230,13 +230,13 @@ ava.serial('project notification credits integration test', async t => {
         }
         t.true(received_mail, `Timeout ${15 * 10} seconds to receive mail.`);
     } finally {
-        await tests.run(`project notification credits delete ${commonParams} --limit ${limit}`);
+        await tests.run(t, `project notification credits delete ${commonParams} --limit ${limit}`);
     }
 });
 
-ava.serial('project token access life cycle', async t => {
-    const token = await tests.run(`project token add --project ${active_project} --name ${tests.getName(t.title)}`);
-    const access = await tests.run(`project token access add --project ${active_project} --method POST --path 'vault/' --token ${token.id}`);
+tests.serial('project token access life cycle', ['project'],  async t => {
+    const token = await tests.run(t, `project token add --project ${active_project} --name ${tests.getName(t.title)}`);
+    const access = await tests.run(t, `project token access add --project ${active_project} --method POST --path 'vault/' --token ${token.id}`);
 
     await tests.subresourceLifeCycle({
         resourceId: token.id,
@@ -246,36 +246,36 @@ ava.serial('project token access life cycle', async t => {
         commonParams: `--project ${active_project}`,
     })(t);
 
-    await tests.remove('project token access', access, {
+    await tests.remove(t, 'project token access', access, {
         deleteParams: `--project ${active_project} --token ${token.id}`,
     });
 
-    await tests.remove('project token', token);
+    await tests.remove(t, 'project token', token);
 });
 
-ava.serial('project token env', async t => {
-    const token = await tests.run(`project token add --project ${active_project} --name ${tests.getName(t.title)}`);
-    await tests.run(`project token access add --project ${active_project} --method ALL --path '/' --token ${token.id}`);
+tests.serial('project token env', ['project'],  async t => {
+    const token = await tests.run(t, `project token add --project ${active_project} --name ${tests.getName(t.title)}`);
+    await tests.run(t, `project token access add --project ${active_project} --method ALL --path '/' --token ${token.id}`);
 
-    const content = await tests.run(`project token env --project ${active_project} --token ${token.id} `);
+    const content = await tests.run(t, `project token env --project ${active_project} --token ${token.id} `);
     t.true(content.includes('_PROJECT'));
     t.true(content.includes('_ACCESS_TOKEN_ID'));
     t.true(content.includes('_ACCESS_TOKEN_SECRET'));
     await tests.envOutput(t, content);
 
-    await tests.remove('project token', token);
+    await tests.remove(t, 'project token', token);
 });
 
 ava.serial('token was used if environment variable set', async t => {
-    const token = await tests.run(`project token add --name ${tests.getName('token-validates')} --project ${active_project}`);
+    const token = await tests.run(t, `project token add --name ${tests.getName('token-validates')} --project ${active_project}`);
 
     // Clean up default access
-    const access_list = await tests.run(`project token access list --project ${active_project} --token ${token.id}`);
+    const access_list = await tests.run(t, `project token access list --project ${active_project} --token ${token.id}`);
     for (const access of access_list) {
-        await tests.run(`project token access delete --token ${token.id} --access ${access.id} --yes`);
+        await tests.run(t, `project token access delete --token ${token.id} --access ${access.id} --yes`);
     }
 
-    await tests.run(`project token access add --token ${token.id} --method GET --path '/vm'`);
+    await tests.run(t, `project token access add --token ${token.id} --method GET --path '/vm'`);
 
     await t.throwsAsync(() => tests.run({
         cmd: 'disk list',
@@ -284,25 +284,25 @@ ava.serial('token was used if environment variable set', async t => {
         },
     }));
 
-    await tests.remove('project token', token, {
+    await tests.remove(t, 'project token', token, {
         deleteParams: `--project ${active_project}`,
     });
 });
 
-// ava.serial('project access rule life cycle', async t => {
+// tests.serial('project access rule life cycle', ['project'],  async t => {
 //     await tests.accessRuleLifeCycle(t, 'project access rule', `--project ${active_project}`);
 // });
 
-ava.serial('project select', tests.requireSlaveProject(async (t, projects) => {
+tests.serial('project select', ['project'],  tests.requireSlaveProject(async (t, projects) => {
     const new_ip = await tests.run('ip create');
-    await tests.run(`project select --project '${projects.slave}'`);
+    await tests.run(t, `project select --project '${projects.slave}'`);
     const ip_list = await tests.run('ip list');
-    await tests.run(`project select --project '${projects.master}'`);
+    await tests.run(t, `project select --project '${projects.master}'`);
     t.true(!ip_list.some(ip => ip.id === new_ip.id));
-    await tests.remove('ip', new_ip);
+    await tests.remove(t, 'ip', new_ip);
 }));
 
-ava.serial('project credentials life cycle', tests.credentialsLifeCycle('project credentials', {
+tests.serial('project credentials life cycle', ['project'],  tests.credentialsLifeCycle('project credentials', {
     createParams: `--project ${active_project}`,
     listParams: `--project ${active_project}`,
 }));

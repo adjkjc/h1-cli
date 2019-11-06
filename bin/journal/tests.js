@@ -1,24 +1,23 @@
 'use strict';
 const fs = require('fs').promises;
-const ava = require('ava');
 
 require('../../scope/h1');
 const tests = require('../../lib/tests');
 
 const now = Date.now();
 
-ava.serial('journal life cycle', tests.resourceLifeCycle('journal', {
+tests.serial('journal life cycle', ['journal'],  tests.resourceLifeCycle('journal', {
     createParams: `--name journal-life-cycle-${now}`,
     schemaRef: '#/components/schemas/journal',
 }));
 
-ava.serial('journal credential password life cycle', async t => {
+tests.serial('journal credential password life cycle', ['journal'],  async t => {
     const journal = await tests.run(`journal create --name journal-credential-${now}`);
     await tests.passwordLifeCycle(t, 'journal', journal);
     await tests.remove('journal', journal);
 });
 
-ava.serial('journal logger & stream', async t => {
+tests.serial('journal logger & stream', ['journal'],  async t => {
     const token = await tests.getToken();
     const content = await tests.getToken();
     const log_file = tests.getRandomFile(content);
@@ -38,7 +37,7 @@ ava.serial('journal logger & stream', async t => {
 });
 
 
-ava.serial('journal logger & stream with tags', async t => {
+tests.serial('journal logger & stream with tags', ['journal'],  async t => {
     const token = await tests.getToken();
     const content_with_tag = await tests.getToken();
     const log_file_with_tag = tests.getRandomFile(content_with_tag);
@@ -61,7 +60,7 @@ ava.serial('journal logger & stream with tags', async t => {
     }
 });
 
-ava.serial('journal retention update', async t => {
+tests.serial('journal retention update', ['journal'],  async t => {
     const journal = await tests.run(`journal create --name ${now} --retention 25`);
     try {
         t.true(journal.retention === 25);

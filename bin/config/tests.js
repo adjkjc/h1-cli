@@ -10,22 +10,22 @@ const now = Date.now();
 ava.serial('config set & get & show & unset', async t => {
     const key = 'vm.create.name';
     const value = `my-home-${now}`;
-    await tests.run(`config set --key ${key} --value ${value}`);
+    await tests.run(t, `config set --key ${key} --value ${value}`);
 
-    const result = await tests.run(`config get --key ${key}`);
+    const result = await tests.run(t, `config get --key ${key}`);
     t.true(result === value);
 
-    const content = await tests.run('config show');
+    const content = await tests.run(t, 'config show');
     t.true(content.vm.create.name === value);
 
-    await tests.run(`config unset --key ${key}`);
-    const missing = await tests.run(`config get --key ${key}`);
+    await tests.run(t, `config unset --key ${key}`);
+    const missing = await tests.run(t, `config get --key ${key}`);
     t.true(missing === 'key not set');
 });
 
-ava.serial('test websocket message', async t => {
+tests.serial('test websocket message', ['ip'], async t => {
     // TODO: Move to proper monitoring system
-    const resource = await tests.run('ip create');
+    const resource = await tests.run(t, 'ip create');
     const ws = await api.getWS();
     t.true(!!ws);
     const promise = new Promise((resolve, reject) => {
@@ -48,6 +48,6 @@ ava.serial('test websocket message', async t => {
             }
         });
     }).finally(() => ws.close());
-    await tests.remove('ip', resource);
+    await tests.remove(t, 'ip', resource);
     await promise;
 });

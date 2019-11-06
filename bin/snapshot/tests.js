@@ -1,15 +1,13 @@
 'use strict';
 
-const ava = require('ava');
-
 require('../../scope/h1');
 const tests = require('../../lib/tests');
 
 const now = Date.now();
 
 
-ava.serial('snapshot life cycle', async t => {
-    const vault = await tests.run(`vault create --name vault-snapshot-test-${now} --size 10`);
+tests.serial('snapshot life cycle', ['snapshot'], async t => {
+    const vault = await tests.run(t, `vault create --name vault-snapshot-test-${now} --size 10`);
     const name = `snapshot-test-${now}`;
 
     await tests.resourceLifeCycle('snapshot', {
@@ -20,5 +18,5 @@ ava.serial('snapshot life cycle', async t => {
     })(t);
 
 
-    await tests.remove('vault', vault);
+    await tests.remove(t, 'vault', vault);
 });

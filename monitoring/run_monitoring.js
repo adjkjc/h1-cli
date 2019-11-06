@@ -1,14 +1,17 @@
 'use strict';
-const mailer = require('nodemailer');
 const childProcess = require('child_process');
 const shell_quote = require('shell-quote');
 require('../scope/h1');
 process.env[`${process.env.SCOPE_FULL_NAME.toUpperCase()}_EARLY_ADOPTERS`] = '1';
-const tests = require('../lib/tests');
+// const tests = require('../lib/tests');
 const fg = require('fast-glob');
 const util = require('util');
 const fs = require('fs');
 const mkDir = util.promisify(fs.mkdir);
+const { Readable } = require('stream');
+const converter = require('tap-xunit');
+const superagent = require('superagent');
+const archiver = require('archiver');
 
 const getConfigValue = (name, options = {}) => {
     if (!process.env[name] && typeof options.defaultValue === 'undefined') {
@@ -20,11 +23,13 @@ const getConfigValue = (name, options = {}) => {
 };
 
 
+const stream_promisify = (stream) => new Promise((resolve, reject) => {
+    stream.on('end', resolve);
+    stream.on('error', reject);
+});
+
 const getConfig = () => {
     const specs = {
-        SMTP_URL: {
-            label: 'SMTP URL',
-        },
         HYPERONE_USER: {
             label: 'HyperOne username',
         },
@@ -37,18 +42,9 @@ const getConfig = () => {
         HYPERONE_PROJECT_SLAVE: {
             label: 'HyperOne slave project ID or name',
         },
-        MONITORING_EMAILS: {
-            label: 'Recipients of monitoring notification',
-            parse: v => v.split(','),
-        },
         MONITORING_NAME: {
             label: 'Name of tests runner',
             defaultValue: 'Unknown',
-        },
-        MONITORING_SUCCESS_EMAILS: {
-            label: 'Recipients of progress notification',
-            parse: v => v.split(',').filter(x => !!x),
-            defaultValue: '',
         },
         MONITORING_GLOB: {
             label: 'Pattern to match test case files',
@@ -56,16 +52,24 @@ const getConfig = () => {
         },
         MONITORING_CMD: {
             label: 'Monitored executable',
-            defaultValue: 'npx ava --verbose',
-        },
-        SMTP_SENDER: {
-            label: 'Monitoring sender address',
-            defaultValue: 'h1-cli@hyperone.com',
+            defaultValue: 'npx ava --tap',
         },
         MONITORING_TIMEOUT: {
             label: 'Maximum execution time (seconds)',
             parse: v => parseInt(v),
             defaultValue: 60 * 30,
+        },
+        REPORTPORTAL_URL: {
+            label: 'URL of Reportportal.io host',
+            defaultValue: 'https://web.demo.reportportal.io',
+        },
+        REPORTPORTAL_TOKEN: {
+            label: 'Hostname of Reportportal.io host',
+            defaultValue: 'aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee',
+        },
+        REPORTPORTAL_PROJECT: {
+            label: 'Project name in Reportportal.io host',
+            defaultValue: 'default_personal',
         },
     };
 
@@ -76,54 +80,27 @@ const getConfig = () => {
     return config;
 };
 
-const keywordsMatches = (keywords, str) => keywords.some(keyword => str.includes(keyword));
-
-const sendMail = async (config, success, report) => {
-    const smtpTransport = mailer.createTransport(config.SMTP_URL);
-
-    const recipient = success ? config.MONITORING_SUCCESS_EMAILS : config.MONITORING_EMAILS;
-
-    const keywordsWhiteList = [
-        // useful ava exception & result
-        ' bin ', ' tests ', ' test ', 'text: ', 'statusCode: ',
-        'message: ', 'schemaPath: ', 'dataPath: ',
-        // ava test result
-        ' ◌ ', ' ✖ ',
-        // ava process error
-        'exited with a non-zero exit',
-        // own error
-        'Process exited with code ',  'Process timed out after ',
-        // header of files
-        'tests.js ==',
-        // CLI
-        'error: ',
-    ];
-    const keywordsBlackList = ['  ✔ '];
-    const subject = success ? 'Monitoring success report' : 'Monitoring failed report';
-    if (recipient.length > 0) {
-        await smtpTransport.sendMail({
-            from: config.SMTP_SENDER,
-            to: recipient,
-            subject: `${config.MONITORING_NAME} ${subject}`,
-            text: report.split('\n').filter(line =>
-                keywordsMatches(keywordsWhiteList, line) && !keywordsMatches(keywordsBlackList, line)
-            ).join('\n'),
-            attachments: [
-                {
-                    filename: 'monitoring-report.txt',
-                    content: report,
-                },
-            ],
-        });
-
-        if (success) {
-            console.log('Success mail send!');
-        } else {
-            console.log('Error mail send!');
-        }
-    }
-
-    await smtpTransport.close();
+const sendReport = async (config, { xml, file }) => {
+    // curl -X POST --header 'Content-Type: multipart/form-data' \
+    // --header 'Accept: application/json' \
+    // --header 'Authorization: bearer aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee' \
+    // -F file=@foo.zip \
+    // 'http://192.168.1.224:8080/'
+    console.log({ xml, file });
+    const archive = archiver('zip', {
+        zlib: { level: 9 },
+    });
+    const chunks = [];
+    archive.on('data', o => chunks.push(o));
+    archive.append(xml, { name: `${config.MONITORING_NAME}.xml` });
+    const p = stream_promisify(archive);
+    archive.finalize();
+    await p;
+    const resp = await superagent
+        .post(`${config.REPORTPORTAL_URL}/api/v1/${config.REPORTPORTAL_PROJECT}/launch/import`)
+        .attach('file', Buffer.concat(chunks), `${config.MONITORING_NAME}.zip`)
+        .set('Authorization', `bearer ${config.REPORTPORTAL_TOKEN}`);
+    return resp.text;
 };
 
 const runProcess = async (cmd, env = {}, timeout = 60 * 30) => new Promise((resolve, reject) => {
@@ -145,7 +122,6 @@ const runProcess = async (cmd, env = {}, timeout = 60 * 30) => new Promise((reso
 
     proc.on('close', (code) => {
         clearTimeout(killer);
-
         if (code !== 0) {
             const error = new Error(`Process ${arg[0]} exited with code ${code}.`);
             error.code = code;
@@ -165,45 +141,48 @@ const runProcess = async (cmd, env = {}, timeout = 60 * 30) => new Promise((reso
         output += data;
     });
 });
-const runIsolated = async (config, cmd, options={}) => {
-    const project = options.project || config.HYPERONE_PROJECT_MASTER;
+const runIsolated = async (config, cmd, options = {}) => {
+    const project = options.project || config.H1_PROJECT_MASTER;
     const config_dir = `/tmp/${Math.random()}/`;
     await mkDir(config_dir);
-    const envIsolate = {HYPERONE_CONFIG_PATH: config_dir};
-    await runProcess(`h1 login --username ${config.HYPERONE_USER} --password ${config.HYPERONE_PASSWORD}`, envIsolate);
+    const envIsolate = { H1_CONFIG_PATH: config_dir };
+    await runProcess(`h1 login --username ${config.H1_USER} --password ${config.H1_PASSWORD}`, envIsolate);
     await runProcess(`h1 project select --project ${project}`, envIsolate);
     return runProcess(cmd, envIsolate, config.MONITORING_TIMEOUT);
 };
 
 const main = async () => {
     const config = getConfig();
-    const versionText = `NodeJS version: ${process.version}`;
-
     const files = await fg(config.MONITORING_GLOB);
 
-    let all_pass = true;
     const runTest = async test_path => {
-        let output = `== ${test_path} ==\n`;
+        let tap_output;
+
         try {
-            output+= await runIsolated(config, `${config.MONITORING_CMD} ${test_path}`);
+            tap_output = await runIsolated(config, `${config.MONITORING_CMD} ${test_path}`);
         } catch (err) {
-            all_pass = false;
-            output += `${err.message}\n${err.output}\n${err.message}\n`;
+            tap_output = err.output;
         }
-        return output;
+        const xml_outputs = [];
+        const xml_stream = Readable.from(tap_output).pipe(converter({}));
+        xml_stream.on('data', o => xml_outputs.push(o));
+        await stream_promisify(xml_stream);
+        return xml_outputs.join('');
     };
 
-    const outputs = await Promise.all(files.map(runTest));
-    const cleanup = [
-        runIsolated(config, `./scripts/cleanup_project.sh ${config.HYPERONE_PROJECT_MASTER}`),
-        runIsolated(config, `./scripts/cleanup_project.sh ${config.HYPERONE_PROJECT_SLAVE}`),
-        runIsolated(config, `./scripts/revoke_user.sh ${tests.RECIPIENT.user} ${config.HYPERONE_PROJECT_MASTER}`),
-        runIsolated(config, `./scripts/revoke_user.sh ${tests.RECIPIENT.user} ${config.HYPERONE_PROJECT_SLAVE}`),
-    ];
-    outputs.push(
-        ...await Promise.all(cleanup.map(p => p.catch(err => err.output)))
-    );
-    await sendMail(config, all_pass, `${versionText}\n${outputs.join('\n')}`);
+    const outputs = await Promise.all(files.map(async file => {
+        const xml = await runTest(file);
+        return sendReport(config, { xml, file });
+    }));
+    console.log(outputs);
+
+    // const cleanup = [
+    //     runIsolated(config, `./scripts/cleanup_project.sh ${config.H1_PROJECT_MASTER}`),
+    //     runIsolated(config, `./scripts/cleanup_project.sh ${config.H1_PROJECT_SLAVE}`),
+    //     runIsolated(config, `./scripts/revoke_user.sh ${tests.RECIPIENT.user} ${config.H1_PROJECT_MASTER}`),
+    //     runIsolated(config, `./scripts/revoke_user.sh ${tests.RECIPIENT.user} ${config.H1_PROJECT_SLAVE}`),
+    // ];
+    // await Promise.all(cleanup.map(p => p.catch(() => { })));
 };
 
 main().catch((err) => {

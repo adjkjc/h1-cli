@@ -7,7 +7,7 @@ const tests = require('../../lib/tests');
 const reservation_flavour = '_dev.pico, 1 day';
 const vm_flavour = '_dev.pico';
 
-ava.serial('reservation life cycle', tests.resourceLifeCycle('reservation', {
+tests.serial('reservation life cycle', ['reservation'], tests.resourceLifeCycle('reservation', {
     createParams: `--name ${tests.getName('reservation life cycle')} --type "${reservation_flavour}"`,
     stateCreated: 'Detached',
     skipDelete: true,
@@ -20,35 +20,35 @@ ava.serial('reservation life cycle', tests.resourceLifeCycle('reservation', {
 }));
 
 ava.skip('reservation assign limits', async t => {
-    const reservation = await tests.run(`reservation create --name ${tests.getName(t.title)} --type '${reservation_flavour}'`);
+    const reservation = await tests.run(t, `reservation create --name ${tests.getName(t.title)} --type '${reservation_flavour}'`);
 
-    const reversation_list = await tests.run('reservation list');
+    const reversation_list = await tests.run(t, 'reservation list');
     t.true(reversation_list.some(x => x.id === reservation.id));
     const token = await tests.getToken();
 
     const common_vm_params = `--type ${vm_flavour} --no-start --password ${token}`;
-    const vm_wrong_type = await tests.run(`vm create --name ${tests.getName(t.title, 'vm wrong type')} ${common_vm_params}`);
-    const vm_valid = await tests.run(`vm create --name ${tests.getName(t.title, 'vm valid')} ${common_vm_params} `);
-    const vm_over_limit = await tests.run(`vm create --name ${tests.getName(t.title, 'vm wrong type')} ${common_vm_params}`);
+    const vm_wrong_type = await tests.run(t, `vm create --name ${tests.getName(t.title, 'vm wrong type')} ${common_vm_params}`);
+    const vm_valid = await tests.run(t, `vm create --name ${tests.getName(t.title, 'vm valid')} ${common_vm_params} `);
+    const vm_over_limit = await tests.run(t, `vm create --name ${tests.getName(t.title, 'vm wrong type')} ${common_vm_params}`);
     await tests.delay(4 * 60 * 1000);
-    await tests.run(`reservation assign --reservation ${reservation.name} --resource ${vm_valid.id}`);
-    await t.throwsAsync(() => tests.run(`reservation assign --reservation ${reservation.name} --resource ${vm_over_limit.id}`));
-    await t.throwsAsync(() => tests.run(`reservation assign --reservation ${reservation.name} --resource ${vm_wrong_type.id}`));
+    await tests.run(t, `reservation assign --reservation ${reservation.name} --resource ${vm_valid.id}`);
+    await t.throwsAsync(() => tests.run(t, `reservation assign --reservation ${reservation.name} --resource ${vm_over_limit.id}`));
+    await t.throwsAsync(() => tests.run(t, `reservation assign --reservation ${reservation.name} --resource ${vm_wrong_type.id}`));
 
-    const assigned = await tests.run(`reservation show --reservation ${reservation.id}`);
+    const assigned = await tests.run(t, `reservation show --reservation ${reservation.id}`);
     t.true(assigned.assigned === vm_valid.id);
     t.true(assigned.state === 'Attached');
 
-    await tests.remove('vm', vm_valid);
-    await tests.remove('vm', vm_over_limit);
-    await tests.remove('vm', vm_wrong_type);
+    await tests.remove(t, 'vm', vm_valid);
+    await tests.remove(t, 'vm', vm_over_limit);
+    await tests.remove(t, 'vm', vm_wrong_type);
 });
 
 ava.skip('reservation extend', async t => {
-    const reservation = await tests.run(`reservation create --name ${tests.getName(t.title, 'vm-wrong-type')} --type '${reservation_flavour}'`);
-    await tests.delay(4 * 60 * 1000);
+    const reservation = await tests.run(t, `reservation create --name ${tests.getName(t.title, 'vm-wrong-type')} --type '${reservation_flavour}'`);
+    await tests.delay(t, 4 * 60 * 1000);
     t.true(reservation.state === 'Detached');
-    await tests.run(`reservation extend --reservation ${reservation.name}`);
-    await t.throwsAsync(() => tests.run(`reservation extend --reservation ${reservation.name}`));
+    await tests.run(t, `reservation extend --reservation ${reservation.name}`);
+    await t.throwsAsync(() => tests.run(t, `reservation extend --reservation ${reservation.name}`));
     // TODO: Add verification real change of billing period
 });

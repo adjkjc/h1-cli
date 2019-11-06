@@ -8,20 +8,20 @@ const ssh = require('../../lib/ssh');
 
 const commonCreateParams = '--type website --image h1cr.io/website/php-apache:7.2';
 
-ava.serial('website life cycle', tests.resourceLifeCycle('website', {
+tests.serial('website life cycle', ['website'],  tests.resourceLifeCycle('website', {
     createParams: `--name ${tests.getName('website-life-cycle')} ${commonCreateParams} `,
     stateCreated: 'Running',
 }));
 
-const putFileWebsite = (website, auth, path, content) => {
-    console.log(new Date(), `Upload content to website ${website.id} at '${path}'`);
+const putFileWebsite = (t, website, auth, path, content) => {
+    t.log(new Date(), `Upload content to website ${website.id} at '${path}'`);
     return ssh.putFile(path, content, Object.assign({
         host: website.fqdn,
         username: website.id,
     }, auth));
 };
 
-const rmFileWebsite = (website, auth, path) => {
+const rmFileWebsite = (t, website, auth, path) => {
     console.log(new Date(), `Remove file of website ${website.id} at '${path}'`);
     return ssh.rmFile(path, Object.assign({
         host: website.fqdn,
@@ -29,35 +29,35 @@ const rmFileWebsite = (website, auth, path) => {
     }, auth));
 };
 
-const lsWebsite = (website, auth, path) => {
-    console.log(new Date(), `List files of website ${website.id} at '${path}'`);
+const lsFileWebsite = (t, website, auth, path) => {
+    t.log(new Date(), `List files of website ${website.id} at '${path}'`);
     return ssh.lsFile(path, Object.assign({
         host: website.fqdn,
         username: website.id,
     }, auth));
 };
 
-ava.serial('website empty page results', async t => {
+tests.serial('website empty page results', ['website'],  async t => {
     const website = await tests.run(`website create --name ${tests.getName(t.title)} ${commonCreateParams}`);
     // TODO: Validate default page according scope
     await tests.delay(5); // Workaround for full page startup
     const resp = await tests.get(`http://${website.fqdn}/`).ok(res => [403, 200].includes(res.status));
     t.true(resp.text.includes("You don't have permission to access /"));
-    await tests.remove('website', website);
+    await tests.remove(t, 'website', website);
 });
 
-ava.serial('website put index via SFTP & password', async t => {
+tests.serial('website put index via SFTP & password', ['website'],  async t => {
     const password = await tests.getToken();
     const website = await tests.run(`website create --name ${tests.getName(t.title)} ${commonCreateParams} --password ${password}`);
     // Upload file
     const token = await tests.getToken();
-    await putFileWebsite(website, { password }, 'public/index.html', token);
+    await putFileWebsite(t, website, { password }, 'public/index.html', token);
     const resp = await tests.get(`http://${website.fqdn}/`);
     t.true(resp.text === token);
-    await tests.remove('website', website);
+    await tests.remove(t, 'website', website);
 });
 
-ava.serial('website management domain', async t => {
+tests.serial('website management domain', ['website'],  async t => {
     const rset_cname = 'website-cname';
     const rset_txt = 'website-txt';
     const website = await tests.run(`website create --name ${tests.getName(t.title)} ${commonCreateParams}`);
@@ -92,11 +92,11 @@ ava.serial('website management domain', async t => {
         t.true(domains.includes(`${rrset_cname.name}`));
         t.true(domains.length === 1);
     } finally {
-        await tests.remove('website', website);
+        await tests.remove(t, 'website', website);
     }
 });
 
-ava.serial('website reachable through custom domain', async t => {
+tests.serial('website reachable through custom domain', ['website'],  async t => {
     const rset = 'website-reachable';
     const password = await tests.getToken();
     const website = await tests.run(`website create --name ${tests.getName(t.title)} ${commonCreateParams} --password ${password}`);
@@ -113,10 +113,10 @@ ava.serial('website reachable through custom domain', async t => {
         await tests.run(`website start --website ${website.id}`);
         // Upload file
         const token = await tests.getToken();
-        const files = await lsWebsite(website, { password }, '/data');
+        const files = await lsFileWebsite(t, website, { password }, '/data');
         t.true(files.some(f => f.filename === 'public'));
-        await ssh.execResource(website, { password }, 'ls -lah /data/public');
-        await putFileWebsite(website, { password }, 'public/index.html', token);
+        await ssh.execResource(t, website, { password }, 'ls -lah /data/public');
+        await putFileWebsite(t, website, { password }, 'public/index.html', token);
         await tests.delay(5 * 1000);
         // Test content
         for (const proto of ['http', 'https']) {
@@ -124,11 +124,11 @@ ava.serial('website reachable through custom domain', async t => {
             t.true(resp.text === token);
         }
     } finally {
-        await tests.remove('website', website);
+        await tests.remove(t, 'website', website);
     }
 });
 
-ava.serial('website reachable through apex record', async t => {
+tests.serial('website reachable through apex record', ['website'],  async t => {
     const password = await tests.getToken();
     const website = await tests.run(`website create --name ${tests.getName(t.title)} ${commonCreateParams} --password ${password}`);
     await tests.run(`website stop --website ${website.id}`);
@@ -145,10 +145,10 @@ ava.serial('website reachable through apex record', async t => {
         await tests.run(`website start --website ${website.id}`);
         // Upload file
         const token = await tests.getToken();
-        const files = await lsWebsite(website, { password }, '/data');
+        const files = await lsFileWebsite(t, website, { password }, '/data');
         t.true(files.some(f => f.filename === 'public'));
-        await ssh.execResource(website, { password }, 'ls -lah /data/public');
-        await putFileWebsite(website, { password }, 'public/index.html', token);
+        await ssh.execResource(t, website, { password }, 'ls -lah /data/public');
+        await putFileWebsite(t, website, { password }, 'public/index.html', token);
         await tests.delay(5 * 1000);
         // Test content
         for (const proto of ['http', 'https']) {
@@ -156,29 +156,29 @@ ava.serial('website reachable through apex record', async t => {
             t.true(resp.text === token);
         }
     } finally {
-        await tests.remove('website', website);
+        await tests.remove(t, 'website', website);
     }
 });
 
 
 ['h1cr.io/website/nginx-static:latest', 'h1cr.io/website/php-apache:7.2', 'h1cr.io/website/php-apache:5.6'].forEach(image => {
-    ava.serial(`website reachable index.html - ${image}`, async t => {
+    tests.serial(`website reachable index.html - ${image}`, ['website'],  async t => {
         const sshKeyPair = await ssh.generateKey();
         const sshFilename = tests.getRandomFile(sshKeyPair.publicKey);
         const website = await tests.run(`website create --name ${tests.getName(t.title)} --type website --image '${image}' --ssh-file ${sshFilename}`);
 
         // Upload file
         const token = await tests.getToken();
-        await putFileWebsite(website, { privateKey: sshKeyPair.privateKey }, 'public/index.html', token);
+        await putFileWebsite(t, website, { privateKey: sshKeyPair.privateKey }, 'public/index.html', token);
         // Test content
         const resp = await tests.get(`http://${website.fqdn}/`);
         t.true(resp.text === token);
 
-        await tests.remove('website', website);
+        await tests.remove(t, 'website', website);
     });
 });
 
-ava.serial('website credential cert life cycle', async t => {
+tests.serial('website credential cert life cycle', ['website'],  async t => {
     const website = await tests.run(`website create --name ${tests.getName(t.title)} ${commonCreateParams}`);
 
     await tests.credentialsLifeCycle('website credential cert', {
@@ -189,19 +189,19 @@ ava.serial('website credential cert life cycle', async t => {
         renameParams: `--website ${website.id}`,
     })(t);
 
-    await tests.remove('website', website);
+    await tests.remove(t, 'website', website);
 });
 
-ava.serial('website credential password life cycle', async t => {
+tests.serial('website credential password life cycle', ['website'],  async t => {
     const website = await tests.run(`website create --name ${tests.getName(t.title)} ${commonCreateParams}`);
 
     await tests.passwordLifeCycle(t, 'website', website);
 
-    await tests.remove('website', website);
+    await tests.remove(t, 'website', website);
 });
 
 
-ava.serial('website stop & start', async t => {
+tests.serial('website stop & start', ['website'],  async t => {
     const website = await tests.run(`website create --name ${tests.getName(t.title)} ${commonCreateParams}`);
     await tests.run(`website stop --website ${website.id}`);
     const stopped_website = await tests.run(`website show --website ${website.id}`);
@@ -209,7 +209,7 @@ ava.serial('website stop & start', async t => {
     await tests.run(`website start --website ${website.id}`);
     const started_website = await tests.run(`website show --website ${website.id}`);
     t.true(started_website.state === 'Running');
-    await tests.remove('website', website);
+    await tests.remove(t, 'website', website);
 });
 
 const languages = {
@@ -224,14 +224,14 @@ const images = {
     },
 };
 
-ava.serial('website runtime access rights match of sftp', async t => {
+tests.serial('website runtime access rights match of sftp', ['website'],  async t => {
     const image = 'h1cr.io/website/php-apache:7.2';
     const password = await tests.getToken();
     const website = await tests.run(`website create --name ${tests.getName(t.title)} ${commonCreateParams} --password ${password}`);
     // Put code on website
     const token = await tests.getToken();
     const content = images[image].code.replace('TOKEN', token);
-    await putFileWebsite(website, { password }, 'public/test.php', content);
+    await putFileWebsite(t, website, { password }, 'public/test.php', content);
     // Call script
     const resp_call = await tests.get(`http://${website.fqdn}/test.php`);
     t.true(resp_call.text === '');
@@ -239,25 +239,25 @@ ava.serial('website runtime access rights match of sftp', async t => {
     const resp_test = await tests.get(`http://${website.fqdn}/test.txt`);
     t.true(resp_test.text === token);
     // Verify permission to remove
-    await rmFileWebsite(website, { password }, 'public/test.txt');
-    await tests.remove('website', website);
+    await rmFileWebsite(t, website, { password }, 'public/test.txt');
+    await tests.remove(t, 'website', website);
 });
 
 ava.todo('website sftp');
 ava.todo('website ssh');
 
-ava.serial('website connect via ssh', async t => {
+tests.serial('website connect via ssh', ['website'],  async t => {
     const password = await tests.getToken();
     const website = await tests.run(`website create --name ${tests.getName(t.title)} ${commonCreateParams} --password ${password}`);
     try {
-        const hostname = await ssh.execResource(website, { password }, 'hostname');
+        const hostname = await ssh.execResource(t, website, { password }, 'hostname');
         t.true(hostname.trim() === website.id);
     } finally {
-        await tests.remove('website', website);
+        await tests.remove(t, 'website', website);
     }
 });
 
-ava.serial('website snapshot management', async t => {
+tests.serial('website snapshot management', ['website'],  async t => {
     const password = await tests.getToken();
     const website = await tests.run(`website create --name ${tests.getName(t.title)} ${commonCreateParams} --password ${password}`);
     try {
@@ -273,48 +273,48 @@ ava.serial('website snapshot management', async t => {
         t.true(!snapshots.some(x => x.id === snapshotName));
         await tests.delay(5);
     } finally {
-        await tests.remove('website', website);
+        await tests.remove(t, 'website', website);
     }
 });
 
-ava.serial('website snapshot restore', async t => {
+tests.serial('website snapshot restore', ['website'],  async t => {
     const password = await tests.getToken();
     const website = await tests.run(`website create --name ${tests.getName(t.title)} ${commonCreateParams} --password ${password}`);
     const content = await tests.getToken();
-    await putFileWebsite(website, { password }, 'public/test.txt', content);
+    await putFileWebsite(t, website, { password }, 'public/test.txt', content);
     const snapshotName = tests.getName('snapshot', t.title);
     await tests.run(`website snapshot create --website ${website.name} --name ${snapshotName}`);
     const websiteRestored = await tests.run(`website create --name ${tests.getName('restored', t.title)} ${commonCreateParams} --password ${password} --source-website ${website.id} --source-snapshot ${snapshotName}`);
     await tests.run(`website snapshot delete --yes --website ${website.name} --snapshot ${snapshotName}`);
-    const contentRestored = await ssh.execResource(website, { password }, 'cat public/test.txt');
+    const contentRestored = await ssh.execResource(t, website, { password }, 'cat public/test.txt');
     t.true(contentRestored.trim() === content);
-    await tests.remove('website', website); // remove source of snapshot first
-    await tests.remove('website', websiteRestored);
+    await tests.remove(t, 'website', website); // remove source of snapshot first
+    await tests.remove(t, 'website', websiteRestored);
 });
 
-ava.serial('website log', async t => {
+tests.serial('website log', ['website'],  async t => {
     const password = await tests.getToken();
     const website = await tests.run(`website create --name ${tests.getName(t.title)} ${commonCreateParams} --password ${password}`);
     try {
-        await putFileWebsite(website, { password }, 'public/test.txt', await tests.getToken());
+        await putFileWebsite(t, website, { password }, 'public/test.txt', await tests.getToken());
         await tests.logStreamProcess(t, 'website', website,
             (id_request) => tests.get(`http://${website.fqdn}/test.txt?${id_request}`)
         );
     } finally {
-        await tests.remove('website', website);
+        await tests.remove(t, 'website', website);
     }
 });
 
-ava.serial('website snapshot download', async t => {
+tests.serial('website snapshot download', ['website'],  async t => {
     const password = await tests.getToken();
     const website = await tests.run(`website create --name ${tests.getName(t.title)} ${commonCreateParams} --password ${password}`);
 
     const content = await tests.getToken();
-    await putFileWebsite(website, { password }, 'public/test.txt', content);
+    await putFileWebsite(t, website, { password }, 'public/test.txt', content);
     const snapshot = await tests.run(`website snapshot create --website ${website.id} --name ${tests.getName('snapshot', t.title)}`);
 
     const content_append = await tests.getToken();
-    await putFileWebsite(website, { password }, 'public/append.txt', content_append);
+    await putFileWebsite(t, website, { password }, 'public/append.txt', content_append);
     const second_snapshot = await tests.run(`website snapshot create --website ${website.id} --name ${tests.getName('diff', t.title)}`);
 
     const output_file = await tests.getRandomFile();
@@ -329,10 +329,10 @@ ava.serial('website snapshot download', async t => {
     t.true(fs.readFileSync(output_file).length > 0);
     t.true(fs.readFileSync(output_diff_file).length > 0);
 
-    await tests.remove('website', website);
+    await tests.remove(t, 'website', website);
 });
 
-ava.serial('website snapshot receive to zfs', async t => {
+tests.serial('website snapshot receive to zfs', ['website'],  async t => {
     const zfs_list = await tests.runProcess('zfs list');
     t.true(zfs_list.includes('h1_cli_test'), 'Missing dataset. Run: zpool create h1_cli_test /dev/sdb');
     await tests.runProcess('zfs destroy -r h1_cli_test');
@@ -341,7 +341,7 @@ ava.serial('website snapshot receive to zfs', async t => {
     const website = await tests.run(`website create --name ${tests.getName(t.title)} ${commonCreateParams} --password ${password}`);
 
     const content = await tests.getToken();
-    await putFileWebsite(website, { password }, 'public/test.txt', content);
+    await putFileWebsite(t, website, { password }, 'public/test.txt', content);
     const snapshot = await tests.run(`website snapshot create --website ${website.id} --name ${tests.getName('snapshot', t.title)}`);
 
     const output_file = await tests.getRandomFile();

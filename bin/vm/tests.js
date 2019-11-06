@@ -10,9 +10,9 @@ const now = Date.now();
 
 const vm_windows_boot = 5 * 60 * 1000;
 
-const getCommon = async (test_name, options = {}) => {
+const getCommon = async (t, options = {}) => {
     const type = options.type || 'a1.nano';
-    const vm_name = tests.getName(`vm-test-${test_name}-${now}`);
+    const vm_name = tests.getName(`${t.title}-${now}`);
     const token = await tests.getToken();
     const disk_name = `disk-${vm_name}`;
     const params = {
@@ -27,8 +27,8 @@ const getCommon = async (test_name, options = {}) => {
         disk_name: disk_name,
         name: vm_name,
         cleanup: async () => {
-            await tests.remove('vm', vm_name);
-            await tests.remove('disk', disk_name);
+            await tests.remove(t, 'vm', vm_name);
+            await tests.remove(t, 'disk', disk_name);
         },
     };
 };
@@ -36,7 +36,7 @@ const getCommon = async (test_name, options = {}) => {
 ava.todo('vm console');
 ava.todo('vm serialport console');
 
-ava.serial('vm passwordreset', async t => {
+tests.serial('vm passwordreset', ['vm'],  async t => {
     const token = await tests.getToken();
     const vm_name = tests.getName(t.title);
     const disk_name = tests.getName('disk', t.title);
@@ -61,14 +61,14 @@ ava.serial('vm passwordreset', async t => {
 
 ['a1.nano', 'm2.tiny', 'm2.medium'].forEach(flavour => {
     ava.serial(`vm life cycle ${flavour}`, async t => {
-        const common = await getCommon(t.title);
+        const common = await getCommon(t);
         await tests.resourceLifeCycle('vm', common.params)(t);
         await tests.remove('disk', common.disk_name);
     });
 });
 
-ava.serial('vm stop & start & turnoff', async t => {
-    const common = await getCommon(t.title);
+tests.serial('vm stop & start & turnoff', ['vm'],  async t => {
+    const common = await getCommon(t);
     const vm = await tests.run(`vm create ${common.params.createParams}`);
     t.true(vm.state === 'Running');
 
@@ -89,11 +89,11 @@ ava.serial('vm stop & start & turnoff', async t => {
     await common.cleanup();
 });
 
-ava.serial('vm userdata', async t => {
+tests.serial('vm userdata', ['vm'],  async t => {
     const my_metadata = 'my-config';
     const tmp_file = tests.getRandomFile(my_metadata);
 
-    const common = await getCommon(t.title);
+    const common = await getCommon(t);
     const vm = await tests.run(`vm create ${common.params.createParams}`);
 
     await tests.run(`vm userdata --vm ${vm.id} --userdata-file '${tmp_file}'`);
@@ -107,12 +107,12 @@ ava.serial('vm userdata', async t => {
     await common.cleanup();
 });
 
-ava.serial('vm usermetadata execute in cloud-init', async t => {
+tests.serial('vm usermetadata execute in cloud-init', ['vm'],  async t => {
     const token = await tests.getToken();
     const remote_tmp_path = '/tmp/cloud-init-usermetadata.txt';
     const my_metadata = `#!/bin/sh\necho -n "${token}" > ${remote_tmp_path};`;
     const tmp_file = tests.getRandomFile(my_metadata);
-    const common = await getCommon(t.title);
+    const common = await getCommon(t);
     const vm = await tests.run(`vm create ${common.params.createParams} --userdata-file ${tmp_file}`);
 
     fs.unlinkSync(tmp_file);
@@ -122,8 +122,8 @@ ava.serial('vm usermetadata execute in cloud-init', async t => {
     await common.cleanup();
 });
 
-ava.serial('vm disk attach & detach', async t => {
-    const common = await getCommon(t.title);
+tests.serial('vm disk attach & detach', ['vm', 'disk'],  async t => {
+    const common = await getCommon(t);
     const vm = await tests.run(`vm create ${common.params.createParams}`);
     const disk = await tests.run(`disk create --name disk-extra-${common.name} --type ssd --size 10`);
 
@@ -148,9 +148,9 @@ const commonNicSkip = {
     skipTransfer: true,
 };
 
-ava.serial('vm nic life cycle for private network', async t => {
+tests.serial('vm nic life cycle for private network', ['vm', 'network'],  async t => {
     const network = await tests.run(`network create --name network-vm-test-${now}`);
-    const common = await getCommon(t.title, {
+    const common = await getCommon(t, {
         type: 'm2.tiny',
     });
     try {
@@ -174,9 +174,9 @@ ava.serial('vm nic life cycle for private network', async t => {
     }
 });
 
-ava.serial('vm nic life cycle for public network', async t => {
+tests.serial('vm nic life cycle for public network', ['vm'],  async t => {
     const network = await tests.run(`network create --name network-vm-test-${now}`);
-    const common = await getCommon(t.title, {
+    const common = await getCommon(t, {
         type: 'm2.tiny',
     });
     try {
@@ -199,8 +199,8 @@ ava.serial('vm nic life cycle for public network', async t => {
     }
 });
 
-ava.serial('vm nic firewall life cycle', async t => {
-    const common = await getCommon(t.title, {
+tests.serial('vm nic firewall life cycle', ['vm'],  async t => {
+    const common = await getCommon(t, {
         type: 'm2.tiny',
     });
     const firewall = await tests.run(`firewall create --name ${tests.getName(t.title)}`);
@@ -218,8 +218,8 @@ ava.serial('vm nic firewall life cycle', async t => {
     await tests.remove('firewall', firewall);
 });
 
-ava.serial('vm create passing private ip', async t => {
-    const common = await getCommon(t.title);
+tests.serial('vm create passing private ip', ['vm'],  async t => {
+    const common = await getCommon(t);
     const network = await tests.run(`network create --name ${tests.getName(t.title)}`);
     const ip = await tests.run(`network ip create --network ${network.id}`);
     const vm = await tests.run(`vm create --no-start ${common.params.createParams} --ip ${ip._id}`);
@@ -230,8 +230,8 @@ ava.serial('vm create passing private ip', async t => {
     await tests.remove('network', network);
 });
 
-ava.serial('vm create passing public ip', async t => {
-    const common = await getCommon(t.title);
+tests.serial('vm create passing public ip', ['vm'],  async t => {
+    const common = await getCommon(t);
     const ip = await tests.run('ip create');
     const vm = await tests.run(`vm create --no-start ${common.params.createParams} --ip ${ip.id}`);
     const nic_list = await tests.run(`vm nic list --vm ${vm.id}`);
@@ -256,8 +256,8 @@ const subresourceLifeCycle = async (t, type, options) => {
     }
 };
 
-ava.serial('vm nic ip life cycle', async t => {
-    const common = await getCommon(t.title, {
+tests.serial('vm nic ip life cycle', ['vm'],  async t => {
+    const common = await getCommon(t, {
         type: 'm2.tiny',
     });
     const vm = await tests.run(`vm create ${common.params.createParams}`);
@@ -275,8 +275,8 @@ ava.serial('vm nic ip life cycle', async t => {
     await common.cleanup();
 });
 
-ava.serial('vm nic ip replace', async t => {
-    const common = await getCommon(t.title, {
+tests.serial('vm nic ip replace', ['vm'],  async t => {
+    const common = await getCommon(t, {
         type: 'm2.tiny',
     });
     const vm = await tests.run(`vm create ${common.params.createParams}`);
@@ -294,8 +294,8 @@ ava.serial('vm nic ip replace', async t => {
     await tests.remove('ip', new_ip);
 });
 
-ava.serial('vm nic ip persistent', async t => {
-    const common = await getCommon(t.title, {
+tests.serial('vm nic ip persistent', ['vm'],  async t => {
+    const common = await getCommon(t, {
         type: 'm2.tiny',
     });
     const vm = await tests.run(`vm create ${common.params.createParams}`);
@@ -312,8 +312,8 @@ ava.serial('vm nic ip persistent', async t => {
     await tests.remove('ip', ip);
 });
 
-ava.serial('vm dvd cycle', async t => {
-    const common = await getCommon(t.title);
+tests.serial('vm dvd cycle', ['vm'],  async t => {
+    const common = await getCommon(t);
     const vm = await tests.run(`vm create ${common.params.createParams}`);
     const iso = await tests.run(`iso create --name iso-test-${now} --source-url ${tests.iso_url}`);
 
@@ -328,8 +328,8 @@ ava.serial('vm dvd cycle', async t => {
     await common.cleanup();
 });
 
-ava.serial('vm serialport log', async t => {
-    const common = await getCommon(t.title);
+tests.serial('vm serialport log', ['vm'],  async t => {
+    const common = await getCommon(t);
     const vm = await tests.run(`vm create ${common.params.createParams}`);
     t.true(vm.created);
 
@@ -355,8 +355,8 @@ async function verify_vm_size_match(t, vm, password) {
     );
 }
 
-ava.serial('vm service change', async t => {
-    const common = await getCommon(t.title, { type: 'a1.nano' });
+tests.serial('vm service change', ['vm'],  async t => {
+    const common = await getCommon(t, { type: 'a1.nano' });
     const password = common.password;
     const vm = await tests.run(`vm create ${common.params.createParams}`);
 
@@ -378,7 +378,7 @@ ava.serial('vm service change', async t => {
 
 ['project', 'user'].forEach(type => {
     ava.serial(`vm ssh using ${type} ssh-key`, async t => {
-        const common = await getCommon(t.title);
+        const common = await getCommon(t);
 
         const sshKeyPair = await ssh.generateKey();
         const sshFilename = tests.getRandomFile(sshKeyPair.publicKey);

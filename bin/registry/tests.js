@@ -1,128 +1,155 @@
 'use strict';
-const ava = require('ava');
-const superagent = require('superagent');
+
+const fs = require('fs');
 
 require('../../scope/h1');
 const tests = require('../../lib/tests');
+const ssh = require('../../lib/ssh');
 
-const commonCreateParams = '--type container';
-const hubImage = 'busybox';
-const tagName = 'musl';
+const now = Date.now();
 
-const copyImage = async (host, image, tagName) => {
-    await tests.runProcess(`docker pull ${image}:${tagName}`);
-    const remoteImage = `${host}/${image}`;
-    await tests.runProcess(`docker tag ${image}:${tagName} ${remoteImage}:${tagName}`);
-    await tests.runProcess(`docker push ${remoteImage}:${tagName}`);
-    await tests.runProcess(`docker image rm ${remoteImage}:${tagName}`);
-    await tests.runProcess(`docker pull ${host}/${image}:${tagName}`);
-    await tests.runProcess(`docker image rm ${host}/${image}:${tagName}`);
+const createUserCredentials = async (t) => {
+    const sshKeyPair = await ssh.generateKey();
+    const sshFilename = tests.getRandomFile(sshKeyPair.publicKey);
+
+    const name = tests.getName(t.title, 'user-cred');
+    await tests.run(t, `user credentials add --name ${name} --sshkey-file '${sshFilename}'`);
+    return {
+        file: sshFilename,
+        name: name,
+        cleanup: async () => {
+            fs.unlinkSync(sshFilename);
+            await tests.remove(t, 'user credentials', name);
+        },
+    };
 };
 
-ava.serial('registry life cycle', tests.resourceLifeCycle('registry', {
-    createParams: `--name ${tests.getName('registry-life-cycle')} ${commonCreateParams} `,
-    stateCreated: 'Running',
+tests.serial('vault life cycle', ['vault'],  async t => {
+    const ssh = await createUserCredentials(t);
+
+    await tests.resourceLifeCycle('vault', {
+        stateCreated: 'Online',
+        createParams: `--name ${tests.getName(t.title)} --size 10 --ssh ${ssh.name}`,
+        skipTransfer: true,
+    })(t);
+
+    await ssh.cleanup();
+});
+
+
+tests.serial('vault stop & start', ['vault'],  async t => {
+    const vault = await tests.run(t, `vault create --name ${tests.getName(t.title)} --size 10`);
+
+    await tests.run(t, `vault stop --vault ${vault.id}`);
+    const vault_stopped = await tests.run(t, `vault show --vault ${vault.id}`);
+    t.true(vault_stopped.state === 'Off');
+
+    await tests.run(t, `vault start --vault ${vault.id}`);
+    const vault_started = await tests.run(t, `vault show --vault ${vault.id}`);
+    t.true(vault_started.state === 'Online');
+
+    await tests.remove(t, 'vault', vault);
+
+});
+
+
+tests.serial('vault resize', ['vault'],  tests.resourceResizeCycle('vault', {
+    createParams: `--name ${tests.getName('vault-resize')}`,
 }));
 
-ava.serial('registry reachable through fqdn', async t => {
-    const password = await tests.getToken();
-    const registry = await tests.run(`registry create --name ${tests.getName(t.title)} --password ${password} ${commonCreateParams}`);
-    try {
-        await tests.runProcess(`docker login --username anything --password ${password} ${registry.fqdn}`);
-        await copyImage(registry.fqdn, hubImage, 'latest');
-        const repositories = await tests.run(`registry repository list --registry ${registry.name}`);
-        t.true(repositories.some(x => x.id === hubImage));
-    } finally {
-        await tests.remove('registry', registry);
-    }
+tests.serial('vault credential credentials life cycle', ['vault'],  async t => {
+    const vault = await tests.run(t, `vault create --name ${tests.getName(t.title)} --size 10`);
+
+    await tests.credentialsLifeCycle('vault credential cert', {
+        showParams: `--vault ${vault.id}`,
+        createParams: `--vault ${vault.id}`,
+        listParams: `--vault ${vault.id}`,
+        deleteParams: `--vault ${vault.id}`,
+        renameParams: `--vault ${vault.id}`,
+    })(t);
+
+    await tests.remove(t, 'vault', vault);
 });
 
-ava.serial('registry manage repositories & tags', async t => {
+tests.serial('vault recreate from snapshot', ['vault'],  async t => {
+    const name = tests.getName(t.title);
     const password = await tests.getToken();
-    const registry = await tests.run(`registry create --name ${tests.getName(t.title)} --password ${password} ${commonCreateParams}`);
-    try {
-        await tests.runProcess(`docker login --username anything --password ${password} ${registry.fqdn}`);
-        await copyImage(registry.fqdn, hubImage, tagName);
-        const repository = await tests.run(`registry repository show --registry ${registry.name} --repository ${hubImage}`);
-        t.true(repository.id === hubImage);
-        let repositories = await tests.run(`registry repository list --registry ${registry.name}`);
-        t.true(repositories.some(x => x.id === hubImage));
-        const tag = await tests.run(`registry repository tag show --registry ${registry.name} --repository ${hubImage} --tag ${tagName}`);
-        t.true(tag.id === tagName);
-        const tags = await tests.run(`registry repository tag list --registry ${registry.name} --repository ${hubImage}`);
-        t.true(tags.some(x => x.id === tagName));
-        await tests.run(`registry repository tag delete --yes --registry ${registry.name} --repository ${hubImage} --tag ${tagName}`);
+    const vault = await tests.run(t, `vault create --name ${name} --size 10 --password ${password}`);
 
-        repositories = await tests.run(`registry repository list --registry ${registry.name}`);
-        t.true(!repositories.some(x => x.id === hubImage));
-    } finally {
-        await tests.remove('registry', registry);
-    }
+    const filename = `my-secret-file-${now}.txt`;
+    await ssh.execResource(t, vault, {password}, `touch ~/${filename}`);
+
+    const snapshot = await tests.run(t, `snapshot create --vault ${vault.id} --name snapshot-${name}`);
+
+    const recreated_vault = await tests.run(t, `vault create --name ${name} --size 10 --snapshot ${snapshot.name} --password ${password}`);
+    t.true(recreated_vault.created);
+
+    const content = await ssh.execResource(t, recreated_vault, {password}, 'ls -lah ~/');
+    t.true(content.includes(filename));
+
+    await tests.remove(t, 'vault', recreated_vault);
+    await tests.remove(t, 'snapshot', snapshot);
+    await tests.remove(t, 'vault', vault);
 });
 
-ava.serial('registry reachable through custom domain', async t => {
-    const rset = 'registry'; // static name to avoid SSL issue
-    const password = await tests.getToken();
-    const registry = await tests.run(`registry create --name ${tests.getName(t.title)} ${commonCreateParams} --password ${password}`);
-    await tests.run(`registry stop --registry ${registry.id}`);
-    const zone = await tests.run(`dns zone show --zone ${tests.test_zone}`);
-    try {
-        const rrset = await tests.run(`dns record-set cname upsert --name ${rset} --zone ${zone.id} --value ${registry.fqdn}. --ttl 1`);
-        const host = rrset.name.slice(0, rrset.name.length - 1);
-        await tests.delay(10 * 1000);
-        const cname_response = await tests.dnsResolve(rrset.name, 'CNAME');
-        t.true(cname_response.includes(registry.fqdn));
-
-        await tests.run(`registry domain add --registry ${registry.id} --domain ${host}`);
-        await tests.run(`registry start --registry ${registry.id}`);
-        await tests.delay(15 * 1000);
-        await tests.runProcess(`docker login --username anything --password ${password} ${host}`);
-        await copyImage(host, hubImage, tagName);
-        const repositories = await tests.run(`registry repository list --registry ${registry.name}`);
-        t.true(repositories.some(x => x.id === hubImage));
-    } finally {
-        await tests.remove('registry', registry);
-    }
+tests.serial('vault credential password life cycle', ['vault'],  async t => {
+    const vault = await tests.run(t, `vault create --name ${tests.getName(t.title)} --size 10`);
+    await tests.passwordLifeCycle(t, 'vault', vault);
+    await tests.remove(t, 'vault', vault);
 });
 
-ava.serial('registry repository tag delete', async t => {
-    const password = await tests.getToken();
-    const registry = await tests.run(`registry create --name ${tests.getName(t.title)} --password ${password} ${commonCreateParams}`);
-    try {
-        await tests.runProcess(`docker login --username anything --password ${password} ${registry.fqdn}`);
-        await copyImage(registry.fqdn, hubImage, tagName);
-        let repositories = await tests.run(`registry repository list --registry ${registry.name}`);
-        t.true(repositories.some(x => x.id === hubImage));
-        await tests.run(`registry repository tag delete --yes --registry ${registry.name} --repository ${hubImage} --tag ${tagName}`);
-        repositories = await tests.run(`registry repository list --registry ${registry.name}`);
-        t.true(!repositories.some(x => x.id === hubImage));
-    } finally {
-        await tests.remove('registry', registry);
-    }
+['project', 'user'].forEach(type => {
+    tests.serial(`vault credential ${type} ssh use`, ['vault'], async t => {
+        const name = tests.getName(t.title);
+        const sshKeyPair = await ssh.generateKey();
+        const sshFilename = tests.getRandomFile(sshKeyPair.publicKey);
+
+        const ssh_name = `${name}-${type}-key`;
+        const credentials = await tests.run(t, `${type} credentials add --name ${ssh_name} --sshkey-file '${sshFilename}'`);
+        const vault = await tests.run(t, `vault create --name my-vault --size 10 --ssh ${ssh_name}`);
+
+        const list = await tests.run(t, `vault credential cert list --vault ${vault.id}`);
+        t.true(list.some(p => p.name === ssh_name));
+
+        await tests.remove(t, `${type} credentials`, credentials);
+        await tests.remove(t, 'vault', vault);
+
+        fs.unlinkSync(sshFilename);
+    });
 });
 
-ava.serial('registry docker reachable', async t => {
-    const output = await tests.runProcess('docker system info');
-    t.true(output.includes('Containers: '));
+['project', 'user'].forEach(type => {
+    tests.serial(`vault ssh using ${type} ssh-key`, ['vault'], async t => {
+        const sshKeyPair = await ssh.generateKey();
+        const sshFilename = tests.getRandomFile(sshKeyPair.publicKey);
+
+        const name = tests.getName(t.title);
+        const ssh_name = `${name}-${type}-key`;
+
+        const credentials = await tests.run(t, `${type} credentials add --name ${ssh_name} --sshkey-file '${sshFilename}'`);
+
+        const vault = await tests.run(t, `vault create --name ${name} --size 10 --ssh ${ssh_name}`);
+
+        const content = await ssh.execResource(t, vault, {
+            privateKey: sshKeyPair.privateKey,
+        }, 'uptime');
+        t.true(content.includes('load average'), content);
+
+        fs.unlinkSync(sshFilename);
+
+        await tests.remove(t, `${type} credentials`, credentials);
+        await tests.remove(t, 'vault', vault);
+    });
 });
 
-ava.serial('registry is container compatible', async t => {
+tests.serial('vault ssh using password', ['vault'],  async t => {
+    const name = tests.getName(t.title);
     const password = await tests.getToken();
-    const registry = await tests.run(`registry create --name ${tests.getName(t.title)} --password ${password} ${commonCreateParams}`);
-    try {
-        await tests.runProcess(`docker login --username anything --password ${password} ${registry.fqdn}`);
-        const containerImage = 'nginx';
-        const tagName = 'alpine';
-        await copyImage(registry.fqdn, containerImage, tagName);
-        const fullImage = `${registry.fqdn}/${containerImage}:${tagName}`;
-        const container = await tests.run(`container create --name ${tests.getName(t.title)} --type b1.nano --image ${fullImage} --expose 80:80 --registry-username any --registry-password ${password}`);
-        t.true(container.image === fullImage);
-        try {
-            await superagent.get(`http://${container.fqdn}`);
-        } finally {
-            await tests.remove('container', container);
-        }
-    } finally {
-        await tests.remove('registry', registry);
-    }
+
+    const vault = await tests.run(t, `vault create --name ${name} --password ${password} --size 10`);
+
+    const content = await ssh.execResource(t, vault, {password}, 'uptime');
+    t.true(content.includes('load average'));
+
+    await tests.remove(t, 'vault', vault);
 });

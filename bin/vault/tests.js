@@ -1,6 +1,5 @@
 'use strict';
 
-const ava = require('ava');
 const fs = require('fs');
 
 require('../../scope/h1');
@@ -14,18 +13,18 @@ const createUserCredentials = async (t) => {
     const sshFilename = tests.getRandomFile(sshKeyPair.publicKey);
 
     const name = tests.getName(t.title, 'user-cred');
-    await tests.run(`user credentials add --name ${name} --sshkey-file '${sshFilename}'`);
+    await tests.run(t, `user credentials add --name ${name} --sshkey-file '${sshFilename}'`);
     return {
         file: sshFilename,
         name: name,
         cleanup: async () => {
             fs.unlinkSync(sshFilename);
-            await tests.remove('user credentials', name);
+            await tests.remove(t, 'user credentials', name);
         },
     };
 };
 
-ava.serial('vault life cycle', async t => {
+tests.serial('vault life cycle', ['vault'],  async t => {
     const ssh = await createUserCredentials(t);
 
     await tests.resourceLifeCycle('vault', {
@@ -38,28 +37,28 @@ ava.serial('vault life cycle', async t => {
 });
 
 
-ava.serial('vault stop & start', async t => {
-    const vault = await tests.run(`vault create --name ${tests.getName(t.title)} --size 10`);
+tests.serial('vault stop & start', ['vault'],  async t => {
+    const vault = await tests.run(t, `vault create --name ${tests.getName(t.title)} --size 10`);
 
-    await tests.run(`vault stop --vault ${vault.id}`);
-    const vault_stopped = await tests.run(`vault show --vault ${vault.id}`);
+    await tests.run(t, `vault stop --vault ${vault.id}`);
+    const vault_stopped = await tests.run(t, `vault show --vault ${vault.id}`);
     t.true(vault_stopped.state === 'Off');
 
-    await tests.run(`vault start --vault ${vault.id}`);
-    const vault_started = await tests.run(`vault show --vault ${vault.id}`);
+    await tests.run(t, `vault start --vault ${vault.id}`);
+    const vault_started = await tests.run(t, `vault show --vault ${vault.id}`);
     t.true(vault_started.state === 'Online');
 
-    await tests.remove('vault', vault);
+    await tests.remove(t, 'vault', vault);
 
 });
 
 
-ava.serial('vault resize', tests.resourceResizeCycle('vault', {
+tests.serial('vault resize', ['vault'],  tests.resourceResizeCycle('vault', {
     createParams: `--name ${tests.getName('vault-resize')}`,
 }));
 
-ava.serial('vault credential credentials life cycle', async t => {
-    const vault = await tests.run(`vault create --name ${tests.getName(t.title)} --size 10`);
+tests.serial('vault credential credentials life cycle', ['vault'],  async t => {
+    const vault = await tests.run(t, `vault create --name ${tests.getName(t.title)} --size 10`);
 
     await tests.credentialsLifeCycle('vault credential cert', {
         showParams: `--vault ${vault.id}`,
@@ -69,69 +68,69 @@ ava.serial('vault credential credentials life cycle', async t => {
         renameParams: `--vault ${vault.id}`,
     })(t);
 
-    await tests.remove('vault', vault);
+    await tests.remove(t, 'vault', vault);
 });
 
-ava.serial('vault recreate from snapshot', async t => {
+tests.serial('vault recreate from snapshot', ['vault'],  async t => {
     const name = tests.getName(t.title);
     const password = await tests.getToken();
-    const vault = await tests.run(`vault create --name ${name} --size 10 --password ${password}`);
+    const vault = await tests.run(t, `vault create --name ${name} --size 10 --password ${password}`);
 
     const filename = `my-secret-file-${now}.txt`;
-    await ssh.execResource(vault, {password}, `touch ~/${filename}`);
+    await ssh.execResource(t, vault, {password}, `touch ~/${filename}`);
 
-    const snapshot = await tests.run(`snapshot create --vault ${vault.id} --name snapshot-${name}`);
+    const snapshot = await tests.run(t, `snapshot create --vault ${vault.id} --name snapshot-${name}`);
 
-    const recreated_vault = await tests.run(`vault create --name ${name} --size 10 --snapshot ${snapshot.name} --password ${password}`);
+    const recreated_vault = await tests.run(t, `vault create --name ${name} --size 10 --snapshot ${snapshot.name} --password ${password}`);
     t.true(recreated_vault.created);
 
-    const content = await ssh.execResource(recreated_vault, {password}, 'ls -lah ~/');
+    const content = await ssh.execResource(t, recreated_vault, {password}, 'ls -lah ~/');
     t.true(content.includes(filename));
 
-    await tests.remove('vault', recreated_vault);
-    await tests.remove('snapshot', snapshot);
-    await tests.remove('vault', vault);
+    await tests.remove(t, 'vault', recreated_vault);
+    await tests.remove(t, 'snapshot', snapshot);
+    await tests.remove(t, 'vault', vault);
 });
 
-ava.serial('vault credential password life cycle', async t => {
-    const vault = await tests.run(`vault create --name ${tests.getName(t.title)} --size 10`);
+tests.serial('vault credential password life cycle', ['vault'],  async t => {
+    const vault = await tests.run(t, `vault create --name ${tests.getName(t.title)} --size 10`);
     await tests.passwordLifeCycle(t, 'vault', vault);
-    await tests.remove('vault', vault);
+    await tests.remove(t, 'vault', vault);
 });
 
 ['project', 'user'].forEach(type => {
-    ava.serial(`vault credential ${type} ssh use`, async t => {
+    tests.serial(`vault credential ${type} ssh use`, ['vault'],  async t => {
         const name = tests.getName(t.title);
         const sshKeyPair = await ssh.generateKey();
         const sshFilename = tests.getRandomFile(sshKeyPair.publicKey);
 
         const ssh_name = `${name}-${type}-key`;
-        const credentials = await tests.run(`${type} credentials add --name ${ssh_name} --sshkey-file '${sshFilename}'`);
-        const vault = await tests.run(`vault create --name my-vault --size 10 --ssh ${ssh_name}`);
+        const credentials = await tests.run(t, `${type} credentials add --name ${ssh_name} --sshkey-file '${sshFilename}'`);
+        const vault = await tests.run(t, `vault create --name my-vault --size 10 --ssh ${ssh_name}`);
 
-        const list = await tests.run(`vault credential cert list --vault ${vault.id}`);
+        const list = await tests.run(t, `vault credential cert list --vault ${vault.id}`);
         t.true(list.some(p => p.name === ssh_name));
 
         await tests.remove(`${type} credentials`, credentials);
-        await tests.remove('vault', vault);
+        await tests.remove(t, 'vault', vault);
 
         fs.unlinkSync(sshFilename);
     });
 });
 
 ['project', 'user'].forEach(type => {
-    ava.serial(`vault ssh using ${type} ssh-key`, async t => {
+    tests.serial(`vault ssh using ${type} ssh-key`, ['vault'],  async t => {
         const sshKeyPair = await ssh.generateKey();
         const sshFilename = tests.getRandomFile(sshKeyPair.publicKey);
 
         const name = tests.getName(t.title);
         const ssh_name = `${name}-${type}-key`;
 
-        const credentials = await tests.run(`${type} credentials add --name ${ssh_name} --sshkey-file '${sshFilename}'`);
+        const credentials = await tests.run(t, `${type} credentials add --name ${ssh_name} --sshkey-file '${sshFilename}'`);
 
-        const vault = await tests.run(`vault create --name ${name} --size 10 --ssh ${ssh_name}`);
+        const vault = await tests.run(t, `vault create --name ${name} --size 10 --ssh ${ssh_name}`);
 
-        const content = await ssh.execResource(vault, {
+        const content = await ssh.execResource(t, vault, {
             privateKey: sshKeyPair.privateKey,
         }, 'uptime');
         t.true(content.includes('load average'), content);
@@ -139,18 +138,18 @@ ava.serial('vault credential password life cycle', async t => {
         fs.unlinkSync(sshFilename);
 
         await tests.remove(`${type} credentials`, credentials);
-        await tests.remove('vault', vault);
+        await tests.remove(t, 'vault', vault);
     });
 });
 
-ava.serial('vault ssh using password', async t => {
+tests.serial('vault ssh using password', ['vault'],  async t => {
     const name = tests.getName(t.title);
     const password = await tests.getToken();
 
-    const vault = await tests.run(`vault create --name ${name} --password ${password} --size 10`);
+    const vault = await tests.run(t, `vault create --name ${name} --password ${password} --size 10`);
 
-    const content = await ssh.execResource(vault, {password}, 'uptime');
+    const content = await ssh.execResource(t, vault, {password}, 'uptime');
     t.true(content.includes('load average'));
 
-    await tests.remove('vault', vault);
+    await tests.remove(t, 'vault', vault);
 });
