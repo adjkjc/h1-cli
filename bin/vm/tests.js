@@ -222,9 +222,9 @@ tests.serial('vm create passing private ip', ['vm'],  async t => {
     const common = await getCommon(t);
     const network = await tests.run(`network create --name ${tests.getName(t.title)}`);
     const ip = await tests.run(`network ip create --network ${network.id}`);
-    const vm = await tests.run(`vm create --no-start ${common.params.createParams} --ip ${ip._id}`);
+    const vm = await tests.run(`vm create --no-start ${common.params.createParams} --ip ${ip.id}`);
     const nic_list = await tests.run(`vm nic list --vm ${vm.id}`);
-    t.true(nic_list.some(nic => nic.ip.some(nic_ip => nic_ip.id === ip._id)));
+    t.true(nic_list.some(nic => nic.ip.some(nic_ip => nic_ip.id === ip.id)));
 
     await common.cleanup();
     await tests.remove('network', network);
@@ -235,7 +235,7 @@ tests.serial('vm create passing public ip', ['vm'],  async t => {
     const ip = await tests.run('ip create');
     const vm = await tests.run(`vm create --no-start ${common.params.createParams} --ip ${ip.id}`);
     const nic_list = await tests.run(`vm nic list --vm ${vm.id}`);
-    t.true(nic_list.some(nic => nic.ip.some(nic_ip => nic_ip.id === ip._id)));
+    t.true(nic_list.some(nic => nic.ip.some(nic_ip => nic_ip.id === ip.id)));
 
     await common.cleanup();
 });

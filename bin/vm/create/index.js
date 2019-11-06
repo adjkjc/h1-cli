@@ -110,7 +110,7 @@ module.exports = resource => Cli.createCommand('create', {
             } else {
                 netadp.service = 'public';
                 const services = await args.helpers.api.get('/service/');
-                const vm_service = services.find(service => service.name === args.type || service._id === args.type);
+                const vm_service = services.find(service => service.name === args.type || service.id === args.type);
                 if (!vm_service) {
                     throw Cli.error.notFound(`Given flavour '${args.type}' of the given virtual machine variant was not found. Check the value of the --type parameter and try again.`);
                 }

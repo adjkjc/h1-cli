@@ -22,7 +22,7 @@ tests.serial('create agent with credentials', ['agent'], async t => {
 
     const agent = await tests.run(t, `agent create --name ${tests.getName(t.title)} --type container --ssh-file ${sshFilename}`);
 
-    const credentials = await tests.run(t, `agent credential cert list --agent ${agent._id}`);
+    const credentials = await tests.run(t, `agent credential cert list --agent ${agent.id}`);
     t.true(credentials.length > 0);
 
     await tests.remove(t, 'agent', agent);

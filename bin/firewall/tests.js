@@ -18,13 +18,13 @@ tests.serial('firewall attach & detach', ['firewall'], async t => {
     const network = await tests.run(t, `network create --name network-${name}`);
 
     const firewall = await tests.run(t, `firewall create ${createParams}`);
-    await tests.run(t, `firewall attach --firewall ${firewall._id} --network ${network._id}`);
+    await tests.run(t, `firewall attach --firewall ${firewall.id} --network ${network.id}`);
 
-    const refreshed = await tests.run(t, `firewall show --firewall ${firewall._id}`);
+    const refreshed = await tests.run(t, `firewall show --firewall ${firewall.id}`);
     t.true(refreshed.state === 'Attached');
-    t.true(refreshed.network === network._id);
+    t.true(refreshed.network === network.id);
 
-    await tests.run(t, `firewall detach --firewall ${firewall._id}`);
+    await tests.run(t, `firewall detach --firewall ${firewall.id}`);
 
     await tests.remove(t, 'firewall', firewall);
     await tests.remove(t, 'network', network);
